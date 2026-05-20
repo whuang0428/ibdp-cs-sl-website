@@ -128,13 +128,34 @@ export default defineConfig({
     { text: 'Neural Networks and CNNs', link: '/a4-machine-learning/neural-networks-cnns' }
   ]
 },
-      {
-        text: 'Extensions',
-        items: [
-          { text: 'HL Programming', link: '/extension-hl-programming/' },
-          { text: 'Social Engineering Awareness', link: '/extension-social-engineering/' }
-        ]
-      },
+{
+  text: 'HL Programming Extension',
+  items: [
+    { text: 'Overview', link: '/extension-hl-programming/' },
+    { text: 'Advanced Problem Solving', link: '/extension-hl-programming/advanced-problem-solving' },
+    { text: 'Modular Programming', link: '/extension-hl-programming/modular-programming' },
+    { text: 'Recursion Basics', link: '/extension-hl-programming/recursion-basics' },
+    { text: 'Advanced Arrays and Lists', link: '/extension-hl-programming/advanced-arrays-lists' },
+    { text: 'Records and Objects', link: '/extension-hl-programming/records-objects' },
+    { text: 'Multiple Classes Review', link: '/extension-hl-programming/multiple-classes-review' },
+    { text: 'Simple ADT Ideas', link: '/extension-hl-programming/simple-adt-ideas' },
+    { text: 'Algorithm Efficiency', link: '/extension-hl-programming/algorithm-efficiency' }
+  ]
+},
+{
+  text: 'Social Engineering Awareness',
+  items: [
+    { text: 'Overview', link: '/extension-social-engineering/' },
+    { text: 'Safety and Ethics', link: '/extension-social-engineering/safety-ethics' },
+    { text: 'What is Social Engineering?', link: '/extension-social-engineering/what-is-social-engineering' },
+    { text: 'Phishing Awareness', link: '/extension-social-engineering/phishing-awareness' },
+    { text: 'Pretexting and Impersonation', link: '/extension-social-engineering/pretexting-impersonation' },
+    { text: 'Baiting and Tailgating', link: '/extension-social-engineering/baiting-tailgating' },
+    { text: 'Passwords and MFA', link: '/extension-social-engineering/passwords-mfa' },
+    { text: 'Reporting Incidents', link: '/extension-social-engineering/reporting-incidents' },
+    { text: 'Safe Classroom Simulations', link: '/extension-social-engineering/safe-classroom-simulations' }
+  ]
+},
       {
         text: 'Assessment',
         items: [

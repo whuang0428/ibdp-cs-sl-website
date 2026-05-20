@@ -1,65 +1,26 @@
-# Extension: Social Engineering Awareness
+﻿# Extension: Social Engineering Awareness
+
+## Module Overview
+
+This module teaches cybersecurity awareness from a defensive and ethical perspective.
+
+The aim is to help students recognize social engineering attacks, understand how attackers manipulate people, and learn safe response habits.
+
+This module must not be used to teach students how to attack real people or real systems.
+
+## Topics
+
+| Topic | Main Focus | Label |
+|---|---|---|
+| Safety and Ethics | Understand boundaries and defensive purpose | School Extension |
+| What is Social Engineering? | Understand the basic concept | School Extension |
+| Phishing Awareness | Recognize suspicious messages | School Extension |
+| Pretexting and Impersonation | Identify fake identities and false stories | School Extension |
+| Baiting and Tailgating | Recognize physical and digital manipulation | School Extension |
+| Passwords and MFA | Protect accounts from compromise | School Extension |
+| Reporting Incidents | Know how to respond safely | School Extension |
+| Safe Classroom Simulations | Practise awareness using fictional examples only | School Extension |
 
 ::: danger Defensive Education Only
-This section is for cybersecurity awareness and defensive education only. It must not be used to teach real-world attacks or unauthorized testing.
+This module is for awareness, prevention, and ethical discussion. Do not create real phishing pages, steal credentials, bypass MFA, impersonate real people, or test real users without formal authorization.
 :::
-
-## Section Overview
-
-Social engineering is the use of human manipulation to gain access to information, systems, or physical spaces. In this course, it should be taught from a defensive and ethical perspective.
-
-## Learning Goals
-
-By the end of this extension, students should be able to:
-
-- explain what social engineering is
-- identify common signs of phishing
-- describe pretexting, baiting, tailgating, and impersonation
-- explain how multi-factor authentication helps protect accounts
-- apply safe password practices
-- report suspicious activity correctly
-- understand ethical and legal boundaries
-
-## Planned Topics
-
-| Topic | Focus |
-|---|---|
-| Social Engineering Basics | Human-focused security risks |
-| Phishing | Fake messages designed to steal information |
-| Pretexting | Creating a false story to gain trust |
-| Baiting | Offering something tempting to trigger unsafe action |
-| Tailgating | Following someone into a restricted area |
-| Impersonation | Pretending to be a trusted person |
-| Password Hygiene | Strong passwords and password managers |
-| MFA | Extra layer of account protection |
-| Reporting Procedure | What to do when suspicious activity is found |
-| Ethics and Law | Why unauthorized testing is not allowed |
-
-## Safe Classroom Activities
-
-These activities are suitable because they use fictional examples:
-
-- identify suspicious signs in a fake email
-- compare strong and weak passwords
-- discuss how a school should respond to a phishing attempt
-- create a poster about cybersecurity awareness
-- analyse a fictional case study
-
-## Not Allowed
-
-Do not include:
-
-- real phishing page creation
-- bypassing MFA
-- credential theft methods
-- impersonating real teachers or students
-- unauthorized testing of school systems
-- instructions for attacking real accounts
-
-## Quick Check
-
-1. What is phishing?
-2. What is pretexting?
-3. Why is MFA useful?
-4. What should a student do after receiving a suspicious email?
-5. Why must cybersecurity learning follow ethical rules?
