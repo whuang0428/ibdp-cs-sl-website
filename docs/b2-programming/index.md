@@ -1,79 +1,34 @@
-# B2 Programming
-
-::: tip SL Core + HL Extension
-This unit covers the main programming skills required for SL, with selected HL extension content added for stronger coding ability.
-:::
+﻿# B2 Programming
 
 ## Unit Overview
 
-Programming is where students turn algorithms into working code. This unit should be taught with many examples, small coding tasks, trace tables, and debugging practice.
+This unit introduces the programming knowledge and practical coding skills needed for IBDP Computer Science SL.
 
-## Learning Goals
+Programming is where students turn algorithms into working solutions. In this unit, students will learn how to use variables, data types, input and output, selection, loops, arrays, searching, sorting, and file processing.
 
-By the end of this unit, students should be able to:
+## Topics
 
-- use variables and data types correctly
-- write input and output statements
-- use selection with `if`, `else if`, and `else`
-- use loops to repeat instructions
-- use arrays or lists to store multiple values
-- trace code step by step
-- use searching and sorting algorithms
-- read from and write to files
-- test and debug programs
-
-## Planned Topics
-
-| Topic | Focus |
+| Topic | Main Focus |
 |---|---|
-| Variables | Storing data in memory |
-| Data Types | Integers, real numbers, strings, Booleans |
-| Input and Output | Getting data from users and displaying results |
-| Selection | Making decisions in code |
-| Loops | Repeating instructions |
-| Arrays / Lists | Storing collections of values |
-| Trace Tables | Predicting program output |
-| Searching | Linear search and binary search |
-| Sorting | Bubble sort, insertion sort, or school-selected algorithms |
-| File Processing | Reading and writing files |
-| Testing and Debugging | Finding and fixing errors |
+| Programming Basics | Understand what a program is and how code is executed |
+| Variables | Store and update data |
+| Data Types | Choose suitable data types for values |
+| Input and Output | Get data from users and display results |
+| Selection | Make decisions using IF statements |
+| Loops | Repeat instructions |
+| Arrays | Store multiple values under one name |
+| Searching | Find values in a data structure |
+| Sorting | Put values into order |
+| File Processing | Read from and write to files |
 
-## Exam Focus
+## How to Study This Unit
 
-Students should be able to:
+1. Understand the concept first.
+2. Study the code pattern.
+3. Trace the code step by step.
+4. Try a small programming task.
+5. Practise exam-style questions.
 
-- read pseudocode and understand its output
-- complete trace tables
-- write short algorithms
-- explain the purpose of variables and loops
-- identify syntax and logic errors
-- apply searching and sorting methods
-
-## Programming Practice Routine
-
-For each programming topic, students should follow this routine:
-
-1. Understand the concept.
-2. Read the example code.
-3. Trace the code by hand.
-4. Modify the code.
-5. Write a similar program independently.
-6. Test the program with normal, boundary, and invalid data.
-
-## Common Mistakes
-
-| Mistake | How to Avoid It |
-|---|---|
-| Forgetting to initialize variables | Set starting values before loops |
-| Infinite loops | Make sure the loop condition eventually becomes false |
-| Off-by-one errors | Check index start and end carefully |
-| Confusing assignment and comparison | Remember assignment stores a value; comparison checks a condition |
-| Not testing boundary cases | Test the smallest, largest, and unusual inputs |
-
-## Quick Check
-
-1. What is the difference between a syntax error and a logic error?
-2. When should a `while` loop be used?
-3. Why are arrays useful?
-4. What is the purpose of a trace table?
-5. What is one advantage of using functions or methods?
+::: tip SL Core
+B2 is one of the most important units in the course. Students should connect every programming topic back to B1 computational thinking.
+:::

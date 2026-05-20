@@ -35,9 +35,21 @@ export default defineConfig({
   ]
 },
 {
-  text: 'B2 and B3',
+  text: 'B2 Programming',
   items: [
-    { text: 'B2 Programming', link: '/b2-programming/' },
+    { text: 'Overview', link: '/b2-programming/' },
+    { text: 'Programming Basics', link: '/b2-programming/programming-basics' },
+    { text: 'Variables', link: '/b2-programming/variables' },
+    { text: 'Data Types', link: '/b2-programming/data-types' },
+    { text: 'Input and Output', link: '/b2-programming/input-output' },
+    { text: 'Selection', link: '/b2-programming/selection' },
+    { text: 'Loops', link: '/b2-programming/loops' },
+    { text: 'Arrays', link: '/b2-programming/arrays' }
+  ]
+},
+{
+  text: 'B3 OOP',
+  items: [
     { text: 'B3 OOP', link: '/b3-oop/' }
   ]
 },
