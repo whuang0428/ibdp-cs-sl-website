@@ -1,35 +1,38 @@
-﻿# B2 Programming
+# B2 Programming
 
 ## Unit Overview
 
-This unit introduces the programming knowledge and practical coding skills needed for IBDP Computer Science SL.
+This unit develops the programming skills needed for IBDP Computer Science SL, with additional support for stronger Java programming.
 
-Programming is where students turn algorithms into working solutions. In this unit, students will learn how to use variables, data types, input and output, selection, loops, arrays, searching, sorting, file processing, testing, and debugging.
+Students should connect every programming topic to B1 Computational Thinking. A program is not just code; it is an implemented algorithm that uses data, decisions, repetition, testing, and debugging.
 
 ## Topics
 
-| Topic | Main Focus |
-|---|---|
-| Programming Basics | Understand what a program is and how code is executed |
-| Variables | Store and update data |
-| Data Types | Choose suitable data types for values |
-| Input and Output | Get data from users and display results |
-| Selection | Make decisions using IF statements |
-| Loops | Repeat instructions |
-| Arrays | Store multiple values under one name |
-| Searching | Find a target value in a data structure |
-| Sorting | Put values into a required order |
-| File Processing | Read from and write to files |
-| Testing and Debugging | Find and fix errors in programs |
+| Topic | Main Focus | Status |
+|---|---|---|
+| Programming Basics | Program structure, IPO model, errors | Full Teaching Page |
+| Variables | Assignment, updating values, trace tables | Full Teaching Page |
+| Data Types | Integers, reals, strings, Booleans, characters | Full Teaching Page |
+| Input and Output | User interaction, prompts, output formatting | Full Teaching Page |
+| Selection | IF / ELSE logic and conditions | Full Teaching Page |
+| Loops | WHILE and FOR repetition | Full Teaching Page |
+| Arrays | Indexed collections and traversal | Full Teaching Page |
+| Searching | Linear search and found/not found logic | Full Teaching Page |
+| Sorting | Ordering values and swap logic | Full Teaching Page |
+| File Processing | Reading, writing, appending, closing files | Full Teaching Page |
+| Testing and Debugging | Test data, error types, debugging strategy | Full Teaching Page |
 
-## How to Study This Unit
+## How to Study B2
 
-1. Understand the concept first.
-2. Study the code pattern.
-3. Trace the code step by step.
-4. Try a small programming task.
-5. Practise exam-style questions.
+1. Read the concept explanation.
+2. Study the IB pseudocode pattern.
+3. Read the Java example.
+4. Follow the line-by-line explanation.
+5. Complete the trace table or execution table.
+6. Try guided practice.
+7. Complete independent practice.
+8. Review exam-style answers in the hidden answer sections.
 
-::: tip SL Core
-B2 is one of the most important units in the course. Students should connect every programming topic back to B1 computational thinking.
+::: tip Course Standard
+All B2 pages use **IB pseudocode + Java**. Guided answers are shown, while exam-style mark scheme answers are hidden in expandable sections.
 :::

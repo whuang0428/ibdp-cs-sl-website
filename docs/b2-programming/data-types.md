@@ -1,98 +1,279 @@
-﻿# Data Types
+# Data Types
 
-## 1. Learning Objectives
+## 1. Lesson Goals
 
-By the end of this page, students should be able to:
+By the end of this lesson, students should be able to:
 
 - identify common data types
-- choose suitable data types for different values
-- explain why using the correct data type is important
-- distinguish between strings, integers, reals, and Booleans
+- choose suitable data types for values
+- explain why data types matter
+- distinguish between integer, real, string, character, and Boolean
+- use suitable Java types
+- identify errors caused by wrong data type choices
 
-## 2. Syllabus Link
+---
+
+## 2. Syllabus Mapping
 
 | Item | Detail |
 |---|---|
 | Unit | B2 Programming |
 | Label | SL Core |
-| Main skill | Representing data in programs |
+| Main skill | Choosing how data is represented in programs |
+| Connected units | Variables, Input and Output, Testing and Debugging |
+| Exam relevance | Data type questions, code reading, validation, error explanation |
+
+::: tip Learning Focus
+Choosing the correct data type helps the program store, process, and compare values correctly.
+:::
+
+---
 
 ## 3. Key Terms
 
-| Term | Meaning |
-|---|---|
-| Integer | A whole number |
-| Real / Float | A number with a decimal point |
-| String | Text data |
-| Character | A single symbol or letter |
-| Boolean | A value that is either true or false |
+| English Term | 中文解释 | Exam-style meaning |
+|---|---|---|
+| Data type | 数据类型 | A category that defines what kind of value can be stored |
+| Integer | 整数 | A whole number |
+| Real / Float | 实数/小数 | A number with a decimal part |
+| String | 字符串 | Text data |
+| Character | 字符 | A single letter, digit, or symbol |
+| Boolean | 布尔值 | A value that is true or false |
+| Type casting | 类型转换 | Converting a value from one data type to another |
+
+---
 
 ## 4. Concept Explanation
 
-A data type tells the computer what kind of data is being stored.
+<LangBlock>
+<template #cn>
 
-Different data types are used for different purposes.
+### 中文讲解
 
-| Example Value | Suitable Data Type | Reason |
-|---|---|---|
-| 17 | Integer | It is a whole number |
-| 3.75 | Real / Float | It contains a decimal point |
-| "Alice" | String | It is text |
-| "A" | Character | It is one symbol |
-| true | Boolean | It has only two possible values |
+**Data type（数据类型）** 决定了一个变量可以存储什么类型的数据，以及这个数据可以进行什么操作。
 
-Using the wrong data type can cause errors or incorrect results.
+例如：
 
-## 5. Step-by-step Example
+- 年龄通常用 integer
+- 价格通常用 real / double
+- 名字通常用 string
+- 是否通过考试可以用 Boolean
 
-Problem: Store information about a student.
+如果数据类型选错，程序可能无法运行，或者运行结果错误。例如，把数字 `"25"` 当成字符串时，它看起来像数字，但不能直接用于数学计算，除非先转换。
 
-| Data | Example | Suitable Data Type |
-|---|---|---|
-| Student name | "Lina" | String |
-| Age | 16 | Integer |
-| Average mark | 86.5 | Real / Float |
-| Passed course | true | Boolean |
+</template>
 
-## 6. Visual Structure
+<template #en>
 
-::: info Choosing a Data Type
+### English Explanation
 
-Ask: What kind of value is this?
+A **data type** defines what kind of value a variable can store and what operations can be performed on that value.
 
-→ Whole number: Integer  
-→ Decimal number: Real / Float  
-→ Text: String  
-→ True or false: Boolean  
+For example:
 
-:::
+- age is usually an integer
+- price is usually a real number or double
+- name is usually a string
+- whether a student has passed can be a Boolean
 
-## 7. Common Mistakes
+If the wrong data type is used, the program may not run correctly or may produce incorrect results. For example, `"25"` looks like a number but is a string, so it may need conversion before calculation.
 
-| Mistake | Why it is a problem |
+</template>
+</LangBlock>
+
+---
+
+## 5. Real-life Example
+
+### Student Record
+
+| Data | Example | Suitable Type | Java Type |
+|---|---|---|---|
+| Student name | Alice | String | `String` |
+| Age | 16 | Integer | `int` |
+| Average mark | 82.5 | Real | `double` |
+| Passed course | true | Boolean | `boolean` |
+| Grade letter | A | Character | `char` |
+
+---
+
+## 6. IB Pseudocode Pattern
+
+```text
+name = "Alice"
+age = 16
+average = 82.5
+passed = true
+grade = "A"
+```
+
+---
+
+## 7. Java Code Example
+
+```java
+public class DataTypeExample {
+    public static void main(String[] args) {
+        String name = "Alice";
+        int age = 16;
+        double averageMark = 82.5;
+        boolean hasPassed = true;
+        char grade = 'A';
+
+        System.out.println(name);
+        System.out.println(age);
+        System.out.println(averageMark);
+        System.out.println(hasPassed);
+        System.out.println(grade);
+    }
+}
+```
+
+---
+
+## 8. Line-by-line Code Explanation
+
+| Code Part | Explanation |
 |---|---|
-| Storing numbers as strings | Calculations may not work correctly |
-| Using integer for decimal values | The decimal part may be lost |
-| Using string for true/false values | Logical comparisons become harder |
-| Not checking input type | The program may crash or give wrong results |
+| `String name = "Alice";` | Stores text |
+| `int age = 16;` | Stores a whole number |
+| `double averageMark = 82.5;` | Stores a decimal value |
+| `boolean hasPassed = true;` | Stores true or false |
+| `char grade = 'A';` | Stores a single character |
 
-## 8. Exam-style Question
+### Important Java difference
 
-A program stores a user's username, age, height, and whether the user has paid the fee.
+| Type | Quotation |
+|---|---|
+| `String` | double quotes `"Alice"` |
+| `char` | single quotes `'A'` |
 
-**State a suitable data type for each item.** [4]
+---
 
-## 9. Mark Scheme Style Answer
+## 9. Step-by-step Execution
 
-| Item | Data Type |
+| Step | Variable | Value |
+|---|---|---|
+| 1 | name | Alice |
+| 2 | age | 16 |
+| 3 | averageMark | 82.5 |
+| 4 | hasPassed | true |
+| 5 | grade | A |
+
+Output appears line by line.
+
+---
+
+## 10. Common Mistakes
+
+| Mistake | Why it is a problem | Better habit |
+|---|---|---|
+| Using `int` for decimal values | Decimal part may be lost or invalid | Use `double` |
+| Using `String` for numbers to calculate | Calculation may not work | Use numeric type |
+| Confusing `char` and `String` | Java syntax differs | Use `'A'` for char, `"A"` for String |
+| Using `True` instead of `true` in Java | Java Boolean literals are lowercase | Use `true` / `false` |
+| Choosing vague variable names | Code is harder to read | Use meaningful identifiers |
+
+---
+
+## 11. Guided Practice
+
+### Practice 1
+
+Choose suitable Java types.
+
+<details>
+<summary>Suggested Answer</summary>
+
+| Data | Java Type |
+|---|---|
+| age | `int` |
+| price | `double` |
+| username | `String` |
+| isLoggedIn | `boolean` |
+| grade letter | `char` |
+
+</details>
+
+### Practice 2
+
+Find the error:
+
+```java
+char grade = "A";
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+`char` uses single quotes:
+
+```java
+char grade = 'A';
+```
+
+</details>
+
+---
+
+## 12. Independent Practice
+
+1. Choose data types for a cinema booking system.
+2. Write Java variable declarations for ticket price, seat number, movie title, and payment status.
+3. Explain why a phone number may be stored as a `String` instead of an `int`.
+
+---
+
+## 13. Exam-style Questions
+
+### Question 1 [4 marks]
+
+State suitable data types for username, age, height, and hasPaid.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+| Item | Type |
 |---|---|
 | username | String |
 | age | Integer |
-| height | Real / Float |
-| has paid fee | Boolean |
+| height | Real / Float / Double |
+| hasPaid | Boolean |
 
-## 10. Quick Check
+</details>
 
-1. What data type is used for true/false values?
-2. What data type is suitable for 42?
-3. Why should "23" not always be treated as an integer?
+### Question 2 [3 marks]
+
+Explain why choosing a suitable data type is important.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A suitable data type ensures the program stores data correctly and can perform the required operations. For example, numeric data should use a numeric type if it will be used in calculations. Wrong data types may cause errors or incorrect processing.
+
+</details>
+
+---
+
+## 14. Classroom Activity
+
+Students design variables for a school library system, choose types, and justify each choice.
+
+---
+
+## 15. Homework
+
+Create a table of 10 pieces of data for an online shop. For each one, give a suitable IB data type, Java data type, and reason.
+
+---
+
+## 16. One-page Revision Summary
+
+| Point | Summary |
+|---|---|
+| Integer | Whole number |
+| Real / double | Decimal number |
+| String | Text |
+| char | Single character |
+| boolean | true or false |
+| Exam phrase | "A suitable data type allows the value to be stored and processed correctly." |

@@ -55,8 +55,7 @@ Programming is not just typing code. It starts with understanding the problem, d
 
 ### 中文讲解
 
-**Program（程序）** 是一组计算机可以执行的指令。  
-**Programming（编程）** 是设计、编写、测试和改进这些指令的过程。
+**Program（程序）** 是一组计算机可以执行的指令。**Programming（编程）** 是设计、编写、测试和改进这些指令的过程。
 
 很多学生刚开始学编程时，会以为编程就是“写代码”。但实际上，写代码只是其中一步。一个比较完整的编程过程通常包括：
 
@@ -77,12 +76,6 @@ Programming is not just typing code. It starts with understanding the problem, d
 | Process | 程序对数据进行处理 | 把两个数字相加 |
 | Output | 程序显示或返回的结果 | 输出总和 |
 
-例如，一个计算矩形面积的程序：
-
-- Input: length 和 width
-- Process: area = length × width
-- Output: area
-
 在 IB CS 中，学生不仅要会写程序，还要会解释程序如何工作、如何测试、哪里可能出错，以及如何修正错误。
 
 </template>
@@ -91,19 +84,9 @@ Programming is not just typing code. It starts with understanding the problem, d
 
 ### English Explanation
 
-A **program** is a set of instructions that a computer can execute.  
-**Programming** is the process of designing, writing, testing, and improving those instructions.
+A **program** is a set of instructions that a computer can execute. **Programming** is the process of designing, writing, testing, and improving those instructions.
 
-Many students think programming only means “writing code”. However, writing code is only one part of the full process. A complete programming process often includes:
-
-1. understanding the problem
-2. decomposing the problem
-3. designing an algorithm
-4. writing pseudocode
-5. writing Java code
-6. testing the program
-7. debugging errors
-8. improving the program
+Many students think programming only means “writing code”. However, writing code is only one part of the full process. A complete programming process often includes understanding the problem, decomposing it, designing an algorithm, writing pseudocode, writing Java code, testing, debugging, and improving the solution.
 
 Programs can often be understood using the **IPO model**:
 
@@ -112,12 +95,6 @@ Programs can often be understood using the **IPO model**:
 | Input | Data received by the program | Enter two numbers |
 | Process | Operations performed on the data | Add the two numbers |
 | Output | Result displayed or returned | Display the total |
-
-For example, a program that calculates the area of a rectangle uses:
-
-- Input: length and width
-- Process: area = length × width
-- Output: area
 
 In IB Computer Science, students need to do more than write code. They must also explain how code works, how it can be tested, where errors may occur, and how errors can be fixed.
 
@@ -132,10 +109,6 @@ In IB Computer Science, students need to do more than write code. They must also
 
 A shop wants a program to calculate the total cost of two items.
 
-Real-world task:
-
-> The user enters the price of two items. The program calculates and displays the total cost.
-
 Using the IPO model:
 
 | Stage | Detail |
@@ -144,12 +117,6 @@ Using the IPO model:
 | Process | total = price1 + price2 |
 | Output | total cost |
 
-This problem is simple, but it shows the basic structure of many programs:
-
-```text
-Input data → Process data → Output result
-```
-
 ::: info Why this matters
 Most programming problems can be simplified by first identifying input, process, and output.
 :::
@@ -157,19 +124,6 @@ Most programming problems can be simplified by first identifying input, process,
 ---
 
 ## 6. IB Pseudocode Pattern
-
-### Basic IPO Pattern
-
-```text
-INPUT value1
-INPUT value2
-
-result = value1 + value2
-
-OUTPUT result
-```
-
-### Shopping Total Example
 
 ```text
 INPUT price1
@@ -180,7 +134,7 @@ total = price1 + price2
 OUTPUT total
 ```
 
-### Rectangle Area Example
+Another example:
 
 ```text
 INPUT length
@@ -199,8 +153,6 @@ In exam answers, pseudocode should be clear and logically correct. It does not n
 
 ## 7. Java Code Example
 
-### Example 1: Add Two Prices
-
 ```java
 public class ShoppingTotal {
     public static void main(String[] args) {
@@ -213,8 +165,6 @@ public class ShoppingTotal {
     }
 }
 ```
-
-### Example 2: Calculate Rectangle Area
 
 ```java
 public class RectangleArea {
@@ -230,14 +180,12 @@ public class RectangleArea {
 ```
 
 ::: warning Important Java Note
-These examples use fixed values to focus on basic programming structure. Later pages will show how to use real user input.
+These examples use fixed values to focus on basic programming structure. Later pages show how to use real user input.
 :::
 
 ---
 
 ## 8. Line-by-line Code Explanation
-
-### Shopping Total Example
 
 | Code Part | Explanation |
 |---|---|
@@ -247,17 +195,6 @@ These examples use fixed values to focus on basic programming structure. Later p
 | `double price2 = 7.30;` | Stores the second item price |
 | `double total = price1 + price2;` | Adds the two prices and stores the result |
 | `System.out.println(...)` | Displays the result |
-
-### Rectangle Area Example
-
-| Code Part | Explanation |
-|---|---|
-| `double length = 8.0;` | Stores the rectangle length |
-| `double width = 3.5;` | Stores the rectangle width |
-| `double area = length * width;` | Calculates the area |
-| `System.out.println("Area: " + area);` | Outputs the result |
-
-### Java structure to notice
 
 | Java Feature | Purpose |
 |---|---|
@@ -272,16 +209,12 @@ These examples use fixed values to focus on basic programming structure. Later p
 
 ## 9. Step-by-step Execution
 
-### Shopping Total Example
-
 Given:
 
 | Variable | Value |
 |---|---:|
 | price1 | 12.50 |
 | price2 | 7.30 |
-
-Execution:
 
 | Step | Action | Result |
 |---|---|---|
@@ -296,43 +229,17 @@ Final output:
 Total cost: 19.8
 ```
 
-### Rectangle Area Example
-
-Given:
-
-| Variable | Value |
-|---|---:|
-| length | 8.0 |
-| width | 3.5 |
-
-Execution:
-
-| Step | Action | Result |
-|---|---|---|
-| 1 | Store length | length = 8.0 |
-| 2 | Store width | width = 3.5 |
-| 3 | Calculate area | area = 28.0 |
-| 4 | Output area | Area: 28.0 |
-
-Final output:
-
-```text
-Area: 28.0
-```
-
 ---
 
 ## 10. Common Mistakes
 
 | Mistake | Why it is a problem | Better habit |
 |---|---|---|
-| Starting to code without identifying input/process/output | The solution may be unclear | Plan the IPO first |
+| Starting to code without identifying IPO | The solution may be unclear | Plan the IPO first |
 | Forgetting semicolons in Java | Causes syntax errors | End Java statements with `;` |
 | Misspelling variable names | Java treats different spellings as different names | Use consistent names |
 | Using the wrong data type | Calculations or output may be wrong | Choose suitable data types |
-| Confusing syntax errors and logic errors | Error type may be identified incorrectly | Learn the difference |
 | Thinking a program is correct because it runs | It may still have a logic error | Test with expected results |
-| Writing unclear output | User may not understand result | Add labels such as `"Total cost: "` |
 
 ---
 
@@ -341,8 +248,6 @@ Area: 28.0
 ### Practice 1: Identify IPO
 
 A program calculates the average of two marks.
-
-Identify the input, process, and output.
 
 <details>
 <summary>Suggested Answer</summary>
@@ -355,11 +260,7 @@ Identify the input, process, and output.
 
 </details>
 
----
-
 ### Practice 2: Write Pseudocode
-
-Write pseudocode for calculating the average of two marks.
 
 <details>
 <summary>Suggested Answer</summary>
@@ -375,22 +276,13 @@ OUTPUT average
 
 </details>
 
----
-
 ### Practice 3: Read Java Code
 
-What is the output?
-
 ```java
-public class TotalExample {
-    public static void main(String[] args) {
-        int a = 6;
-        int b = 4;
-        int total = a + b;
-
-        System.out.println(total);
-    }
-}
+int a = 6;
+int b = 4;
+int total = a + b;
+System.out.println(total);
 ```
 
 <details>
@@ -400,35 +292,19 @@ public class TotalExample {
 10
 ```
 
-Explanation:
-
-`a` is 6 and `b` is 4, so `total = 6 + 4 = 10`.
-
 </details>
 
 ---
 
 ## 12. Independent Practice
 
-Complete these tasks without looking at answers first.
-
 ### Task 1
 
-A program calculates the perimeter of a rectangle.
-
-Identify:
-
-| Stage | Answer |
-|---|---|
-| Input |  |
-| Process |  |
-| Output |  |
+A program calculates the perimeter of a rectangle. Identify input, process, and output.
 
 ### Task 2
 
-Write IB-style pseudocode for the perimeter program.
-
-Formula:
+Write IB-style pseudocode for:
 
 ```text
 perimeter = 2 * (length + width)
@@ -436,11 +312,11 @@ perimeter = 2 * (length + width)
 
 ### Task 3
 
-Write Java code for the perimeter program using fixed values.
+Write Java code using fixed values.
 
 ### Task 4
 
-Explain whether the following error is a syntax error or logic error:
+Identify the error type:
 
 ```java
 int total = 5 + ;
@@ -448,13 +324,13 @@ int total = 5 + ;
 
 ### Task 5
 
-Explain whether the following error is a syntax error or logic error:
-
-A program should calculate area using `length * width`, but the programmer writes:
+Identify the error type:
 
 ```java
 double area = length + width;
 ```
+
+when the required formula is `length * width`.
 
 ---
 
@@ -478,13 +354,9 @@ A computer program is a set of instructions that can be executed by a computer t
 
 </details>
 
----
-
 ### Question 2 [3 marks]
 
-A program calculates the total cost of two products.
-
-Identify the input, processing, and output.
+A program calculates the total cost of two products. Identify input, processing, and output.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
@@ -495,74 +367,16 @@ Identify the input, processing, and output.
 | Processing | total = price1 + price2 |
 | Output | total cost |
 
-Award one mark for each correct stage.
-
 </details>
-
----
 
 ### Question 3 [4 marks]
 
-A program runs without displaying an error message, but the output is incorrect.
-
-Explain what type of error this is and how it could be found.
+A program runs without displaying an error message, but the output is incorrect. Explain what type of error this is and how it could be found.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
-
-Award marks for points such as:
-
-- this is a logic error
-- the program syntax is valid, so it can run
-- the algorithm or calculation is incorrect
-- the error can be found using test data, expected results, trace tables, or debugging
-
-Example answer:
 
 This is a logic error because the program runs but produces the wrong output. It may be caused by an incorrect calculation or condition. The programmer can find it by using test data with known expected results, or by using a trace table to check variable values step by step.
-
-</details>
-
----
-
-### Question 4 [6 marks]
-
-A student wants to write a program to calculate the area of a triangle.
-
-The formula is:
-
-```text
-area = base * height / 2
-```
-
-Construct pseudocode and explain how the program follows the input-process-output model.
-
-<details>
-<summary>Mark Scheme Style Answer</summary>
-
-Possible pseudocode:
-
-```text
-INPUT base
-INPUT height
-
-area = base * height / 2
-
-OUTPUT area
-```
-
-Award marks for:
-
-- inputting base
-- inputting height
-- correctly calculating area
-- outputting area
-- explaining that base and height are inputs
-- explaining that the calculation is processing and area is output
-
-Example explanation:
-
-The program follows the IPO model because it takes `base` and `height` as input, processes them using the formula `base * height / 2`, and outputs the calculated area.
 
 </details>
 
@@ -582,14 +396,7 @@ Choose one problem:
 3. calculate the total price after tax  
 4. calculate the number of minutes from hours  
 
-For your chosen problem:
-
-1. Identify input.
-2. Identify processing.
-3. Identify output.
-4. Write IB-style pseudocode.
-5. Write simple Java code using fixed values.
-6. Create one test case with expected output.
+Complete:
 
 | Stage | Your Answer |
 |---|---|
@@ -607,36 +414,16 @@ Before leaving, write one sentence explaining why programmers should plan input,
 
 ## 15. Homework
 
-### Homework Task
+Choose one simple calculation program and complete:
 
-Choose one simple calculation program:
-
-- rectangle perimeter calculator
-- triangle area calculator
-- average mark calculator
-- currency conversion calculator
-- speed calculator using distance and time
-
-Complete the following:
-
-1. Write a short description of the program.
-2. Identify input, processing, and output.
-3. Write IB-style pseudocode.
-4. Write Java code using fixed values.
-5. Create a step-by-step execution table.
-6. Identify one possible syntax error.
-7. Identify one possible logic error.
-8. Write one exam-style paragraph explaining how the program follows the IPO model.
-
-### Suggested Paragraph Structure
-
-```text
-The program follows the input-process-output model.
-The inputs are ...
-The processing is ...
-The output is ...
-This structure helps because ...
-```
+1. description
+2. input, processing, output
+3. IB-style pseudocode
+4. Java code using fixed values
+5. step-by-step execution table
+6. one possible syntax error
+7. one possible logic error
+8. one exam-style paragraph explaining the IPO model
 
 ---
 
@@ -650,4 +437,3 @@ This structure helps because ...
 | Syntax error | Breaks programming language rules |
 | Runtime error | Happens while program is running |
 | Logic error | Program runs but gives wrong result |
-| Exam phrase | "The program accepts input, processes the data using a calculation, and outputs the result." |
