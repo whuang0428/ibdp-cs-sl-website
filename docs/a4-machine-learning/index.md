@@ -1,67 +1,36 @@
-# A4 Machine Learning
-
-::: tip SL Core
-This unit focuses on machine learning fundamentals and ethical considerations. HL-only technical details should be clearly marked if added.
-:::
+﻿# A4 Machine Learning
 
 ## Unit Overview
 
-Machine learning allows systems to learn patterns from data and make predictions or decisions. At SL level, students should focus on core concepts, evaluation, and ethical issues rather than advanced mathematics.
+This unit introduces the basic ideas of machine learning and its ethical impact.
 
-## Learning Goals
+Students will learn what machine learning is, how models use data, how training and testing data are used, how simple learning approaches work, and how model performance can be evaluated.
 
-By the end of this unit, students should be able to:
+For this first framework version, each page gives a short learning structure. Later, each page can be expanded into a full teaching page with diagrams, datasets, simple coding examples, exam-style questions, and teacher notes.
 
-- explain what machine learning is
-- distinguish between training data and testing data
-- explain features and labels
-- describe supervised, unsupervised, and reinforcement learning
-- explain classification and prediction
-- understand simple evaluation metrics
-- discuss bias, privacy, transparency, and accountability
-- explain why data cleaning matters
+## Topics
 
-## Planned Topics
+| Topic | Main Focus | Label |
+|---|---|---|
+| Machine Learning Fundamentals | Understand what machine learning is and why it is used | SL Core |
+| Data, Features and Labels | Understand the data used by ML models | SL Core |
+| Training and Testing Data | Understand how models are trained and checked | SL Core |
+| Supervised Learning | Learn from labelled examples | SL Core |
+| Unsupervised Learning | Find patterns in unlabelled data | School Extension |
+| Reinforcement Learning | Learn through rewards and penalties | School Extension |
+| Classification and Prediction | Use models to categorize or predict outcomes | SL Core |
+| Confusion Matrix and F1 Score | Evaluate model performance | SL Core |
+| Ethics and Bias | Evaluate social and ethical impacts of ML | SL Core |
+| Neural Networks and CNNs | Understand high-level neural network ideas | School Extension |
 
-| Topic | Focus |
-|---|---|
-| What is Machine Learning? | Learning from data |
-| Training and Testing Data | Building and evaluating a model |
-| Features and Labels | Input data and target output |
-| Supervised Learning | Learning from labelled data |
-| Unsupervised Learning | Finding patterns without labels |
-| Reinforcement Learning | Learning through rewards and penalties |
-| Classification | Assigning categories |
-| Prediction | Estimating future or unknown values |
-| Confusion Matrix | True/false positives and negatives |
-| Accuracy, Precision, Recall, F1 | Evaluating model performance |
-| Data Cleaning | Removing or correcting poor-quality data |
-| Ethics | Bias, privacy, fairness, responsibility |
+## How to Study This Unit
 
-## Exam Focus
+1. Learn the vocabulary first.
+2. Understand how data is prepared and used.
+3. Distinguish between training and testing.
+4. Practise interpreting evaluation results.
+5. Discuss ethical issues using real-world scenarios.
 
-Students should be able to:
-
-- identify types of machine learning from a scenario
-- explain why training and testing data are separated
-- describe how data quality affects the model
-- interpret simple evaluation results
-- discuss ethical issues in machine learning applications
-
-## Common Mistakes
-
-| Mistake | How to Avoid It |
-|---|---|
-| Thinking ML is the same as normal programming | ML learns patterns from data rather than only following fixed rules |
-| Confusing training and testing data | Training builds the model; testing evaluates it |
-| Saying high accuracy always means good model | Consider class imbalance, precision, recall, and F1 |
-| Ignoring bias in data | Biased data can produce biased results |
-| Giving vague ethics answers | Link ethical issue to the users and real impact |
-
-## Quick Check
-
-1. What is training data?
-2. What is a feature?
-3. What is supervised learning?
-4. Why is data cleaning important?
-5. Give one ethical concern about machine learning.
+::: tip SL Core
+For SL, focus on core machine learning concepts, evaluation ideas, and ethical considerations. Some advanced approaches are included as school extension content.
+:::

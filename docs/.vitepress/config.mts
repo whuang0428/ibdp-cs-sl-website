@@ -115,7 +115,17 @@ export default defineConfig({
 {
   text: 'A4 Machine Learning',
   items: [
-    { text: 'A4 Machine Learning', link: '/a4-machine-learning/' }
+    { text: 'Overview', link: '/a4-machine-learning/' },
+    { text: 'Machine Learning Fundamentals', link: '/a4-machine-learning/machine-learning-fundamentals' },
+    { text: 'Data, Features and Labels', link: '/a4-machine-learning/data-features-labels' },
+    { text: 'Training and Testing Data', link: '/a4-machine-learning/training-testing-data' },
+    { text: 'Supervised Learning', link: '/a4-machine-learning/supervised-learning' },
+    { text: 'Unsupervised Learning', link: '/a4-machine-learning/unsupervised-learning' },
+    { text: 'Reinforcement Learning', link: '/a4-machine-learning/reinforcement-learning' },
+    { text: 'Classification and Prediction', link: '/a4-machine-learning/classification-prediction' },
+    { text: 'Confusion Matrix and F1 Score', link: '/a4-machine-learning/confusion-matrix-f1-score' },
+    { text: 'Ethics and Bias', link: '/a4-machine-learning/ethics-bias' },
+    { text: 'Neural Networks and CNNs', link: '/a4-machine-learning/neural-networks-cnns' }
   ]
 },
       {
