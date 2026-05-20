@@ -1,73 +1,33 @@
-# B3 Object-Oriented Programming
-
-::: tip SL Core
-SL focuses mainly on the fundamentals of OOP for a single class. Multiple-class design can be added as HL extension.
-:::
+﻿# B3 Object-Oriented Programming
 
 ## Unit Overview
 
-Object-oriented programming helps students model real-world entities using classes and objects. This unit should connect programming syntax with design thinking.
+This unit introduces the basic ideas of object-oriented programming.
 
-## Learning Goals
+Object-oriented programming, often called OOP, is a way of designing programs using classes and objects. Students learn how data and behaviour can be grouped together inside a class.
 
-By the end of this unit, students should be able to:
+For SL, the focus is mainly on a single class. Our course will also include some HL extension content to help students understand larger programs with multiple classes.
 
-- explain what a class is
-- explain what an object is
-- identify attributes and methods
-- write a simple class
-- create objects from a class
-- use constructors
-- use accessors and mutators
-- explain encapsulation
-- read and draw simple UML class diagrams
+## Topics
 
-## Planned Topics
+| Topic | Main Focus | Label |
+|---|---|---|
+| Classes and Objects | Understand the difference between a class and an object | SL Core |
+| Attributes and Methods | Store data and define behaviour inside a class | SL Core |
+| Constructors | Create objects with initial values | SL Core |
+| Encapsulation | Protect data inside a class | SL Core |
+| Accessors and Mutators | Get and change private attribute values safely | SL Core |
+| UML Class Diagrams | Represent class structure visually | SL Core |
+| Multiple Classes | Understand how classes can work together | HL Extension |
 
-| Topic | Focus |
-|---|---|
-| Classes and Objects | Class as a blueprint; object as an instance |
-| Attributes | Data stored inside an object |
-| Methods | Behaviours or actions of an object |
-| Constructors | Creating and initializing objects |
-| Accessors | Getting private data |
-| Mutators | Changing private data |
-| Encapsulation | Protecting data using private attributes and public methods |
-| UML Class Diagrams | Visual representation of class structure |
+## How to Study This Unit
 
-## HL Extension Topics
+1. Understand the vocabulary first.
+2. Study the structure of a simple class.
+3. Trace how objects are created and used.
+4. Practise writing small classes.
+5. Connect OOP ideas to real-world examples.
 
-| Topic | Focus |
-|---|---|
-| Multiple Classes | Designing programs with interacting classes |
-| Inheritance | Reusing attributes and methods from a parent class |
-| Polymorphism | Same method name with different behaviour |
-| Aggregation / Composition | Object relationships |
-
-## Exam Focus
-
-Students should pay attention to:
-
-- correct use of OOP terminology
-- explaining the relationship between class and object
-- identifying attributes and methods from a scenario
-- writing or completing class code
-- interpreting UML diagrams
-
-## Common Mistakes
-
-| Mistake | How to Avoid It |
-|---|---|
-| Confusing class and object | Class is the plan; object is the actual item |
-| Making all attributes public | Use private attributes and public methods |
-| Forgetting constructor parameters | Match constructor parameters with attributes |
-| Confusing method and attribute | Attribute stores data; method performs an action |
-| Writing code without scenario link | Use names and data from the problem context |
-
-## Quick Check
-
-1. What is a class?
-2. What is an object?
-3. Why is encapsulation useful?
-4. What is a constructor used for?
-5. What is the difference between an accessor and a mutator?
+::: tip SL Core and HL Extension
+For SL, students should focus on single-class OOP. Multiple-class OOP is included as an extension to support stronger programming skills.
+:::

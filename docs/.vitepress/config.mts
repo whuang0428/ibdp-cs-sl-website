@@ -54,7 +54,14 @@ export default defineConfig({
 {
   text: 'B3 OOP',
   items: [
-    { text: 'B3 OOP', link: '/b3-oop/' }
+    { text: 'Overview', link: '/b3-oop/' },
+    { text: 'Classes and Objects', link: '/b3-oop/classes-objects' },
+    { text: 'Attributes and Methods', link: '/b3-oop/attributes-methods' },
+    { text: 'Constructors', link: '/b3-oop/constructors' },
+    { text: 'Encapsulation', link: '/b3-oop/encapsulation' },
+    { text: 'Accessors and Mutators', link: '/b3-oop/accessors-mutators' },
+    { text: 'UML Class Diagrams', link: '/b3-oop/uml-class-diagrams' },
+    { text: 'HL: Multiple Classes', link: '/b3-oop/hl-multiple-classes' }
   ]
 },
       {
