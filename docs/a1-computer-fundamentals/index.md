@@ -1,36 +1,36 @@
-﻿# A1 Computer Fundamentals
+# A1 Computer Fundamentals
 
 ## Unit Overview
 
-This unit introduces the main concepts behind how computers work.
+This unit explains how computer systems work at a fundamental level.
 
-Students will learn about computer hardware, CPU components, memory, storage, data representation, logic gates, operating systems, control systems, and cloud computing.
+Students learn about hardware, the CPU, the fetch-decode-execute cycle, memory, storage, data representation, logic gates, operating systems, control systems, and cloud computing.
 
-For this first framework version, each page gives a short learning structure. Later, each page can be expanded into a full teaching page with diagrams, animations, code examples, exam-style questions, and teacher notes.
+A1 is concept-heavy, so students must practise writing clear definitions and step-by-step explanations.
 
 ## Topics
 
-| Topic | Main Focus | Label |
+| Topic | Main Focus | Status |
 |---|---|---|
-| Computer Hardware | Understand the main physical components of a computer system | SL Core |
-| CPU Components | Understand the role of CU, ALU, registers, and buses | SL Core |
-| Fetch-Decode-Execute Cycle | Understand how instructions are processed | SL Core |
-| Primary Memory | Understand RAM, ROM, cache, and registers | SL Core |
-| Secondary Storage | Compare HDD, SSD, optical, and cloud storage | SL Core |
-| Data Representation | Understand binary, denary, hexadecimal, and character data | SL Core |
-| Logic Gates | Understand AND, OR, NOT and truth tables | SL Core |
-| Operating Systems | Understand the main functions of an operating system | SL Core |
-| Control Systems | Understand sensors, input, processing, and output in control systems | SL Core |
-| Cloud Computing | Understand SaaS, PaaS, IaaS and cloud service models | SL Core |
+| Computer Hardware | Physical components and system roles | Full Teaching Page |
+| CPU Components | ALU, CU, registers, buses | Full Teaching Page |
+| Fetch-Decode-Execute Cycle | How instructions are processed | Full Teaching Page |
+| Primary Memory | RAM, ROM, cache, registers | Full Teaching Page |
+| Secondary Storage | HDD, SSD, optical, cloud storage | Full Teaching Page |
+| Data Representation | Binary, denary, hexadecimal, characters | Full Teaching Page |
+| Logic Gates | AND, OR, NOT, truth tables | Full Teaching Page |
+| Operating Systems | Resource management and user interface | Full Teaching Page |
+| Control Systems | Sensors, processing, actuators, feedback | Full Teaching Page |
+| Cloud Computing | SaaS, PaaS, IaaS, benefits and risks | Full Teaching Page |
 
-## How to Study This Unit
+## How to Study A1
 
-1. Learn the key hardware and system terms.
-2. Understand how data and instructions move inside the computer.
-3. Practise binary, hexadecimal, and truth table questions.
-4. Connect operating system functions to real computer use.
-5. Practise exam-style explanation questions.
+1. Learn the key definitions accurately.
+2. Practise explaining processes in order.
+3. Use diagrams or tables to compare technologies.
+4. Apply ideas to scenarios such as schools, hospitals, homes, and companies.
+5. Practise short mark scheme-style answers.
 
-::: tip SL Core
-A1 is concept-heavy. Students should focus on clear definitions, precise technical vocabulary, and step-by-step processes.
+::: tip Course Standard
+A1 pages focus on conceptual understanding, real-world scenarios, process explanation, common mistakes, exam-style answers, classroom activities, and homework.
 :::
