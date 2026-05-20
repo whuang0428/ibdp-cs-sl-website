@@ -1,59 +1,29 @@
-# B1 Computational Thinking
-
-::: tip SL Core
-This unit introduces the thinking process used to solve problems in computer science.
-:::
+﻿# B1 Computational Thinking
 
 ## Unit Overview
 
-Computational thinking is the foundation of the whole course. Students learn how to break down problems, identify patterns, remove unnecessary details, and design algorithms.
+This unit introduces the core problem-solving skills used in computer science.
 
-## Learning Goals
+Computational thinking is not only used before programming. It is also used when designing databases, analysing systems, creating algorithms, debugging code, and evaluating solutions.
 
-By the end of this unit, students should be able to:
+## Topics
 
-- explain the main ideas of computational thinking
-- decompose a problem into smaller parts
-- identify patterns in similar problems
-- use abstraction to focus on important details
-- design algorithms using pseudocode or flowcharts
-- trace algorithms step by step
-
-## Planned Topics
-
-| Topic | Focus |
+| Topic | Main Focus |
 |---|---|
-| Decomposition | Breaking a large problem into smaller sub-problems |
-| Pattern Recognition | Finding similarities between problems or data |
-| Abstraction | Removing unnecessary details |
-| Algorithm Design | Creating clear step-by-step solutions |
-| Flowcharts | Representing algorithms visually |
-| Pseudocode | Writing algorithm logic in structured English |
-| Trace Tables | Tracking variable values step by step |
+| Decomposition | Break a large problem into smaller parts |
+| Abstraction | Focus on important details and ignore unnecessary details |
+| Algorithms | Design clear step-by-step solutions |
+| Flowcharts | Represent algorithms visually |
+| Trace Tables | Track variable values step by step |
 
-## Exam Focus
+## How to Study This Unit
 
-Students should pay attention to:
+1. Understand each computational thinking skill.
+2. Learn the key terms.
+3. Study the worked examples.
+4. Try the quick check questions.
+5. Practise exam-style answers.
 
-- using correct computational thinking vocabulary
-- writing clear steps in an algorithm
-- completing trace tables accurately
-- explaining why an algorithm solves a problem
-- identifying errors in algorithm logic
-
-## Common Mistakes
-
-| Mistake | How to Avoid It |
-|---|---|
-| Writing vague algorithm steps | Use precise step-by-step instructions |
-| Skipping variable changes in trace tables | Update every variable after each line |
-| Confusing abstraction with decomposition | Abstraction removes details; decomposition breaks the problem apart |
-| Drawing unclear flowcharts | Use correct symbols and clear arrows |
-
-## Quick Check
-
-1. What is decomposition?
-2. Why is abstraction useful?
-3. What is the purpose of a trace table?
-4. How is pseudocode different from real programming code?
-5. Give one example of pattern recognition in a programming problem.
+::: tip SL Core
+B1 is a foundation unit. Students should keep using these skills throughout B2 Programming, B3 OOP, A3 Databases, A1 Computer Fundamentals, A2 Networks, and A4 Machine Learning.
+:::

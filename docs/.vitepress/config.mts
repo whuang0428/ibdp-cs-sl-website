@@ -23,14 +23,24 @@ export default defineConfig({
           { text: 'Course Roadmap', link: '/roadmap' }
         ]
       },
-      {
-        text: 'B Theme',
-        items: [
-          { text: 'B1 Computational Thinking', link: '/b1-computational-thinking/' },
-          { text: 'B2 Programming', link: '/b2-programming/' },
-          { text: 'B3 OOP', link: '/b3-oop/' }
-        ]
-      },
+{
+  text: 'B1 Computational Thinking',
+  items: [
+    { text: 'Overview', link: '/b1-computational-thinking/' },
+    { text: 'Decomposition', link: '/b1-computational-thinking/decomposition' },
+    { text: 'Abstraction', link: '/b1-computational-thinking/abstraction' },
+    { text: 'Algorithms', link: '/b1-computational-thinking/algorithms' },
+    { text: 'Flowcharts', link: '/b1-computational-thinking/flowcharts' },
+    { text: 'Trace Tables', link: '/b1-computational-thinking/trace-tables' }
+  ]
+},
+{
+  text: 'B2 and B3',
+  items: [
+    { text: 'B2 Programming', link: '/b2-programming/' },
+    { text: 'B3 OOP', link: '/b3-oop/' }
+  ]
+},
       {
         text: 'A Theme',
         items: [
