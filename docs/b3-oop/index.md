@@ -1,33 +1,36 @@
-﻿# B3 Object-Oriented Programming
+# B3 Object-Oriented Programming
 
 ## Unit Overview
 
-This unit introduces the basic ideas of object-oriented programming.
+This unit introduces object-oriented programming, usually called **OOP**.
 
-Object-oriented programming, often called OOP, is a way of designing programs using classes and objects. Students learn how data and behaviour can be grouped together inside a class.
+Students learn how programs can be designed using **classes** and **objects**. Instead of writing all code in one long program, OOP groups related data and behaviour together.
 
-For SL, the focus is mainly on a single class. Our course will also include some HL extension content to help students understand larger programs with multiple classes.
+For IBDP CS SL, students mainly need to understand single-class OOP ideas such as classes, objects, attributes, methods, constructors, encapsulation, accessors, mutators, and UML class diagrams.
+
+This course also includes a small amount of extension content on multiple classes to support stronger Java programming.
 
 ## Topics
 
-| Topic | Main Focus | Label |
+| Topic | Main Focus | Status |
 |---|---|---|
-| Classes and Objects | Understand the difference between a class and an object | SL Core |
-| Attributes and Methods | Store data and define behaviour inside a class | SL Core |
-| Constructors | Create objects with initial values | SL Core |
-| Encapsulation | Protect data inside a class | SL Core |
-| Accessors and Mutators | Get and change private attribute values safely | SL Core |
-| UML Class Diagrams | Represent class structure visually | SL Core |
-| Multiple Classes | Understand how classes can work together | HL Extension |
+| Classes and Objects | Blueprint vs instance | Full Teaching Page |
+| Attributes and Methods | Data and behaviour inside a class | Full Teaching Page |
+| Constructors | Creating objects with initial values | Full Teaching Page |
+| Encapsulation | Protecting object data | Full Teaching Page |
+| Accessors and Mutators | Getter and setter methods | Full Teaching Page |
+| UML Class Diagrams | Representing class structure visually | Full Teaching Page |
+| HL: Multiple Classes | How classes can work together | Extension Teaching Page |
 
-## How to Study This Unit
+## How to Study B3
 
-1. Understand the vocabulary first.
-2. Study the structure of a simple class.
-3. Trace how objects are created and used.
-4. Practise writing small classes.
-5. Connect OOP ideas to real-world examples.
+1. Learn the vocabulary first.
+2. Connect each OOP term to a real-world example.
+3. Study the Java class structure.
+4. Trace how objects are created and methods are called.
+5. Practise drawing UML class diagrams.
+6. Practise writing short exam-style explanations.
 
-::: tip SL Core and HL Extension
-For SL, students should focus on single-class OOP. Multiple-class OOP is included as an extension to support stronger programming skills.
+::: tip Course Standard
+All B3 pages use **IB-style pseudocode + Java**. Some extension pages go beyond SL to support stronger programming skills.
 :::

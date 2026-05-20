@@ -1,108 +1,340 @@
-﻿# Multiple Classes
+# HL: Multiple Classes
 
-## 1. Learning Objectives
+## 1. Lesson Goals
 
-By the end of this page, students should be able to:
+By the end of this lesson, students should be able to:
 
-- explain why larger programs may use multiple classes
-- identify simple relationships between classes
-- understand how objects can work together
-- distinguish this extension content from SL core content
+- explain why larger programs use multiple classes
+- identify class responsibilities
+- explain how objects can interact
+- design simple class relationships
+- write a small Java program using two classes
+- distinguish this extension content from the main SL focus
 
-## 2. Syllabus Link
+---
+
+## 2. Syllabus Mapping
 
 | Item | Detail |
 |---|---|
 | Unit | B3 Object-Oriented Programming |
-| Label | HL Extension |
+| Label | HL Extension / School Extension |
 | Main skill | Designing larger OOP programs |
+| Connected units | Classes and Objects, UML, IA project, HL Programming Extension |
+| Exam relevance | Extension programming skill; supports deeper OOP understanding |
+
+::: warning Extension Content
+This page goes beyond the main SL single-class focus. It is included to strengthen programming and prepare students for larger projects.
+:::
+
+---
 
 ## 3. Key Terms
 
-| Term | Meaning |
-|---|---|
-| Multiple classes | A program design that uses more than one class |
-| Relationship | A connection between classes |
-| Association | A general link between classes |
-| Aggregation | A whole-part relationship where parts can exist independently |
-| Composition | A stronger whole-part relationship where parts depend on the whole |
+| English Term | 中文解释 | Exam-style meaning |
+|---|---|---|
+| Multiple classes | 多个类 | A program design using more than one class |
+| Class responsibility | 类的职责 | The main job of a class |
+| Object interaction | 对象交互 | Objects using methods or data from other objects |
+| Association | 关联 | A relationship between classes |
+| Aggregation | 聚合 | Whole-part relationship where parts can exist independently |
+| Composition | 组合 | Stronger whole-part relationship where parts depend on the whole |
+| Coupling | 耦合 | How strongly classes depend on each other |
+| Cohesion | 内聚 | How focused a class is on one responsibility |
+
+---
 
 ## 4. Concept Explanation
 
-In larger programs, one class is often not enough.
+<LangBlock>
+<template #cn>
 
-Multiple classes allow different parts of a system to be represented separately.
+### 中文讲解
 
-Example:
+在较大的程序中，一个 class 通常不够。我们会把系统拆成多个 class，每个 class 负责一个清晰的任务。
 
-A school system might use:
-
-| Class | Purpose |
-|---|---|
-| Student | Store student information |
-| Course | Store course information |
-| Teacher | Store teacher information |
-| GradeBook | Manage marks |
-
-Each class has its own responsibility.
-
-## 5. Step-by-step Example
-
-System: Library borrowing system
-
-Possible classes:
+例如一个图书馆系统可以有：
 
 | Class | Responsibility |
 |---|---|
-| Book | Store book details |
-| Member | Store member details |
-| Loan | Store borrowing date and return date |
+| Book | 保存书的信息 |
+| Member | 保存会员的信息 |
+| Loan | 保存借阅记录 |
 
-These classes work together to model the full system.
+这样比把所有内容都放在一个巨大 class 里更清楚，也更容易维护。
 
-## 6. Visual Structure
+好的多类设计应该：
 
-::: warning HL Extension
-This page is not the main SL focus. It is included to improve programming understanding and prepare students for more complex OOP tasks.
-:::
+- 每个 class 有清晰职责
+- class 之间通过方法进行交互
+- 避免一个 class 做太多事情
+- 避免 class 之间过度依赖
 
-::: info Multiple-Class Thinking
+</template>
 
-Break the system into responsibilities.
+<template #en>
 
-→ Choose one class for each major responsibility  
-→ Give each class suitable attributes and methods  
-→ Decide how objects need to interact  
-→ Keep each class focused and clear  
+### English Explanation
 
-:::
+In larger programs, one class is often not enough. A system can be divided into multiple classes, with each class having a clear responsibility.
 
-## 7. Common Mistakes
+For example, a library system may include:
 
-| Mistake | Why it is a problem |
+| Class | Responsibility |
 |---|---|
-| Putting everything into one large class | The class becomes hard to maintain |
-| Creating too many tiny classes | The design becomes unnecessarily complex |
-| Giving a class unrelated responsibilities | The design becomes unclear |
-| Confusing object interaction with inheritance | Not all class relationships are inheritance |
+| Book | Store book information |
+| Member | Store member information |
+| Loan | Store borrowing records |
 
-## 8. Exam-style Question
+This is clearer and easier to maintain than putting everything into one huge class.
 
-A library system uses books, members, and loans.
+Good multiple-class design should:
 
-**Explain why using multiple classes may be better than using one large class.** [4]
+- give each class a clear responsibility
+- allow classes to interact through methods
+- avoid giving one class too many jobs
+- avoid unnecessary dependency between classes
 
-## 9. Mark Scheme Style Answer
+</template>
+</LangBlock>
 
-Award marks for points such as:
+---
 
-- each class can represent a separate part of the system
-- Book, Member, and Loan can each have their own attributes and methods
-- this makes the program easier to understand and maintain
-- changes to one class are less likely to affect unrelated parts of the program
+## 5. Real-life Example
 
-## 10. Quick Check
+### Library System
 
-1. Why might a program use multiple classes?
-2. Give two possible classes in a shopping system.
-3. Why should a class have a clear responsibility?
+| Class | Attributes | Methods |
+|---|---|---|
+| Book | title, available | borrowBook(), returnBook() |
+| Member | name, memberID | displayMember() |
+| Loan | book, member | displayLoan() |
+
+A `Loan` object may connect one `Book` object and one `Member` object.
+
+---
+
+## 6. IB Pseudocode Pattern
+
+```text
+CLASS Book
+    title
+    available
+END CLASS
+
+CLASS Member
+    name
+    memberID
+END CLASS
+
+CLASS Loan
+    book
+    member
+END CLASS
+```
+
+---
+
+## 7. Java Code Example
+
+### Book class
+
+```java
+public class Book {
+    private String title;
+    private boolean available;
+
+    public Book(String title) {
+        this.title = title;
+        this.available = true;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void borrowBook() {
+        available = false;
+    }
+
+    public void returnBook() {
+        available = true;
+    }
+}
+```
+
+### Member class
+
+```java
+public class Member {
+    private String name;
+    private int memberID;
+
+    public Member(String name, int memberID) {
+        this.name = name;
+        this.memberID = memberID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getMemberID() {
+        return memberID;
+    }
+}
+```
+
+### Test class
+
+```java
+public class LibraryTest {
+    public static void main(String[] args) {
+        Book book1 = new Book("Dune");
+        Member member1 = new Member("Alice", 1001);
+
+        if (book1.isAvailable()) {
+            book1.borrowBook();
+            System.out.println(member1.getName() + " borrowed " + book1.getTitle());
+        }
+    }
+}
+```
+
+---
+
+## 8. Line-by-line Code Explanation
+
+| Code Part | Explanation |
+|---|---|
+| `Book` class | Handles book-related data and behaviour |
+| `Member` class | Handles member-related data |
+| `Book book1 = new Book("Dune");` | Creates a Book object |
+| `Member member1 = new Member("Alice", 1001);` | Creates a Member object |
+| `book1.isAvailable()` | Checks Book object's state |
+| `book1.borrowBook()` | Changes Book object's state |
+| `member1.getName()` | Gets Member object's name |
+
+---
+
+## 9. Step-by-step Execution
+
+| Step | Action | Result |
+|---|---|---|
+| 1 | Create book1 | title = Dune, available = true |
+| 2 | Create member1 | name = Alice, memberID = 1001 |
+| 3 | Check availability | true |
+| 4 | borrowBook() | available becomes false |
+| 5 | output message | Alice borrowed Dune |
+
+Output:
+
+```text
+Alice borrowed Dune
+```
+
+---
+
+## 10. Common Mistakes
+
+| Mistake | Why it is a problem | Better habit |
+|---|---|---|
+| Putting everything into one class | Hard to maintain | Split by responsibility |
+| Creating too many tiny classes | Design becomes too complex | Keep useful classes |
+| Giving one class unrelated jobs | Low cohesion | One clear responsibility per class |
+| Tight dependency between classes | Changes become risky | Keep coupling low |
+| Confusing object interaction with inheritance | Not every relationship is inheritance | Use association where suitable |
+
+---
+
+## 11. Guided Practice
+
+### Practice 1
+
+Suggest three classes for an online shop.
+
+<details>
+<summary>Suggested Answer</summary>
+
+Possible classes:
+
+- Product
+- Customer
+- Order
+- Payment
+
+</details>
+
+### Practice 2
+
+Which class should store product price?
+
+<details>
+<summary>Suggested Answer</summary>
+
+`Product`, because price is data about the product.
+
+</details>
+
+---
+
+## 12. Independent Practice
+
+1. Design three classes for a school club system.
+2. Give each class two attributes and two methods.
+3. Explain how two objects might interact.
+4. Write a small Java example using two classes.
+
+---
+
+## 13. Exam-style Questions
+
+### Question 1 [2 marks]
+
+Explain why a larger program may use multiple classes.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Multiple classes allow different parts of the system to be represented separately, with each class having a clear responsibility. This improves readability and maintainability.
+
+</details>
+
+### Question 2 [4 marks]
+
+A library system uses `Book`, `Member`, and `Loan` classes. Explain one advantage of this design.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Each class represents a different part of the system. `Book` stores book data, `Member` stores member data, and `Loan` stores borrowing data. This makes the system easier to understand, test, and modify because changes to one part are less likely to affect unrelated parts.
+
+</details>
+
+---
+
+## 14. Classroom Activity
+
+Groups design a three-class system for a cinema booking app. They must identify class responsibilities and object interactions.
+
+---
+
+## 15. Homework
+
+Design a multiple-class system for either a library, shop, or game. Include class names, attributes, methods, and one interaction example.
+
+---
+
+## 16. One-page Revision Summary
+
+| Point | Summary |
+|---|---|
+| Multiple classes | Used for larger systems |
+| Responsibility | Each class should have a clear job |
+| Cohesion | Class focuses on one purpose |
+| Coupling | Dependency between classes |
+| Exam phrase | "Separating the system into classes improves maintainability because each class has a clear responsibility." |

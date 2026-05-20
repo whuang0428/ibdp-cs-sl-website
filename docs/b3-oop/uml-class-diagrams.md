@@ -1,124 +1,337 @@
-﻿# UML Class Diagrams
+# UML Class Diagrams
 
-## 1. Learning Objectives
+## 1. Lesson Goals
 
-By the end of this page, students should be able to:
+By the end of this lesson, students should be able to:
 
-- explain the purpose of a UML class diagram
-- identify class name, attributes, and methods in a class diagram
-- create a simple class diagram for one class
-- interpret visibility symbols
+- explain the purpose of UML class diagrams
+- identify class name, attributes, and methods
+- interpret public and private visibility symbols
+- draw a simple UML class diagram
+- convert a UML class diagram into Java class structure
+- connect UML diagrams to OOP design
 
-## 2. Syllabus Link
+---
+
+## 2. Syllabus Mapping
 
 | Item | Detail |
 |---|---|
 | Unit | B3 Object-Oriented Programming |
 | Label | SL Core |
 | Main skill | Representing class design |
+| Connected units | Classes, Attributes, Methods, Encapsulation |
+| Exam relevance | Diagram interpretation, class design, OOP questions |
+
+::: tip Learning Focus
+A UML class diagram shows the structure of a class before or during programming.
+:::
+
+---
 
 ## 3. Key Terms
 
-| Term | Meaning |
-|---|---|
-| UML | Unified Modeling Language |
-| Class diagram | A diagram showing the structure of a class |
-| Visibility | Whether an attribute or method is public or private |
-| Public | Usually shown with + |
-| Private | Usually shown with - |
+| English Term | 中文解释 | Exam-style meaning |
+|---|---|---|
+| UML | 统一建模语言 | Unified Modeling Language |
+| Class diagram | 类图 | A diagram showing class name, attributes, and methods |
+| Visibility | 可见性 | Whether a member is public or private |
+| Public | 公共 | Can be accessed outside the class, shown with `+` |
+| Private | 私有 | Only accessible inside the class, shown with `-` |
+| Attribute section | 属性区 | Part listing stored data |
+| Method section | 方法区 | Part listing behaviours |
+
+---
 
 ## 4. Concept Explanation
 
-A UML class diagram is used to show the design of a class.
+<LangBlock>
+<template #cn>
 
-A simple class diagram usually has three sections:
+### 中文讲解
 
-| Section | Content |
+**UML class diagram（UML 类图）** 用来表示一个 class 的结构。它通常有三个部分：
+
+1. class name
+2. attributes
+3. methods
+
+常见可见性符号：
+
+| Symbol | Meaning |
 |---|---|
-| Top | Class name |
-| Middle | Attributes |
-| Bottom | Methods |
+| `+` | public |
+| `-` | private |
+
+例如：
+
+| Student |
+|---|
+| - name : String |
+| - score : int |
+| + getName() : String |
+| + getScore() : int |
+| + setScore(newScore : int) : void |
+
+这个图说明 `name` 和 `score` 是 private attributes，而 `getName`、`getScore`、`setScore` 是 public methods。
+
+</template>
+
+<template #en>
+
+### English Explanation
+
+A **UML class diagram** represents the structure of a class. It usually has three sections:
+
+1. class name
+2. attributes
+3. methods
+
+Common visibility symbols:
+
+| Symbol | Meaning |
+|---|---|
+| `+` | public |
+| `-` | private |
 
 Example:
 
 | Student |
 |---|
-| - name |
-| - score |
-| + getName() |
-| + setScore(newScore) |
-| + displayDetails() |
+| - name : String |
+| - score : int |
+| + getName() : String |
+| + getScore() : int |
+| + setScore(newScore : int) : void |
 
-The minus symbol means private.  
-The plus symbol means public.
+This means `name` and `score` are private attributes, while `getName`, `getScore`, and `setScore` are public methods.
 
-## 5. Step-by-step Example
+</template>
+</LangBlock>
 
-Class: Book
+---
 
-Possible UML design:
+## 5. Real-life Example
 
-| Book |
-|---|
-| - title |
-| - author |
-| - available |
-| + getTitle() |
-| + borrowBook() |
-| + returnBook() |
-
-## 6. Visual Structure
-
-::: info UML Class Diagram Structure
-
-Top section: **Class name**
-
-Middle section: **Attributes**
-
-Bottom section: **Methods**
-
-Visibility symbols:
-
-- `+` means public
-- `-` means private
-
-:::
-
-## 7. Common Mistakes
-
-| Mistake | Why it is a problem |
-|---|---|
-| Putting methods in the attribute section | The class diagram becomes unclear |
-| Forgetting visibility symbols | Access level is not shown |
-| Using object names instead of class names | UML class diagrams describe classes |
-| Adding unrelated methods | The class design becomes weak |
-
-## 8. Exam-style Question
-
-A class called `Product` has private attributes `name` and `price`, and public methods `getPrice()` and `setPrice(newPrice)`.
-
-**Construct a simple UML class diagram for this class.** [4]
-
-## 9. Mark Scheme Style Answer
-
-Award marks for:
-
-- class name Product
-- private attribute name
-- private attribute price
-- public methods getPrice and setPrice
-
-Example:
+### Product Class
 
 | Product |
 |---|
-| - name |
-| - price |
-| + getPrice() |
-| + setPrice(newPrice) |
+| - name : String |
+| - price : double |
+| - stock : int |
+| + getName() : String |
+| + getPrice() : double |
+| + setPrice(newPrice : double) : void |
+| + displayDetails() : void |
 
-## 10. Quick Check
+---
 
-1. What are the three sections of a UML class diagram?
-2. What does `-` mean in a UML class diagram?
-3. What does `+` mean?
+## 6. IB Pseudocode / UML Pattern
+
+```text
+ClassName
+- privateAttribute : Type
++ publicMethod(parameter : Type) : ReturnType
+```
+
+Example:
+
+```text
+BankAccount
+- balance : double
++ deposit(amount : double) : void
++ withdraw(amount : double) : void
++ getBalance() : double
+```
+
+---
+
+## 7. Java Code Example
+
+UML:
+
+```text
+Student
+- name : String
+- score : int
++ getName() : String
++ getScore() : int
++ setScore(newScore : int) : void
+```
+
+Java:
+
+```java
+public class Student {
+    private String name;
+    private int score;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int newScore) {
+        if (newScore >= 0 && newScore <= 100) {
+            score = newScore;
+        }
+    }
+}
+```
+
+---
+
+## 8. Line-by-line Code Explanation
+
+| UML Part | Java Equivalent |
+|---|---|
+| `Student` | `public class Student` |
+| `- name : String` | `private String name;` |
+| `- score : int` | `private int score;` |
+| `+ getName() : String` | `public String getName()` |
+| `+ setScore(newScore : int) : void` | `public void setScore(int newScore)` |
+
+---
+
+## 9. Interpretation Practice
+
+Given:
+
+```text
+Book
+- title : String
+- available : boolean
++ getTitle() : String
++ borrowBook() : void
++ returnBook() : void
+```
+
+Interpretation:
+
+| Item | Meaning |
+|---|---|
+| `Book` | class name |
+| `title` | private String attribute |
+| `available` | private Boolean attribute |
+| `getTitle()` | public method returning String |
+| `borrowBook()` | public method with no return value |
+
+---
+
+## 10. Common Mistakes
+
+| Mistake | Why it is a problem | Better habit |
+|---|---|---|
+| Putting methods in attribute section | Diagram becomes unclear | Use correct section |
+| Forgetting visibility symbols | Access level not shown | Use `+` and `-` |
+| Using object names instead of class names | UML class diagram describes class | Use class name |
+| Omitting data types | Design is incomplete | Include type where possible |
+| Confusing return type and parameter type | Method meaning unclear | Read notation carefully |
+
+---
+
+## 11. Guided Practice
+
+### Practice 1
+
+Identify private attributes:
+
+```text
+Car
+- speed : int
+- registration : String
++ accelerate() : void
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+`speed` and `registration` are private attributes.
+
+</details>
+
+### Practice 2
+
+Convert to Java:
+
+```text
+- price : double
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+```java
+private double price;
+```
+
+</details>
+
+---
+
+## 12. Independent Practice
+
+1. Draw a UML class diagram for `Player`.
+2. Include three private attributes and three public methods.
+3. Convert your UML diagram into Java code.
+4. Explain the meaning of `+` and `-`.
+
+---
+
+## 13. Exam-style Questions
+
+### Question 1 [2 marks]
+
+State what a UML class diagram shows.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A UML class diagram shows the structure of a class, including its name, attributes, methods, and visibility.
+
+</details>
+
+### Question 2 [4 marks]
+
+Construct a UML class diagram for a `Product` class with private `name` and `price`, and public `getPrice()` and `setPrice(newPrice)` methods.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+```text
+Product
+- name : String
+- price : double
++ getPrice() : double
++ setPrice(newPrice : double) : void
+```
+
+</details>
+
+---
+
+## 14. Classroom Activity
+
+Students receive Java classes and convert them into UML diagrams, then swap diagrams and recreate the Java structure.
+
+---
+
+## 15. Homework
+
+Draw UML diagrams for `Student`, `Book`, and `BankAccount`. Include visibility symbols, types, parameters, and return types.
+
+---
+
+## 16. One-page Revision Summary
+
+| Point | Summary |
+|---|---|
+| UML | Unified Modeling Language |
+| Class diagram | Shows class structure |
+| `+` | public |
+| `-` | private |
+| Exam phrase | "The diagram shows the class name, private attributes, and public methods." |
