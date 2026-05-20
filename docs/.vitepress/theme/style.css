@@ -1,43 +1,287 @@
-﻿.lang-block {
-  margin: 20px 0;
-  padding: 16px 18px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
-  background: var(--vp-c-bg-soft);
+/* IBDP CS SL Course Website - Visual Theme Upgrade v1.0 */
+
+/* -------------------------------------------------------
+   1. Brand colours
+------------------------------------------------------- */
+
+:root {
+  --vp-c-brand-1: #3154d4;
+  --vp-c-brand-2: #4267e8;
+  --vp-c-brand-3: #6f86ff;
+  --vp-c-brand-soft: rgba(66, 103, 232, 0.14);
+
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f6f7fb;
+  --vp-c-bg-soft: #f4f6ff;
+
+  --vp-c-text-1: #1f2937;
+  --vp-c-text-2: #4b5563;
+  --vp-c-text-3: #6b7280;
+
+  --ibdp-card-border: rgba(49, 84, 212, 0.16);
+  --ibdp-card-shadow: 0 10px 30px rgba(31, 41, 55, 0.08);
+  --ibdp-card-shadow-hover: 0 16px 40px rgba(49, 84, 212, 0.16);
+
+  --ibdp-radius-lg: 18px;
+  --ibdp-radius-md: 12px;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #3154d4 0%, #5f7cff 45%, #00a6a6 100%);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, rgba(49, 84, 212, 0.25), rgba(0, 166, 166, 0.18));
+  --vp-home-hero-image-filter: blur(44px);
 }
 
-.lang-toggle {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 14px;
+.dark {
+  --vp-c-bg: #0f172a;
+  --vp-c-bg-alt: #111827;
+  --vp-c-bg-soft: #172033;
+
+  --vp-c-text-1: #f8fafc;
+  --vp-c-text-2: #d1d5db;
+  --vp-c-text-3: #9ca3af;
+
+  --ibdp-card-border: rgba(148, 163, 184, 0.22);
+  --ibdp-card-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
+  --ibdp-card-shadow-hover: 0 16px 40px rgba(66, 103, 232, 0.20);
 }
 
-.lang-toggle button {
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  padding: 6px 14px;
-  background: var(--vp-c-bg);
-  color: var(--vp-c-text-1);
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.15s ease;
+/* -------------------------------------------------------
+   2. Global readability
+------------------------------------------------------- */
+
+.VPDoc .content {
+  line-height: 1.78;
 }
 
-.lang-toggle button:hover {
-  border-color: var(--vp-c-brand-1);
+.VPDoc h1 {
+  letter-spacing: -0.04em;
+}
+
+.VPDoc h2 {
+  margin-top: 42px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 28px;
+  letter-spacing: -0.02em;
+}
+
+.VPDoc h3 {
+  margin-top: 28px;
+}
+
+.VPDoc p,
+.VPDoc li {
+  font-size: 16px;
+}
+
+.VPDoc strong {
   color: var(--vp-c-brand-1);
 }
 
-.lang-toggle button.active {
-  background: var(--vp-c-brand-1);
-  border-color: var(--vp-c-brand-1);
-  color: white;
+/* -------------------------------------------------------
+   3. Homepage polish
+------------------------------------------------------- */
+
+.VPHome .name,
+.VPHome .text {
+  letter-spacing: -0.055em;
 }
 
-.lang-content > :first-child {
-  margin-top: 0;
+.VPHome .tagline {
+  max-width: 760px;
+  font-size: 22px;
+  line-height: 1.6;
 }
 
-.lang-content > :last-child {
-  margin-bottom: 0;
+.VPHome .actions {
+  gap: 14px;
+}
+
+.VPHome .action .VPButton {
+  border-radius: 999px;
+  padding: 0 22px;
+  box-shadow: 0 8px 22px rgba(49, 84, 212, 0.16);
+}
+
+.VPHome .VPFeature {
+  border: 1px solid var(--ibdp-card-border);
+  border-radius: var(--ibdp-radius-lg);
+  background:
+    radial-gradient(circle at top left, rgba(66, 103, 232, 0.10), transparent 35%),
+    var(--vp-c-bg-soft);
+  box-shadow: var(--ibdp-card-shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.VPHome .VPFeature:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ibdp-card-shadow-hover);
+  border-color: rgba(49, 84, 212, 0.32);
+}
+
+.VPHome .VPFeature .title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.VPHome .VPFeature .details {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* -------------------------------------------------------
+   4. Sidebar and navigation
+------------------------------------------------------- */
+
+.VPSidebarItem .text {
+  line-height: 1.45;
+}
+
+.VPSidebarItem.is-active > .item .text {
+  font-weight: 700;
+}
+
+.VPNavBarTitle .title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* -------------------------------------------------------
+   5. Tables
+------------------------------------------------------- */
+
+.VPDoc table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--ibdp-radius-md);
+  box-shadow: 0 4px 14px rgba(31, 41, 55, 0.04);
+}
+
+.VPDoc th {
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  font-weight: 700;
+}
+
+.VPDoc td,
+.VPDoc th {
+  border: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 11px 14px;
+}
+
+.VPDoc tr:last-child td {
+  border-bottom: none;
+}
+
+.VPDoc tr:nth-child(even) td {
+  background: rgba(127, 127, 127, 0.035);
+}
+
+/* -------------------------------------------------------
+   6. Code blocks
+------------------------------------------------------- */
+
+.VPDoc div[class*='language-'] {
+  border-radius: var(--ibdp-radius-md);
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 8px 26px rgba(31, 41, 55, 0.08);
+}
+
+.VPDoc :not(pre) > code {
+  border-radius: 6px;
+  padding: 2px 6px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------
+   7. Details / hidden answers
+------------------------------------------------------- */
+
+.VPDoc details {
+  border: 1px solid var(--ibdp-card-border);
+  border-radius: var(--ibdp-radius-md);
+  padding: 12px 16px;
+  background: var(--vp-c-bg-soft);
+  box-shadow: 0 4px 16px rgba(31, 41, 55, 0.05);
+}
+
+.VPDoc details + details {
+  margin-top: 12px;
+}
+
+.VPDoc summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--vp-c-brand-1);
+}
+
+.VPDoc details[open] summary {
+  margin-bottom: 10px;
+}
+
+/* -------------------------------------------------------
+   8. Custom blocks
+------------------------------------------------------- */
+
+.custom-block {
+  border-radius: var(--ibdp-radius-md);
+  border: 1px solid transparent;
+  box-shadow: 0 6px 20px rgba(31, 41, 55, 0.05);
+}
+
+.custom-block.tip {
+  border-color: rgba(16, 185, 129, 0.22);
+}
+
+.custom-block.info {
+  border-color: rgba(59, 130, 246, 0.22);
+}
+
+.custom-block.warning {
+  border-color: rgba(245, 158, 11, 0.28);
+}
+
+.custom-block.danger {
+  border-color: rgba(239, 68, 68, 0.26);
+}
+
+/* -------------------------------------------------------
+   9. Bilingual LangBlock safety styling
+   Works only if the project already has LangBlock component.
+------------------------------------------------------- */
+
+.lang-block,
+.LangBlock {
+  border: 1px solid var(--ibdp-card-border);
+  border-radius: var(--ibdp-radius-lg);
+  background: var(--vp-c-bg-soft);
+  padding: 18px;
+  margin: 18px 0;
+}
+
+/* -------------------------------------------------------
+   10. Mobile improvements
+------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .VPHome .tagline {
+    font-size: 18px;
+  }
+
+  .VPDoc p,
+  .VPDoc li {
+    font-size: 15.5px;
+  }
+
+  .VPDoc table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
