@@ -156,14 +156,48 @@ export default defineConfig({
     { text: 'Safe Classroom Simulations', link: '/extension-social-engineering/safe-classroom-simulations' }
   ]
 },
-      {
-        text: 'Assessment',
-        items: [
-          { text: 'Exam Practice', link: '/exam-practice/' },
-          { text: 'IA Support', link: '/ia-support/' },
-          { text: 'Glossary', link: '/glossary/' }
-        ]
-      }
+{
+  text: 'Exam Practice',
+  items: [
+    { text: 'Overview', link: '/exam-practice/' },
+    { text: 'Paper 1 Overview', link: '/exam-practice/paper-1-overview' },
+    { text: 'Paper 2 Overview', link: '/exam-practice/paper-2-overview' },
+    { text: 'Command Terms', link: '/exam-practice/command-terms' },
+    { text: 'Mark Scheme Writing', link: '/exam-practice/mark-scheme-writing' },
+    { text: 'Trace Table Practice', link: '/exam-practice/trace-table-practice' },
+    { text: 'SQL Practice', link: '/exam-practice/sql-practice' },
+    { text: 'Short Answer Templates', link: '/exam-practice/short-answer-templates' },
+    { text: 'Revision Checklist', link: '/exam-practice/revision-checklist' }
+  ]
+},
+{
+  text: 'IA Support',
+  items: [
+    { text: 'Overview', link: '/ia-support/' },
+    { text: 'IA Overview', link: '/ia-support/ia-overview' },
+    { text: 'Choosing a Topic', link: '/ia-support/choosing-topic' },
+    { text: 'Client and Problem', link: '/ia-support/client-problem' },
+    { text: 'Success Criteria', link: '/ia-support/success-criteria' },
+    { text: 'Design and Planning', link: '/ia-support/design-planning' },
+    { text: 'Development Evidence', link: '/ia-support/development-evidence' },
+    { text: 'Testing and Evaluation', link: '/ia-support/testing-evaluation' },
+    { text: 'Academic Integrity', link: '/ia-support/academic-integrity' }
+  ]
+},
+{
+  text: 'Glossary',
+  items: [
+    { text: 'Overview', link: '/glossary/' },
+    { text: 'B1 Computational Thinking', link: '/glossary/b1-computational-thinking' },
+    { text: 'B2 Programming', link: '/glossary/b2-programming' },
+    { text: 'B3 OOP', link: '/glossary/b3-oop' },
+    { text: 'A3 Databases', link: '/glossary/a3-databases' },
+    { text: 'A1 Computer Fundamentals', link: '/glossary/a1-computer-fundamentals' },
+    { text: 'A2 Networks', link: '/glossary/a2-networks' },
+    { text: 'A4 Machine Learning', link: '/glossary/a4-machine-learning' },
+    { text: 'Command Terms', link: '/glossary/command-terms' }
+  ]
+}
     ],
 
     search: {
