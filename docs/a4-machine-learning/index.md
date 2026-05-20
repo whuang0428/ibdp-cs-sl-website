@@ -1,36 +1,34 @@
-﻿# A4 Machine Learning
+# A4 Machine Learning
 
 ## Unit Overview
 
-This unit introduces the basic ideas of machine learning and its ethical impact.
+This unit introduces the main ideas behind machine learning.
 
-Students will learn what machine learning is, how models use data, how training and testing data are used, how simple learning approaches work, and how model performance can be evaluated.
-
-For this first framework version, each page gives a short learning structure. Later, each page can be expanded into a full teaching page with diagrams, datasets, simple coding examples, exam-style questions, and teacher notes.
+Students learn how machine learning systems use data to train models, make predictions or classifications, evaluate performance, and raise ethical questions. The focus is not advanced mathematics. The focus is understanding the workflow, vocabulary, data requirements, model evaluation, and limitations.
 
 ## Topics
 
-| Topic | Main Focus | Label |
+| Topic | Main Focus | Status |
 |---|---|---|
-| Machine Learning Fundamentals | Understand what machine learning is and why it is used | SL Core |
-| Data, Features and Labels | Understand the data used by ML models | SL Core |
-| Training and Testing Data | Understand how models are trained and checked | SL Core |
-| Supervised Learning | Learn from labelled examples | SL Core |
-| Unsupervised Learning | Find patterns in unlabelled data | School Extension |
-| Reinforcement Learning | Learn through rewards and penalties | School Extension |
-| Classification and Prediction | Use models to categorize or predict outcomes | SL Core |
-| Confusion Matrix and F1 Score | Evaluate model performance | SL Core |
-| Ethics and Bias | Evaluate social and ethical impacts of ML | SL Core |
-| Neural Networks and CNNs | Understand high-level neural network ideas | School Extension |
+| Machine Learning Fundamentals | What ML is and how it differs from rule-based programming | Full Teaching Page |
+| Data, Features and Labels | How datasets are represented for learning | Full Teaching Page |
+| Supervised Learning | Learning from labelled data | Full Teaching Page |
+| Unsupervised Learning | Finding patterns in unlabelled data | Full Teaching Page |
+| Training, Testing and Validation | Splitting data and checking generalization | Full Teaching Page |
+| Classification and Regression | Predicting categories and numerical values | Full Teaching Page |
+| Model Evaluation | Accuracy, precision, recall, F1 and confusion matrix | Full Teaching Page |
+| Overfitting and Underfitting | Model complexity and generalization problems | Full Teaching Page |
+| Bias, Ethics and Privacy | Fairness, data risks and social impact | Full Teaching Page |
+| ML Applications and Limitations | Real-world uses and when ML is not suitable | Full Teaching Page |
 
-## How to Study This Unit
+## How to Study A4
 
-1. Learn the vocabulary first.
-2. Understand how data is prepared and used.
-3. Distinguish between training and testing.
-4. Practise interpreting evaluation results.
-5. Discuss ethical issues using real-world scenarios.
+1. Learn the vocabulary first: model, feature, label, training data, testing data.
+2. Practise explaining the ML workflow in order.
+3. Use simple datasets to identify features and labels.
+4. Practise reading a confusion matrix.
+5. Always discuss limitations, bias, privacy, and explainability in scenario questions.
 
-::: tip SL Core
-For SL, focus on core machine learning concepts, evaluation ideas, and ethical considerations. Some advanced approaches are included as school extension content.
+::: warning Important
+Machine learning is not magic and not the same as normal programming. A rule-based program follows explicit rules written by a programmer. A machine learning system learns patterns from data and uses those patterns to make predictions.
 :::
