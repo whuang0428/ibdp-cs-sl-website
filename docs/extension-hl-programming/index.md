@@ -1,34 +1,35 @@
-﻿# Extension: HL Programming
+# HL Programming Extension
 
-## Module Overview
+## Unit Overview
 
-This extension module is designed to strengthen students' programming ability beyond the SL core.
+This section is a school extension designed to strengthen students' practical programming ability beyond the SL core.
 
-The main IBDP CS course delivered here is SL, but selected HL-style programming ideas are included to help students write better programs, understand larger systems, and prepare for advanced computer science study.
-
-This module is not the main SL external examination focus. It should be clearly labelled as extension content.
+The focus is still student-friendly and classroom-ready: IB pseudocode, Java implementation, line-by-line explanation, trace tables, common mistakes, code-reading questions, and exam-style written explanations.
 
 ## Topics
 
-| Topic | Main Focus | Label |
+| Topic | Main Focus | Status |
 |---|---|---|
-| Advanced Problem Solving | Break larger programming problems into modules | HL Extension |
-| Modular Programming | Use functions and procedures to organize code | HL Extension |
-| Recursion Basics | Understand functions that call themselves | HL Extension |
-| Advanced Arrays and Lists | Process larger collections of data | HL Extension |
-| Records and Objects | Store grouped data more clearly | HL Extension |
-| Multiple Classes Review | Connect programming with B3 OOP extension | HL Extension |
-| Simple ADT Ideas | Introduce stacks, queues, and lists conceptually | HL Extension |
-| Algorithm Efficiency | Think about time, input size, and better algorithms | HL Extension |
+| Advanced Arrays and 2D Arrays | Tables, grids, nested loops | Full Teaching Page |
+| ArrayList and Dynamic Lists | Resizable list structures in Java | Full Teaching Page |
+| Recursion | Base case, recursive case, call stack | Full Teaching Page |
+| Stacks and Queues | LIFO and FIFO abstract data types | Full Teaching Page |
+| Linked Lists | Node-based dynamic structures | Full Teaching Page |
+| Searching and Sorting Extension | Binary search, insertion sort, complexity | Full Teaching Page |
+| Inheritance and Polymorphism | OOP extension in Java | Full Teaching Page |
+| Exception Handling and Robust Programs | try/catch, validation, defensive programming | Full Teaching Page |
 
-## How to Study This Module
+## Teaching Order Recommendation
 
-1. Finish B2 Programming basics first.
-2. Understand each extension idea conceptually.
-3. Practise with small code examples.
-4. Connect extension ideas to real programming tasks.
-5. Clearly separate SL Core from HL Extension in revision.
+1. Advanced Arrays and 2D Arrays  
+2. ArrayList and Dynamic Lists  
+3. Searching and Sorting Extension  
+4. Recursion  
+5. Stacks and Queues  
+6. Linked Lists  
+7. Inheritance and Polymorphism  
+8. Exception Handling and Robust Programs  
 
-::: warning Extension Content
-This section supports stronger programming ability. Students should not confuse every page here with SL examination requirements.
+::: tip Teaching Note
+This order keeps the learning curve manageable: students first strengthen arrays and loops, then move to dynamic structures and advanced OOP.
 :::
