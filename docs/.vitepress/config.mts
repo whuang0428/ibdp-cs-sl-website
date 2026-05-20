@@ -97,9 +97,24 @@ export default defineConfig({
   ]
 },
 {
-  text: 'A2 / A4',
+  text: 'A2 Networks',
   items: [
-    { text: 'A2 Networks', link: '/a2-networks/' },
+    { text: 'Overview', link: '/a2-networks/' },
+    { text: 'Network Fundamentals', link: '/a2-networks/network-fundamentals' },
+    { text: 'LAN and WAN', link: '/a2-networks/lan-wan' },
+    { text: 'Network Devices', link: '/a2-networks/network-devices' },
+    { text: 'Client-Server and Peer-to-Peer', link: '/a2-networks/client-server-peer-to-peer' },
+    { text: 'TCP/IP Model', link: '/a2-networks/tcp-ip-model' },
+    { text: 'Packet Switching', link: '/a2-networks/packet-switching' },
+    { text: 'DNS and Web Access', link: '/a2-networks/dns-web-access' },
+    { text: 'Wireless and Wired Transmission', link: '/a2-networks/wired-wireless-transmission' },
+    { text: 'Network Security', link: '/a2-networks/network-security' },
+    { text: 'Encryption, VPN and NAT', link: '/a2-networks/encryption-vpn-nat' }
+  ]
+},
+{
+  text: 'A4 Machine Learning',
+  items: [
     { text: 'A4 Machine Learning', link: '/a4-machine-learning/' }
   ]
 },

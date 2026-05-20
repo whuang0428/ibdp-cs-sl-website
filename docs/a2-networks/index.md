@@ -1,68 +1,36 @@
-# A2 Networks
-
-::: tip SL Core
-This unit covers network fundamentals, architecture, data transmission, and network security.
-:::
+﻿# A2 Networks
 
 ## Unit Overview
 
-Networks allow devices to communicate and share resources. This unit should use diagrams and process flows, especially for DNS, packet switching, TCP/IP, and security.
+This unit introduces how computers and devices communicate over networks.
 
-## Learning Goals
+Students will learn about network types, network devices, network models, data transmission, packet switching, DNS, web access, security, encryption, VPNs, and common network threats.
 
-By the end of this unit, students should be able to:
+For this first framework version, each page gives a short learning structure. Later, each page can be expanded into a full teaching page with diagrams, packet-flow examples, exam-style questions, and classroom activities.
 
-- describe different types of networks
-- explain network devices and their roles
-- compare client-server and peer-to-peer networks
-- describe the TCP/IP model
-- explain packet switching
-- describe DNS and web access processes
-- explain network security threats
-- discuss firewalls, VPNs, encryption, and authentication
+## Topics
 
-## Planned Topics
+| Topic | Main Focus | Label |
+|---|---|---|
+| Network Fundamentals | Understand why networks are used | SL Core |
+| LAN and WAN | Compare local and wide area networks | SL Core |
+| Network Devices | Understand routers, switches, firewalls, and access points | SL Core |
+| Client-Server and Peer-to-Peer | Compare common network architectures | SL Core |
+| TCP/IP Model | Understand layered network communication | SL Core |
+| Packet Switching | Understand how data is split and routed | SL Core |
+| DNS and Web Access | Understand how domain names and web requests work | SL Core |
+| Wireless and Wired Transmission | Compare common transmission media | SL Core |
+| Network Security | Understand threats and protection methods | SL Core |
+| Encryption, VPN and NAT | Understand key network security and addressing concepts | SL Core |
 
-| Topic | Focus |
-|---|---|
-| LAN and WAN | Local and wide area networks |
-| Network Devices | Router, switch, access point, firewall |
-| Client-server | Centralized services and management |
-| Peer-to-peer | Direct sharing between devices |
-| TCP/IP Model | Layers and communication roles |
-| Packet Switching | Splitting and routing data packets |
-| DNS | Resolving domain names to IP addresses |
-| HTTP and HTTPS | Web communication |
-| NAT | Translating private and public IP addresses |
-| VPN | Secure remote connection |
-| Encryption | Protecting data in transit |
-| Network Security | Threats and protection methods |
+## How to Study This Unit
 
-## Exam Focus
+1. Learn the key network vocabulary.
+2. Understand how data moves through a network.
+3. Practise explaining processes step by step.
+4. Compare technologies using advantages and disadvantages.
+5. Apply security ideas to realistic scenarios.
 
-Students should be able to:
-
-- choose appropriate network devices for scenarios
-- explain how data travels across a network
-- describe the function of TCP/IP layers
-- explain packet switching using correct terms
-- discuss security methods in context
-- compare wired and wireless transmission media
-
-## Common Mistakes
-
-| Mistake | How to Avoid It |
-|---|---|
-| Confusing router and switch | Switch works inside LAN; router connects networks |
-| Explaining DNS as a website | DNS translates domain names to IP addresses |
-| Saying encryption stops all attacks | Encryption protects data meaning, not every risk |
-| Forgetting packet reassembly | Packets are reassembled at the destination |
-| Giving generic security answers | Always link security to the scenario |
-
-## Quick Check
-
-1. What is the difference between a LAN and a WAN?
-2. What is the role of a router?
-3. What does DNS do?
-4. Why is packet switching useful?
-5. What is one benefit of using a VPN?
+::: tip SL Core
+A2 questions often use real-world scenarios such as schools, hospitals, homes, companies, or cloud services. Students should practise explaining networks in context.
+:::
