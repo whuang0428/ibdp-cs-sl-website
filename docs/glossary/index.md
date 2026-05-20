@@ -1,24 +1,24 @@
-﻿# Glossary
+# Glossary
 
-## Module Overview
+## Section Overview
 
-This glossary collects important IBDP Computer Science vocabulary.
+This glossary supports bilingual revision for IBDP Computer Science.
 
-For the framework version, terms are grouped by module. Later, each glossary page can be expanded with bilingual explanations, examples, diagrams, and exam-style usage.
+It includes:
 
-## Glossary Sections
-
-| Section | Focus |
+| Page | Focus |
 |---|---|
-| B1 Computational Thinking | Problem-solving vocabulary |
-| B2 Programming | Programming vocabulary |
-| B3 OOP | Object-oriented programming vocabulary |
-| A3 Databases | Database vocabulary |
-| A1 Computer Fundamentals | Hardware and system vocabulary |
-| A2 Networks | Networking vocabulary |
-| A4 Machine Learning | ML vocabulary |
-| Command Terms | Exam wording vocabulary |
+| Core Vocabulary CN-EN | Key technical terms with Chinese explanation |
+| Pseudocode and Java Cheatsheet | Common syntax patterns |
+| Command Terms | Exam wording and answer style |
 
-::: tip Study Tip
-Students should not only memorize definitions. They should also practise using each term correctly in exam-style sentences.
+## How to Use
+
+1. Use this section before quizzes and exams.
+2. Check technical definitions.
+3. Copy key phrases into flashcards.
+4. Practise using terms in full exam-style sentences.
+
+::: tip Revision Habit
+Do not only memorize Chinese meaning. Practise writing the English term in a sentence.
 :::

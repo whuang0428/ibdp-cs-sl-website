@@ -1,26 +1,22 @@
-﻿# IA Support
+# IA Support
 
-## Module Overview
+## Section Overview
 
-This section supports the IBDP Computer Science Internal Assessment process.
+This section supports students preparing for the IBDP Computer Science Internal Assessment.
 
-The IA requires students to design, develop, test, and evaluate a computational solution for a real problem.
-
-This section is only a framework for now. Later, it can be expanded with templates, checklists, sample structures, and teacher guidance.
+The focus is on planning, documentation, development habits, testing, evaluation, and academic honesty.
 
 ## Pages
 
-| Page | Purpose |
+| Page | Focus |
 |---|---|
-| IA Overview | Understand the purpose and general workflow |
-| Choosing a Topic | Choose a manageable problem |
-| Client and Problem | Define the client, problem, and context |
-| Success Criteria | Write measurable criteria |
-| Design and Planning | Plan data structures, algorithms, and interface |
-| Development Evidence | Record how the solution was created |
-| Testing and Evaluation | Test against criteria and evaluate success |
-| Academic Integrity | Use sources and AI tools responsibly |
+| IA Overview | What the IA is and how students should approach it |
+| Problem Analysis | Client, problem, requirements, constraints |
+| Design and Success Criteria | Planning solution and measurable success |
+| Development and Testing | Building, documenting, and testing the product |
+| Evaluation and Reflection | Evaluating success and future improvements |
+| IA Checklist | Final submission checklist |
 
-::: warning Privacy Note
-Do not publish real student IA files, real client personal data, or confidential project materials on a public GitHub Pages site.
+::: warning Important
+This section is a learning guide. Students must still follow the official teacher guidance, school deadlines, academic honesty rules, and current IB requirements.
 :::

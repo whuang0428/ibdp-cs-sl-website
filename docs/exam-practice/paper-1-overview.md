@@ -1,42 +1,91 @@
-﻿# Paper 1 Overview
+# Paper 1 Overview
 
-## 1. Purpose
+## 1. Purpose of Paper 1
 
-Paper 1 assesses core computer science understanding across the syllabus.
+Paper 1 tests the core theoretical knowledge of the course. For SL students, this normally includes computational thinking, programming concepts, computer systems, networks, databases, and machine learning.
 
-Students should be ready to answer short and extended questions involving technical knowledge, explanation, diagrams, algorithms, and scenario-based reasoning.
+The exam is not only about memory. Students must be able to apply concepts to scenarios, explain processes, compare technologies, and write precise answers.
 
-## 2. Skills Needed
+## 2. What Students Usually Need to Do
 
 | Skill | Example |
 |---|---|
-| Definition | Define a technical term clearly |
-| Description | Describe how a process works |
-| Explanation | Explain why a method is suitable |
-| Comparison | Compare two technologies or methods |
-| Application | Apply knowledge to a real scenario |
+| Define | State what a database is |
+| Describe | Describe the fetch-decode-execute cycle |
+| Explain | Explain why encryption protects data |
+| Compare | Compare LAN and WAN |
+| Apply | Choose a storage type for a school system |
+| Trace | Trace pseudocode or Java code |
+| Evaluate | Discuss benefits and limitations of machine learning |
 
-## 3. Common Question Areas
+## 3. Exam Answer Formula
 
-- computational thinking
-- algorithms and trace tables
-- computer fundamentals
-- networks
-- databases
-- machine learning
-- ethics and security
+For most 3-6 mark questions, students can use:
 
-## 4. Exam Strategy
+```text
+Term → Function → Scenario link → Advantage / limitation
+```
 
-1. Read the command term carefully.
-2. Identify the topic.
-3. Look at the mark value.
-4. Write one clear point per mark.
-5. Use technical keywords.
-6. Link your answer to the scenario.
+Example:
 
-## 5. Quick Check
+```text
+A firewall filters network traffic based on rules.
+In a school network, it can block unauthorized incoming traffic.
+This helps protect student data from external attacks.
+However, it does not stop all threats, such as phishing.
+```
 
-1. Why is the command term important?
-2. Why should students use technical vocabulary?
-3. What does one clear point per mark mean?
+## 4. Common Exam Problems
+
+| Problem | Fix |
+|---|---|
+| Answer is too vague | Use technical keywords |
+| No scenario link | Mention the system in the question |
+| Only gives example | Also explain the concept |
+| Repeats question wording | Add meaning and detail |
+| Too short for mark value | Match depth to marks |
+| Confuses similar terms | Make comparison tables |
+
+## 5. Suggested Weekly Exam Routine
+
+| Time | Task |
+|---|---|
+| 10 min | Review one-page summary |
+| 15 min | Do 5 short questions |
+| 15 min | Do 1 longer scenario question |
+| 10 min | Check mark scheme |
+| 10 min | Rewrite one weak answer |
+
+## 6. Student Self-check
+
+Before submitting an answer, ask:
+
+1. Did I answer the command term?
+2. Did I use the correct technical keyword?
+3. Did I connect to the scenario?
+4. Did I write enough for the marks?
+5. Did I avoid vague words such as “better”, “faster”, or “safer” without explanation?
+
+## 7. Quick Practice
+
+### Question 1 [2 marks]
+
+State what is meant by a protocol.
+
+<details>
+<summary>Answer</summary>
+
+A protocol is a set of rules that controls how data is communicated between devices.
+
+</details>
+
+### Question 2 [4 marks]
+
+Explain why a school may use a database to store student attendance.
+
+<details>
+<summary>Answer</summary>
+
+A database stores related data in an organized way. A school can store attendance records for many students and search or update records quickly. Reports can be generated for teachers or parents. Access rights can protect student data from unauthorized users.
+
+</details>
