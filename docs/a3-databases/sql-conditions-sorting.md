@@ -1,86 +1,322 @@
-﻿# SQL Conditions and Sorting
+# SQL Conditions and Sorting
 
-## 1. Learning Objectives
+## 1. Lesson Goals
 
-By the end of this page, students should be able to:
+By the end of this lesson, students should be able to:
 
-- explain the purpose of WHERE
-- explain the purpose of ORDER BY
-- use simple comparison conditions
-- understand how SQL results can be filtered and sorted
+- use `WHERE` to filter records
+- use comparison operators in SQL
+- use `AND`, `OR`, and `NOT`
+- use `ORDER BY` to sort results
+- distinguish filtering and sorting
+- write SQL queries for scenarios
 
-## 2. Syllabus Link
+---
+
+## 2. Syllabus Mapping
 
 | Item | Detail |
 |---|---|
 | Unit | A3 Databases |
 | Label | SL Core |
-| Main skill | Filtering and ordering query results |
+| Main skill | Filtering and ordering data |
+| Connected units | SQL SELECT, Tables, Data Types |
+| Exam relevance | SQL query construction and interpretation |
+
+::: tip Learning Focus
+`WHERE` filters records. `ORDER BY` sorts the final result.
+:::
+
+---
 
 ## 3. Key Terms
 
-| Term | Meaning |
-|---|---|
-| WHERE | SQL keyword used to filter records |
-| Condition | A rule that records must satisfy |
-| ORDER BY | SQL keyword used to sort query results |
-| ASC | Ascending order |
-| DESC | Descending order |
-| Logical operator | AND, OR, NOT |
+| English Term | 中文解释 | Exam-style meaning |
+|---|---|---|
+| WHERE | 条件筛选 | SQL keyword used to filter records |
+| Condition | 条件 | A rule that records must satisfy |
+| ORDER BY | 排序 | SQL keyword used to sort results |
+| ASC | 升序 | Ascending order |
+| DESC | 降序 | Descending order |
+| AND | 与 | Both conditions must be true |
+| OR | 或 | At least one condition must be true |
+| NOT | 非 | Reverses a condition |
+
+---
 
 ## 4. Concept Explanation
 
-The WHERE clause filters records.
+<LangBlock>
+<template #cn>
 
-The ORDER BY clause sorts the result.
+### 中文讲解
 
-Example:
+SQL 不仅可以选择字段，还可以筛选和排序数据。
 
-A query can show only students in YearGroup 11 and sort the output alphabetically.
+`WHERE` 用来筛选符合条件的 records：
 
-## 5. Step-by-step Example
+```sql
+SELECT Name
+FROM STUDENT
+WHERE YearGroup = 11;
+```
 
-Query goal: show names of students in YearGroup 11.
+`ORDER BY` 用来排序：
 
-| SQL Part | Purpose |
+```sql
+SELECT Name, Mark
+FROM STUDENT
+ORDER BY Mark DESC;
+```
+
+如果是文本条件，通常需要引号：
+
+```sql
+WHERE Category = 'Food'
+```
+
+</template>
+
+<template #en>
+
+### English Explanation
+
+SQL can select fields, but it can also filter and sort data.
+
+`WHERE` filters records that match a condition:
+
+```sql
+SELECT Name
+FROM STUDENT
+WHERE YearGroup = 11;
+```
+
+`ORDER BY` sorts the result:
+
+```sql
+SELECT Name, Mark
+FROM STUDENT
+ORDER BY Mark DESC;
+```
+
+Text values usually need quotation marks:
+
+```sql
+WHERE Category = 'Food'
+```
+
+</template>
+</LangBlock>
+
+---
+
+## 5. Real-life Example
+
+PRODUCT table:
+
+| ProductName | Category | Price |
+|---|---|---:|
+| Apple | Food | 1.20 |
+| Notebook | Stationery | 3.50 |
+| Bread | Food | 2.00 |
+
+Query:
+
+```sql
+SELECT ProductName, Price
+FROM PRODUCT
+WHERE Category = 'Food'
+ORDER BY Price ASC;
+```
+
+Result:
+
+| ProductName | Price |
+|---|---:|
+| Apple | 1.20 |
+| Bread | 2.00 |
+
+---
+
+## 6. SQL Pattern
+
+```sql
+SELECT field1, field2
+FROM tableName
+WHERE condition
+ORDER BY fieldName ASC;
+```
+
+Descending:
+
+```sql
+ORDER BY fieldName DESC;
+```
+
+Multiple conditions:
+
+```sql
+WHERE Price > 10 AND Stock > 0
+```
+
+---
+
+## 7. SQL Examples
+
+```sql
+SELECT FirstName, Surname
+FROM STUDENT
+WHERE YearGroup = 12;
+```
+
+```sql
+SELECT ProductName, Price
+FROM PRODUCT
+WHERE Price < 10
+ORDER BY Price ASC;
+```
+
+```sql
+SELECT Title, Author
+FROM BOOK
+WHERE Available = true;
+```
+
+---
+
+## 8. Explanation of Example
+
+| SQL Part | Meaning |
 |---|---|
-| SELECT Name | Display only names |
-| FROM STUDENT | Use the STUDENT table |
-| WHERE YearGroup = 11 | Filter only YearGroup 11 |
+| `SELECT ProductName, Price` | Display product name and price |
+| `FROM PRODUCT` | Use PRODUCT table |
+| `WHERE Category = 'Food'` | Only include food products |
+| `ORDER BY Price ASC` | Sort from lowest to highest price |
 
-## 6. Visual Structure
+---
 
-::: info SQL Filtering and Sorting
-SELECT fields → FROM table → WHERE condition filters records → ORDER BY sorts the final result.
-:::
+## 9. Step-by-step Query Execution
 
-## 7. Common Mistakes
+Conceptually:
 
-| Mistake | Why it is a problem |
+| Step | Action |
 |---|---|
-| Using WHERE for sorting | WHERE filters; ORDER BY sorts |
-| Forgetting quotes around text values | Text comparisons may not work |
-| Using wrong comparison operators | The wrong records are selected |
-| Sorting before filtering conceptually | Students may misunderstand the result process |
+| 1 | Choose table |
+| 2 | Filter records using WHERE |
+| 3 | Select required fields |
+| 4 | Sort final result using ORDER BY |
+| 5 | Display output |
 
-## 8. Exam-style Question
+---
 
-A table called PRODUCT contains ProductName, Category, and Price.
+## 10. Common Mistakes
 
-**Write a query to display ProductName and Price for products where Category is "Food", ordered by Price from lowest to highest.** [5]
+| Mistake | Why it is a problem | Better habit |
+|---|---|---|
+| Using WHERE to sort | WHERE filters only | Use ORDER BY |
+| Forgetting quotes around text | Query may fail | Use quotes for text values |
+| Confusing ASC and DESC | Wrong order | ASC low to high, DESC high to low |
+| Putting ORDER BY before WHERE | Wrong syntax | WHERE before ORDER BY |
+| Using AND when OR is needed | Too few records returned | Read condition carefully |
 
-## 9. Mark Scheme Style Answer
+---
 
-Award marks for:
+## 11. Guided Practice
 
-- selecting ProductName and Price
-- using PRODUCT table
-- filtering Category = "Food"
-- using ORDER BY Price
-- using ascending order or default ascending order
+### Practice 1
 
-## 10. Quick Check
+Display Food products from PRODUCT.
 
-1. What does WHERE do?
-2. What does ORDER BY do?
-3. What is the difference between ASC and DESC?
+<details>
+<summary>Suggested Answer</summary>
+
+```sql
+SELECT ProductName
+FROM PRODUCT
+WHERE Category = 'Food';
+```
+
+</details>
+
+### Practice 2
+
+Display students ordered by Mark from highest to lowest.
+
+<details>
+<summary>Suggested Answer</summary>
+
+```sql
+SELECT Name, Mark
+FROM STUDENT
+ORDER BY Mark DESC;
+```
+
+</details>
+
+---
+
+## 12. Independent Practice
+
+1. Display books where Author is `'Frank Herbert'`.
+2. Display products with Price greater than 50, ordered by Price descending.
+3. Display students in YearGroup 11 with Mark at least 80.
+4. Explain the difference between WHERE and ORDER BY.
+
+---
+
+## 13. Exam-style Questions
+
+### Question 1 [5 marks]
+
+A table called PRODUCT contains ProductName, Category, and Price. Write a query to display ProductName and Price for products where Category is `'Food'`, ordered by Price from lowest to highest.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+```sql
+SELECT ProductName, Price
+FROM PRODUCT
+WHERE Category = 'Food'
+ORDER BY Price ASC;
+```
+
+Award marks for selected fields, table, condition, ordering field, and ascending order.
+
+</details>
+
+### Question 2 [3 marks]
+
+Explain the purpose of WHERE and ORDER BY.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+WHERE filters records so only records meeting a condition are included. ORDER BY sorts the query result using a specified field, either ascending or descending.
+
+</details>
+
+---
+
+## 14. Classroom Activity
+
+Students act as database records. The teacher gives SQL queries and students decide who remains after WHERE and then arrange themselves after ORDER BY.
+
+---
+
+## 15. Homework
+
+Write 10 SQL queries using WHERE, AND, OR, and ORDER BY from a given STUDENT or PRODUCT table.
+
+---
+
+## 16. One-page Revision Summary
+
+| Point | Summary |
+|---|---|
+| WHERE | Filters records |
+| ORDER BY | Sorts results |
+| ASC | Ascending |
+| DESC | Descending |
+| AND | Both true |
+| OR | At least one true |
+| Exam phrase | "`WHERE` reduces the records returned, while `ORDER BY` changes the order of the result." |
