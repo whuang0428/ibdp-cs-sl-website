@@ -1,68 +1,36 @@
-# A1 Computer Fundamentals
-
-::: tip SL Core
-This unit explains how computers work at a hardware, data representation, operating system, and cloud computing level.
-:::
+﻿# A1 Computer Fundamentals
 
 ## Unit Overview
 
-Computer fundamentals can feel abstract, so this unit should use diagrams, animations, and real-world analogies. Students need to connect technical vocabulary with clear exam-style explanations.
+This unit introduces the main concepts behind how computers work.
 
-## Learning Goals
+Students will learn about computer hardware, CPU components, memory, storage, data representation, logic gates, operating systems, control systems, and cloud computing.
 
-By the end of this unit, students should be able to:
+For this first framework version, each page gives a short learning structure. Later, each page can be expanded into a full teaching page with diagrams, animations, code examples, exam-style questions, and teacher notes.
 
-- describe the functions of CPU components
-- explain the fetch-decode-execute cycle
-- compare CPU and GPU roles
-- explain primary and secondary memory
-- convert between binary, denary, and hexadecimal
-- construct truth tables
-- understand basic logic gates
-- explain operating system functions
-- describe cloud computing services
+## Topics
 
-## Planned Topics
+| Topic | Main Focus | Label |
+|---|---|---|
+| Computer Hardware | Understand the main physical components of a computer system | SL Core |
+| CPU Components | Understand the role of CU, ALU, registers, and buses | SL Core |
+| Fetch-Decode-Execute Cycle | Understand how instructions are processed | SL Core |
+| Primary Memory | Understand RAM, ROM, cache, and registers | SL Core |
+| Secondary Storage | Compare HDD, SSD, optical, and cloud storage | SL Core |
+| Data Representation | Understand binary, denary, hexadecimal, and character data | SL Core |
+| Logic Gates | Understand AND, OR, NOT and truth tables | SL Core |
+| Operating Systems | Understand the main functions of an operating system | SL Core |
+| Control Systems | Understand sensors, input, processing, and output in control systems | SL Core |
+| Cloud Computing | Understand SaaS, PaaS, IaaS and cloud service models | SL Core |
 
-| Topic | Focus |
-|---|---|
-| CPU Components | ALU, CU, registers, buses |
-| Registers | PC, MAR, MDR, IR, accumulator |
-| Fetch-Decode-Execute Cycle | How instructions are processed |
-| CPU vs GPU | Different processing roles |
-| Primary Memory | RAM, ROM, cache, registers |
-| Secondary Storage | HDD, SSD, optical, cloud storage |
-| Data Representation | Binary, denary, hexadecimal |
-| Logic Gates | AND, OR, NOT and combinations |
-| Truth Tables | Predicting logic circuit outputs |
-| Operating Systems | Managing hardware and software resources |
-| Cloud Computing | SaaS, PaaS, IaaS |
+## How to Study This Unit
 
-## Exam Focus
+1. Learn the key hardware and system terms.
+2. Understand how data and instructions move inside the computer.
+3. Practise binary, hexadecimal, and truth table questions.
+4. Connect operating system functions to real computer use.
+5. Practise exam-style explanation questions.
 
-Students should be able to:
-
-- define technical terms accurately
-- describe CPU component roles
-- complete number conversions
-- draw or complete truth tables
-- explain operating system services
-- compare different types of memory or storage
-
-## Common Mistakes
-
-| Mistake | How to Avoid It |
-|---|---|
-| Confusing RAM and ROM | RAM is volatile; ROM is non-volatile |
-| Confusing CPU and GPU | CPU is general-purpose; GPU is strong for parallel tasks |
-| Missing steps in FDE cycle | Use fetch, decode, execute clearly |
-| Making binary conversion errors | Group bits carefully, especially for hexadecimal |
-| Not using correct logic order | Work through each gate step by step |
-
-## Quick Check
-
-1. What is the role of the ALU?
-2. What does the program counter store?
-3. Why is RAM volatile?
-4. Convert hexadecimal A to binary.
-5. What is one function of an operating system?
+::: tip SL Core
+A1 is concept-heavy. Students should focus on clear definitions, precise technical vocabulary, and step-by-step processes.
+:::

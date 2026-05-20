@@ -81,9 +81,24 @@ export default defineConfig({
   ]
 },
 {
-  text: 'A1 / A2 / A4',
+  text: 'A1 Computer Fundamentals',
   items: [
-    { text: 'A1 Computer Fundamentals', link: '/a1-computer-fundamentals/' },
+    { text: 'Overview', link: '/a1-computer-fundamentals/' },
+    { text: 'Computer Hardware', link: '/a1-computer-fundamentals/computer-hardware' },
+    { text: 'CPU Components', link: '/a1-computer-fundamentals/cpu-components' },
+    { text: 'Fetch-Decode-Execute Cycle', link: '/a1-computer-fundamentals/fetch-decode-execute' },
+    { text: 'Primary Memory', link: '/a1-computer-fundamentals/primary-memory' },
+    { text: 'Secondary Storage', link: '/a1-computer-fundamentals/secondary-storage' },
+    { text: 'Data Representation', link: '/a1-computer-fundamentals/data-representation' },
+    { text: 'Logic Gates', link: '/a1-computer-fundamentals/logic-gates' },
+    { text: 'Operating Systems', link: '/a1-computer-fundamentals/operating-systems' },
+    { text: 'Control Systems', link: '/a1-computer-fundamentals/control-systems' },
+    { text: 'Cloud Computing', link: '/a1-computer-fundamentals/cloud-computing' }
+  ]
+},
+{
+  text: 'A2 / A4',
+  items: [
     { text: 'A2 Networks', link: '/a2-networks/' },
     { text: 'A4 Machine Learning', link: '/a4-machine-learning/' }
   ]
