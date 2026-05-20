@@ -64,15 +64,30 @@ export default defineConfig({
     { text: 'HL: Multiple Classes', link: '/b3-oop/hl-multiple-classes' }
   ]
 },
-      {
-        text: 'A Theme',
-        items: [
-          { text: 'A3 Databases', link: '/a3-databases/' },
-          { text: 'A1 Computer Fundamentals', link: '/a1-computer-fundamentals/' },
-          { text: 'A2 Networks', link: '/a2-networks/' },
-          { text: 'A4 Machine Learning', link: '/a4-machine-learning/' }
-        ]
-      },
+{
+  text: 'A3 Databases',
+  items: [
+    { text: 'Overview', link: '/a3-databases/' },
+    { text: 'Database Fundamentals', link: '/a3-databases/database-fundamentals' },
+    { text: 'Tables, Records and Fields', link: '/a3-databases/tables-records-fields' },
+    { text: 'Primary and Foreign Keys', link: '/a3-databases/primary-foreign-keys' },
+    { text: 'Relationships', link: '/a3-databases/relationships' },
+    { text: 'ERD Basics', link: '/a3-databases/erd-basics' },
+    { text: 'Normalization', link: '/a3-databases/normalization' },
+    { text: 'SQL SELECT', link: '/a3-databases/sql-select' },
+    { text: 'SQL Conditions and Sorting', link: '/a3-databases/sql-conditions-sorting' },
+    { text: 'Database Security and Privacy', link: '/a3-databases/database-security-privacy' },
+    { text: 'Transactions and Recovery', link: '/a3-databases/transactions-recovery' }
+  ]
+},
+{
+  text: 'A1 / A2 / A4',
+  items: [
+    { text: 'A1 Computer Fundamentals', link: '/a1-computer-fundamentals/' },
+    { text: 'A2 Networks', link: '/a2-networks/' },
+    { text: 'A4 Machine Learning', link: '/a4-machine-learning/' }
+  ]
+},
       {
         text: 'Extensions',
         items: [

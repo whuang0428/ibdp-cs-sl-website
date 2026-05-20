@@ -1,69 +1,36 @@
-# A3 Databases
-
-::: tip SL Core
-This unit focuses on database fundamentals, database design, and database programming.
-:::
+﻿# A3 Databases
 
 ## Unit Overview
 
-Databases allow data to be stored, organized, searched, updated, and protected. This unit should include many table examples, relationship diagrams, and SQL practice.
+This unit introduces how data can be stored, organized, searched, and protected using databases.
 
-## Learning Goals
+Students will learn the basic structure of relational databases, how tables are connected, how database designs can be improved, and how SQL queries are used to retrieve data.
 
-By the end of this unit, students should be able to:
+For this first framework version, the pages are short. Later, each page can be expanded into a full teaching page with SQL examples, diagrams, exam-style questions, and classroom tasks.
 
-- explain the purpose of a database
-- identify tables, records, fields, and data types
-- explain primary keys and foreign keys
-- describe relationships between tables
-- understand entity-relationship diagrams
-- explain normalization at an appropriate level
-- write basic SQL queries
-- discuss privacy, security, and integrity in databases
+## Topics
 
-## Planned Topics
+| Topic | Main Focus | Label |
+|---|---|---|
+| Database Fundamentals | Understand what a database is and why it is used | SL Core |
+| Tables, Records and Fields | Understand the basic structure of relational databases | SL Core |
+| Primary and Foreign Keys | Identify how records and tables are linked | SL Core |
+| Relationships | Understand relationship types between tables | SL Core |
+| ERD Basics | Represent database structure using entity-relationship ideas | SL Core |
+| Normalization | Reduce data redundancy and improve database design | SL Core |
+| SQL SELECT | Retrieve data from a database | SL Core |
+| SQL Conditions and Sorting | Use WHERE, ORDER BY, and logical conditions | SL Core |
+| Database Security and Privacy | Protect stored data | SL Core |
+| Transactions and Recovery | Maintain consistency and recover from errors | SL Core |
 
-| Topic | Focus |
-|---|---|
-| Database Basics | Why databases are used |
-| Table / Record / Field | Structure of a relational database |
-| Data Types | Choosing suitable field types |
-| Primary Key | Uniquely identifying records |
-| Foreign Key | Linking tables |
-| Relationships | One-to-one, one-to-many, many-to-many |
-| ERD | Visual database design |
-| Normalization | Reducing redundancy and inconsistency |
-| SQL SELECT | Retrieving data |
-| SQL WHERE | Filtering data |
-| SQL ORDER BY | Sorting query results |
-| Aggregate Functions | COUNT, SUM, AVG, MIN, MAX |
-| Database Security | Access control, encryption, backups |
+## How to Study This Unit
 
-## Exam Focus
+1. Learn the vocabulary first.
+2. Understand tables, records, fields, and keys.
+3. Practise identifying relationships.
+4. Practise writing SQL queries.
+5. Connect database theory to real-world systems such as schools, hospitals, shops, and libraries.
 
-Students should be able to:
-
-- identify keys in a table
-- explain why a field is an appropriate data type
-- describe table relationships
-- construct simple SQL queries
-- explain advantages of using a database
-- discuss privacy and security measures
-
-## Common Mistakes
-
-| Mistake | How to Avoid It |
-|---|---|
-| Confusing primary key and foreign key | Primary key identifies records; foreign key links to another table |
-| Forgetting `DISTINCT` when duplicates should be removed | Check whether the question says each item should appear once |
-| Missing quotation marks around text values in SQL | Use quotes for strings |
-| Using wrong table or field names | Copy names exactly from the question |
-| Explaining security too generally | Link the security method to the data and scenario |
-
-## Quick Check
-
-1. What is a primary key?
-2. What is a foreign key?
-3. Why are databases better than flat files for large systems?
-4. Write a SQL query using `WHERE`.
-5. Give one way to protect private data in a database.
+::: tip SL Core
+This module focuses on SL database content. HL-only database extension topics are not included in the main learning pathway.
+:::
