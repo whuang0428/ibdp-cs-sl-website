@@ -44,7 +44,11 @@ export default defineConfig({
     { text: 'Input and Output', link: '/b2-programming/input-output' },
     { text: 'Selection', link: '/b2-programming/selection' },
     { text: 'Loops', link: '/b2-programming/loops' },
-    { text: 'Arrays', link: '/b2-programming/arrays' }
+    { text: 'Arrays', link: '/b2-programming/arrays' },
+    { text: 'Searching', link: '/b2-programming/searching' },
+    { text: 'Sorting', link: '/b2-programming/sorting' },
+    { text: 'File Processing', link: '/b2-programming/file-processing' },
+    { text: 'Testing and Debugging', link: '/b2-programming/testing-debugging' }
   ]
 },
 {

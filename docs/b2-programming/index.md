@@ -4,7 +4,7 @@
 
 This unit introduces the programming knowledge and practical coding skills needed for IBDP Computer Science SL.
 
-Programming is where students turn algorithms into working solutions. In this unit, students will learn how to use variables, data types, input and output, selection, loops, arrays, searching, sorting, and file processing.
+Programming is where students turn algorithms into working solutions. In this unit, students will learn how to use variables, data types, input and output, selection, loops, arrays, searching, sorting, file processing, testing, and debugging.
 
 ## Topics
 
@@ -17,9 +17,10 @@ Programming is where students turn algorithms into working solutions. In this un
 | Selection | Make decisions using IF statements |
 | Loops | Repeat instructions |
 | Arrays | Store multiple values under one name |
-| Searching | Find values in a data structure |
-| Sorting | Put values into order |
+| Searching | Find a target value in a data structure |
+| Sorting | Put values into a required order |
 | File Processing | Read from and write to files |
+| Testing and Debugging | Find and fix errors in programs |
 
 ## How to Study This Unit
 
