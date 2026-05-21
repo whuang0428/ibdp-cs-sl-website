@@ -4,12 +4,15 @@
 
 By the end of this lesson, students should be able to:
 
-- explain the purpose of sorting
+- explain what sorting means in programming
 - distinguish ascending and descending order
-- understand swap logic
-- trace a simple sorting pass
-- write Java code for a simple bubble sort
-- explain common sorting mistakes
+- explain why sorting is useful before searching, reporting, or ranking data
+- trace a simple sorting algorithm step by step
+- explain the purpose of comparing and swapping values
+- write and trace **bubble sort** in IB pseudocode and Java
+- write and trace **insertion sort** at a basic level
+- identify common sorting errors in nested loops and swap logic
+- answer exam-style tracing, debugging, and explanation questions
 
 ---
 
@@ -19,22 +22,31 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | B2 Programming |
 | Label | SL Core |
-| Main skill | Ordering data |
-| Connected units | Arrays, Loops, Searching |
-| Exam relevance | Algorithm tracing, comparison, array processing |
+| Main skill | Arranging array data into order |
+| Connected topics | Loops, arrays, selection, searching, testing |
+| Programming language focus | IB pseudocode + Java |
+| Exam relevance | Algorithm tracing, nested loops, comparison, swapping, output prediction |
+
+::: tip Learning Focus
+Sorting is difficult because it combines **arrays**, **selection**, **loops**, and often **nested loops**. Students should trace slowly and carefully.
+:::
 
 ---
 
 ## 3. Key Terms
 
-| Term | 中文解释 | Meaning |
+| English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Sort | 排序 | Arrange values into a required order |
-| Ascending | 升序 | Smallest to largest |
-| Descending | 降序 | Largest to smallest |
-| Swap | 交换 | Exchange two values |
-| Pass | 一轮遍历 | One movement through the data |
-| Bubble sort | 冒泡排序 | Repeatedly compares adjacent values and swaps if needed |
+| Sort | 排序 | To arrange data into a specific order |
+| Ascending order | 升序 | Smallest to largest, or A to Z |
+| Descending order | 降序 | Largest to smallest, or Z to A |
+| Comparison | 比较 | Checking two values to decide their order |
+| Swap | 交换 | Exchanging the positions of two values |
+| Pass | 一轮排序 | One complete traversal or stage of a sorting algorithm |
+| Bubble sort | 冒泡排序 | A sorting algorithm that repeatedly compares adjacent elements and swaps them if needed |
+| Insertion sort | 插入排序 | A sorting algorithm that inserts each value into the correct place in a sorted section |
+| Nested loop | 嵌套循环 | A loop inside another loop |
+| Temporary variable | 临时变量 | A variable used to help swap values |
 
 ---
 
@@ -45,11 +57,38 @@ By the end of this lesson, students should be able to:
 
 ### 中文讲解
 
-**Sorting（排序）** 是把数据按照某种顺序排列，例如从小到大或从大到小。
+**Sorting（排序）** 是把数据按照某种顺序排列。
 
-排序后的数据更容易阅读、比较和搜索。比如成绩可以从高到低排列，价格可以从低到高排列。
+常见排序方式：
 
-简单排序经常需要比较两个值。如果顺序不对，就交换它们。
+```text
+ascending order：从小到大
+descending order：从大到小
+alphabetical order：按字母顺序
+```
+
+例如：
+
+```text
+未排序: [8, 3, 6, 1]
+升序排序后: [1, 3, 6, 8]
+降序排序后: [8, 6, 3, 1]
+```
+
+排序在程序中很有用。例如：
+
+- 成绩排名
+- 按价格从低到高显示商品
+- 按日期排列记录
+- 按姓名 A-Z 排列学生名单
+- 为 binary search 准备数据
+
+排序算法的核心通常是：
+
+1. 比较两个值
+2. 判断它们顺序是否错误
+3. 如果顺序错误，就交换位置
+4. 重复这个过程，直到数据有序
 
 </template>
 
@@ -57,11 +96,38 @@ By the end of this lesson, students should be able to:
 
 ### English Explanation
 
-**Sorting** means arranging data into a required order, such as smallest to largest or largest to smallest.
+**Sorting** means arranging data into a specific order.
 
-Sorted data is easier to read, compare, and search. For example, marks can be sorted from highest to lowest, and prices can be sorted from lowest to highest.
+Common sorting orders:
 
-Simple sorting often compares two values. If they are in the wrong order, they are swapped.
+```text
+ascending order: smallest to largest
+descending order: largest to smallest
+alphabetical order: A to Z
+```
+
+Example:
+
+```text
+Unsorted: [8, 3, 6, 1]
+Sorted ascending: [1, 3, 6, 8]
+Sorted descending: [8, 6, 3, 1]
+```
+
+Sorting is useful in programs. For example:
+
+- ranking student marks
+- showing products from lowest to highest price
+- ordering records by date
+- arranging student names from A to Z
+- preparing data for binary search
+
+The core idea of many sorting algorithms is:
+
+1. compare two values
+2. decide whether their order is wrong
+3. swap them if needed
+4. repeat until the data is sorted
 
 </template>
 </LangBlock>
@@ -70,178 +136,928 @@ Simple sorting often compares two values. If they are in the wrong order, they a
 
 ## 5. Real-life Example
 
-Sort prices ascending:
+### Example: Ranking Exam Scores
 
-| Original | 8 | 3 | 6 | 2 |
-|---|---:|---:|---:|---:|
+A teacher has student scores:
 
-Sorted:
+```text
+[62, 90, 75, 48, 83]
+```
 
-| Sorted | 2 | 3 | 6 | 8 |
-|---|---:|---:|---:|---:|
+To rank students from highest to lowest, the scores should be sorted in descending order:
+
+```text
+[90, 83, 75, 62, 48]
+```
+
+Sorting makes it easier to:
+
+| Task | Why sorting helps |
+|---|---|
+| Find top score | Highest value appears first |
+| Find lowest score | Lowest value appears last |
+| Create ranking | Values are already ordered |
+| Present report | Easier for humans to read |
 
 ---
 
-## 6. IB Pseudocode Pattern
+## 6. Ascending vs Descending Order
 
-One bubble sort style pattern:
+| Order | Meaning | Example |
+|---|---|---|
+| Ascending | Smallest to largest | `[1, 3, 6, 8]` |
+| Descending | Largest to smallest | `[8, 6, 3, 1]` |
+
+### Java Comparison for Ascending
+
+If the left value is greater than the right value, swap:
+
+```java
+if (values[i] > values[i + 1]) {
+    // swap
+}
+```
+
+### Java Comparison for Descending
+
+If the left value is smaller than the right value, swap:
+
+```java
+if (values[i] < values[i + 1]) {
+    // swap
+}
+```
+
+::: warning Common Mistake
+Changing ascending to descending usually means changing the comparison operator.
+:::
+
+---
+
+## 7. The Swap Operation
+
+Sorting often needs to exchange two values.
+
+### 7.1 Wrong Swap
+
+```java
+a = b;
+b = a;
+```
+
+This is wrong because the original value of `a` is lost.
+
+Example:
 
 ```text
-FOR pass = 0 TO LENGTH(data) - 2 DO
-    FOR i = 0 TO LENGTH(data) - 2 DO
-        IF data[i] > data[i + 1] THEN
-            temp = data[i]
-            data[i] = data[i + 1]
-            data[i + 1] = temp
+a = 5
+b = 9
+```
+
+After `a = b`:
+
+```text
+a = 9
+b = 9
+```
+
+The value 5 is lost.
+
+---
+
+### 7.2 Correct Swap Using Temporary Variable
+
+```java
+int temp = a;
+a = b;
+b = temp;
+```
+
+Trace:
+
+| Step | a | b | temp |
+|---|---:|---:|---:|
+| Start | 5 | 9 | - |
+| `temp = a` | 5 | 9 | 5 |
+| `a = b` | 9 | 9 | 5 |
+| `b = temp` | 9 | 5 | 5 |
+
+Final result:
+
+```text
+a = 9
+b = 5
+```
+
+---
+
+### 7.3 Swap Two Array Elements
+
+```java
+int temp = values[i];
+values[i] = values[i + 1];
+values[i + 1] = temp;
+```
+
+This swaps adjacent elements in an array.
+
+---
+
+## 8. Bubble Sort
+
+## 8.1 Core Idea
+
+**Bubble sort** repeatedly compares adjacent elements.
+
+If two adjacent elements are in the wrong order, they are swapped.
+
+For ascending order:
+
+```text
+if left value > right value, swap them
+```
+
+Large values slowly “bubble” toward the end of the array.
+
+---
+
+## 8.2 Bubble Sort One Pass Example
+
+Start:
+
+```text
+[5, 2, 8, 1]
+```
+
+Ascending order.
+
+| Comparison | Action | Array after action |
+|---|---|---|
+| Compare 5 and 2 | 5 > 2, swap | `[2, 5, 8, 1]` |
+| Compare 5 and 8 | 5 < 8, no swap | `[2, 5, 8, 1]` |
+| Compare 8 and 1 | 8 > 1, swap | `[2, 5, 1, 8]` |
+
+After one pass, the largest value `8` is at the end.
+
+---
+
+## 8.3 Full Bubble Sort Trace
+
+Start:
+
+```text
+[5, 2, 8, 1]
+```
+
+### Pass 1
+
+| Step | Compare | Action | Array |
+|---:|---|---|---|
+| 1 | 5 and 2 | swap | `[2, 5, 8, 1]` |
+| 2 | 5 and 8 | no swap | `[2, 5, 8, 1]` |
+| 3 | 8 and 1 | swap | `[2, 5, 1, 8]` |
+
+### Pass 2
+
+| Step | Compare | Action | Array |
+|---:|---|---|---|
+| 1 | 2 and 5 | no swap | `[2, 5, 1, 8]` |
+| 2 | 5 and 1 | swap | `[2, 1, 5, 8]` |
+
+### Pass 3
+
+| Step | Compare | Action | Array |
+|---:|---|---|---|
+| 1 | 2 and 1 | swap | `[1, 2, 5, 8]` |
+
+Final sorted array:
+
+```text
+[1, 2, 5, 8]
+```
+
+---
+
+## 9. Bubble Sort IB Pseudocode
+
+```text
+FOR pass = 0 TO LENGTH(values) - 2 DO
+    FOR i = 0 TO LENGTH(values) - 2 - pass DO
+        IF values[i] > values[i + 1] THEN
+            temp = values[i]
+            values[i] = values[i + 1]
+            values[i + 1] = temp
         END IF
     END FOR
 END FOR
 ```
 
+### Explanation
+
+| Line | Meaning |
+|---|---|
+| Outer loop | Controls number of passes |
+| Inner loop | Compares adjacent elements |
+| `values[i] > values[i + 1]` | Checks if adjacent values are in wrong order |
+| `temp` | Used to swap without losing a value |
+| `- pass` | Avoids rechecking values already sorted at the end |
+
 ---
 
-## 7. Java Code Example
+## 10. Bubble Sort Java Code
 
 ```java
+import java.util.Arrays;
+
 public class BubbleSortExample {
     public static void main(String[] args) {
-        int[] data = {8, 3, 6, 2};
+        int[] values = {5, 2, 8, 1};
 
-        for (int pass = 0; pass < data.length - 1; pass++) {
-            for (int i = 0; i < data.length - 1; i++) {
-                if (data[i] > data[i + 1]) {
-                    int temp = data[i];
-                    data[i] = data[i + 1];
-                    data[i + 1] = temp;
+        for (int pass = 0; pass < values.length - 1; pass++) {
+            for (int i = 0; i < values.length - 1 - pass; i++) {
+                if (values[i] > values[i + 1]) {
+                    int temp = values[i];
+                    values[i] = values[i + 1];
+                    values[i + 1] = temp;
                 }
             }
         }
 
-        for (int i = 0; i < data.length; i++) {
-            System.out.println(data[i]);
-        }
+        System.out.println(Arrays.toString(values));
     }
 }
 ```
 
+Output:
+
+```text
+[1, 2, 5, 8]
+```
+
 ---
 
-## 8. Line-by-line Code Explanation
+## 11. Java Code Explanation
 
-| Code Part | Explanation |
+| Code | Explanation |
 |---|---|
-| Outer loop | Repeats passes through the array |
-| Inner loop | Compares adjacent values |
-| `data[i] > data[i + 1]` | Checks whether values are in wrong order |
-| `temp` | Temporarily stores a value during swap |
-| Swap statements | Exchange two adjacent values |
+| `import java.util.Arrays;` | Allows `Arrays.toString()` to print the array |
+| `int[] values = {5, 2, 8, 1};` | Creates array to sort |
+| `pass < values.length - 1` | Controls number of passes |
+| `i < values.length - 1 - pass` | Keeps `i + 1` valid and avoids sorted end |
+| `values[i] > values[i + 1]` | Checks if adjacent values are in wrong order |
+| `int temp = values[i];` | Saves first value before overwriting |
+| `values[i] = values[i + 1];` | Moves second value left |
+| `values[i + 1] = temp;` | Moves saved first value right |
+| `Arrays.toString(values)` | Converts array to readable output |
+
+::: warning Import Reminder
+`Arrays.toString(values)` needs:
+
+```java
+import java.util.Arrays;
+```
+
+Without it, Java will not recognize `Arrays`.
+:::
 
 ---
 
-## 9. Trace Table: One Pass
+## 12. Optimized Bubble Sort with Swapped Flag
 
-Array: `{8, 3, 6, 2}`
+Bubble sort can stop early if a full pass makes no swaps.
 
-| Comparison | Before | Action | After |
-|---|---|---|---|
-| 8 and 3 | 8, 3, 6, 2 | swap | 3, 8, 6, 2 |
-| 8 and 6 | 3, 8, 6, 2 | swap | 3, 6, 8, 2 |
-| 8 and 2 | 3, 6, 8, 2 | swap | 3, 6, 2, 8 |
+### Java Code
 
-After one pass, the largest value has moved to the end.
+```java
+import java.util.Arrays;
+
+public class OptimizedBubbleSort {
+    public static void main(String[] args) {
+        int[] values = {1, 2, 5, 8};
+        boolean swapped = true;
+        int pass = 0;
+
+        while (swapped && pass < values.length - 1) {
+            swapped = false;
+
+            for (int i = 0; i < values.length - 1 - pass; i++) {
+                if (values[i] > values[i + 1]) {
+                    int temp = values[i];
+                    values[i] = values[i + 1];
+                    values[i + 1] = temp;
+                    swapped = true;
+                }
+            }
+
+            pass++;
+        }
+
+        System.out.println(Arrays.toString(values));
+    }
+}
+```
+
+### Why Use `swapped`?
+
+| Value of `swapped` | Meaning |
+|---|---|
+| `true` | At least one swap happened, so sorting may still be needed |
+| `false` | No swap happened, so the array is already sorted |
 
 ---
 
-## 10. Common Mistakes
+## 13. Insertion Sort
+
+## 13.1 Core Idea
+
+**Insertion sort** builds a sorted section from left to right.
+
+It takes one value at a time and inserts it into the correct place in the already sorted section.
+
+Example:
+
+```text
+[5, 2, 8, 1]
+```
+
+At the start, treat the first element as sorted:
+
+```text
+sorted section: [5]
+unsorted section: [2, 8, 1]
+```
+
+Insert 2 into correct place:
+
+```text
+[2, 5, 8, 1]
+```
+
+Insert 8:
+
+```text
+[2, 5, 8, 1]
+```
+
+Insert 1:
+
+```text
+[1, 2, 5, 8]
+```
+
+---
+
+## 13.2 Insertion Sort Trace
+
+Start:
+
+```text
+[5, 2, 8, 1]
+```
+
+| Pass | Key value | Sorted section before insert | Array after insert |
+|---:|---:|---|---|
+| 1 | 2 | `[5]` | `[2, 5, 8, 1]` |
+| 2 | 8 | `[2, 5]` | `[2, 5, 8, 1]` |
+| 3 | 1 | `[2, 5, 8]` | `[1, 2, 5, 8]` |
+
+---
+
+## 13.3 Insertion Sort Java Code
+
+```java
+import java.util.Arrays;
+
+public class InsertionSortExample {
+    public static void main(String[] args) {
+        int[] values = {5, 2, 8, 1};
+
+        for (int i = 1; i < values.length; i++) {
+            int key = values[i];
+            int j = i - 1;
+
+            while (j >= 0 && values[j] > key) {
+                values[j + 1] = values[j];
+                j--;
+            }
+
+            values[j + 1] = key;
+        }
+
+        System.out.println(Arrays.toString(values));
+    }
+}
+```
+
+Output:
+
+```text
+[1, 2, 5, 8]
+```
+
+---
+
+## 13.4 Insertion Sort Code Explanation
+
+| Code | Explanation |
+|---|---|
+| `for (int i = 1; i < values.length; i++)` | Starts from second element because first element is treated as sorted |
+| `int key = values[i];` | Stores value to insert |
+| `int j = i - 1;` | Starts checking previous sorted section |
+| `j >= 0 && values[j] > key` | Moves larger values to the right |
+| `values[j + 1] = values[j];` | Shifts value right |
+| `j--;` | Moves left through sorted section |
+| `values[j + 1] = key;` | Inserts key into correct position |
+
+---
+
+## 14. Bubble Sort vs Insertion Sort
+
+| Feature | Bubble Sort | Insertion Sort |
+|---|---|---|
+| Basic idea | Repeatedly compare adjacent elements | Insert each value into sorted section |
+| Main action | Swap adjacent values | Shift larger values right |
+| Easy to visualize? | Yes | Medium |
+| Good for nearly sorted data? | Optimized version can stop early | Often works well |
+| Common difficulty | Nested loop bounds | Understanding shifting |
+
+::: tip Course Strategy
+For basic teaching, bubble sort is usually easier to trace first. Insertion sort can be used as an extension or comparison.
+:::
+
+---
+
+## 15. Sorting Strings
+
+Sorting names alphabetically requires comparing Strings.
+
+Java uses:
+
+```java
+compareTo()
+```
+
+Example:
+
+```java
+if (names[i].compareTo(names[i + 1]) > 0) {
+    String temp = names[i];
+    names[i] = names[i + 1];
+    names[i + 1] = temp;
+}
+```
+
+Meaning:
+
+```text
+if names[i] comes after names[i + 1] alphabetically, swap
+```
+
+::: warning Note
+For this course page, integer sorting is the main focus. String sorting is an extension example.
+:::
+
+---
+
+## 16. Common Mistakes
 
 | Mistake | Why it is a problem | Better habit |
 |---|---|---|
-| Sorting wrong direction | Output order wrong | Check ascending/descending |
-| Losing a value during swap | Data becomes duplicated or lost | Use temporary variable |
-| Comparing outside array bounds | Runtime error | Stop before `length - 1` |
-| Stopping after one pass | Array may not be fully sorted | Repeat passes |
-| Confusing index and value | Wrong comparison | Compare `data[i]` and `data[i+1]` |
+| Forgetting temporary variable during swap | One value is overwritten and lost | Use `temp` |
+| Using `i <= values.length - 1` with `values[i + 1]` | May access invalid index | Use `i < values.length - 1` |
+| Wrong comparison operator | Sorts in wrong direction | Use `>` for ascending adjacent swap |
+| Starting insertion sort at index 0 | No previous sorted section exists | Start from index 1 |
+| Forgetting `j >= 0` in insertion sort | May access negative index | Check boundary before `values[j]` |
+| Confusing pass and index | Trace becomes incorrect | Label outer and inner loop clearly |
+| Printing array directly | Java prints memory-like reference | Use `Arrays.toString(values)` |
+| Not importing `Arrays` | `Arrays.toString` causes error | Add `import java.util.Arrays;` |
+| Thinking one pass always sorts everything | One pass may only move one value to final position | Trace all passes |
+| Swapping when values are already in correct order | Can break order or waste steps | Swap only when condition is true |
 
 ---
 
-## 11. Guided Practice
+## 17. Guided Practice
 
-Sort `{4, 1, 3}` ascending.
+### Practice 1: Swap Trace
+
+Given:
+
+```java
+int a = 4;
+int b = 9;
+
+int temp = a;
+a = b;
+b = temp;
+```
+
+What are the final values of `a` and `b`?
 
 <details>
 <summary>Suggested Answer</summary>
 
-Final sorted array:
+Final values:
 
 ```text
-1, 3, 4
+a = 9
+b = 4
+```
+
+The temporary variable stores the original value of `a` before `a` is overwritten.
+
+</details>
+
+---
+
+### Practice 2: One Bubble Sort Pass
+
+Start:
+
+```text
+[6, 2, 9, 3]
+```
+
+Perform one ascending bubble sort pass.
+
+<details>
+<summary>Suggested Answer</summary>
+
+| Compare | Action | Array |
+|---|---|---|
+| 6 and 2 | swap | `[2, 6, 9, 3]` |
+| 6 and 9 | no swap | `[2, 6, 9, 3]` |
+| 9 and 3 | swap | `[2, 6, 3, 9]` |
+
+After one pass:
+
+```text
+[2, 6, 3, 9]
 ```
 
 </details>
 
-Explain swap with temp.
+---
+
+### Practice 3: Predict Output
+
+```java
+import java.util.Arrays;
+
+public class Test {
+    public static void main(String[] args) {
+        int[] values = {3, 1, 2};
+
+        for (int pass = 0; pass < values.length - 1; pass++) {
+            for (int i = 0; i < values.length - 1 - pass; i++) {
+                if (values[i] > values[i + 1]) {
+                    int temp = values[i];
+                    values[i] = values[i + 1];
+                    values[i + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(values));
+    }
+}
+```
 
 <details>
 <summary>Suggested Answer</summary>
 
-`temp` stores one value temporarily so it is not lost when the first array position is overwritten.
+Final output:
+
+```text
+[1, 2, 3]
+```
+
+The algorithm sorts the array in ascending order.
 
 </details>
 
 ---
 
-## 12. Independent Practice
+### Practice 4: Find the Error
 
-1. Show one bubble sort pass for `{5, 2, 9, 1}`.
-2. Write Java code to sort `{7, 4, 6}`.
-3. Explain why a temporary variable is needed.
+```java
+for (int i = 0; i < values.length; i++) {
+    if (values[i] > values[i + 1]) {
+        int temp = values[i];
+        values[i] = values[i + 1];
+        values[i + 1] = temp;
+    }
+}
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+The loop condition is wrong because `values[i + 1]` is accessed. If `i` reaches the last index, `i + 1` is outside the array.
+
+Correct condition:
+
+```java
+for (int i = 0; i < values.length - 1; i++) {
+```
+
+</details>
 
 ---
 
-## 13. Exam-style Questions
+### Practice 5: Descending Sort Condition
 
-### Question 1 [2 marks]
+For adjacent bubble sort, what condition should be used to sort in descending order?
 
-State what is meant by sorting.
+<details>
+<summary>Suggested Answer</summary>
+
+Use:
+
+```java
+if (values[i] < values[i + 1]) {
+    // swap
+}
+```
+
+This swaps when the left value is smaller than the right value.
+
+</details>
+
+---
+
+## 18. Independent Practice
+
+### Question 1
+
+Trace one ascending bubble sort pass for:
+
+```text
+[7, 4, 2, 9]
+```
+
+### Question 2
+
+Trace the full bubble sort for:
+
+```text
+[4, 1, 3]
+```
+
+### Question 3
+
+Write Java code to swap `values[0]` and `values[1]`.
+
+### Question 4
+
+Modify bubble sort so it sorts in descending order.
+
+### Question 5
+
+Explain why the inner loop condition often uses:
+
+```java
+i < values.length - 1 - pass
+```
+
+### Question 6
+
+Find and correct the error:
+
+```java
+int temp = values[i];
+values[i] = values[i + 1];
+values[i + 1] = values[i];
+```
+
+### Question 7
+
+Trace insertion sort for:
+
+```text
+[6, 2, 5]
+```
+
+### Question 8
+
+Explain why sorted data may be useful before binary search.
+
+### Question 9
+
+Write a short comparison between bubble sort and insertion sort.
+
+### Question 10
+
+Write Java code to sort this array using bubble sort:
+
+```java
+int[] values = {10, 3, 8, 1};
+```
+
+---
+
+## 19. Exam-style Questions
+
+### Question 1 [4 marks]
+
+Trace one pass of ascending bubble sort for the array:
+
+```text
+[5, 1, 4, 2]
+```
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Sorting is arranging data into a required order, such as ascending or descending order.
+| Compare | Action | Array |
+|---|---|---|
+| 5 and 1 | swap | `[1, 5, 4, 2]` |
+| 5 and 4 | swap | `[1, 4, 5, 2]` |
+| 5 and 2 | swap | `[1, 4, 2, 5]` |
+
+After one pass:
+
+```text
+[1, 4, 2, 5]
+```
 
 </details>
 
-### Question 2 [4 marks]
+---
 
-Explain the purpose of the temporary variable in a swap.
+### Question 2 [5 marks]
+
+Explain how bubble sort works.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-The temporary variable stores one value before it is overwritten. This allows two values to exchange positions without losing either value.
+Bubble sort repeatedly compares adjacent elements in an array. If two adjacent elements are in the wrong order, they are swapped. This process is repeated over several passes. In ascending order, larger values gradually move toward the end of the array. After enough passes, all elements are in order.
 
 </details>
 
 ---
 
-## 14. Classroom Activity
+### Question 3 [6 marks]
 
-Students physically sort number cards using bubble sort and record each comparison.
+Write Java code for one ascending bubble sort pass over an integer array called `values`.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+```java
+for (int i = 0; i < values.length - 1; i++) {
+    if (values[i] > values[i + 1]) {
+        int temp = values[i];
+        values[i] = values[i + 1];
+        values[i + 1] = temp;
+    }
+}
+```
+
+Possible marks:
+
+- loop starts at index 0
+- loop avoids invalid `i + 1`
+- compares adjacent elements
+- uses correct comparison for ascending order
+- uses temporary variable
+- correctly swaps both elements
+
+</details>
 
 ---
 
-## 15. Homework
+### Question 4 [6 marks]
 
-Trace two passes of bubble sort for `{6, 1, 5, 2}` and write the final sorted array.
+Explain why a temporary variable is needed when swapping two values.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A temporary variable is needed because assigning one variable to another can overwrite a value before it has been copied. The temporary variable stores one original value safely. Then the first variable can be replaced by the second value, and the second variable can be replaced by the saved temporary value. Without a temporary variable, one of the original values may be lost.
+
+</details>
 
 ---
 
-## 16. One-page Revision Summary
+### Question 5 [6 marks]
+
+Compare bubble sort and linear search.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Bubble sort and linear search are different algorithms. Linear search looks through an array to find a target value by checking each element one by one. Bubble sort arranges all values into an order by repeatedly comparing adjacent elements and swapping them if needed. Linear search produces a result such as found/not found or a position, while bubble sort changes the order of the data. Linear search does not require sorted data, but sorting can make data easier to search or display later.
+
+</details>
+
+---
+
+## 20. Classroom Activity
+
+### Activity 1: Human Bubble Sort
+
+Students stand in a line holding number cards.
+
+Process:
+
+1. Compare the first two students.
+2. If the left number is larger, they swap places.
+3. Move one position to the right.
+4. Continue until the end of the line.
+5. Repeat passes until sorted.
+
+Students should write the array after each comparison.
+
+---
+
+### Activity 2: Swap Debugging
+
+Give students incorrect swap code:
+
+```java
+values[i] = values[i + 1];
+values[i + 1] = values[i];
+```
+
+Students use actual numbers to prove why the swap fails.
+
+---
+
+### Activity 3: Sorting Race Without Computers
+
+Groups sort card arrays using bubble sort rules only. They must record each pass in a trace table.
+
+---
+
+## 21. Homework
+
+### Homework Part A: Trace
+
+Trace full bubble sort for:
+
+```text
+[3, 2, 5, 1]
+```
+
+Show each comparison and array state.
+
+---
+
+### Homework Part B: Write Code
+
+Write Java code that sorts this array in ascending order using bubble sort:
+
+```java
+int[] scores = {72, 91, 50, 88, 63};
+```
+
+Then output the sorted array.
+
+---
+
+### Homework Part C: Descending Order
+
+Modify your code from Part B to sort in descending order.
+
+---
+
+### Homework Part D: Explain
+
+In 4-5 sentences, explain why nested loops are often used in sorting algorithms.
+
+---
+
+## 22. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| Sorting | Arrange data in order |
+| Sorting | Arranges data into an order |
 | Ascending | Smallest to largest |
-| Swap | Exchange values |
-| temp | Prevents data loss |
-| Exam phrase | "Adjacent values are compared and swapped if they are in the wrong order." |
+| Descending | Largest to smallest |
+| Comparison | Checks two values |
+| Swap | Exchanges two values |
+| Temporary variable | Prevents a value from being lost during swap |
+| Bubble sort | Compares adjacent values and swaps if needed |
+| Pass | One stage of moving through the array |
+| Insertion sort | Inserts each value into the correct place in a sorted section |
+| Nested loop | Often used because several passes are needed |
+| Common error | Accessing `values[i + 1]` when `i` is already last index |
+| Exam phrase | Bubble sort repeatedly compares adjacent elements and swaps them if they are in the wrong order |
+
+---
+
+## 23. Quick Self-test
+
+Before moving on, students should be able to answer these:
+
+1. What is sorting?
+2. What is ascending order?
+3. What is descending order?
+4. Why is a temporary variable needed for swapping?
+5. What does bubble sort compare?
+6. Why does bubble sort need several passes?
+7. What condition is used for ascending bubble sort?
+8. How do you change bubble sort to descending order?
+9. Why can `values[i + 1]` cause an out-of-bounds error?
+10. How is sorting different from searching?
