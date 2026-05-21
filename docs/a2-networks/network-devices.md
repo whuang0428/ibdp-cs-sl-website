@@ -5,11 +5,17 @@
 By the end of this lesson, students should be able to:
 
 - identify common network devices
-- explain the roles of router, switch, WAP, modem, firewall, and NIC
-- distinguish switch and router
-- choose suitable devices for a scenario
-- explain how devices support LAN and internet access
-- write exam-style device role answers
+- explain the role of a network interface card
+- explain the role of a switch
+- explain the role of a router
+- explain the role of a wireless access point
+- explain the role of a modem
+- explain the role of a firewall
+- distinguish switch, router, modem, and access point
+- explain how network devices work together in home and school networks
+- choose suitable network devices for different scenarios
+- avoid common misconceptions about network devices
+- answer exam-style questions about network devices
 
 ---
 
@@ -19,12 +25,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | A2 Networks |
 | Label | SL Core |
-| Main skill | Understanding the role of network hardware |
-| Connected units | A1 Computer Fundamentals, A3 Databases, A4 Machine Learning, Social Engineering Awareness |
-| Exam relevance | Definitions, process explanation, comparison, security scenarios, network design questions |
+| Main skill | Understanding how devices connect, forward, and protect network communication |
+| Connected topics | Network fundamentals, LAN/WAN, TCP/IP, packet switching, DNS, web access, network security |
+| Practical focus | Explaining network device roles in home, school, and business networks |
+| Exam relevance | Definitions, device role explanation, comparison, scenario selection |
 
 ::: tip Learning Focus
-A2 questions often require students to explain **how data moves across networks** and how systems can be protected from threats.
+Students often mix up routers, switches, modems, and wireless access points. The key is to explain what each device does in the path of network communication.
 :::
 
 ---
@@ -33,13 +40,23 @@ A2 questions often require students to explain **how data moves across networks*
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Router | 路由器 | Connects different networks and forwards packets between them |
-| Switch | 交换机 | Connects devices within a LAN and forwards data to the correct device |
-| Wireless Access Point | 无线接入点 | Allows wireless devices to connect to a wired network |
-| Modem | 调制解调器 | Connects a network to an internet service provider connection |
-| Firewall | 防火墙 | Filters network traffic based on security rules |
-| NIC | 网卡 | Network interface card allowing a device to connect to a network |
-| Gateway | 网关 | A device or system connecting different networks or protocols |
+| Network device | 网络设备 | Hardware used to connect, forward, control, or protect network communication |
+| NIC | 网络接口卡 | Hardware that allows a device to connect to a network |
+| Switch | 交换机 | Device that connects devices within a LAN |
+| Router | 路由器 | Device that forwards data between different networks |
+| Wireless access point | 无线接入点 | Device that allows wireless devices to connect to a wired network |
+| Modem | 调制解调器 | Device that connects a local network to an ISP service |
+| Firewall | 防火墙 | Hardware/software that filters network traffic based on rules |
+| Hub | 集线器 | Basic device that broadcasts data to all connected devices |
+| Repeater | 中继器 | Device that regenerates or extends signals |
+| Bridge | 网桥 | Device that connects network segments |
+| Gateway | 网关 | Device that connects different networks or protocol environments |
+| Packet | 数据包 | Small unit of data sent across a network |
+| Frame | 帧 | Data unit used on local network links |
+| MAC address | MAC 地址 | Hardware address used for local network delivery |
+| IP address | IP 地址 | Logical address used for network routing |
+| Port | 端口 | Physical connector or logical communication endpoint |
+| Network topology | 网络拓扑 | Arrangement of devices and connections in a network |
 
 ---
 
@@ -50,18 +67,52 @@ A2 questions often require students to explain **how data moves across networks*
 
 ### 中文讲解
 
-网络需要不同设备来连接、转发和保护数据。
+网络中的设备需要通过不同的 **network devices（网络设备）** 连接起来。  
+这些设备的作用不是完全一样的。
 
-常见设备：
+例如：
 
-- **Switch**：连接 LAN 内部的设备，例如 classroom computers
-- **Router**：连接不同 networks，例如 home LAN 和 internet
-- **Wireless Access Point**：让无线设备接入网络
-- **Modem**：连接 ISP 提供的 internet service
-- **Firewall**：根据规则过滤进出网络的数据
-- **NIC**：让设备具备网络连接能力
+```text
+NIC 让电脑可以连接网络
+switch 连接同一个 LAN 里的多个设备
+router 连接不同网络，例如 home LAN 和 internet
+wireless access point 让无线设备接入网络
+modem 连接 ISP 提供的互联网线路
+firewall 根据规则过滤流量
+```
 
-考试中最常见错误是把 switch 和 router 混淆。
+很多家庭路由器看起来只有一个盒子，但它其实可能同时包含：
+
+```text
+router
+switch
+wireless access point
+firewall
+sometimes modem
+```
+
+所以学习时不要只看设备外观，而要看它的功能。
+
+例如学校网络中：
+
+```text
+student computers connect to switches
+wireless devices connect to access points
+switches connect to router/firewall
+router connects school LAN to internet
+firewall controls allowed and blocked traffic
+```
+
+简单来说：
+
+```text
+switch = connects devices inside a LAN
+router = connects different networks
+access point = provides Wi-Fi connection
+modem = connects to ISP line
+firewall = filters traffic for security
+NIC = lets a device join the network
+```
 
 </template>
 
@@ -69,172 +120,1044 @@ A2 questions often require students to explain **how data moves across networks*
 
 ### English Explanation
 
-Networks use different devices to connect, forward, and protect data.
+Devices in a network are connected using different **network devices**.  
+These devices do not all do the same job.
 
-Common devices:
+For example:
 
-- **Switch**: connects devices inside a LAN, such as classroom computers
-- **Router**: connects different networks, such as a home LAN and the internet
-- **Wireless Access Point**: allows wireless devices to join a network
-- **Modem**: connects to an ISP internet service
-- **Firewall**: filters incoming and outgoing traffic based on rules
-- **NIC**: allows a device to connect to a network
+```text
+NIC allows a computer to connect to a network
+switch connects multiple devices inside the same LAN
+router connects different networks, such as home LAN and internet
+wireless access point allows wireless devices to join a network
+modem connects to the internet service provided by an ISP
+firewall filters traffic based on rules
+```
 
-A very common exam mistake is confusing switches and routers.
+Many home routers look like one single box, but they may actually combine several functions:
+
+```text
+router
+switch
+wireless access point
+firewall
+sometimes modem
+```
+
+So when learning, do not only look at the physical box. Look at the function.
+
+For example, in a school network:
+
+```text
+student computers connect to switches
+wireless devices connect to access points
+switches connect to router/firewall
+router connects school LAN to internet
+firewall controls allowed and blocked traffic
+```
+
+In simple terms:
+
+```text
+switch = connects devices inside a LAN
+router = connects different networks
+access point = provides Wi-Fi connection
+modem = connects to ISP line
+firewall = filters traffic for security
+NIC = lets a device join the network
+```
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. Real-life Example
+## 5. Big Picture: Devices in a Network
 
-### Example: Home Network
-
-| Device | Role |
-|---|---|
-| Laptop NIC | connects laptop to Wi-Fi |
-| Wireless access point | provides Wi-Fi connection |
-| Switch | connects wired devices in LAN |
-| Router | forwards data between home network and internet |
-| Modem | connects to ISP line |
-| Firewall | blocks unwanted traffic |
-
-::: info Scenario Link
-Many home routers combine router, switch, WAP, modem, and firewall functions in one physical device, but the roles are still different.
-:::
-
----
-
-## 6. Device Role Pattern
+A small network may include:
 
 ```text
-Device wants to communicate → NIC sends data → switch/WAP handles LAN connection → router forwards to other network → firewall filters traffic → modem/ISP connects to internet
+end-user devices
+network interface cards
+switches
+wireless access points
+routers
+modems
+firewalls
+servers
+printers
+```
+
+### Simple Home Network
+
+```mermaid
+flowchart LR
+    L[Laptop] --> AP[Wi-Fi Access Point]
+    P[Phone] --> AP
+    AP --> R[Router]
+    PC[Desktop PC] --> SW[Switch]
+    SW --> R
+    R --> M[Modem]
+    M --> ISP[ISP / Internet]
+```
+
+### Simple School Network
+
+```mermaid
+flowchart LR
+    C1[Classroom PCs] --> SW1[Switch]
+    C2[Teacher PCs] --> SW1
+    PR[Printer] --> SW1
+    AP[Wireless Access Points] --> SW1
+    SW1 --> FW[Firewall]
+    FW --> R[Router]
+    R --> ISP[Internet]
+    FS[File Server] --> SW1
 ```
 
 ---
 
-## 7. Technical Example
+## 6. Network Interface Card: NIC
 
-### Switch vs Router
+A **Network Interface Card**, or **NIC**, allows a device to connect to a network.
+
+It may support:
+
+```text
+wired Ethernet
+Wi-Fi
+Bluetooth
+mobile network
+```
+
+### Role
+
+A NIC:
+
+```text
+connects a device to a network
+sends and receives network signals
+has a MAC address
+converts data into signals and signals back into data
+```
+
+### Examples
+
+```text
+Ethernet port in desktop computer
+Wi-Fi adapter in laptop
+network chip in phone
+USB Ethernet adapter
+```
+
+::: tip Exam Phrase
+A NIC is hardware that allows a device to connect to a network and send or receive data.
+:::
+
+---
+
+## 7. MAC Address
+
+A NIC usually has a MAC address.
+
+A MAC address is a hardware address used to identify a network interface on a local network.
+
+Example format:
+
+```text
+A4:5E:60:12:9F:22
+```
+
+### Why It Matters
+
+On a LAN, devices need to know which local device should receive a frame.
+
+A switch can use MAC addresses to forward data to the correct port.
+
+### MAC vs IP Preview
+
+| MAC Address | IP Address |
+|---|---|
+| hardware address | logical/network address |
+| used mainly on local network | used for routing between networks |
+| linked to network interface | assigned by network configuration |
+| usually fixed | can change |
+
+---
+
+## 8. Switch
+
+A switch connects devices within a LAN.
+
+### Role
+
+A switch:
+
+```text
+connects multiple wired devices
+receives frames
+uses MAC addresses to decide where to forward data
+reduces unnecessary traffic compared with a hub
+helps build a LAN
+```
+
+### Example
+
+In a school computer lab:
+
+```text
+30 computers connect to a switch
+printer connects to the switch
+server connects to the switch
+```
+
+The switch forwards data between devices in the same local network.
+
+::: tip Exam Phrase
+A switch connects devices within a LAN and forwards data to the correct device using MAC addresses.
+:::
+
+---
+
+## 9. Switch vs Hub
+
+A hub is an older/basic device.
+
+### Hub
+
+A hub broadcasts data to all connected devices.
+
+```text
+data comes in
+hub sends it out to every port
+```
+
+### Switch
+
+A switch forwards data only to the correct destination port where possible.
+
+```text
+data comes in
+switch checks destination MAC address
+switch sends it to the correct port
+```
+
+### Comparison
+
+| Hub | Switch |
+|---|---|
+| broadcasts to all devices | forwards to intended device |
+| less efficient | more efficient |
+| more collisions in older Ethernet | reduces unnecessary traffic |
+| simple/older | common in modern LANs |
+
+---
+
+## 10. Router
+
+A router connects different networks together.
+
+### Role
+
+A router:
+
+```text
+connects LAN to WAN/internet
+forwards packets between networks
+uses IP addresses
+chooses routes for data
+may perform NAT in home networks
+may include firewall functions
+```
+
+### Example
+
+A home router connects:
+
+```text
+home LAN
+to
+internet through ISP
+```
+
+A school router connects:
+
+```text
+school LAN
+to
+internet or wider school group network
+```
+
+::: tip Exam Phrase
+A router forwards data between different networks using IP addresses.
+:::
+
+---
+
+## 11. Switch vs Router
 
 | Feature | Switch | Router |
 |---|---|---|
-| Main role | connects devices in LAN | connects different networks |
-| Example | PC to printer in school | school LAN to internet |
-| Uses | local forwarding | packet routing between networks |
+| Main role | connects devices within a LAN | connects different networks |
+| Address mainly used | MAC address | IP address |
+| Typical location | inside LAN | boundary between networks |
+| Example | connects PCs to school LAN | connects school LAN to internet |
+| Data unit idea | frame | packet |
+
+### Quick Memory
+
+```text
+switch = inside LAN
+router = between networks
+```
 
 ---
 
-## 8. Explanation of the Example
+## 12. Wireless Access Point
 
-Even if a single physical box performs several roles, students should explain the logical role. For example, the router function connects networks, while the wireless access point function provides Wi-Fi access.
+A wireless access point, or WAP/AP, allows wireless devices to connect to a wired network.
+
+### Role
+
+A wireless access point:
+
+```text
+provides Wi-Fi signal
+connects wireless devices to LAN
+communicates with wireless clients
+passes traffic to wired network
+```
+
+### Example
+
+In a school:
+
+```text
+phones, tablets, and laptops connect to Wi-Fi access points
+access points connect to switches
+switches connect to the rest of the school network
+```
+
+### Important
+
+A wireless access point is not always the same as a router.
+
+In many homes, one physical box includes both:
+
+```text
+router function
+wireless access point function
+```
+
+But in larger networks, access points and routers are often separate devices.
 
 ---
 
-## 9. Step-by-step Process / Trace
+## 13. Modem
 
-| Step | Action | Device |
+A modem connects a local network to an internet service line.
+
+The word originally means:
+
+```text
+modulator-demodulator
+```
+
+Modern modems connect to ISP technologies such as:
+
+```text
+DSL
+cable
+fibre terminal / ONT in some setups
+mobile broadband
+```
+
+### Role
+
+A modem:
+
+```text
+connects to the ISP line
+converts signals where needed
+allows local router/network to access ISP service
+```
+
+### Home Example
+
+```text
+laptop → router → modem → ISP → internet
+```
+
+### Important
+
+Some home devices combine:
+
+```text
+modem + router + switch + Wi-Fi access point
+```
+
+in one box.
+
+---
+
+## 14. Router vs Modem
+
+| Feature | Router | Modem |
 |---|---|---|
-| 1 | Laptop sends request | NIC |
-| 2 | Wireless signal joins LAN | WAP |
-| 3 | Local traffic is forwarded | switch |
-| 4 | Traffic to internet is routed | router |
-| 5 | Traffic is checked | firewall |
-| 6 | Connection to ISP is used | modem |
+| Main role | connects networks and routes packets | connects to ISP service line |
+| Common use | links LAN to WAN/internet | provides internet service connection |
+| Address/routing | uses IP routing | handles ISP signal connection |
+| Home setup | may share internet to many devices | connects home to ISP |
+| Combined device? | often combined in home gateway | often combined in home gateway |
+
+### Quick Memory
+
+```text
+modem = connects to ISP line
+router = shares/routes connection between networks
+```
 
 ---
 
-## 10. Common Mistakes
+## 15. Firewall
 
-| Mistake | Why it is a problem | Better habit |
+A firewall filters network traffic based on rules.
+
+It can be:
+
+```text
+hardware
+software
+or both
+```
+
+### Role
+
+A firewall can:
+
+```text
+block unauthorized traffic
+allow permitted traffic
+filter by IP address, port, protocol, or application
+protect internal network
+log suspicious activity
+```
+
+### Example
+
+A school firewall may block:
+
+```text
+malicious websites
+unauthorized external access
+some gaming or streaming sites
+unknown inbound traffic
+```
+
+It may allow:
+
+```text
+school learning platforms
+email
+approved websites
+secure web traffic
+```
+
+::: tip Exam Phrase
+A firewall monitors and filters incoming and outgoing network traffic based on security rules.
+:::
+
+---
+
+## 16. Hardware Firewall vs Software Firewall
+
+| Hardware Firewall | Software Firewall |
+|---|---|
+| separate device or network appliance | installed on a computer/device |
+| protects network or network segment | protects individual device |
+| often used in schools/companies | common on laptops/desktops |
+| managed by IT/network admin | managed by user or OS |
+
+### Example
+
+A school may use a hardware firewall at the network boundary.  
+A student laptop may also have a software firewall in the operating system.
+
+---
+
+## 17. Repeater
+
+A repeater regenerates or boosts a signal so it can travel further.
+
+### Role
+
+A repeater:
+
+```text
+receives weakened signal
+regenerates signal
+forwards it onward
+```
+
+### Example
+
+A Wi-Fi range extender is a type of repeater-like device that extends wireless coverage.
+
+### Limitation
+
+Repeaters can extend range, but they do not necessarily improve bandwidth or reduce congestion.
+
+---
+
+## 18. Bridge
+
+A bridge connects two network segments.
+
+It can reduce traffic by separating parts of a LAN and forwarding traffic only when needed.
+
+### Simple Example
+
+```text
+Segment A ---- Bridge ---- Segment B
+```
+
+In modern networks, switches have largely replaced many traditional bridge functions.
+
+---
+
+## 19. Gateway
+
+A gateway connects networks or systems that may use different protocols or environments.
+
+### Example Uses
+
+```text
+connecting local network to external network
+translating between protocols
+connecting IoT network to internet
+connecting internal system to cloud service
+```
+
+### Simple Understanding
+
+A gateway is a connection point between different network systems.
+
+::: info Level Control
+Gateway can mean different things depending on context. In many home networks, the router acts as the default gateway.
+:::
+
+---
+
+## 20. Network Devices in a Home Network
+
+A home network may use one physical box that combines many roles.
+
+### Home Gateway May Include
+
+```text
+router
+switch
+wireless access point
+firewall
+sometimes modem
+```
+
+### Example Path
+
+When a phone opens a website:
+
+```text
+phone Wi-Fi NIC
+→ wireless access point
+→ router
+→ modem
+→ ISP
+→ internet
+→ web server
+```
+
+### Why This Confuses Students
+
+Because the box is often called "the router", but it may perform several functions.
+
+---
+
+## 21. Network Devices in a School Network
+
+A school network usually separates roles more clearly.
+
+### Possible Devices
+
+```text
+switches in classrooms
+wireless access points in corridors
+central router
+firewall
+servers
+internet connection equipment
+network printers
+```
+
+### Example
+
+When a student accesses a local file server:
+
+```text
+student PC
+→ switch
+→ server
+```
+
+When a student opens a website:
+
+```text
+student PC
+→ switch
+→ firewall
+→ router
+→ ISP
+→ internet
+```
+
+---
+
+## 22. Network Devices in Cloud Access
+
+When a user accesses cloud storage:
+
+```text
+laptop
+→ Wi-Fi access point
+→ switch
+→ router/firewall
+→ ISP
+→ internet routers
+→ cloud data centre
+→ cloud server
+```
+
+This involves:
+
+```text
+local LAN devices
+WAN infrastructure
+cloud provider network devices
+servers
+security systems
+```
+
+---
+
+## 23. Choosing Network Devices
+
+### Scenario Table
+
+| Scenario | Suitable Device | Reason |
 |---|---|---|
-| Saying switch connects networks | Switch connects devices within LAN | Router connects different networks |
-| Saying firewall removes all threats | Firewall filters traffic but is not complete protection | Mention rules and layered security |
-| Ignoring WAP role | Wireless clients need access point | WAP connects wireless devices |
-| Confusing modem and router | They have different roles | Modem connects to ISP; router routes between networks |
-| Only naming device without function | Exam marks require explanation | State role in scenario |
+| connect many PCs in one classroom | switch | connects devices in LAN |
+| connect school LAN to internet | router | forwards data between networks |
+| provide Wi-Fi in library | wireless access point | allows wireless connection |
+| connect home to ISP line | modem | connects to ISP service |
+| block unauthorized traffic | firewall | filters traffic by rules |
+| extend weak signal | repeater / extender | regenerates or extends signal |
+| allow laptop to join Ethernet | NIC / adapter | network interface |
 
 ---
 
-## 11. Guided Practice
+## 24. Performance Considerations
 
-### Practice 1
+Network device choice can affect performance.
 
-Which device connects devices inside a LAN?
+Factors include:
 
-<details><summary>Suggested Answer</summary>
+```text
+number of ports
+supported speed
+wireless standard
+signal range
+processing capacity
+firewall throughput
+number of connected users
+cable quality
+placement of access points
+```
 
-A switch connects devices inside a LAN.
+### Example
+
+A slow switch or overloaded access point can reduce network performance even if the internet connection is fast.
+
+---
+
+## 25. Security Considerations
+
+Network devices can improve or weaken security.
+
+### Good Practices
+
+```text
+change default admin passwords
+update firmware
+use strong Wi-Fi encryption
+configure firewall rules
+disable unused services
+separate guest network
+monitor unusual traffic
+physically secure network equipment
+```
+
+### Example
+
+If a school leaves a router with default password, attackers may change settings or access the network.
+
+---
+
+## 26. Troubleshooting Using Device Roles
+
+Understanding device roles helps identify problems.
+
+| Problem | Possible Device/Area |
+|---|---|
+| one PC cannot connect | NIC, cable, device settings |
+| all classroom PCs cannot connect | switch, uplink cable |
+| Wi-Fi works poorly in one area | access point placement/range |
+| LAN works but internet does not | router, modem, ISP |
+| website blocked | firewall rule |
+| slow cloud access | router, ISP, WAN, server, congestion |
+
+---
+
+## 27. Common Mistakes
+
+| Mistake | Why it is wrong | Better understanding |
+|---|---|---|
+| Router and switch are the same | Router connects networks; switch connects LAN devices | Different roles |
+| Modem and router are always the same | They can be combined but have different roles | Modem connects ISP line; router routes |
+| Access point is always a router | AP provides Wi-Fi access | Router connects networks |
+| Firewall is only hardware | Firewall can be hardware or software | It filters traffic |
+| Switch sends data to everyone like a hub | Switch forwards using MAC addresses | Hub broadcasts |
+| NIC is software | NIC is hardware | It allows network connection |
+| Wi-Fi means no network devices | Wi-Fi uses access points and NICs | Wireless still needs infrastructure |
+| More access points always improves Wi-Fi | Poor placement/interference can hurt | Plan coverage and channels |
+| Firewall stops all attacks | It reduces risk but is not complete security | Also need updates, passwords, monitoring |
+| Home router is only a router | It often combines router, switch, AP, firewall, modem | One box can have many functions |
+
+---
+
+## 28. Guided Practice
+
+### Practice 1: Device Role
+
+Which device connects multiple computers inside a LAN?
+
+<details>
+<summary>Suggested Answer</summary>
+
+A switch connects multiple devices inside a LAN.
 
 </details>
 
-### Practice 2
+---
 
-Which device connects a LAN to another network such as the internet?
+### Practice 2: Router or Switch?
 
-<details><summary>Suggested Answer</summary>
+Which device connects a LAN to the internet?
 
-A router connects different networks.
+<details>
+<summary>Suggested Answer</summary>
+
+A router connects different networks, such as a LAN to the internet.
 
 </details>
 
 ---
 
-## 12. Independent Practice
+### Practice 3: Access Point
 
-1. Compare switch and router.
-2. Explain the role of a wireless access point in a school.
-3. Explain why a firewall is used.
-4. Identify devices needed for a small office network.
+What is the role of a wireless access point?
+
+<details>
+<summary>Suggested Answer</summary>
+
+A wireless access point allows wireless devices to connect to a wired network or LAN using Wi-Fi.
+
+</details>
 
 ---
 
-## 13. Exam-style Questions
+### Practice 4: Firewall
+
+What does a firewall do?
+
+<details>
+<summary>Suggested Answer</summary>
+
+A firewall monitors and filters incoming and outgoing network traffic based on rules.
+
+</details>
+
+---
+
+### Practice 5: Home Network Box
+
+A home device includes Wi-Fi, Ethernet ports, firewall settings, and internet connection sharing. Why might calling it only a router be incomplete?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Because it may combine several functions, such as router, switch, wireless access point, firewall, and sometimes modem.
+
+</details>
+
+---
+
+## 29. Independent Practice
+
+### Question 1
+
+Define network interface card.
+
+### Question 2
+
+Explain the role of a switch.
+
+### Question 3
+
+Explain the role of a router.
+
+### Question 4
+
+Explain the difference between a router and a modem.
+
+### Question 5
+
+Explain the role of a wireless access point.
+
+### Question 6
+
+Explain the role of a firewall.
+
+### Question 7
+
+Compare a hub and a switch.
+
+### Question 8
+
+A school wants to connect 40 computers in a computer lab. Which network device is suitable and why?
+
+### Question 9
+
+A school wants Wi-Fi across a large campus. Which devices are needed and what should be considered?
+
+### Question 10
+
+Describe the path data may take when a student laptop accesses a website from school Wi-Fi.
+
+---
+
+## 30. Exam-style Questions
 
 ### Question 1 [4 marks]
 
-Describe the role of a router and a switch.
+Define switch and state its role in a LAN.
 
-<details><summary>Mark Scheme Style Answer</summary>
+<details>
+<summary>Mark Scheme Style Answer</summary>
 
-A router connects different networks and forwards packets between them, such as between a LAN and the internet. A switch connects devices within a LAN and forwards data to the correct local device.
-
-</details>
-
-### Question 2 [3 marks]
-
-Explain why a school may use wireless access points.
-
-<details><summary>Mark Scheme Style Answer</summary>
-
-Wireless access points allow laptops, tablets, and phones to connect to the school network without cables. This supports mobility and allows devices in classrooms to access network resources and internet services.
+A switch is a network device that connects devices within a LAN. It receives frames and forwards them to the correct device or port using MAC addresses, reducing unnecessary traffic compared with a hub.
 
 </details>
 
 ---
 
-## 14. Classroom Activity
+### Question 2 [4 marks]
 
-### Activity: Build a Network
+Define router and state its role.
 
-Students are given device cards and must build a school network diagram. They annotate each device role and explain data movement from laptop to internet.
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A router is a network device that connects different networks and forwards packets between them using IP addresses. It is commonly used to connect a LAN to a WAN or the internet.
+
+</details>
 
 ---
 
-## 15. Homework
+### Question 3 [5 marks]
 
-Design a small office network. Include at least router, switch, WAP, firewall, server, and clients. Explain each device role.
+Distinguish between a switch and a router.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A switch connects devices within the same LAN and mainly forwards data using MAC addresses. A router connects different networks, such as a LAN and the internet, and forwards packets using IP addresses. A switch is usually used inside a local network, while a router is used between networks.
+
+</details>
 
 ---
 
-## 16. One-page Revision Summary
+### Question 4 [5 marks]
 
-| Point | Summary |
+Explain the role of a firewall in a school network.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A firewall monitors and filters incoming and outgoing network traffic based on security rules. In a school network, it can block unauthorized external access, restrict access to harmful or inappropriate websites, allow approved traffic, and help protect student and staff data from attacks.
+
+</details>
+
+---
+
+### Question 5 [6 marks]
+
+A school wants to provide wired and wireless network access for classrooms. Identify three network devices needed and explain their roles.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A switch can connect wired classroom computers and printers within the LAN. Wireless access points can allow laptops, tablets, and phones to connect using Wi-Fi. A router can connect the school LAN to another network such as the internet. A firewall may also be used to filter traffic and protect the school network.
+
+</details>
+
+---
+
+## 31. Classroom Activity
+
+### Activity 1: Device Matching
+
+Students match devices to roles:
+
+```text
+NIC
+switch
+router
+wireless access point
+modem
+firewall
+hub
+repeater
+```
+
+---
+
+### Activity 2: Build a School Network
+
+Groups design a school network with:
+
+```text
+computer lab
+staff office
+library Wi-Fi
+server room
+internet connection
+printers
+```
+
+They must label each network device and explain its role.
+
+---
+
+### Activity 3: Troubleshooting Scenario
+
+Give students problems:
+
+```text
+one computer cannot connect
+whole lab cannot connect
+Wi-Fi weak in one corridor
+LAN works but internet does not
+website blocked
+```
+
+Students identify possible device-related causes.
+
+---
+
+## 32. Homework
+
+### Homework Part A: Concept Explanation
+
+In 5-6 sentences, explain the difference between switch, router, modem, and wireless access point.
+
+---
+
+### Homework Part B: Device Table
+
+Create a table for:
+
+```text
+NIC
+switch
+router
+wireless access point
+modem
+firewall
+```
+
+Include:
+
+```text
+main role
+where it is used
+one example
+```
+
+---
+
+### Homework Part C: Network Diagram
+
+Draw a simple home or school network and label:
+
+```text
+clients
+switch
+router
+wireless access point
+modem
+firewall
+internet
+server or printer
+```
+
+---
+
+### Homework Part D: Written Answer
+
+Explain why a firewall is useful but is not enough by itself to fully secure a network.
+
+---
+
+## 33. One-page Revision Summary
+
+| Device | Main Role |
 |---|---|
-| Switch | Connects devices in a LAN |
-| Router | Connects different networks |
-| WAP | Provides wireless access |
-| Firewall | Filters traffic |
-| NIC | Allows device network connection |
-| Exam phrase | The router forwards packets between the LAN and external networks such as the internet. |
+| NIC | lets a device connect to a network |
+| Switch | connects devices within a LAN |
+| Router | connects different networks |
+| Wireless access point | allows wireless devices to join LAN |
+| Modem | connects to ISP service line |
+| Firewall | filters traffic based on rules |
+| Hub | broadcasts to all connected devices |
+| Repeater | regenerates/extends signal |
+| Bridge | connects network segments |
+| Gateway | connects different networks/systems |
+| MAC address | local hardware address |
+| IP address | logical address used for routing |
+| Exam phrase | Switches connect LAN devices, routers connect networks, access points provide Wi-Fi, modems connect to ISP service, and firewalls filter traffic |
+
+---
+
+## 34. Quick Self-test
+
+Before moving on, students should be able to answer these:
+
+1. What does a NIC do?
+2. What does a switch do?
+3. What does a router do?
+4. What does a wireless access point do?
+5. What does a modem do?
+6. What does a firewall do?
+7. What is the difference between a switch and a hub?
+8. What is the difference between a router and a modem?
+9. Why can one home box have many network functions?
+10. Which device usually connects devices inside a LAN?
