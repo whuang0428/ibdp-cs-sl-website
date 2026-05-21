@@ -4,12 +4,16 @@
 
 By the end of this lesson, students should be able to:
 
-- explain the purpose of UML class diagrams
-- identify class name, attributes, and methods
-- interpret public and private visibility symbols
-- draw a simple UML class diagram
-- convert a UML class diagram into Java class structure
-- connect UML diagrams to OOP design
+- explain what a UML class diagram is
+- identify the three main compartments of a class diagram
+- interpret class name, attributes, and methods in UML
+- understand visibility symbols such as `+` and `-`
+- convert a simple Java class into a UML class diagram
+- convert a UML class diagram into Java code
+- identify constructors, accessors, and mutators in UML
+- explain how UML supports planning before programming
+- avoid common UML notation mistakes
+- answer exam-style questions about UML class diagrams
 
 ---
 
@@ -18,13 +22,14 @@ By the end of this lesson, students should be able to:
 | Item | Detail |
 |---|---|
 | Unit | B3 Object-Oriented Programming |
-| Label | SL Core |
-| Main skill | Representing class design |
-| Connected units | Classes, Attributes, Methods, Encapsulation |
-| Exam relevance | Diagram interpretation, class design, OOP questions |
+| Label | SL Core, with Java support |
+| Main skill | Representing class design visually |
+| Connected topics | Classes, objects, attributes, methods, constructors, encapsulation, accessors/mutators |
+| Programming language focus | Java + UML notation |
+| Exam relevance | UML interpretation, class design, Java-to-UML conversion, UML-to-Java conversion |
 
 ::: tip Learning Focus
-A UML class diagram shows the structure of a class before or during programming.
+UML class diagrams help students see the structure of a class before writing code. They connect OOP design with Java implementation.
 :::
 
 ---
@@ -33,13 +38,19 @@ A UML class diagram shows the structure of a class before or during programming.
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| UML | 统一建模语言 | Unified Modeling Language |
-| Class diagram | 类图 | A diagram showing class name, attributes, and methods |
-| Visibility | 可见性 | Whether a member is public or private |
-| Public | 公共 | Can be accessed outside the class, shown with `+` |
-| Private | 私有 | Only accessible inside the class, shown with `-` |
-| Attribute section | 属性区 | Part listing stored data |
-| Method section | 方法区 | Part listing behaviours |
+| UML | 统一建模语言 | A standard visual language for modelling software design |
+| Class diagram | 类图 | A diagram showing a class, its attributes, and its methods |
+| Class name | 类名 | The name of the class shown in the top compartment |
+| Attribute | 属性 | Data stored by objects of the class |
+| Method | 方法 | Behaviour or operation provided by the class |
+| Visibility | 可见性 | Whether a member is public, private, or protected |
+| Public | 公有 | Can be accessed from outside the class |
+| Private | 私有 | Can only be accessed inside the class |
+| Constructor | 构造器 | Special method used to initialize an object |
+| Accessor | getter / 访问器 | Method that returns private data |
+| Mutator | setter / 修改器 | Method that changes private data |
+| Return type | 返回类型 | The type of value returned by a method |
+| Parameter | 参数 | A value passed into a method or constructor |
 
 ---
 
@@ -50,30 +61,40 @@ A UML class diagram shows the structure of a class before or during programming.
 
 ### 中文讲解
 
-**UML class diagram（UML 类图）** 用来表示一个 class 的结构。它通常有三个部分：
+**UML class diagram（UML 类图）** 是一种用图形表示 class 设计的方法。
 
-1. class name
-2. attributes
-3. methods
+它通常显示三部分：
 
-常见可见性符号：
+```text
+class name
+attributes
+methods
+```
 
-| Symbol | Meaning |
-|---|---|
-| `+` | public |
-| `-` | private |
+例如，一个 `Student` class 可以画成：
 
-例如：
+```text
+Student
+------------------------
+- name : String
+- mark : int
+------------------------
++ Student(name : String, mark : int)
++ getName() : String
++ getMark() : int
++ setMark(mark : int) : void
++ hasPassed() : boolean
+```
 
-| Student |
-|---|
-| - name : String |
-| - score : int |
-| + getName() : String |
-| + getScore() : int |
-| + setScore(newScore : int) : void |
+这个图告诉我们：
 
-这个图说明 `name` 和 `score` 是 private attributes，而 `getName`、`getScore`、`setScore` 是 public methods。
+1. class 名字是 `Student`
+2. 它有两个 private attributes：`name` 和 `mark`
+3. 它有一个 public constructor
+4. 它有 getter 和 setter methods
+5. `hasPassed()` 会返回 boolean
+
+UML 的作用不是运行程序，而是帮助我们在写代码前先设计 class。
 
 </template>
 
@@ -81,257 +102,1036 @@ A UML class diagram shows the structure of a class before or during programming.
 
 ### English Explanation
 
-A **UML class diagram** represents the structure of a class. It usually has three sections:
+A **UML class diagram** is a visual way to represent the design of a class.
 
-1. class name
-2. attributes
-3. methods
+It usually shows three parts:
 
-Common visibility symbols:
+```text
+class name
+attributes
+methods
+```
 
-| Symbol | Meaning |
-|---|---|
-| `+` | public |
-| `-` | private |
+For example, a `Student` class can be shown as:
 
-Example:
+```text
+Student
+------------------------
+- name : String
+- mark : int
+------------------------
++ Student(name : String, mark : int)
++ getName() : String
++ getMark() : int
++ setMark(mark : int) : void
++ hasPassed() : boolean
+```
 
-| Student |
-|---|
-| - name : String |
-| - score : int |
-| + getName() : String |
-| + getScore() : int |
-| + setScore(newScore : int) : void |
+This diagram tells us:
 
-This means `name` and `score` are private attributes, while `getName`, `getScore`, and `setScore` are public methods.
+1. the class name is `Student`
+2. it has two private attributes: `name` and `mark`
+3. it has a public constructor
+4. it has getter and setter methods
+5. `hasPassed()` returns a boolean value
+
+UML does not run as a program. It helps us design a class before writing code.
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. Real-life Example
+## 5. The Three Compartments
 
-### Product Class
-
-| Product |
-|---|
-| - name : String |
-| - price : double |
-| - stock : int |
-| + getName() : String |
-| + getPrice() : double |
-| + setPrice(newPrice : double) : void |
-| + displayDetails() : void |
-
----
-
-## 6. IB Pseudocode / UML Pattern
+A UML class diagram is usually divided into three compartments.
 
 ```text
 ClassName
-- privateAttribute : Type
-+ publicMethod(parameter : Type) : ReturnType
+------------------------
+attributes
+------------------------
+methods
+```
+
+| Compartment | What It Shows | Example |
+|---|---|---|
+| Top | Class name | `Student` |
+| Middle | Attributes | `- mark : int` |
+| Bottom | Methods | `+ getMark() : int` |
+
+### Example
+
+```text
+Student
+------------------------
+- name : String
+- mark : int
+------------------------
++ getName() : String
++ getMark() : int
++ setMark(mark : int) : void
+```
+
+::: info Scenario Link
+The diagram is like a planning sheet for a Java class. It shows what data the class stores and what actions it provides.
+:::
+
+---
+
+## 6. Visibility Symbols
+
+UML uses symbols to show visibility.
+
+| Symbol | Meaning | Java Equivalent |
+|---|---|---|
+| `+` | public | `public` |
+| `-` | private | `private` |
+| `#` | protected | `protected` |
+
+For this course, the two most important are:
+
+```text
++ public
+- private
+```
+
+### Example
+
+```text
+- mark : int
++ getMark() : int
+```
+
+Meaning:
+
+| UML | Meaning |
+|---|---|
+| `- mark : int` | private integer attribute called `mark` |
+| `+ getMark() : int` | public method returning an integer |
+
+---
+
+## 7. Attribute Notation
+
+### UML Attribute Pattern
+
+```text
+visibility name : type
 ```
 
 Example:
 
 ```text
-BankAccount
-- balance : double
-+ deposit(amount : double) : void
-+ withdraw(amount : double) : void
-+ getBalance() : double
+- name : String
+- mark : int
+- passed : boolean
 ```
+
+### Java Equivalent
+
+```java
+private String name;
+private int mark;
+private boolean passed;
+```
+
+### Attribute Mapping Table
+
+| UML | Java |
+|---|---|
+| `- name : String` | `private String name;` |
+| `- mark : int` | `private int mark;` |
+| `- balance : double` | `private double balance;` |
+| `- active : boolean` | `private boolean active;` |
+
+::: warning Order Difference
+In UML, the name usually comes before the type: `mark : int`.  
+In Java, the type comes before the name: `int mark`.
+:::
 
 ---
 
-## 7. Java Code Example
+## 8. Method Notation
 
-UML:
+### UML Method Pattern
+
+```text
+visibility methodName(parameterName : parameterType) : returnType
+```
+
+Example:
+
+```text
++ getMark() : int
++ setMark(mark : int) : void
++ hasPassed() : boolean
+```
+
+### Java Equivalent
+
+```java
+public int getMark() {
+    return mark;
+}
+
+public void setMark(int mark) {
+    this.mark = mark;
+}
+
+public boolean hasPassed() {
+    return mark >= 50;
+}
+```
+
+### Method Mapping Table
+
+| UML | Java Meaning |
+|---|---|
+| `+ getName() : String` | public method returning String |
+| `+ getMark() : int` | public method returning int |
+| `+ setMark(mark : int) : void` | public method with int parameter, no return |
+| `+ hasPassed() : boolean` | public method returning boolean |
+
+---
+
+## 9. Constructor Notation
+
+A constructor in UML usually has the same name as the class.
+
+### UML
+
+```text
++ Student(name : String, mark : int)
+```
+
+### Java
+
+```java
+public Student(String name, int mark) {
+    this.name = name;
+    this.mark = mark;
+}
+```
+
+### Important
+
+Constructors normally do not show a return type because constructors do not return values.
+
+| UML Constructor | Meaning |
+|---|---|
+| `+ Student()` | public default constructor |
+| `+ Student(name : String, mark : int)` | public parameterized constructor |
+
+---
+
+## 10. Full Example: Student UML
+
+### UML Class Diagram
 
 ```text
 Student
+------------------------
+- studentId : String
 - name : String
-- score : int
+- mark : int
+------------------------
++ Student(studentId : String, name : String, mark : int)
++ getStudentId() : String
 + getName() : String
-+ getScore() : int
-+ setScore(newScore : int) : void
++ getMark() : int
++ setName(name : String) : void
++ setMark(mark : int) : void
++ hasPassed() : boolean
 ```
 
-Java:
+### What This Means
+
+| Part | Meaning |
+|---|---|
+| `Student` | class name |
+| `- studentId : String` | private String attribute |
+| `- name : String` | private String attribute |
+| `- mark : int` | private int attribute |
+| `+ Student(...)` | public constructor |
+| `+ getStudentId()` | public accessor |
+| `+ setMark(...)` | public mutator |
+| `+ hasPassed()` | public method returning boolean |
+
+---
+
+## 11. Convert UML to Java
+
+### UML
+
+```text
+Student
+------------------------
+- studentId : String
+- name : String
+- mark : int
+------------------------
++ Student(studentId : String, name : String, mark : int)
++ getStudentId() : String
++ getName() : String
++ getMark() : int
++ setName(name : String) : void
++ setMark(mark : int) : void
++ hasPassed() : boolean
+```
+
+### Java Code
 
 ```java
 public class Student {
+    private String studentId;
     private String name;
-    private int score;
+    private int mark;
+
+    public Student(String studentId, String name, int mark) {
+        this.studentId = studentId;
+        this.name = name;
+        setMark(mark);
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
 
     public String getName() {
         return name;
+    }
+
+    public int getMark() {
+        return mark;
+    }
+
+    public void setName(String name) {
+        if (name.length() > 0) {
+            this.name = name;
+        }
+    }
+
+    public void setMark(int mark) {
+        if (mark >= 0 && mark <= 100) {
+            this.mark = mark;
+        }
+    }
+
+    public boolean hasPassed() {
+        return mark >= 50;
+    }
+}
+```
+
+### Notes
+
+The UML tells us the structure, but some method body logic must be designed by the programmer.
+
+For example, UML says:
+
+```text
++ setMark(mark : int) : void
+```
+
+But UML does not always show the validation code inside the method.
+
+---
+
+## 12. Convert Java to UML
+
+### Java Code
+
+```java
+public class Book {
+    private String title;
+    private String author;
+    private int pages;
+
+    public Book(String title, String author, int pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
+    }
+
+    public boolean isLongBook() {
+        return pages > 300;
+    }
+}
+```
+
+### UML
+
+```text
+Book
+------------------------
+- title : String
+- author : String
+- pages : int
+------------------------
++ Book(title : String, author : String, pages : int)
++ getTitle() : String
++ getPages() : int
++ setPages(pages : int) : void
++ isLongBook() : boolean
+```
+
+### Steps
+
+1. Find the class name.
+2. List private attributes.
+3. List public constructors.
+4. List public methods.
+5. Convert Java types and parameters into UML format.
+
+---
+
+## 13. UML and Encapsulation
+
+UML can show encapsulation clearly.
+
+### Encapsulated Design
+
+```text
+Student
+------------------------
+- mark : int
+------------------------
++ getMark() : int
++ setMark(mark : int) : void
+```
+
+This shows:
+
+```text
+mark is private
+outside code should use public methods
+```
+
+### Poor Design
+
+```text
+Student
+------------------------
++ mark : int
+------------------------
+```
+
+This shows:
+
+```text
+mark is public
+outside code can directly access it
+```
+
+::: tip Exam Phrase
+A UML diagram can show encapsulation by using `-` for private attributes and `+` for public methods.
+:::
+
+---
+
+## 14. UML and Accessors / Mutators
+
+Getter and setter methods are often easy to identify in UML.
+
+### Example
+
+```text
+- mark : int
++ getMark() : int
++ setMark(mark : int) : void
+```
+
+| UML | Meaning |
+|---|---|
+| `getMark() : int` | accessor method |
+| `setMark(mark : int) : void` | mutator method |
+| `mark : int` | private attribute |
+
+### Read-only Example
+
+```text
+- studentId : String
++ getStudentId() : String
+```
+
+There is no `setStudentId()`, so the attribute is read-only from outside the class.
+
+---
+
+## 15. UML and Object Creation
+
+A UML class diagram describes the class, not the actual objects.
+
+### Class Diagram
+
+```text
+Student
+------------------------
+- name : String
+- mark : int
+```
+
+### Objects Created from the Class
+
+```java
+Student s1 = new Student("Alice", 85);
+Student s2 = new Student("Ben", 42);
+```
+
+Object state table:
+
+| Object | name | mark |
+|---|---|---:|
+| s1 | Alice | 85 |
+| s2 | Ben | 42 |
+
+::: warning Important
+UML class diagrams show the class design. They do not normally show every object created at runtime.
+:::
+
+---
+
+## 16. Simple UML Relationship Preview
+
+In this page, the main focus is a single class. However, UML can also show relationships between classes.
+
+Example:
+
+```text
+Course 1 -------- * Student
+```
+
+This can mean:
+
+```text
+one Course can have many Students
+```
+
+For now, students only need a basic awareness. Multiple classes and relationships will be covered later.
+
+---
+
+## 17. Common Mistakes
+
+| Mistake | Why it is a problem | Better habit |
+|---|---|---|
+| Writing Java order in UML attributes | UML uses `name : type` | Write `mark : int`, not `int mark` |
+| Forgetting visibility symbols | Public/private meaning is missing | Add `+` or `-` |
+| Giving constructors a return type | Constructors do not return values | Write constructor without `: void` |
+| Confusing attributes and methods | Diagram becomes wrong | Attributes in middle, methods at bottom |
+| Forgetting method return type | Method meaning is incomplete | Add `: returnType` |
+| Forgetting parameter types | Method signature incomplete | Write `mark : int` |
+| Making all attributes public | Weak encapsulation | Use private attributes |
+| Showing object names as class names | Class diagram should show class | Use `Student`, not `s1` |
+| Thinking UML is code | UML is design representation | Convert carefully to Java |
+| Assuming UML shows method body | UML shows method signature only | Implement logic in Java |
+
+---
+
+## 18. Guided Practice
+
+### Practice 1: Read an Attribute
+
+What does this mean?
+
+```text
+- balance : double
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+It means a private attribute called `balance` with data type `double`.
+
+Java equivalent:
+
+```java
+private double balance;
+```
+
+</details>
+
+---
+
+### Practice 2: Read a Method
+
+What does this mean?
+
+```text
++ setMark(mark : int) : void
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+It means a public method called `setMark` that takes one integer parameter called `mark` and returns no value.
+
+Java method header:
+
+```java
+public void setMark(int mark)
+```
+
+</details>
+
+---
+
+### Practice 3: Identify Getter and Setter
+
+```text
+- health : int
++ getHealth() : int
++ setHealth(health : int) : void
+```
+
+Which method is the getter and which is the setter?
+
+<details>
+<summary>Suggested Answer</summary>
+
+```text
+getHealth() is the getter / accessor.
+setHealth(health : int) is the setter / mutator.
+```
+
+</details>
+
+---
+
+### Practice 4: Convert Java Attribute to UML
+
+Convert this to UML:
+
+```java
+private String username;
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+```text
+- username : String
+```
+
+</details>
+
+---
+
+### Practice 5: Convert UML Constructor to Java
+
+Convert this to a Java constructor header:
+
+```text
++ Player(name : String, score : int)
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+```java
+public Player(String name, int score)
+```
+
+</details>
+
+---
+
+## 19. Independent Practice
+
+### Question 1
+
+Draw a UML class diagram in text form for a `Book` class with:
+
+```text
+private title : String
+private author : String
+private pages : int
+constructor
+getTitle()
+getPages()
+setPages()
+isLongBook()
+```
+
+### Question 2
+
+Convert this UML attribute to Java:
+
+```text
+- price : double
+```
+
+### Question 3
+
+Convert this UML method to Java method header:
+
+```text
++ setPrice(price : double) : void
+```
+
+### Question 4
+
+Convert this Java class to UML:
+
+```java
+public class Player {
+    private String name;
+    private int score;
+
+    public Player(String name, int score) {
+        this.name = name;
+        this.score = score;
     }
 
     public int getScore() {
         return score;
     }
 
-    public void setScore(int newScore) {
-        if (newScore >= 0 && newScore <= 100) {
-            score = newScore;
-        }
+    public void increaseScore(int amount) {
+        score = score + amount;
     }
+}
+```
+
+### Question 5
+
+Explain how UML shows encapsulation.
+
+### Question 6
+
+Explain why constructors normally do not show a return type in UML.
+
+### Question 7
+
+Identify the mistake:
+
+```text
+Student
+------------------------
+- int mark
+------------------------
++ void setMark(int mark)
+```
+
+### Question 8
+
+Write UML for a read-only attribute `studentId`.
+
+### Question 9
+
+Create a UML class diagram for a `BankAccount` class with:
+
+```text
+accountNumber
+balance
+constructor
+getBalance()
+deposit()
+withdraw()
+```
+
+### Question 10
+
+Explain the difference between a UML class diagram and an object state table.
+
+---
+
+## 20. Exam-style Questions
+
+### Question 1 [4 marks]
+
+State the purpose of a UML class diagram.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A UML class diagram represents the design of a class visually. It shows the class name, attributes, methods, visibility, parameter types, and return types. It helps programmers plan and communicate class structure before implementation.
+
+</details>
+
+---
+
+### Question 2 [5 marks]
+
+Explain the meaning of this UML entry:
+
+```text
+- mark : int
+```
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+The minus sign means the attribute is private. The attribute name is `mark`. The type is `int`, meaning it stores an integer. In Java, this would usually be written as `private int mark;`.
+
+</details>
+
+---
+
+### Question 3 [6 marks]
+
+Convert this UML class into Java attribute declarations and method headers.
+
+```text
+Book
+------------------------
+- title : String
+- pages : int
+------------------------
++ Book(title : String, pages : int)
++ getTitle() : String
++ setPages(pages : int) : void
+```
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+```java
+public class Book {
+    private String title;
+    private int pages;
+
+    public Book(String title, int pages) {
+        // constructor body
+    }
+
+    public String getTitle() {
+        // method body
+    }
+
+    public void setPages(int pages) {
+        // method body
+    }
+}
+```
+
+Marks may be awarded for:
+
+- class name
+- private `String title`
+- private `int pages`
+- constructor header with correct parameters
+- `getTitle()` returning String
+- `setPages(int pages)` returning void
+
+</details>
+
+---
+
+### Question 4 [6 marks]
+
+Convert this Java class structure into UML.
+
+```java
+public class BankAccount {
+    private String accountNumber;
+    private double balance;
+
+    public BankAccount(String accountNumber, double balance) { }
+
+    public double getBalance() { }
+
+    public void deposit(double amount) { }
+
+    public void withdraw(double amount) { }
+}
+```
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+```text
+BankAccount
+------------------------
+- accountNumber : String
+- balance : double
+------------------------
++ BankAccount(accountNumber : String, balance : double)
++ getBalance() : double
++ deposit(amount : double) : void
++ withdraw(amount : double) : void
+```
+
+</details>
+
+---
+
+### Question 5 [6 marks]
+
+Explain how a UML class diagram can show encapsulation.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A UML class diagram can show encapsulation using visibility symbols. Private attributes are marked with `-`, showing that they should not be directly accessed from outside the class. Public methods are marked with `+`, showing that outside code can interact with the object through controlled methods. This design supports encapsulation because data is hidden and accessed through methods such as getters and setters.
+
+</details>
+
+---
+
+## 21. Classroom Activity
+
+### Activity 1: UML Card Sorting
+
+Give students cards containing:
+
+```text
+- mark : int
++ getMark() : int
++ setMark(mark : int) : void
+Student
+```
+
+Students place each card into the correct UML compartment:
+
+```text
+class name
+attributes
+methods
+```
+
+---
+
+### Activity 2: Java to UML Race
+
+Groups receive a short Java class. They must produce a correct UML class diagram as quickly and accurately as possible.
+
+Check for:
+
+```text
+visibility
+attribute notation
+method return types
+parameter types
+constructor notation
+```
+
+---
+
+### Activity 3: UML to Java Skeleton
+
+Groups receive a UML class diagram. They write the Java class skeleton with attributes, constructor, and method headers.
+
+---
+
+## 22. Homework
+
+### Homework Part A: UML Design
+
+Create a UML class diagram for a `Laptop` class.
+
+Include:
+
+```text
+brand
+price
+ram
+constructor
+getBrand()
+getPrice()
+setPrice()
+upgradeRam()
+```
+
+---
+
+### Homework Part B: Java to UML
+
+Convert this Java class to UML:
+
+```java
+public class Course {
+    private String courseCode;
+    private String title;
+    private int credits;
+
+    public Course(String courseCode, String title, int credits) { }
+
+    public String getCourseCode() { }
+
+    public String getTitle() { }
+
+    public int getCredits() { }
+
+    public void setTitle(String title) { }
 }
 ```
 
 ---
 
-## 8. Line-by-line Code Explanation
+### Homework Part C: UML to Java
 
-| UML Part | Java Equivalent |
-|---|---|
-| `Student` | `public class Student` |
-| `- name : String` | `private String name;` |
-| `- score : int` | `private int score;` |
-| `+ getName() : String` | `public String getName()` |
-| `+ setScore(newScore : int) : void` | `public void setScore(int newScore)` |
-
----
-
-## 9. Interpretation Practice
-
-Given:
+Convert this UML to a Java class skeleton:
 
 ```text
-Book
-- title : String
-- available : boolean
-+ getTitle() : String
-+ borrowBook() : void
-+ returnBook() : void
-```
-
-Interpretation:
-
-| Item | Meaning |
-|---|---|
-| `Book` | class name |
-| `title` | private String attribute |
-| `available` | private Boolean attribute |
-| `getTitle()` | public method returning String |
-| `borrowBook()` | public method with no return value |
-
----
-
-## 10. Common Mistakes
-
-| Mistake | Why it is a problem | Better habit |
-|---|---|---|
-| Putting methods in attribute section | Diagram becomes unclear | Use correct section |
-| Forgetting visibility symbols | Access level not shown | Use `+` and `-` |
-| Using object names instead of class names | UML class diagram describes class | Use class name |
-| Omitting data types | Design is incomplete | Include type where possible |
-| Confusing return type and parameter type | Method meaning unclear | Read notation carefully |
-
----
-
-## 11. Guided Practice
-
-### Practice 1
-
-Identify private attributes:
-
-```text
-Car
-- speed : int
-- registration : String
-+ accelerate() : void
-```
-
-<details>
-<summary>Suggested Answer</summary>
-
-`speed` and `registration` are private attributes.
-
-</details>
-
-### Practice 2
-
-Convert to Java:
-
-```text
-- price : double
-```
-
-<details>
-<summary>Suggested Answer</summary>
-
-```java
-private double price;
-```
-
-</details>
-
----
-
-## 12. Independent Practice
-
-1. Draw a UML class diagram for `Player`.
-2. Include three private attributes and three public methods.
-3. Convert your UML diagram into Java code.
-4. Explain the meaning of `+` and `-`.
-
----
-
-## 13. Exam-style Questions
-
-### Question 1 [2 marks]
-
-State what a UML class diagram shows.
-
-<details>
-<summary>Mark Scheme Style Answer</summary>
-
-A UML class diagram shows the structure of a class, including its name, attributes, methods, and visibility.
-
-</details>
-
-### Question 2 [4 marks]
-
-Construct a UML class diagram for a `Product` class with private `name` and `price`, and public `getPrice()` and `setPrice(newPrice)` methods.
-
-<details>
-<summary>Mark Scheme Style Answer</summary>
-
-```text
-Product
+GameCharacter
+------------------------
 - name : String
-- price : double
-+ getPrice() : double
-+ setPrice(newPrice : double) : void
+- health : int
+- score : int
+------------------------
++ GameCharacter(name : String, health : int)
++ getName() : String
++ getHealth() : int
++ setHealth(health : int) : void
++ increaseScore(amount : int) : void
 ```
 
-</details>
+---
+
+### Homework Part D: Explanation
+
+In 4-5 sentences, explain how UML helps programmers plan before writing code.
 
 ---
 
-## 14. Classroom Activity
-
-Students receive Java classes and convert them into UML diagrams, then swap diagrams and recreate the Java structure.
-
----
-
-## 15. Homework
-
-Draw UML diagrams for `Student`, `Book`, and `BankAccount`. Include visibility symbols, types, parameters, and return types.
-
----
-
-## 16. One-page Revision Summary
+## 23. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| UML | Unified Modeling Language |
+| UML | Visual modelling language for software design |
 | Class diagram | Shows class structure |
+| Top compartment | Class name |
+| Middle compartment | Attributes |
+| Bottom compartment | Methods |
 | `+` | public |
 | `-` | private |
-| Exam phrase | "The diagram shows the class name, private attributes, and public methods." |
+| Attribute format | `visibility name : type` |
+| Method format | `visibility name(parameter : type) : returnType` |
+| Constructor | Same name as class, usually no return type |
+| Getter | Method that returns private data |
+| Setter | Method that changes private data |
+| Encapsulation in UML | Private attributes and public methods |
+| UML to Java | Convert diagram structure to class code |
+| Java to UML | Extract class name, attributes, constructors, methods |
+| Exam phrase | UML class diagrams represent the structure of classes, including attributes, methods, visibility, parameters, and return types |
+
+---
+
+## 24. Quick Self-test
+
+Before moving on, students should be able to answer these:
+
+1. What is a UML class diagram?
+2. What are the three compartments?
+3. What does `+` mean?
+4. What does `-` mean?
+5. How do you write a private integer attribute called `score` in UML?
+6. How do you write a public setter for `score` in UML?
+7. How do you convert `- name : String` into Java?
+8. How do you convert `+ getName() : String` into Java?
+9. Why do constructors usually not show a return type?
+10. How does UML show encapsulation?
