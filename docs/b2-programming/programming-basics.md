@@ -4,13 +4,16 @@
 
 By the end of this lesson, students should be able to:
 
-- explain what a **computer program** is
-- describe how programming connects to algorithms
-- understand the basic **input-process-output** model
-- distinguish between syntax errors, runtime errors, and logic errors
-- read and explain a simple Java program
-- use IB-style pseudocode and Java code for a simple problem
-- write exam-style answers using accurate programming vocabulary
+- explain what programming is
+- explain the basic **input → process → output** model
+- distinguish source code, program, instruction, and statement
+- describe how a Java program runs from top to bottom
+- identify the basic structure of a Java program
+- write and explain a simple Java program
+- use comments to make code easier to understand
+- distinguish syntax errors, runtime errors, and logic errors at a basic level
+- trace a short program step by step
+- answer exam-style questions about basic programming concepts
 
 ---
 
@@ -20,12 +23,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | B2 Programming |
 | Label | SL Core |
-| Main skill | Understanding how programs are designed and executed |
-| Connected units | B1 Algorithms, B2 Variables, Selection, Loops, Testing and Debugging |
-| Exam relevance | Code reading, pseudocode, error identification, algorithm-to-code questions |
+| Main skill | Understanding how programs are written, executed, and explained |
+| Connected topics | Variables, data types, input/output, selection, loops, testing |
+| Programming language focus | IB pseudocode + Java |
+| Exam relevance | Basic code understanding, tracing, program structure, error explanation |
 
 ::: tip Learning Focus
-Programming is not just typing code. It starts with understanding the problem, designing an algorithm, writing code, testing it, and improving it.
+This page is the bridge between computational thinking and real code. Students should understand what a program does before memorizing Java syntax.
 :::
 
 ---
@@ -35,16 +39,18 @@ Programming is not just typing code. It starts with understanding the problem, d
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
 | Program | 程序 | A set of instructions that a computer can execute |
-| Programming | 编程 | The process of designing and writing instructions for a computer |
-| Source code | 源代码 | Code written by a programmer |
+| Programming | 编程 | Writing instructions for a computer to solve a problem |
+| Source code | 源代码 | Human-readable instructions written in a programming language |
+| Instruction | 指令 | A command that tells the computer what to do |
+| Statement | 语句 | A single executable line or command in a program |
+| Algorithm | 算法 | A step-by-step solution to a problem |
+| Pseudocode | 伪代码 | A language-independent way to describe an algorithm |
 | Syntax | 语法 | The rules of a programming language |
-| Syntax error | 语法错误 | An error caused by breaking language rules |
-| Runtime error | 运行时错误 | An error that occurs while the program is running |
-| Logic error | 逻辑错误 | An error where the program runs but gives the wrong result |
-| Debugging | 调试 | Finding and fixing errors in a program |
-| Input | 输入 | Data entered into a program |
-| Process | 处理 | Operations performed on data |
-| Output | 输出 | Result displayed or returned by a program |
+| Comment | 注释 | Text in code for humans, ignored by the computer |
+| Execution | 执行 | The process of running program instructions |
+| Compiler | 编译器 | Software that translates source code into executable form |
+| IDE | 集成开发环境 | Software used to write, run, and debug programs |
+| Debugging | 调试 | Finding and fixing errors in code |
 
 ---
 
@@ -55,28 +61,52 @@ Programming is not just typing code. It starts with understanding the problem, d
 
 ### 中文讲解
 
-**Program（程序）** 是一组计算机可以执行的指令。**Programming（编程）** 是设计、编写、测试和改进这些指令的过程。
+**Programming（编程）** 就是把解决问题的步骤写成计算机能执行的指令。
 
-很多学生刚开始学编程时，会以为编程就是“写代码”。但实际上，写代码只是其中一步。一个比较完整的编程过程通常包括：
+在 B1 Computational Thinking 中，我们学过 algorithm：
 
-1. 理解问题
-2. 分解问题
-3. 设计算法
-4. 写 pseudocode
-5. 写 Java code
-6. 测试程序
-7. 调试错误
-8. 改进程序
+```text
+step-by-step solution
+```
 
-程序通常可以用 **IPO model（Input-Process-Output model）** 来理解：
+Programming 就是把这些步骤变成代码。例如：
 
-| Stage | Meaning | Example |
-|---|---|---|
-| Input | 程序接收的数据 | 输入两个数字 |
-| Process | 程序对数据进行处理 | 把两个数字相加 |
-| Output | 程序显示或返回的结果 | 输出总和 |
+```text
+算法想法:
+输入两个数字
+计算它们的和
+输出结果
+```
 
-在 IB CS 中，学生不仅要会写程序，还要会解释程序如何工作、如何测试、哪里可能出错，以及如何修正错误。
+可以写成 Java：
+
+```java
+int a = 5;
+int b = 3;
+int total = a + b;
+System.out.println(total);
+```
+
+程序通常遵循一个基本结构：
+
+```text
+Input → Process → Output
+```
+
+也就是：
+
+1. 输入数据
+2. 处理数据
+3. 输出结果
+
+学习 programming basics 的重点不是背所有语法，而是理解：
+
+- 程序是按顺序执行的
+- 每一行代码都有作用
+- 变量可以存储数据
+- 程序通过 input 获取数据
+- 程序通过 output 显示结果
+- 出错时要能看懂错误类型并调试
 
 </template>
 
@@ -84,93 +114,341 @@ Programming is not just typing code. It starts with understanding the problem, d
 
 ### English Explanation
 
-A **program** is a set of instructions that a computer can execute. **Programming** is the process of designing, writing, testing, and improving those instructions.
+**Programming** means writing instructions that a computer can execute to solve a problem.
 
-Many students think programming only means “writing code”. However, writing code is only one part of the full process. A complete programming process often includes understanding the problem, decomposing it, designing an algorithm, writing pseudocode, writing Java code, testing, debugging, and improving the solution.
+In B1 Computational Thinking, we learned about algorithms:
 
-Programs can often be understood using the **IPO model**:
+```text
+step-by-step solution
+```
 
-| Stage | Meaning | Example |
-|---|---|---|
-| Input | Data received by the program | Enter two numbers |
-| Process | Operations performed on the data | Add the two numbers |
-| Output | Result displayed or returned | Display the total |
+Programming turns these steps into code. For example:
 
-In IB Computer Science, students need to do more than write code. They must also explain how code works, how it can be tested, where errors may occur, and how errors can be fixed.
+```text
+Algorithm idea:
+Input two numbers
+Calculate their sum
+Output the result
+```
+
+This can be written in Java:
+
+```java
+int a = 5;
+int b = 3;
+int total = a + b;
+System.out.println(total);
+```
+
+Programs often follow a basic structure:
+
+```text
+Input → Process → Output
+```
+
+This means:
+
+1. receive data
+2. process data
+3. output the result
+
+The focus of programming basics is not memorizing all syntax. Students should understand:
+
+- programs run in order
+- each line has a purpose
+- variables store data
+- input lets the program receive data
+- output lets the program display results
+- errors must be identified and debugged
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. Real-life Example
+## 5. From Algorithm to Program
 
-### Example: Simple Shopping Total
+### 5.1 Algorithm in Words
 
-A shop wants a program to calculate the total cost of two items.
-
-Using the IPO model:
-
-| Stage | Detail |
-|---|---|
-| Input | price of item 1, price of item 2 |
-| Process | total = price1 + price2 |
-| Output | total cost |
-
-::: info Why this matters
-Most programming problems can be simplified by first identifying input, process, and output.
-:::
-
----
-
-## 6. IB Pseudocode Pattern
+Problem:
 
 ```text
-INPUT price1
-INPUT price2
+Calculate the total price of two items.
+```
+
+Algorithm:
+
+```text
+1. Store price of first item
+2. Store price of second item
+3. Add the two prices
+4. Output the total
+```
+
+### 5.2 IB Pseudocode
+
+```text
+price1 = 12.5
+price2 = 8.0
 
 total = price1 + price2
 
 OUTPUT total
 ```
 
-Another example:
-
-```text
-INPUT length
-INPUT width
-
-area = length * width
-
-OUTPUT area
-```
-
-::: tip Exam Note
-In exam answers, pseudocode should be clear and logically correct. It does not need to use exact Java syntax.
-:::
-
----
-
-## 7. Java Code Example
+### 5.3 Java Code
 
 ```java
-public class ShoppingTotal {
+public class TotalPrice {
     public static void main(String[] args) {
-        double price1 = 12.50;
-        double price2 = 7.30;
+        double price1 = 12.5;
+        double price2 = 8.0;
 
         double total = price1 + price2;
 
-        System.out.println("Total cost: " + total);
+        System.out.println("Total price: " + total);
     }
 }
 ```
 
+### 5.4 Explanation
+
+| Part | Purpose |
+|---|---|
+| `price1` and `price2` | store input or fixed data |
+| `total = price1 + price2` | process data |
+| `System.out.println(...)` | output result |
+
+---
+
+## 6. Input → Process → Output Model
+
+Many programs can be understood using:
+
+```text
+Input → Process → Output
+```
+
+| Stage | Meaning | Example |
+|---|---|---|
+| Input | Data received by the program | Two marks |
+| Process | Calculation or decision | Calculate average |
+| Output | Result shown to user | Display average |
+
+### Example
+
+```text
+Input: mark1 = 80, mark2 = 70
+Process: average = (80 + 70) / 2
+Output: average = 75
+```
+
+### Java Example
+
 ```java
-public class RectangleArea {
+int mark1 = 80;
+int mark2 = 70;
+
+double average = (mark1 + mark2) / 2.0;
+
+System.out.println("Average: " + average);
+```
+
+---
+
+## 7. Java Program Structure
+
+A basic Java program often looks like this:
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+```
+
+### Structure Table
+
+| Code | Meaning |
+|---|---|
+| `public class HelloWorld` | Defines a class called `HelloWorld` |
+| `{` and `}` | Braces mark the start and end of a block |
+| `public static void main(String[] args)` | Main method where the program starts |
+| `System.out.println(...)` | Outputs text |
+| `;` | Ends a Java statement |
+
+::: warning Naming Rule
+The class name should usually match the file name.
+
+Example:
+
+```text
+HelloWorld.java
+```
+
+should contain:
+
+```java
+public class HelloWorld
+```
+:::
+
+---
+
+## 8. Java Runs Top to Bottom
+
+Java runs statements in order inside the `main` method.
+
+### Example
+
+```java
+public class OrderExample {
+    public static void main(String[] args) {
+        System.out.println("First");
+        System.out.println("Second");
+        System.out.println("Third");
+    }
+}
+```
+
+Output:
+
+```text
+First
+Second
+Third
+```
+
+If the order changes, the output changes.
+
+---
+
+## 9. Statements and Semicolons
+
+A Java statement usually ends with a semicolon.
+
+```java
+int score = 90;
+System.out.println(score);
+```
+
+If the semicolon is missing:
+
+```java
+int score = 90
+```
+
+Java will report a syntax error.
+
+### Common Statements
+
+| Statement | Purpose |
+|---|---|
+| `int score = 90;` | stores a value |
+| `score = score + 10;` | updates a value |
+| `System.out.println(score);` | outputs a value |
+| `if (score >= 50) { ... }` | makes a decision |
+| `for (...) { ... }` | repeats code |
+
+---
+
+## 10. Braces and Code Blocks
+
+Braces `{}` group statements into a block.
+
+Example:
+
+```java
+if (score >= 50) {
+    System.out.println("Pass");
+    System.out.println("Well done");
+}
+```
+
+Both output lines belong to the IF block.
+
+Without braces, beginners often make mistakes. For this course, students should use braces clearly.
+
+---
+
+## 11. Comments
+
+Comments are notes for humans. Java ignores them when running the program.
+
+### Single-line Comment
+
+```java
+// This stores the student's score
+int score = 90;
+```
+
+### Multi-line Comment
+
+```java
+/*
+This program calculates
+the average of two marks.
+*/
+```
+
+### Why Use Comments?
+
+| Benefit | Explanation |
+|---|---|
+| Readability | Helps humans understand code |
+| Maintenance | Makes code easier to change later |
+| Learning | Helps students explain logic |
+| Debugging | Helps identify sections of code |
+
+::: tip Good Comment Rule
+A useful comment explains why something is done, not just repeats the code.
+:::
+
+---
+
+## 12. Worked Example 1: Hello Program
+
+### Java Code
+
+```java
+public class HelloProgram {
+    public static void main(String[] args) {
+        System.out.println("Welcome to IBDP Computer Science");
+        System.out.println("Today we are learning programming basics.");
+    }
+}
+```
+
+### Trace
+
+| Step | Statement | Output |
+|---:|---|---|
+| 1 | first `println` | Welcome to IBDP Computer Science |
+| 2 | second `println` | Today we are learning programming basics. |
+
+Final output:
+
+```text
+Welcome to IBDP Computer Science
+Today we are learning programming basics.
+```
+
+---
+
+## 13. Worked Example 2: Input-Process-Output without User Input
+
+### Problem
+
+Calculate and output the area of a rectangle.
+
+### Java Code
+
+```java
+public class RectangleAreaBasic {
     public static void main(String[] args) {
         double length = 8.0;
-        double width = 3.5;
+        double width = 5.0;
 
         double area = length * width;
 
@@ -179,261 +457,742 @@ public class RectangleArea {
 }
 ```
 
-::: warning Important Java Note
-These examples use fixed values to focus on basic programming structure. Later pages show how to use real user input.
-:::
+### Line-by-line Explanation
 
----
-
-## 8. Line-by-line Code Explanation
-
-| Code Part | Explanation |
+| Code | Explanation |
 |---|---|
-| `public class ShoppingTotal` | Defines a Java class called `ShoppingTotal` |
-| `public static void main(String[] args)` | Starting point of the Java program |
-| `double price1 = 12.50;` | Stores the first item price |
-| `double price2 = 7.30;` | Stores the second item price |
-| `double total = price1 + price2;` | Adds the two prices and stores the result |
-| `System.out.println(...)` | Displays the result |
+| `double length = 8.0;` | Stores rectangle length |
+| `double width = 5.0;` | Stores rectangle width |
+| `double area = length * width;` | Calculates area |
+| `System.out.println(...)` | Outputs area |
 
-| Java Feature | Purpose |
-|---|---|
-| Class | Holds the program code |
-| Main method | Where execution starts |
-| Variable declaration | Creates a named storage location |
-| Assignment | Stores a value |
-| Expression | Performs calculation |
-| Output statement | Displays a result |
+### Trace Table
 
----
+| length | width | area |
+|---:|---:|---:|
+| 8.0 | 5.0 | 40.0 |
 
-## 9. Step-by-step Execution
-
-Given:
-
-| Variable | Value |
-|---|---:|
-| price1 | 12.50 |
-| price2 | 7.30 |
-
-| Step | Action | Result |
-|---|---|---|
-| 1 | Store price1 | price1 = 12.50 |
-| 2 | Store price2 | price2 = 7.30 |
-| 3 | Calculate total | total = 19.80 |
-| 4 | Output total | Total cost: 19.8 |
-
-Final output:
+Output:
 
 ```text
-Total cost: 19.8
+Area: 40.0
 ```
 
 ---
 
-## 10. Common Mistakes
+## 14. Worked Example 3: Full Program with Input
+
+### Problem
+
+Ask the user for two marks and output the average.
+
+### Java Code
+
+```java
+import java.util.Scanner;
+
+public class AverageProgram {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first mark: ");
+        int mark1 = input.nextInt();
+
+        System.out.print("Enter second mark: ");
+        int mark2 = input.nextInt();
+
+        double average = (mark1 + mark2) / 2.0;
+
+        System.out.println("Average: " + average);
+
+        input.close();
+    }
+}
+```
+
+### Program Stages
+
+| Stage | Code |
+|---|---|
+| Input | `mark1 = input.nextInt()` and `mark2 = input.nextInt()` |
+| Process | `average = (mark1 + mark2) / 2.0` |
+| Output | `System.out.println("Average: " + average)` |
+
+### Example Run
+
+```text
+Enter first mark: 80
+Enter second mark: 75
+Average: 77.5
+```
+
+---
+
+## 15. Worked Example 4: Program with Selection
+
+### Problem
+
+Output whether a student passed.
+
+### Java Code
+
+```java
+public class PassFailBasic {
+    public static void main(String[] args) {
+        int mark = 62;
+
+        if (mark >= 50) {
+            System.out.println("Pass");
+        } else {
+            System.out.println("Fail");
+        }
+    }
+}
+```
+
+### Trace
+
+| mark | Condition `mark >= 50` | Output |
+|---:|---|---|
+| 62 | true | Pass |
+
+---
+
+## 16. Basic Error Types
+
+Programming errors are often called **bugs**.
+
+### 16.1 Syntax Error
+
+The code breaks Java grammar rules.
+
+Example:
+
+```java
+System.out.println("Hello")
+```
+
+Problem:
+
+```text
+missing semicolon
+```
+
+Correct:
+
+```java
+System.out.println("Hello");
+```
+
+---
+
+### 16.2 Runtime Error
+
+The program starts but crashes while running.
+
+Example:
+
+```java
+int result = 10 / 0;
+```
+
+Problem:
+
+```text
+division by zero
+```
+
+---
+
+### 16.3 Logic Error
+
+The program runs but gives the wrong result.
+
+Example:
+
+```java
+int mark = 50;
+
+if (mark > 50) {
+    System.out.println("Pass");
+} else {
+    System.out.println("Fail");
+}
+```
+
+If 50 should be a pass, the condition is wrong.
+
+Correct:
+
+```java
+if (mark >= 50) {
+```
+
+---
+
+## 17. Debugging Process
+
+A simple debugging process:
+
+```text
+1. Read the error message or unexpected output
+2. Identify where the problem may be
+3. Trace the variable values
+4. Fix one problem at a time
+5. Run the program again
+6. Test with more than one input
+```
+
+::: tip Student Habit
+Do not randomly change code. Trace first, then change one thing, then test again.
+:::
+
+---
+
+## 18. Basic Trace Tables
+
+A trace table records how values change.
+
+### Example Code
+
+```java
+int x = 3;
+int y = 4;
+
+x = x + y;
+y = x * 2;
+
+System.out.println(x);
+System.out.println(y);
+```
+
+### Trace Table
+
+| Step | x | y |
+|---:|---:|---:|
+| Start | - | - |
+| `x = 3` | 3 | - |
+| `y = 4` | 3 | 4 |
+| `x = x + y` | 7 | 4 |
+| `y = x * 2` | 7 | 14 |
+
+Output:
+
+```text
+7
+14
+```
+
+Trace tables are especially useful before loops and arrays.
+
+---
+
+## 19. Pseudocode vs Java
+
+| Feature | IB Pseudocode | Java |
+|---|---|---|
+| Purpose | Describe algorithm clearly | Executable programming language |
+| Syntax strictness | Less strict | Very strict |
+| Variable declaration | Often simplified | Type required |
+| Output | `OUTPUT value` | `System.out.println(value);` |
+| Selection | `IF ... THEN` | `if (...) { ... }` |
+| Loop | `FOR ... DO` | `for (...) { ... }` |
+
+### Same Algorithm
+
+#### IB Pseudocode
+
+```text
+mark = 75
+
+IF mark >= 50 THEN
+    OUTPUT "Pass"
+ELSE
+    OUTPUT "Fail"
+END IF
+```
+
+#### Java
+
+```java
+int mark = 75;
+
+if (mark >= 50) {
+    System.out.println("Pass");
+} else {
+    System.out.println("Fail");
+}
+```
+
+---
+
+## 20. Common Beginner Mistakes
 
 | Mistake | Why it is a problem | Better habit |
 |---|---|---|
-| Starting to code without identifying IPO | The solution may be unclear | Plan the IPO first |
-| Forgetting semicolons in Java | Causes syntax errors | End Java statements with `;` |
-| Misspelling variable names | Java treats different spellings as different names | Use consistent names |
-| Using the wrong data type | Calculations or output may be wrong | Choose suitable data types |
-| Thinking a program is correct because it runs | It may still have a logic error | Test with expected results |
+| Missing semicolon | Syntax error | End statements with `;` |
+| Mismatched braces | Blocks not closed correctly | Indent and count braces |
+| Class name does not match file name | Java may not compile | Match file and public class name |
+| Using `=` instead of `==` | Assignment is not comparison | Use `==` in conditions |
+| Wrong capitalization | Java is case-sensitive | Use exact spelling |
+| Forgetting quotes around text | Java thinks it is a variable | Use `"text"` |
+| Forgetting import for Scanner | Java cannot find Scanner | Add `import java.util.Scanner;` |
+| Integer division mistake | Decimal result lost | Use `2.0` or casting |
+| Not tracing code | Hard to find logic errors | Use trace tables |
+| Trying to write too much at once | More bugs | Build small, test often |
 
 ---
 
-## 11. Guided Practice
+## 21. Guided Practice
 
-### Practice 1: Identify IPO
-
-A program calculates the average of two marks.
-
-<details>
-<summary>Suggested Answer</summary>
-
-| Stage | Answer |
-|---|---|
-| Input | mark1, mark2 |
-| Process | average = (mark1 + mark2) / 2 |
-| Output | average |
-
-</details>
-
-### Practice 2: Write Pseudocode
-
-<details>
-<summary>Suggested Answer</summary>
-
-```text
-INPUT mark1
-INPUT mark2
-
-average = (mark1 + mark2) / 2
-
-OUTPUT average
-```
-
-</details>
-
-### Practice 3: Read Java Code
+### Practice 1: Identify Input, Process, Output
 
 ```java
-int a = 6;
-int b = 4;
-int total = a + b;
-System.out.println(total);
+int length = 6;
+int width = 4;
+int area = length * width;
+System.out.println(area);
+```
+
+Identify:
+
+```text
+input/fixed data
+process
+output
 ```
 
 <details>
 <summary>Suggested Answer</summary>
+
+| Stage | Code |
+|---|---|
+| Input/fixed data | `length = 6`, `width = 4` |
+| Process | `area = length * width` |
+| Output | `System.out.println(area)` |
+
+</details>
+
+---
+
+### Practice 2: Predict Output
+
+```java
+System.out.println("A");
+System.out.println("B");
+System.out.println("C");
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+Output:
+
+```text
+A
+B
+C
+```
+
+Java runs the statements from top to bottom.
+
+</details>
+
+---
+
+### Practice 3: Find Syntax Error
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("Hello")
+    }
+}
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+The semicolon is missing after the print statement.
+
+Correct:
+
+```java
+System.out.println("Hello");
+```
+
+</details>
+
+---
+
+### Practice 4: Trace Variables
+
+```java
+int a = 2;
+int b = 5;
+
+a = a + b;
+b = b + 1;
+
+System.out.println(a);
+System.out.println(b);
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+| Step | a | b |
+|---|---:|---:|
+| `a = 2` | 2 | - |
+| `b = 5` | 2 | 5 |
+| `a = a + b` | 7 | 5 |
+| `b = b + 1` | 7 | 6 |
+
+Output:
+
+```text
+7
+6
+```
+
+</details>
+
+---
+
+### Practice 5: Pseudocode to Java
+
+Convert to Java:
+
+```text
+score = 80
+OUTPUT score
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+```java
+int score = 80;
+System.out.println(score);
+```
+
+</details>
+
+---
+
+## 22. Independent Practice
+
+### Question 1
+
+Explain what programming means in your own words.
+
+### Question 2
+
+Write the input-process-output stages for a program that calculates the area of a circle.
+
+### Question 3
+
+Write a Java program that outputs your name and your school.
+
+### Question 4
+
+Write Java code that stores two numbers, calculates their sum, and outputs the sum.
+
+### Question 5
+
+Trace this code:
+
+```java
+int x = 10;
+int y = 3;
+
+x = x - y;
+y = x + y;
+
+System.out.println(x);
+System.out.println(y);
+```
+
+### Question 6
+
+Identify the error type:
+
+```java
+System.out.println("Hello")
+```
+
+### Question 7
+
+Identify the error type:
+
+```java
+int result = 10 / 0;
+```
+
+### Question 8
+
+Identify the logic error:
+
+```java
+int mark = 50;
+
+if (mark > 50) {
+    System.out.println("Pass");
+} else {
+    System.out.println("Fail");
+}
+```
+
+### Question 9
+
+Convert this pseudocode to Java:
+
+```text
+length = 10
+width = 5
+area = length * width
+OUTPUT area
+```
+
+### Question 10
+
+Explain why comments are useful in programs.
+
+---
+
+## 23. Exam-style Questions
+
+### Question 1 [4 marks]
+
+Explain the difference between an algorithm and a program.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+An algorithm is a step-by-step method for solving a problem. It can be written in natural language, pseudocode, or a flowchart. A program is an implementation of an algorithm in a programming language so that a computer can execute it. The algorithm describes the logic, while the program follows the syntax of a specific language.
+
+</details>
+
+---
+
+### Question 2 [4 marks]
+
+State two purposes of comments in source code.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Comments help humans understand the purpose of code and make the program easier to maintain or debug. They can explain why a section of code is needed or describe complex logic. Comments are ignored by the computer when the program runs.
+
+</details>
+
+---
+
+### Question 3 [5 marks]
+
+Trace the following code and state the output.
+
+```java
+int a = 4;
+int b = 6;
+
+int total = a + b;
+a = total - 2;
+
+System.out.println(total);
+System.out.println(a);
+```
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Trace:
+
+| Step | a | b | total |
+|---|---:|---:|---:|
+| Start | - | - | - |
+| `a = 4` | 4 | - | - |
+| `b = 6` | 4 | 6 | - |
+| `total = a + b` | 4 | 6 | 10 |
+| `a = total - 2` | 8 | 6 | 10 |
+
+Output:
 
 ```text
 10
+8
 ```
 
 </details>
 
 ---
 
-## 12. Independent Practice
+### Question 4 [5 marks]
 
-### Task 1
+Describe the input-process-output model using an example.
 
-A program calculates the perimeter of a rectangle. Identify input, process, and output.
+<details>
+<summary>Mark Scheme Style Answer</summary>
 
-### Task 2
+The input-process-output model describes how a program receives data, processes it, and produces a result. For example, a program may input two marks, process them by calculating the average, and output the average mark. Input provides the data, processing performs the calculation or decision, and output displays the result to the user.
 
-Write IB-style pseudocode for:
+</details>
+
+---
+
+### Question 5 [6 marks]
+
+A program runs but gives the wrong result. Explain what type of error this is and how a programmer could find it.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+This is a logic error because the program runs but does not produce the expected result. A programmer can find it by testing the program with known test data and comparing the actual result with the expected result. They can also use a trace table to follow variable values step by step and identify where the program first behaves incorrectly.
+
+</details>
+
+---
+
+## 24. Classroom Activity
+
+### Activity 1: Human Program
+
+Students act as program statements. Each student holds one instruction. The class executes the instructions in order and records the output.
+
+Example cards:
 
 ```text
-perimeter = 2 * (length + width)
+Set score to 0
+Add 10 to score
+Add 5 to score
+Output score
 ```
 
-### Task 3
+---
 
-Write Java code using fixed values.
+### Activity 2: Code Block Puzzle
 
-### Task 4
+Cut a simple Java program into pieces:
 
-Identify the error type:
+```text
+class header
+main method
+variable declarations
+process statement
+output statement
+closing braces
+```
+
+Students put the pieces in the correct order.
+
+---
+
+### Activity 3: Error Detective
+
+Give students short code snippets. They identify whether each has:
+
+```text
+syntax error
+runtime error
+logic error
+no error
+```
+
+Then they explain their choice.
+
+---
+
+## 25. Homework
+
+### Homework Part A: Write a Simple Program
+
+Write a Java program that:
+
+1. stores your name in a `String`
+2. stores your age in an `int`
+3. outputs a sentence using both variables
+
+Example output:
+
+```text
+My name is Alice and I am 16 years old.
+```
+
+---
+
+### Homework Part B: Pseudocode to Java
+
+Convert this pseudocode to Java:
+
+```text
+base = 8
+height = 5
+area = base * height / 2
+OUTPUT area
+```
+
+---
+
+### Homework Part C: Trace
+
+Trace this code:
 
 ```java
-int total = 5 + ;
+int x = 1;
+int y = 2;
+
+x = x + 5;
+y = x + y;
+x = y - 3;
+
+System.out.println(x);
+System.out.println(y);
 ```
 
-### Task 5
+---
 
-Identify the error type:
+### Homework Part D: Explain
 
-```java
-double area = length + width;
-```
-
-when the required formula is `length * width`.
+In 4-5 sentences, explain why beginners should write and test small pieces of code rather than writing a full program all at once.
 
 ---
 
-## 13. Exam-style Questions
-
-### Question 1 [2 marks]
-
-State what is meant by a computer program.
-
-<details>
-<summary>Mark Scheme Style Answer</summary>
-
-Award marks for:
-
-- a set of instructions
-- that can be executed by a computer
-
-Example answer:
-
-A computer program is a set of instructions that can be executed by a computer to perform a task.
-
-</details>
-
-### Question 2 [3 marks]
-
-A program calculates the total cost of two products. Identify input, processing, and output.
-
-<details>
-<summary>Mark Scheme Style Answer</summary>
-
-| Stage | Answer |
-|---|---|
-| Input | price of product 1 and price of product 2 |
-| Processing | total = price1 + price2 |
-| Output | total cost |
-
-</details>
-
-### Question 3 [4 marks]
-
-A program runs without displaying an error message, but the output is incorrect. Explain what type of error this is and how it could be found.
-
-<details>
-<summary>Mark Scheme Style Answer</summary>
-
-This is a logic error because the program runs but produces the wrong output. It may be caused by an incorrect calculation or condition. The programmer can find it by using test data with known expected results, or by using a trace table to check variable values step by step.
-
-</details>
-
----
-
-## 14. Classroom Activity
-
-### Activity: IPO to Java
-
-**Time:** 15-20 minutes  
-**Grouping:** Pairs
-
-Choose one problem:
-
-1. calculate the area of a circle  
-2. calculate the average of three marks  
-3. calculate the total price after tax  
-4. calculate the number of minutes from hours  
-
-Complete:
-
-| Stage | Your Answer |
-|---|---|
-| Input |  |
-| Process |  |
-| Output |  |
-| Test data |  |
-| Expected output |  |
-
-::: tip Exit Ticket
-Before leaving, write one sentence explaining why programmers should plan input, processing, and output before coding.
-:::
-
----
-
-## 15. Homework
-
-Choose one simple calculation program and complete:
-
-1. description
-2. input, processing, output
-3. IB-style pseudocode
-4. Java code using fixed values
-5. step-by-step execution table
-6. one possible syntax error
-7. one possible logic error
-8. one exam-style paragraph explaining the IPO model
-
----
-
-## 16. One-page Revision Summary
+## 26. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| Program | A set of instructions that a computer can execute |
-| Programming process | Understand problem → design algorithm → code → test → debug |
-| IPO model | Input → Process → Output |
-| Syntax error | Breaks programming language rules |
-| Runtime error | Happens while program is running |
+| Programming | Writing instructions for a computer |
+| Program | A set of instructions that can be executed |
+| Source code | Human-readable code |
+| Algorithm | Step-by-step solution |
+| Pseudocode | Algorithm description not tied to one language |
+| Input | Data received by a program |
+| Process | Calculation or decision |
+| Output | Result displayed by a program |
+| Java main method | Starting point of a Java program |
+| Statement | One executable instruction |
+| Semicolon | Ends many Java statements |
+| Braces | Group code into blocks |
+| Comment | Human note ignored by computer |
+| Syntax error | Breaks grammar rules |
+| Runtime error | Happens while program runs |
 | Logic error | Program runs but gives wrong result |
+| Trace table | Records values step by step |
+| Exam phrase | A program implements an algorithm in a programming language so the computer can execute it |
+
+---
+
+## 27. Quick Self-test
+
+Before moving on, students should be able to answer these:
+
+1. What is programming?
+2. What is a program?
+3. What is the difference between an algorithm and a program?
+4. What are input, process, and output?
+5. Where does a Java program start running?
+6. Why are semicolons important in Java?
+7. What do braces do?
+8. What is a comment?
+9. What is the difference between syntax, runtime, and logic errors?
+10. Why are trace tables useful?
