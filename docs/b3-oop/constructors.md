@@ -4,12 +4,17 @@
 
 By the end of this lesson, students should be able to:
 
-- define a **constructor**
-- explain why constructors are used
-- identify constructor parameters
-- write Java constructors
-- create objects with initial values
-- distinguish constructors from normal methods
+- explain what a constructor is
+- explain when a constructor runs
+- distinguish a constructor from a normal method
+- write a default constructor in Java
+- write a parameterized constructor in Java
+- use constructor parameters to initialize attributes
+- explain the purpose of the `this` keyword
+- create objects using constructors
+- trace object state after constructor calls
+- identify common constructor errors
+- answer exam-style questions about constructors and object initialization
 
 ---
 
@@ -18,13 +23,14 @@ By the end of this lesson, students should be able to:
 | Item | Detail |
 |---|---|
 | Unit | B3 Object-Oriented Programming |
-| Label | SL Core |
-| Main skill | Object creation and initialization |
-| Connected units | Classes and Objects, Attributes and Methods, Encapsulation |
-| Exam relevance | Java OOP code reading, class design, constructor explanation |
+| Label | SL Core, with Java support |
+| Main skill | Initializing objects when they are created |
+| Connected topics | Classes, objects, attributes, methods, encapsulation, accessors/mutators, UML |
+| Programming language focus | Java |
+| Exam relevance | Constructor syntax, object creation, object state tracing, constructor vs method explanation |
 
 ::: tip Learning Focus
-A constructor is called when an object is created. Its main purpose is to initialize attributes.
+A constructor prepares a new object by giving its attributes initial values. Students should understand that a constructor runs automatically when `new` creates an object.
 :::
 
 ---
@@ -33,11 +39,17 @@ A constructor is called when an object is created. Its main purpose is to initia
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Constructor | 构造方法 | A special method used when an object is created |
-| Initialize | 初始化 | Give starting values to attributes |
-| Parameter | 参数 | A value passed into a constructor or method |
-| Default constructor | 默认构造方法 | Constructor with no parameters |
-| Overloading | 重载 | Having more than one constructor or method with different parameters |
+| Constructor | 构造方法 / 构造器 | A special method-like block that runs when an object is created |
+| Default constructor | 默认构造器 | A constructor with no parameters |
+| Parameterized constructor | 带参数构造器 | A constructor that receives values through parameters |
+| Initialize | 初始化 | Give a starting value to an attribute or variable |
+| Object creation | 创建对象 | Using `new` to create an object from a class |
+| Parameter | 参数 | A variable in the constructor header used to receive data |
+| Argument | 实参 | The actual value passed into the constructor |
+| `this` | 当前对象引用 | Refers to the current object |
+| Attribute | 属性 | Data stored inside an object |
+| Object state | 对象状态 | Current values of an object's attributes |
+| Constructor overloading | 构造器重载 | Having multiple constructors with different parameter lists |
 
 ---
 
@@ -48,27 +60,46 @@ A constructor is called when an object is created. Its main purpose is to initia
 
 ### 中文讲解
 
-**Constructor（构造方法）** 是创建对象时自动调用的特殊方法。它通常用于给 attributes 初始值。
+**Constructor（构造器）** 是一种特殊的代码块，用来在创建 object 的时候给 object 设置初始值。
 
-如果没有 constructor，创建对象后可能还要手动设置每个属性：
+例如，一个 `Student` object 应该一创建出来就有：
 
-```java
-student.name = "Alice";
-student.score = 85;
+```text
+name
+mark
 ```
 
-有 constructor 之后，可以在创建对象时直接传入初始值：
+如果没有 constructor，我们可能要这样写：
 
 ```java
-Student student = new Student("Alice", 85);
+Student s1 = new Student();
+s1.name = "Alice";
+s1.mark = 85;
 ```
 
-Java constructor 的特点：
+这样可以工作，但不够安全，也不够清晰。
 
-- 名字必须和 class 名字一样
-- 没有 return type
-- 通常用于初始化 attributes
-- 在 `new` 创建对象时调用
+使用 constructor 后，可以在创建对象时直接给初始值：
+
+```java
+Student s1 = new Student("Alice", 85);
+```
+
+这行代码的意思是：
+
+```text
+创建一个新的 Student object
+并把 name 设置为 "Alice"
+把 mark 设置为 85
+```
+
+Constructor 的几个关键特点：
+
+1. constructor 名字必须和 class 名字一样
+2. constructor 没有 return type，连 `void` 都没有
+3. constructor 在 `new` 创建 object 时自动运行
+4. constructor 常用来初始化 attributes
+5. 一个 class 可以有多个 constructor，但参数列表必须不同
 
 </template>
 
@@ -76,27 +107,46 @@ Java constructor 的特点：
 
 ### English Explanation
 
-A **constructor** is a special method that is called when an object is created. It is usually used to give initial values to attributes.
+A **constructor** is a special block of code used to set up a new object when it is created.
 
-Without a constructor, attributes may need to be set manually after object creation:
+For example, a `Student` object should have:
 
-```java
-student.name = "Alice";
-student.score = 85;
+```text
+name
+mark
 ```
 
-With a constructor, initial values can be passed in when the object is created:
+Without a constructor, we may write:
 
 ```java
-Student student = new Student("Alice", 85);
+Student s1 = new Student();
+s1.name = "Alice";
+s1.mark = 85;
 ```
 
-A Java constructor:
+This can work, but it is not very safe or clear.
 
-- has the same name as the class
-- has no return type
-- is usually used to initialize attributes
-- is called when `new` creates an object
+With a constructor, the object can receive starting values when it is created:
+
+```java
+Student s1 = new Student("Alice", 85);
+```
+
+This means:
+
+```text
+create a new Student object
+set name to "Alice"
+set mark to 85
+```
+
+Important features of constructors:
+
+1. the constructor name must match the class name
+2. a constructor has no return type, not even `void`
+3. a constructor runs automatically when `new` creates an object
+4. constructors are often used to initialize attributes
+5. a class can have multiple constructors if their parameter lists are different
 
 </template>
 </LangBlock>
@@ -105,198 +155,914 @@ A Java constructor:
 
 ## 5. Real-life Example
 
-### Student Object
+### Example: Creating a Student Record
 
-| Attribute | Initial Value |
+When a school creates a new student record, it should immediately store the student's basic information.
+
+```text
+student name
+student mark
+```
+
+Without this starting information, the object may be incomplete.
+
+| Object Creation | Meaning |
 |---|---|
-| name | Alice |
-| score | 85 |
+| `new Student("Alice", 85)` | Create Alice's student object |
+| `new Student("Ben", 42)` | Create Ben's student object |
+| `new Student("Clara", 90)` | Create Clara's student object |
 
-A constructor can set both values when the object is created.
+Each constructor call creates a different object with its own starting state.
+
+::: info Scenario Link
+A constructor is like filling in a form when creating a new record. The object starts with meaningful data instead of empty or default values.
+:::
 
 ---
 
-## 6. IB Pseudocode Pattern
+## 6. Constructor Syntax
+
+A constructor looks similar to a method, but it is different.
+
+### Basic Constructor Pattern
+
+```java
+public ClassName(parameters) {
+    // initialization code
+}
+```
+
+### Example
+
+```java
+public Student(String studentName, int studentMark) {
+    name = studentName;
+    mark = studentMark;
+}
+```
+
+### Constructor Rules
+
+| Rule | Example |
+|---|---|
+| Constructor name matches class name | `Student` constructor in `Student` class |
+| No return type | not `void`, not `int`, not `String` |
+| Usually public | so other classes can create objects |
+| Runs automatically with `new` | `new Student("Alice", 85)` |
+| Often initializes attributes | `name = studentName;` |
+
+---
+
+## 7. Default Constructor
+
+A **default constructor** has no parameters.
+
+### Student.java
+
+```java
+public class Student {
+    String name;
+    int mark;
+
+    public Student() {
+        name = "Unknown";
+        mark = 0;
+    }
+
+    public void displayInfo() {
+        System.out.println(name + " scored " + mark);
+    }
+}
+```
+
+### TestStudent.java
+
+```java
+public class TestStudent {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+
+        s1.displayInfo();
+    }
+}
+```
+
+### Output
 
 ```text
-CLASS Student
-    name
-    score
+Unknown scored 0
+```
 
-    CONSTRUCTOR Student(newName, newScore)
-        name = newName
-        score = newScore
-    END CONSTRUCTOR
-END CLASS
+### Explanation
 
-student1 = NEW Student("Alice", 85)
+| Code | Meaning |
+|---|---|
+| `public Student()` | Default constructor |
+| `name = "Unknown";` | Gives name a starting value |
+| `mark = 0;` | Gives mark a starting value |
+| `new Student()` | Calls the default constructor |
+
+---
+
+## 8. Parameterized Constructor
+
+A **parameterized constructor** receives values from outside.
+
+### Student.java
+
+```java
+public class Student {
+    String name;
+    int mark;
+
+    public Student(String studentName, int studentMark) {
+        name = studentName;
+        mark = studentMark;
+    }
+
+    public void displayInfo() {
+        System.out.println(name + " scored " + mark);
+    }
+}
+```
+
+### TestStudent.java
+
+```java
+public class TestStudent {
+    public static void main(String[] args) {
+        Student s1 = new Student("Alice", 85);
+        Student s2 = new Student("Ben", 42);
+
+        s1.displayInfo();
+        s2.displayInfo();
+    }
+}
+```
+
+### Output
+
+```text
+Alice scored 85
+Ben scored 42
+```
+
+### Explanation
+
+| Constructor Call | studentName | studentMark | Object State |
+|---|---|---:|---|
+| `new Student("Alice", 85)` | Alice | 85 | name = Alice, mark = 85 |
+| `new Student("Ben", 42)` | Ben | 42 | name = Ben, mark = 42 |
+
+---
+
+## 9. Object State Trace with Constructor
+
+### Code
+
+```java
+Student s1 = new Student("Alice", 85);
+Student s2 = new Student("Ben", 42);
+```
+
+### Trace Table
+
+| Step | Code | Object Created | name | mark |
+|---:|---|---|---|---:|
+| 1 | `new Student("Alice", 85)` | s1 | Alice | 85 |
+| 2 | `new Student("Ben", 42)` | s2 | Ben | 42 |
+
+### Final Object State
+
+| Object | name | mark |
+|---|---|---:|
+| s1 | Alice | 85 |
+| s2 | Ben | 42 |
+
+The same constructor runs twice, but each object receives different values.
+
+---
+
+## 10. Constructor vs Normal Method
+
+Constructors look similar to methods, but they are not the same.
+
+| Feature | Constructor | Normal Method |
+|---|---|---|
+| Purpose | Initialize a new object | Perform behaviour after object exists |
+| Name | Same as class name | Any valid method name |
+| Return type | No return type | Has return type, such as `void`, `int`, `boolean` |
+| When it runs | Automatically when `new` is used | Runs when called explicitly |
+| Example call | `new Student("Alice", 85)` | `s1.displayInfo()` |
+
+### Constructor
+
+```java
+public Student(String studentName, int studentMark) {
+    name = studentName;
+    mark = studentMark;
+}
+```
+
+### Normal Method
+
+```java
+public void displayInfo() {
+    System.out.println(name + " scored " + mark);
+}
+```
+
+::: warning Common Mistake
+If you write `public void Student(...)`, it is not a constructor. It is a normal method because it has `void`.
+:::
+
+---
+
+## 11. The `this` Keyword
+
+Sometimes constructor parameters have the same names as attributes.
+
+### Example
+
+```java
+public class Student {
+    String name;
+    int mark;
+
+    public Student(String name, int mark) {
+        this.name = name;
+        this.mark = mark;
+    }
+}
+```
+
+### Meaning
+
+| Code | Meaning |
+|---|---|
+| `this.name` | the attribute of the current object |
+| `name` | the constructor parameter |
+| `this.mark` | the attribute of the current object |
+| `mark` | the constructor parameter |
+
+### Why Use `this`?
+
+`this` makes it clear that we are assigning parameter values into the object's attributes.
+
+```text
+this.name = name
+current object's name attribute = name parameter
 ```
 
 ---
 
-## 7. Java Code Example
+## 12. Constructor with Validation
+
+Constructors can also check whether starting values are valid.
+
+### Example
+
+```java
+public class Student {
+    String name;
+    int mark;
+
+    public Student(String name, int mark) {
+        this.name = name;
+
+        if (mark >= 0 && mark <= 100) {
+            this.mark = mark;
+        } else {
+            this.mark = 0;
+        }
+    }
+
+    public void displayInfo() {
+        System.out.println(name + " scored " + mark);
+    }
+}
+```
+
+### Test
+
+```java
+Student s1 = new Student("Alice", 85);
+Student s2 = new Student("Ben", 150);
+
+s1.displayInfo();
+s2.displayInfo();
+```
+
+### Output
+
+```text
+Alice scored 85
+Ben scored 0
+```
+
+Because 150 is not a valid mark, the constructor sets mark to 0.
+
+::: tip Connection
+This connects constructors to selection and validation from B2.
+:::
+
+---
+
+## 13. Multiple Constructors: Constructor Overloading
+
+A class can have more than one constructor if the parameter lists are different.
+
+### Example
+
+```java
+public class Student {
+    String name;
+    int mark;
+
+    public Student() {
+        name = "Unknown";
+        mark = 0;
+    }
+
+    public Student(String name, int mark) {
+        this.name = name;
+        this.mark = mark;
+    }
+
+    public void displayInfo() {
+        System.out.println(name + " scored " + mark);
+    }
+}
+```
+
+### Test
+
+```java
+Student s1 = new Student();
+Student s2 = new Student("Alice", 85);
+
+s1.displayInfo();
+s2.displayInfo();
+```
+
+### Output
+
+```text
+Unknown scored 0
+Alice scored 85
+```
+
+### Explanation
+
+| Constructor Call | Constructor Used |
+|---|---|
+| `new Student()` | no-parameter constructor |
+| `new Student("Alice", 85)` | two-parameter constructor |
+
+---
+
+## 14. What If No Constructor Is Written?
+
+If a class has no constructor written by the programmer, Java provides a default no-argument constructor automatically.
+
+Example:
+
+```java
+public class Student {
+    String name;
+    int mark;
+}
+```
+
+Then this works:
+
+```java
+Student s1 = new Student();
+```
+
+But if you write a parameterized constructor:
+
+```java
+public Student(String name, int mark) {
+    this.name = name;
+    this.mark = mark;
+}
+```
+
+Java no longer automatically provides the no-argument constructor.
+
+So this may not work unless you write it yourself:
+
+```java
+Student s1 = new Student(); // error if no no-argument constructor exists
+```
+
+---
+
+## 15. Complete Student Class Example
 
 ```java
 public class Student {
     private String name;
-    private int score;
+    private int mark;
 
-    public Student(String newName, int newScore) {
-        name = newName;
-        score = newScore;
+    public Student() {
+        name = "Unknown";
+        mark = 0;
     }
 
-    public void displayDetails() {
-        System.out.println("Name: " + name);
-        System.out.println("Score: " + score);
+    public Student(String name, int mark) {
+        this.name = name;
+
+        if (mark >= 0 && mark <= 100) {
+            this.mark = mark;
+        } else {
+            this.mark = 0;
+        }
+    }
+
+    public void displayInfo() {
+        System.out.println(name + " scored " + mark);
+    }
+
+    public boolean hasPassed() {
+        return mark >= 50;
     }
 }
 ```
+
+### TestStudent.java
 
 ```java
-public class StudentTest {
+public class TestStudent {
     public static void main(String[] args) {
-        Student student1 = new Student("Alice", 85);
-        Student student2 = new Student("Ben", 72);
+        Student s1 = new Student();
+        Student s2 = new Student("Alice", 85);
+        Student s3 = new Student("Ben", 150);
 
-        student1.displayDetails();
-        student2.displayDetails();
+        s1.displayInfo();
+        s2.displayInfo();
+        s3.displayInfo();
+
+        System.out.println(s2.hasPassed());
     }
 }
 ```
 
----
+### Output
 
-## 8. Line-by-line Code Explanation
+```text
+Unknown scored 0
+Alice scored 85
+Ben scored 0
+true
+```
 
-| Code Part | Explanation |
-|---|---|
-| `private String name;` | Attribute storing name |
-| `private int score;` | Attribute storing score |
-| `public Student(...)` | Constructor because name matches class |
-| `String newName, int newScore` | Constructor parameters |
-| `name = newName;` | Initializes name attribute |
-| `score = newScore;` | Initializes score attribute |
-| `new Student("Alice", 85)` | Creates object and calls constructor |
-
----
-
-## 9. Step-by-step Execution
-
-| Step | Action | Result |
-|---|---|---|
-| 1 | `new Student("Alice", 85)` | Constructor called |
-| 2 | `newName` receives `"Alice"` | parameter set |
-| 3 | `newScore` receives `85` | parameter set |
-| 4 | `name = newName` | name = Alice |
-| 5 | `score = newScore` | score = 85 |
-| 6 | object is ready | attributes initialized |
+::: info Preview
+The attributes are now `private`. This prepares students for the next topics: encapsulation, accessors, and mutators.
+:::
 
 ---
 
-## 10. Common Mistakes
+## 16. Common Mistakes
 
 | Mistake | Why it is a problem | Better habit |
 |---|---|---|
-| Giving constructor a return type | It becomes a normal method | No return type for constructors |
-| Constructor name differs from class | Java will not treat it as constructor | Match class name exactly |
-| Passing parameters in wrong order | Attribute values wrong | Check constructor parameter order |
-| Not initializing all attributes | Object may have incomplete data | Set important attributes in constructor |
-| Confusing parameters and attributes | Assignment may be wrong | Use clear names |
+| Constructor has `void` | It becomes a normal method | Constructor has no return type |
+| Constructor name does not match class name | Java does not treat it as constructor | Use exact class name |
+| Forgetting `new` | Object is not created | Use `new Student(...)` |
+| Passing wrong number of arguments | No matching constructor | Match parameter list |
+| Passing wrong data type | Type mismatch | Match constructor parameter types |
+| Forgetting to initialize attributes | Object starts with default or invalid state | Set attributes in constructor |
+| Confusing parameter and attribute | Attribute may not change | Use `this.attribute = parameter` |
+| Assuming Java always provides no-argument constructor | Not true after custom constructor is written | Write no-argument constructor if needed |
+| Doing too much inside constructor | Constructor becomes hard to understand | Use constructor mainly for initialization |
+| Not validating important values | Object may start invalid | Validate values such as mark range |
 
 ---
 
-## 11. Guided Practice
+## 17. Guided Practice
 
-### Practice 1
+### Practice 1: Identify Constructor
 
-Identify the constructor:
+Which one is a constructor for class `Book`?
 
 ```java
-public class Book {
-    private String title;
+public void Book(String title) { }
+public Book(String title) { }
+public book(String title) { }
+public String Book(String title) { return title; }
+```
 
-    public Book(String newTitle) {
-        title = newTitle;
-    }
+<details>
+<summary>Suggested Answer</summary>
+
+Correct constructor:
+
+```java
+public Book(String title) { }
+```
+
+It has the same name as the class and no return type.
+
+</details>
+
+---
+
+### Practice 2: Object State
+
+Given:
+
+```java
+Student s1 = new Student("Clara", 90);
+```
+
+What is the object state if the constructor assigns `name` and `mark`?
+
+<details>
+<summary>Suggested Answer</summary>
+
+| Object | name | mark |
+|---|---|---:|
+| s1 | Clara | 90 |
+
+</details>
+
+---
+
+### Practice 3: Constructor vs Method
+
+Classify each as constructor or normal method.
+
+```java
+public Student(String name, int mark) { }
+public void displayInfo() { }
+public boolean hasPassed() { return mark >= 50; }
+public Student() { }
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+| Code | Type |
+|---|---|
+| `public Student(String name, int mark)` | Constructor |
+| `public void displayInfo()` | Normal method |
+| `public boolean hasPassed()` | Normal method |
+| `public Student()` | Constructor |
+
+</details>
+
+---
+
+### Practice 4: `this` Keyword
+
+Explain this line:
+
+```java
+this.mark = mark;
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+`this.mark` means the `mark` attribute of the current object. The second `mark` is the constructor parameter. The line stores the parameter value into the object's attribute.
+
+</details>
+
+---
+
+### Practice 5: Find the Error
+
+```java
+public void Student(String name, int mark) {
+    this.name = name;
+    this.mark = mark;
 }
 ```
 
 <details>
 <summary>Suggested Answer</summary>
 
-`public Book(String newTitle)` is the constructor because it has the same name as the class and no return type.
+The constructor incorrectly has `void`. A constructor has no return type.
 
-</details>
-
-### Practice 2
-
-Create a `Book` object with title `"Dune"`.
-
-<details>
-<summary>Suggested Answer</summary>
+Correct:
 
 ```java
-Book book1 = new Book("Dune");
+public Student(String name, int mark) {
+    this.name = name;
+    this.mark = mark;
+}
 ```
 
 </details>
 
 ---
 
-## 12. Independent Practice
+## 18. Independent Practice
 
-1. Write a constructor for a `Car` class with brand and speed.
-2. Create two `Car` objects with different values.
-3. Explain why constructors reduce repeated code.
-4. Explain how a constructor differs from a normal method.
+### Question 1
+
+Explain what a constructor is and when it runs.
+
+### Question 2
+
+Write a default constructor for a `Book` class that sets:
+
+```text
+title = "Untitled"
+pages = 0
+```
+
+### Question 3
+
+Write a parameterized constructor for a `Book` class with:
+
+```text
+title
+author
+pages
+```
+
+### Question 4
+
+Create two `Book` objects using your parameterized constructor.
+
+### Question 5
+
+Explain the difference between a default constructor and a parameterized constructor.
+
+### Question 6
+
+Explain why a constructor has no return type.
+
+### Question 7
+
+Correct this code:
+
+```java
+public void Car(String colour) {
+    this.colour = colour;
+}
+```
+
+### Question 8
+
+Write a constructor for a `Player` class that validates `score`. If score is below 0, set it to 0.
+
+### Question 9
+
+Explain why `this.name = name;` is clearer than `name = name;`.
+
+### Question 10
+
+Create an object state table after these calls:
+
+```java
+Student s1 = new Student("Alice", 85);
+Student s2 = new Student("Ben", 42);
+```
 
 ---
 
-## 13. Exam-style Questions
+## 19. Exam-style Questions
 
-### Question 1 [2 marks]
+### Question 1 [4 marks]
 
-State the purpose of a constructor.
+Define constructor and state when it is executed.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-A constructor is called when an object is created and is used to initialize the object's attributes.
+A constructor is a special method-like block in a class that is used to initialize a new object. It has the same name as the class and has no return type. It is executed automatically when an object is created using the `new` keyword.
 
 </details>
 
-### Question 2 [4 marks]
+---
 
-Explain why a constructor is useful in a `Student` class.
+### Question 2 [5 marks]
+
+Distinguish between a constructor and a normal method.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-A constructor can receive values such as name and score when a Student object is created. It initializes the attributes so the object starts with valid data. This avoids setting each attribute separately after creation and makes object creation more reliable.
+A constructor is used to initialize a new object and runs automatically when `new` creates an object. It has the same name as the class and no return type. A normal method performs behaviour after the object already exists. It has its own method name, has a return type such as `void` or `int`, and runs only when it is called explicitly.
 
 </details>
 
 ---
 
-## 14. Classroom Activity
+### Question 3 [6 marks]
 
-Students convert classes without constructors into classes with constructors, then create two different objects.
+Write a Java constructor for a class `Book` with attributes `title`, `author`, and `pages`.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+```java
+public Book(String title, String author, int pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+}
+```
+
+Possible marks:
+
+- constructor name matches class name
+- no return type
+- suitable parameters
+- assigns title parameter to title attribute
+- assigns author parameter to author attribute
+- assigns pages parameter to pages attribute
+
+</details>
 
 ---
 
-## 15. Homework
+### Question 4 [6 marks]
 
-Write a `Product` class with attributes `name` and `price`, a constructor, and a method to display the product.
+Explain the purpose of the `this` keyword in a constructor.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+The `this` keyword refers to the current object. In a constructor, it is often used to distinguish an object's attribute from a parameter with the same name. For example, `this.mark = mark;` means the current object's `mark` attribute receives the value of the `mark` parameter. This makes the assignment clear and avoids ambiguity.
+
+</details>
 
 ---
 
-## 16. One-page Revision Summary
+### Question 5 [6 marks]
+
+Trace the final object states.
+
+```java
+Student s1 = new Student("Alice", 80);
+Student s2 = new Student("Ben", 150);
+```
+
+Assume the constructor sets invalid marks to 0 if the mark is not between 0 and 100 inclusive.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+| Object | name | mark |
+|---|---|---:|
+| s1 | Alice | 80 |
+| s2 | Ben | 0 |
+
+`s1` receives a valid mark, so mark is 80. `s2` receives 150, which is invalid, so the constructor sets mark to 0.
+
+</details>
+
+---
+
+## 20. Classroom Activity
+
+### Activity 1: Constructor Role-play
+
+Students act as objects being created.
+
+Each student receives a constructor call card:
+
+```text
+new Student("Alice", 85)
+new Student("Ben", 42)
+new Student("Clara", 90)
+```
+
+They fill in their object state card:
+
+```text
+name:
+mark:
+```
+
+---
+
+### Activity 2: Constructor or Method Sort
+
+Students sort code snippets into:
+
+```text
+constructor
+normal method
+not valid
+```
+
+They must justify their choices using:
+
+```text
+same name as class
+no return type
+parameter list
+```
+
+---
+
+### Activity 3: `this` Demonstration
+
+Use two labels:
+
+```text
+attribute: this.name
+parameter: name
+```
+
+Students physically move the parameter value into the attribute box to show:
+
+```java
+this.name = name;
+```
+
+---
+
+## 21. Homework
+
+### Homework Part A: Concept Explanation
+
+In 5-6 sentences, explain what a constructor is and how it is different from a normal method.
+
+---
+
+### Homework Part B: Java Code
+
+Create a `Laptop` class with:
+
+```text
+brand
+price
+ram
+```
+
+Write:
+
+1. a default constructor
+2. a parameterized constructor
+3. a `displayInfo()` method
+
+---
+
+### Homework Part C: Validation
+
+Create a `GameCharacter` constructor that accepts:
+
+```text
+name
+health
+```
+
+If health is below 0, set health to 0.  
+If health is above 100, set health to 100.
+
+---
+
+### Homework Part D: Trace
+
+Trace the object states:
+
+```java
+GameCharacter g1 = new GameCharacter("Hero", 120);
+GameCharacter g2 = new GameCharacter("Enemy", -10);
+GameCharacter g3 = new GameCharacter("NPC", 60);
+```
+
+Assume the constructor limits health to 0-100.
+
+---
+
+## 22. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| Constructor | Special method called on object creation |
-| Main purpose | Initialize attributes |
-| Java rule | Same name as class, no return type |
-| Parameter | Value passed into constructor |
-| Exam phrase | "The constructor gives the object valid initial attribute values when it is created." |
+| Constructor | Special block used to initialize a new object |
+| Runs when | `new` creates an object |
+| Name | Same as class name |
+| Return type | None, not even `void` |
+| Default constructor | Constructor with no parameters |
+| Parameterized constructor | Constructor with parameters |
+| Initialize | Give starting values to attributes |
+| `this` | Refers to the current object |
+| Constructor overloading | Multiple constructors with different parameter lists |
+| Object state | Values stored in attributes after construction |
+| Common mistake | Writing `void` in a constructor |
+| Exam phrase | A constructor initializes an object when it is created |
+
+---
+
+## 23. Quick Self-test
+
+Before moving on, students should be able to answer these:
+
+1. What is a constructor?
+2. When does a constructor run?
+3. What must a constructor name match?
+4. Does a constructor have a return type?
+5. What is a default constructor?
+6. What is a parameterized constructor?
+7. What does `new Student("Alice", 85)` do?
+8. What does `this.name = name;` mean?
+9. How is a constructor different from a normal method?
+10. Why might a constructor validate input values?
