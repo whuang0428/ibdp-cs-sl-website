@@ -1,71 +1,163 @@
-# Computer System Overview
+# A1 Computer Fundamentals
 
-## 1. Lesson Goals
+## 1. Module Overview
 
-By the end of this lesson, students should be able to:
+A1 Computer Fundamentals introduces the basic ideas behind computer systems.
 
-- explain what a computer system is
-- identify the main parts of a computer system
-- distinguish hardware, software, data, and users
-- explain the input-process-output-storage model
-- describe how data flows through a computer system
-- give examples of input, output, processing, memory, and storage
-- explain why hardware and software must work together
-- identify computer systems in everyday life
-- avoid common beginner misconceptions about computer systems
-- answer exam-style questions about computer system fundamentals
+In this module, students learn how computers:
+
+```text
+represent data
+use hardware components
+process instructions
+store data
+run software
+control devices
+connect to cloud services
+```
+
+A1 is the foundation for later computer science topics because it explains what happens below the level of programming.
+
+When students write a program, open a file, run a website, use cloud storage, or control a device, the computer system depends on:
+
+```text
+hardware
+software
+CPU
+memory
+storage
+operating system
+binary representation
+logic gates
+control systems
+cloud infrastructure
+```
+
+The main goal of A1 is not only to memorize definitions, but to understand how the parts of a computer system work together.
 
 ---
 
-## 2. Syllabus Mapping
+## 2. Learning Goals
 
-| Item | Detail |
-|---|---|
-| Unit | A1 Computer Fundamentals |
-| Label | SL Core |
-| Main skill | Understanding the whole computer system before studying individual components |
-| Connected topics | Hardware, software, CPU, memory, storage, operating systems, embedded systems |
-| Practical focus | Describing how input, processing, output, and storage work together |
-| Exam relevance | Definitions, classification, system explanation, scenario questions |
+By the end of A1 Computer Fundamentals, students should be able to:
 
-::: tip Learning Focus
-A computer is not only the screen or the CPU. A computer system includes hardware, software, data, and users working together to input, process, output, and store data.
+- explain what a computer system is
+- distinguish hardware, software, data, and users
+- classify common hardware components
+- explain CPU components and their roles
+- describe the fetch-decode-execute cycle
+- distinguish primary memory and secondary storage
+- explain RAM, ROM, cache, SSD, HDD, and cloud storage
+- explain why computers use binary
+- perform basic binary and denary conversions
+- explain how text, images, and sound are represented
+- construct and interpret simple logic gate truth tables
+- explain operating system functions
+- explain sensors, actuators, and control systems
+- distinguish open-loop and closed-loop systems
+- explain cloud computing and cloud service models
+- answer exam-style questions using correct technical vocabulary
+
+---
+
+## 3. A1 Learning Path
+
+Recommended teaching order:
+
+```text
+Overview
+→ Computer Hardware
+→ CPU Components
+→ Fetch-Decode-Execute Cycle
+→ Primary Memory
+→ Secondary Storage
+→ Data Representation
+→ Logic Gates
+→ Operating Systems
+→ Control Systems
+→ Cloud Computing
+```
+
+This order is intentional.
+
+Students first learn the whole computer system and its hardware.  
+Then they study the CPU and how instructions are executed.  
+After that, they learn memory, storage, and data representation.  
+Finally, they connect computer systems to operating systems, control systems, and cloud computing.
+
+---
+
+## 4. Topic Index
+
+| Order | Topic | Main Focus | Link |
+|---:|---|---|---|
+| 1 | Overview | whole computer system, IPO model, hardware/software/data/users | [Open](./) |
+| 2 | Computer Hardware | input, output, processing, memory, storage, communication hardware | [Open](./computer-hardware) |
+| 3 | CPU Components | CPU, CU, ALU, registers, cache, PC, MAR, MDR, CIR | [Open](./cpu-components) |
+| 4 | Fetch-Decode-Execute Cycle | instruction cycle, registers, buses, CPU-memory interaction | [Open](./fetch-decode-execute) |
+| 5 | Primary Memory | RAM, ROM, cache, registers, volatility, memory hierarchy | [Open](./primary-memory) |
+| 6 | Secondary Storage | SSD, HDD, flash, optical, cloud storage, backup/archive | [Open](./secondary-storage) |
+| 7 | Data Representation | binary, text, images, sound, file size calculations | [Open](./data-representation) |
+| 8 | Logic Gates | NOT, AND, OR, NAND, NOR, XOR, truth tables | [Open](./logic-gates) |
+| 9 | Operating Systems | OS functions, GUI/CLI, memory/process/file/device management | [Open](./operating-systems) |
+| 10 | Control Systems | sensors, actuators, feedback, open-loop, closed-loop | [Open](./control-systems) |
+| 11 | Cloud Computing | remote servers, SaaS/PaaS/IaaS, benefits and risks | [Open](./cloud-computing) |
+
+::: warning File Name Note
+This overview uses your current stable A1 file names:
+`computer-hardware.md`, `cpu-components.md`, `fetch-decode-execute.md`, `primary-memory.md`, `secondary-storage.md`, `data-representation.md`, `logic-gates.md`, `operating-systems.md`, `control-systems.md`, and `cloud-computing.md`.
 :::
 
 ---
 
-## 3. Key Terms
+## 5. Concept Map
 
-| English Term | 中文解释 | Exam-style meaning |
-|---|---|---|
-| Computer system | 计算机系统 | A combination of hardware, software, data, and users working together |
-| Hardware | 硬件 | Physical parts of a computer system |
-| Software | 软件 | Programs and instructions that tell hardware what to do |
-| Data | 数据 | Raw facts or values processed by the computer |
-| User | 用户 | A person or another system that interacts with the computer |
-| Input | 输入 | Data entered into a computer system |
-| Processing | 处理 | Changing or using data to produce a result |
-| Output | 输出 | Information produced by the computer system |
-| Storage | 存储 | Saving data, programs, or files for later use |
-| CPU | 中央处理器 | Main processor that executes instructions |
-| Memory | 内存 | Fast working area used while programs are running |
-| Secondary storage | 辅助存储 | Long-term storage such as SSD, HDD, USB drive |
-| Operating system | 操作系统 | System software that manages hardware and provides services |
-| Application software | 应用软件 | Software used to perform user tasks |
-| System software | 系统软件 | Software that manages or supports the computer system |
-| IPO model | 输入-处理-输出模型 | Input, Processing, Output model |
+```text
+Computer System
+├── Hardware
+│   ├── Input / Output
+│   ├── CPU
+│   │   ├── Control Unit
+│   │   ├── ALU
+│   │   ├── Registers
+│   │   └── Cache
+│   ├── Primary Memory
+│   │   ├── RAM
+│   │   ├── ROM
+│   │   └── Cache
+│   └── Secondary Storage
+│       ├── SSD / HDD
+│       ├── Flash / Optical
+│       └── Cloud Storage
+├── Software
+│   ├── Operating System
+│   ├── Utility Software
+│   └── Application Software
+├── Data
+│   ├── Binary
+│   ├── Text
+│   ├── Images
+│   └── Sound
+├── Logic
+│   └── Logic Gates
+└── Control / Cloud
+    ├── Control Systems
+    └── Cloud Computing
+```
 
 ---
 
-## 4. Concept Explanation
+## 6. Bilingual Module Explanation
 
 <LangBlock>
 <template #cn>
 
-### 中文讲解
+### 中文说明
 
-**Computer system（计算机系统）** 不是单独指显示器，也不是单独指主机。  
-它是由多个部分一起组成的系统：
+A1 Computer Fundamentals 这一单元的核心是理解计算机系统的基础结构。
+
+一台计算机不是只有屏幕，也不是只有 CPU。  
+它是多个部分一起工作的系统：
 
 ```text
 hardware
@@ -74,46 +166,70 @@ data
 users
 ```
 
-例如一台学生电脑运行浏览器和编程 IDE 时：
+例如学生打开电脑写代码时：
 
 ```text
-keyboard / mouse 输入数据
-CPU 处理指令
-RAM 临时保存正在运行的程序和数据
-SSD 长期保存文件和软件
-screen 显示结果
-operating system 管理硬件和程序
-user 控制和使用系统
+keyboard 输入代码
+operating system 管理文件和程序
+SSD 保存项目文件
+RAM 保存正在运行的 IDE 和程序数据
+CPU 执行指令
+screen 显示代码和输出
 ```
 
-计算机系统最基本的工作模式可以用 **IPO model** 表示：
+如果再深入一点，CPU 会不断进行：
 
 ```text
-Input → Processing → Output
+fetch
+decode
+execute
 ```
 
-很多时候还要加上：
+也就是：
 
 ```text
-Storage
+取指令
+理解指令
+执行指令
 ```
 
-所以更完整的理解是：
+而所有数据最终都用 binary 表示：
 
 ```text
-Input → Processing → Output
-           ↓
-        Storage
+numbers
+characters
+images
+sound
+program instructions
 ```
 
-简单来说：
+所以 A1 的学习路线可以理解为：
 
 ```text
-input = enter data
-processing = CPU and software work on data
-output = show or produce result
-storage = save data for later
+计算机整体结构
+→ 硬件
+→ CPU 执行指令
+→ 内存和存储
+→ 数据表示
+→ 逻辑门
+→ 操作系统
+→ 控制系统
+→ 云计算
 ```
+
+学习 A1 时，学生最容易混淆：
+
+```text
+hardware 和 software
+RAM 和 storage
+CPU 和整个 computer
+primary memory 和 secondary storage
+GUI 和 operating system
+sensor 和 actuator
+cloud storage 和 backup
+```
+
+所以本模块会通过表格、流程图、场景题和 exam-style questions 来帮助学生建立清楚理解。
 
 </template>
 
@@ -121,8 +237,10 @@ storage = save data for later
 
 ### English Explanation
 
-A **computer system** does not only mean the monitor, and it does not only mean the computer case.  
-It is a system made of several parts working together:
+A1 Computer Fundamentals is about understanding the basic structure of a computer system.
+
+A computer is not only a screen, and it is not only a CPU.  
+It is a system where several parts work together:
 
 ```text
 hardware
@@ -131,121 +249,85 @@ data
 users
 ```
 
-For example, when a student laptop runs a browser and a programming IDE:
+For example, when a student opens a computer and writes code:
 
 ```text
-keyboard / mouse enter data
-CPU processes instructions
-RAM temporarily stores running programs and data
-SSD stores files and software long term
-screen displays results
-operating system manages hardware and programs
-user controls and uses the system
+keyboard inputs code
+operating system manages files and programs
+SSD stores project files
+RAM stores the running IDE and program data
+CPU executes instructions
+screen displays code and output
 ```
 
-The most basic working model of a computer system can be shown using the **IPO model**:
+At a deeper level, the CPU repeatedly performs:
 
 ```text
-Input → Processing → Output
+fetch
+decode
+execute
 ```
 
-Often, we also include:
+This means:
 
 ```text
-Storage
+get the instruction
+understand the instruction
+carry out the instruction
 ```
 
-So a more complete understanding is:
+All data is ultimately represented using binary:
 
 ```text
-Input → Processing → Output
-           ↓
-        Storage
+numbers
+characters
+images
+sound
+program instructions
 ```
 
-In simple terms:
+So the A1 learning path can be understood as:
 
 ```text
-input = enter data
-processing = CPU and software work on data
-output = show or produce result
-storage = save data for later
+whole computer system
+→ hardware
+→ CPU instruction processing
+→ memory and storage
+→ data representation
+→ logic gates
+→ operating systems
+→ control systems
+→ cloud computing
 ```
+
+In A1, students often confuse:
+
+```text
+hardware and software
+RAM and storage
+CPU and whole computer
+primary memory and secondary storage
+GUI and operating system
+sensor and actuator
+cloud storage and backup
+```
+
+Therefore, this module uses tables, diagrams, scenarios, and exam-style questions to build clear understanding.
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. What Is a Computer System?
+## 7. Core Whole-system Pattern
 
-A computer system is a set of connected parts that work together to process data.
-
-### Main Parts
-
-```text
-hardware
-software
-data
-users
-```
-
-| Part | Meaning | Example |
-|---|---|---|
-| Hardware | Physical components | CPU, RAM, SSD, keyboard, screen |
-| Software | Programs and instructions | operating system, browser, IDE |
-| Data | Raw values being used | text, images, numbers, files |
-| User | Person or system using it | student, teacher, admin, another computer |
-
-### Important
-
-A computer system needs both hardware and software.
-
-Hardware without software:
-
-```text
-physical machine with nothing useful to run
-```
-
-Software without hardware:
-
-```text
-instructions with nowhere to execute
-```
-
-::: tip Exam Phrase
-A computer system consists of hardware and software working together to input, process, output, and store data.
-:::
-
----
-
-## 6. IPO Model
-
-The IPO model stands for:
+A computer system can be described using:
 
 ```text
 Input → Processing → Output
 ```
 
-### Example: Calculator App
-
-| Stage | Example |
-|---|---|
-| Input | User enters `5 + 3` |
-| Processing | CPU and software calculate the result |
-| Output | Screen displays `8` |
-
-### Example: Search Engine
-
-| Stage | Example |
-|---|---|
-| Input | User types search keywords |
-| Processing | Server searches database and ranks results |
-| Output | Browser displays search results |
-
-### Storage Extension
-
-Many systems also store data:
+A more complete model includes storage:
 
 ```text
 Input → Processing → Output
@@ -253,752 +335,656 @@ Input → Processing → Output
         Storage
 ```
 
+### Example: Student Runs a Program
+
+| Stage | Example |
+|---|---|
+| Input | student types code using keyboard |
+| Processing | CPU executes program instructions |
+| Memory | RAM stores running IDE and program data |
+| Storage | SSD saves project files |
+| Output | screen displays program output |
+
+### Exam Phrase
+
+A computer system uses hardware and software to input, process, output, and store data.
+
+---
+
+## 8. Hardware Pattern
+
+Hardware means physical components.
+
+| Hardware Type | Role | Examples |
+|---|---|---|
+| Input | enters data | keyboard, mouse, sensor |
+| Output | presents results | monitor, printer, speaker |
+| Processing | processes data/instructions | CPU, GPU |
+| Memory | holds active data | RAM, cache, ROM |
+| Storage | saves data long term | SSD, HDD, USB drive |
+| Communication | sends/receives data | network card, router |
+
+### Common Rule
+
+Classify hardware by what it does in the system.
+
 Example:
 
 ```text
-A student types an essay.
-The computer processes keystrokes.
-The screen shows the essay.
-The file is saved to storage.
+touchscreen = input and output
 ```
+
+because it displays information and receives touch input.
 
 ---
 
-## 7. Data Flow in a Computer System
+## 9. CPU Pattern
 
-### General Flow
+The CPU is the main processor.
+
+It contains:
 
 ```text
-User
-  ↓
-Input device
-  ↓
-CPU / Processing
-  ↔
-Memory
-  ↓
-Output device
-  ↓
-Storage when saved
+Control Unit
+ALU
+Registers
+Cache
 ```
 
-### Mermaid Diagram
-
-```mermaid
-flowchart LR
-    U[User] --> I[Input Devices]
-    I --> CPU[CPU / Processing]
-    CPU <--> M[Memory / RAM]
-    CPU --> O[Output Devices]
-    CPU --> S[Secondary Storage]
-    S --> CPU
-```
-
-### Explanation
+### Key Roles
 
 | Component | Role |
 |---|---|
-| User | gives instructions or provides data |
-| Input device | enters data into the system |
-| CPU | processes instructions and data |
-| RAM | temporarily holds running programs and data |
-| Output device | shows or produces the result |
-| Storage | saves files and programs long term |
+| Control Unit | controls and coordinates operations |
+| ALU | performs arithmetic and logic operations |
+| Registers | tiny fast storage inside CPU |
+| Cache | fast memory close to CPU |
 
----
+### Important Registers
 
-## 8. Hardware
-
-Hardware means the physical parts of a computer system.
-
-### Examples
-
-| Category | Examples |
+| Register | Role |
 |---|---|
-| Input hardware | keyboard, mouse, scanner, microphone |
-| Output hardware | monitor, printer, speaker |
-| Processing hardware | CPU, GPU |
-| Memory hardware | RAM, cache, ROM |
-| Storage hardware | SSD, HDD, USB drive |
-| Network hardware | router, network card |
-
-### Key Idea
-
-If you can physically touch it, it is usually hardware.
-
-But do not oversimplify too much.  
-Data stored on a drive is not hardware itself; the drive is hardware.
+| PC | address of next instruction |
+| MAR | address currently accessed in memory |
+| MDR | data/instruction moving to/from memory |
+| CIR | current instruction being decoded/executed |
 
 ---
 
-## 9. Software
+## 10. Fetch-Decode-Execute Pattern
 
-Software means programs and instructions.
-
-### Main Types
+The CPU repeatedly processes instructions using:
 
 ```text
-system software
-application software
+Fetch → Decode → Execute
 ```
 
-### System Software
+### Summary
 
-System software manages or supports the computer system.
-
-Examples:
-
-```text
-operating system
-device drivers
-utility software
-```
-
-### Application Software
-
-Application software helps users perform tasks.
-
-Examples:
-
-```text
-web browser
-word processor
-spreadsheet
-game
-programming IDE
-media player
-```
-
-### Comparison
-
-| System Software | Application Software |
+| Stage | Meaning |
 |---|---|
-| manages/supports the computer | helps user complete tasks |
-| often runs in background | usually directly used by user |
-| example: operating system | example: browser |
-| example: device driver | example: word processor |
+| Fetch | get next instruction from memory |
+| Decode | Control Unit interprets instruction |
+| Execute | carry out instruction |
+
+### Fetch Register Flow
+
+```text
+PC → MAR
+memory read
+memory → MDR
+MDR → CIR
+PC updated
+```
+
+### Exam Phrase
+
+During fetch, the address in the Program Counter is copied to the MAR, the instruction is read from memory into the MDR, then copied to the CIR.
 
 ---
 
-## 10. Data
+## 11. Memory and Storage Pattern
 
-Data is raw facts or values used by the computer.
+Students must clearly separate memory and storage.
+
+| Component | Main Role | Volatile? |
+|---|---|---|
+| Registers | current CPU data/instructions | yes |
+| Cache | frequently used data/instructions | usually yes |
+| RAM | active programs/data | yes |
+| ROM | firmware/startup instructions | no |
+| SSD/HDD | long-term files/programs | no |
+
+### Memory Hierarchy
+
+```text
+Registers
+↓
+Cache
+↓
+RAM
+↓
+Secondary Storage
+```
+
+Usually:
+
+```text
+higher = faster, smaller, more expensive
+lower = slower, larger, cheaper
+```
+
+---
+
+## 12. Data Representation Pattern
+
+Computers use binary because circuits can reliably represent two states:
+
+```text
+0 / 1
+off / on
+false / true
+low voltage / high voltage
+```
+
+### Key Units
+
+| Unit | Size |
+|---|---:|
+| bit | 1 binary digit |
+| nibble | 4 bits |
+| byte | 8 bits |
+
+### Binary Place Values
+
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+
+### Representation Ideas
+
+| Data Type | How Represented |
+|---|---|
+| Integer | binary number |
+| Character | character set code |
+| Image | pixels and colour depth |
+| Sound | samples and bit depth |
+
+---
+
+## 13. Logic Gates Pattern
+
+Logic gates process binary inputs and produce binary outputs.
+
+| Gate | Output is 1 when... |
+|---|---|
+| NOT | input is 0 |
+| AND | all inputs are 1 |
+| OR | at least one input is 1 |
+| NAND | not all inputs are 1 |
+| NOR | no inputs are 1 |
+| XOR | inputs are different |
+
+### Truth Table Rule
+
+For `n` inputs:
+
+```text
+rows = 2^n
+```
 
 Examples:
 
 ```text
-text typed by a user
-numbers in a spreadsheet
-pixels in an image
-audio samples
-sensor readings
-student records
-program code
+2 inputs = 4 rows
+3 inputs = 8 rows
 ```
 
-Data can be:
+---
+
+## 14. Operating System Pattern
+
+An operating system is system software that manages hardware and software resources.
+
+### Main Functions
+
+| Function | Meaning |
+|---|---|
+| User interface | allows user interaction |
+| File management | organizes files and folders |
+| Memory management | allocates and tracks RAM |
+| Process management | manages running programs |
+| Device management | controls hardware devices |
+| Security management | manages users, passwords, permissions |
+| Network management | manages connections |
+
+### Exam Phrase
+
+The OS acts as an interface between users/applications and hardware while managing resources such as CPU, memory, files, and devices.
+
+---
+
+## 15. Control System Pattern
+
+A control system monitors and controls a physical process.
+
+### Basic Structure
 
 ```text
-input
-processed
-stored
-output as information
-transmitted over networks
+Sensor → Controller → Actuator
+```
+
+### Roles
+
+| Part | Role |
+|---|---|
+| Sensor | input from physical world |
+| Controller | processes sensor data and decides output |
+| Actuator | physical output/action |
+
+### Open-loop vs Closed-loop
+
+| Type | Feedback? | Example |
+|---|---|---|
+| Open-loop | no | timed sprinkler |
+| Closed-loop | yes | thermostat |
+
+### Exam Phrase
+
+A control system uses sensor input, processing by a controller, and actuator output to control a physical process.
+
+---
+
+## 16. Cloud Computing Pattern
+
+Cloud computing means using remote servers over a network to provide computing resources.
+
+### Resources
+
+```text
+storage
+software
+databases
+virtual servers
+development platforms
+backup
+collaboration tools
+```
+
+### Service Models
+
+| Model | Meaning |
+|---|---|
+| SaaS | ready-to-use cloud software |
+| PaaS | platform for building/deploying applications |
+| IaaS | virtual infrastructure such as servers/storage |
+
+### Main Trade-off
+
+| Benefit | Risk |
+|---|---|
+| access anywhere | internet dependence |
+| collaboration | privacy/security concerns |
+| scalability | ongoing cost/vendor lock-in |
+| provider maintenance | less direct control |
+
+---
+
+## 17. Suggested Teaching Pacing
+
+Actual pacing depends on class background.
+
+| Topic | Suggested Lessons | Notes |
+|---|---:|---|
+| Overview | 1 | Build whole-system model |
+| Computer Hardware | 1-2 | Classification and scenarios |
+| CPU Components | 2 | CU, ALU, registers, cache |
+| Fetch-Decode-Execute | 2 | Step-by-step register tracing |
+| Primary Memory | 1-2 | RAM/ROM/cache and volatility |
+| Secondary Storage | 1-2 | SSD/HDD/cloud and scenarios |
+| Data Representation | 3-4 | Binary conversion + images/sound |
+| Logic Gates | 2-3 | Truth tables need practice |
+| Operating Systems | 2 | OS functions and scenarios |
+| Control Systems | 2 | Sensors, actuators, feedback |
+| Cloud Computing | 1-2 | Advantages, risks, service models |
+
+---
+
+## 18. Recommended Classroom Routine
+
+For each A1 lesson, use this structure:
+
+```text
+1. Start with an everyday scenario
+2. Identify the components involved
+3. Explain key terms
+4. Show a diagram or flow
+5. Work through one example
+6. Discuss common mistakes
+7. Complete guided practice
+8. Answer one exam-style question
+9. Assign short homework
 ```
 
 ### Example
 
-A student types:
+For Primary Memory:
 
 ```text
-print("Hello")
+Scenario: opening a browser and IDE
+Components: SSD, RAM, cache, CPU
+Diagram: storage → RAM → cache → CPU
+Common mistake: RAM is not long-term storage
+Exam question: compare RAM and ROM
 ```
-
-This text is data.  
-The IDE displays it, the file system stores it, and the compiler/interpreter may process it later.
 
 ---
 
-## 11. Users
+## 19. Student Revision Routine
 
-A user is a person or another system that interacts with the computer system.
-
-Examples:
+Students should revise A1 by asking:
 
 ```text
-student using a laptop
-teacher entering marks
-bank customer using ATM
-driver using car navigation
-doctor using hospital database
-another computer sending data
+What component is involved?
+Is it hardware or software?
+Is it input, processing, output, memory, or storage?
+Is data temporary or permanent?
+What binary representation is used?
+What process is happening?
+What is the exam keyword?
 ```
 
-### Human and Non-human Users
-
-Sometimes the "user" is not a person.
-
-Example:
+For scenario questions, use this structure:
 
 ```text
-A weather sensor sends data to a computer system.
+1. Identify the system.
+2. Identify input.
+3. Identify processing.
+4. Identify output.
+5. Identify storage/memory if relevant.
+6. Explain why each component is suitable.
+7. Mention risks or limitations if asked.
 ```
-
-The sensor acts as a data source.
 
 ---
 
-## 12. Input, Processing, Output, and Storage
+## 20. Common A1 Mistakes Overview
 
-| Stage | Meaning | Examples |
+| Mistake | Topic | Fix |
 |---|---|---|
-| Input | data enters the system | keyboard, mouse, sensor |
-| Processing | data is used or changed | CPU calculations, searching, sorting |
-| Output | result is produced | screen, printer, speaker |
-| Storage | data is saved | SSD, HDD, cloud storage |
-
-### Key Idea
-
-Processing is not only mathematics.  
-It can include searching, sorting, comparing, converting, rendering, and decision making.
+| Computer means monitor | Overview | monitor is output hardware |
+| CPU is whole computer | CPU | CPU is one processing component |
+| Hardware means only inside case | Hardware | hardware includes peripherals |
+| Software means only apps | OS | software includes system software |
+| RAM stores files permanently | Memory | RAM is volatile |
+| SSD is primary memory | Storage | SSD is secondary storage |
+| Cache stores files | Memory | cache is temporary fast memory |
+| PC register stores current instruction | CPU/FDE | PC stores next instruction address |
+| MAR stores data | CPU/FDE | MAR stores address |
+| MDR stores address | CPU/FDE | MDR stores data/instruction |
+| Binary only represents numbers | Data Representation | all data uses binary |
+| ASCII supports every language | Data Representation | Unicode supports many languages |
+| OR means exactly one | Logic Gates | XOR means exactly one/different |
+| GUI is the whole OS | OS | GUI is one interface |
+| Sensor is output | Control Systems | sensor is input |
+| Actuator is input | Control Systems | actuator is output/action |
+| Cloud data is not physical | Cloud | cloud uses remote physical servers |
+| Cloud sync always equals backup | Cloud | sync and backup are different |
 
 ---
 
-## 13. Worked Example: Student Laptop
+## 21. Assessment Focus
 
-A student opens a programming IDE and runs a Java program.
+A1 questions may ask students to:
 
-| Part | Role |
+- define computer system, hardware, software, CPU, OS, memory, storage
+- classify hardware devices
+- explain CPU components
+- trace fetch-decode-execute cycle
+- compare RAM, ROM, cache, and secondary storage
+- compare SSD and HDD
+- convert binary and denary
+- calculate image or sound file size
+- complete logic gate truth tables
+- explain operating system functions
+- identify sensors and actuators
+- distinguish open-loop and closed-loop systems
+- explain cloud computing benefits and risks
+- apply concepts to real-world scenarios
+
+---
+
+## 22. Common Exam-style Command Words
+
+| Command | What Students Should Do |
 |---|---|
-| User | opens IDE and writes code |
-| Keyboard | inputs code |
-| SSD | stores IDE, Java files, and project files |
-| RAM | holds IDE and code while running |
-| CPU | executes instructions |
-| Operating system | manages memory, files, input/output devices |
-| Screen | displays IDE, code, and output |
-
-### Data Flow
-
-```text
-keyboard input
-→ IDE receives text
-→ RAM stores active program data
-→ CPU processes commands
-→ screen displays code/output
-→ SSD saves project file
-```
+| State | Give a short answer |
+| Identify | Name the correct component/type |
+| Define | Give precise meaning |
+| Describe | Give features or steps |
+| Explain | Give reason and effect |
+| Distinguish | Show clear difference |
+| Compare | Give similarities and differences |
+| Calculate | Show working and final value |
+| Construct | Create truth table/diagram/answer |
+| Justify | Give reason for a choice |
+| Evaluate | Give balanced advantages and disadvantages |
 
 ---
 
-## 14. Worked Example: Web Browser
-
-A student opens a website.
-
-| Stage | Example |
-|---|---|
-| Input | user types URL or clicks link |
-| Processing | browser sends request and renders page |
-| Network | data is sent and received |
-| Memory | webpage data is temporarily stored |
-| Output | webpage appears on screen |
-| Storage | browser may save cache, cookies, downloads |
-
-### Important
-
-Even a simple action like opening a website uses many parts of the computer system.
-
----
-
-## 15. Worked Example: ATM
-
-An ATM is also a computer system.
-
-| Part | Example |
-|---|---|
-| Input | keypad, card reader, touchscreen |
-| Processing | checks PIN, communicates with bank server |
-| Output | screen message, printed receipt, cash |
-| Storage | transaction records in bank database |
-| Hardware | cash dispenser, screen, keypad |
-| Software | ATM program and operating system |
-| Data | account number, transaction amount |
-| User | bank customer |
-
-The ATM example shows that computer systems are not only laptops or desktops.
-
----
-
-## 16. General-purpose vs Dedicated Systems Preview
-
-### General-purpose Computer
-
-A general-purpose computer can perform many different tasks.
-
-Examples:
-
-```text
-laptop
-desktop PC
-smartphone
-tablet
-```
-
-Tasks:
-
-```text
-browse web
-write documents
-play games
-program
-edit images
-```
-
-### Dedicated / Embedded System
-
-A dedicated system is designed for a specific purpose.
-
-Examples:
-
-```text
-washing machine controller
-traffic light system
-microwave oven
-car engine control unit
-smart thermostat
-```
-
-This will be studied more deeply in the Embedded Systems page.
-
----
-
-## 17. Hardware and Software Working Together
-
-A computer system only works when hardware and software cooperate.
-
-### Example: Printing a Document
-
-| Step | Component |
-|---|---|
-| User clicks print | application software |
-| OS sends print job | operating system |
-| Printer driver translates instructions | system software |
-| Printer receives data | hardware |
-| Paper output is produced | output hardware |
-
-### Key Idea
-
-Software gives instructions.  
-Hardware physically carries out the instructions.
-
----
-
-## 18. Common Computer Systems
-
-| System | Input | Processing | Output | Storage |
-|---|---|---|---|---|
-| Laptop | keyboard, mouse | CPU | screen, speakers | SSD |
-| Smartphone | touchscreen, camera | mobile processor | screen, speaker | flash storage |
-| ATM | card reader, keypad | transaction processing | screen, cash, receipt | bank database |
-| Game console | controller | CPU/GPU | TV display, sound | internal storage |
-| Smart watch | sensors, buttons | processor | screen, vibration | flash storage |
-| Traffic lights | sensors/timer | controller | lights | small program memory |
-
----
-
-## 19. Common Mistakes
-
-| Mistake | Why it is wrong | Better understanding |
-|---|---|---|
-| Computer means only monitor | Monitor is only output hardware | Computer system has many parts |
-| CPU is the whole computer | CPU is one processing component | System includes CPU, memory, storage, software, etc. |
-| Hardware means only inside the case | Hardware includes input/output devices too | Keyboard and screen are hardware |
-| Software means only apps | OS and utilities are also software | Software includes system and application software |
-| RAM stores files permanently | RAM is temporary working memory | Files are stored on secondary storage |
-| Storage and memory are the same | They have different roles | Memory is working area; storage is long-term |
-| Input and data are the same | Input is data entering system | Data can also be stored or output |
-| Output is always on screen | Output can be sound, print, movement | Many output forms exist |
-| User must always be human | Another system/sensor may interact | User/data source can be non-human |
-| IPO ignores storage | Basic IPO shows flow, but real systems often store data | Add storage when explaining real systems |
-
----
-
-## 20. Guided Practice
-
-### Practice 1: Identify the Parts
-
-A student uses a laptop to write an essay.
-
-Identify:
-
-1. one input device
-2. one output device
-3. one storage device
-4. one example of software
-
-<details>
-<summary>Suggested Answer</summary>
-
-1. Input device: keyboard
-2. Output device: screen
-3. Storage device: SSD
-4. Software: word processor or operating system
-
-</details>
-
----
-
-### Practice 2: Hardware or Software?
-
-Classify each item.
-
-```text
-keyboard
-operating system
-web browser
-RAM
-printer
-antivirus utility
-```
-
-<details>
-<summary>Suggested Answer</summary>
-
-| Item | Type |
-|---|---|
-| keyboard | hardware |
-| operating system | software |
-| web browser | software |
-| RAM | hardware |
-| printer | hardware |
-| antivirus utility | software |
-
-</details>
-
----
-
-### Practice 3: IPO Model
-
-A user enters two numbers into a calculator app and sees the result.
-
-Identify input, processing, and output.
-
-<details>
-<summary>Suggested Answer</summary>
-
-Input: the two numbers and operation entered by the user.  
-Processing: the CPU and calculator app calculate the result.  
-Output: the result displayed on the screen.
-
-</details>
-
----
-
-### Practice 4: Memory or Storage?
-
-Where is a saved project file kept after the computer is turned off?
-
-<details>
-<summary>Suggested Answer</summary>
-
-It is kept in secondary storage, such as an SSD or HDD, because storage keeps data long term.
-
-</details>
-
----
-
-### Practice 5: System Explanation
-
-Why does a computer need both hardware and software?
-
-<details>
-<summary>Suggested Answer</summary>
-
-Hardware provides the physical components that can input, process, output, and store data. Software provides the instructions that tell the hardware what to do. Without software, hardware cannot perform useful tasks; without hardware, software cannot run.
-
-</details>
-
----
-
-## 21. Independent Practice
+## 23. Mini Diagnostic Check
 
 ### Question 1
 
-Define computer system.
+What is the difference between hardware and software?
+
+<details>
+<summary>Answer</summary>
+
+Hardware is the physical components of a computer system.  
+Software is the programs and instructions that tell hardware what to do.
+
+</details>
+
+---
 
 ### Question 2
 
-Explain the difference between hardware and software.
+What does the Program Counter store?
+
+<details>
+<summary>Answer</summary>
+
+The address of the next instruction to be fetched.
+
+</details>
+
+---
 
 ### Question 3
 
-Give three examples of hardware and three examples of software.
+Why is RAM different from SSD?
+
+<details>
+<summary>Answer</summary>
+
+RAM is volatile primary memory used for currently running programs and data.  
+SSD is non-volatile secondary storage used to store files and programs long term.
+
+</details>
+
+---
 
 ### Question 4
 
-Explain the IPO model using a school printer example.
+Convert `00010110` to denary.
+
+<details>
+<summary>Answer</summary>
+
+```text
+16 + 4 + 2 = 22
+```
+
+Answer:
+
+```text
+22
+```
+
+</details>
+
+---
 
 ### Question 5
 
-A student opens a browser and downloads a PDF. Identify input, processing, output, and storage.
+Complete the AND truth table.
+
+| A | B | A AND B |
+|---:|---:|---:|
+| 0 | 0 | ? |
+| 0 | 1 | ? |
+| 1 | 0 | ? |
+| 1 | 1 | ? |
+
+<details>
+<summary>Answer</summary>
+
+| A | B | A AND B |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+</details>
+
+---
 
 ### Question 6
 
-Explain why RAM and SSD do not have the same role.
-
-### Question 7
-
-Classify each as input, output, processing, memory, or storage:
-
-```text
-CPU
-RAM
-keyboard
-monitor
-SSD
-microphone
-printer
-```
-
-### Question 8
-
-Explain how hardware, software, data, and users interact in an ATM.
-
-### Question 9
-
-Give two examples of general-purpose computers and two examples of dedicated or embedded systems.
-
-### Question 10
-
-Explain why “the CPU is the computer” is not an accurate statement.
-
----
-
-## 22. Exam-style Questions
-
-### Question 1 [4 marks]
-
-Define computer system and give two components of a computer system.
+Give one sensor and one actuator in a heating system.
 
 <details>
-<summary>Mark Scheme Style Answer</summary>
+<summary>Answer</summary>
 
-A computer system is a combination of hardware, software, data, and users working together to input, process, output, and store data. Components include hardware such as CPU or keyboard, software such as the operating system, data, and users.
+Sensor: temperature sensor.  
+Actuator: heater, relay, valve, or fan depending on the system.
 
 </details>
 
 ---
 
-### Question 2 [4 marks]
+## 24. End-of-module Practice Plan
 
-Distinguish between hardware and software.
+After finishing A1, students should complete:
 
-<details>
-<summary>Mark Scheme Style Answer</summary>
-
-Hardware is the physical part of a computer system that can be touched, such as the CPU, keyboard, RAM, or monitor. Software is the set of programs and instructions that tell the hardware what to do, such as the operating system or a web browser.
-
-</details>
-
----
-
-### Question 3 [5 marks]
-
-Explain the input-process-output model using a calculator app.
-
-<details>
-<summary>Mark Scheme Style Answer</summary>
-
-The input is the numbers and operation entered by the user, such as 5 + 3. The processing is the calculation performed by the CPU under the control of the calculator software. The output is the result, such as 8, displayed on the screen.
-
-</details>
+| Practice Type | Purpose |
+|---|---|
+| 10 vocabulary questions | strengthen core definitions |
+| 8 classification questions | hardware/software/input/output/storage |
+| 5 CPU register questions | PC, MAR, MDR, CIR |
+| 3 fetch-decode-execute traces | process sequence |
+| 6 memory/storage comparisons | RAM, ROM, cache, SSD/HDD |
+| 8 binary conversion questions | fluency |
+| 4 file size calculations | image and sound |
+| 5 logic gate truth tables | Boolean logic |
+| 4 OS scenario questions | function explanation |
+| 3 control system scenarios | sensors, actuators, feedback |
+| 3 cloud computing evaluation questions | benefits and risks |
 
 ---
 
-### Question 4 [6 marks]
+## 25. Suggested Mini Project
 
-A student uses a laptop to write and save a document. Explain how hardware and software are involved.
-
-<details>
-<summary>Mark Scheme Style Answer</summary>
-
-The keyboard is hardware used to input text. The word processor is application software used to create and edit the document. The CPU processes instructions, while RAM temporarily stores the program and document while they are being used. The operating system manages files and hardware resources. When the student saves the document, it is stored on secondary storage such as an SSD.
-
-</details>
-
----
-
-### Question 5 [6 marks]
-
-Explain why storage and memory are not the same thing.
-
-<details>
-<summary>Mark Scheme Style Answer</summary>
-
-Memory, such as RAM, is used as a fast working area while programs are running. It temporarily stores active programs and data needed by the CPU. Storage, such as an SSD or HDD, stores files, programs, and data long term. RAM is usually volatile, so its contents are lost when power is off, while secondary storage is non-volatile.
-
-</details>
-
----
-
-## 23. Classroom Activity
-
-### Activity 1: Computer System Sorting
-
-Give students cards:
-
-```text
-CPU
-RAM
-SSD
-keyboard
-monitor
-operating system
-browser
-student data
-user
-```
-
-Students sort them into:
-
-```text
-hardware
-software
-data
-user
-```
-
----
-
-### Activity 2: IPO Role-play
-
-Students act as:
-
-```text
-user
-keyboard
-CPU
-RAM
-screen
-storage
-```
-
-They simulate typing and saving a document.
-
----
-
-### Activity 3: Everyday Computer Systems
-
-Groups choose one system:
-
-```text
-ATM
-smartphone
-traffic lights
-game console
-school printer
-self-checkout machine
-```
-
-They identify:
-
-```text
-input
-processing
-output
-storage
-hardware
-software
-data
-user
-```
-
----
-
-## 24. Homework
-
-### Homework Part A: Concept Explanation
-
-In 5-6 sentences, explain what a computer system is. Include hardware, software, data, and users.
-
----
-
-### Homework Part B: IPO Scenario
+### Computer System Case Study
 
 Choose one system:
 
 ```text
+student laptop
+gaming PC
 ATM
-online shopping website
-game console
-school attendance system
+smart thermostat
+school server
+traffic light system
+online cloud document system
 ```
 
-Explain its:
+Students should produce:
 
 ```text
-input
-processing
-output
-storage
+1. system overview
+2. hardware components
+3. input / processing / output / storage
+4. CPU and memory role
+5. storage choice
+6. data representation example
+7. logic or condition example
+8. operating system or controller role
+9. security / reliability concern
+10. one exam-style explanation question with answer
 ```
 
----
+### Example: Smart Thermostat
 
-### Homework Part C: Classification Table
-
-Create a table with 12 items and classify each as:
+Students could identify:
 
 ```text
-hardware
-software
-data
-user
+temperature sensor
+controller
+heater actuator
+set point
+closed-loop feedback
+cloud app connection if smart
 ```
 
-At least 5 items must be hardware and at least 3 must be software.
+---
+
+## 26. A1 Completion Checklist
+
+Before moving to the next module, students should be able to:
+
+- [ ] define computer system
+- [ ] distinguish hardware, software, data, and users
+- [ ] classify input, output, processing, memory, storage, and communication hardware
+- [ ] explain CPU, CU, ALU, registers, and cache
+- [ ] explain PC, MAR, MDR, and CIR
+- [ ] describe fetch, decode, and execute
+- [ ] explain RAM, ROM, cache, and secondary storage
+- [ ] distinguish volatile and non-volatile memory
+- [ ] compare SSD and HDD
+- [ ] explain why computers use binary
+- [ ] convert simple binary and denary values
+- [ ] explain ASCII and Unicode
+- [ ] explain bitmap image representation
+- [ ] explain sound sampling
+- [ ] complete truth tables for basic logic gates
+- [ ] explain OS functions
+- [ ] distinguish GUI and CLI
+- [ ] explain sensors and actuators
+- [ ] distinguish open-loop and closed-loop control systems
+- [ ] explain cloud computing
+- [ ] distinguish SaaS, PaaS, and IaaS
+- [ ] evaluate advantages and risks of cloud computing
 
 ---
 
-### Homework Part D: Written Answer
+## 27. One-page Module Summary
 
-Explain why a computer needs both memory and storage.
-
----
-
-## 25. One-page Revision Summary
-
-| Point | Summary |
+| Area | Key Idea |
 |---|---|
-| Computer system | Hardware, software, data, and users working together |
-| Hardware | Physical components |
-| Software | Programs and instructions |
-| Data | Raw values processed or stored by computer |
-| User | Person or system interacting with computer |
-| Input | Data entered into system |
-| Processing | CPU/software work on data |
-| Output | Result produced by system |
-| Storage | Data saved for later use |
-| IPO model | Input → Processing → Output |
-| RAM | Temporary working memory |
-| Secondary storage | Long-term file/program storage |
-| System software | Manages/supports computer system |
-| Application software | Helps user complete tasks |
-| Exam phrase | A computer system uses hardware and software to input, process, output, and store data |
+| Computer system | Hardware, software, data, and users work together |
+| Hardware | Physical components classified by role |
+| CPU | Executes instructions using CU, ALU, registers, cache |
+| Fetch-decode-execute | CPU repeatedly gets, understands, and carries out instructions |
+| Primary memory | RAM/ROM/cache support active processing |
+| Secondary storage | Non-volatile long-term storage |
+| Data representation | All data is represented using binary patterns |
+| Logic gates | Boolean circuits process 0/1 inputs |
+| Operating systems | Manage hardware/software resources |
+| Control systems | Use sensors, controllers, actuators, and feedback |
+| Cloud computing | Uses remote servers over a network |
 
----
-
-## 26. Quick Self-test
-
-Before moving on, students should be able to answer these:
-
-1. What is a computer system?
-2. What is hardware?
-3. What is software?
-4. What is data?
-5. What is a user?
-6. What does IPO stand for?
-7. Give one input device.
-8. Give one output device.
-9. Why is RAM different from storage?
-10. Why do hardware and software need each other?
+::: tip Next Step
+After completing A1 pages, the next quality-control step should be **A1 Computer Fundamentals v1.1 Quality Review** to confirm the module is ready for classroom use.
+:::
