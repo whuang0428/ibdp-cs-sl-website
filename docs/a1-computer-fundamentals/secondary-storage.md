@@ -4,12 +4,17 @@
 
 By the end of this lesson, students should be able to:
 
-- define secondary storage
-- explain why secondary storage is needed
-- compare HDD, SSD, optical storage, and cloud storage
-- distinguish storage capacity, speed, durability, portability, and cost
-- choose suitable storage for scenarios
-- explain advantages and disadvantages of storage types
+- explain what secondary storage is
+- distinguish secondary storage from primary memory
+- explain why computers need secondary storage
+- describe common types of secondary storage
+- compare SSD, HDD, optical storage, flash storage, and cloud storage
+- explain storage characteristics such as capacity, speed, portability, durability, and cost
+- choose suitable storage for different scenarios
+- explain backup and archiving at a basic level
+- explain how storage choice affects performance and reliability
+- avoid common misconceptions about storage
+- answer exam-style questions about secondary storage
 
 ---
 
@@ -19,12 +24,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | A1 Computer Fundamentals |
 | Label | SL Core |
-| Main skill | Understanding long-term data storage |
-| Connected units | B1 Computational Thinking, A2 Networks, A3 Databases, A4 Machine Learning |
-| Exam relevance | Definitions, process explanation, comparison, scenario-based questions |
+| Main skill | Understanding long-term storage devices and storage choices |
+| Connected topics | Computer hardware, primary memory, operating systems, backup, cloud computing, databases |
+| Practical focus | Choosing suitable storage media for real-world scenarios |
+| Exam relevance | Definitions, comparisons, scenario recommendations, advantages and disadvantages |
 
 ::: tip Learning Focus
-A1 questions often ask students to explain **how a computer system works** and to apply technical vocabulary to a real scenario.
+Secondary storage stores data and programs long term. It is usually non-volatile, meaning data remains when power is turned off.
 :::
 
 ---
@@ -33,13 +39,22 @@ A1 questions often ask students to explain **how a computer system works** and t
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Secondary storage | 辅助存储 | Non-volatile storage used to keep data long-term |
-| HDD | 硬盘 | Magnetic storage with moving parts |
-| SSD | 固态硬盘 | Flash storage with no moving parts |
-| Optical storage | 光盘存储 | Storage using laser technology such as DVD |
-| Cloud storage | 云存储 | Data stored on remote servers and accessed over a network |
+| Secondary storage | 辅助存储 / 二级存储 | Long-term storage for data, files, and programs |
+| Non-volatile | 非易失性 | Data remains when power is turned off |
+| Storage medium | 存储介质 | Physical or virtual place where data is stored |
+| Storage device | 存储设备 | Hardware used to read/write storage media |
+| SSD | 固态硬盘 | Solid-state drive using flash memory |
+| HDD | 机械硬盘 | Hard disk drive using magnetic disks |
+| Optical storage | 光学存储 | Storage read/written using laser, such as CD/DVD/Blu-ray |
+| Flash storage | 闪存 | Non-volatile electronic storage, such as USB drive or SD card |
+| Cloud storage | 云存储 | Data stored on remote servers accessed through a network |
 | Capacity | 容量 | Amount of data that can be stored |
-| Portability | 便携性 | How easy storage is to move or access elsewhere |
+| Access speed | 访问速度 | How quickly data can be read or written |
+| Portability | 便携性 | How easy it is to move the storage device |
+| Durability | 耐用性 | Ability to resist damage or data loss |
+| Backup | 备份 | Copy of data used for recovery |
+| Archive | 归档 | Long-term storage of data that is rarely used |
+| Read/write | 读写 | Reading data from or writing data to storage |
 
 ---
 
@@ -50,16 +65,46 @@ A1 questions often ask students to explain **how a computer system works** and t
 
 ### 中文讲解
 
-**Secondary storage（辅助存储）** 用于长期保存数据。它通常是 non-volatile，也就是说断电后数据仍然保留。
+**Secondary storage（辅助存储）** 用来长期保存数据、文件和程序。  
+它和 RAM 不一样。RAM 是程序运行时的临时工作区域，而 secondary storage 是长期保存数据的地方。
 
-常见类型：
+例如：
 
-- HDD：容量大、价格较低，但有机械部件，速度较慢
-- SSD：速度快、抗震较好，但同容量价格通常更高
-- Optical storage：适合分发或归档，但容量和速度有限
-- Cloud storage：可从不同设备访问，但依赖网络和服务提供商
+```text
+SSD 保存操作系统、应用程序和文件
+HDD 保存大量视频、照片或备份
+USB drive 用来移动文件
+SD card 用在相机或手机中
+cloud storage 通过网络保存文件
+```
 
-选择存储设备时，要结合场景考虑速度、容量、成本、耐用性、便携性和安全性。
+最重要的区别是：
+
+```text
+RAM = volatile, temporary, used while programs run
+secondary storage = non-volatile, long-term, keeps files after power off
+```
+
+当你打开一个程序时：
+
+```text
+程序原本保存在 SSD 中
+操作系统把需要的部分加载到 RAM
+CPU 从 RAM 中取指令执行
+保存文件时，数据再写回 SSD
+```
+
+选择 storage 时，不能只看容量。还要考虑：
+
+```text
+speed
+capacity
+cost
+portability
+durability
+reliability
+security
+```
 
 </template>
 
@@ -67,164 +112,1060 @@ A1 questions often ask students to explain **how a computer system works** and t
 
 ### English Explanation
 
-**Secondary storage** is used to store data long-term. It is usually non-volatile, meaning data remains after power is turned off.
+**Secondary storage** is used to store data, files, and programs long term.  
+It is different from RAM. RAM is the temporary working area used while programs are running, while secondary storage keeps data for later use.
 
-Common types:
+Examples include:
 
-- HDD: large capacity and lower cost, but has moving parts and is slower
-- SSD: fast and durable, but often more expensive per GB
-- Optical storage: useful for distribution or archive, but limited in speed and capacity
-- Cloud storage: accessible from different devices, but depends on network and provider
+```text
+SSD stores the operating system, applications, and files
+HDD stores large videos, photos, or backups
+USB drive moves files between devices
+SD card is used in cameras or phones
+cloud storage stores files through a network
+```
 
-Storage choice depends on speed, capacity, cost, durability, portability, and security.
+The most important distinction is:
+
+```text
+RAM = volatile, temporary, used while programs run
+secondary storage = non-volatile, long-term, keeps files after power off
+```
+
+When you open a program:
+
+```text
+the program is originally stored on SSD
+the operating system loads needed parts into RAM
+the CPU fetches instructions from RAM
+when you save a file, data is written back to SSD
+```
+
+When choosing storage, do not only consider capacity. Also consider:
+
+```text
+speed
+capacity
+cost
+portability
+durability
+reliability
+security
+```
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. Real-life Example
+## 5. What Is Secondary Storage?
 
-### Example: Choosing storage for a student laptop
+Secondary storage is long-term storage used to keep data and programs even when the computer is turned off.
 
-| Need | Suitable Storage | Reason |
-|---|---|---|
-| Fast boot time | SSD | fast read/write access |
-| Cheap large backup | HDD | lower cost per GB |
-| Access from school and home | Cloud storage | available across devices |
-| Hand out software offline | USB/optical depending context | portable distribution |
+It stores:
+
+```text
+operating system files
+application software
+documents
+images
+videos
+music
+databases
+backups
+game files
+programming projects
+```
+
+### Key Properties
+
+| Property | Explanation |
+|---|---|
+| Non-volatile | data remains after power off |
+| Larger capacity | usually larger than RAM |
+| Slower than primary memory | not as fast as RAM/cache/registers |
+| Long-term | used for saved files and installed programs |
+| Often cheaper per GB | compared with RAM/cache |
 
 ---
 
-## 6. Storage Decision Pattern
+## 6. Why Secondary Storage Is Needed
+
+Computers need secondary storage because RAM is temporary.
+
+Without secondary storage:
 
 ```text
-Scenario need → compare capacity, speed, cost, durability, portability, security → choose storage type
+files would be lost when power is off
+programs could not be stored permanently
+operating system could not be kept for startup
+users could not save work
+backups could not be stored
+```
+
+### Example
+
+A student writes code in an IDE.
+
+| Stage | Where Data Is |
+|---|---|
+| Code file saved | SSD |
+| File opened in IDE | RAM |
+| CPU runs program | CPU + RAM |
+| Student saves changes | SSD |
+
+::: tip Exam Phrase
+Secondary storage is needed to store data and programs permanently because RAM is volatile and loses its contents when power is turned off.
+:::
+
+---
+
+## 7. Secondary Storage vs Primary Memory
+
+| Feature | Primary Memory | Secondary Storage |
+|---|---|---|
+| Purpose | active processing | long-term storage |
+| CPU access | direct and fast | indirect/slower |
+| Volatility | RAM/cache volatile; ROM non-volatile | usually non-volatile |
+| Speed | faster | slower |
+| Capacity | smaller | larger |
+| Cost per GB | higher | lower |
+| Examples | RAM, ROM, cache | SSD, HDD, USB, cloud |
+
+### Simple Memory
+
+```text
+Primary memory = working area
+Secondary storage = long-term library
 ```
 
 ---
 
-## 7. Technical Example
+## 8. Main Types of Secondary Storage
 
-### Comparison table
+Common types include:
 
-| Type | Strength | Weakness |
+```text
+SSD
+HDD
+USB flash drive
+SD card
+optical disc
+magnetic tape
+cloud storage
+```
+
+### Overview Table
+
+| Type | Main Strength | Main Weakness |
 |---|---|---|
-| HDD | large, cheap | slower, moving parts |
-| SSD | fast, durable | more expensive |
-| Optical | cheap for distribution | limited capacity |
-| Cloud | accessible anywhere | needs internet, privacy concerns |
+| SSD | fast, durable, no moving parts | more expensive than HDD per GB |
+| HDD | large capacity, cheaper per GB | slower, moving parts |
+| USB flash drive | portable | easy to lose, limited durability |
+| SD card | small and portable | slower/less durable depending on type |
+| Optical disc | cheap for distribution/archive | low capacity, slower |
+| Magnetic tape | very cheap for huge backup/archive | slow access |
+| Cloud storage | accessible anywhere with internet | needs network, privacy/security concerns |
 
 ---
 
-## 8. Explanation of the Example
+## 9. Solid-State Drive: SSD
 
-Secondary storage is not used the same way as RAM. It stores files and programs when not actively running. Data must be loaded from secondary storage into RAM before active execution.
+An SSD uses flash memory and has no moving mechanical parts.
+
+### Advantages
+
+```text
+fast read/write speed
+fast boot and program loading
+more shock-resistant than HDD
+silent operation
+low power use
+small and light
+```
+
+### Disadvantages
+
+```text
+more expensive per GB than HDD
+limited write cycles, although modern SSDs are reliable
+data recovery can be difficult after failure
+```
+
+### Common Uses
+
+```text
+laptops
+desktops
+game consoles
+servers needing fast access
+operating system drive
+programming workstations
+```
+
+### Example
+
+Using an SSD can make:
+
+```text
+computer startup faster
+applications open faster
+large projects load faster
+games load faster
+```
 
 ---
 
-## 9. Step-by-step Process / Trace
+## 10. Hard Disk Drive: HDD
 
-| Step | Action |
+An HDD uses spinning magnetic disks and a read/write head.
+
+### Advantages
+
+```text
+large capacity
+cheaper per GB
+suitable for large backups and media libraries
+widely available
+```
+
+### Disadvantages
+
+```text
+slower than SSD
+moving parts can be damaged by shock
+makes noise
+uses more power
+slower random access
+```
+
+### Common Uses
+
+```text
+large file storage
+backup drives
+desktop storage
+media archives
+low-cost high-capacity storage
+```
+
+### Example
+
+An HDD may be suitable for storing:
+
+```text
+large video collections
+photos
+backup files
+archive data
+```
+
+but less ideal for fast program loading compared with SSD.
+
+---
+
+## 11. SSD vs HDD
+
+| Feature | SSD | HDD |
+|---|---|---|
+| Technology | flash memory | spinning magnetic disks |
+| Moving parts | no | yes |
+| Speed | faster | slower |
+| Durability | better against shock | more vulnerable to shock |
+| Noise | silent | can make noise |
+| Power use | usually lower | usually higher |
+| Cost per GB | higher | lower |
+| Capacity for price | lower | higher |
+| Best for | OS, apps, fast access | large storage, backups |
+
+### Exam-style Comparison
+
+An SSD is usually faster and more durable because it has no moving parts, while an HDD is usually cheaper per GB and can provide large capacity at lower cost.
+
+---
+
+## 12. Flash Storage
+
+Flash storage uses non-volatile electronic memory.
+
+Examples:
+
+```text
+USB flash drive
+SD card
+microSD card
+SSD
+```
+
+### USB Flash Drive
+
+Advantages:
+
+```text
+portable
+easy to use
+small
+useful for transferring files
+```
+
+Disadvantages:
+
+```text
+easy to lose
+can be physically damaged
+may have slower speed than internal SSD
+security risk if lost
+limited write endurance
+```
+
+### SD Card
+
+Common in:
+
+```text
+cameras
+phones
+drones
+portable devices
+single-board computers
+```
+
+---
+
+## 13. Optical Storage
+
+Optical storage uses lasers to read or write data.
+
+Examples:
+
+```text
+CD
+DVD
+Blu-ray
+```
+
+### Advantages
+
+```text
+cheap for distribution
+can be useful for offline archive
+some types are read-only, reducing accidental changes
+```
+
+### Disadvantages
+
+```text
+lower capacity than modern drives
+slower access
+can be scratched
+many modern devices no longer include optical drives
+```
+
+### Common Uses
+
+```text
+software/media distribution in older systems
+backup/archive in some cases
+movies/music discs
+```
+
+---
+
+## 14. Magnetic Tape
+
+Magnetic tape is mainly used for large-scale backup and archiving.
+
+### Advantages
+
+```text
+very low cost per GB/TB
+high capacity
+good for long-term archive
+can be stored offline
+```
+
+### Disadvantages
+
+```text
+slow access
+sequential access, not good for quickly finding one file
+requires tape drives
+not convenient for everyday use
+```
+
+### Common Uses
+
+```text
+large organization backups
+data archives
+disaster recovery copies
+```
+
+::: info Level Control
+Students usually only need basic awareness that magnetic tape is useful for large backups and archives, not everyday fast access.
+:::
+
+---
+
+## 15. Cloud Storage
+
+Cloud storage stores data on remote servers accessed through a network.
+
+Examples:
+
+```text
+Google Drive
+OneDrive
+iCloud
+Dropbox
+school cloud storage
+company cloud backup
+```
+
+### Advantages
+
+```text
+access files from different devices
+easy sharing
+automatic synchronization
+can support backup
+scalable capacity
+off-site storage
+```
+
+### Disadvantages
+
+```text
+requires internet access
+upload/download speed depends on network
+ongoing cost may apply
+privacy and security concerns
+provider outage can affect access
+user may lose access to account
+```
+
+### Important
+
+Cloud storage is still stored on physical storage devices somewhere, but the user accesses it remotely.
+
+---
+
+## 16. Local Storage vs Cloud Storage
+
+| Feature | Local Storage | Cloud Storage |
+|---|---|---|
+| Location | user's device or local drive | remote servers |
+| Access | available without internet | usually needs internet |
+| Speed | can be very fast locally | depends on network |
+| Sharing | manual or network setup | often easy |
+| Control | user controls device | provider manages infrastructure |
+| Risk | device loss/damage | account/provider/network issues |
+| Privacy | depends on device security | depends on provider and settings |
+
+### Balanced View
+
+Cloud storage is convenient, but it does not remove the need for security and backup planning.
+
+---
+
+## 17. Storage Characteristics
+
+When comparing storage, consider:
+
+```text
+capacity
+speed
+cost
+portability
+durability
+reliability
+security
+power use
+physical size
+```
+
+### Explanation Table
+
+| Characteristic | Question to Ask |
 |---|---|
-| 1 | User saves a document |
-| 2 | File is written to SSD/HDD/cloud |
-| 3 | Computer is turned off |
-| 4 | Data remains stored |
-| 5 | User opens file later |
-| 6 | File is loaded back for use |
+| Capacity | How much data can it store? |
+| Speed | How fast can it read/write data? |
+| Cost | How expensive is it per GB? |
+| Portability | Is it easy to carry? |
+| Durability | Can it survive movement/shock? |
+| Reliability | How likely is failure/data loss? |
+| Security | Can data be protected if lost/stolen? |
+| Power use | Is it suitable for battery devices? |
 
 ---
 
-## 10. Common Mistakes
+## 18. Choosing Suitable Storage
 
-| Mistake | Why it is a problem | Better habit |
+### Scenario Table
+
+| Scenario | Suitable Storage | Reason |
 |---|---|---|
-| Calling secondary storage volatile | It is normally non-volatile | Say it keeps data after power off |
-| Confusing RAM and SSD | RAM is primary memory; SSD is secondary storage | Use role and volatility to distinguish |
-| Saying cloud storage is on the user's computer | Cloud stores data on remote servers | Mention network access |
-| Ignoring security of cloud | Cloud has privacy/access risks | Discuss encryption and account security |
-| Choosing storage without scenario | Different needs require different choices | Link answer to speed/cost/capacity |
+| Laptop operating system | SSD | fast boot and app loading |
+| Large video archive | HDD or cloud/archive storage | high capacity, lower cost |
+| Moving files between computers | USB flash drive or cloud | portable/convenient |
+| Camera photos | SD card | small and compatible |
+| Enterprise backup | magnetic tape/cloud backup/HDD | high capacity and recovery |
+| Gaming computer | SSD | fast game loading |
+| School shared documents | cloud storage | access from multiple devices |
+| Long-term offline archive | tape or external drive | can be stored separately |
+
+### Key Skill
+
+Always justify the choice using the scenario.
+
+Do not just say:
+
+```text
+SSD is best
+```
+
+Instead say:
+
+```text
+SSD is suitable because it has fast read/write speed, which helps the operating system and applications load quickly.
+```
 
 ---
 
-## 11. Guided Practice
+## 19. Backup and Storage
 
-### Practice 1
+A backup is a copy of data used for recovery.
 
-Why may an SSD be better than an HDD for a laptop?
+Backups protect against:
 
-<details><summary>Suggested Answer</summary>
+```text
+accidental deletion
+hardware failure
+ransomware
+file corruption
+device theft
+natural disaster
+```
 
-An SSD is faster and has no moving parts, so it can improve startup speed and is more durable in a portable device.
+### Good Backup Practice
+
+```text
+make backups regularly
+store backups separately
+encrypt sensitive backups
+test that backups can be restored
+keep more than one backup version
+use off-site backup when needed
+```
+
+### Example
+
+A school may keep:
+
+```text
+local backup for quick recovery
+cloud/off-site backup for disaster recovery
+```
+
+---
+
+## 20. Archive Storage
+
+Archiving means storing data long term because it is rarely used but may still be needed.
+
+Examples:
+
+```text
+old exam records
+past student records
+legal documents
+research data
+old project versions
+```
+
+### Backup vs Archive
+
+| Backup | Archive |
+|---|---|
+| used for recovery after loss | used for long-term retention |
+| usually updated regularly | rarely changed |
+| protects current data | stores old/inactive data |
+| recovery focus | history/compliance focus |
+
+---
+
+## 21. Storage and Performance
+
+Storage affects performance when the system needs to read or write data.
+
+### Examples
+
+| Situation | Storage Impact |
+|---|---|
+| Booting computer | SSD usually boots faster than HDD |
+| Opening applications | faster storage loads apps quicker |
+| Loading games | SSD reduces loading screens |
+| Editing video | fast storage helps read/write large media |
+| Using virtual memory | slow storage makes swapping slower |
+| Database queries | faster storage can improve access to large datasets |
+
+### Important
+
+Storage speed is only one performance factor.  
+CPU, RAM, GPU, network, and software design also matter.
+
+---
+
+## 22. Storage Security
+
+Storage devices can contain sensitive data.
+
+Risks include:
+
+```text
+lost USB drive
+stolen laptop
+unsecured backup drive
+cloud account compromise
+improper disposal of old drives
+```
+
+Protection methods:
+
+```text
+encryption
+strong passwords
+access control
+secure backup storage
+safe disposal or wiping
+multi-factor authentication for cloud accounts
+```
+
+### Example
+
+A lost USB drive with student records can cause a data breach if it is not encrypted.
+
+---
+
+## 23. Worked Example: Student Laptop
+
+A student laptop may use:
+
+```text
+SSD for operating system and apps
+cloud storage for syncing documents
+USB drive for moving files
+external HDD for backup
+```
+
+### Why SSD?
+
+```text
+fast startup
+fast app loading
+more durable for a portable laptop
+lower power use than HDD
+```
+
+### Why Cloud?
+
+```text
+access from different devices
+automatic sync
+easier sharing
+```
+
+### Why External Backup?
+
+```text
+protects against laptop failure or accidental deletion
+```
+
+---
+
+## 24. Worked Example: School Server
+
+A school server stores:
+
+```text
+student accounts
+shared files
+lesson resources
+database records
+backups
+```
+
+Suitable storage may include:
+
+```text
+large SSDs for fast access
+HDD arrays for large capacity
+cloud/off-site backup
+tape archive for long-term records
+```
+
+The school should consider:
+
+```text
+capacity
+speed
+reliability
+backup
+security
+cost
+```
+
+---
+
+## 25. Common Mistakes
+
+| Mistake | Why it is wrong | Better understanding |
+|---|---|---|
+| Secondary storage is the same as RAM | RAM is temporary primary memory | Secondary storage is long-term |
+| SSD and HDD are both RAM | They are secondary storage | RAM is primary memory |
+| Cloud storage means data is nowhere physical | Cloud data is stored on remote physical servers | It is accessed through a network |
+| More storage always makes a computer faster | Capacity is not the same as speed | SSD speed may help; capacity alone may not |
+| USB drives are always secure | They can be lost or infected | Encrypt and scan if needed |
+| Backup means archive | Backup is for recovery; archive is long-term retention | Different purposes |
+| HDD is always worse than SSD | HDD can be better for low-cost large capacity | Choose by scenario |
+| Optical discs are always obsolete | They can still be useful in some archive/distribution contexts | But less common now |
+| Cloud storage removes need for backup | Cloud accounts can fail or be compromised | Backup strategy still matters |
+| Data deleted from storage is always gone forever | Recovery may be possible unless securely wiped | Use secure deletion for sensitive data |
+
+---
+
+## 26. Guided Practice
+
+### Practice 1: Memory or Storage?
+
+Where are saved photos stored after a computer is turned off?
+
+<details>
+<summary>Suggested Answer</summary>
+
+They are stored in secondary storage, such as SSD, HDD, cloud storage, or another storage device.
 
 </details>
 
-### Practice 2
+---
 
-Give one disadvantage of cloud storage.
+### Practice 2: SSD or HDD?
 
-<details><summary>Suggested Answer</summary>
+A gaming laptop needs fast boot and fast game loading. Which is more suitable, SSD or HDD?
 
-It depends on internet access and may raise privacy or security concerns.
+<details>
+<summary>Suggested Answer</summary>
+
+SSD is more suitable because it has faster read/write speed and no moving parts, helping games and applications load faster.
 
 </details>
 
 ---
 
-## 12. Independent Practice
+### Practice 3: Cloud Storage
 
-1. Compare HDD and SSD.
-2. Choose storage for a video archive and justify.
-3. Explain why cloud storage is useful for collaboration.
-4. Explain one risk of using cloud storage.
+Give one advantage and one disadvantage of cloud storage.
 
----
+<details>
+<summary>Suggested Answer</summary>
 
-## 13. Exam-style Questions
-
-### Question 1 [3 marks]
-
-Explain why an SSD may be preferred to an HDD in a laptop.
-
-<details><summary>Mark Scheme Style Answer</summary>
-
-An SSD has no moving parts, so it is more durable in a portable device. It also has faster read/write speeds, which can improve boot time and application loading.
-
-</details>
-
-### Question 2 [4 marks]
-
-A company needs cheap long-term storage for large backup files. Compare HDD and SSD for this use.
-
-<details><summary>Mark Scheme Style Answer</summary>
-
-HDDs usually provide larger capacity at lower cost per GB, making them suitable for large backups. SSDs are faster and more durable but usually more expensive for the same capacity. If speed is less important than cost and capacity, HDD may be more suitable.
+Advantage: files can be accessed from multiple devices and easily shared.  
+Disadvantage: access depends on internet connection and there may be privacy/security concerns.
 
 </details>
 
 ---
 
-## 14. Classroom Activity
+### Practice 4: Backup or Archive?
 
-### Activity: Storage Consultant
+A school stores old student records for legal reasons but rarely uses them. Is this backup or archive?
 
-Groups receive user profiles and recommend storage types with reasons. Examples: gamer, photographer, school admin, traveller, backup server.
+<details>
+<summary>Suggested Answer</summary>
+
+This is archive storage because the data is kept long term and rarely accessed.
+
+</details>
 
 ---
 
-## 15. Homework
+### Practice 5: Security
 
-Create a storage recommendation table for five scenarios. For each, choose HDD, SSD, optical, or cloud storage and justify using speed/cost/capacity/security.
+Why should a USB drive containing student data be encrypted?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Because USB drives are easy to lose. Encryption protects the data if someone unauthorized finds or steals the drive.
+
+</details>
 
 ---
 
-## 16. One-page Revision Summary
+## 27. Independent Practice
+
+### Question 1
+
+Define secondary storage.
+
+### Question 2
+
+Explain why secondary storage is needed.
+
+### Question 3
+
+Compare RAM and secondary storage.
+
+### Question 4
+
+Compare SSD and HDD.
+
+### Question 5
+
+Give two advantages and two disadvantages of cloud storage.
+
+### Question 6
+
+Choose suitable storage for a video editing workstation and justify your answer.
+
+### Question 7
+
+Choose suitable storage for long-term school record archiving and justify your answer.
+
+### Question 8
+
+Explain the difference between backup and archive.
+
+### Question 9
+
+Explain how storage can affect system performance.
+
+### Question 10
+
+Explain two security risks related to storage devices.
+
+---
+
+## 28. Exam-style Questions
+
+### Question 1 [4 marks]
+
+Define secondary storage and give two examples.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Secondary storage is non-volatile storage used to store data, files, and programs long term. It keeps data when the computer is turned off. Examples include SSD, HDD, USB flash drive, optical disc, memory card, and cloud storage.
+
+</details>
+
+---
+
+### Question 2 [5 marks]
+
+Distinguish between primary memory and secondary storage.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Primary memory is directly accessed by the CPU and stores data and instructions currently in use. It is usually faster but smaller. Secondary storage stores data and programs long term and is usually non-volatile. It is generally slower but has larger capacity. RAM is an example of primary memory, while SSD or HDD are examples of secondary storage.
+
+</details>
+
+---
+
+### Question 3 [6 marks]
+
+Compare SSD and HDD.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+An SSD uses flash memory and has no moving parts, so it is usually faster, quieter, more shock-resistant, and lower power than an HDD. An HDD uses spinning magnetic disks, so it is usually slower and more vulnerable to physical shock. However, HDDs are often cheaper per GB and can provide large capacity at lower cost. SSDs are suitable for operating systems and applications, while HDDs can be suitable for large backups or media storage.
+
+</details>
+
+---
+
+### Question 4 [6 marks]
+
+A school wants to store backups of student files. Explain two storage considerations.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+The school should consider capacity because backups may contain many student files and require large storage space. It should also consider reliability and security because backups must be available for recovery and may contain personal data. Other valid considerations include cost, speed of recovery, off-site storage, encryption, and testing whether backups can be restored.
+
+</details>
+
+---
+
+### Question 5 [6 marks]
+
+Explain why cloud storage may be useful but also risky.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Cloud storage is useful because files can be accessed from different devices, shared easily, synchronized automatically, and stored off-site. However, it can be risky because it depends on internet access and provider availability. There may also be privacy and security concerns if accounts are compromised or data is stored with a third-party provider.
+
+</details>
+
+---
+
+## 29. Classroom Activity
+
+### Activity 1: Storage Ranking
+
+Students rank storage options by:
+
+```text
+speed
+capacity
+cost per GB
+portability
+durability
+```
+
+Options:
+
+```text
+SSD
+HDD
+USB drive
+SD card
+optical disc
+cloud storage
+magnetic tape
+```
+
+---
+
+### Activity 2: Scenario Storage Choice
+
+Groups choose storage for:
+
+```text
+gaming PC
+school server backup
+camera
+student laptop
+video editing workstation
+long-term archive
+```
+
+They must justify each choice using storage characteristics.
+
+---
+
+### Activity 3: Backup Plan
+
+Students design a simple backup plan for:
+
+```text
+student project files
+school records
+game development project
+```
+
+They include:
+
+```text
+where backup is stored
+how often backup is made
+how data is protected
+how restore is tested
+```
+
+---
+
+## 30. Homework
+
+### Homework Part A: Concept Explanation
+
+In 5-6 sentences, explain what secondary storage is and why it is needed.
+
+---
+
+### Homework Part B: Comparison Table
+
+Create a comparison table for:
+
+```text
+SSD
+HDD
+USB flash drive
+cloud storage
+magnetic tape
+```
+
+Include:
+
+```text
+capacity
+speed
+portability
+cost
+best use
+```
+
+---
+
+### Homework Part C: Scenario Recommendation
+
+Recommend suitable storage for each:
+
+```text
+1. a laptop used for programming
+2. a school server backup
+3. a camera
+4. a large video archive
+5. sharing documents between home and school
+```
+
+Explain each choice.
+
+---
+
+### Homework Part D: Written Answer
+
+Explain why backup and storage security are important when storing personal data.
+
+---
+
+## 31. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| Secondary storage | Long-term non-volatile storage |
-| HDD | Magnetic, large, cheaper |
-| SSD | Fast, no moving parts |
-| Cloud | Remote storage over network |
-| Exam phrase | The storage type is suitable because its speed/capacity/cost/security matches the scenario. |
+| Secondary storage | Long-term data/program storage |
+| Non-volatile | Keeps data when power is off |
+| SSD | Fast, no moving parts, higher cost per GB |
+| HDD | Large capacity, cheaper per GB, slower |
+| Flash storage | Portable electronic storage |
+| Optical storage | Laser-read discs, lower capacity |
+| Magnetic tape | Large backup/archive storage |
+| Cloud storage | Remote storage accessed through network |
+| Capacity | Amount of data stored |
+| Speed | Read/write performance |
+| Portability | Ease of moving storage |
+| Durability | Resistance to damage |
+| Backup | Copy for recovery |
+| Archive | Long-term rarely used data |
+| Exam phrase | Secondary storage is non-volatile storage used to keep data and programs long term |
+
+---
+
+## 32. Quick Self-test
+
+Before moving on, students should be able to answer these:
+
+1. What is secondary storage?
+2. Why is secondary storage needed?
+3. Give three examples of secondary storage.
+4. Why is secondary storage usually non-volatile?
+5. What is the difference between SSD and HDD?
+6. What is one advantage of cloud storage?
+7. What is one disadvantage of cloud storage?
+8. What is the difference between backup and archive?
+9. Why can storage affect performance?
+10. Why should portable storage be protected?
