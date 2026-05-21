@@ -4,12 +4,18 @@
 
 By the end of this lesson, students should be able to:
 
-- identify AND, OR, and NOT gates
-- explain Boolean values
-- complete truth tables
-- apply gates to simple conditions
-- connect logic gates to programming conditions
-- avoid common truth table mistakes
+- explain what a logic gate is
+- explain how logic gates relate to binary and digital circuits
+- identify the symbols and truth tables for NOT, AND, OR, NAND, NOR, and XOR
+- construct truth tables for simple logic expressions
+- interpret logic expressions using Boolean operators
+- distinguish Boolean logic from normal arithmetic
+- combine gates to form simple logic circuits
+- derive a Boolean expression from a simple circuit
+- draw or describe a simple circuit from a Boolean expression
+- apply logic gates to real-world control examples
+- avoid common logic gate misconceptions
+- answer exam-style questions about logic gates and truth tables
 
 ---
 
@@ -19,12 +25,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | A1 Computer Fundamentals |
 | Label | SL Core |
-| Main skill | Understanding Boolean logic and truth tables |
-| Connected units | B1 Computational Thinking, A2 Networks, A3 Databases, A4 Machine Learning |
-| Exam relevance | Definitions, process explanation, comparison, scenario-based questions |
+| Main skill | Understanding basic digital logic used inside computer systems |
+| Connected topics | Binary, CPU, control systems, embedded systems, programming conditions |
+| Practical focus | Truth tables, Boolean expressions, and simple circuit interpretation |
+| Exam relevance | Gate identification, truth table completion, circuit output prediction, Boolean expression writing |
 
 ::: tip Learning Focus
-A1 questions often ask students to explain **how a computer system works** and to apply technical vocabulary to a real scenario.
+Logic gates are the building blocks of digital circuits. Students should connect them to binary values and Boolean conditions, not treat them as isolated diagrams.
 :::
 
 ---
@@ -33,13 +40,21 @@ A1 questions often ask students to explain **how a computer system works** and t
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Logic gate | 逻辑门 | A circuit that performs a Boolean operation |
-| Boolean | 布尔值 | A true/false or 1/0 value |
-| AND | 与门 | Outputs 1 only if all inputs are 1 |
-| OR | 或门 | Outputs 1 if at least one input is 1 |
-| NOT | 非门 | Reverses the input |
-| Truth table | 真值表 | A table showing output for every input combination |
-| Input | 输入 | A Boolean value entering a gate |
+| Logic gate | 逻辑门 | Digital circuit component that produces an output based on input values |
+| Boolean value | 布尔值 | Value that is either true/false or 1/0 |
+| Truth table | 真值表 | Table showing output for every possible input combination |
+| Input | 输入 | Value going into a gate |
+| Output | 输出 | Value produced by a gate |
+| NOT gate | 非门 | Inverts the input |
+| AND gate | 与门 | Output is 1 only if all inputs are 1 |
+| OR gate | 或门 | Output is 1 if at least one input is 1 |
+| NAND gate | 与非门 | Opposite of AND |
+| NOR gate | 或非门 | Opposite of OR |
+| XOR gate | 异或门 | Output is 1 if inputs are different |
+| Boolean expression | 布尔表达式 | Expression using logic operators such as AND, OR, NOT |
+| Circuit | 电路 | Connected logic gates that process binary signals |
+| Intermediate output | 中间输出 | Output from one gate used as input to another |
+| Digital logic | 数字逻辑 | Logic based on discrete values, usually 0 and 1 |
 
 ---
 
@@ -50,15 +65,63 @@ A1 questions often ask students to explain **how a computer system works** and t
 
 ### 中文讲解
 
-**Logic gate（逻辑门）** 是执行 Boolean operation 的电子电路。Boolean value 通常表示为 1/0 或 true/false。
+计算机内部使用 binary：
 
-基本逻辑门：
+```text
+0
+1
+```
 
-- AND：只有所有输入都是 1，输出才是 1
-- OR：至少一个输入是 1，输出就是 1
-- NOT：把输入反转，1 变 0，0 变 1
+这些 0 和 1 可以表示：
 
-Truth table 用来列出所有可能输入组合对应的输出。
+```text
+off / on
+false / true
+low voltage / high voltage
+```
+
+**Logic gate（逻辑门）** 是数字电路中的基本部件。  
+它接收一个或多个 binary inputs，然后根据某种逻辑规则产生一个 binary output。
+
+例如：
+
+```text
+AND gate:
+只有两个输入都为 1，输出才是 1
+```
+
+```text
+OR gate:
+只要至少一个输入是 1，输出就是 1
+```
+
+```text
+NOT gate:
+把 1 变成 0，把 0 变成 1
+```
+
+Logic gates 和 programming 中的条件判断很像。
+
+例如 Java 中：
+
+```java
+if (age >= 18 && hasTicket) {
+    enter = true;
+}
+```
+
+这里的 `&&` 就像 AND logic：
+
+```text
+age condition is true AND hasTicket is true
+→ enter is true
+```
+
+所以本节核心是：
+
+```text
+binary values → logic gates → truth tables → circuits → decision making
+```
 
 </template>
 
@@ -66,49 +129,221 @@ Truth table 用来列出所有可能输入组合对应的输出。
 
 ### English Explanation
 
-A **logic gate** is an electronic circuit that performs a Boolean operation. Boolean values are usually represented as 1/0 or true/false.
+Computers use binary internally:
 
-Basic gates:
+```text
+0
+1
+```
 
-- AND: outputs 1 only if all inputs are 1
-- OR: outputs 1 if at least one input is 1
-- NOT: reverses the input, changing 1 to 0 and 0 to 1
+These 0s and 1s can represent:
 
-A truth table lists the output for every possible input combination.
+```text
+off / on
+false / true
+low voltage / high voltage
+```
+
+A **logic gate** is a basic component in a digital circuit.  
+It receives one or more binary inputs and produces one binary output based on a logic rule.
+
+For example:
+
+```text
+AND gate:
+output is 1 only when both inputs are 1
+```
+
+```text
+OR gate:
+output is 1 when at least one input is 1
+```
+
+```text
+NOT gate:
+changes 1 to 0 and 0 to 1
+```
+
+Logic gates are similar to conditions in programming.
+
+For example, in Java:
+
+```java
+if (age >= 18 && hasTicket) {
+    enter = true;
+}
+```
+
+The `&&` behaves like AND logic:
+
+```text
+age condition is true AND hasTicket is true
+→ enter is true
+```
+
+So the core idea of this lesson is:
+
+```text
+binary values → logic gates → truth tables → circuits → decision making
+```
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. Real-life Example
+## 5. Why Logic Gates Matter
 
-### Example: Security door
+Logic gates are important because digital computers are built from circuits that process binary signals.
 
-A door opens only if:
-
-- ID card is valid
-- PIN is correct
-
-This is AND logic:
+They are used in:
 
 ```text
-open = validCard AND correctPIN
+CPU circuits
+memory circuits
+control units
+arithmetic circuits
+embedded systems
+sensors and control systems
+decision circuits
+```
+
+### Simple Example
+
+A security light should turn on when:
+
+```text
+it is dark
+AND
+motion is detected
+```
+
+Boolean expression:
+
+```text
+dark AND motion
+```
+
+This can be represented using an AND gate.
+
+---
+
+## 6. Boolean Values
+
+Logic gates use Boolean values.
+
+| Boolean Idea | Binary Value |
+|---|---|
+| false | 0 |
+| true | 1 |
+| off | 0 |
+| on | 1 |
+| no | 0 |
+| yes | 1 |
+
+### Important
+
+Logic gates do not treat `1 + 1` as arithmetic addition.  
+They use Boolean rules.
+
+Example:
+
+```text
+1 OR 1 = 1
+```
+
+not:
+
+```text
+2
 ```
 
 ---
 
-## 6. Truth Table Pattern
+## 7. Truth Tables
+
+A truth table lists every possible input combination and the output produced.
+
+### For One Input
+
+| A | Output |
+|---:|---:|
+| 0 | ? |
+| 1 | ? |
+
+### For Two Inputs
+
+| A | B | Output |
+|---:|---:|---:|
+| 0 | 0 | ? |
+| 0 | 1 | ? |
+| 1 | 0 | ? |
+| 1 | 1 | ? |
+
+### Number of Rows
+
+For `n` inputs:
 
 ```text
-List all input combinations → apply gate rule → write output for each row
+number of rows = 2^n
+```
+
+Examples:
+
+| Inputs | Rows |
+|---:|---:|
+| 1 | 2 |
+| 2 | 4 |
+| 3 | 8 |
+| 4 | 16 |
+
+---
+
+## 8. NOT Gate
+
+A NOT gate has one input and one output.
+
+It inverts the input.
+
+```text
+NOT 0 = 1
+NOT 1 = 0
+```
+
+### Truth Table
+
+| A | NOT A |
+|---:|---:|
+| 0 | 1 |
+| 1 | 0 |
+
+### Boolean Expression
+
+```text
+NOT A
+```
+
+or sometimes:
+
+```text
+¬A
+```
+
+### Example
+
+If `doorClosed = 1`, then:
+
+```text
+NOT doorClosed = 0
 ```
 
 ---
 
-## 7. Technical Example
+## 9. AND Gate
 
-### AND truth table
+An AND gate outputs 1 only if all inputs are 1.
+
+### Truth Table
 
 | A | B | A AND B |
 |---:|---:|---:|
@@ -117,7 +352,41 @@ List all input combinations → apply gate rule → write output for each row
 | 1 | 0 | 0 |
 | 1 | 1 | 1 |
 
-### OR truth table
+### Boolean Expression
+
+```text
+A AND B
+```
+
+### Simple Meaning
+
+```text
+both A and B must be true
+```
+
+### Example
+
+A door unlocks only if:
+
+```text
+correct PIN
+AND
+card is valid
+```
+
+Boolean expression:
+
+```text
+correctPIN AND validCard
+```
+
+---
+
+## 10. OR Gate
+
+An OR gate outputs 1 if at least one input is 1.
+
+### Truth Table
 
 | A | B | A OR B |
 |---:|---:|---:|
@@ -126,122 +395,957 @@ List all input combinations → apply gate rule → write output for each row
 | 1 | 0 | 1 |
 | 1 | 1 | 1 |
 
+### Boolean Expression
+
+```text
+A OR B
+```
+
+### Simple Meaning
+
+```text
+A is true, or B is true, or both are true
+```
+
+### Example
+
+An alarm sounds if:
+
+```text
+smoke detected
+OR
+heat detected
+```
+
+Boolean expression:
+
+```text
+smoke OR heat
+```
+
 ---
 
-## 8. Explanation of the Example
+## 11. NAND Gate
 
-AND is strict because every input must be true. OR is less strict because only one true input is enough. NOT has only one input and reverses it.
+A NAND gate is the opposite of AND.
+
+```text
+NAND = NOT AND
+```
+
+### Truth Table
+
+| A | B | A AND B | A NAND B |
+|---:|---:|---:|---:|
+| 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 1 |
+| 1 | 0 | 0 | 1 |
+| 1 | 1 | 1 | 0 |
+
+### Boolean Expression
+
+```text
+NOT (A AND B)
+```
+
+### Simple Meaning
+
+NAND outputs 0 only when both inputs are 1.
 
 ---
 
-## 9. Step-by-step Process / Trace
+## 12. NOR Gate
 
-| Scenario | Logic | Output if values are true/false |
+A NOR gate is the opposite of OR.
+
+```text
+NOR = NOT OR
+```
+
+### Truth Table
+
+| A | B | A OR B | A NOR B |
+|---:|---:|---:|---:|
+| 0 | 0 | 0 | 1 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 0 |
+
+### Boolean Expression
+
+```text
+NOT (A OR B)
+```
+
+### Simple Meaning
+
+NOR outputs 1 only when both inputs are 0.
+
+---
+
+## 13. XOR Gate
+
+An XOR gate outputs 1 when the inputs are different.
+
+XOR means exclusive OR.
+
+### Truth Table
+
+| A | B | A XOR B |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+### Boolean Expression
+
+```text
+A XOR B
+```
+
+### Simple Meaning
+
+```text
+A or B is true, but not both
+```
+
+### Example
+
+A warning light turns on if exactly one sensor reports a fault.
+
+```text
+sensorA XOR sensorB
+```
+
+---
+
+## 14. Gate Summary Table
+
+| Gate | Output is 1 when... | Expression |
 |---|---|---|
-| validCard = 1, correctPIN = 1 | AND | open = 1 |
-| validCard = 1, correctPIN = 0 | AND | open = 0 |
-| smokeDetected = 1 OR heatDetected = 0 | OR | alarm = 1 |
-| doorLocked = 1 | NOT doorLocked | 0 |
+| NOT | input is 0 | NOT A |
+| AND | all inputs are 1 | A AND B |
+| OR | at least one input is 1 | A OR B |
+| NAND | not all inputs are 1 | NOT (A AND B) |
+| NOR | no inputs are 1 | NOT (A OR B) |
+| XOR | inputs are different | A XOR B |
+
+### Quick Memory
+
+```text
+AND = both
+OR = at least one
+NOT = opposite
+NAND = not both
+NOR = neither
+XOR = different
+```
 
 ---
 
-## 10. Common Mistakes
+## 15. Logic Gate Symbols
 
-| Mistake | Why it is a problem | Better habit |
-|---|---|---|
-| Confusing AND and OR | Outputs become wrong | Memorize AND needs all; OR needs at least one |
-| Forgetting all input combinations | Truth table incomplete | Use systematic order 00,01,10,11 |
-| Applying NOT to wrong value | Final output wrong | Mark exactly which signal is inverted |
-| Using normal arithmetic logic | Boolean logic is true/false | Think 1/0 states |
-| Not showing intermediate columns | Complex circuits become hard | Use extra columns for sub-expressions |
+Different exam boards and textbooks may use different symbol styles.  
+The most important skill is to identify the gate by its label and truth table.
+
+### Simple Text Symbols
+
+```text
+A ----\
+       AND ---- Output
+B ----/
+```
+
+```text
+A ----\
+       OR ---- Output
+B ----/
+```
+
+```text
+A ---- NOT ---- Output
+```
+
+### Exam Tip
+
+If a question gives a diagram, carefully identify:
+
+```text
+inputs
+gate type
+intermediate outputs
+final output
+```
 
 ---
 
-## 11. Guided Practice
+## 16. Boolean Expressions
 
-### Practice 1
+A Boolean expression combines inputs using logic operators.
 
-When does AND output 1?
+Examples:
 
-<details><summary>Suggested Answer</summary>
+```text
+A AND B
+A OR B
+NOT A
+(A AND B) OR C
+A AND (NOT B)
+NOT (A OR B)
+```
 
-AND outputs 1 only when all inputs are 1.
+### Order Matters
 
-</details>
+Parentheses help show which operation happens first.
 
-### Practice 2
+Example:
 
-Complete NOT truth table.
+```text
+NOT (A OR B)
+```
 
-<details><summary>Suggested Answer</summary>
+is different from:
 
-| A | NOT A |
+```text
+(NOT A) OR B
+```
+
+---
+
+## 17. Constructing a Truth Table
+
+To construct a truth table:
+
+```text
+1. List all input combinations.
+2. Work out intermediate outputs.
+3. Work out final output.
+4. Check each row carefully.
+```
+
+### Two Inputs
+
+| A | B |
 |---:|---:|
+| 0 | 0 |
 | 0 | 1 |
 | 1 | 0 |
+| 1 | 1 |
+
+### Three Inputs
+
+| A | B | C |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 0 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+| 1 | 1 | 1 |
+
+---
+
+## 18. Worked Example 1: A AND NOT B
+
+Expression:
+
+```text
+A AND (NOT B)
+```
+
+### Step 1: Inputs
+
+| A | B |
+|---:|---:|
+| 0 | 0 |
+| 0 | 1 |
+| 1 | 0 |
+| 1 | 1 |
+
+### Step 2: Add NOT B
+
+| A | B | NOT B |
+|---:|---:|---:|
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+### Step 3: A AND NOT B
+
+| A | B | NOT B | A AND (NOT B) |
+|---:|---:|---:|---:|
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 |
+
+---
+
+## 19. Worked Example 2: (A OR B) AND C
+
+Expression:
+
+```text
+(A OR B) AND C
+```
+
+### Truth Table
+
+| A | B | C | A OR B | (A OR B) AND C |
+|---:|---:|---:|---:|---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 1 | 1 |
+
+### Explanation
+
+The final output is 1 when:
+
+```text
+A OR B is 1
+AND
+C is 1
+```
+
+---
+
+## 20. Worked Example 3: NOT (A AND B)
+
+Expression:
+
+```text
+NOT (A AND B)
+```
+
+This is the same as:
+
+```text
+A NAND B
+```
+
+### Truth Table
+
+| A | B | A AND B | NOT (A AND B) |
+|---:|---:|---:|---:|
+| 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 1 |
+| 1 | 0 | 0 | 1 |
+| 1 | 1 | 1 | 0 |
+
+---
+
+## 21. From Circuit to Expression
+
+When reading a circuit:
+
+```text
+1. Start from the inputs.
+2. Name intermediate outputs.
+3. Follow wires from left to right.
+4. Write the final expression.
+```
+
+### Example Circuit in Text
+
+```text
+A ----\
+       AND ---- X ----\
+B ----/               OR ---- Output
+C -------------------/
+```
+
+Intermediate output:
+
+```text
+X = A AND B
+```
+
+Final output:
+
+```text
+Output = (A AND B) OR C
+```
+
+---
+
+## 22. From Expression to Circuit
+
+Expression:
+
+```text
+(A AND B) OR C
+```
+
+Build it step by step:
+
+```text
+1. Use AND gate for A and B.
+2. Take result of AND gate.
+3. Use OR gate with C.
+4. Final output comes from OR gate.
+```
+
+Text circuit:
+
+```text
+A ----\
+       AND ----\
+B ----/         OR ---- Output
+C -------------/
+```
+
+---
+
+## 23. Logic Gates and Programming Conditions
+
+Logic gates are connected to programming conditions.
+
+### Java Example: AND
+
+```java
+if (hasCard && correctPIN) {
+    allowAccess = true;
+}
+```
+
+Equivalent Boolean logic:
+
+```text
+hasCard AND correctPIN
+```
+
+### Java Example: OR
+
+```java
+if (isAdmin || isTeacher) {
+    allowAccess = true;
+}
+```
+
+Equivalent Boolean logic:
+
+```text
+isAdmin OR isTeacher
+```
+
+### Java Example: NOT
+
+```java
+if (!doorClosed) {
+    alarm = true;
+}
+```
+
+Equivalent Boolean logic:
+
+```text
+NOT doorClosed
+```
+
+---
+
+## 24. Real-world Example: Security Door
+
+A security door unlocks when:
+
+```text
+card is valid
+AND
+PIN is correct
+```
+
+Inputs:
+
+```text
+A = valid card
+B = correct PIN
+```
+
+Expression:
+
+```text
+A AND B
+```
+
+Truth table:
+
+| A | B | Unlock |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+---
+
+## 25. Real-world Example: Alarm System
+
+An alarm sounds when:
+
+```text
+window is open
+OR
+motion is detected
+```
+
+Inputs:
+
+```text
+A = window open
+B = motion detected
+```
+
+Expression:
+
+```text
+A OR B
+```
+
+Truth table:
+
+| A | B | Alarm |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+---
+
+## 26. Real-world Example: Heating Control
+
+Heating turns on when:
+
+```text
+temperature is low
+AND
+window is NOT open
+```
+
+Inputs:
+
+```text
+A = temperature low
+B = window open
+```
+
+Expression:
+
+```text
+A AND (NOT B)
+```
+
+Truth table:
+
+| A | B | NOT B | Heating |
+|---:|---:|---:|---:|
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 |
+
+---
+
+## 27. Common Mistakes
+
+| Mistake | Why it is wrong | Better understanding |
+|---|---|---|
+| Thinking OR means exactly one input | OR includes both inputs being 1 | XOR means exactly one |
+| Confusing NAND and AND | NAND is NOT AND | NAND is opposite of AND |
+| Confusing NOR and OR | NOR is NOT OR | NOR is opposite of OR |
+| Forgetting NOT applies before/inside brackets | Parentheses matter | Work step by step |
+| Treating 1 OR 1 as 2 | Logic is Boolean, not arithmetic | Output is 1 |
+| Missing input combinations in truth table | Truth table must include all cases | 2 inputs = 4 rows, 3 inputs = 8 rows |
+| Starting from final gate without intermediate outputs | Leads to mistakes | Add columns for intermediate values |
+| Mixing up 0/1 with voltage only | 0/1 can represent false/true or low/high | Meaning depends on context |
+| Assuming all gates have two inputs | NOT has one input | Some gates can have more in real circuits |
+| Ignoring scenario wording | AND/OR/NOT comes from meaning | Translate conditions carefully |
+
+---
+
+## 28. Guided Practice
+
+### Practice 1: AND Gate
+
+Complete the output for:
+
+| A | B | A AND B |
+|---:|---:|---:|
+| 0 | 0 | ? |
+| 0 | 1 | ? |
+| 1 | 0 | ? |
+| 1 | 1 | ? |
+
+<details>
+<summary>Suggested Answer</summary>
+
+| A | B | A AND B |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
 
 </details>
 
 ---
 
-## 12. Independent Practice
+### Practice 2: OR or XOR?
 
-1. Complete truth table for A OR B.
-2. Complete truth table for A AND NOT B.
-3. Give a real-life example of AND logic.
-4. Give a real-life example of OR logic.
+Which gate outputs 1 when exactly one input is 1?
+
+<details>
+<summary>Suggested Answer</summary>
+
+XOR.
+
+</details>
 
 ---
 
-## 13. Exam-style Questions
+### Practice 3: Expression
+
+Write the expression for:
+
+```text
+A and B must both be true, and C must be false.
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+```text
+A AND B AND (NOT C)
+```
+
+</details>
+
+---
+
+### Practice 4: Truth Table Row Count
+
+How many rows are needed for a truth table with 3 inputs?
+
+<details>
+<summary>Suggested Answer</summary>
+
+```text
+2^3 = 8 rows
+```
+
+</details>
+
+---
+
+### Practice 5: Intermediate Output
+
+For:
+
+```text
+(A OR B) AND C
+```
+
+what intermediate output should be calculated first?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Calculate:
+
+```text
+A OR B
+```
+
+first, then AND the result with C.
+
+</details>
+
+---
+
+## 29. Independent Practice
+
+### Question 1
+
+Define logic gate.
+
+### Question 2
+
+Explain why logic gates use binary values.
+
+### Question 3
+
+Draw or write the truth table for NOT, AND, and OR.
+
+### Question 4
+
+Explain the difference between OR and XOR.
+
+### Question 5
+
+Construct a truth table for:
+
+```text
+A OR (NOT B)
+```
+
+### Question 6
+
+Construct a truth table for:
+
+```text
+(A AND B) OR C
+```
+
+### Question 7
+
+Write the Boolean expression for this rule:
+
+```text
+Alarm sounds if smoke is detected OR heat is detected.
+```
+
+### Question 8
+
+Write the Boolean expression for this rule:
+
+```text
+Door opens if card is valid AND PIN is correct AND the door is NOT locked by admin.
+```
+
+### Question 9
+
+A circuit first applies NOT to B, then ANDs the result with A. Write the expression.
+
+### Question 10
+
+Explain one real-world use of logic gates in a control system.
+
+---
+
+## 30. Exam-style Questions
 
 ### Question 1 [4 marks]
 
-Complete truth table for A OR B.
+Define logic gate and truth table.
 
-<details><summary>Mark Scheme Style Answer</summary>
+<details>
+<summary>Mark Scheme Style Answer</summary>
 
-| A | B | A OR B |
+A logic gate is a digital circuit component that takes one or more binary inputs and produces a binary output according to a logical rule. A truth table shows every possible input combination and the output produced for each combination.
+
+</details>
+
+---
+
+### Question 2 [4 marks]
+
+Complete the truth table for `A XOR B`.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+| A | B | A XOR B |
 |---:|---:|---:|
 | 0 | 0 | 0 |
 | 0 | 1 | 1 |
 | 1 | 0 | 1 |
-| 1 | 1 | 1 |
-
-</details>
-
-### Question 2 [3 marks]
-
-Explain how AND logic could be used in a login system.
-
-<details><summary>Mark Scheme Style Answer</summary>
-
-The system may require both a correct username and a correct password. The login is allowed only if both conditions are true, so AND logic is suitable.
+| 1 | 1 | 0 |
 
 </details>
 
 ---
 
-## 14. Classroom Activity
+### Question 3 [5 marks]
 
-### Activity: Human Logic Gates
+Explain the difference between AND, OR, and XOR.
 
-Students act as inputs holding 0/1 cards. Other students act as gates and output the result.
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+AND outputs 1 only when all inputs are 1. OR outputs 1 when at least one input is 1, including when both inputs are 1. XOR outputs 1 only when the inputs are different, so it outputs 0 when both inputs are 0 or both inputs are 1.
+
+</details>
 
 ---
 
-## 15. Homework
+### Question 4 [6 marks]
 
-Create truth tables for AND, OR, NOT, and A AND NOT B. Add one real-world scenario for each.
+Construct a truth table for:
+
+```text
+A AND (NOT B)
+```
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+| A | B | NOT B | A AND (NOT B) |
+|---:|---:|---:|---:|
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 |
+
+</details>
 
 ---
 
-## 16. One-page Revision Summary
+### Question 5 [6 marks]
+
+A heating system turns on when the temperature is low and the window is not open. Let `A` be temperature low and `B` be window open. Write the Boolean expression and explain the output condition.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+The expression is:
+
+```text
+A AND (NOT B)
+```
+
+The heating turns on only when `A` is 1, meaning the temperature is low, and `B` is 0, meaning the window is not open. If the temperature is not low or the window is open, the output is 0.
+
+</details>
+
+---
+
+## 31. Classroom Activity
+
+### Activity 1: Human Logic Gates
+
+Students hold cards:
+
+```text
+A
+B
+AND
+OR
+NOT
+Output
+```
+
+The class acts out different input values and outputs.
+
+---
+
+### Activity 2: Truth Table Race
+
+Groups complete truth tables for:
+
+```text
+A AND B
+A OR B
+A XOR B
+A AND (NOT B)
+(A OR B) AND C
+```
+
+They must include intermediate columns.
+
+---
+
+### Activity 3: Scenario to Circuit
+
+Give scenarios:
+
+```text
+security door
+alarm system
+heating control
+automatic light
+school entry gate
+```
+
+Students identify inputs, output, and Boolean expression.
+
+---
+
+## 32. Homework
+
+### Homework Part A: Truth Tables
+
+Construct truth tables for:
+
+```text
+A NAND B
+A NOR B
+A OR (NOT B)
+(A AND B) OR C
+```
+
+---
+
+### Homework Part B: Scenario Expressions
+
+Write Boolean expressions for:
+
+1. A light turns on if it is dark AND motion is detected.
+2. A door unlocks if a card is valid AND PIN is correct.
+3. An alarm sounds if smoke is detected OR heat is detected.
+4. Heating turns on if temperature is low AND window is NOT open.
+
+---
+
+### Homework Part C: Written Explanation
+
+In 5-6 sentences, explain how logic gates are related to binary and digital circuits.
+
+---
+
+### Homework Part D: Mistake Correction
+
+Correct these statements:
+
+```text
+OR means exactly one input is true.
+NAND is the same as AND.
+A truth table for 3 inputs has 6 rows.
+NOT has two inputs.
+1 OR 1 equals 2.
+```
+
+---
+
+## 33. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
+| Logic gate | Circuit that produces output from binary inputs |
+| Truth table | Shows all input combinations and outputs |
+| NOT | Inverts input |
 | AND | 1 only if all inputs are 1 |
 | OR | 1 if at least one input is 1 |
-| NOT | Reverses input |
-| Truth table | Shows all input/output combinations |
-| Exam phrase | The output is 1 only when the Boolean condition is satisfied. |
+| NAND | Opposite of AND |
+| NOR | Opposite of OR |
+| XOR | 1 if inputs are different |
+| Boolean value | true/false or 1/0 |
+| 2-input rows | 4 rows |
+| 3-input rows | 8 rows |
+| Intermediate output | Result from one gate used by another |
+| Exam phrase | Logic gates process binary inputs using Boolean rules to produce binary outputs |
+
+---
+
+## 34. Quick Self-test
+
+Before moving on, students should be able to answer these:
+
+1. What is a logic gate?
+2. What is a truth table?
+3. What does NOT do?
+4. When does AND output 1?
+5. When does OR output 1?
+6. What is NAND?
+7. What is NOR?
+8. When does XOR output 1?
+9. How many rows does a 3-input truth table have?
+10. Why are intermediate columns useful?
