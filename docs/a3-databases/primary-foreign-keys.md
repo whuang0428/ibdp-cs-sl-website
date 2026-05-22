@@ -1,20 +1,23 @@
-# Primary Keys and Foreign Keys
+# Primary and Foreign Keys
 
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
 
-- explain what a **primary key** is
-- explain what a **foreign key** is
-- distinguish primary keys and foreign keys
-- identify primary keys in database tables
-- identify foreign keys in related tables
-- explain why primary keys must be unique
-- explain how foreign keys link tables
-- understand basic referential integrity
-- choose suitable primary keys for scenarios
-- identify common key-design mistakes
-- answer exam-style questions about primary keys and foreign keys
+- define primary key
+- define foreign key
+- explain why primary keys are needed
+- explain why foreign keys are needed
+- identify primary keys and foreign keys in database tables
+- distinguish candidate key, primary key, and foreign key at a basic level
+- explain how keys link related tables
+- explain referential integrity at a basic level
+- choose suitable primary keys for tables
+- identify common mistakes when choosing keys
+- explain why names are often poor primary keys
+- explain how keys reduce confusion and support relationships
+- apply keys to school, library, shop, hospital, and game database examples
+- answer exam-style questions about primary and foreign keys
 
 ---
 
@@ -25,12 +28,12 @@ By the end of this lesson, students should be able to:
 | Unit | A3 Databases |
 | Label | SL Core |
 | Main skill | Understanding how records are uniquely identified and how tables are linked |
-| Connected topics | Tables, records, fields, relationships, SQL joins, data integrity |
-| Practical focus | Reading relational tables and identifying key fields |
-| Exam relevance | Definitions, table interpretation, relationship explanation, database design |
+| Connected topics | Tables, records and fields, relationships, ERDs, normalization, SQL SELECT, database integrity |
+| Practical focus | Identifying and designing keys in relational database tables |
+| Exam relevance | Definitions, key identification, table linking, referential integrity, scenario design |
 
 ::: tip Learning Focus
-Primary keys identify records. Foreign keys link tables. These two ideas are the foundation of relational databases.
+A primary key uniquely identifies each record in its own table. A foreign key stores a value from another table's primary key to create a link between tables.
 :::
 
 ---
@@ -39,18 +42,22 @@ Primary keys identify records. Foreign keys link tables. These two ideas are the
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Primary key | 主键 | A field that uniquely identifies each record in a table |
-| Foreign key | 外键 | A field in one table that refers to the primary key in another table |
-| Unique | 唯一 | No two records have the same value for that field |
-| Identifier | 标识符 | A value used to identify a specific record |
-| Candidate key | 候选键 | A field that could potentially be used as a primary key |
-| Composite key | 复合键 | A primary key made from more than one field |
-| Referential integrity | 参照完整性 | Foreign key values must match existing primary key values |
-| Relationship | 关系 | A link between tables using keys |
-| Parent table | 父表 | The table containing the primary key being referenced |
-| Child table | 子表 | The table containing the foreign key |
-| Orphan record | 孤立记录 | A record with a foreign key that does not match an existing primary key |
-| Constraint | 约束 | A rule that restricts what data can be stored |
+| Primary key | 主键 | Field or combination of fields that uniquely identifies each record in a table |
+| Foreign key | 外键 | Field in one table that refers to the primary key of another table |
+| Candidate key | 候选键 | Field that could uniquely identify records |
+| Composite key | 复合键 | Key made from more than one field |
+| Surrogate key | 代理键 | Artificial ID created only to identify records |
+| Natural key | 自然键 | Real-world value used as a key |
+| Unique | 唯一 | No two records have the same value |
+| Null | 空值 | Missing or unknown value |
+| Entity | 实体 | Object or concept stored about |
+| Relationship | 关系 | Link between tables/entities |
+| Referential integrity | 引用完整性 | Rule that foreign key values must match valid primary key values |
+| Parent table | 父表 | Table being referenced by a foreign key |
+| Child table | 子表 | Table containing a foreign key |
+| Orphan record | 孤立记录 | Record that refers to a non-existing related record |
+| Constraint | 约束 | Rule enforced by DBMS |
+| Record identifier | 记录标识符 | Value used to identify a record |
 
 ---
 
@@ -61,44 +68,60 @@ Primary keys identify records. Foreign keys link tables. These two ideas are the
 
 ### 中文讲解
 
-在 relational database 中，数据通常被拆分到多个相关的 tables 中。  
-如果要让这些 tables 正确连接，就需要 **primary key** 和 **foreign key**。
+在 database table 中，每一条 record 都需要被清楚地区分。  
+如果没有唯一标识，系统可能不知道你说的是哪一条记录。
 
-**Primary key（主键）** 用来唯一识别一个 table 中的每一条 record。
+例如 Student table 中：
 
-例如 Student table：
+| StudentID | FirstName | LastName |
+|---:|---|---|
+| 101 | Amy | Chen |
+| 102 | Ben | Wang |
+| 103 | Amy | Chen |
 
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
-
-这里 `studentId` 可以作为 primary key，因为：
+如果只用 name 来找学生，会出问题，因为两个学生可能同名。  
+所以我们通常使用：
 
 ```text
-每个 studentId 都是唯一的
-每个 studentId 对应一个学生 record
+StudentID
 ```
 
-**Foreign key（外键）** 是一个 table 中的 field，它引用另一个 table 的 primary key。
+作为 **primary key（主键）**。
 
-例如 Enrollment table：
+Primary key 的作用是：
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
-| E003 | S001 | C002 |
+```text
+uniquely identify each record in a table
+```
 
-这里 `studentId` 是 foreign key，因为它引用 Student table 里的 `studentId`。  
-`courseId` 也是 foreign key，因为它引用 Course table 里的 `courseId`。
+也就是说，每个 record 的 primary key value 必须唯一，通常不能是 null。
+
+**Foreign key（外键）** 用来连接两个表。
+
+例如：
+
+Student table:
+
+| StudentID | FirstName |
+|---:|---|
+| 101 | Amy |
+| 102 | Ben |
+
+Enrollment table:
+
+| EnrollmentID | StudentID | CourseID |
+|---:|---:|---|
+| 1 | 101 | CS |
+| 2 | 102 | Math |
+
+这里 Enrollment table 里的 `StudentID` 是 foreign key。  
+它引用 Student table 里的 primary key `StudentID`。
 
 简单来说：
 
 ```text
-primary key = identify record in its own table
-foreign key = link to record in another table
+primary key = uniquely identifies records in its own table
+foreign key = links to primary key in another table
 ```
 
 </template>
@@ -107,44 +130,60 @@ foreign key = link to record in another table
 
 ### English Explanation
 
-In a relational database, data is usually separated into multiple related tables.  
-To connect these tables correctly, we need **primary keys** and **foreign keys**.
+In a database table, each record needs to be clearly identified.  
+Without a unique identifier, the system may not know which record is being referred to.
 
-A **primary key** uniquely identifies each record in a table.
+For example, in a Student table:
 
-For example, Student table:
+| StudentID | FirstName | LastName |
+|---:|---|---|
+| 101 | Amy | Chen |
+| 102 | Ben | Wang |
+| 103 | Amy | Chen |
 
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
-
-Here, `studentId` can be the primary key because:
+If we only use name to find a student, problems can happen because two students may have the same name.  
+So we usually use:
 
 ```text
-each studentId is unique
-each studentId identifies one student record
+StudentID
 ```
 
-A **foreign key** is a field in one table that refers to the primary key in another table.
+as the **primary key**.
 
-For example, Enrollment table:
+The purpose of a primary key is to:
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
-| E003 | S001 | C002 |
+```text
+uniquely identify each record in a table
+```
 
-Here, `studentId` is a foreign key because it refers to `studentId` in the Student table.  
-`courseId` is also a foreign key because it refers to `courseId` in the Course table.
+This means each primary key value must be unique and normally cannot be null.
+
+A **foreign key** is used to connect two tables.
+
+Example:
+
+Student table:
+
+| StudentID | FirstName |
+|---:|---|
+| 101 | Amy |
+| 102 | Ben |
+
+Enrollment table:
+
+| EnrollmentID | StudentID | CourseID |
+|---:|---:|---|
+| 1 | 101 | CS |
+| 2 | 102 | Math |
+
+Here, `StudentID` in the Enrollment table is a foreign key.  
+It refers to the primary key `StudentID` in the Student table.
 
 In simple terms:
 
 ```text
-primary key = identify record in its own table
-foreign key = link to record in another table
+primary key = uniquely identifies records in its own table
+foreign key = links to primary key in another table
 ```
 
 </template>
@@ -152,651 +191,1083 @@ foreign key = link to record in another table
 
 ---
 
-## 5. Real-life Analogy
+## 5. Why Keys Are Needed
 
-Imagine each student has a school ID card.
+Keys are needed because databases must identify and link records accurately.
+
+### Without Keys
+
+A database may have problems such as:
 
 ```text
-studentId = unique school ID
+duplicate names
+confusing records
+wrong updates
+difficulty linking tables
+orphan records
+inconsistent data
 ```
 
-Even if two students have the same name, their IDs are different.
+### With Keys
 
-| studentId | name |
-|---|---|
-| S001 | Alex Chen |
-| S002 | Alex Chen |
+A database can:
 
-The name is the same, but the ID uniquely identifies each student.
+```text
+identify each record uniquely
+link related data
+avoid ambiguity
+support relationships
+enforce data integrity
+make queries more accurate
+```
 
-Now imagine a course enrollment list. Instead of writing the full student details again, the list stores the student ID:
+### Example
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
+If two students are both called Amy Chen, `StudentID` avoids confusion.
 
-The enrollment table can use `studentId` to link back to the correct student.
+```text
+Amy Chen with StudentID 101
+Amy Chen with StudentID 103
+```
 
-::: info Scenario Link
-Primary keys work like ID cards. Foreign keys work like references to those ID cards in another table.
-:::
+The system can clearly identify the correct student.
 
 ---
 
 ## 6. Primary Key
 
-## 6.1 What is a Primary Key?
+A primary key is a field, or combination of fields, that uniquely identifies each record in a table.
 
-A primary key is a field that uniquely identifies each record in a table.
+### Primary Key Rules
 
-### Student Table
-
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
-
-The primary key is:
+A primary key should be:
 
 ```text
-studentId
+unique
+not null
+stable
+simple
+clear
 ```
-
-because each value is unique.
-
-### Key Requirements
-
-A primary key should:
-
-```text
-be unique
-not be empty / null
-not change often
-identify exactly one record
-```
-
----
-
-## 6.2 Why Not Use Name as Primary Key?
-
-Names are not always unique.
-
-| studentId | name |
-|---|---|
-| S001 | Alex |
-| S002 | Alex |
-
-If `name` were the primary key, the database could not reliably identify which Alex is meant.
-
-### Better Design
-
-Use:
-
-```text
-studentId
-```
-
-because it is designed to be unique.
-
----
-
-## 7. Good and Bad Primary Keys
-
-| Field | Good Primary Key? | Reason |
-|---|---|---|
-| `studentId` | Yes | Unique and stable |
-| `name` | Usually no | Names may repeat |
-| `email` | Sometimes | Often unique, but can change |
-| `phoneNumber` | Usually no | Can change or be shared |
-| `dateOfBirth` | No | Many people may share same date |
-| `productId` | Yes | Designed to identify products |
-| `orderId` | Yes | Designed to identify orders |
-
-### Exam-friendly sentence
-
-A primary key should uniquely identify each record and should not contain duplicate or null values.
-
----
-
-## 8. Foreign Key
-
-## 8.1 What is a Foreign Key?
-
-A foreign key is a field in one table that refers to the primary key in another table.
-
-### Student Table
-
-| studentId | name |
-|---|---|
-| S001 | Alice |
-| S002 | Ben |
-
-### Enrollment Table
-
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
-
-In the Enrollment table:
-
-```text
-studentId
-```
-
-is a foreign key because it refers to the Student table's primary key.
-
-### Purpose
-
-Foreign keys are used to:
-
-```text
-link related tables
-avoid repeating full data
-support relationships
-protect data consistency
-```
-
----
-
-## 9. Primary Key vs Foreign Key
-
-| Primary Key | Foreign Key |
-|---|---|
-| Identifies a record in its own table | Refers to a record in another table |
-| Must be unique in its table | Can repeat |
-| Should not be null | May be null in some designs, but often required |
-| Example: `Student.studentId` | Example: `Enrollment.studentId` |
-| Used to identify | Used to link |
 
 ### Example
 
-| Table | Field | Key Type |
-|---|---|---|
-| Student | `studentId` | Primary key |
-| Course | `courseId` | Primary key |
-| Enrollment | `enrollmentId` | Primary key |
-| Enrollment | `studentId` | Foreign key |
-| Enrollment | `courseId` | Foreign key |
+| StudentID | FirstName | LastName |
+|---:|---|---|
+| 101 | Amy | Chen |
+| 102 | Ben | Wang |
+| 103 | Cara | Liu |
 
-::: warning Common Mistake
-A foreign key does not have to be unique. Many records can refer to the same primary key.
+`StudentID` is a good primary key because:
+
+```text
+each student has a different StudentID
+StudentID is not blank
+StudentID identifies one student record
+```
+
+::: tip Exam Phrase
+A primary key is a field or set of fields that uniquely identifies each record in a table.
 :::
 
 ---
 
-## 10. Worked Example: School Course Database
+## 7. Good Primary Key Features
 
-### Student Table
+| Feature | Explanation |
+|---|---|
+| Unique | no two records have same value |
+| Not null | every record must have a value |
+| Stable | value should not change often |
+| Simple | easy to store and compare |
+| Minimal | no unnecessary extra fields |
+| Non-sensitive | should not expose private information if possible |
 
-| studentId | name | yearGroup |
+### Good Examples
+
+```text
+StudentID
+BookID
+CustomerID
+OrderID
+ProductID
+AppointmentID
+PlayerID
+```
+
+### Risky Examples
+
+```text
+FirstName
+LastName
+Email
+PhoneNumber
+Address
+DateOfBirth
+```
+
+These may change, repeat, or be sensitive.
+
+---
+
+## 8. Why Names Are Poor Primary Keys
+
+Names are often poor primary keys because they are not guaranteed to be unique.
+
+### Example
+
+| FirstName | LastName | GradeLevel |
 |---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
+| Amy | Chen | 10 |
+| Amy | Chen | 11 |
+| Ben | Wang | 10 |
 
-Primary key:
-
-```text
-studentId
-```
-
-### Course Table
-
-| courseId | courseName |
-|---|---|
-| C001 | Computer Science |
-| C002 | Mathematics |
-
-Primary key:
+If `FirstName + LastName` is used to identify students:
 
 ```text
-courseId
+Amy Chen
 ```
 
-### Enrollment Table
+matches two records.
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
-| E003 | S001 | C002 |
+### Other Problems
 
-Primary key:
+Names can:
 
 ```text
-enrollmentId
+repeat
+change
+contain spelling variations
+include different formats
+be entered incorrectly
 ```
 
-Foreign keys:
+### Better Choice
+
+Use a unique ID:
 
 ```text
-studentId references Student.studentId
-courseId references Course.courseId
+StudentID
 ```
-
-### Interpretation
-
-| Enrollment | Meaning |
-|---|---|
-| E001 | Alice takes Computer Science |
-| E002 | Ben takes Computer Science |
-| E003 | Alice takes Mathematics |
 
 ---
 
-## 11. How Foreign Keys Reduce Repetition
+## 9. Candidate Key
 
-Without foreign keys, a table may repeat data:
+A candidate key is a field or combination of fields that could uniquely identify records.
 
-| studentName | courseName |
-|---|---|
-| Alice | Computer Science |
-| Ben | Computer Science |
-| Alice | Mathematics |
+### Example
 
-Better design:
+In a Student table:
 
-### Student Table
+```text
+StudentID
+SchoolEmail
+NationalStudentNumber
+```
 
-| studentId | name |
-|---|---|
-| S001 | Alice |
-| S002 | Ben |
+may all be unique.
 
-### Course Table
+These are candidate keys.
 
-| courseId | courseName |
-|---|---|
-| C001 | Computer Science |
-| C002 | Mathematics |
+The database designer chooses one candidate key to be the primary key.
 
-### Enrollment Table
+### Simple Memory
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
-| E003 | S001 | C002 |
-
-Now student and course names are stored once in their own tables.  
-Enrollment stores IDs to link them.
+```text
+candidate key = possible primary key
+primary key = chosen main unique identifier
+```
 
 ---
 
-## 12. Referential Integrity
+## 10. Natural Key and Surrogate Key
 
-Referential integrity means foreign key values must match existing primary key values.
+### Natural Key
 
-### Valid Example
+A natural key is a real-world value used as a key.
 
-Student table has:
+Examples:
 
-| studentId | name |
+```text
+ISBN for a book edition
+email address
+passport number
+vehicle registration number
+```
+
+### Surrogate Key
+
+A surrogate key is an artificial ID created by the database.
+
+Examples:
+
+```text
+StudentID
+CustomerID
+OrderID
+AppointmentID
+```
+
+### Comparison
+
+| Natural Key | Surrogate Key |
 |---|---|
-| S001 | Alice |
+| real-world meaning | artificial identifier |
+| may be familiar to users | usually simple and stable |
+| may change or be sensitive | easier to control |
+| example: ISBN | example: BookID |
 
-Enrollment table:
+### Exam Level
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
+You usually only need primary key and foreign key, but knowing this helps explain why IDs are often used.
 
-This is valid because `S001` exists in Student.
+---
 
-### Invalid Example
+## 11. Composite Key
 
-Enrollment table:
+A composite key uses more than one field to uniquely identify a record.
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E009 | S999 | C001 |
+### Example: Enrollment Table
 
-This is invalid if `S999` does not exist in Student.
+| StudentID | CourseID | EnrollDate |
+|---:|---|---|
+| 101 | CS | 2026-02-01 |
+| 101 | Math | 2026-02-01 |
+| 102 | CS | 2026-02-02 |
 
-### Why It Matters
+A combination of:
 
-If the database allowed `S999`, the enrollment record would refer to a student that does not exist.
+```text
+StudentID + CourseID
+```
 
-This creates an **orphan record**.
+could uniquely identify each enrollment if a student can enroll in a course only once.
+
+### Why Composite Keys Are Used
+
+They are useful when one field alone is not enough.
+
+### Alternative
+
+A table may also use a surrogate key:
+
+```text
+EnrollmentID
+```
+
+and still store `StudentID` and `CourseID` as foreign keys.
+
+---
+
+## 12. Foreign Key
+
+A foreign key is a field in one table that refers to the primary key in another table.
+
+### Example
+
+Student table:
+
+| StudentID | FirstName |
+|---:|---|
+| 101 | Amy |
+| 102 | Ben |
+
+Grade table:
+
+| GradeID | StudentID | Subject | Score |
+|---:|---:|---|---:|
+| 1 | 101 | CS | 95 |
+| 2 | 102 | CS | 88 |
+| 3 | 101 | Math | 91 |
+
+In Grade table:
+
+```text
+StudentID
+```
+
+is a foreign key because it links each grade to a student in the Student table.
 
 ::: tip Exam Phrase
-Referential integrity ensures that a foreign key value corresponds to an existing primary key value in the related table.
+A foreign key is a field in one table that refers to the primary key of another table, creating a relationship between the tables.
 :::
 
 ---
 
 ## 13. Parent Table and Child Table
 
-When a foreign key points to another table:
+When one table references another:
 
 ```text
-parent table = table with the primary key
-child table = table with the foreign key
+parent table = table with primary key being referenced
+child table = table with foreign key
 ```
 
-Example:
+### Example
 
-| Role | Table | Field |
-|---|---|---|
-| Parent table | Student | `studentId` primary key |
-| Child table | Enrollment | `studentId` foreign key |
+Student table:
 
-The Enrollment table depends on existing Student records.
+```text
+Student(StudentID, FirstName, LastName)
+```
+
+Grade table:
+
+```text
+Grade(GradeID, StudentID, Subject, Score)
+```
+
+Here:
+
+```text
+Student = parent table
+Grade = child table
+Student.StudentID = primary key
+Grade.StudentID = foreign key
+```
+
+### Why This Matters
+
+The child table depends on the parent table for valid references.
 
 ---
 
-## 14. Can Foreign Keys Repeat?
+## 14. How Foreign Keys Link Tables
 
-Yes.
+Foreign keys allow related information to be stored in separate tables and linked when needed.
 
-Example:
+### Example
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E003 | S001 | C002 |
+Student table:
 
-`S001` appears twice in Enrollment because the same student can enroll in more than one course.
+| StudentID | FirstName | LastName |
+|---:|---|---|
+| 101 | Amy | Chen |
+| 102 | Ben | Wang |
 
-This is allowed because a foreign key is not necessarily unique.
+Course table:
 
-### Key Idea
-
-```text
-Primary key values are unique in their own table.
-Foreign key values can repeat in the child table.
-```
-
----
-
-## 15. Composite Key Preview
-
-Sometimes one field is not enough to uniquely identify a record.
-
-Example Enrollment table without `enrollmentId`:
-
-| studentId | courseId |
+| CourseID | CourseName |
 |---|---|
-| S001 | C001 |
-| S001 | C002 |
-| S002 | C001 |
+| CS | Computer Science |
+| MATH | Mathematics |
 
-Here, neither `studentId` nor `courseId` alone is unique.
+Enrollment table:
 
-But the combination:
+| EnrollmentID | StudentID | CourseID |
+|---:|---:|---|
+| 1 | 101 | CS |
+| 2 | 101 | MATH |
+| 3 | 102 | CS |
+
+### Links
 
 ```text
-studentId + courseId
+Enrollment.StudentID → Student.StudentID
+Enrollment.CourseID → Course.CourseID
 ```
 
-can uniquely identify each enrollment.
+This means:
 
-This is called a **composite key**.
+```text
+Amy is enrolled in CS and MATH
+Ben is enrolled in CS
+```
 
-::: info Preview
-For this course, students usually only need a basic awareness of composite keys unless the syllabus or teacher requires deeper detail.
+---
+
+## 15. Referential Integrity
+
+Referential integrity means foreign key values must refer to existing primary key values.
+
+### Example
+
+Student table:
+
+| StudentID | FirstName |
+|---:|---|
+| 101 | Amy |
+| 102 | Ben |
+
+Grade table:
+
+| GradeID | StudentID | Score |
+|---:|---:|---:|
+| 1 | 101 | 95 |
+| 2 | 999 | 88 |
+
+Problem:
+
+```text
+StudentID 999 does not exist in Student table
+```
+
+This breaks referential integrity.
+
+### Why It Matters
+
+Referential integrity prevents:
+
+```text
+orphan records
+invalid links
+inconsistent relationships
+wrong query results
+```
+
+::: tip Exam Phrase
+Referential integrity ensures that a foreign key value matches an existing primary key value in the related table.
 :::
 
 ---
 
-## 16. Choosing a Suitable Primary Key
+## 16. Orphan Records
 
-### Scenario: Library Book Table
+An orphan record is a record that refers to a missing related record.
 
-| Field | Good Primary Key? | Reason |
-|---|---|---|
-| `bookId` | Yes | Unique identifier |
-| `title` | No | Different books can have same title |
-| `author` | No | One author can write many books |
-| `isbn` | Sometimes yes | Usually unique for a book edition |
-| `publicationYear` | No | Many books share same year |
+### Example
 
-### Best Choice
+Order table:
+
+| OrderID | CustomerID | OrderDate |
+|---:|---:|---|
+| 501 | 10 | 2026-05-01 |
+
+Customer table does not contain:
 
 ```text
-bookId
+CustomerID = 10
 ```
 
-or sometimes:
+This order is an orphan record because it refers to a customer that does not exist.
+
+### Why Orphan Records Are Bad
+
+They can cause:
 
 ```text
-isbn
-```
-
-if it is available and unique.
-
----
-
-## 17. Key Design Examples
-
-### Product Table
-
-| productId | productName | price |
-|---|---|---:|
-| P001 | Keyboard | 49.99 |
-| P002 | Mouse | 19.99 |
-
-Primary key:
-
-```text
-productId
-```
-
-### Order Table
-
-| orderId | customerId | orderDate |
-|---|---|---|
-| O001 | C001 | 2026-05-20 |
-| O002 | C002 | 2026-05-21 |
-
-Primary key:
-
-```text
-orderId
-```
-
-Foreign key:
-
-```text
-customerId
-```
-
-because it likely refers to:
-
-```text
-Customer.customerId
-```
-
-### Customer Table
-
-| customerId | customerName | email |
-|---|---|---|
-| C001 | Amy | amy@email.com |
-| C002 | Ben | ben@email.com |
-
-Primary key:
-
-```text
-customerId
+confusing reports
+incorrect queries
+data integrity problems
+missing context
+business errors
 ```
 
 ---
 
-## 18. SQL Preview with Keys
+## 17. Updating and Deleting Related Records
 
-Keys are often used in SQL joins.
+Foreign keys affect what happens when records are updated or deleted.
 
-### Student Table
+### Example
 
-| studentId | name |
-|---|---|
-| S001 | Alice |
-| S002 | Ben |
+If a student has grades, what should happen when the student record is deleted?
 
-### Enrollment Table
-
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
-
-A join connects:
+Possible rules:
 
 ```text
-Student.studentId = Enrollment.studentId
+prevent deletion if related grades exist
+delete related grades automatically
+set foreign key to null
+archive the student instead of deleting
 ```
 
-SQL joins will be explained later, but the idea depends on primary and foreign keys.
+### School Example
+
+Usually, deleting a student record with grades should be controlled carefully because grades need to remain accurate and auditable.
+
+### Level Control
+
+You do not need deep database administration here.  
+Just understand that foreign keys help protect valid links.
 
 ---
 
-## 19. Common Mistakes
+## 18. Primary Key vs Foreign Key
+
+| Feature | Primary Key | Foreign Key |
+|---|---|---|
+| Main role | uniquely identifies record in own table | links to record in another table |
+| Uniqueness | must be unique in its table | may repeat |
+| Null allowed? | normally not allowed | may be allowed depending on design |
+| Location | table being identified | table that references another |
+| Example | Student.StudentID | Grade.StudentID |
+| Purpose | identification | relationship/link |
+
+### Important
+
+A foreign key can repeat.
+
+Example:
+
+```text
+StudentID 101
+```
+
+may appear many times in Grade table because one student can have many grades.
+
+---
+
+## 19. Same Field Name, Different Role
+
+The same field name can appear in two tables with different roles.
+
+### Example
+
+Student table:
+
+```text
+StudentID = primary key
+```
+
+Grade table:
+
+```text
+StudentID = foreign key
+```
+
+### Why?
+
+In Student table, `StudentID` identifies a student record.  
+In Grade table, `StudentID` links a grade record to a student.
+
+### Memory
+
+```text
+Primary key: own table identity
+Foreign key: link to another table
+```
+
+---
+
+## 20. One-to-Many Relationship Preview
+
+Foreign keys often represent one-to-many relationships.
+
+### Example
+
+One student can have many grades.
+
+```text
+Student 1 → many Grade records
+```
+
+Student table:
+
+| StudentID | FirstName |
+|---:|---|
+| 101 | Amy |
+
+Grade table:
+
+| GradeID | StudentID | Subject | Score |
+|---:|---:|---|---:|
+| 1 | 101 | CS | 95 |
+| 2 | 101 | Math | 91 |
+| 3 | 101 | English | 87 |
+
+Here:
+
+```text
+Grade.StudentID is a foreign key
+```
+
+and it can repeat because one student has many grades.
+
+---
+
+## 21. Many-to-Many Relationship Preview
+
+Sometimes two entities have a many-to-many relationship.
+
+Example:
+
+```text
+students can take many courses
+courses can have many students
+```
+
+This is usually handled with a linking table.
+
+### Tables
+
+```text
+Student(StudentID, FirstName)
+Course(CourseID, CourseName)
+Enrollment(EnrollmentID, StudentID, CourseID)
+```
+
+### Foreign Keys
+
+```text
+Enrollment.StudentID → Student.StudentID
+Enrollment.CourseID → Course.CourseID
+```
+
+The Enrollment table connects students and courses.
+
+Relationships are covered in more detail in the next pages.
+
+---
+
+## 22. Keys and Reducing Redundancy
+
+Keys allow data to be stored once and referenced many times.
+
+### Poor Design
+
+| StudentName | CourseName | TeacherName | TeacherEmail |
+|---|---|---|---|
+| Amy Chen | CS | Mr Lee | lee@school.edu |
+| Ben Wang | CS | Mr Lee | lee@school.edu |
+| Cara Liu | CS | Mr Lee | lee@school.edu |
+
+Teacher details are repeated many times.
+
+### Better Design
+
+```text
+Teacher(TeacherID, TeacherName, TeacherEmail)
+Course(CourseID, CourseName, TeacherID)
+Student(StudentID, StudentName)
+Enrollment(StudentID, CourseID)
+```
+
+Now `TeacherID` can link Course to Teacher.
+
+This reduces duplicate teacher data.
+
+---
+
+## 23. Keys and SQL Preview
+
+SQL uses keys to join related tables.
+
+### Example Tables
+
+```text
+Student(StudentID, FirstName)
+Grade(GradeID, StudentID, Subject, Score)
+```
+
+### Query Idea
+
+```sql
+SELECT Student.FirstName, Grade.Subject, Grade.Score
+FROM Student
+JOIN Grade
+ON Student.StudentID = Grade.StudentID;
+```
+
+### Meaning
+
+The database matches:
+
+```text
+Student.StudentID
+```
+
+with:
+
+```text
+Grade.StudentID
+```
+
+to combine related records.
+
+SQL joins are covered later, but the key idea is that keys make table linking possible.
+
+---
+
+## 24. Keys and ERD Preview
+
+In an ERD, keys help show how entities are related.
+
+### Example
+
+```text
+Student 1 ----- many Grade
+```
+
+This can be implemented as:
+
+```text
+Student(StudentID primary key)
+Grade(GradeID primary key, StudentID foreign key)
+```
+
+### ERD Notation
+
+Different diagrams show keys differently, for example:
+
+```text
+PK StudentID
+FK StudentID
+```
+
+or underlining primary key attributes.
+
+---
+
+## 25. Choosing a Primary Key
+
+When choosing a primary key, ask:
+
+```text
+Is it unique?
+Can it ever be blank?
+Can it change?
+Is it simple?
+Is it stable?
+Does it avoid sensitive information?
+```
+
+### Good Choice
+
+```text
+StudentID
+CustomerID
+ProductID
+OrderID
+AppointmentID
+```
+
+### Poor Choice
+
+```text
+FirstName
+Address
+PhoneNumber
+DateOfBirth
+CourseName
+```
+
+### Depends
+
+Some natural keys may be valid in certain contexts, but IDs are often safer.
+
+Example:
+
+```text
+ISBN may identify a book edition
+```
+
+but a library may still use:
+
+```text
+BookCopyID
+```
+
+to identify each physical copy.
+
+---
+
+## 26. Worked Example: School Grades
+
+### Tables
+
+```text
+Student(StudentID, FirstName, LastName)
+Grade(GradeID, StudentID, Subject, Score)
+```
+
+### Primary Keys
+
+```text
+Student.StudentID
+Grade.GradeID
+```
+
+### Foreign Key
+
+```text
+Grade.StudentID → Student.StudentID
+```
+
+### Explanation
+
+Each student is identified by `StudentID`.  
+Each grade record is identified by `GradeID`.  
+`StudentID` in Grade links each grade to the correct student.
+
+---
+
+## 27. Worked Example: Library Loans
+
+### Tables
+
+```text
+Book(BookID, Title, ISBN)
+Member(MemberID, MemberName, Email)
+Loan(LoanID, BookID, MemberID, LoanDate, ReturnDate)
+```
+
+### Primary Keys
+
+```text
+Book.BookID
+Member.MemberID
+Loan.LoanID
+```
+
+### Foreign Keys
+
+```text
+Loan.BookID → Book.BookID
+Loan.MemberID → Member.MemberID
+```
+
+### Explanation
+
+A loan record must refer to a valid book and a valid member.  
+Foreign keys make these links clear.
+
+---
+
+## 28. Worked Example: Online Shop Orders
+
+### Tables
+
+```text
+Customer(CustomerID, CustomerName, Email)
+Order(OrderID, CustomerID, OrderDate)
+Product(ProductID, ProductName, Price)
+OrderItem(OrderItemID, OrderID, ProductID, Quantity)
+```
+
+### Primary Keys
+
+```text
+Customer.CustomerID
+Order.OrderID
+Product.ProductID
+OrderItem.OrderItemID
+```
+
+### Foreign Keys
+
+```text
+Order.CustomerID → Customer.CustomerID
+OrderItem.OrderID → Order.OrderID
+OrderItem.ProductID → Product.ProductID
+```
+
+### Explanation
+
+An order belongs to a customer.  
+An order item belongs to an order and refers to a product.
+
+---
+
+## 29. Worked Example: Hospital Appointments
+
+### Tables
+
+```text
+Patient(PatientID, PatientName, DateOfBirth)
+Doctor(DoctorID, DoctorName, Department)
+Appointment(AppointmentID, PatientID, DoctorID, AppointmentDate, AppointmentTime)
+```
+
+### Primary Keys
+
+```text
+Patient.PatientID
+Doctor.DoctorID
+Appointment.AppointmentID
+```
+
+### Foreign Keys
+
+```text
+Appointment.PatientID → Patient.PatientID
+Appointment.DoctorID → Doctor.DoctorID
+```
+
+### Explanation
+
+Each appointment must refer to a valid patient and a valid doctor.
+
+---
+
+## 30. Worked Example: Game Players and Matches
+
+### Tables
+
+```text
+Player(PlayerID, Username, Rank)
+Match(MatchID, MatchDate, MapName)
+MatchPlayer(MatchID, PlayerID, Score, Result)
+```
+
+### Possible Composite Key
+
+For MatchPlayer, the combination:
+
+```text
+MatchID + PlayerID
+```
+
+could uniquely identify one player's participation in one match.
+
+### Foreign Keys
+
+```text
+MatchPlayer.MatchID → Match.MatchID
+MatchPlayer.PlayerID → Player.PlayerID
+```
+
+### Explanation
+
+This linking table connects players and matches.
+
+---
+
+## 31. Scenario Answer Bank
+
+### If Asked: “Identify primary key”
+
+Use this structure:
+
+```text
+The primary key is [field] because it uniquely identifies each record in the [table] table and should not be repeated or null.
+```
+
+### If Asked: “Identify foreign key”
+
+Use this structure:
+
+```text
+The foreign key is [field] in the [child table] because it refers to [field] in the [parent table] and links the two tables.
+```
+
+### If Asked: “Explain why a key is unsuitable”
+
+Use this structure:
+
+```text
+[Field] is unsuitable as a primary key because it may not be unique / may change / may be null / may contain sensitive information. A better choice is [ID field].
+```
+
+### If Asked: “Explain referential integrity”
+
+Use this structure:
+
+```text
+Referential integrity means every foreign key value must match an existing primary key value in the related table. This prevents records from referring to non-existing records.
+```
+
+---
+
+## 32. Common Mistakes
 
 | Mistake | Why it is wrong | Better understanding |
 |---|---|---|
-| Thinking primary key means “important field” | It must uniquely identify each record | Use a unique identifier |
-| Choosing name as primary key | Names can repeat | Use ID fields |
-| Thinking foreign key must be unique | Foreign keys can repeat | Foreign key links to another table |
-| Confusing primary key and foreign key | They have different roles | Primary identifies; foreign links |
-| Foreign key points to a non-existing record | Breaks referential integrity | Foreign key should match parent primary key |
-| Using changing data as primary key | Updates become risky | Choose stable identifier |
-| Allowing null primary key | Cannot identify record | Primary key should not be null |
-| Duplicating primary key values | Records cannot be uniquely identified | Keep primary key unique |
-| Storing full repeated data instead of foreign key | Causes redundancy | Store ID reference |
-| Not naming key fields clearly | Hard to understand design | Use names like `studentId`, `courseId` |
+| Primary key can repeat | It must uniquely identify records | No duplicate primary key values |
+| Primary key can be blank | It normally cannot be null | Every record needs identity |
+| Foreign key must be unique | It can repeat | Many child records may link to same parent |
+| Foreign key is always in parent table | It is in child/reference table | It points to parent primary key |
+| Name is a good primary key | Names can repeat/change | Use unique ID |
+| Foreign key creates data copy | It creates link/reference | Related data stays in parent table |
+| Same field cannot be PK and FK in different tables | Same field name can have different roles | Role depends on table |
+| Referential integrity means data is encrypted | It means valid relationships | Foreign key must match primary key |
+| Deleting parent record is always safe | Child records may become orphaned | Use constraints/rules |
+| Composite key means duplicate key | Composite key uses multiple fields together | Combination is unique |
 
 ---
 
-## 20. Guided Practice
+## 33. Guided Practice
 
-### Practice 1: Identify the Primary Key
+### Practice 1: Identify Primary Key
 
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
+In this table, which field is the best primary key?
 
-Which field is the best primary key?
+| StudentID | FirstName | LastName |
+|---:|---|---|
+| 101 | Amy | Chen |
+| 102 | Ben | Wang |
 
 <details>
 <summary>Suggested Answer</summary>
 
-```text
-studentId
-```
-
-It is the best primary key because it uniquely identifies each student record.
+`StudentID`, because it uniquely identifies each student record.
 
 </details>
 
 ---
 
-### Practice 2: Identify Foreign Keys
+### Practice 2: Identify Foreign Key
 
-Given:
+Student table:
 
-### Student
+| StudentID | FirstName |
+|---:|---|
+| 101 | Amy |
+| 102 | Ben |
 
-| studentId | name |
-|---|---|
-| S001 | Alice |
-| S002 | Ben |
+Grade table:
 
-### Enrollment
+| GradeID | StudentID | Score |
+|---:|---:|---:|
+| 1 | 101 | 95 |
+| 2 | 102 | 88 |
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
-
-Which field in Enrollment links to Student?
+Which field is the foreign key?
 
 <details>
 <summary>Suggested Answer</summary>
 
-```text
-studentId
-```
-
-It is a foreign key in Enrollment because it refers to `studentId` in Student.
+`StudentID` in the Grade table is the foreign key because it refers to `StudentID` in the Student table.
 
 </details>
 
 ---
 
-### Practice 3: Is This Valid?
+### Practice 3: Can Foreign Keys Repeat?
 
-Student table contains:
-
-```text
-S001
-S002
-```
-
-Enrollment record:
-
-```text
-E010, S999, C001
-```
-
-Is `S999` valid as a foreign key?
+Can `StudentID` repeat in the Grade table?
 
 <details>
 <summary>Suggested Answer</summary>
 
-No. `S999` is not valid if there is no matching `studentId` in the Student table. This breaks referential integrity.
+Yes. One student can have many grade records, so the same `StudentID` can appear multiple times as a foreign key.
 
 </details>
 
 ---
 
-### Practice 4: Can a Foreign Key Repeat?
+### Practice 4: Referential Integrity
 
-Can this be valid?
+Why is this Grade record invalid if no student has `StudentID = 999`?
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S001 | C002 |
+| GradeID | StudentID | Score |
+|---:|---:|---:|
+| 3 | 999 | 70 |
 
 <details>
 <summary>Suggested Answer</summary>
 
-Yes. The foreign key `studentId` can repeat because one student can enroll in multiple courses.
+It breaks referential integrity because the foreign key value `999` does not match any existing `StudentID` in the Student table.
 
 </details>
 
 ---
 
-### Practice 5: Choose a Key
+### Practice 5: Better Key
 
-For a Product table, choose the best primary key:
-
-```text
-productName
-productId
-price
-category
-```
+Why is `Email` sometimes risky as a primary key?
 
 <details>
 <summary>Suggested Answer</summary>
 
-```text
-productId
-```
-
-It is designed to uniquely identify each product. Product names and categories may repeat, and price is not unique.
+Email may change, may be entered incorrectly, and may be considered personal data. A stable artificial ID such as `UserID` is often safer.
 
 </details>
 
 ---
 
-## 21. Independent Practice
+## 34. Independent Practice
 
 ### Question 1
 
@@ -808,60 +1279,39 @@ Define foreign key.
 
 ### Question 3
 
-Explain the difference between a primary key and a foreign key.
+Explain the difference between primary key and foreign key.
 
 ### Question 4
 
-For this table, choose a suitable primary key and explain why.
-
-| bookId | title | author |
-|---|---|---|
-| B001 | Dune | Frank Herbert |
-| B002 | Dune | Another Author |
-| B003 | Animal Farm | George Orwell |
+Explain why names are usually poor primary keys.
 
 ### Question 5
 
-Given these tables, identify all primary keys and foreign keys.
-
-### Customer
-
-| customerId | customerName |
-|---|---|
-| C001 | Amy |
-| C002 | Ben |
-
-### Order
-
-| orderId | customerId | orderDate |
-|---|---|---|
-| O001 | C001 | 2026-05-20 |
-| O002 | C002 | 2026-05-21 |
-| O003 | C001 | 2026-05-22 |
+Give two examples of good primary keys and explain why they are suitable.
 
 ### Question 6
 
-Explain why `customerId` can repeat in the Order table.
+In a library database with `Book`, `Member`, and `Loan` tables, identify possible primary and foreign keys.
 
 ### Question 7
 
-Explain what referential integrity means.
+Explain referential integrity using a school database example.
 
 ### Question 8
 
-Give an example of an orphan record.
+Explain why foreign keys can repeat.
 
 ### Question 9
 
-Explain why using phone number as a primary key may be risky.
+Explain how keys help reduce data redundancy.
 
 ### Question 10
 
-Design three tables for a library system and identify primary and foreign keys.
+Design primary and foreign keys for a simple online shop database with Customer, Order, Product, and OrderItem tables.
 
 ---
 
-## 22. Exam-style Questions
+## 35. Exam-style Questions
 
 ### Question 1 [4 marks]
 
@@ -870,7 +1320,7 @@ Define primary key and foreign key.
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-A primary key is a field that uniquely identifies each record in a table. A foreign key is a field in one table that refers to the primary key in another table, allowing the tables to be linked.
+A primary key is a field or combination of fields that uniquely identifies each record in a table. A foreign key is a field in one table that refers to the primary key in another table, creating a relationship between the two tables.
 
 </details>
 
@@ -878,12 +1328,12 @@ A primary key is a field that uniquely identifies each record in a table. A fore
 
 ### Question 2 [5 marks]
 
-Explain why `studentId` is a better primary key than `name` in a Student table.
+Explain why `StudentID` is a better primary key than `StudentName`.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-`studentId` is better because it is designed to be unique for each student record. A name may not be unique because two students can have the same name. A primary key must uniquely identify each record and should not contain duplicate values. Therefore, `studentId` is more reliable than `name`.
+`StudentID` is better because it can be made unique for every student and normally does not change. `StudentName` is not a good primary key because two students may have the same name, names may be spelled differently, and names can change. A primary key must uniquely identify each record.
 
 </details>
 
@@ -891,33 +1341,17 @@ Explain why `studentId` is a better primary key than `name` in a Student table.
 
 ### Question 3 [6 marks]
 
-Using the tables below, identify the primary key in each table and the foreign key in Enrollment.
+Given these tables, identify the primary and foreign keys.
 
-### Student
-
-| studentId | name |
-|---|---|
-| S001 | Alice |
-| S002 | Ben |
-
-### Course
-
-| courseId | courseName |
-|---|---|
-| C001 | Computer Science |
-| C002 | Mathematics |
-
-### Enrollment
-
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
+```text
+Student(StudentID, FirstName, LastName)
+Grade(GradeID, StudentID, Subject, Score)
+```
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-In the Student table, the primary key is `studentId`. In the Course table, the primary key is `courseId`. In the Enrollment table, the primary key is `enrollmentId`. In Enrollment, `studentId` is a foreign key referencing Student.studentId, and `courseId` is a foreign key referencing Course.courseId.
+In the Student table, `StudentID` is the primary key because it uniquely identifies each student. In the Grade table, `GradeID` is the primary key because it uniquely identifies each grade record. `StudentID` in the Grade table is a foreign key because it refers to `StudentID` in the Student table and links each grade to the correct student.
 
 </details>
 
@@ -930,7 +1364,7 @@ Explain referential integrity using an example.
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Referential integrity means that a foreign key value must match an existing primary key value in the related table. For example, if Enrollment.studentId is a foreign key referring to Student.studentId, then every studentId in Enrollment should already exist in the Student table. If Enrollment contains S999 but no student with studentId S999 exists, referential integrity is broken.
+Referential integrity means that a foreign key value must match an existing primary key value in the related table. For example, if `Grade.StudentID` is a foreign key referring to `Student.StudentID`, then every `StudentID` in the Grade table must already exist in the Student table. This prevents grade records from referring to students who do not exist.
 
 </details>
 
@@ -938,153 +1372,165 @@ Referential integrity means that a foreign key value must match an existing prim
 
 ### Question 5 [6 marks]
 
-A student says: “A foreign key must be unique.” Explain why this is incorrect.
+A shop database has these tables:
+
+```text
+Customer(CustomerID, CustomerName)
+Order(OrderID, CustomerID, OrderDate)
+Product(ProductID, ProductName, Price)
+OrderItem(OrderItemID, OrderID, ProductID, Quantity)
+```
+
+Identify two foreign keys and explain their purpose.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-This is incorrect because a foreign key is used to link to a primary key in another table, but it does not have to be unique in the child table. For example, the same studentId may appear multiple times in an Enrollment table if one student takes several courses. Primary key values must be unique in their own table, but foreign key values can repeat.
+`Order.CustomerID` is a foreign key that refers to `Customer.CustomerID`, linking each order to the customer who placed it. `OrderItem.OrderID` is a foreign key that refers to `Order.OrderID`, linking each order item to its order. `OrderItem.ProductID` is also a foreign key that refers to `Product.ProductID`, linking each order item to the product purchased.
 
 </details>
 
 ---
 
-## 23. Classroom Activity
+## 36. Classroom Activity
 
-### Activity 1: ID Card Matching
+### Activity 1: Key Labeling
 
-Students receive Student ID cards:
-
-```text
-S001 Alice
-S002 Ben
-S003 Clara
-```
-
-Other students receive Enrollment cards:
+Give students several table schemas and ask them to label:
 
 ```text
-E001 S001 C001
-E002 S002 C001
-E003 S001 C002
+PK
+FK
+parent table
+child table
 ```
 
-They physically match foreign keys to primary keys.
+Example:
+
+```text
+Author(AuthorID, AuthorName)
+Book(BookID, Title, AuthorID)
+```
 
 ---
 
-### Activity 2: Find the Broken Link
+### Activity 2: Broken Integrity
 
-Give students tables with one invalid foreign key value. They must find the record that breaks referential integrity.
+Give students a parent table and child table with invalid foreign keys.
 
----
-
-### Activity 3: Choose the Best Key
-
-Groups receive scenarios:
+Students find:
 
 ```text
-Student
-Book
-Product
-Customer
-Order
-GamePlayer
+which records are invalid
+why they are invalid
+how to fix them
 ```
-
-They choose suitable primary keys and explain why other fields are weaker choices.
 
 ---
 
-## 24. Homework
+### Activity 3: Design Keys
+
+Groups design keys for one system:
+
+```text
+school enrollment
+library loans
+online shop orders
+hospital appointments
+game matches
+```
+
+They must identify:
+
+```text
+tables
+primary keys
+foreign keys
+relationships
+possible integrity problems
+```
+
+---
+
+## 37. Homework
 
 ### Homework Part A: Concept Explanation
 
-In 5-6 sentences, explain the difference between primary keys and foreign keys using a school database example.
+In 6-8 sentences, explain the difference between primary keys and foreign keys using a school database example.
 
 ---
 
-### Homework Part B: Table Analysis
+### Homework Part B: Key Identification
 
-Given:
+For this schema, identify primary and foreign keys:
 
-### Product
+```text
+Patient(PatientID, PatientName)
+Doctor(DoctorID, DoctorName)
+Appointment(AppointmentID, PatientID, DoctorID, AppointmentDate)
+```
 
-| productId | productName | price |
-|---|---|---:|
-| P001 | Keyboard | 49.99 |
-| P002 | Mouse | 19.99 |
-
-### OrderItem
-
-| orderItemId | orderId | productId | quantity |
-|---|---|---|---:|
-| I001 | O001 | P001 | 2 |
-| I002 | O001 | P002 | 1 |
-
-Answer:
-
-1. Primary key of Product
-2. Primary key of OrderItem
-3. Foreign key linking OrderItem to Product
-4. Whether `productId` in OrderItem can repeat
-5. Why foreign keys are useful
+Explain each key.
 
 ---
 
-### Homework Part C: Design Task
+### Homework Part C: Scenario Design
 
-Design tables for a simple library loan system:
+Design a simple library database with:
 
 ```text
 Book
-Borrower
+Member
 Loan
 ```
 
-For each table, list:
+Include:
 
 ```text
-fields
-primary key
-foreign keys if any
+primary key for each table
+foreign keys
+one explanation of how the tables are linked
 ```
 
 ---
 
-### Homework Part D: Error Explanation
+### Homework Part D: Misconception Correction
 
-Explain what is wrong if a Loan record contains:
+Correct these statements:
 
 ```text
-borrowerId = B999
+A foreign key must always be unique.
+A primary key can be blank.
+Student name is always the best primary key.
+Referential integrity means data is encrypted.
+Foreign keys are not needed if tables have similar names.
 ```
-
-but there is no borrower with ID `B999` in the Borrower table.
 
 ---
 
-## 25. One-page Revision Summary
+## 38. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| Primary key | Uniquely identifies each record in a table |
-| Foreign key | Refers to a primary key in another table |
-| Unique | No duplicate values |
-| Primary key rule | Unique and not null |
-| Foreign key rule | Should match existing primary key value |
-| Primary key example | `Student.studentId` |
-| Foreign key example | `Enrollment.studentId` |
-| Foreign keys can repeat | Many child records can link to one parent record |
-| Referential integrity | Foreign key values must refer to existing primary keys |
-| Parent table | Table containing referenced primary key |
+| Primary key | Uniquely identifies each record in own table |
+| Foreign key | Refers to primary key in another table |
+| Candidate key | Possible primary key |
+| Composite key | Key made from more than one field |
+| Natural key | Real-world value used as key |
+| Surrogate key | Artificial ID used as key |
+| Parent table | Table referenced by foreign key |
 | Child table | Table containing foreign key |
-| Orphan record | Foreign key refers to missing record |
-| Exam phrase | Primary keys identify records; foreign keys create links between related tables |
+| Referential integrity | Foreign key must match existing primary key |
+| Orphan record | Record referring to missing related record |
+| PK uniqueness | Must be unique and not null |
+| FK repetition | Can repeat in child table |
+| Good PK | unique, stable, simple, not null |
+| Poor PK | name, address, changing/sensitive value |
+| Exam phrase | A primary key uniquely identifies records in its own table, while a foreign key links records to a primary key in another table |
 
 ---
 
-## 26. Quick Self-test
+## 39. Quick Self-test
 
 Before moving on, students should be able to answer these:
 
@@ -1092,9 +1538,9 @@ Before moving on, students should be able to answer these:
 2. What is a foreign key?
 3. Why must a primary key be unique?
 4. Can a foreign key repeat?
-5. Why is `name` usually a weak primary key?
+5. Why is `StudentName` not a good primary key?
 6. What is referential integrity?
 7. What is an orphan record?
-8. Which table contains the primary key in a relationship?
-9. Which table contains the foreign key?
-10. How do primary and foreign keys help relational databases?
+8. What is a composite key?
+9. Which table usually contains the foreign key: parent or child?
+10. How do keys help link tables?
