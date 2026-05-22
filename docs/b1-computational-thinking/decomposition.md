@@ -4,12 +4,15 @@
 
 By the end of this lesson, students should be able to:
 
-- define **decomposition**
+- define decomposition
 - explain why decomposition is useful in computational thinking
-- break a large problem into smaller sub-problems
-- identify inputs, processes, and outputs for each sub-problem
-- apply decomposition to simple programming problems
-- write an exam-style explanation using clear CS vocabulary
+- break a complex problem into smaller sub-problems
+- identify sensible sub-problems from a real-world scenario
+- explain how decomposition makes problems easier to understand, design, test, and maintain
+- connect decomposition to algorithms, flowcharts, functions, modules, and teamwork
+- distinguish decomposition from abstraction
+- apply decomposition to school, shop, game, library, login, and calculator examples
+- write exam-style answers about decomposition
 
 ---
 
@@ -19,12 +22,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | B1 Computational Thinking |
 | Label | SL Core |
-| Main skill | Breaking down problems |
-| Connected units | B2 Programming, B3 OOP, A3 Databases, IA project |
-| Exam relevance | Short-answer explanation questions, algorithm design, scenario-based questions |
+| Main skill | Breaking a problem into smaller, manageable parts before designing a solution |
+| Connected topics | Abstraction, algorithms, flowcharts, trace tables, programming functions/modules |
+| Practical focus | Scenario analysis and sub-problem identification |
+| Exam relevance | Definition, benefits, scenario decomposition, algorithm design explanation |
 
 ::: tip Learning Focus
-Decomposition is not just a definition. Students must be able to **use it** when analysing a scenario, designing an algorithm, or planning a program.
+Decomposition means breaking a complex problem into smaller sub-problems. Each smaller part can be understood, designed, tested, and improved more easily.
 :::
 
 ---
@@ -33,13 +37,22 @@ Decomposition is not just a definition. Students must be able to **use it** when
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Decomposition | 问题分解 | Breaking a complex problem into smaller, manageable sub-problems |
-| Sub-problem | 子问题 | A smaller part of a larger problem |
-| Module | 模块 | A separate part of a solution with a specific responsibility |
-| Input | 输入 | Data needed by a process |
-| Process | 处理 | Operations performed on data |
-| Output | 输出 | Result produced by a process |
-| Computational thinking | 计算思维 | A way of solving problems using CS-style methods |
+| Decomposition | 分解 | Breaking a complex problem into smaller sub-problems |
+| Problem | 问题 | A task that needs to be solved |
+| Sub-problem | 子问题 | Smaller part of the main problem |
+| Module | 模块 | Separate section of a system or program |
+| Function | 函数 | Reusable block of code that performs a specific task |
+| Procedure | 过程 | Named set of steps that performs a task |
+| Algorithm | 算法 | Step-by-step method for solving a problem |
+| Input | 输入 | Data entering a system or algorithm |
+| Output | 输出 | Result produced by a system or algorithm |
+| Process | 处理 | Steps performed on input to produce output |
+| Complexity | 复杂度 | How difficult a problem/system is to understand or manage |
+| Testing | 测试 | Checking whether a part or whole solution works |
+| Maintenance | 维护 | Updating or fixing a system after it is built |
+| Teamwork | 团队合作 | Different people work on different sub-problems |
+| Dependency | 依赖关系 | When one part relies on another part |
+| Interface | 接口 | How parts of a system communicate or connect |
 
 ---
 
@@ -50,34 +63,58 @@ Decomposition is not just a definition. Students must be able to **use it** when
 
 ### 中文讲解
 
-**Decomposition（问题分解）** 指的是把一个复杂的大问题拆成几个更小、更容易处理的子问题。
+**Decomposition（分解）** 是 computational thinking 中非常重要的一步。  
+它的意思是：
 
-在计算机科学中，我们通常不会一开始就直接写完整程序。因为如果问题太大，学生很容易不知道从哪里开始，也很容易把代码写得很乱。更好的方法是先问：
+```text
+把一个大问题拆成几个小问题
+```
 
-- 这个系统要完成哪些主要任务？
-- 每个任务需要什么输入？
-- 每个任务要做什么处理？
-- 每个任务会产生什么输出？
-- 哪些任务可以分开设计、编写和测试？
+例如要设计一个 online shop system，如果直接想整个系统，会很复杂。  
+我们可以先拆成：
 
-例如，一个“学生成绩管理系统”听起来很大，但可以拆成：
+```text
+user login
+product search
+shopping cart
+payment
+delivery tracking
+order history
+```
 
-1. 输入学生信息  
-2. 输入成绩  
-3. 计算总分  
-4. 计算平均分  
-5. 判断等级  
-6. 输出成绩报告  
+每一个小部分都可以单独分析、设计、测试。
 
-拆分后，每一个小任务都更容易理解，也更容易写成一个函数、方法或模块。
+Decomposition 的好处是：
 
-Decomposition 的核心价值是：
+```text
+problem becomes easier to understand
+each part can be solved separately
+different people can work on different parts
+each part can be tested separately
+code is easier to maintain
+```
 
-- 降低问题难度
-- 让程序结构更清晰
-- 方便多人合作
-- 方便测试和调试
-- 方便后期维护和修改
+比如写一个 grade calculator：
+
+```text
+input marks
+validate marks
+calculate total
+calculate average
+decide grade
+output result
+```
+
+这些就是 sub-problems。
+
+注意：decomposition 不是删除内容。  
+它是把复杂问题拆成更小、更清楚的 parts。
+
+简单来说：
+
+```text
+decomposition = break down a big problem into smaller manageable parts
+```
 
 </template>
 
@@ -85,350 +122,1084 @@ Decomposition 的核心价值是：
 
 ### English Explanation
 
-**Decomposition** means breaking a complex problem into smaller, more manageable sub-problems.
+**Decomposition** is an important part of computational thinking.  
+It means:
 
-In computer science, programmers usually should not start by writing the whole program immediately. If the problem is too large, the solution can become confusing and difficult to test.
+```text
+breaking a large problem into smaller problems
+```
 
-A better approach is to ask:
+For example, designing an online shop system can be complex if we think about everything at once.  
+We can decompose it into:
 
-- What are the main tasks of the system?
-- What input does each task need?
-- What processing does each task perform?
-- What output does each task produce?
-- Which tasks can be designed, coded, and tested separately?
+```text
+user login
+product search
+shopping cart
+payment
+delivery tracking
+order history
+```
 
-For example, a student grade management system can be decomposed into:
+Each smaller part can be analysed, designed, and tested separately.
 
-1. input student information  
-2. input marks  
-3. calculate total mark  
-4. calculate average mark  
-5. decide grade  
-6. output grade report  
+Benefits of decomposition include:
 
-After decomposition, each smaller task is easier to understand and can later become a function, method, or module.
+```text
+problem becomes easier to understand
+each part can be solved separately
+different people can work on different parts
+each part can be tested separately
+code is easier to maintain
+```
 
-The main benefits of decomposition are:
+For example, a grade calculator can be decomposed into:
 
-- reducing complexity
-- improving program structure
-- supporting teamwork
-- making testing and debugging easier
-- making maintenance easier
+```text
+input marks
+validate marks
+calculate total
+calculate average
+decide grade
+output result
+```
+
+These are sub-problems.
+
+Important: decomposition does not mean deleting parts.  
+It means breaking a complex problem into smaller, clearer parts.
+
+In simple terms:
+
+```text
+decomposition = break down a big problem into smaller manageable parts
+```
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. Real-life Example
+## 5. What Is Decomposition?
 
-### Example: School Library System
+Decomposition is the process of breaking a complex problem into smaller, more manageable sub-problems.
 
-A school wants to create a simple library system.
-
-At first, this sounds like one large problem:
-
-> Create a library system.
-
-This is too vague. We need to decompose it.
-
-| Sub-problem | Input | Process | Output |
-|---|---|---|---|
-| Add a book | Book title, author, ISBN | Store book details | New book record |
-| Search for a book | Search keyword | Compare keyword with book records | Matching books |
-| Borrow a book | Student ID, Book ID | Check availability and update status | Borrowing record |
-| Return a book | Book ID | Change status back to available | Updated book status |
-| Check overdue books | Current date, due dates | Compare dates | List of overdue books |
-
-::: info Why this is better
-Each sub-problem has a clear purpose. It can be designed, coded, tested, and improved separately.
-:::
-
----
-
-## 6. IB Pseudocode Pattern
-
-Decomposition can be shown by writing a main algorithm that calls smaller procedures.
-
-Example: Grade report system
+### Simple Definition
 
 ```text
-BEGIN GradeReportSystem
-    INPUT studentName
-    CALL inputMarks
-    CALL calculateTotal
-    CALL calculateAverage
-    CALL decideGrade
-    CALL outputReport
-END
+Decomposition breaks a large problem into smaller parts that are easier to solve.
 ```
 
-Each called part can be designed separately:
+### Example
+
+Problem:
 
 ```text
-PROCEDURE calculateAverage
-    average = total / numberOfSubjects
-END PROCEDURE
+Create a school attendance system.
 ```
-
-::: tip Exam Note
-In an exam, you may not need to write full code. You may need to explain that each smaller task can be developed and tested separately.
-:::
-
----
-
-## 7. Java Code Example
-
-Below is a simple Java example showing decomposition using methods.
-
-```java
-public class GradeReport {
-    public static void main(String[] args) {
-        String studentName = "Alice";
-        int math = 82;
-        int english = 76;
-        int computerScience = 91;
-
-        int total = calculateTotal(math, english, computerScience);
-        double average = calculateAverage(total, 3);
-        String grade = decideGrade(average);
-
-        printReport(studentName, total, average, grade);
-    }
-
-    public static int calculateTotal(int mark1, int mark2, int mark3) {
-        return mark1 + mark2 + mark3;
-    }
-
-    public static double calculateAverage(int total, int numberOfSubjects) {
-        return (double) total / numberOfSubjects;
-    }
-
-    public static String decideGrade(double average) {
-        if (average >= 80) {
-            return "A";
-        } else if (average >= 60) {
-            return "B";
-        } else {
-            return "C";
-        }
-    }
-
-    public static void printReport(String name, int total, double average, String grade) {
-        System.out.println("Student: " + name);
-        System.out.println("Total: " + total);
-        System.out.println("Average: " + average);
-        System.out.println("Grade: " + grade);
-    }
-}
-```
-
----
-
-## 8. Line-by-line Code Explanation
-
-| Code Part | Explanation |
-|---|---|
-| `main` method | Controls the overall program flow |
-| `studentName`, `math`, `english`, `computerScience` | Store input data |
-| `calculateTotal(...)` | Handles the sub-problem of calculating total |
-| `calculateAverage(...)` | Handles the sub-problem of calculating average |
-| `decideGrade(...)` | Handles the sub-problem of deciding the grade |
-| `printReport(...)` | Handles the sub-problem of displaying the result |
-
-### Why this shows decomposition
-
-Instead of placing all logic inside `main`, the solution is split into smaller methods.
-
-Each method has one main responsibility:
-
-| Method | Responsibility |
-|---|---|
-| `calculateTotal` | Add marks |
-| `calculateAverage` | Calculate average |
-| `decideGrade` | Choose grade based on average |
-| `printReport` | Display final report |
-
-This makes the program easier to read, test, and maintain.
-
----
-
-## 9. Step-by-step Execution
-
-Given:
-
-| Variable | Value |
-|---|---:|
-| math | 82 |
-| english | 76 |
-| computerScience | 91 |
-
-Execution:
-
-| Step | Action | Result |
-|---|---|---|
-| 1 | calculateTotal(82, 76, 91) | total = 249 |
-| 2 | calculateAverage(249, 3) | average = 83.0 |
-| 3 | decideGrade(83.0) | grade = "A" |
-| 4 | printReport(...) | output report |
-
-Final output:
-
-```text
-Student: Alice
-Total: 249
-Average: 83.0
-Grade: A
-```
-
----
-
-## 10. Common Mistakes
-
-| Mistake | Why it is a problem | Better habit |
-|---|---|---|
-| Trying to solve the whole problem at once | The solution becomes confusing | Break the problem into sub-problems first |
-| Making sub-problems too large | They are still hard to solve | Each sub-problem should have a clear responsibility |
-| Creating too many tiny sub-problems | The design becomes unnecessarily complicated | Group closely related actions together |
-| Ignoring how sub-problems connect | The final program may not work | Define input and output for each sub-problem |
-| Only listing tasks without explaining benefit | Exam answer may be too shallow | Explain how it helps design, testing, debugging, or maintenance |
-
----
-
-## 11. Guided Practice
-
-### Practice 1: Online Food Ordering System
-
-A restaurant wants to create an online food ordering system.
-
-Break the system into at least five sub-problems.
-
-<details>
-<summary>Suggested Answer</summary>
 
 Possible sub-problems:
 
-1. Display menu  
-2. Select food items  
-3. Calculate total price  
-4. Enter customer details  
-5. Choose delivery or pickup  
-6. Process payment  
-7. Confirm order  
+```text
+store student details
+record attendance
+check absent students
+generate attendance report
+send notification to parents
+allow teachers to edit records
+```
 
-Each sub-problem can be designed and tested separately.
-
-</details>
+::: tip Exam Phrase
+Decomposition is breaking a complex problem into smaller sub-problems so that each part can be solved, tested, and maintained more easily.
+:::
 
 ---
 
-### Practice 2: Identify Input, Process, Output
+## 6. Why Decomposition Is Useful
 
-Sub-problem: Calculate total price
+Decomposition reduces complexity.
 
-| Category | Answer |
+### Benefits
+
+| Benefit | Explanation |
 |---|---|
-| Input | selected food items, item prices, quantities |
-| Process | multiply price by quantity and add all item costs |
-| Output | total price |
+| Easier to understand | small parts are easier than one large problem |
+| Easier to solve | each sub-problem can be solved separately |
+| Easier to test | each part can be checked independently |
+| Easier to debug | errors can be located in a smaller part |
+| Easier to maintain | one part can be changed without rewriting everything |
+| Better teamwork | different people can work on different parts |
+| Reuse | some parts can be reused in other systems |
+| Clear design | system structure becomes more organized |
+
+### Key Idea
+
+A large problem becomes less scary when it is divided into smaller parts.
 
 ---
 
-### Practice 3: Java Method Planning
+## 7. Decomposition and Sub-problems
 
-For the food ordering system, suggest one Java method name for each task.
+A sub-problem is a smaller part of the main problem.
+
+### Good Sub-problems Should Be
+
+```text
+clear
+specific
+manageable
+related to the main problem
+possible to test
+possible to combine with other parts
+```
+
+### Example: Quiz App
+
+Main problem:
+
+```text
+Create a quiz app.
+```
+
+Sub-problems:
+
+```text
+load questions
+display each question
+get user answer
+check answer
+update score
+show final result
+```
+
+### Poor Decomposition
+
+```text
+make app
+do quiz
+finish everything
+```
+
+These are too vague.
+
+---
+
+## 8. Decomposition vs Abstraction
+
+Students often confuse decomposition and abstraction.
+
+| Concept | Meaning | Main Question |
+|---|---|---|
+| Decomposition | break problem into smaller parts | What smaller parts make up the problem? |
+| Abstraction | focus on important details and ignore unnecessary ones | What details are important? |
+
+### Example: Map App
+
+Decomposition:
+
+```text
+get start location
+get destination
+find possible routes
+calculate distance/time
+display best route
+```
+
+Abstraction:
+
+```text
+keep roads, traffic, distance
+ignore building colour and tree shape
+```
+
+### Quick Memory
+
+```text
+decomposition = split into parts
+abstraction = remove unnecessary details
+```
+
+---
+
+## 9. Decomposition and Algorithms
+
+Decomposition helps design algorithms.
+
+Instead of writing one huge algorithm, we can design smaller algorithms for each sub-problem.
+
+### Example: Login System
+
+Sub-problems:
+
+```text
+input username and password
+check username
+check password
+display access result
+```
+
+Algorithm:
+
+```text
+INPUT username
+INPUT password
+
+IF username = storedUsername AND password = storedPassword THEN
+    OUTPUT "Access granted"
+ELSE
+    OUTPUT "Access denied"
+ENDIF
+```
+
+### Key Idea
+
+Each sub-problem can become part of the final algorithm.
+
+---
+
+## 10. Decomposition and Functions
+
+In programming, decomposition often leads to functions or procedures.
+
+### Example
+
+A program for a calculator can be decomposed into:
+
+```text
+add numbers
+subtract numbers
+multiply numbers
+divide numbers
+display menu
+get user choice
+```
+
+These can become functions:
+
+```text
+add()
+subtract()
+multiply()
+divide()
+displayMenu()
+getChoice()
+```
+
+### Why Useful?
+
+Functions make code:
+
+```text
+organized
+reusable
+easier to test
+easier to debug
+easier to maintain
+```
+
+### Exam Link
+
+Even if the question is not asking for code, decomposition supports good program design.
+
+---
+
+## 11. Decomposition and Teamwork
+
+Large systems are often built by teams.
+
+Decomposition allows different people to work on different parts.
+
+### Example: Game Project
+
+A game can be decomposed into:
+
+```text
+player movement
+enemy AI
+scoring system
+level design
+sound effects
+save/load system
+menu system
+```
+
+Team members can work on different sub-problems.
+
+### Important
+
+The parts must still work together.  
+Teams need clear interfaces and communication.
+
+---
+
+## 12. Decomposition and Testing
+
+A decomposed problem is easier to test.
+
+### Example: Shopping Cart
+
+Sub-problems:
+
+```text
+add item to cart
+remove item from cart
+calculate total price
+apply discount
+process payment
+```
+
+Each part can be tested separately.
+
+### Benefit
+
+If the total price is wrong, we can test:
+
+```text
+item prices
+cart quantity
+discount logic
+tax calculation
+```
+
+instead of searching through the whole system at once.
+
+### Exam Phrase
+
+Decomposition makes testing and debugging easier because each sub-problem can be checked separately.
+
+---
+
+## 13. How to Decompose a Problem
+
+A practical method:
+
+```text
+1. Read the problem carefully.
+2. Identify the main goal.
+3. Identify inputs and outputs.
+4. Identify major tasks.
+5. Break each major task into smaller steps.
+6. Check if each sub-problem is clear and testable.
+7. Combine the sub-problems into a full solution.
+```
+
+### Helpful Questions
+
+```text
+What must the system do first?
+What data is needed?
+What decisions are needed?
+What repeats?
+What output is needed?
+Can this part be solved separately?
+Can this part be tested separately?
+```
+
+---
+
+## 14. Input-Process-Output Decomposition
+
+Many problems can be decomposed using IPO:
+
+```text
+Input → Process → Output
+```
+
+### Example: Calculate Area
+
+Problem:
+
+```text
+Calculate the area of a rectangle.
+```
+
+Decomposition:
+
+```text
+input length
+input width
+calculate area
+output area
+```
+
+IPO:
+
+| Part | Details |
+|---|---|
+| Input | length, width |
+| Process | area = length * width |
+| Output | area |
+
+---
+
+## 15. Sequence-Based Decomposition
+
+Some problems can be decomposed by the order of actions.
+
+### Example: Make Tea
+
+```text
+boil water
+put tea bag in cup
+pour water
+wait
+remove tea bag
+add milk/sugar if needed
+serve tea
+```
+
+### Programming Example: User Registration
+
+```text
+input user details
+validate details
+check if username exists
+create account
+send confirmation
+display success message
+```
+
+### Key Idea
+
+Think about what happens first, next, and last.
+
+---
+
+## 16. Feature-Based Decomposition
+
+A system can be decomposed by features.
+
+### Example: School Management System
+
+Features:
+
+```text
+student records
+teacher records
+attendance
+grades
+timetable
+reports
+notifications
+login permissions
+```
+
+Each feature can be treated as a sub-problem.
+
+### Why Useful?
+
+Feature-based decomposition is useful for large systems because each feature can be developed and tested separately.
+
+---
+
+## 17. Data-Based Decomposition
+
+A problem can also be decomposed by data.
+
+### Example: Library System
+
+Data groups:
+
+```text
+books
+members
+loans
+returns
+fines
+reservations
+```
+
+Sub-problems:
+
+```text
+store book data
+store member data
+record loan data
+update return data
+calculate fine
+```
+
+### Key Idea
+
+If a system manages different types of data, those data groups often suggest sub-problems.
+
+---
+
+## 18. Decision-Based Decomposition
+
+Some problems involve decisions.
+
+### Example: Discount Calculator
+
+Rules:
+
+```text
+if customer is member, apply 10% discount
+if total is over 100, apply extra 5% discount
+otherwise, no extra discount
+```
+
+Sub-problems:
+
+```text
+input total
+check membership
+check total threshold
+calculate discount
+calculate final price
+output final price
+```
+
+### Key Idea
+
+Each decision can become a smaller part of the algorithm.
+
+---
+
+## 19. Loop-Based Decomposition
+
+Some problems involve repetition.
+
+### Example: Calculate Average Score
+
+Sub-problems:
+
+```text
+input number of scores
+repeat input for each score
+add score to total
+count scores
+calculate average
+output average
+```
+
+### Loop Part
+
+```text
+FOR each score
+    input score
+    add to total
+ENDFOR
+```
+
+### Key Idea
+
+If a problem repeats the same action many times, isolate the repeated part.
+
+---
+
+## 20. Worked Example: Login System
+
+### Problem
+
+Allow a user to log in with a username and password.
+
+### Decomposition
+
+```text
+get username
+get password
+compare username with stored username
+compare password with stored password
+decide whether access is allowed
+display result
+```
+
+### Inputs
+
+```text
+username
+password
+```
+
+### Output
+
+```text
+Access granted / Access denied
+```
+
+### Algorithm Structure
+
+```text
+input
+selection
+output
+```
+
+### Useful Explanation
+
+The login problem is decomposed into input, validation, decision, and output so each part can be designed and tested separately.
+
+---
+
+## 21. Worked Example: Grade Calculator
+
+### Problem
+
+Input three test marks and output the average and grade.
+
+### Decomposition
+
+```text
+input mark1
+input mark2
+input mark3
+calculate total
+calculate average
+choose grade
+output average and grade
+```
+
+### Possible Grade Decision
+
+```text
+average >= 80 → A
+average >= 60 → B
+average >= 50 → C
+else → Fail
+```
+
+### Why Decomposition Helps
+
+If the grade is wrong, we can check:
+
+```text
+input values
+total calculation
+average calculation
+grade boundary logic
+```
+
+---
+
+## 22. Worked Example: Online Shop
+
+### Problem
+
+Create an online shopping system.
+
+### High-Level Decomposition
+
+```text
+user account
+product catalogue
+search/filter products
+shopping cart
+checkout
+payment
+delivery tracking
+order history
+customer support
+```
+
+### More Detailed Cart Decomposition
+
+```text
+add item
+remove item
+update quantity
+calculate subtotal
+apply discount
+calculate final total
+```
+
+### Key Point
+
+Large systems often need multiple levels of decomposition.
+
+---
+
+## 23. Worked Example: Library Loan System
+
+### Problem
+
+Students borrow and return books.
+
+### Decomposition
+
+```text
+store book records
+store student records
+check book availability
+record loan
+update book status
+record return
+calculate overdue fine
+generate report
+```
+
+### Inputs
+
+```text
+student ID
+book ID
+borrow date
+return date
+```
+
+### Outputs
+
+```text
+loan confirmation
+return confirmation
+fine amount
+availability status
+```
+
+---
+
+## 24. Worked Example: Simple Game
+
+### Problem
+
+Create a simple score-based game.
+
+### Decomposition
+
+```text
+display start menu
+initialize player
+load level
+handle player movement
+detect collisions
+update score
+check win/lose condition
+display final score
+restart or exit
+```
+
+### Why Useful?
+
+Game logic can become complex.  
+Decomposition makes it easier to design and test each part.
+
+### Example Testing
+
+```text
+test movement separately
+test collision separately
+test scoring separately
+test game over separately
+```
+
+---
+
+## 25. Worked Example: Password Strength Checker
+
+### Problem
+
+Input a password and decide whether it is strong.
+
+### Decomposition
+
+```text
+input password
+check length
+check uppercase letter
+check lowercase letter
+check digit
+check special character
+count passed rules
+output strength result
+```
+
+### Possible Output
+
+```text
+Weak
+Medium
+Strong
+```
+
+### CT Link
+
+Each rule is a smaller sub-problem.
+
+---
+
+## 26. Multi-Level Decomposition
+
+Some sub-problems can be decomposed further.
+
+### Example: Payment System
+
+High-level sub-problem:
+
+```text
+process payment
+```
+
+Can be decomposed into:
+
+```text
+input card details
+validate card format
+check payment amount
+send request to payment provider
+receive response
+confirm or reject payment
+record transaction
+```
+
+### Key Idea
+
+Decomposition can happen at different levels of detail.
+
+---
+
+## 27. Good vs Poor Decomposition
+
+### Good Decomposition
+
+```text
+input scores
+validate scores
+calculate average
+assign grade
+output result
+```
+
+This is clear and testable.
+
+### Poor Decomposition
+
+```text
+do input stuff
+do math stuff
+do output stuff
+```
+
+This is too vague.
+
+### Another Poor Example
+
+```text
+make everything work
+```
+
+This is not useful.
+
+### Rule
+
+Sub-problems should be specific enough to design and test.
+
+---
+
+## 28. Decomposition in Exam Answers
+
+When asked to decompose a problem, do not only write one word.
+
+### Weak Answer
+
+```text
+make login
+make payment
+make delivery
+```
+
+### Stronger Answer
+
+```text
+The online shop can be decomposed into user login, product search, shopping cart management, payment processing, delivery tracking, and order history. Each part can be designed and tested separately.
+```
+
+### Even Better
+
+Add benefit:
+
+```text
+This reduces complexity and makes testing/debugging easier because errors can be located within one sub-problem.
+```
+
+---
+
+## 29. Scenario Answer Bank
+
+### If Asked: “Define decomposition”
+
+```text
+Decomposition is breaking a complex problem into smaller, more manageable sub-problems.
+```
+
+### If Asked: “Why is decomposition useful?”
+
+```text
+Decomposition reduces complexity because each sub-problem can be understood, solved, tested, and maintained separately.
+```
+
+### If Asked: “How does decomposition help teamwork?”
+
+```text
+Different team members can work on different sub-problems at the same time, as long as the parts are clearly defined and can be combined later.
+```
+
+### If Asked: “How does decomposition help testing?”
+
+```text
+Each sub-problem can be tested separately, making it easier to find and fix errors before combining the full solution.
+```
+
+### If Asked: “Decompose a system”
+
+Use this pattern:
+
+```text
+The system can be decomposed into [part 1], [part 2], [part 3], and [part 4]. These parts separate the main tasks of the system and make the problem easier to design and test.
+```
+
+---
+
+## 30. Common Misconceptions
+
+| Mistake | Why it is wrong | Better understanding |
+|---|---|---|
+| Decomposition means deleting details | That is closer to abstraction | Decomposition splits into smaller parts |
+| Decomposition and abstraction are the same | They are related but different | split vs simplify |
+| Sub-problems can be vague | Vague parts are not useful | make them clear and testable |
+| Decomposition is only for programming | It applies to problem solving generally | systems, algorithms, projects |
+| Decomposition makes the problem disappear | It makes it manageable | parts still need solving |
+| Only one correct decomposition exists | Different sensible decompositions are possible | justify your choices |
+| Decomposition is done after coding | It should happen before design/coding | plan first |
+| Teamwork does not need decomposition | Without clear parts, work overlaps/conflicts | divide work clearly |
+| Testing only happens after full system | parts can be tested separately | easier debugging |
+| More parts always means better | too many tiny parts can be confusing | choose sensible level |
+
+---
+
+## 31. Guided Practice
+
+### Practice 1: Define
+
+What is decomposition?
 
 <details>
 <summary>Suggested Answer</summary>
 
-| Task | Possible Java Method |
-|---|---|
-| Display menu | `displayMenu()` |
-| Calculate total price | `calculateTotal()` |
-| Confirm order | `confirmOrder()` |
-| Apply discount | `applyDiscount()` |
-| Print receipt | `printReceipt()` |
+Decomposition is breaking a complex problem into smaller, more manageable sub-problems.
 
 </details>
 
 ---
 
-## 12. Independent Practice
+### Practice 2: Identify Sub-problems
 
-Complete these tasks without looking at answers first.
-
-### Task 1
-
-A school wants to create an attendance system.
-
-Break it into at least six sub-problems.
-
-### Task 2
-
-Choose three of your sub-problems and identify:
-
-| Sub-problem | Input | Process | Output |
-|---|---|---|---|
-
-### Task 3
-
-Write suitable Java method names for four of your sub-problems.
-
-Example format:
-
-```java
-recordAttendance()
-generateReport()
-```
-
-### Task 4
-
-Explain why decomposition would make this attendance system easier to test.
-
----
-
-## 13. Exam-style Questions
-
-### Question 1 [2 marks]
-
-State what is meant by decomposition.
+A quiz app asks questions, checks answers, and gives a score. Name three sub-problems.
 
 <details>
-<summary>Mark Scheme Style Answer</summary>
+<summary>Suggested Answer</summary>
 
-Award marks for:
-
-- breaking a complex problem into smaller parts/sub-problems
-- the smaller parts are easier to manage, solve, or develop
-
-Example answer:
-
-Decomposition is breaking a large or complex problem into smaller sub-problems so that each part is easier to understand and solve.
+Possible sub-problems: load questions, display question, get user answer, check answer, update score, display final score.
 
 </details>
 
 ---
 
-### Question 2 [4 marks]
+### Practice 3: Benefit
 
-A school wants to develop a system for recording attendance.
+Why does decomposition make testing easier?
 
-Explain how decomposition could be used when designing this system.
+<details>
+<summary>Suggested Answer</summary>
+
+Each sub-problem can be tested separately, so errors can be found and fixed in a smaller part of the system.
+
+</details>
+
+---
+
+### Practice 4: Decomposition or Abstraction?
+
+Ignoring the colour of a button when designing a login algorithm is decomposition or abstraction?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Abstraction, because unnecessary details are being ignored.
+
+</details>
+
+---
+
+### Practice 5: Good or Poor Decomposition?
+
+Is `make the whole game` a useful sub-problem?
+
+<details>
+<summary>Suggested Answer</summary>
+
+No. It is too vague. Better sub-problems include player movement, scoring, collision detection, level loading, and game over logic.
+
+</details>
+
+---
+
+## 32. Independent Practice
+
+### Question 1
+
+Define decomposition.
+
+### Question 2
+
+Explain two benefits of decomposition.
+
+### Question 3
+
+Decompose a school attendance system into at least five sub-problems.
+
+### Question 4
+
+Decompose a shopping discount calculator into smaller steps.
+
+### Question 5
+
+Explain the difference between decomposition and abstraction.
+
+### Question 6
+
+A library system records loans and returns. Identify at least five sub-problems.
+
+### Question 7
+
+Explain how decomposition supports teamwork.
+
+### Question 8
+
+Explain how decomposition supports testing and debugging.
+
+### Question 9
+
+Give an example of poor decomposition and improve it.
+
+### Question 10
+
+Explain how decomposition can lead to functions in a program.
+
+---
+
+## 33. Exam-style Questions
+
+### Question 1 [4 marks]
+
+Define decomposition and explain why it is useful in computational thinking.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Award marks for points such as:
+Decomposition is breaking a complex problem into smaller, more manageable sub-problems. It is useful because each smaller part can be understood, solved, tested, and maintained separately, reducing the complexity of the overall problem.
 
-- the attendance system can be broken into smaller sub-problems
-- examples include recording student details, marking attendance, saving attendance records, and generating reports
-- each sub-problem can be designed or coded separately
-- this makes the system easier to test, debug, maintain, or update
+</details>
 
-Example answer:
+---
 
-The attendance system can be decomposed into smaller tasks such as storing student details, recording daily attendance, saving attendance records, and producing absence reports. Each task can be designed and tested separately. This makes the final system easier to develop, debug, and maintain.
+### Question 2 [5 marks]
+
+A school wants to create an attendance system. Decompose this system into suitable sub-problems.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+The attendance system can be decomposed into storing student records, recording attendance, checking absent students, generating attendance reports, allowing teachers to edit records, and sending notifications to parents. These parts separate the main tasks of the system and make it easier to design and test.
 
 </details>
 
@@ -436,98 +1207,177 @@ The attendance system can be decomposed into smaller tasks such as storing stude
 
 ### Question 3 [6 marks]
 
-A hospital wants to create a patient appointment system.
-
-Discuss how decomposition can help the development team create the system.
+Explain how decomposition can help a team develop a large software system.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Award marks for points such as:
-
-- the whole appointment system can be divided into smaller sub-problems
-- examples may include patient registration, doctor availability, appointment booking, appointment cancellation, reminders, and report generation
-- each sub-problem can have clear inputs, processes, and outputs
-- different developers can work on different modules
-- each module can be tested separately before integration
-- this improves maintainability because one part can be updated without rewriting the whole system
-
-Example answer:
-
-Decomposition helps the team divide the appointment system into smaller parts such as patient registration, doctor availability, booking appointments, cancelling appointments, and sending reminders. Each part can be designed with its own inputs, processing, and outputs. Different developers can work on separate modules, and each module can be tested before being combined. This reduces complexity and makes the system easier to debug and maintain.
+Decomposition breaks the large system into smaller sub-problems or modules. Different team members can work on different modules, such as login, payment, search, or reports. This reduces complexity and allows work to happen in parallel. Each module can be tested separately before being combined with the rest of the system, making debugging and maintenance easier.
 
 </details>
 
 ---
 
-## 14. Classroom Activity
+### Question 4 [6 marks]
 
-### Activity: Break the System
+A game includes player movement, enemies, scoring, levels, and a menu. Explain how decomposition helps design and test the game.
 
-**Time:** 10-15 minutes  
-**Grouping:** Pairs or small groups
+<details>
+<summary>Mark Scheme Style Answer</summary>
 
-Choose one system:
+The game can be decomposed into sub-problems such as player movement, enemy behaviour, scoring, level loading, collision detection, and menu control. Each part can be designed separately, which makes the overall game easier to understand. Each sub-problem can also be tested separately, for example checking collision detection without testing the whole game. This makes errors easier to locate and fix.
 
-1. school canteen ordering system  
-2. sports club membership system  
-3. online quiz system  
-4. library borrowing system  
-
-For your chosen system, complete this table:
-
-| Sub-problem | Input | Process | Output |
-|---|---|---|---|
-
-Then answer:
-
-1. Which sub-problem should be developed first? Why?  
-2. Which sub-problem is most likely to cause errors? Why?  
-3. Which sub-problem could become a Java method?
-
-::: tip Exit Ticket
-Before leaving, write one sentence explaining why decomposition is useful in programming.
-:::
+</details>
 
 ---
 
-## 15. Homework
+### Question 5 [6 marks]
 
-### Homework Task
+Distinguish between decomposition and abstraction using an example.
 
-Choose one real-world system:
+<details>
+<summary>Mark Scheme Style Answer</summary>
 
-- online shopping system
-- student grade system
-- hospital appointment system
-- cinema booking system
-- personal finance tracker
+Decomposition means breaking a problem into smaller sub-problems, while abstraction means focusing on important details and ignoring unnecessary ones. For example, when designing a login system, decomposition breaks the problem into input username, input password, check details, and display result. Abstraction ignores details such as button colour or font size because they are not needed for the login logic.
 
-Complete the following:
+</details>
 
-1. Write a short description of the system.
-2. Break it into at least six sub-problems.
-3. For each sub-problem, identify input, process, and output.
-4. Write Java-style method names for at least four sub-problems.
-5. Write one exam-style paragraph explaining how decomposition helps design this system.
+---
 
-### Suggested Paragraph Structure
+## 34. Classroom Activity
+
+### Activity 1: System Breakdown
+
+Groups choose one system:
 
 ```text
-The system can be decomposed into smaller sub-problems such as ..., ..., and ... .
-Each sub-problem can be designed and tested separately.
-This reduces complexity because ...
-It also improves maintenance because ...
+library system
+online shop
+quiz app
+school attendance system
+game score tracker
+ATM menu
+```
+
+They produce:
+
+```text
+main problem
+at least six sub-problems
+one reason why decomposition helps
 ```
 
 ---
 
-## 16. One-page Revision Summary
+### Activity 2: Decomposition vs Abstraction Sort
+
+Students sort cards into decomposition or abstraction.
+
+Examples:
+
+```text
+break game into scoring and movement
+ignore colour of login button
+split shop into cart and payment
+ignore background image
+split quiz into question loading and scoring
+ignore font style in algorithm logic
+```
+
+---
+
+### Activity 3: Test Each Part
+
+Give a system with sub-problems.  
+Students write one test idea for each part.
+
+Example:
+
+```text
+shopping cart: add item, remove item, update quantity, calculate total
+```
+
+---
+
+## 35. Homework
+
+### Homework Part A: Concept Explanation
+
+In 6-8 sentences, explain what decomposition is and why it is useful.
+
+---
+
+### Homework Part B: Scenario Decomposition
+
+Choose one system and decompose it into at least six sub-problems:
+
+```text
+online shop
+school attendance system
+library loan system
+password checker
+simple game
+restaurant ordering system
+```
+
+For each sub-problem, write one sentence explaining what it does.
+
+---
+
+### Homework Part C: Testing Link
+
+Choose three sub-problems from your system.  
+For each one, describe how it could be tested separately.
+
+---
+
+### Homework Part D: Misconception Correction
+
+Correct these statements:
+
+```text
+Decomposition means deleting unnecessary details.
+Decomposition and abstraction are exactly the same.
+A sub-problem can be vague as long as it sounds related.
+Decomposition is only useful after coding.
+Testing can only happen when the full system is complete.
+```
+
+---
+
+## 36. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| Definition | Decomposition breaks a large problem into smaller sub-problems |
-| Main benefit | It reduces complexity |
-| Programming link | Sub-problems can become methods, procedures, or modules |
-| Testing link | Each part can be tested separately |
-| Exam phrase | "This makes the system easier to design, test, debug, and maintain." |
+| Decomposition | Breaking a complex problem into smaller sub-problems |
+| Sub-problem | Smaller task within main problem |
+| Main benefit | Reduces complexity |
+| Understanding | Smaller parts are easier to understand |
+| Solving | Each part can be solved separately |
+| Testing | Each part can be tested separately |
+| Debugging | Errors are easier to locate |
+| Maintenance | Parts can be updated more easily |
+| Teamwork | Different people can work on different parts |
+| Reuse | Some parts/functions can be reused |
+| IPO | Input, Process, Output can guide decomposition |
+| Function link | Sub-problems may become functions/procedures |
+| Decomposition vs abstraction | split problem vs remove detail |
+| Good sub-problem | clear, specific, manageable, testable |
+| Exam phrase | Decomposition reduces complexity by breaking a large problem into smaller parts that can be solved and tested separately |
+
+---
+
+## 37. Quick Self-test
+
+Before moving on, students should be able to answer these:
+
+1. What is decomposition?
+2. What is a sub-problem?
+3. Why does decomposition reduce complexity?
+4. How does decomposition help testing?
+5. How does decomposition help teamwork?
+6. How is decomposition different from abstraction?
+7. Give three sub-problems in a login system.
+8. Give three sub-problems in an online shop.
+9. What makes a sub-problem useful?
+10. How can decomposition lead to functions in code?
