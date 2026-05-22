@@ -4,16 +4,18 @@
 
 By the end of this lesson, students should be able to:
 
-- explain what normalization means in database design
-- explain why normalization is used
-- identify repeated data and repeated groups in a poor table design
-- explain how normalization reduces redundancy
-- explain how normalization improves consistency
-- distinguish unnormalized data, first normal form, second normal form, and third normal form at a suitable introductory level
-- split a poorly designed table into related tables
-- identify primary keys and foreign keys after normalization
-- explain the disadvantages of overcomplicated database design
-- answer exam-style questions about normalization and data redundancy
+- explain what normalization is
+- explain why normalization is used in relational database design
+- identify data redundancy and update problems in poorly designed tables
+- explain insertion, update, and deletion anomalies at a basic level
+- explain first normal form, second normal form, and third normal form at a student-friendly level
+- identify repeating groups and non-atomic fields
+- explain how to split poorly designed tables into related tables
+- use primary keys and foreign keys when normalizing data
+- explain how normalization improves data consistency and integrity
+- apply normalization to school, library, shop, hospital, and game examples
+- avoid common misconceptions about normalization
+- answer exam-style questions about normalization
 
 ---
 
@@ -23,13 +25,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | A3 Databases |
 | Label | SL Core |
-| Main skill | Improving database design by reducing repeated data and dependency problems |
-| Connected topics | Tables, records, fields, primary keys, foreign keys, relationships, data integrity |
-| Practical focus | Turning one poor table into several related tables |
-| Exam relevance | Database design explanation, redundancy, consistency, normalization purpose |
+| Main skill | Improving relational database design by reducing redundancy and dependency problems |
+| Connected topics | Tables, records and fields, primary/foreign keys, relationships, ERDs, SQL SELECT, database integrity |
+| Practical focus | Taking a poorly designed table and turning it into related tables |
+| Exam relevance | Redundancy, anomalies, 1NF/2NF/3NF concepts, table decomposition, justification |
 
 ::: tip Learning Focus
-Normalization is not mainly about memorizing names such as 1NF, 2NF, and 3NF. The most important classroom skill is seeing why a table design is poor and how to split it into better related tables.
+Normalization is a design process. It helps split data into well-structured related tables so that data is not unnecessarily repeated and updates are less likely to cause inconsistency.
 :::
 
 ---
@@ -38,20 +40,25 @@ Normalization is not mainly about memorizing names such as 1NF, 2NF, and 3NF. Th
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Normalization | 规范化 | A process of organizing database tables to reduce redundancy and improve consistency |
-| Redundancy | 冗余 | Unnecessary repeated data |
-| Data inconsistency | 数据不一致 | Same data stored in different ways in different places |
-| Repeated group | 重复组 | Multiple similar fields or values repeated in one record |
-| Dependency | 依赖关系 | When one field's value depends on another field |
-| First Normal Form | 第一范式 / 1NF | Each field contains a single value and repeated groups are removed |
-| Second Normal Form | 第二范式 / 2NF | Non-key fields depend on the whole primary key |
-| Third Normal Form | 第三范式 / 3NF | Non-key fields do not depend on other non-key fields |
+| Normalization | 规范化 | Process of organizing database tables to reduce redundancy and improve integrity |
+| Redundancy | 冗余 | Unnecessary duplication of data |
+| Data inconsistency | 数据不一致 | Same data stored with conflicting values |
+| Anomaly | 异常 | Problem caused by poor database design |
+| Insertion anomaly | 插入异常 | Cannot add data without unrelated data |
+| Update anomaly | 更新异常 | Must update repeated data in many places |
+| Deletion anomaly | 删除异常 | Deleting one record accidentally removes other needed data |
+| 1NF | 第一范式 | First Normal Form; no repeating groups and fields contain atomic values |
+| 2NF | 第二范式 | Second Normal Form; 1NF plus non-key fields depend on the whole primary key |
+| 3NF | 第三范式 | Third Normal Form; 2NF plus non-key fields do not depend on other non-key fields |
+| Atomic value | 原子值 | Single indivisible value in one field |
+| Repeating group | 重复组 | Multiple similar fields such as Course1, Course2, Course3 |
 | Primary key | 主键 | Field that uniquely identifies each record |
 | Foreign key | 外键 | Field that links to a primary key in another table |
-| Anomaly | 异常 | Problem caused by poor design, such as update, insert, or delete problems |
-| Update anomaly | 更新异常 | Repeated data must be updated in many places |
-| Insert anomaly | 插入异常 | Cannot add data without unrelated data |
-| Delete anomaly | 删除异常 | Deleting one record accidentally removes other needed data |
+| Dependency | 依赖 | When one field value determines another field value |
+| Partial dependency | 部分依赖 | Non-key field depends on part of a composite key |
+| Transitive dependency | 传递依赖 | Non-key field depends on another non-key field |
+| Decomposition | 分解 | Splitting one table into related tables |
+| Integrity | 完整性 | Accuracy, consistency, and reliability of data |
 
 ---
 
@@ -62,50 +69,56 @@ Normalization is not mainly about memorizing names such as 1NF, 2NF, and 3NF. Th
 
 ### 中文讲解
 
-**Normalization（规范化）** 是数据库设计中的一种整理方法。  
-它的目标是让 table 设计更合理，减少重复数据，并降低数据不一致的风险。
+**Normalization（规范化）** 是整理 database tables 的过程。  
+它的目的不是让表格看起来更复杂，而是让数据更干净、更少重复、更不容易出错。
 
-一个没有规范化的 table 可能是这样：
-
-| studentId | studentName | course1 | course2 | teacher1 | teacher2 |
-|---|---|---|---|---|---|
-| S001 | Alice | Computer Science | Mathematics | Mr Smith | Ms Green |
-| S002 | Ben | Computer Science |  | Mr Smith |  |
-
-这个设计有几个问题：
+如果一个 table 设计不好，可能会出现：
 
 ```text
-course1 / course2 是重复字段
-teacher1 / teacher2 是重复字段
-如果一个学生选更多课，表就不够用了
-Computer Science 和 Mr Smith 被重复存储
-更新时容易出现不一致
+same data repeated many times
+same data updated in one row but not another row
+cannot add new data unless unrelated data also exists
+deleting one row accidentally removes useful data
 ```
 
-更好的设计是把不同 entity 分成不同 tables：
+这些问题叫做：
 
 ```text
-Student
-Course
-Teacher
-Enrollment
+anomalies
 ```
 
-这样每种数据只放在适合自己的 table 里，然后用 primary key 和 foreign key 连接。
+Normalization 通常会把一个很大的、混乱的 table 分成几个更小、更清楚的 related tables。
+
+例如 poor design:
+
+| StudentID | StudentName | Course1 | Course2 | TeacherName | TeacherEmail |
+|---:|---|---|---|---|---|
+| 101 | Amy Chen | CS | Math | Mr Lee | lee@school.edu |
+
+这里有很多问题：
+
+```text
+Course1 / Course2 是 repeating groups
+Teacher details may repeat
+Student, Course, Teacher data are mixed together
+hard to add more courses
+hard to update teacher email consistently
+```
+
+更好的设计是：
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName, TeacherID)
+Teacher(TeacherID, TeacherName, TeacherEmail)
+Enrollment(StudentID, CourseID)
+```
 
 简单来说：
 
 ```text
-normalization = split poor large tables into better related tables
-```
-
-它的好处是：
-
-```text
-reduce repeated data
-improve consistency
-make updates safer
-make relationships clearer
+normalization = split poorly designed tables into better related tables
+goal = reduce redundancy and improve consistency
 ```
 
 </template>
@@ -114,50 +127,56 @@ make relationships clearer
 
 ### English Explanation
 
-**Normalization** is a database design process.  
-Its goal is to make table design more logical, reduce repeated data, and lower the risk of inconsistent data.
+**Normalization** is the process of organizing database tables.  
+Its purpose is not to make tables more complicated, but to make data cleaner, less repeated, and less likely to become inconsistent.
 
-An unnormalized table may look like this:
-
-| studentId | studentName | course1 | course2 | teacher1 | teacher2 |
-|---|---|---|---|---|---|
-| S001 | Alice | Computer Science | Mathematics | Mr Smith | Ms Green |
-| S002 | Ben | Computer Science |  | Mr Smith |  |
-
-This design has several problems:
+If a table is poorly designed, problems may happen:
 
 ```text
-course1 / course2 are repeated fields
-teacher1 / teacher2 are repeated fields
-if a student takes more courses, the table structure is not enough
-Computer Science and Mr Smith are stored repeatedly
-updates can easily become inconsistent
+same data repeated many times
+same data updated in one row but not another row
+cannot add new data unless unrelated data also exists
+deleting one row accidentally removes useful data
 ```
 
-A better design separates different entities into different tables:
+These problems are called:
 
 ```text
-Student
-Course
-Teacher
-Enrollment
+anomalies
 ```
 
-Each type of data is stored in the most suitable table, and tables are linked using primary keys and foreign keys.
+Normalization usually splits one large, messy table into smaller, clearer related tables.
+
+Example of poor design:
+
+| StudentID | StudentName | Course1 | Course2 | TeacherName | TeacherEmail |
+|---:|---|---|---|---|---|
+| 101 | Amy Chen | CS | Math | Mr Lee | lee@school.edu |
+
+Problems include:
+
+```text
+Course1 / Course2 are repeating groups
+Teacher details may repeat
+Student, Course, Teacher data are mixed together
+hard to add more courses
+hard to update teacher email consistently
+```
+
+A better design is:
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName, TeacherID)
+Teacher(TeacherID, TeacherName, TeacherEmail)
+Enrollment(StudentID, CourseID)
+```
 
 In simple terms:
 
 ```text
-normalization = split poor large tables into better related tables
-```
-
-Its benefits include:
-
-```text
-reduce repeated data
-improve consistency
-make updates safer
-make relationships clearer
+normalization = split poorly designed tables into better related tables
+goal = reduce redundancy and improve consistency
 ```
 
 </template>
@@ -165,58 +184,33 @@ make relationships clearer
 
 ---
 
-## 5. Why Normalization Is Needed
+## 5. What Is Normalization?
 
-Poor database design can cause:
+Normalization is the process of organizing data in a relational database to reduce redundancy and improve data integrity.
 
-| Problem | Explanation |
-|---|---|
-| Data redundancy | Same data is stored many times |
-| Data inconsistency | Repeated data may not match after updates |
-| Update anomaly | One fact must be updated in several places |
-| Insert anomaly | Some data cannot be added unless other data exists |
-| Delete anomaly | Deleting one row may remove important unrelated data |
-| Poor scalability | Table structure cannot handle more repeated values |
-| Harder queries | Repeated columns make searching harder |
+### Main Goals
 
-### Example Problem
+```text
+reduce unnecessary duplicated data
+avoid update problems
+avoid insertion problems
+avoid deletion problems
+make relationships clearer
+make tables focused on one entity
+improve data consistency
+```
 
-If `Mr Smith` changes his name to `Mr John Smith`, every repeated row must be updated.  
-If one row is missed, the database becomes inconsistent.
+### What Normalization Usually Does
 
----
+It often changes one large table into several smaller related tables.
 
-## 6. Unnormalized Table Example
+Example:
 
-### Poor Table: StudentCourse
+```text
+one big StudentCourseTeacher table
+```
 
-| studentId | studentName | yearGroup | course1 | teacher1 | course2 | teacher2 |
-|---|---|---:|---|---|---|---|
-| S001 | Alice | 12 | Computer Science | Mr Smith | Mathematics | Ms Green |
-| S002 | Ben | 12 | Computer Science | Mr Smith |  |  |
-| S003 | Clara | 13 | Mathematics | Ms Green | Physics | Mr Brown |
-
-### Problems
-
-| Problem | Example |
-|---|---|
-| Repeated groups | `course1`, `course2`, `teacher1`, `teacher2` |
-| Empty fields | Ben has no course2 |
-| Limited structure | What if Alice takes 5 courses? |
-| Repeated teacher data | Mr Smith appears more than once |
-| Mixed entities | Student, Course, and Teacher data are in one table |
-
-::: warning Key Point
-A table should not use repeated columns such as `course1`, `course2`, `course3`. Related records should usually be stored as separate rows in a related table.
-:::
-
----
-
-## 7. Step 1: Identify Entities
-
-From the poor table, identify real-world entities.
-
-### Entities
+may become:
 
 ```text
 Student
@@ -225,630 +219,1009 @@ Teacher
 Enrollment
 ```
 
-| Entity | Data About It |
-|---|---|
-| Student | studentId, studentName, yearGroup |
-| Course | courseId, courseName, teacherId |
-| Teacher | teacherId, teacherName |
-| Enrollment | which student takes which course |
+These tables are then linked using primary and foreign keys.
 
-### Why Enrollment?
-
-Student and Course have a many-to-many relationship:
-
-```text
-one student can take many courses
-one course can have many students
-```
-
-So we need a linking table:
-
-```text
-Enrollment
-```
-
----
-
-## 8. Step 2: Create Better Tables
-
-### Student Table
-
-| studentId | studentName | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
-
-Primary key:
-
-```text
-studentId
-```
-
-### Teacher Table
-
-| teacherId | teacherName |
-|---|---|
-| T01 | Mr Smith |
-| T02 | Ms Green |
-| T03 | Mr Brown |
-
-Primary key:
-
-```text
-teacherId
-```
-
-### Course Table
-
-| courseId | courseName | teacherId |
-|---|---|---|
-| C001 | Computer Science | T01 |
-| C002 | Mathematics | T02 |
-| C003 | Physics | T03 |
-
-Primary key:
-
-```text
-courseId
-```
-
-Foreign key:
-
-```text
-teacherId references Teacher.teacherId
-```
-
-### Enrollment Table
-
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S001 | C002 |
-| E003 | S002 | C001 |
-| E004 | S003 | C002 |
-| E005 | S003 | C003 |
-
-Primary key:
-
-```text
-enrollmentId
-```
-
-Foreign keys:
-
-```text
-studentId references Student.studentId
-courseId references Course.courseId
-```
-
----
-
-## 9. Step 3: Explain the Improved Design
-
-The normalized design is better because:
-
-| Improvement | Explanation |
-|---|---|
-| Student data stored once | Alice's name appears once in Student table |
-| Teacher data stored once | Mr Smith appears once in Teacher table |
-| Course data stored once | Computer Science appears once in Course table |
-| Enrollments are flexible | Students can take any number of courses |
-| Empty repeated fields removed | No need for course1/course2/course3 |
-| Relationships are clearer | Enrollment links Student and Course |
-| Updates are safer | Changing teacher name happens in one place |
-
-### Example
-
-If Mr Smith's name changes, update only:
-
-```text
-Teacher table, record T01
-```
-
-You do not need to update many student-course rows.
-
----
-
-## 10. First Normal Form: 1NF
-
-At an introductory level, **1NF** means:
-
-```text
-each field contains a single value
-there are no repeated groups
-```
-
-### Not 1NF
-
-| studentId | name | courses |
-|---|---|---|
-| S001 | Alice | Computer Science, Mathematics |
-| S002 | Ben | Computer Science |
-
-Problem:
-
-```text
-courses contains multiple values in one field
-```
-
-### Better 1NF Style
-
-| studentId | name | course |
-|---|---|---|
-| S001 | Alice | Computer Science |
-| S001 | Alice | Mathematics |
-| S002 | Ben | Computer Science |
-
-This removes multiple values from one field, but it still repeats student data.  
-Further normalization can improve it.
-
----
-
-## 11. Repeated Columns and 1NF
-
-### Not 1NF
-
-| studentId | name | course1 | course2 | course3 |
-|---|---|---|---|---|
-| S001 | Alice | CS | Maths |  |
-| S002 | Ben | CS |  |  |
-
-Problems:
-
-```text
-course1, course2, course3 are repeated groups
-the number of courses is limited by table structure
-many empty cells may appear
-```
-
-### Better Design
-
-Use Enrollment records:
-
-| studentId | courseId |
-|---|---|
-| S001 | C001 |
-| S001 | C002 |
-| S002 | C001 |
-
-Each row stores one student-course relationship.
-
----
-
-## 12. Second Normal Form: 2NF Intro
-
-For this course, keep 2NF at a simple level.
-
-**2NF** means:
-
-```text
-non-key fields should depend on the whole primary key
-```
-
-This matters most when a table uses a composite key.
-
-### Poor Table
-
-| studentId | courseId | studentName | courseName |
-|---|---|---|---|
-| S001 | C001 | Alice | Computer Science |
-| S001 | C002 | Alice | Mathematics |
-| S002 | C001 | Ben | Computer Science |
-
-Possible composite key:
-
-```text
-studentId + courseId
-```
-
-Problem:
-
-```text
-studentName depends only on studentId
-courseName depends only on courseId
-```
-
-So the table mixes data that belongs in Student and Course.
-
-### Better Tables
-
-```text
-Student(studentId, studentName)
-Course(courseId, courseName)
-Enrollment(studentId, courseId)
-```
-
-::: info Simple Understanding
-2NF helps avoid storing fields in a table when they only depend on part of a composite key.
+::: tip Exam Phrase
+Normalization is the process of organizing database tables to reduce data redundancy and avoid anomalies, usually by splitting data into related tables.
 :::
 
 ---
 
-## 13. Third Normal Form: 3NF Intro
+## 6. Why Normalization Is Needed
 
-At a simple level, **3NF** means:
+Poorly designed tables can cause serious data problems.
+
+### Example Poor Table
+
+| StudentID | StudentName | CourseName | TeacherName | TeacherEmail |
+|---:|---|---|---|---|
+| 101 | Amy Chen | CS | Mr Lee | lee@school.edu |
+| 102 | Ben Wang | CS | Mr Lee | lee@school.edu |
+| 103 | Cara Liu | CS | Mr Lee | lee@school.edu |
+
+### Problem
+
+Teacher data is repeated:
 
 ```text
-non-key fields should not depend on other non-key fields
+Mr Lee
+lee@school.edu
 ```
 
-### Poor Table
+If the teacher email changes, every row must be updated.
 
-| studentId | studentName | tutorId | tutorName |
-|---|---|---|---|
-| S001 | Alice | T01 | Mr Smith |
-| S002 | Ben | T01 | Mr Smith |
-| S003 | Clara | T02 | Ms Green |
+If one row is missed, the database becomes inconsistent.
+
+### Better Direction
+
+Separate teacher data:
+
+```text
+Teacher(TeacherID, TeacherName, TeacherEmail)
+Course(CourseID, CourseName, TeacherID)
+Student(StudentID, StudentName)
+Enrollment(StudentID, CourseID)
+```
+
+---
+
+## 7. Redundancy
+
+Redundancy means unnecessary duplication of data.
+
+### Example
+
+| OrderID | CustomerName | CustomerEmail | ProductName |
+|---:|---|---|---|
+| 1 | Amy Chen | amy@email.com | Keyboard |
+| 2 | Amy Chen | amy@email.com | Mouse |
+| 3 | Amy Chen | amy@email.com | Monitor |
+
+The customer name and email are repeated for every order.
+
+### Why Redundancy Is Bad
+
+Redundancy can cause:
+
+```text
+wasted storage
+slower updates
+inconsistent data
+more difficult maintenance
+higher chance of human error
+```
+
+### Normalized Direction
+
+```text
+Customer(CustomerID, CustomerName, CustomerEmail)
+Order(OrderID, CustomerID, OrderDate)
+Product(ProductID, ProductName)
+OrderItem(OrderID, ProductID, Quantity)
+```
+
+---
+
+## 8. Data Inconsistency
+
+Data inconsistency happens when the same data is stored in multiple places with different values.
+
+### Example
+
+| OrderID | CustomerName | CustomerEmail |
+|---:|---|---|
+| 1 | Amy Chen | amy@email.com |
+| 2 | Amy Chen | amy.new@email.com |
+| 3 | Amy Chen | amy@email.com |
+
+Now the database has conflicting emails for the same customer.
+
+### Why It Happens
+
+It often happens because:
+
+```text
+same data is repeated
+one copy is updated
+another copy is not updated
+```
+
+### How Normalization Helps
+
+Normalization stores customer email once in Customer table.
+
+Then all orders link to that customer using:
+
+```text
+CustomerID
+```
+
+---
+
+## 9. Anomalies Overview
+
+An anomaly is a problem caused by poor database design.
+
+### Main Types
+
+| Anomaly | Meaning |
+|---|---|
+| Insertion anomaly | cannot add data without unrelated data |
+| Update anomaly | repeated data must be updated in many places |
+| Deletion anomaly | deleting a row accidentally removes other useful data |
+
+### Simple Memory
+
+```text
+insertion = problem adding data
+update = problem changing data
+deletion = problem removing data
+```
+
+---
+
+## 10. Update Anomaly
+
+An update anomaly happens when the same data is repeated and must be updated in many places.
+
+### Example
+
+| StudentID | StudentName | CourseName | TeacherEmail |
+|---:|---|---|---|
+| 101 | Amy | CS | lee@school.edu |
+| 102 | Ben | CS | lee@school.edu |
+| 103 | Cara | CS | lee@school.edu |
+
+If Mr Lee changes email, every CS row must be updated.
+
+If one row is missed:
+
+| StudentID | StudentName | CourseName | TeacherEmail |
+|---:|---|---|---|
+| 101 | Amy | CS | new.lee@school.edu |
+| 102 | Ben | CS | lee@school.edu |
+
+Now the data is inconsistent.
+
+### Normalization Fix
+
+Store teacher email once:
+
+```text
+Teacher(TeacherID, TeacherName, TeacherEmail)
+Course(CourseID, CourseName, TeacherID)
+```
+
+---
+
+## 11. Insertion Anomaly
+
+An insertion anomaly happens when you cannot add one type of data unless another unrelated type of data also exists.
+
+### Example
+
+Suppose this table stores courses only when at least one student enrolls:
+
+| StudentID | StudentName | CourseName | TeacherName |
+|---:|---|---|---|
+| 101 | Amy | CS | Mr Lee |
+
+Problem:
+
+```text
+Cannot add a new course unless a student is enrolled in it.
+```
+
+If a new course "Economics" exists but no student has enrolled yet, where do we store it?
+
+### Normalization Fix
+
+Separate Course table:
+
+```text
+Course(CourseID, CourseName, TeacherID)
+```
+
+Now a course can be added even if no student is enrolled yet.
+
+---
+
+## 12. Deletion Anomaly
+
+A deletion anomaly happens when deleting one record accidentally removes other useful data.
+
+### Example
+
+| StudentID | StudentName | CourseName | TeacherName |
+|---:|---|---|---|
+| 101 | Amy | CS | Mr Lee |
+
+If Amy is the only student enrolled in CS and we delete Amy's enrollment row, we also lose:
+
+```text
+CourseName = CS
+TeacherName = Mr Lee
+```
+
+This is a problem because deleting an enrollment should not delete course or teacher information.
+
+### Normalization Fix
+
+Store course and teacher in separate tables:
+
+```text
+Course(CourseID, CourseName, TeacherID)
+Teacher(TeacherID, TeacherName)
+Enrollment(StudentID, CourseID)
+```
+
+---
+
+## 13. Normal Forms Overview
+
+Normal forms are stages/rules used in normalization.
+
+### Common Student-Level Normal Forms
+
+| Normal Form | Main Idea |
+|---|---|
+| 1NF | remove repeating groups; make fields atomic |
+| 2NF | remove partial dependency on part of a composite key |
+| 3NF | remove dependency between non-key fields |
+
+### Simple Learning Version
+
+```text
+1NF = each field stores one value, no repeated groups
+2NF = non-key fields depend on the whole key
+3NF = non-key fields depend only on the key, not on other non-key fields
+```
+
+::: warning Exam Focus
+Different courses may teach normalization depth differently. For SL-level understanding, focus on identifying redundancy, anomalies, repeating groups, and splitting tables logically with keys.
+:::
+
+---
+
+## 14. First Normal Form: 1NF
+
+A table is in first normal form if:
+
+```text
+each field contains atomic values
+there are no repeating groups
+each record can be uniquely identified
+```
+
+### Atomic Value
+
+An atomic value is one single value.
+
+Poor:
+
+| StudentID | StudentName | Courses |
+|---:|---|---|
+| 101 | Amy | CS, Math, English |
+
+`Courses` contains multiple values.
+
+Better:
+
+| StudentID | StudentName | Course |
+|---:|---|---|
+| 101 | Amy | CS |
+| 101 | Amy | Math |
+| 101 | Amy | English |
+
+Even better later:
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName)
+Enrollment(StudentID, CourseID)
+```
+
+---
+
+## 15. Repeating Groups
+
+Repeating groups are repeated similar fields in the same table.
+
+### Poor Example
+
+| StudentID | StudentName | Course1 | Course2 | Course3 |
+|---:|---|---|---|---|
+| 101 | Amy | CS | Math | English |
+| 102 | Ben | CS | Physics | null |
+
+### Problems
+
+```text
+limits number of courses
+many empty fields
+hard to search all students taking CS
+hard to add Course4
+hard to store course-specific details
+```
+
+### 1NF Fix
+
+Create separate rows or, better, related tables.
+
+Better direction:
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName)
+Enrollment(StudentID, CourseID)
+```
+
+---
+
+## 16. Non-atomic Fields
+
+A non-atomic field stores multiple pieces of data in one field.
+
+### Poor Example
+
+| StudentID | FullName | Address |
+|---:|---|---|
+| 101 | Amy Chen | 12 Green Street, Sydney, NSW |
+
+`FullName` contains first and last name.  
+`Address` contains multiple pieces.
+
+### Possible Better Design
+
+| StudentID | FirstName | LastName | Street | City | State |
+|---:|---|---|---|---|---|
+| 101 | Amy | Chen | 12 Green Street | Sydney | NSW |
+
+### Important
+
+You only split fields when the system needs to search, sort, validate, or update the parts separately.
+
+---
+
+## 17. Second Normal Form: 2NF
+
+A table is in second normal form if:
+
+```text
+it is already in 1NF
+and every non-key field depends on the whole primary key
+```
+
+2NF mainly matters when a table has a composite key.
+
+### Example Poor Table
+
+| StudentID | CourseID | StudentName | CourseName | FinalGrade |
+|---:|---|---|---|---|
+| 101 | CS | Amy | Computer Science | A |
+| 101 | MATH | Amy | Mathematics | B |
+
+Composite key:
+
+```text
+StudentID + CourseID
+```
+
+Problems:
+
+```text
+StudentName depends only on StudentID
+CourseName depends only on CourseID
+FinalGrade depends on both StudentID and CourseID
+```
+
+### 2NF Fix
+
+Split into:
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName)
+Enrollment(StudentID, CourseID, FinalGrade)
+```
+
+Now non-key fields depend on the correct key.
+
+---
+
+## 18. Partial Dependency
+
+A partial dependency happens when a non-key field depends on only part of a composite primary key.
+
+### Example
+
+Table:
+
+```text
+Enrollment(StudentID, CourseID, StudentName, CourseName, FinalGrade)
+```
+
+Composite key:
+
+```text
+StudentID + CourseID
+```
+
+Dependencies:
+
+```text
+StudentName depends only on StudentID
+CourseName depends only on CourseID
+FinalGrade depends on StudentID + CourseID
+```
+
+So:
+
+```text
+StudentName and CourseName are partial dependencies
+```
+
+### Fix
+
+Move them to their own tables:
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName)
+Enrollment(StudentID, CourseID, FinalGrade)
+```
+
+---
+
+## 19. Third Normal Form: 3NF
+
+A table is in third normal form if:
+
+```text
+it is already in 2NF
+and non-key fields do not depend on other non-key fields
+```
+
+### Example Poor Table
+
+| StudentID | StudentName | TutorID | TutorName | TutorEmail |
+|---:|---|---:|---|---|
+| 101 | Amy | 7 | Mr Lee | lee@school.edu |
+| 102 | Ben | 7 | Mr Lee | lee@school.edu |
 
 Primary key:
 
 ```text
-studentId
+StudentID
 ```
 
 Problem:
 
 ```text
-tutorName depends on tutorId
-tutorId is not the primary key of this table
+TutorName and TutorEmail depend on TutorID
+TutorID is not the primary key of this table
 ```
 
-So tutor data should be separated.
+This is a transitive dependency.
 
-### Better Tables
+### 3NF Fix
 
-Student table:
-
-| studentId | studentName | tutorId |
-|---|---|---|
-| S001 | Alice | T01 |
-| S002 | Ben | T01 |
-| S003 | Clara | T02 |
-
-Tutor table:
-
-| tutorId | tutorName |
-|---|---|
-| T01 | Mr Smith |
-| T02 | Ms Green |
-
-Now tutorName is stored once in Tutor table.
-
----
-
-## 14. 1NF, 2NF, 3NF Summary
-
-| Normal Form | Simple Meaning | Main Problem Removed |
-|---|---|---|
-| 1NF | Each field contains a single value; no repeated groups | Repeating columns / multiple values in one field |
-| 2NF | Non-key fields depend on the whole key | Partial dependency |
-| 3NF | Non-key fields depend only on the key, not another non-key field | Transitive dependency |
-
-### Beginner-friendly Version
+Split into:
 
 ```text
-1NF: no list inside one cell, no course1/course2/course3
-2NF: put student data in Student table, course data in Course table
-3NF: put teacher/tutor data in Teacher/Tutor table, not repeated everywhere
+Student(StudentID, StudentName, TutorID)
+Tutor(TutorID, TutorName, TutorEmail)
 ```
 
----
-
-## 15. Update, Insert, and Delete Anomalies
-
-Poor table design can cause anomalies.
-
-### Poor Table
-
-| studentId | studentName | courseName | teacherName |
-|---|---|---|---|
-| S001 | Alice | Computer Science | Mr Smith |
-| S002 | Ben | Computer Science | Mr Smith |
-| S003 | Clara | Mathematics | Ms Green |
-
-### Update Anomaly
-
-If Mr Smith changes name, all rows with Mr Smith must be updated.  
-If one row is missed, data becomes inconsistent.
-
-### Insert Anomaly
-
-If a new course exists but no student has enrolled yet, it may be difficult to store the course without student data.
-
-### Delete Anomaly
-
-If Ben is the only student in Computer Science and his row is deleted, the database may lose the information that Computer Science exists.
+Now tutor details are stored once.
 
 ---
 
-## 16. Normalization and Relationships
+## 20. Transitive Dependency
 
-Normalization creates several related tables.
-
-These tables must be connected using:
+A transitive dependency happens when:
 
 ```text
-primary keys
-foreign keys
-relationships
+primary key determines non-key field
+and that non-key field determines another non-key field
 ```
 
 ### Example
 
 ```text
-Student 1 -------- * Enrollment
-Course 1 -------- * Enrollment
-Teacher 1 -------- * Course
+StudentID → TutorID
+TutorID → TutorName, TutorEmail
 ```
 
-### Key Fields
-
-| Table | Primary Key | Foreign Key |
-|---|---|---|
-| Student | studentId | none |
-| Teacher | teacherId | none |
-| Course | courseId | teacherId |
-| Enrollment | enrollmentId | studentId, courseId |
-
-Normalization and relationships work together.
-
----
-
-## 17. Normalization and SQL
-
-Normalized tables often require SQL joins to combine related data.
-
-Example question:
+This means:
 
 ```text
-Show student names and course names.
+TutorName depends on TutorID, not directly on StudentID
 ```
 
-Data is stored in:
+### Fix
+
+Move tutor details to Tutor table.
 
 ```text
-Student
-Enrollment
-Course
-```
-
-SQL join preview:
-
-```sql
-SELECT Student.studentName, Course.courseName
-FROM Student
-INNER JOIN Enrollment
-ON Student.studentId = Enrollment.studentId
-INNER JOIN Course
-ON Enrollment.courseId = Course.courseId;
-```
-
-You do not need to master joins here.  
-The key idea is:
-
-```text
-normalization reduces redundancy, but queries may need to combine tables
+Student(StudentID, StudentName, TutorID)
+Tutor(TutorID, TutorName, TutorEmail)
 ```
 
 ---
 
-## 18. Advantages of Normalization
+## 21. Simple Normalization Process
 
-| Advantage | Explanation |
-|---|---|
-| Reduces redundancy | Data is not repeated unnecessarily |
-| Improves consistency | One fact is stored in one place |
-| Reduces update anomalies | Less repeated data to update |
-| Reduces insert anomalies | New entities can be added more cleanly |
-| Reduces delete anomalies | Deleting one record is less likely to remove unrelated facts |
-| Improves structure | Tables represent clear entities |
-| Improves data integrity | Keys and relationships can enforce rules |
-
----
-
-## 19. Possible Disadvantages or Trade-offs
-
-Normalization is useful, but overcomplicated design can have trade-offs.
-
-| Trade-off | Explanation |
-|---|---|
-| More tables | Database may become harder for beginners to understand |
-| More joins | Queries may become more complex |
-| Performance concerns | Some queries may require joining multiple tables |
-| Design time | Careful design takes time |
-| Over-normalization | Splitting too much can make design unnecessarily complex |
-
-### Balanced View
-
-A good database design should:
+When normalizing a table:
 
 ```text
-reduce unnecessary repetition
-keep relationships clear
-avoid making the design more complex than needed
+1. Identify the main entities.
+2. Identify repeated groups.
+3. Make fields atomic.
+4. Choose primary keys.
+5. Move data that describes different entities into separate tables.
+6. Use foreign keys to link tables.
+7. Check for partial dependencies.
+8. Check for transitive dependencies.
+9. Check whether the design reduces redundancy and anomalies.
+```
+
+### Practical Exam Approach
+
+For most scenario questions, you can explain:
+
+```text
+split data into separate tables
+use primary keys for each table
+use foreign keys to link related tables
+avoid repeating groups and duplicated data
 ```
 
 ---
 
-## 20. Worked Example: Library Loans
+## 22. Worked Example: Student Course Table
 
 ### Poor Table
 
-| loanId | borrowerName | borrowerEmail | bookTitle | author | loanDate |
-|---|---|---|---|---|---|
-| L001 | Amy | amy@email.com | Dune | Frank Herbert | 2026-05-01 |
-| L002 | Amy | amy@email.com | Animal Farm | George Orwell | 2026-05-02 |
-| L003 | Ben | ben@email.com | Dune | Frank Herbert | 2026-05-03 |
+| StudentID | StudentName | CourseID | CourseName | TeacherName |
+|---:|---|---|---|---|
+| 101 | Amy | CS | Computer Science | Mr Lee |
+| 102 | Ben | CS | Computer Science | Mr Lee |
+| 101 | Amy | MATH | Mathematics | Ms Smith |
 
 ### Problems
 
 ```text
-Amy's email is repeated
-Dune and Frank Herbert are repeated
-borrower data and book data are mixed with loan data
+StudentName repeated
+CourseName repeated
+TeacherName repeated
+update anomaly if course or teacher changes
+deletion anomaly if last student in course is removed
+mixed student, course, and teacher data
 ```
 
-### Better Tables
+### Normalized Tables
 
-Borrower:
+```text
+Student(StudentID, StudentName)
+Teacher(TeacherID, TeacherName)
+Course(CourseID, CourseName, TeacherID)
+Enrollment(StudentID, CourseID)
+```
 
-| borrowerId | borrowerName | borrowerEmail |
-|---|---|---|
-| B001 | Amy | amy@email.com |
-| B002 | Ben | ben@email.com |
+### Links
 
-Book:
+```text
+Enrollment.StudentID → Student.StudentID
+Enrollment.CourseID → Course.CourseID
+Course.TeacherID → Teacher.TeacherID
+```
 
-| bookId | bookTitle | author |
-|---|---|---|
-| BK001 | Dune | Frank Herbert |
-| BK002 | Animal Farm | George Orwell |
+---
 
-Loan:
+## 23. Worked Example: Library Loan Table
 
-| loanId | borrowerId | bookId | loanDate |
-|---|---|---|---|
-| L001 | B001 | BK001 | 2026-05-01 |
-| L002 | B001 | BK002 | 2026-05-02 |
-| L003 | B002 | BK001 | 2026-05-03 |
+### Poor Table
+
+| LoanID | MemberName | MemberEmail | BookTitle | Author | LoanDate |
+|---:|---|---|---|---|---|
+| 1 | Amy | amy@email.com | Dune | Frank Herbert | 2026-05-01 |
+| 2 | Amy | amy@email.com | Foundation | Isaac Asimov | 2026-05-03 |
+
+### Problems
+
+```text
+member details repeated
+book details repeated if borrowed many times
+hard to update member email consistently
+cannot easily store book if never borrowed
+deleting loan may remove book/member details
+```
+
+### Normalized Tables
+
+```text
+Member(MemberID, MemberName, MemberEmail)
+Book(BookID, Title, Author)
+Loan(LoanID, MemberID, BookID, LoanDate, ReturnDate)
+```
+
+### Links
+
+```text
+Loan.MemberID → Member.MemberID
+Loan.BookID → Book.BookID
+```
+
+---
+
+## 24. Worked Example: Online Shop
+
+### Poor Table
+
+| OrderID | CustomerName | CustomerEmail | ProductName | ProductPrice | Quantity |
+|---:|---|---|---|---:|---:|
+| 1 | Amy | amy@email.com | Keyboard | 49.99 | 1 |
+| 1 | Amy | amy@email.com | Mouse | 19.99 | 2 |
+| 2 | Amy | amy@email.com | Monitor | 179.99 | 1 |
+
+### Problems
+
+```text
+customer details repeated
+product price repeated
+order data mixed with product data
+updating product price may require many rows
+deleting an order may remove product information
+```
+
+### Normalized Tables
+
+```text
+Customer(CustomerID, CustomerName, CustomerEmail)
+Order(OrderID, CustomerID, OrderDate)
+Product(ProductID, ProductName, ProductPrice)
+OrderItem(OrderID, ProductID, Quantity)
+```
 
 ### Explanation
 
-Borrower data is stored once.  
-Book data is stored once.  
-Loan table links borrowers and books.
+`OrderItem` resolves the relationship between orders and products.
 
 ---
 
-## 21. Common Mistakes
+## 25. Worked Example: Hospital Appointment Table
+
+### Poor Table
+
+| AppointmentID | PatientName | PatientDOB | DoctorName | DoctorDepartment | AppointmentDate |
+|---:|---|---|---|---|---|
+| 1 | Amy Chen | 2010-04-12 | Dr Singh | Cardiology | 2026-05-20 |
+| 2 | Ben Wang | 2009-09-03 | Dr Singh | Cardiology | 2026-05-21 |
+
+### Problems
+
+```text
+doctor details repeated
+patient details repeated if patient has many appointments
+department repeated
+update anomaly if doctor changes department
+privacy and access control harder
+```
+
+### Normalized Tables
+
+```text
+Patient(PatientID, PatientName, PatientDOB)
+Doctor(DoctorID, DoctorName, DepartmentID)
+Department(DepartmentID, DepartmentName)
+Appointment(AppointmentID, PatientID, DoctorID, AppointmentDate, AppointmentTime)
+```
+
+---
+
+## 26. Worked Example: Game Match Table
+
+### Poor Table
+
+| MatchID | Player1 | Player1Score | Player2 | Player2Score | MapName |
+|---:|---|---:|---|---:|---|
+| 1 | Alpha | 20 | Beta | 18 | Desert |
+| 2 | Alpha | 25 | Gamma | 21 | City |
+
+### Problems
+
+```text
+fixed number of players
+repeating fields
+hard to search all matches for one player
+hard to store player details consistently
+cannot support squad matches easily
+```
+
+### Normalized Tables
+
+```text
+Player(PlayerID, Username, Rank)
+Match(MatchID, MatchDate, MapName)
+MatchPlayer(MatchID, PlayerID, Score, Result)
+```
+
+### Explanation
+
+`MatchPlayer` links players to matches and supports any number of players.
+
+---
+
+## 27. Normalization and ERDs
+
+Normalization often changes the ERD.
+
+### Poor ERD Idea
+
+```text
+Student has Course1, Course2, Course3
+```
+
+### Improved ERD
+
+```text
+Student --- Enrollment --- Course
+```
+
+### Why?
+
+The improved ERD:
+
+```text
+removes repeating groups
+supports many courses
+uses keys to link tables
+reduces duplicated course data
+```
+
+### Key Idea
+
+Normalization and ERD design work together.
+
+A good ERD often already avoids many normalization problems.
+
+---
+
+## 28. Normalization and SQL
+
+Normalized tables often require joins when querying.
+
+### Example
+
+Tables:
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName)
+Enrollment(StudentID, CourseID)
+```
+
+To list student names and course names:
+
+```sql
+SELECT Student.StudentName, Course.CourseName
+FROM Student
+JOIN Enrollment ON Student.StudentID = Enrollment.StudentID
+JOIN Course ON Enrollment.CourseID = Course.CourseID;
+```
+
+### Trade-off
+
+Normalization reduces redundancy but may require more joins.
+
+This is usually acceptable because it improves data consistency and design quality.
+
+---
+
+## 29. Benefits of Normalization
+
+| Benefit | Explanation |
+|---|---|
+| Reduces redundancy | avoids unnecessary duplicated data |
+| Improves consistency | data updated in one place |
+| Prevents update anomalies | fewer repeated values to update |
+| Prevents insertion anomalies | entities can be added independently |
+| Prevents deletion anomalies | deleting one record does not remove unrelated data |
+| Improves integrity | keys and relationships enforce valid links |
+| Clearer structure | each table focuses on one entity |
+| Easier maintenance | changes are easier to manage |
+
+---
+
+## 30. Possible Disadvantages or Trade-offs
+
+Normalization is useful, but there are trade-offs.
+
+| Trade-off | Explanation |
+|---|---|
+| More tables | design may look more complex |
+| More joins | queries may need to combine tables |
+| Learning difficulty | students/users may find structure harder at first |
+| Performance considerations | many joins may affect performance in very large systems |
+| Design time | careful analysis is needed |
+
+### Important
+
+These trade-offs do not mean normalization is bad.  
+They mean database design must balance:
+
+```text
+integrity
+performance
+simplicity
+maintenance
+exam/system requirements
+```
+
+---
+
+## 31. Denormalization Preview
+
+Denormalization means intentionally adding some redundancy back into a database.
+
+### Why It Might Be Done
+
+```text
+improve query performance
+simplify reporting
+reduce number of joins
+support data warehousing
+cache frequently used values
+```
+
+### Risk
+
+Denormalization can reintroduce:
+
+```text
+redundancy
+inconsistency
+update anomalies
+```
+
+### Level Control
+
+For this course, normalization is the main focus.  
+Denormalization is only a useful preview for understanding trade-offs.
+
+---
+
+## 32. Scenario Answer Bank
+
+### If Asked: “Why normalize?”
+
+Use this structure:
+
+```text
+Normalization reduces unnecessary duplicated data and helps prevent insertion, update, and deletion anomalies. It organizes data into related tables with primary and foreign keys, improving data consistency and integrity.
+```
+
+### If Asked: “Identify poor design”
+
+Use this structure:
+
+```text
+This table is poorly designed because it stores data about multiple entities in one table / contains repeating groups / repeats the same data many times. This can cause redundancy and anomalies.
+```
+
+### If Asked: “Suggest normalized tables”
+
+Use this structure:
+
+```text
+The data should be split into separate tables such as [A], [B], and [C]. Each table should have a primary key, and foreign keys should be used to link related tables.
+```
+
+### If Asked: “Explain anomaly”
+
+Use this structure:
+
+```text
+This is a [update/insertion/deletion] anomaly because [explain what operation causes the problem]. Normalization can reduce this by storing [data] in a separate table and linking it with keys.
+```
+
+---
+
+## 33. Common Mistakes
 
 | Mistake | Why it is wrong | Better understanding |
 |---|---|---|
-| Thinking normalization means sorting data | It is about table design, not ordering rows | Normalization reduces redundancy |
-| Keeping `course1`, `course2`, `course3` fields | Repeated groups break good design | Use a linking table |
-| Storing multiple values in one field | Hard to search and update | Store one value per field |
-| Splitting tables without keys | Tables cannot be linked properly | Add primary and foreign keys |
-| Removing too much data | Data may become hard to interpret | Keep necessary fields |
-| Confusing normalization with validation | Different ideas | Normalization organizes tables |
-| Thinking one big table is always easier | It causes anomalies | Use related tables |
-| Forgetting foreign keys | Relationships become unclear | Add linking fields |
-| Using names instead of IDs for links | Names may repeat/change | Use ID keys |
-| Over-normalizing simple data | Design becomes too complex | Balance simplicity and structure |
+| Normalization means sorting data | It means organizing table structure | It reduces redundancy/anomalies |
+| Normalization always means one table | It usually splits into several tables | Related tables are linked |
+| Repeated Course1, Course2, Course3 is fine | This creates repeating groups | Use Enrollment table |
+| Redundancy is always helpful | Unnecessary redundancy causes inconsistency | Store data once where possible |
+| 1NF means one table only | 1NF means atomic fields and no repeating groups | Table count is not the point |
+| 2NF applies only to single-field keys | 2NF mainly matters with composite keys | Avoid partial dependency |
+| 3NF means no foreign keys | 3NF still uses foreign keys | It removes transitive dependency |
+| Normalized database needs no security | Normalization is design, not security | Still need access controls |
+| Normalization removes all data problems | It reduces design problems | Validation, security, backups still needed |
+| More tables always worse | More tables can mean better structure | Use joins to combine data |
 
 ---
 
-## 22. Guided Practice
+## 34. Guided Practice
 
-### Practice 1: Identify Repeated Groups
+### Practice 1: Redundancy
 
-What is wrong with this table?
+In this table, what data is repeated?
 
-| studentId | name | course1 | course2 |
-|---|---|---|---|
-| S001 | Alice | CS | Maths |
-| S002 | Ben | CS |  |
+| StudentID | StudentName | CourseName | TeacherEmail |
+|---:|---|---|---|
+| 101 | Amy | CS | lee@school.edu |
+| 102 | Ben | CS | lee@school.edu |
 
 <details>
 <summary>Suggested Answer</summary>
 
-`course1` and `course2` are repeated groups. The design limits the number of courses and creates empty fields. A better design would use a Course table and Enrollment table.
+`CourseName = CS` and `TeacherEmail = lee@school.edu` are repeated. This may cause redundancy and update problems.
 
 </details>
 
 ---
 
-### Practice 2: Identify Entities
+### Practice 2: Repeating Group
 
-From this table, identify possible entities.
-
-| orderId | customerName | customerEmail | productName | productPrice |
-|---|---|---|---|---:|
-| O001 | Amy | amy@email.com | Keyboard | 49.99 |
-
-<details>
-<summary>Suggested Answer</summary>
-
-Possible entities:
+Why is this poor design?
 
 ```text
-Customer
-Product
-Order
-OrderItem
-```
-
-</details>
-
----
-
-### Practice 3: Split a Table
-
-Split this poor design into better table names:
-
-```text
-borrowerName
-borrowerEmail
-bookTitle
-author
-loanDate
+Student(StudentID, Name, Course1, Course2, Course3)
 ```
 
 <details>
 <summary>Suggested Answer</summary>
 
-Possible tables:
-
-```text
-Borrower(borrowerId, borrowerName, borrowerEmail)
-Book(bookId, bookTitle, author)
-Loan(loanId, borrowerId, bookId, loanDate)
-```
+It uses repeating groups, limits the number of courses, and makes searching or updating course enrollments harder. A separate Enrollment table is better.
 
 </details>
 
 ---
 
-### Practice 4: Explain Update Anomaly
+### Practice 3: Update Anomaly
 
-Why is repeated teacherName a problem?
+What problem happens if a teacher email is repeated in many rows?
 
 <details>
 <summary>Suggested Answer</summary>
 
-If the teacher's name changes, every repeated copy must be updated. If one copy is missed, the database contains inconsistent data.
+If the teacher email changes, every repeated row must be updated. If one row is missed, the database becomes inconsistent. This is an update anomaly.
 
 </details>
 
 ---
 
-### Practice 5: Identify Foreign Keys
+### Practice 4: 1NF
 
-In this design:
-
-```text
-Student(studentId, studentName)
-Course(courseId, courseName)
-Enrollment(enrollmentId, studentId, courseId)
-```
-
-What are the foreign keys?
+What does 1NF require?
 
 <details>
 <summary>Suggested Answer</summary>
 
-In Enrollment:
-
-```text
-studentId references Student.studentId
-courseId references Course.courseId
-```
+1NF requires fields to contain atomic values and no repeating groups.
 
 </details>
 
 ---
 
-## 23. Independent Practice
+### Practice 5: Normalized Tables
+
+A student can take many courses. A course can have many students. What tables are suitable?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Suitable tables include `Student`, `Course`, and a linking table such as `Enrollment`.
+
+</details>
+
+---
+
+## 35. Independent Practice
 
 ### Question 1
 
@@ -860,56 +1233,52 @@ Explain why normalization is useful.
 
 ### Question 3
 
-Identify three problems with this table:
-
-| studentId | studentName | course1 | course2 | teacher1 | teacher2 |
-|---|---|---|---|---|---|
-| S001 | Alice | CS | Maths | Mr Smith | Ms Green |
-| S002 | Ben | CS |  | Mr Smith |  |
+Define redundancy and give one example.
 
 ### Question 4
 
-Redesign the table in Question 3 using separate tables.
+Explain insertion, update, and deletion anomalies.
 
 ### Question 5
 
-Explain what 1NF means at a simple level.
+Explain first normal form using an example.
 
 ### Question 6
 
-Explain why storing `course1`, `course2`, and `course3` is poor design.
+Explain why `Course1`, `Course2`, and `Course3` are poor design.
 
 ### Question 7
 
-Explain update anomaly using your own example.
+Normalize this table idea:
+
+```text
+StudentID, StudentName, CourseID, CourseName, TeacherName
+```
 
 ### Question 8
 
-Explain how normalization can reduce inconsistency.
+Explain how primary and foreign keys are used after normalization.
 
 ### Question 9
 
-For a music app, redesign this poor table:
-
-| playlistId | playlistName | song1 | artist1 | song2 | artist2 |
-|---|---|---|---|---|---|
+Explain one benefit and one trade-off of normalization.
 
 ### Question 10
 
-Explain one trade-off of normalization.
+A shop stores customer, order, product, and quantity in one table. Suggest normalized tables.
 
 ---
 
-## 24. Exam-style Questions
+## 36. Exam-style Questions
 
 ### Question 1 [4 marks]
 
-Define normalization and state one reason why it is used.
+Define normalization and state its purpose.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Normalization is the process of organizing database tables to reduce unnecessary repeated data and improve data consistency. It is used to reduce redundancy, avoid update anomalies, and make database relationships clearer.
+Normalization is the process of organizing database tables to reduce unnecessary duplicated data and improve data integrity. Its purpose is to reduce redundancy and avoid problems such as insertion, update, and deletion anomalies by splitting data into related tables.
 
 </details>
 
@@ -917,17 +1286,12 @@ Normalization is the process of organizing database tables to reduce unnecessary
 
 ### Question 2 [5 marks]
 
-Explain why the following design is poor.
-
-| studentId | name | course1 | course2 | course3 |
-|---|---|---|---|---|
-| S001 | Alice | CS | Maths |  |
-| S002 | Ben | CS |  |  |
+Explain two problems caused by data redundancy.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-The table has repeated fields such as course1, course2, and course3. This limits the number of courses that can be stored and creates empty fields when students take fewer courses. It also makes searching and updating course data harder. A better design would use a separate Course table and an Enrollment table.
+Data redundancy wastes storage because the same data is stored in multiple places. It can also cause data inconsistency because if one copy of the data is updated but another copy is not, the database will contain conflicting values. It can also make updates slower and more error-prone.
 
 </details>
 
@@ -935,12 +1299,12 @@ The table has repeated fields such as course1, course2, and course3. This limits
 
 ### Question 3 [6 marks]
 
-A school stores student, course, and teacher data in one large table. Explain two problems this can cause.
+Explain insertion, update, and deletion anomalies using a school course example.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-One problem is redundancy because student, course, or teacher data may be repeated in many rows. Another problem is inconsistency because if repeated data is updated in one place but not another, the table may contain conflicting values. It can also cause update, insert, or delete anomalies. Splitting the data into related tables reduces these problems.
+An insertion anomaly occurs if a new course cannot be added unless a student is enrolled in it. An update anomaly occurs if a teacher's email is repeated in many student-course rows and must be changed in every row; if one row is missed, the data becomes inconsistent. A deletion anomaly occurs if deleting the last student enrolled in a course also removes the only stored information about that course or teacher.
 
 </details>
 
@@ -948,23 +1312,18 @@ One problem is redundancy because student, course, or teacher data may be repeat
 
 ### Question 4 [6 marks]
 
-Normalize this poor table into suitable tables.
+A table contains these fields:
 
-| loanId | borrowerName | borrowerEmail | bookTitle | author | loanDate |
-|---|---|---|---|---|---|
+```text
+StudentID, StudentName, Course1, Course2, Course3
+```
+
+Explain why this is not good database design and suggest an improvement.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-A suitable normalized design is:
-
-```text
-Borrower(borrowerId, borrowerName, borrowerEmail)
-Book(bookId, bookTitle, author)
-Loan(loanId, borrowerId, bookId, loanDate)
-```
-
-`borrowerId` in Loan is a foreign key referencing Borrower. `bookId` in Loan is a foreign key referencing Book. This reduces repeated borrower and book data.
+This design contains repeating groups because course data is stored in `Course1`, `Course2`, and `Course3`. It limits the number of courses, creates empty fields when students take fewer courses, and makes it difficult to search all students taking a particular course. A better design is to use separate `Student` and `Course` tables and a linking table such as `Enrollment(StudentID, CourseID)`.
 
 </details>
 
@@ -972,133 +1331,151 @@ Loan(loanId, borrowerId, bookId, loanDate)
 
 ### Question 5 [6 marks]
 
-Explain one advantage and one possible disadvantage of normalization.
+Normalize this table into suitable related tables:
+
+```text
+OrderID, CustomerName, CustomerEmail, ProductName, ProductPrice, Quantity
+```
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-One advantage of normalization is that it reduces redundant data by storing each fact in one appropriate table. This improves consistency and makes updates safer. One possible disadvantage is that the database may contain more tables, so queries may need joins and can become more complex for users or programmers.
+The table should be split into related tables such as `Customer(CustomerID, CustomerName, CustomerEmail)`, `Order(OrderID, CustomerID, OrderDate)`, `Product(ProductID, ProductName, ProductPrice)`, and `OrderItem(OrderID, ProductID, Quantity)`. `CustomerID` in Order is a foreign key linking to Customer. `OrderID` and `ProductID` in OrderItem are foreign keys linking orders and products. This reduces repeated customer and product data and avoids update anomalies.
 
 </details>
 
 ---
 
-## 25. Classroom Activity
+## 37. Classroom Activity
 
-### Activity 1: Bad Table Surgery
+### Activity 1: Find the Redundancy
 
-Give students a poor table with repeated fields.  
-They must highlight:
+Give students a large messy table.  
+Students highlight repeated data and identify:
 
 ```text
-repeated data
-repeated groups
-mixed entities
-empty fields
+entities mixed together
+repeating groups
+possible update anomalies
+possible insertion anomalies
+possible deletion anomalies
 ```
-
-Then they cut it into better table designs.
 
 ---
 
-### Activity 2: Entity Sorting
+### Activity 2: Normalize Step by Step
 
-Students receive field cards:
+Students convert this poor table:
 
 ```text
-studentName
-courseName
-teacherName
-loanDate
-bookTitle
-borrowerEmail
+StudentID, StudentName, Course1, Course2, TeacherName, TeacherEmail
 ```
 
-They sort fields into entity tables.
+into:
+
+```text
+Student
+Course
+Teacher
+Enrollment
+```
+
+They must explain each split.
 
 ---
 
 ### Activity 3: Anomaly Role-play
 
-Students act as repeated records.  
-When a teacher name changes, multiple students must update their cards.  
-If one student forgets, the class sees inconsistency.
+Students act as a database table.
+
+One student updates teacher email in only some rows.  
+Another deletes the last row for a course.  
+Class identifies the anomaly.
 
 ---
 
-## 26. Homework
+## 38. Homework
 
 ### Homework Part A: Concept Explanation
 
-In 5-6 sentences, explain what normalization is and why databases use it.
+In 6-8 sentences, explain what normalization is and why it is useful.
 
 ---
 
-### Homework Part B: Redesign Task
+### Homework Part B: Anomaly Examples
 
-Normalize this table:
+For each anomaly, write one example using a school, library, or online shop database:
 
-| orderId | customerName | customerEmail | productName | productPrice | quantity |
-|---|---|---|---|---:|---:|
-| O001 | Amy | amy@email.com | Keyboard | 49.99 | 1 |
-| O001 | Amy | amy@email.com | Mouse | 19.99 | 2 |
-| O002 | Ben | ben@email.com | Keyboard | 49.99 | 1 |
+```text
+insertion anomaly
+update anomaly
+deletion anomaly
+```
+
+---
+
+### Homework Part C: Normalize a Table
+
+Normalize this poor table:
+
+```text
+MemberName, MemberEmail, BookTitle, BookAuthor, LoanDate, ReturnDate
+```
 
 Suggest suitable tables, primary keys, and foreign keys.
 
 ---
 
-### Homework Part C: Written Explanation
+### Homework Part D: Misconception Correction
 
-Explain the difference between:
+Correct these statements:
 
 ```text
-repeated data
-repeated groups
+Normalization means sorting records alphabetically.
+Repeating groups are good because they keep all data in one row.
+Normalization removes the need for primary keys.
+A normalized database always has only one table.
+Deleting one row can never remove unrelated information.
 ```
 
-Give one example of each.
-
 ---
 
-### Homework Part D: Trade-off
-
-Explain why normalization can make queries more complex, even though it improves table design.
-
----
-
-## 27. One-page Revision Summary
+## 39. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| Normalization | Organizing tables to reduce redundancy |
-| Redundancy | Unnecessary repeated data |
-| Inconsistency | Same data stored differently |
-| Repeated group | Similar fields repeated, such as course1/course2 |
-| 1NF | Single values in fields; no repeated groups |
-| 2NF | Non-key fields depend on the whole key |
-| 3NF | Non-key fields do not depend on other non-key fields |
-| Update anomaly | Must update repeated data in many places |
-| Insert anomaly | Cannot add data without unrelated data |
-| Delete anomaly | Deleting one row removes other facts |
-| Good design | Separate entities into related tables |
-| Keys needed | Primary and foreign keys connect normalized tables |
-| Trade-off | More tables may require more complex queries |
-| Exam phrase | Normalization reduces redundancy and improves consistency by splitting data into related tables |
+| Normalization | Organizing tables to reduce redundancy and anomalies |
+| Redundancy | Unnecessary duplicated data |
+| Inconsistency | Conflicting versions of same data |
+| Anomaly | Problem caused by poor design |
+| Insertion anomaly | Cannot add data without unrelated data |
+| Update anomaly | Repeated data must be updated many times |
+| Deletion anomaly | Deleting one row removes other useful data |
+| 1NF | Atomic values, no repeating groups |
+| 2NF | Non-key fields depend on whole key |
+| 3NF | Non-key fields depend only on the key |
+| Repeating group | Course1, Course2, Course3 style fields |
+| Partial dependency | Depends on part of composite key |
+| Transitive dependency | Non-key field depends on another non-key field |
+| Decomposition | Splitting table into related tables |
+| Key role | PK identifies records; FK links tables |
+| Benefit | Better consistency, integrity, and maintainability |
+| Trade-off | More tables and joins |
+| Exam phrase | Normalization reduces redundancy and anomalies by splitting data into related tables with suitable primary and foreign keys |
 
 ---
 
-## 28. Quick Self-test
+## 40. Quick Self-test
 
 Before moving on, students should be able to answer these:
 
 1. What is normalization?
-2. Why is normalization used?
-3. What is data redundancy?
-4. What is data inconsistency?
-5. What is a repeated group?
-6. What does 1NF mean at a simple level?
-7. Why are `course1`, `course2`, `course3` poor design?
-8. What is an update anomaly?
-9. Why do normalized tables need keys?
-10. What is one trade-off of normalization?
+2. What is redundancy?
+3. What is an update anomaly?
+4. What is an insertion anomaly?
+5. What is a deletion anomaly?
+6. What does 1NF require?
+7. Why are `Course1`, `Course2`, `Course3` poor design?
+8. What is a partial dependency?
+9. What is a transitive dependency?
+10. How do primary and foreign keys support normalization?
