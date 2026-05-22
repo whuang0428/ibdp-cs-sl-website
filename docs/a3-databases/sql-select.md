@@ -1,19 +1,22 @@
-# SQL SELECT Basics
+# SQL SELECT
 
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
 
 - explain what SQL is
-- explain what a query is
-- use `SELECT` and `FROM` to retrieve data from a table
-- select one field, multiple fields, or all fields
-- interpret the result of a simple SQL query
-- use aliases to make output headings clearer at a basic level
-- understand that SQL is declarative, not step-by-step like Java
-- avoid common SQL syntax mistakes
-- write simple `SELECT` queries from a scenario
-- answer exam-style questions about SQL SELECT basics
+- explain what a SELECT query does
+- identify the basic structure of a SELECT statement
+- retrieve all fields from a table using `SELECT *`
+- retrieve selected fields from a table
+- use `FROM` to specify the table
+- use column aliases at a simple level
+- explain the difference between fields, records, and query results
+- interpret simple SQL SELECT queries
+- write simple SQL SELECT queries from a scenario
+- understand how SELECT connects to tables, fields, records, keys, and relationships
+- avoid common syntax and logic mistakes in SQL SELECT
+- answer exam-style questions about SQL SELECT
 
 ---
 
@@ -23,13 +26,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | A3 Databases |
 | Label | SL Core |
-| Main skill | Retrieving data from database tables |
-| Connected topics | Tables, records, fields, primary keys, relationships, filtering, sorting, joins |
-| Practical focus | Writing and interpreting simple SQL queries |
-| Exam relevance | SQL output prediction, query writing, query explanation |
+| Main skill | Retrieving data from database tables using SQL |
+| Connected topics | Database fundamentals, tables/records/fields, primary/foreign keys, relationships, normalization, SQL conditions and sorting |
+| Practical focus | Writing and interpreting simple SELECT queries |
+| Exam relevance | SQL syntax, query interpretation, choosing fields, reading result tables |
 
 ::: tip Learning Focus
-Students should first master simple `SELECT ... FROM ...` queries before adding `WHERE`, `ORDER BY`, or joins.
+This page focuses on basic `SELECT` and `FROM`. Conditions such as `WHERE`, sorting with `ORDER BY`, and more complex filtering are covered in the next SQL page.
 :::
 
 ---
@@ -38,18 +41,23 @@ Students should first master simple `SELECT ... FROM ...` queries before adding 
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| SQL | 结构化查询语言 | A language used to query and manage relational databases |
-| Query | 查询 | A request for data from a database |
-| SELECT | 选择字段 | SQL clause used to choose which fields to display |
-| FROM | 来自哪张表 | SQL clause used to state which table to use |
-| Field | 字段 | A column in a table |
-| Record | 记录 | A row in a table |
-| Result set | 查询结果集 | The table of results returned by a query |
+| SQL | 结构化查询语言 | Structured Query Language used to work with relational databases |
+| Query | 查询 | Request for data or operation in a database |
+| SELECT | 选择字段 | SQL command used to retrieve data |
+| FROM | 来自哪个表 | SQL clause that states which table to query |
+| Field / Column | 字段 / 列 | One attribute stored in a table |
+| Record / Row | 记录 / 行 | One row in a table |
+| Table | 表 | Structure storing records about one entity |
+| Result set | 结果集 | Data returned by a query |
 | `*` | 所有字段 | Wildcard meaning all fields |
-| Clause | 子句 | A part of an SQL statement, such as `SELECT` or `FROM` |
-| Alias | 别名 | A temporary display name for a field or table |
-| Syntax | 语法 | The rules for writing SQL correctly |
-| Case-insensitive | 不区分大小写 | SQL keywords can usually be written in uppercase or lowercase |
+| Alias | 别名 | Alternative name for a field or output column |
+| Clause | 子句 | Part of an SQL statement, such as SELECT or FROM |
+| Statement | 语句 | Complete SQL instruction |
+| Syntax | 语法 | Rules for writing SQL correctly |
+| Database | 数据库 | Organized collection of related data |
+| Relational database | 关系型数据库 | Database using related tables |
+| Primary key | 主键 | Field that uniquely identifies each record |
+| Foreign key | 外键 | Field that links to another table |
 
 ---
 
@@ -60,60 +68,65 @@ Students should first master simple `SELECT ... FROM ...` queries before adding 
 
 ### 中文讲解
 
-**SQL** 是 Structured Query Language，用来从 relational database 中查询和管理数据。
-
-最基础的查询结构是：
-
-```sql
-SELECT fieldName
-FROM tableName;
-```
-
-意思是：
+**SQL** 全称是：
 
 ```text
-从某个 table 中
-选择某些 fields 显示出来
+Structured Query Language
 ```
+
+它是关系型数据库中常用的查询语言。
+
+最基础、最常见的 SQL 操作之一是：
+
+```sql
+SELECT
+```
+
+`SELECT` 用来从表中取出数据。
 
 例如有一个 Student table：
 
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
+| StudentID | FirstName | LastName | GradeLevel |
+|---:|---|---|---:|
+| 101 | Amy | Chen | 10 |
+| 102 | Ben | Wang | 10 |
+| 103 | Cara | Liu | 11 |
 
-如果我们写：
+如果我们想查看所有字段，可以写：
 
 ```sql
-SELECT name
+SELECT *
 FROM Student;
 ```
 
-意思是：
+这里：
 
 ```text
-从 Student table 中显示 name field
+SELECT * = select all fields
+FROM Student = from the Student table
 ```
 
-结果是：
+如果只想显示名字，可以写：
 
-| name |
-|---|
-| Alice |
-| Ben |
-| Clara |
+```sql
+SELECT FirstName, LastName
+FROM Student;
+```
 
-SQL 和 Java 不一样。  
-Java 通常一步一步告诉电脑怎么做。  
-SQL 更像是在描述：
+结果只会显示：
+
+| FirstName | LastName |
+|---|---|
+| Amy | Chen |
+| Ben | Wang |
+| Cara | Liu |
+
+简单来说：
 
 ```text
-我想要什么数据
+SELECT = choose which fields to show
+FROM = choose which table to get data from
 ```
-
-而不是详细写出每一步如何找数据。
 
 </template>
 
@@ -121,813 +134,1288 @@ SQL 更像是在描述：
 
 ### English Explanation
 
-**SQL** means Structured Query Language. It is used to query and manage data in relational databases.
-
-The most basic query structure is:
-
-```sql
-SELECT fieldName
-FROM tableName;
-```
-
-This means:
+**SQL** stands for:
 
 ```text
-from a certain table,
-display certain fields
+Structured Query Language
 ```
 
-For example, given a Student table:
+It is a common language used with relational databases.
 
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
-
-If we write:
+One of the most basic and common SQL operations is:
 
 ```sql
-SELECT name
+SELECT
+```
+
+`SELECT` is used to retrieve data from a table.
+
+For example, suppose there is a Student table:
+
+| StudentID | FirstName | LastName | GradeLevel |
+|---:|---|---|---:|
+| 101 | Amy | Chen | 10 |
+| 102 | Ben | Wang | 10 |
+| 103 | Cara | Liu | 11 |
+
+If we want to display all fields, we can write:
+
+```sql
+SELECT *
 FROM Student;
 ```
 
-This means:
+Here:
 
 ```text
-display the name field from the Student table
+SELECT * = select all fields
+FROM Student = from the Student table
 ```
 
-The result is:
+If we only want to show names, we can write:
 
-| name |
-|---|
-| Alice |
-| Ben |
-| Clara |
+```sql
+SELECT FirstName, LastName
+FROM Student;
+```
 
-SQL is different from Java.  
-Java usually tells the computer how to do something step by step.  
-SQL describes:
+The result only shows:
+
+| FirstName | LastName |
+|---|---|
+| Amy | Chen |
+| Ben | Wang |
+| Cara | Liu |
+
+In simple terms:
 
 ```text
-what data you want
+SELECT = choose which fields to show
+FROM = choose which table to get data from
 ```
-
-rather than every step used to find it.
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. Example Table Used in This Page
+## 5. What Is SQL?
 
-Most examples on this page use this Student table.
+SQL stands for **Structured Query Language**.
 
-### Student Table
-
-| studentId | name | yearGroup | averageMark |
-|---|---|---:|---:|
-| S001 | Alice | 12 | 85.5 |
-| S002 | Ben | 12 | 62.0 |
-| S003 | Clara | 13 | 91.0 |
-| S004 | David | 13 | 48.5 |
-
-### Fields
+SQL is used to:
 
 ```text
-studentId
-name
-yearGroup
-averageMark
+retrieve data
+insert data
+update data
+delete data
+create database objects
+control access
 ```
 
-### Records
+This page focuses on retrieving data using:
 
-There are:
+```sql
+SELECT
+```
+
+### SQL in Relational Databases
+
+SQL is commonly used with relational databases such as:
 
 ```text
-4 records
+MySQL
+PostgreSQL
+SQLite
+Microsoft SQL Server
+Oracle Database
+Microsoft Access
 ```
 
----
+### Main Idea
 
-## 6. Basic SELECT FROM Structure
+A query asks the database a question.
 
-The simplest SQL query usually uses:
+Example question:
 
-```sql
-SELECT fieldName
-FROM tableName;
+```text
+Show all students.
 ```
 
-### Example
-
-```sql
-SELECT name
-FROM Student;
-```
-
-### Result
-
-| name |
-|---|
-| Alice |
-| Ben |
-| Clara |
-| David |
-
-### Explanation
-
-| SQL Part | Meaning |
-|---|---|
-| `SELECT name` | Display the `name` field |
-| `FROM Student` | Use data from the Student table |
-| `;` | Ends the SQL statement |
-
-::: tip Exam Phrase
-`SELECT` chooses the fields to display. `FROM` states the table that the data comes from.
-:::
-
----
-
-## 7. Selecting One Field
-
-### Query
-
-```sql
-SELECT averageMark
-FROM Student;
-```
-
-### Result
-
-| averageMark |
-|---:|
-| 85.5 |
-| 62.0 |
-| 91.0 |
-| 48.5 |
-
-### Meaning
-
-This query displays only the `averageMark` field for every record in the Student table.
-
----
-
-## 8. Selecting Multiple Fields
-
-To select more than one field, separate field names with commas.
-
-### Query
-
-```sql
-SELECT name, averageMark
-FROM Student;
-```
-
-### Result
-
-| name | averageMark |
-|---|---:|
-| Alice | 85.5 |
-| Ben | 62.0 |
-| Clara | 91.0 |
-| David | 48.5 |
-
-### Important Syntax
-
-Use commas between fields:
-
-```sql
-SELECT name, averageMark
-FROM Student;
-```
-
-Not:
-
-```sql
-SELECT name averageMark
-FROM Student;
-```
-
-The second version is incorrect or may be interpreted differently depending on the DBMS.
-
----
-
-## 9. Selecting All Fields with `*`
-
-The `*` symbol means all fields.
-
-### Query
+SQL query:
 
 ```sql
 SELECT *
 FROM Student;
 ```
 
-### Result
-
-| studentId | name | yearGroup | averageMark |
-|---|---|---:|---:|
-| S001 | Alice | 12 | 85.5 |
-| S002 | Ben | 12 | 62.0 |
-| S003 | Clara | 13 | 91.0 |
-| S004 | David | 13 | 48.5 |
-
-### When to Use `*`
-
-`SELECT *` is useful for quick viewing.
-
-However, in a real system, it is often better to select only the fields needed.
-
-| Choice | Use |
-|---|---|
-| `SELECT *` | Show all fields |
-| `SELECT name, averageMark` | Show only needed fields |
-
-::: warning Good Habit
-In exam answers, use `SELECT *` only when the question asks for all fields or when all fields are clearly needed.
+::: tip Exam Phrase
+SQL is a language used to manage and query relational databases. A SELECT query retrieves data from one or more tables.
 :::
 
 ---
 
-## 10. Result Set
+## 6. What Is a SELECT Query?
 
-The output of a query is called a **result set**.
+A `SELECT` query retrieves data from a database table.
 
-### Query
+### Basic Structure
 
 ```sql
-SELECT name, yearGroup
+SELECT field1, field2
+FROM table_name;
+```
+
+### Meaning
+
+```text
+SELECT = which fields to display
+FROM = which table to read from
+```
+
+### Example
+
+```sql
+SELECT FirstName, LastName
+FROM Student;
+```
+
+This means:
+
+```text
+Show the FirstName and LastName fields from the Student table.
+```
+
+---
+
+## 7. Sample Tables Used in This Page
+
+### Student Table
+
+| StudentID | FirstName | LastName | GradeLevel | Email |
+|---:|---|---|---:|---|
+| 101 | Amy | Chen | 10 | amy.chen@school.edu |
+| 102 | Ben | Wang | 10 | ben.wang@school.edu |
+| 103 | Cara | Liu | 11 | cara.liu@school.edu |
+
+### Course Table
+
+| CourseID | CourseName | TeacherName |
+|---|---|---|
+| CS | Computer Science | Mr Lee |
+| MATH | Mathematics | Ms Smith |
+| ENG | English | Mr Brown |
+
+### Product Table
+
+| ProductID | ProductName | Category | Price |
+|---:|---|---|---:|
+| 201 | Keyboard | Accessory | 49.99 |
+| 202 | Mouse | Accessory | 19.99 |
+| 203 | Monitor | Display | 179.99 |
+
+These examples will be used to explain basic SELECT syntax.
+
+---
+
+## 8. SELECT All Fields
+
+To retrieve all fields from a table, use:
+
+```sql
+SELECT *
+FROM Student;
+```
+
+The `*` means:
+
+```text
+all fields / all columns
+```
+
+### Result
+
+| StudentID | FirstName | LastName | GradeLevel | Email |
+|---:|---|---|---:|---|
+| 101 | Amy | Chen | 10 | amy.chen@school.edu |
+| 102 | Ben | Wang | 10 | ben.wang@school.edu |
+| 103 | Cara | Liu | 11 | cara.liu@school.edu |
+
+### When Useful
+
+`SELECT *` is useful for:
+
+```text
+quickly viewing all data
+checking a small table
+testing during learning
+```
+
+### Caution
+
+In real systems, selecting all fields may be inefficient or may reveal unnecessary sensitive data.
+
+---
+
+## 9. SELECT Specific Fields
+
+To retrieve only certain fields, list the field names after `SELECT`.
+
+### Example
+
+```sql
+SELECT FirstName, LastName
+FROM Student;
+```
+
+### Result
+
+| FirstName | LastName |
+|---|---|
+| Amy | Chen |
+| Ben | Wang |
+| Cara | Liu |
+
+### Why Select Specific Fields?
+
+It can:
+
+```text
+show only needed data
+reduce unnecessary output
+improve readability
+avoid exposing sensitive fields
+make reports cleaner
+```
+
+### Another Example
+
+```sql
+SELECT ProductName, Price
+FROM Product;
+```
+
+Result:
+
+| ProductName | Price |
+|---|---:|
+| Keyboard | 49.99 |
+| Mouse | 19.99 |
+| Monitor | 179.99 |
+
+---
+
+## 10. FROM Clause
+
+The `FROM` clause tells the database which table to get data from.
+
+### Example
+
+```sql
+SELECT CourseName
+FROM Course;
+```
+
+This means:
+
+```text
+Show the CourseName field from the Course table.
+```
+
+### Result
+
+| CourseName |
+|---|
+| Computer Science |
+| Mathematics |
+| English |
+
+### Common Mistake
+
+Forgetting `FROM`:
+
+```sql
+SELECT CourseName;
+```
+
+This is incomplete in normal table queries because the database does not know which table to read.
+
+---
+
+## 11. SQL Statement Format
+
+A simple SELECT statement often has this layout:
+
+```sql
+SELECT field1, field2
+FROM table_name;
+```
+
+### Style Notes
+
+SQL keywords are often written in uppercase:
+
+```sql
+SELECT
+FROM
+```
+
+Field and table names use the database's naming style:
+
+```sql
+StudentID
+FirstName
+Student
+```
+
+### Semicolon
+
+Many SQL environments use semicolon `;` to mark the end of a statement.
+
+```sql
+SELECT FirstName
+FROM Student;
+```
+
+### Important
+
+SQL formatting can be flexible, but clear formatting makes queries easier to read.
+
+---
+
+## 12. SQL Keywords and Case
+
+SQL keywords are usually not case-sensitive in many database systems.
+
+These may all work in many SQL environments:
+
+```sql
+SELECT FirstName FROM Student;
+select FirstName from Student;
+Select FirstName From Student;
+```
+
+### Recommended Style
+
+Use uppercase for SQL keywords:
+
+```sql
+SELECT FirstName
+FROM Student;
+```
+
+This makes the query clearer for exams and readers.
+
+### Caution
+
+Table and field name case sensitivity may depend on the database system.  
+In exams, follow the exact names given in the question.
+
+---
+
+## 13. Result Set
+
+A result set is the data returned by a query.
+
+### Example Query
+
+```sql
+SELECT FirstName, GradeLevel
 FROM Student;
 ```
 
 ### Result Set
 
-| name | yearGroup |
+| FirstName | GradeLevel |
 |---|---:|
-| Alice | 12 |
-| Ben | 12 |
-| Clara | 13 |
-| David | 13 |
+| Amy | 10 |
+| Ben | 10 |
+| Cara | 11 |
 
-The result set is itself table-like, but it is not necessarily a stored table.  
-It is the output produced by the query.
+### Key Idea
 
----
-
-## 11. SQL Keywords and Case
-
-SQL keywords are often written in uppercase:
-
-```sql
-SELECT name
-FROM Student;
-```
-
-Many database systems also accept lowercase:
-
-```sql
-select name
-from Student;
-```
-
-For teaching and exams, use uppercase keywords because they are clearer.
-
-### Recommended Style
-
-```sql
-SELECT name, averageMark
-FROM Student;
-```
-
-### Style Rule
-
-| Part | Style |
-|---|---|
-| SQL keywords | uppercase |
-| Table/field names | match the given table |
-| Each main clause | often on a new line |
-| End statement | semicolon if expected |
+A query does not usually change the original table when using simple `SELECT`.  
+It returns a view of selected data.
 
 ---
 
-## 12. Field Names Must Match the Table
+## 14. Fields and Records in Query Results
 
-Given Student table:
-
-| studentId | name | yearGroup | averageMark |
-|---|---|---:|---:|
-
-This is valid:
-
-```sql
-SELECT name
-FROM Student;
-```
-
-This is invalid:
-
-```sql
-SELECT studentName
-FROM Student;
-```
-
-Why?
+A query result may include:
 
 ```text
-There is no field called studentName in the Student table.
+some fields
+some records
+or both
 ```
 
-### Exam Tip
-
-Always copy field names exactly from the table given in the question.
-
----
-
-## 13. Table Names Must Match
-
-Given the table is called:
+In this page, without `WHERE`, the query normally returns:
 
 ```text
-Student
-```
-
-This is valid:
-
-```sql
-SELECT name
-FROM Student;
-```
-
-This may be invalid if the table is not called Students:
-
-```sql
-SELECT name
-FROM Students;
-```
-
-### Common Mistake
-
-Adding `s` to table names when the schema uses singular names.
-
-```text
-Student ≠ Students
-Course ≠ Courses
-Book ≠ Books
-```
-
-Use the table name exactly as given.
-
----
-
-## 14. Selecting Fields from a Product Table
-
-### Product Table
-
-| productId | productName | price | stock |
-|---|---|---:|---:|
-| P001 | Keyboard | 49.99 | 12 |
-| P002 | Mouse | 19.99 | 30 |
-| P003 | Monitor | 159.99 | 5 |
-
-### Query 1
-
-```sql
-SELECT productName
-FROM Product;
-```
-
-Result:
-
-| productName |
-|---|
-| Keyboard |
-| Mouse |
-| Monitor |
-
-### Query 2
-
-```sql
-SELECT productName, price
-FROM Product;
-```
-
-Result:
-
-| productName | price |
-|---|---:|
-| Keyboard | 49.99 |
-| Mouse | 19.99 |
-| Monitor | 159.99 |
-
-### Query 3
-
-```sql
-SELECT *
-FROM Product;
-```
-
-Result:
-
-| productId | productName | price | stock |
-|---|---|---:|---:|
-| P001 | Keyboard | 49.99 | 12 |
-| P002 | Mouse | 19.99 | 30 |
-| P003 | Monitor | 159.99 | 5 |
-
----
-
-## 15. Query Reading Method
-
-When reading a simple SQL query, follow this method:
-
-```text
-1. Look at FROM first: which table is used?
-2. Look at SELECT: which fields are displayed?
-3. Create the result table with only those fields.
-4. Include all records unless there is a WHERE clause.
+selected fields
+for all records in the table
 ```
 
 ### Example
 
 ```sql
-SELECT name, yearGroup
+SELECT FirstName, LastName
 FROM Student;
 ```
 
-Step-by-step:
+This returns:
 
-| Step | Answer |
-|---|---|
-| FROM | Student table |
-| SELECT | name and yearGroup |
-| Records included | all Student records |
-| Result headings | name, yearGroup |
+```text
+FirstName and LastName fields
+for every Student record
+```
 
-Result:
-
-| name | yearGroup |
-|---|---:|
-| Alice | 12 |
-| Ben | 12 |
-| Clara | 13 |
-| David | 13 |
+Filtering records with `WHERE` is covered in the next page.
 
 ---
 
-## 16. SQL Does Not Change Data Here
+## 15. Field Order in SELECT
 
-Basic `SELECT` queries retrieve data. They do not change the stored table.
+The order of fields in the `SELECT` clause controls the order of columns in the result.
 
-```sql
-SELECT name
-FROM Student;
-```
-
-This only displays data.
-
-It does not:
-
-```text
-insert new records
-update values
-delete records
-change table structure
-```
-
-### Important Distinction
-
-| SQL Type | Purpose |
-|---|---|
-| `SELECT` | retrieve data |
-| `INSERT` | add data |
-| `UPDATE` | change data |
-| `DELETE` | remove data |
-
-This course page focuses only on `SELECT`.
-
----
-
-## 17. Alias with AS
-
-An alias gives a temporary display name to a field in the result set.
-
-### Query
+### Query 1
 
 ```sql
-SELECT name AS studentName
-FROM Student;
-```
-
-### Result
-
-| studentName |
-|---|
-| Alice |
-| Ben |
-| Clara |
-| David |
-
-The stored field name is still:
-
-```text
-name
-```
-
-The alias only changes the output heading.
-
-### Another Example
-
-```sql
-SELECT averageMark AS average
+SELECT FirstName, LastName
 FROM Student;
 ```
 
 Result:
 
-| average |
-|---:|
-| 85.5 |
-| 62.0 |
-| 91.0 |
-| 48.5 |
+| FirstName | LastName |
+|---|---|
+| Amy | Chen |
 
-::: info Note
-Aliases are useful, but students should master normal SELECT queries first.
-:::
+### Query 2
+
+```sql
+SELECT LastName, FirstName
+FROM Student;
+```
+
+Result:
+
+| LastName | FirstName |
+|---|---|
+| Chen | Amy |
+
+### Key Idea
+
+The same fields can be shown in different order.
 
 ---
 
-## 18. Calculated Fields Preview
-
-Some SQL systems allow calculations in `SELECT`.
-
-### Product Table
-
-| productName | price | stock |
-|---|---:|---:|
-| Keyboard | 49.99 | 12 |
-| Mouse | 19.99 | 30 |
+## 16. Selecting Fields from Product Table
 
 ### Query
 
 ```sql
-SELECT productName, price * stock AS stockValue
+SELECT ProductName, Price
 FROM Product;
 ```
 
 ### Result
 
-| productName | stockValue |
+| ProductName | Price |
 |---|---:|
-| Keyboard | 599.88 |
-| Mouse | 599.70 |
+| Keyboard | 49.99 |
+| Mouse | 19.99 |
+| Monitor | 179.99 |
 
-This calculates a value for the result set.  
-The original table is not changed.
+### Explanation
 
-::: warning Preview Only
-Calculated fields may not be required in every syllabus or exam style. Treat this as an extension unless your course requires it.
-:::
+The query shows only two fields:
+
+```text
+ProductName
+Price
+```
+
+from the table:
+
+```text
+Product
+```
 
 ---
 
-## 19. SQL vs Java Thinking
+## 17. Selecting Fields from Course Table
 
-SQL is different from Java.
-
-### Java-like Thinking
-
-```text
-Loop through each record.
-Get the name.
-Print the name.
-```
-
-### SQL Thinking
+### Query
 
 ```sql
-SELECT name
-FROM Student;
+SELECT CourseID, CourseName
+FROM Course;
 ```
 
-SQL describes the result wanted. The DBMS decides how to retrieve it.
+### Result
 
-| Java | SQL |
+| CourseID | CourseName |
 |---|---|
-| Step-by-step instructions | Result-based query |
-| Procedural style | Declarative style |
-| Often uses loops | Uses query clauses |
-| Programmer controls process | DBMS handles retrieval process |
+| CS | Computer Science |
+| MATH | Mathematics |
+| ENG | English |
+
+### Explanation
+
+This query does not show `TeacherName` because it was not listed after `SELECT`.
 
 ---
 
-## 20. Common Mistakes
+## 18. Column Aliases
 
-| Mistake | Why it is wrong | Better habit |
-|---|---|---|
-| Forgetting `FROM` | DBMS does not know which table to use | Include `FROM tableName` |
-| Misspelling field name | Field cannot be found | Copy field names exactly |
-| Misspelling table name | Table cannot be found | Copy table name exactly |
-| Missing comma between fields | Syntax error or wrong interpretation | Use commas |
-| Using `SELECT *` when only one field is needed | Output contains unnecessary data | Select only required fields |
-| Thinking SELECT changes the table | SELECT only retrieves data | Use SELECT for output/query |
-| Confusing field and value | SELECT uses field names, not values | Write `SELECT name`, not `SELECT Alice` |
-| Using quotes around field names as text | May be interpreted as string literal | Usually do not quote field names |
-| Adding plural to table names | Table name may not match schema | Use exact table name |
-| Writing Java-style output code | SQL has different syntax | Use SQL clauses |
+An alias gives a field a different name in the query result.
 
----
-
-## 21. Guided Practice
-
-### Practice 1: Select One Field
-
-Using Student table:
-
-| studentId | name | yearGroup | averageMark |
-|---|---|---:|---:|
-| S001 | Alice | 12 | 85.5 |
-| S002 | Ben | 12 | 62.0 |
-
-Write a query to show only student names.
-
-<details>
-<summary>Suggested Answer</summary>
+### Example
 
 ```sql
-SELECT name
+SELECT FirstName AS GivenName, LastName AS FamilyName
 FROM Student;
 ```
 
-</details>
+### Result
 
----
+| GivenName | FamilyName |
+|---|---|
+| Amy | Chen |
+| Ben | Wang |
+| Cara | Liu |
 
-### Practice 2: Select Multiple Fields
+### Why Use Aliases?
 
-Write a query to show `name` and `averageMark`.
-
-<details>
-<summary>Suggested Answer</summary>
-
-```sql
-SELECT name, averageMark
-FROM Student;
-```
-
-</details>
-
----
-
-### Practice 3: Predict Result
-
-Given:
-
-```sql
-SELECT studentId, name
-FROM Student;
-```
-
-What fields appear in the result?
-
-<details>
-<summary>Suggested Answer</summary>
-
-The result shows:
+Aliases can make output:
 
 ```text
-studentId
-name
+clearer
+more readable
+more user-friendly
+better for reports
 ```
 
-It includes all records unless there is a `WHERE` clause.
+### Simple Rule
 
-</details>
+```text
+original field name AS output name
+```
 
 ---
 
-### Practice 4: Find the Error
+## 19. Aliases Without AS
+
+Some SQL systems allow aliases without `AS`.
 
 ```sql
-SELECT name averageMark
+SELECT FirstName GivenName
 FROM Student;
 ```
 
-What is wrong?
-
-<details>
-<summary>Suggested Answer</summary>
-
-There should be a comma between the fields:
+However, for student learning and exams, this is clearer:
 
 ```sql
-SELECT name, averageMark
+SELECT FirstName AS GivenName
 FROM Student;
 ```
 
-</details>
+### Recommendation
+
+Use `AS` when writing aliases because it shows your intention clearly.
 
 ---
 
-### Practice 5: SELECT *
+## 20. Selecting Calculated Values Preview
 
-What does this query do?
+SQL can sometimes calculate values in a SELECT query.
+
+### Example
+
+Product table:
+
+| ProductName | Price |
+|---|---:|
+| Keyboard | 49.99 |
+| Mouse | 19.99 |
+
+Query:
+
+```sql
+SELECT ProductName, Price * 2 AS DoublePrice
+FROM Product;
+```
+
+### Result
+
+| ProductName | DoublePrice |
+|---|---:|
+| Keyboard | 99.98 |
+| Mouse | 39.98 |
+
+### Level Control
+
+This is a useful preview.  
+Most basic SELECT questions only require selecting fields from a table.
+
+---
+
+## 21. SELECT Does Not Mean “Choose Records” Only
+
+Students sometimes think `SELECT` means selecting rows.
+
+Actually, in basic SQL:
+
+```text
+SELECT chooses fields/columns to display
+FROM chooses table
+WHERE chooses records/rows to include
+```
+
+### Example Without WHERE
+
+```sql
+SELECT FirstName
+FROM Student;
+```
+
+This shows the FirstName field for all records.
+
+### Filtering Records
+
+To choose only Grade 10 students, use `WHERE`:
+
+```sql
+SELECT FirstName
+FROM Student
+WHERE GradeLevel = 10;
+```
+
+`WHERE` is covered in the next page.
+
+---
+
+## 22. Reading a SELECT Query
+
+When reading SQL, use this process:
+
+```text
+1. Look at FROM to identify the table.
+2. Look at SELECT to identify the fields.
+3. Predict the output columns.
+4. Without WHERE, include all records.
+5. Check field order.
+6. Check aliases if used.
+```
+
+### Example
+
+```sql
+SELECT LastName, FirstName
+FROM Student;
+```
+
+Interpretation:
+
+```text
+Table = Student
+Fields = LastName and FirstName
+Records = all student records
+Output order = LastName first, FirstName second
+```
+
+---
+
+## 23. Writing a SELECT Query
+
+When writing SQL from a question:
+
+```text
+1. Identify the table.
+2. Identify the fields to show.
+3. Write SELECT field list.
+4. Write FROM table name.
+5. Add semicolon.
+```
+
+### Example Prompt
+
+```text
+Show the first name and email of all students.
+```
+
+### SQL
+
+```sql
+SELECT FirstName, Email
+FROM Student;
+```
+
+### Prompt
+
+```text
+Show the product name and price of all products.
+```
+
+### SQL
+
+```sql
+SELECT ProductName, Price
+FROM Product;
+```
+
+---
+
+## 24. Common SELECT Patterns
+
+### Pattern 1: All Fields
+
+```sql
+SELECT *
+FROM TableName;
+```
+
+### Pattern 2: Selected Fields
+
+```sql
+SELECT Field1, Field2
+FROM TableName;
+```
+
+### Pattern 3: Alias
+
+```sql
+SELECT Field1 AS NewName
+FROM TableName;
+```
+
+### Pattern 4: Calculated Output Preview
+
+```sql
+SELECT Field1, Field2 * 2 AS NewField
+FROM TableName;
+```
+
+---
+
+## 25. SELECT and Database Design
+
+Good database design makes SELECT queries easier.
+
+### Example
+
+If student names and emails are stored clearly:
+
+```text
+Student(StudentID, FirstName, LastName, Email)
+```
+
+then this is simple:
+
+```sql
+SELECT FirstName, LastName, Email
+FROM Student;
+```
+
+### Poor Design
+
+If names are mixed in one field:
+
+```text
+FullName
+```
+
+it may be harder to sort or search by last name.
+
+### Connection
+
+SQL SELECT depends on:
+
+```text
+clear table names
+clear field names
+suitable data types
+good normalization
+```
+
+---
+
+## 26. SELECT and Keys
+
+Keys can be selected like normal fields.
+
+### Example
+
+```sql
+SELECT StudentID, FirstName, LastName
+FROM Student;
+```
+
+### Why Include Keys?
+
+Keys help identify records clearly.
+
+Example:
+
+| StudentID | FirstName | LastName |
+|---:|---|---|
+| 101 | Amy | Chen |
+| 103 | Amy | Chen |
+
+If two students have the same name, `StudentID` distinguishes them.
+
+### Good Practice
+
+When output needs to identify a specific record, include the primary key.
+
+---
+
+## 27. SELECT and Sensitive Data
+
+A query should only retrieve data that is needed.
+
+### Example
+
+If a teacher only needs student names:
+
+```sql
+SELECT FirstName, LastName
+FROM Student;
+```
+
+It may be unnecessary to retrieve:
+
+```text
+home address
+date of birth
+parent phone
+medical information
+```
+
+### Security Link
+
+Selecting only required fields supports:
+
+```text
+privacy
+least privilege
+data minimization
+reduced accidental exposure
+```
+
+---
+
+## 28. Worked Example: Student Names
+
+### Prompt
+
+Show all students' first names and last names.
+
+### SQL
+
+```sql
+SELECT FirstName, LastName
+FROM Student;
+```
+
+### Explanation
+
+```text
+SELECT chooses FirstName and LastName.
+FROM tells the database to use Student table.
+No WHERE means all student records are included.
+```
+
+---
+
+## 29. Worked Example: Course List
+
+### Prompt
+
+Show all course IDs and course names.
+
+### SQL
+
+```sql
+SELECT CourseID, CourseName
+FROM Course;
+```
+
+### Result
+
+| CourseID | CourseName |
+|---|---|
+| CS | Computer Science |
+| MATH | Mathematics |
+| ENG | English |
+
+### Explanation
+
+This shows two selected fields from the Course table.
+
+---
+
+## 30. Worked Example: Product Prices
+
+### Prompt
+
+Show the product name and price for all products.
+
+### SQL
+
+```sql
+SELECT ProductName, Price
+FROM Product;
+```
+
+### Result
+
+| ProductName | Price |
+|---|---:|
+| Keyboard | 49.99 |
+| Mouse | 19.99 |
+| Monitor | 179.99 |
+
+---
+
+## 31. Worked Example: All Product Fields
+
+### Prompt
+
+Show all fields from the Product table.
+
+### SQL
 
 ```sql
 SELECT *
 FROM Product;
 ```
 
+### Explanation
+
+`*` means all fields in the Product table.
+
+---
+
+## 32. Worked Example: Alias
+
+### Prompt
+
+Show product names under the heading `Item`.
+
+### SQL
+
+```sql
+SELECT ProductName AS Item
+FROM Product;
+```
+
+### Result
+
+| Item |
+|---|
+| Keyboard |
+| Mouse |
+| Monitor |
+
+### Explanation
+
+`AS Item` changes the output heading.  
+It does not rename the actual database field permanently.
+
+---
+
+## 33. Worked Example: Identify the Output
+
+### Query
+
+```sql
+SELECT LastName, Email
+FROM Student;
+```
+
+### Output
+
+| LastName | Email |
+|---|---|
+| Chen | amy.chen@school.edu |
+| Wang | ben.wang@school.edu |
+| Liu | cara.liu@school.edu |
+
+### Explanation
+
+The query returns:
+
+```text
+LastName and Email
+for all records in Student
+```
+
+---
+
+## 34. Worked Example: Correct the Query
+
+### Incorrect Query
+
+```sql
+SELECT FirstName LastName
+FROM Student;
+```
+
+### Problem
+
+There is a missing comma between field names.
+
+### Correct Query
+
+```sql
+SELECT FirstName, LastName
+FROM Student;
+```
+
+---
+
+## 35. Worked Example: Correct Missing FROM
+
+### Incorrect Query
+
+```sql
+SELECT ProductName, Price;
+```
+
+### Problem
+
+The query does not say which table to retrieve data from.
+
+### Correct Query
+
+```sql
+SELECT ProductName, Price
+FROM Product;
+```
+
+---
+
+## 36. Scenario Answer Bank
+
+### If Asked: “Write a query to show all fields”
+
+Use:
+
+```sql
+SELECT *
+FROM TableName;
+```
+
+### If Asked: “Write a query to show selected fields”
+
+Use:
+
+```sql
+SELECT Field1, Field2
+FROM TableName;
+```
+
+### If Asked: “Explain a SELECT query”
+
+Use this structure:
+
+```text
+The query retrieves [fields] from the [table] table. Since there is no WHERE clause, it returns those fields for all records in the table.
+```
+
+### If Asked: “Identify error”
+
+Check for:
+
+```text
+missing comma
+missing FROM
+wrong table name
+wrong field name
+missing semicolon if required
+using a field not in the table
+```
+
+---
+
+## 37. Common Mistakes
+
+| Mistake | Why it is wrong | Correct idea |
+|---|---|---|
+| Forgetting `FROM` | database does not know table | include `FROM TableName` |
+| Missing comma between fields | field list syntax is wrong | `SELECT FirstName, LastName` |
+| Using wrong field name | field does not exist | use exact field names from table |
+| Using wrong table name | table does not exist | use exact table name |
+| Thinking `SELECT *` selects one record | `*` means all fields | records are filtered by `WHERE` |
+| Thinking SELECT changes data | basic SELECT only retrieves data | UPDATE/INSERT/DELETE change data |
+| Selecting unnecessary sensitive fields | privacy risk | select only needed fields |
+| Confusing field and table | fields are columns, table stores records | `SELECT fields FROM table` |
+| Forgetting aliases are temporary | alias changes result heading only | original field name unchanged |
+| Writing values instead of field names | SELECT usually lists fields | use column names unless selecting literal values |
+
+---
+
+## 38. Guided Practice
+
+### Practice 1: Select All
+
+Write a query to show all fields from the Student table.
+
 <details>
 <summary>Suggested Answer</summary>
 
-It displays all fields from the Product table.
+```sql
+SELECT *
+FROM Student;
+```
 
 </details>
 
 ---
 
-## 22. Independent Practice
+### Practice 2: Select Names
+
+Write a query to show `FirstName` and `LastName` from Student.
+
+<details>
+<summary>Suggested Answer</summary>
+
+```sql
+SELECT FirstName, LastName
+FROM Student;
+```
+
+</details>
+
+---
+
+### Practice 3: Interpret Query
+
+What does this query show?
+
+```sql
+SELECT ProductName, Price
+FROM Product;
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+It shows the `ProductName` and `Price` fields for all records in the Product table.
+
+</details>
+
+---
+
+### Practice 4: Fix Syntax
+
+Fix this query:
+
+```sql
+SELECT FirstName Email
+FROM Student;
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+```sql
+SELECT FirstName, Email
+FROM Student;
+```
+
+</details>
+
+---
+
+### Practice 5: Alias
+
+Write a query to show `ProductName` with the heading `ItemName`.
+
+<details>
+<summary>Suggested Answer</summary>
+
+```sql
+SELECT ProductName AS ItemName
+FROM Product;
+```
+
+</details>
+
+---
+
+## 39. Independent Practice
 
 ### Question 1
 
-Define SQL.
+What does SQL stand for?
 
 ### Question 2
 
-Define query.
+What does a SELECT query do?
 
 ### Question 3
 
-Using this table, write a query to display all book titles.
-
-| bookId | title | author | pages |
-|---|---|---|---:|
-| B001 | Dune | Frank Herbert | 412 |
-| B002 | Animal Farm | George Orwell | 112 |
-| B003 | The Hobbit | J.R.R. Tolkien | 310 |
+Explain the purpose of the `FROM` clause.
 
 ### Question 4
 
-Write a query to display `title` and `author`.
+Write a query to show all fields from the Course table.
 
 ### Question 5
 
-Write a query to display all fields from the Book table.
+Write a query to show `CourseID` and `CourseName` from the Course table.
 
 ### Question 6
 
-Predict the result headings:
-
-```sql
-SELECT bookId, pages
-FROM Book;
-```
+Write a query to show `ProductName` and `Category` from Product.
 
 ### Question 7
 
-Explain the difference between `SELECT title FROM Book;` and `SELECT * FROM Book;`.
+Explain the difference between `SELECT *` and `SELECT ProductName, Price`.
 
 ### Question 8
 
-Find and correct the error:
+Correct this query:
 
 ```sql
-SELECT title author
-FROM Book;
+SELECT StudentID FirstName LastName
+FROM Student;
 ```
 
 ### Question 9
 
-Find and correct the error:
+Explain what this query returns:
 
 ```sql
-SELECT bookTitle
-FROM Book;
+SELECT FirstName AS GivenName, LastName AS FamilyName
+FROM Student;
 ```
-
-Assume the field is called `title`.
 
 ### Question 10
 
-Write a query using an alias so that `title` is displayed as `bookTitle`.
+Why might `SELECT *` be a poor choice in a real system?
 
 ---
 
-## 23. Exam-style Questions
+## 40. Exam-style Questions
 
 ### Question 1 [4 marks]
 
-Explain the purpose of `SELECT` and `FROM` in an SQL query.
+Explain what this SQL query does.
+
+```sql
+SELECT FirstName, LastName
+FROM Student;
+```
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-`SELECT` states which field or fields should be displayed in the query result. `FROM` states which table the data should be retrieved from. Together, they allow data to be selected from a specific database table.
+The query retrieves the `FirstName` and `LastName` fields from the `Student` table. Since there is no `WHERE` clause, it returns these fields for all records in the Student table.
 
 </details>
 
@@ -935,20 +1423,13 @@ Explain the purpose of `SELECT` and `FROM` in an SQL query.
 
 ### Question 2 [4 marks]
 
-Given the Product table:
-
-| productId | productName | price |
-|---|---|---:|
-| P001 | Keyboard | 49.99 |
-| P002 | Mouse | 19.99 |
-
-Write an SQL query to display only product names.
+Write an SQL query to display all fields from the `Product` table.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
 ```sql
-SELECT productName
+SELECT *
 FROM Product;
 ```
 
@@ -958,29 +1439,15 @@ FROM Product;
 
 ### Question 3 [5 marks]
 
-Given the Student table:
-
-| studentId | name | yearGroup | averageMark |
-|---|---|---:|---:|
-| S001 | Alice | 12 | 85.5 |
-| S002 | Ben | 12 | 62.0 |
-
-State the result of:
-
-```sql
-SELECT name, averageMark
-FROM Student;
-```
+Write an SQL query to display `ProductName` and `Price` from the `Product` table.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-| name | averageMark |
-|---|---:|
-| Alice | 85.5 |
-| Ben | 62.0 |
-
-The query displays only the `name` and `averageMark` fields for all records in the Student table.
+```sql
+SELECT ProductName, Price
+FROM Product;
+```
 
 </details>
 
@@ -988,12 +1455,21 @@ The query displays only the `name` and `averageMark` fields for all records in t
 
 ### Question 4 [5 marks]
 
-Explain why `SELECT *` may not always be the best choice.
+A table called `Course` contains these fields:
+
+```text
+CourseID, CourseName, TeacherName
+```
+
+Write a query to show only `CourseID` and `CourseName`.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-`SELECT *` returns all fields from a table. This may include unnecessary data, making the result harder to read and less efficient, especially if the table has many fields. It is usually better to select only the fields needed for the task.
+```sql
+SELECT CourseID, CourseName
+FROM Course;
+```
 
 </details>
 
@@ -1001,164 +1477,184 @@ Explain why `SELECT *` may not always be the best choice.
 
 ### Question 5 [6 marks]
 
-Identify and correct two errors in the query below.
+A student writes:
 
 ```sql
-SELECT studentName averageMark
-FROM Students;
+SELECT FirstName LastName
+FROM Student;
 ```
 
-The table is called `Student` and the fields are `name` and `averageMark`.
+Identify the error and correct the query.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Correct query:
+The error is that there is no comma between `FirstName` and `LastName`. In a SELECT field list, fields must be separated by commas. The corrected query is:
 
 ```sql
-SELECT name, averageMark
+SELECT FirstName, LastName
 FROM Student;
 ```
-
-Errors:
-
-- `studentName` is not the correct field name; the field is `name`.
-- A comma is missing between selected fields.
-- `Students` is not the correct table name; the table is `Student`.
-
-Any two correctly explained errors can receive credit.
 
 </details>
 
 ---
 
-## 24. Classroom Activity
+## 41. Classroom Activity
 
-### Activity 1: Query Builder Cards
+### Activity 1: Query Matching
 
-Give students cards:
+Students match prompts to SQL queries.
+
+Prompts:
 
 ```text
-SELECT
-FROM
-Student
-name
-averageMark
-,
-;
+show all students
+show student names
+show product names and prices
+show all courses
+show course ID and course name
 ```
 
-Students arrange them into valid SQL queries.
-
----
-
-### Activity 2: Result Set Prediction
-
-Give students a small table and several `SELECT ... FROM ...` queries.  
-They must draw the result set for each query.
-
----
-
-### Activity 3: Error Detective
-
-Students correct SQL mistakes such as:
+Queries:
 
 ```sql
-SELECT name averageMark FROM Student;
-SELECT studentName FROM Student;
-SELECT name FROM Students;
+SELECT * FROM Student;
+SELECT FirstName, LastName FROM Student;
+SELECT ProductName, Price FROM Product;
+SELECT * FROM Course;
+SELECT CourseID, CourseName FROM Course;
 ```
-
-They must explain each correction.
 
 ---
 
-## 25. Homework
+### Activity 2: Result Prediction
+
+Give students a small table and a SELECT query.  
+Students predict the result set.
+
+Focus on:
+
+```text
+which fields appear
+what order fields appear
+whether all records appear
+whether aliases change headings
+```
+
+---
+
+### Activity 3: Fix Broken Queries
+
+Students fix common errors:
+
+```sql
+SELECT FirstName LastName FROM Student;
+SELECT ProductName, Price;
+SELECT * Student;
+SELECT CourseID, CourseName FROM Courses;
+SELECT Student.Email FROM Product;
+```
+
+---
+
+## 42. Homework
 
 ### Homework Part A: Concept Explanation
 
-In 4-5 sentences, explain what SQL is and how `SELECT` and `FROM` are used.
+In 5-6 sentences, explain what SQL SELECT is and how `SELECT` and `FROM` work together.
 
 ---
 
-### Homework Part B: Query Writing
+### Homework Part B: Write Queries
 
 Using this table:
 
-| playerId | username | score | level |
-|---|---|---:|---:|
-| P001 | Dragon | 1500 | 12 |
-| P002 | Shadow | 900 | 8 |
-| P003 | Nova | 2100 | 15 |
+```text
+Book(BookID, Title, Author, PublicationYear, Available)
+```
 
-Write queries to:
+Write SQL queries to:
 
-1. display all usernames
-2. display username and score
-3. display all fields
-4. display `username` as `playerName`
-
----
-
-### Homework Part C: Result Prediction
-
-State the result of:
-
-```sql
-SELECT username, level
-FROM Player;
+```text
+1. show all fields
+2. show only Title and Author
+3. show BookID and Title
+4. show Available
+5. show Title using alias BookTitle
 ```
 
 ---
 
-### Homework Part D: Error Correction
+### Homework Part C: Interpret Queries
 
-Correct these queries:
+Explain what each query returns:
 
 ```sql
-SELECT username score
-FROM Player;
-
-SELECT playerName
-FROM Player;
-
 SELECT *
-Player;
+FROM Book;
+```
+
+```sql
+SELECT Title, Author
+FROM Book;
+```
+
+```sql
+SELECT Title AS BookTitle
+FROM Book;
 ```
 
 ---
 
-## 26. One-page Revision Summary
+### Homework Part D: Misconception Correction
+
+Correct these statements:
+
+```text
+SELECT always changes the data in a table.
+SELECT * means select one field only.
+FROM tells the database which fields to display.
+A comma is not needed between selected fields.
+Aliases permanently rename database fields.
+```
+
+---
+
+## 43. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| SQL | Language used to query relational databases |
-| Query | Request for data |
-| `SELECT` | Chooses fields to display |
-| `FROM` | States the table used |
-| Field list | Fields separated by commas |
-| `*` | Selects all fields |
-| Result set | Output returned by a query |
-| Alias | Temporary display name |
-| `AS` | Used to create an alias |
-| SQL style | Keywords often uppercase |
-| SELECT effect | Retrieves data; does not change table |
-| Common syntax | `SELECT field FROM table;` |
-| Exam phrase | `SELECT` specifies the fields to return and `FROM` specifies the table to retrieve them from |
+| SQL | Structured Query Language |
+| Query | Request to database |
+| SELECT | Chooses fields to display |
+| FROM | Chooses table to read from |
+| `*` | All fields |
+| Field | Column |
+| Record | Row |
+| Result set | Data returned by query |
+| Alias | Temporary output name |
+| Basic pattern | `SELECT Field1, Field2 FROM TableName;` |
+| All fields pattern | `SELECT * FROM TableName;` |
+| Common error | missing comma between fields |
+| Common error | missing FROM clause |
+| No WHERE | returns selected fields for all records |
+| Privacy tip | select only needed fields |
+| Exam phrase | A SELECT query retrieves specified fields from a table and returns them as a result set |
 
 ---
 
-## 27. Quick Self-test
+## 44. Quick Self-test
 
 Before moving on, students should be able to answer these:
 
 1. What does SQL stand for?
-2. What is a query?
-3. What does `SELECT` do?
-4. What does `FROM` do?
-5. What does `*` mean in `SELECT *`?
-6. How do you select two fields?
-7. Does `SELECT` change the stored table?
-8. What is a result set?
-9. Why should field names match the table exactly?
-10. What is wrong with `SELECT name score FROM Player;`?
+2. What does SELECT do?
+3. What does FROM do?
+4. What does `*` mean in `SELECT *`?
+5. What does a basic SELECT query look like?
+6. What is a result set?
+7. Does basic SELECT change data?
+8. How do you select two fields?
+9. What does `AS` do?
+10. Why might selecting only needed fields be better than `SELECT *`?
