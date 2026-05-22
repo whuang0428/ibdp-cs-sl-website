@@ -5,14 +5,16 @@
 By the end of this lesson, students should be able to:
 
 - explain what a relationship is in a relational database
-- explain why tables are linked instead of storing all data in one table
 - identify one-to-one, one-to-many, and many-to-many relationships
 - explain how primary keys and foreign keys create relationships
-- identify parent and child tables in a relationship
-- interpret simple relationship diagrams
+- distinguish parent and child tables
 - explain why many-to-many relationships usually need a linking table
-- use a school/course database to explain table relationships
-- identify common relationship-design mistakes
+- identify relationship types from real-world scenarios
+- design simple related tables for a scenario
+- explain why relationships reduce data redundancy
+- explain referential integrity in relationships
+- avoid common relationship design mistakes
+- apply relationships to school, library, shop, hospital, and game examples
 - answer exam-style questions about database relationships
 
 ---
@@ -23,13 +25,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | A3 Databases |
 | Label | SL Core |
-| Main skill | Understanding how tables are connected in relational databases |
-| Connected topics | Tables, records, fields, primary keys, foreign keys, SQL joins, data integrity |
-| Practical focus | Reading and designing relationships between tables |
-| Exam relevance | Relationship interpretation, table design, foreign key explanation, scenario questions |
+| Main skill | Understanding how tables are linked in relational databases |
+| Connected topics | Tables, records and fields, primary/foreign keys, ERDs, normalization, SQL joins |
+| Practical focus | Identifying and designing relationships between tables |
+| Exam relevance | Relationship type identification, table design, key explanation, scenario-based questions |
 
 ::: tip Learning Focus
-A relational database is powerful because tables are linked. Students must understand that relationships are created through matching key fields, not just because tables look similar.
+A relationship connects records in different tables. In a relational database, relationships are usually implemented using primary keys and foreign keys.
 :::
 
 ---
@@ -38,19 +40,23 @@ A relational database is powerful because tables are linked. Students must under
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Relationship | 关系 | A link between tables in a database |
-| Relational database | 关系型数据库 | A database that stores data in related tables |
-| Primary key | 主键 | A field that uniquely identifies each record in a table |
-| Foreign key | 外键 | A field in one table that refers to a primary key in another table |
-| One-to-one | 一对一关系 | One record in Table A relates to one record in Table B |
-| One-to-many | 一对多关系 | One record in Table A relates to many records in Table B |
-| Many-to-many | 多对多关系 | Many records in Table A relate to many records in Table B |
-| Linking table | 连接表 / 中间表 | A table used to break a many-to-many relationship into two one-to-many relationships |
-| Junction table | 连接表 | Another name for a linking table |
-| Parent table | 父表 | Table containing the primary key being referenced |
+| Relationship | 关系 | Link between tables/entities in a database |
+| Entity | 实体 | Real-world object or concept stored about |
+| Table | 表 | Structure storing data about one entity type |
+| Primary key | 主键 | Field that uniquely identifies each record |
+| Foreign key | 外键 | Field that references a primary key in another table |
+| One-to-one | 一对一 | One record in table A relates to one record in table B |
+| One-to-many | 一对多 | One record in table A relates to many records in table B |
+| Many-to-many | 多对多 | Many records in table A relate to many records in table B |
+| Linking table | 连接表 | Table used to resolve a many-to-many relationship |
+| Junction table | 连接表 | Another name for linking table |
+| Associative entity | 关联实体 | Entity/table used to connect two entities |
+| Parent table | 父表 | Table referenced by a foreign key |
 | Child table | 子表 | Table containing the foreign key |
-| Referential integrity | 参照完整性 | Foreign key values must match existing primary key values |
-| Entity relationship | 实体关系 | How entities such as Student and Course are connected |
+| Cardinality | 基数 | Number relationship between records |
+| Optional relationship | 可选关系 | A relationship that may not exist for every record |
+| Mandatory relationship | 必须关系 | A relationship that must exist |
+| Referential integrity | 引用完整性 | Foreign key values must match existing primary key values |
 
 ---
 
@@ -61,50 +67,66 @@ A relational database is powerful because tables are linked. Students must under
 
 ### 中文讲解
 
-在 relational database 中，数据通常不会全部放在一个大表里。  
-更好的做法是把不同 entity 的数据放在不同 tables 中，然后通过 keys 建立 relationship。
+在 relational database 中，数据通常不会全部放在一张大表里。  
+我们会把不同类型的数据放在不同的 tables 中，然后用 **relationships（关系）** 把它们连接起来。
 
-例如，一个学校系统可以有：
+例如学校数据库可以有：
 
 ```text
 Student table
 Course table
-Enrollment table
 Teacher table
+Enrollment table
+Grade table
 ```
 
-这些 table 不是孤立的。它们之间有关系：
+这些表之间不是孤立的。  
+它们需要通过 keys 连接：
 
 ```text
-一个 Teacher 可以教多个 Course
-一个 Student 可以选择多个 Course
-一个 Course 也可以有多个 Student
+Student.StudentID → Enrollment.StudentID
+Course.CourseID → Enrollment.CourseID
+Teacher.TeacherID → Course.TeacherID
 ```
 
-数据库中的 relationship 通常通过：
+关系的常见类型有三种：
 
 ```text
-primary key + foreign key
+one-to-one
+one-to-many
+many-to-many
 ```
-
-来建立。
 
 例如：
 
 ```text
-Student.studentId 是 primary key
-Enrollment.studentId 是 foreign key
+one teacher teaches many courses = one-to-many
+one student can take many courses, and one course can have many students = many-to-many
 ```
 
-这样 Enrollment table 就可以连接到 Student table。
+Many-to-many 通常不能直接放在两个表之间。  
+它需要一个 linking table。
 
-学习 relationships 的重点是：
+例如：
 
-1. 为什么要把数据分成多个 tables
-2. 哪个 table 存 primary key
-3. 哪个 table 存 foreign key
-4. 一个 record 可以对应几个 related records
-5. many-to-many 关系为什么需要 linking table
+```text
+Student ↔ Course
+```
+
+应该改成：
+
+```text
+Student → Enrollment ← Course
+```
+
+简单来说：
+
+```text
+relationship = link between tables
+primary key = identifies record
+foreign key = creates link
+linking table = handles many-to-many
+```
 
 </template>
 
@@ -112,789 +134,1101 @@ Enrollment.studentId 是 foreign key
 
 ### English Explanation
 
-In a relational database, data is usually not stored in one huge table.  
-A better design separates different entities into different tables and then connects the tables using keys.
+In a relational database, data is usually not placed in one huge table.  
+Different types of data are stored in different tables, and **relationships** connect those tables.
 
-For example, a school system can have:
+For example, a school database may contain:
 
 ```text
 Student table
 Course table
-Enrollment table
 Teacher table
+Enrollment table
+Grade table
 ```
 
-These tables are not isolated. They are related:
+These tables are not isolated.  
+They need to be connected using keys:
 
 ```text
-one Teacher can teach many Courses
-one Student can take many Courses
-one Course can have many Students
+Student.StudentID → Enrollment.StudentID
+Course.CourseID → Enrollment.CourseID
+Teacher.TeacherID → Course.TeacherID
 ```
 
-Database relationships are usually created using:
+There are three common relationship types:
 
 ```text
-primary key + foreign key
+one-to-one
+one-to-many
+many-to-many
 ```
 
 For example:
 
 ```text
-Student.studentId is a primary key
-Enrollment.studentId is a foreign key
+one teacher teaches many courses = one-to-many
+one student can take many courses, and one course can have many students = many-to-many
 ```
 
-This allows the Enrollment table to connect to the Student table.
+A many-to-many relationship is usually not stored directly between two tables.  
+It needs a linking table.
 
-The key ideas in relationships are:
+For example:
 
-1. why data is split into multiple tables
-2. which table stores the primary key
-3. which table stores the foreign key
-4. how many related records can match one record
-5. why many-to-many relationships need a linking table
+```text
+Student ↔ Course
+```
+
+should become:
+
+```text
+Student → Enrollment ← Course
+```
+
+In simple terms:
+
+```text
+relationship = link between tables
+primary key = identifies record
+foreign key = creates link
+linking table = handles many-to-many
+```
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. Why Relationships Are Needed
+## 5. What Is a Database Relationship?
 
-If all data is stored in one large table, data may be repeated many times.
+A relationship is a connection between tables in a relational database.
 
-### Poor Design: One Large Table
+It shows how records in one table are related to records in another table.
 
-| studentId | studentName | courseId | courseName | teacherName |
-|---|---|---|---|---|
-| S001 | Alice | C001 | Computer Science | Mr Smith |
-| S001 | Alice | C002 | Mathematics | Ms Green |
-| S002 | Ben | C001 | Computer Science | Mr Smith |
-
-Problems:
-
-```text
-Alice is repeated
-Computer Science is repeated
-Mr Smith is repeated
-updates become harder
-inconsistency can happen
-```
-
-### Better Design: Related Tables
+### Example
 
 Student table:
 
-| studentId | name |
-|---|---|
-| S001 | Alice |
-| S002 | Ben |
+| StudentID | FirstName |
+|---:|---|
+| 101 | Amy |
+| 102 | Ben |
 
-Course table:
+Grade table:
 
-| courseId | courseName | teacherId |
-|---|---|---|
-| C001 | Computer Science | T01 |
-| C002 | Mathematics | T02 |
+| GradeID | StudentID | Subject | Score |
+|---:|---:|---|---:|
+| 1 | 101 | CS | 95 |
+| 2 | 101 | Math | 91 |
+| 3 | 102 | CS | 88 |
 
-Enrollment table:
+Relationship:
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S001 | C002 |
-| E003 | S002 | C001 |
+```text
+Student.StudentID → Grade.StudentID
+```
 
-The Enrollment table links students to courses using IDs.
+This means each grade belongs to a student.
 
-::: info Scenario Link
-Relationships reduce repeated data and make updates more reliable.
+::: tip Exam Phrase
+A relationship links records in different tables, usually by using a foreign key in one table that refers to a primary key in another table.
 :::
 
 ---
 
-## 6. Relationship Using Primary Key and Foreign Key
+## 6. Why Relationships Are Used
 
-A relationship is often created when a foreign key in one table refers to a primary key in another table.
+Relationships are used to organize data correctly and avoid unnecessary duplication.
 
-### Student Table
+### Without Relationships
 
-| studentId | name |
-|---|---|
-| S001 | Alice |
-| S002 | Ben |
+A database may repeat data many times.
 
-Primary key:
+Example:
+
+| StudentName | CourseName | TeacherName | TeacherEmail |
+|---|---|---|---|
+| Amy Chen | CS | Mr Lee | lee@school.edu |
+| Ben Wang | CS | Mr Lee | lee@school.edu |
+| Cara Liu | CS | Mr Lee | lee@school.edu |
+
+Teacher data is repeated.
+
+### With Relationships
+
+Use separate tables:
 
 ```text
-studentId
+Teacher(TeacherID, TeacherName, TeacherEmail)
+Course(CourseID, CourseName, TeacherID)
+Student(StudentID, StudentName)
+Enrollment(StudentID, CourseID)
 ```
 
-### Enrollment Table
+Now the database can link data using keys instead of repeating full details.
 
-| enrollmentId | studentId | courseId |
+### Benefits
+
+```text
+reduced redundancy
+better consistency
+easier updates
+clearer structure
+better data integrity
+supports queries across tables
+```
+
+---
+
+## 7. Relationship Types Overview
+
+There are three main relationship types.
+
+| Relationship Type | Meaning | Example |
 |---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
+| One-to-one | one record relates to one record | one person has one passport |
+| One-to-many | one record relates to many records | one customer places many orders |
+| Many-to-many | many records relate to many records | students take many courses |
+
+### Quick Memory
+
+```text
+1:1 = one to one
+1:M = one to many
+M:N = many to many
+```
+
+---
+
+## 8. One-to-One Relationship
+
+A one-to-one relationship means one record in Table A is related to one record in Table B.
+
+### Example
+
+```text
+Person → Passport
+```
+
+One person has one passport.  
+One passport belongs to one person.
+
+### Possible Tables
+
+```text
+Person(PersonID, Name, DateOfBirth)
+Passport(PassportID, PersonID, PassportNumber, ExpiryDate)
+```
+
+### Diagram
+
+```text
+Person 1 ─── 1 Passport
+```
+
+### When Used
+
+One-to-one relationships are less common than one-to-many.
+
+They may be used when:
+
+```text
+separating sensitive data
+separating optional data
+splitting a very large table
+storing different security/access levels
+```
+
+---
+
+## 9. One-to-Many Relationship
+
+A one-to-many relationship means one record in Table A can relate to many records in Table B.
+
+### Example
+
+```text
+Customer → Order
+```
+
+One customer can place many orders.  
+Each order belongs to one customer.
+
+### Tables
+
+```text
+Customer(CustomerID, CustomerName)
+Order(OrderID, CustomerID, OrderDate)
+```
+
+### Key Link
+
+```text
+Order.CustomerID → Customer.CustomerID
+```
+
+### Diagram
+
+```text
+Customer 1 ─── many Orders
+```
+
+::: tip Exam Phrase
+In a one-to-many relationship, the foreign key is normally placed in the table on the many side.
+:::
+
+---
+
+## 10. Many-to-Many Relationship
+
+A many-to-many relationship means many records in Table A can relate to many records in Table B.
+
+### Example
+
+```text
+Student ↔ Course
+```
+
+One student can take many courses.  
+One course can have many students.
+
+### Problem
+
+A direct many-to-many relationship is hard to store correctly in relational tables.
+
+### Solution
+
+Use a linking table.
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName)
+Enrollment(EnrollmentID, StudentID, CourseID)
+```
+
+### Links
+
+```text
+Enrollment.StudentID → Student.StudentID
+Enrollment.CourseID → Course.CourseID
+```
+
+### Diagram
+
+```text
+Student 1 ─── many Enrollment many ─── 1 Course
+```
+
+---
+
+## 11. Linking Table
+
+A linking table is used to resolve a many-to-many relationship.
+
+It is also called:
+
+```text
+junction table
+associative table
+bridge table
+```
+
+### Example: Student and Course
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName)
+Enrollment(EnrollmentID, StudentID, CourseID, EnrollDate)
+```
+
+### Why Enrollment Exists
+
+Enrollment records the fact that:
+
+```text
+a particular student takes a particular course
+```
+
+It can also store extra attributes about the relationship:
+
+```text
+EnrollDate
+FinalGrade
+Status
+```
+
+### Important
+
+The linking table usually contains foreign keys to both related tables.
+
+---
+
+## 12. Cardinality
+
+Cardinality describes how many records can be related.
+
+### Common Cardinalities
+
+```text
+1:1
+1:M
+M:N
+```
+
+### Examples
+
+| Relationship | Cardinality |
+|---|---|
+| person has passport | 1:1 |
+| teacher teaches courses | 1:M |
+| customer places orders | 1:M |
+| student takes courses | M:N |
+| order contains products | M:N |
+| doctor sees patients | M:N |
+
+### Exam Use
+
+You may be asked to identify whether a relationship is one-to-one, one-to-many, or many-to-many.
+
+---
+
+## 13. Optional and Mandatory Relationships
+
+A relationship may be optional or mandatory.
+
+### Optional
+
+A record may exist without a related record.
+
+Example:
+
+```text
+A student may or may not have a school locker.
+```
+
+### Mandatory
+
+A record must have a related record.
+
+Example:
+
+```text
+An order must belong to a customer.
+```
+
+### Simple Explanation
+
+```text
+optional = may exist
+mandatory = must exist
+```
+
+### Level Control
+
+At SL level, focus mainly on relationship type and key placement. Optional/mandatory details help with ERDs but should not distract from the core.
+
+---
+
+## 14. Parent and Child Tables
+
+In a one-to-many relationship:
+
+```text
+parent table = one side
+child table = many side
+```
+
+### Example
+
+```text
+Customer(CustomerID, CustomerName)
+Order(OrderID, CustomerID, OrderDate)
+```
+
+Here:
+
+```text
+Customer = parent table
+Order = child table
+Order.CustomerID = foreign key
+```
+
+### Why?
+
+One customer can have many orders.  
+Each order references one customer.
+
+---
+
+## 15. Foreign Key Placement
+
+Foreign key placement depends on relationship type.
+
+### One-to-Many
+
+Place the foreign key in the many-side table.
+
+Example:
+
+```text
+Customer 1 ─── many Order
+```
 
 Foreign key:
 
 ```text
-Enrollment.studentId
+Order.CustomerID
 ```
 
-It refers to:
+### Many-to-Many
+
+Create a linking table with foreign keys to both tables.
+
+Example:
 
 ```text
-Student.studentId
+Student ↔ Course
+```
+
+Linking table:
+
+```text
+Enrollment(StudentID, CourseID)
+```
+
+### One-to-One
+
+A foreign key can be placed in one of the tables, depending on design.
+
+---
+
+## 16. Referential Integrity in Relationships
+
+Referential integrity ensures foreign key values refer to existing primary key values.
+
+### Example
+
+Customer table:
+
+| CustomerID | CustomerName |
+|---:|---|
+| 1 | Amy |
+| 2 | Ben |
+
+Order table:
+
+| OrderID | CustomerID | OrderDate |
+|---:|---:|---|
+| 1001 | 1 | 2026-05-01 |
+| 1002 | 9 | 2026-05-02 |
+
+Problem:
+
+```text
+CustomerID 9 does not exist
+```
+
+This breaks referential integrity.
+
+### Why It Matters
+
+It prevents:
+
+```text
+orders without valid customers
+grades without valid students
+appointments without valid patients
+loan records without valid books
+```
+
+---
+
+## 17. Relationship and Redundancy
+
+Relationships reduce redundancy by storing each type of data once.
+
+### Poor Design
+
+| OrderID | CustomerName | CustomerEmail | ProductName | Price |
+|---:|---|---|---|---:|
+| 1 | Amy | amy@email.com | Keyboard | 49.99 |
+| 2 | Amy | amy@email.com | Mouse | 19.99 |
+
+Customer data is repeated.
+
+### Better Design
+
+```text
+Customer(CustomerID, CustomerName, CustomerEmail)
+Order(OrderID, CustomerID, OrderDate)
+Product(ProductID, ProductName, Price)
+OrderItem(OrderID, ProductID, Quantity)
+```
+
+Now customer details are stored once and linked by `CustomerID`.
+
+---
+
+## 18. Relationship and SQL Joins Preview
+
+Relationships allow SQL queries to combine data from different tables.
+
+### Example Tables
+
+```text
+Customer(CustomerID, CustomerName)
+Order(OrderID, CustomerID, OrderDate)
+```
+
+### Query Idea
+
+```sql
+SELECT Customer.CustomerName, Order.OrderDate
+FROM Customer
+JOIN Order
+ON Customer.CustomerID = Order.CustomerID;
+```
+
+### Meaning
+
+The query matches:
+
+```text
+Customer.CustomerID
+```
+
+with:
+
+```text
+Order.CustomerID
+```
+
+to show which customer placed each order.
+
+SQL joins will be developed later, but the relationship is the reason the join works.
+
+---
+
+## 19. Relationship and ERD Preview
+
+An ERD shows entities and relationships visually.
+
+Example:
+
+```text
+Customer 1 ─── many Order
+```
+
+This means:
+
+```text
+one customer can place many orders
+each order belongs to one customer
+```
+
+### ERD Basics
+
+In ERDs, you may see:
+
+```text
+entity boxes
+attributes
+primary keys
+foreign keys
+relationship lines
+cardinality symbols
+```
+
+ERD basics are covered in the next page.
+
+---
+
+## 20. Worked Example: School Enrollment
+
+### Scenario
+
+Students can take many courses.  
+Courses can have many students.
+
+This is many-to-many.
+
+### Tables
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName)
+Enrollment(EnrollmentID, StudentID, CourseID, EnrollDate)
+```
+
+### Keys
+
+```text
+Student.StudentID = primary key
+Course.CourseID = primary key
+Enrollment.EnrollmentID = primary key
+Enrollment.StudentID = foreign key
+Enrollment.CourseID = foreign key
+```
+
+### Explanation
+
+The Enrollment table resolves the many-to-many relationship between Student and Course.
+
+---
+
+## 21. Worked Example: Library Loans
+
+### Scenario
+
+A member can make many loans.  
+A book can appear in many loan records over time.  
+Each loan refers to one member and one book.
+
+### Tables
+
+```text
+Member(MemberID, MemberName)
+Book(BookID, Title)
+Loan(LoanID, MemberID, BookID, LoanDate, ReturnDate)
+```
+
+### Relationships
+
+```text
+Member 1 ─── many Loan
+Book 1 ─── many Loan
+```
+
+### Keys
+
+```text
+Loan.MemberID → Member.MemberID
+Loan.BookID → Book.BookID
+```
+
+---
+
+## 22. Worked Example: Online Shop
+
+### Scenario
+
+A customer can place many orders.  
+An order can contain many products.  
+A product can appear in many orders.
+
+### Tables
+
+```text
+Customer(CustomerID, CustomerName)
+Order(OrderID, CustomerID, OrderDate)
+Product(ProductID, ProductName, Price)
+OrderItem(OrderItemID, OrderID, ProductID, Quantity)
+```
+
+### Relationships
+
+```text
+Customer 1 ─── many Order
+Order 1 ─── many OrderItem
+Product 1 ─── many OrderItem
+```
+
+### Many-to-Many Resolved
+
+The many-to-many relationship between Order and Product is resolved using:
+
+```text
+OrderItem
+```
+
+---
+
+## 23. Worked Example: Hospital Appointments
+
+### Scenario
+
+A patient can have many appointments.  
+A doctor can have many appointments.  
+Each appointment is with one patient and one doctor.
+
+### Tables
+
+```text
+Patient(PatientID, PatientName)
+Doctor(DoctorID, DoctorName)
+Appointment(AppointmentID, PatientID, DoctorID, AppointmentDate, AppointmentTime)
+```
+
+### Relationships
+
+```text
+Patient 1 ─── many Appointment
+Doctor 1 ─── many Appointment
+```
+
+### Explanation
+
+Appointment acts like a linking table between Patient and Doctor, and it also stores appointment details.
+
+---
+
+## 24. Worked Example: Game Matches
+
+### Scenario
+
+Players can join many matches.  
+Each match contains many players.
+
+This is many-to-many.
+
+### Tables
+
+```text
+Player(PlayerID, Username)
+Match(MatchID, MatchDate, MapName)
+MatchPlayer(MatchID, PlayerID, Score, Result)
+```
+
+### Relationships
+
+```text
+Player 1 ─── many MatchPlayer
+Match 1 ─── many MatchPlayer
+```
+
+### Explanation
+
+`MatchPlayer` links players to matches and stores relationship-specific data such as score and result.
+
+---
+
+## 25. Worked Example: Teacher and Course
+
+### Scenario
+
+One teacher can teach many courses.  
+Each course has one main teacher.
+
+This is one-to-many.
+
+### Tables
+
+```text
+Teacher(TeacherID, TeacherName)
+Course(CourseID, CourseName, TeacherID)
 ```
 
 ### Relationship
 
 ```text
-Student 1 -------- many Enrollment
+Teacher 1 ─── many Course
 ```
 
-Meaning:
+### Foreign Key
 
 ```text
-One student can have many enrollment records.
-Each enrollment record belongs to one student.
-```
-
----
-
-## 7. One-to-One Relationship
-
-A **one-to-one relationship** means one record in Table A relates to one record in Table B.
-
-### Example: Student and StudentProfile
-
-Student table:
-
-| studentId | name |
-|---|---|
-| S001 | Alice |
-| S002 | Ben |
-
-StudentProfile table:
-
-| profileId | studentId | emergencyContact |
-|---|---|---|
-| P001 | S001 | 0400 111 222 |
-| P002 | S002 | 0400 333 444 |
-
-Relationship:
-
-```text
-Student 1 -------- 1 StudentProfile
-```
-
-### Meaning
-
-```text
-One student has one profile.
-One profile belongs to one student.
-```
-
-### When Used
-
-One-to-one relationships are less common. They may be used to:
-
-```text
-separate sensitive data
-separate optional data
-keep a main table smaller
+Course.TeacherID → Teacher.TeacherID
 ```
 
 ---
 
-## 8. One-to-Many Relationship
+## 26. Identifying Relationship Type
 
-A **one-to-many relationship** means one record in Table A can relate to many records in Table B.
+Ask these questions:
 
-### Example: Teacher and Course
+### Step 1
 
-Teacher table:
+Can one A relate to many B?
 
-| teacherId | teacherName |
+### Step 2
+
+Can one B relate to many A?
+
+### Results
+
+| Answer | Relationship |
 |---|---|
-| T01 | Mr Smith |
-| T02 | Ms Green |
+| no and no | one-to-one |
+| yes and no | one-to-many |
+| yes and yes | many-to-many |
 
-Course table:
+### Example
 
-| courseId | courseName | teacherId |
-|---|---|---|
-| C001 | Computer Science | T01 |
-| C002 | Mathematics | T02 |
-| C003 | Programming | T01 |
-
-Relationship:
+Question:
 
 ```text
-Teacher 1 -------- many Course
+Can one student take many courses? yes
+Can one course have many students? yes
 ```
 
-### Meaning
+Therefore:
 
 ```text
-One teacher can teach many courses.
-Each course has one teacher.
-```
-
-### Key Fields
-
-| Table | Key |
-|---|---|
-| Teacher | `teacherId` is primary key |
-| Course | `teacherId` is foreign key |
-
----
-
-## 9. Many-to-Many Relationship
-
-A **many-to-many relationship** means many records in Table A can relate to many records in Table B.
-
-### Example: Student and Course
-
-```text
-One student can take many courses.
-One course can have many students.
-```
-
-This is many-to-many.
-
-### Problem
-
-We should not directly store many courses inside Student table like this:
-
-| studentId | name | course1 | course2 | course3 |
-|---|---|---|---|---|
-| S001 | Alice | C001 | C002 |  |
-| S002 | Ben | C001 |  |  |
-
-Problems:
-
-```text
-limited number of courses
-empty fields
-hard to search
-poor design
+many-to-many
 ```
 
 ---
 
-## 10. Linking Table for Many-to-Many
+## 27. Designing Relationships
 
-A many-to-many relationship is usually solved using a linking table.
-
-### Student Table
-
-| studentId | name |
-|---|---|
-| S001 | Alice |
-| S002 | Ben |
-
-### Course Table
-
-| courseId | courseName |
-|---|---|
-| C001 | Computer Science |
-| C002 | Mathematics |
-
-### Enrollment Table
-
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S001 | C002 |
-| E003 | S002 | C001 |
-
-Now the many-to-many relationship is split into two one-to-many relationships:
+When designing relationships:
 
 ```text
-Student 1 -------- many Enrollment
-Course 1 -------- many Enrollment
-```
-
-### Meaning
-
-| Enrollment | Meaning |
-|---|---|
-| E001 | Alice takes Computer Science |
-| E002 | Alice takes Mathematics |
-| E003 | Ben takes Computer Science |
-
-::: tip Key Point
-A linking table stores foreign keys from both related tables.
-:::
-
----
-
-## 11. Relationship Types Summary
-
-| Relationship Type | Meaning | Example |
-|---|---|---|
-| One-to-one | One record relates to one record | Student and StudentProfile |
-| One-to-many | One record relates to many records | Teacher and Course |
-| Many-to-many | Many records relate to many records | Student and Course |
-| Linking table | Solves many-to-many | Enrollment |
-
-### Quick Memory
-
-```text
-1:1 = one student has one profile
-1:M = one teacher teaches many courses
-M:N = many students take many courses
-```
-
----
-
-## 12. Parent and Child Tables
-
-In a relationship:
-
-```text
-parent table = table with the primary key
-child table = table with the foreign key
+1. Identify entities.
+2. Create one table for each entity.
+3. Choose primary keys.
+4. Decide relationship type.
+5. Add foreign keys for one-to-many relationships.
+6. Add linking table for many-to-many relationships.
+7. Check referential integrity.
+8. Avoid unnecessary duplicated data.
 ```
 
 ### Example
 
-Teacher table:
-
-| teacherId | teacherName |
-|---|---|
-| T01 | Mr Smith |
-
-Course table:
-
-| courseId | courseName | teacherId |
-|---|---|---|
-| C001 | Computer Science | T01 |
-
-| Role | Table | Reason |
-|---|---|---|
-| Parent | Teacher | contains primary key `teacherId` |
-| Child | Course | contains foreign key `teacherId` |
-
-The Course table depends on Teacher because each `teacherId` in Course should match an existing teacher.
-
----
-
-## 13. Referential Integrity in Relationships
-
-Referential integrity ensures that foreign keys refer to existing primary keys.
-
-### Valid
-
-Teacher table contains:
+Scenario:
 
 ```text
-T01
+Customers place orders.
 ```
 
-Course table contains:
+Design:
 
 ```text
-C001, Computer Science, T01
+Customer(CustomerID, CustomerName)
+Order(OrderID, CustomerID, OrderDate)
 ```
-
-This is valid because `T01` exists in Teacher.
-
-### Invalid
-
-Course table contains:
-
-```text
-C004, Physics, T99
-```
-
-If `T99` does not exist in Teacher, the relationship is invalid.
-
-This creates an orphan record.
-
-### Why It Matters
-
-Without referential integrity:
-
-```text
-course may refer to non-existing teacher
-enrollment may refer to non-existing student
-order may refer to non-existing customer
-```
-
-This makes the database unreliable.
-
----
-
-## 14. Relationship Diagrams
-
-Database relationships can be shown using simple text diagrams.
-
-### One-to-Many
-
-```text
-Teacher 1 -------- * Course
-```
-
-Meaning:
-
-```text
-one Teacher can have many Course records
-```
-
-### Many-to-Many with Linking Table
-
-```text
-Student 1 -------- * Enrollment * -------- 1 Course
-```
-
-Meaning:
-
-```text
-one Student can have many Enrollment records
-one Course can have many Enrollment records
-Enrollment links Student and Course
-```
-
-### Symbols
-
-| Symbol | Meaning |
-|---|---|
-| `1` | one |
-| `*` | many |
-
----
-
-## 15. Worked Example: School Course Database
-
-### Student Table
-
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
-
-### Teacher Table
-
-| teacherId | teacherName |
-|---|---|
-| T01 | Mr Smith |
-| T02 | Ms Green |
-
-### Course Table
-
-| courseId | courseName | teacherId |
-|---|---|---|
-| C001 | Computer Science | T01 |
-| C002 | Mathematics | T02 |
-
-### Enrollment Table
-
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S001 | C002 |
-| E003 | S002 | C001 |
-
-### Relationships
-
-| Relationship | Type | Explanation |
-|---|---|---|
-| Teacher to Course | One-to-many | One teacher can teach many courses |
-| Student to Enrollment | One-to-many | One student can have many enrollments |
-| Course to Enrollment | One-to-many | One course can have many enrollments |
-| Student to Course | Many-to-many | Students can take many courses and courses can have many students |
-
----
-
-## 16. Interpreting the Worked Example
-
-### Question 1
-
-Which teacher teaches Computer Science?
-
-Course C001 has teacherId T01.  
-Teacher T01 is Mr Smith.
-
-Answer:
-
-```text
-Mr Smith
-```
-
-### Question 2
-
-Which courses does Alice take?
-
-Alice has studentId S001.  
-Enrollment records with S001:
-
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S001 | C002 |
-
-Courses:
-
-```text
-C001 = Computer Science
-C002 = Mathematics
-```
-
-Answer:
-
-```text
-Computer Science and Mathematics
-```
-
-### Question 3
-
-Which students take Computer Science?
-
-Computer Science has courseId C001.  
-Enrollment records with C001:
-
-```text
-S001
-S002
-```
-
-Students:
-
-```text
-S001 = Alice
-S002 = Ben
-```
-
-Answer:
-
-```text
-Alice and Ben
-```
-
----
-
-## 17. SQL Join Preview
-
-Relationships are often used when writing SQL joins.
-
-Example question:
-
-```text
-Show student names and course names.
-```
-
-This needs data from:
-
-```text
-Student
-Enrollment
-Course
-```
-
-Simple SQL preview:
-
-```sql
-SELECT Student.name, Course.courseName
-FROM Student
-INNER JOIN Enrollment
-ON Student.studentId = Enrollment.studentId
-INNER JOIN Course
-ON Enrollment.courseId = Course.courseId;
-```
-
-You do not need to master joins yet on this page.  
-The key idea is:
-
-```text
-joins use primary key and foreign key relationships to combine related records
-```
-
----
-
-## 18. Choosing Relationship Type
-
-### Scenario 1
-
-One country has many cities. Each city belongs to one country.
 
 Relationship:
 
 ```text
-Country 1 -------- * City
-```
-
-Type:
-
-```text
-one-to-many
-```
-
-### Scenario 2
-
-One student can join many clubs. One club can have many students.
-
-Relationship:
-
-```text
-Student many -------- many Club
-```
-
-Needs linking table:
-
-```text
-Membership
-```
-
-### Scenario 3
-
-One person has one passport record. One passport record belongs to one person.
-
-Relationship:
-
-```text
-Person 1 -------- 1 Passport
-```
-
-Type:
-
-```text
-one-to-one
+Customer 1 ─── many Order
 ```
 
 ---
 
-## 19. Common Mistakes
+## 28. Poor Relationship Design Example
+
+### Poor Table
+
+| StudentID | StudentName | Course1 | Course2 | Course3 |
+|---:|---|---|---|---|
+| 101 | Amy | CS | Math | English |
+
+### Problems
+
+```text
+limits number of courses
+hard to search all students in CS
+many empty fields possible
+repeating groups
+not flexible
+```
+
+### Better Design
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName)
+Enrollment(StudentID, CourseID)
+```
+
+Now a student can take any number of courses.
+
+---
+
+## 29. Another Poor Design Example
+
+### Poor Table
+
+| OrderID | Product1 | Product2 | Product3 |
+|---:|---|---|---|
+| 1001 | Keyboard | Mouse | Monitor |
+
+### Problems
+
+```text
+limits products per order
+hard to store quantity per product
+hard to calculate totals
+hard to query all orders containing a product
+```
+
+### Better Design
+
+```text
+Order(OrderID, CustomerID, OrderDate)
+Product(ProductID, ProductName, Price)
+OrderItem(OrderID, ProductID, Quantity)
+```
+
+---
+
+## 30. Relationship Design Pattern
+
+### One-to-Many Pattern
+
+```text
+Parent(ParentID, ...)
+Child(ChildID, ParentID, ...)
+```
+
+Example:
+
+```text
+Customer(CustomerID, CustomerName)
+Order(OrderID, CustomerID, OrderDate)
+```
+
+### Many-to-Many Pattern
+
+```text
+A(AID, ...)
+B(BID, ...)
+AB(AID, BID, extra fields...)
+```
+
+Example:
+
+```text
+Student(StudentID, StudentName)
+Course(CourseID, CourseName)
+Enrollment(StudentID, CourseID, EnrollDate)
+```
+
+### One-to-One Pattern
+
+```text
+A(AID, ...)
+B(BID, AID, ...)
+```
+
+Example:
+
+```text
+Person(PersonID, Name)
+Passport(PassportID, PersonID, PassportNumber)
+```
+
+---
+
+## 31. Relationship Scenario Answer Bank
+
+### If Asked: “Identify relationship type”
+
+Use this structure:
+
+```text
+This is a [one-to-many / many-to-many / one-to-one] relationship because one [A] can be linked to [number] [B], and one [B] can be linked to [number] [A].
+```
+
+### If Asked: “Explain why a linking table is needed”
+
+Use this structure:
+
+```text
+A linking table is needed because the relationship is many-to-many. One [A] can relate to many [B], and one [B] can relate to many [A]. The linking table stores the foreign keys from both tables and represents each relationship instance.
+```
+
+### If Asked: “Design related tables”
+
+Use this structure:
+
+```text
+Create a [A] table with [AID] as primary key.
+Create a [B] table with [BID] as primary key.
+For a one-to-many relationship, place [AID] as a foreign key in the many-side table.
+For a many-to-many relationship, create a linking table containing [AID] and [BID] as foreign keys.
+```
+
+---
+
+## 32. Common Mistakes
 
 | Mistake | Why it is wrong | Better understanding |
 |---|---|---|
-| Saying relationship means tables have similar fields | Relationships are created through keys | Use primary key and foreign key |
-| Confusing one-to-many and many-to-one | Same relationship from opposite direction | State both directions clearly |
-| Directly storing many values in one field | Breaks good table design | Use separate records in linking table |
-| Not using linking table for many-to-many | Causes repeated groups and poor queries | Use junction/linking table |
-| Thinking foreign key must be unique | Foreign keys can repeat | Many child records may reference one parent |
-| Putting foreign key in wrong table | Relationship becomes unclear | Foreign key usually goes in child table |
-| Ignoring referential integrity | Broken links can happen | Foreign key should match existing primary key |
-| Using names to link tables | Names may change or repeat | Use ID fields |
-| Confusing table and relationship | A table stores data; relationship links tables | Keep terms separate |
-| Treating linking table as unnecessary | It is essential for many-to-many | Store pairs of foreign keys |
+| Relationship means two tables have same name | Relationship is made by key links | Use PK/FK |
+| Foreign key goes on one-side table in 1:M | Usually it goes on many-side table | Child table stores FK |
+| Many-to-many can be stored with Course1, Course2 | This creates repeating groups | Use linking table |
+| Linking table is unnecessary | Needed to resolve M:N properly | Stores relationship records |
+| One-to-many and many-to-one are different designs | They describe same relationship from opposite direction | Focus on which side is many |
+| Foreign key must be unique | It can repeat in many-side table | Many records may share same parent |
+| Relationship removes need for keys | Relationships depend on keys | PK/FK create links |
+| Referential integrity means no duplicate data | It means valid FK references | Redundancy is separate issue |
+| A table should store everything for convenience | Causes redundancy and inconsistency | Separate entities into tables |
+| Many-to-many has no primary keys | Tables still need primary keys | Linking table may use composite or surrogate key |
 
 ---
 
-## 20. Guided Practice
+## 33. Guided Practice
 
-### Practice 1: Identify Relationship Type
+### Practice 1: Relationship Type
 
-One teacher can teach many courses. Each course has one teacher.
+One customer can place many orders. Each order belongs to one customer. What relationship type is this?
 
 <details>
 <summary>Suggested Answer</summary>
 
-This is a one-to-many relationship:
-
-```text
-Teacher 1 -------- * Course
-```
+One-to-many. One customer can have many orders, but each order belongs to one customer.
 
 </details>
 
 ---
 
-### Practice 2: Many-to-Many?
+### Practice 2: Foreign Key Placement
 
-One student can take many courses. One course can have many students.
+In `Customer 1 ─── many Order`, where should the foreign key go?
 
 <details>
 <summary>Suggested Answer</summary>
 
-This is a many-to-many relationship. It should usually be implemented using a linking table such as `Enrollment`.
+The foreign key should go in the Order table, because Order is the many-side/child table.
 
 </details>
 
 ---
 
-### Practice 3: Identify Parent and Child Table
+### Practice 3: Many-to-Many
 
-Teacher table:
-
-| teacherId | teacherName |
-|---|---|
-| T01 | Mr Smith |
-
-Course table:
-
-| courseId | courseName | teacherId |
-|---|---|---|
-| C001 | Computer Science | T01 |
-
-Which is the parent table?
+Students can take many courses, and courses can have many students. What table is needed?
 
 <details>
 <summary>Suggested Answer</summary>
 
-Teacher is the parent table because it contains the primary key `teacherId`. Course is the child table because it contains `teacherId` as a foreign key.
+A linking table such as `Enrollment` is needed.
 
 </details>
 
 ---
 
-### Practice 4: Find the Broken Relationship
+### Practice 4: Referential Integrity
 
-Student table contains:
-
-```text
-S001
-S002
-```
-
-Enrollment table contains:
-
-```text
-E001, S001, C001
-E002, S999, C002
-```
-
-Which record breaks referential integrity?
+Why is an order with `CustomerID = 999` invalid if Customer 999 does not exist?
 
 <details>
 <summary>Suggested Answer</summary>
 
-`E002, S999, C002` breaks referential integrity because `S999` does not exist in the Student table.
+It breaks referential integrity because the foreign key value does not match an existing primary key in the Customer table.
 
 </details>
 
 ---
 
-### Practice 5: Linking Table Fields
+### Practice 5: Better Design
 
-For a many-to-many relationship between `Book` and `Author`, suggest a linking table name and fields.
+Why is `Course1`, `Course2`, `Course3` poor design?
 
 <details>
 <summary>Suggested Answer</summary>
 
-Possible linking table:
-
-```text
-BookAuthor(
-    bookAuthorId,
-    bookId,
-    authorId
-)
-```
-
-`bookId` is a foreign key to Book.  
-`authorId` is a foreign key to Author.
+It creates repeating groups and limits the number of courses. A separate Enrollment linking table is better.
 
 </details>
 
 ---
 
-## 21. Independent Practice
+## 34. Independent Practice
 
 ### Question 1
 
@@ -902,78 +1236,52 @@ Define database relationship.
 
 ### Question 2
 
-Explain how primary keys and foreign keys create relationships.
+Explain one-to-one, one-to-many, and many-to-many relationships.
 
 ### Question 3
 
-Classify each relationship as one-to-one, one-to-many, or many-to-many:
-
-1. One customer can place many orders.
-2. One person has one passport.
-3. One actor can appear in many movies and one movie has many actors.
-4. One department has many employees.
+Explain how primary keys and foreign keys create relationships.
 
 ### Question 4
 
-For a library database, design tables for:
-
-```text
-Book
-Borrower
-Loan
-```
-
-Identify primary keys and foreign keys.
+For `Customer` and `Order`, identify the relationship type and foreign key placement.
 
 ### Question 5
 
-Explain why a many-to-many relationship usually needs a linking table.
+For `Student` and `Course`, explain why a linking table is needed.
 
 ### Question 6
 
-A school stores course1, course2, course3 in the Student table. Explain why this is poor design.
+Design tables for a library loan system with `Book`, `Member`, and `Loan`.
 
 ### Question 7
 
-Draw a text relationship diagram for:
-
-```text
-Customer
-Order
-OrderItem
-Product
-```
+Explain referential integrity using a hospital appointment example.
 
 ### Question 8
 
-Explain referential integrity using a Course and Teacher example.
+Explain how relationships reduce redundancy.
 
 ### Question 9
 
-Given this table, identify relationship type:
-
-| orderId | customerId | orderDate |
-|---|---|---|
-| O001 | C001 | 2026-05-20 |
-| O002 | C001 | 2026-05-21 |
-| O003 | C002 | 2026-05-22 |
+Identify the problems with storing `Product1`, `Product2`, and `Product3` inside an Order table.
 
 ### Question 10
 
-Explain how relationships reduce data redundancy.
+Design relationships for a game database with players and matches.
 
 ---
 
-## 22. Exam-style Questions
+## 35. Exam-style Questions
 
 ### Question 1 [4 marks]
 
-Define relationship in a relational database.
+Define a relationship in a relational database.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-A relationship is a link between tables in a relational database. It is usually created by using a foreign key in one table that refers to a primary key in another table. Relationships allow related data to be stored in separate tables and connected when needed.
+A relationship is a link between records in different tables. It is usually created using a foreign key in one table that refers to a primary key in another table, allowing related data to be connected and queried.
 
 </details>
 
@@ -981,12 +1289,12 @@ A relationship is a link between tables in a relational database. It is usually 
 
 ### Question 2 [5 marks]
 
-Explain the difference between a one-to-many relationship and a many-to-many relationship.
+Explain the difference between one-to-many and many-to-many relationships.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-In a one-to-many relationship, one record in one table can be linked to many records in another table, such as one teacher teaching many courses. In a many-to-many relationship, many records in one table can link to many records in another table, such as many students taking many courses. A many-to-many relationship usually needs a linking table to store the pairs of related records.
+In a one-to-many relationship, one record in one table can relate to many records in another table, but each record on the many side relates to one record on the one side. For example, one customer can place many orders. In a many-to-many relationship, many records in one table can relate to many records in another table. For example, many students can take many courses, so a linking table is usually needed.
 
 </details>
 
@@ -994,12 +1302,12 @@ In a one-to-many relationship, one record in one table can be linked to many rec
 
 ### Question 3 [6 marks]
 
-A school database has Student and Course tables. One student can take many courses, and one course can have many students. Explain how this relationship should be implemented.
+A school stores students and courses. One student can take many courses, and one course can have many students. Explain how this should be represented in a relational database.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-This is a many-to-many relationship. It should be implemented using a linking table, such as Enrollment. The Enrollment table should store a primary key such as enrollmentId and foreign keys such as studentId and courseId. studentId refers to the Student table's primary key, and courseId refers to the Course table's primary key. This breaks the many-to-many relationship into two one-to-many relationships.
+This is a many-to-many relationship because one student can take many courses and one course can have many students. It should be represented using a linking table, such as Enrollment. The Student table has `StudentID` as a primary key, the Course table has `CourseID` as a primary key, and the Enrollment table stores `StudentID` and `CourseID` as foreign keys to link students to courses. The Enrollment table may also store extra data such as enrollment date or final grade.
 
 </details>
 
@@ -1007,12 +1315,17 @@ This is a many-to-many relationship. It should be implemented using a linking ta
 
 ### Question 4 [6 marks]
 
-Explain referential integrity in the context of Teacher and Course tables.
+Given these tables, identify the relationship and explain the foreign key.
+
+```text
+Customer(CustomerID, CustomerName)
+Order(OrderID, CustomerID, OrderDate)
+```
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Referential integrity means that a foreign key value must refer to an existing primary key value in the related table. If Course.teacherId is a foreign key referring to Teacher.teacherId, then every teacherId stored in the Course table should already exist in the Teacher table. If a course refers to T99 but there is no teacher with teacherId T99, the relationship is invalid.
+This is a one-to-many relationship because one customer can place many orders, while each order belongs to one customer. `CustomerID` is the primary key in the Customer table. `CustomerID` in the Order table is a foreign key that refers to `Customer.CustomerID`, linking each order to the customer who placed it.
 
 </details>
 
@@ -1020,174 +1333,148 @@ Referential integrity means that a foreign key value must refer to an existing p
 
 ### Question 5 [6 marks]
 
-Explain why using relationships can reduce data redundancy.
+Explain how database relationships can reduce data redundancy and improve consistency.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Relationships allow data about different entities to be stored in separate tables. Instead of repeating student, course, or teacher details many times in one large table, each entity can be stored once in its own table. Other tables can then use foreign keys to refer to those records. This reduces repeated data, saves storage, and lowers the risk of inconsistent updates.
+Relationships allow data about different entities to be stored in separate tables and linked using keys. For example, customer details can be stored once in a Customer table and orders can refer to customers using `CustomerID`. This avoids repeating the customer's name and email in every order record. If the customer's email changes, it can be updated in one place, reducing inconsistency and update errors.
 
 </details>
 
 ---
 
-## 23. Classroom Activity
+## 36. Classroom Activity
 
-### Activity 1: Relationship Cards
+### Activity 1: Relationship Sorting
 
-Students receive cards:
-
-```text
-Teacher
-Course
-Student
-Enrollment
-Book
-Author
-BookAuthor
-```
-
-They arrange the cards and draw relationship lines:
+Students classify scenarios as one-to-one, one-to-many, or many-to-many:
 
 ```text
-1 -------- *
-* -------- *
-```
-
-Then they explain the relationship.
-
----
-
-### Activity 2: Human Linking Table
-
-Some students act as Student records.  
-Some students act as Course records.  
-Other students act as Enrollment records holding both studentId and courseId.
-
-The class physically demonstrates how a linking table connects many students to many courses.
-
----
-
-### Activity 3: Repair a Bad Design
-
-Give students a table with repeated fields:
-
-```text
-studentId, name, course1, course2, course3
-```
-
-They redesign it into:
-
-```text
-Student
-Course
-Enrollment
+customer places orders
+student takes courses
+person has passport
+doctor has appointments
+order contains products
+teacher teaches courses
+player joins matches
 ```
 
 ---
 
-## 24. Homework
+### Activity 2: Design a Linking Table
+
+Students choose one many-to-many scenario and design:
+
+```text
+two main tables
+one linking table
+primary keys
+foreign keys
+extra relationship attributes
+```
+
+---
+
+### Activity 3: Fix Poor Relationships
+
+Students improve poor table designs:
+
+```text
+Student(StudentID, Name, Course1, Course2, Course3)
+Order(OrderID, Product1, Product2, Product3)
+Patient(PatientID, Doctor1, Doctor2, Doctor3)
+```
+
+They explain the relationship problem and propose better related tables.
+
+---
+
+## 37. Homework
 
 ### Homework Part A: Concept Explanation
 
-In 5-6 sentences, explain the difference between one-to-many and many-to-many relationships using your own examples.
+In 6-8 sentences, explain how primary keys and foreign keys create relationships between tables.
 
 ---
 
-### Homework Part B: Relationship Design
+### Homework Part B: Relationship Identification
 
-Design a database structure for a music app with:
+Identify the relationship type for each:
 
 ```text
-User
-Playlist
-Song
-PlaylistSong
+1. one teacher teaches many classes
+2. students join many clubs, clubs have many students
+3. one person has one school ID card
+4. one customer places many orders
+5. one order contains many products, and products appear in many orders
 ```
 
-For each table, list:
+Explain each answer.
+
+---
+
+### Homework Part C: Table Design
+
+Design related tables for a hospital appointment system with:
 
 ```text
-primary key
-foreign keys
-relationship type
+Patient
+Doctor
+Appointment
 ```
+
+Include primary keys, foreign keys, and relationship types.
 
 ---
 
-### Homework Part C: Referential Integrity
+### Homework Part D: Misconception Correction
 
-Explain what is wrong if an Order table contains:
+Correct these statements:
 
 ```text
-customerId = C999
+A many-to-many relationship can always be stored using Course1, Course2, Course3.
+A foreign key must be unique.
+Relationships do not need primary keys.
+Referential integrity means data is encrypted.
+The foreign key in a one-to-many relationship usually goes in the one-side table.
 ```
 
-but there is no customer with ID `C999`.
-
 ---
 
-### Homework Part D: Interpretation
-
-Given:
-
-### Customer
-
-| customerId | customerName |
-|---|---|
-| C001 | Amy |
-| C002 | Ben |
-
-### Order
-
-| orderId | customerId |
-|---|---|
-| O001 | C001 |
-| O002 | C001 |
-| O003 | C002 |
-
-Answer:
-
-1. What is the relationship type?
-2. Which table is parent?
-3. Which table is child?
-4. Which field is the foreign key?
-5. How many orders does Amy have?
-
----
-
-## 25. One-page Revision Summary
+## 38. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
 | Relationship | Link between tables |
-| Primary key | Uniquely identifies records |
+| Primary key | Uniquely identifies record |
 | Foreign key | Links to primary key in another table |
-| One-to-one | One record links to one record |
-| One-to-many | One record links to many records |
-| Many-to-many | Many records link to many records |
-| Linking table | Resolves many-to-many relationship |
-| Parent table | Contains referenced primary key |
-| Child table | Contains foreign key |
+| One-to-one | One A relates to one B |
+| One-to-many | One A relates to many B |
+| Many-to-many | Many A relate to many B |
+| Linking table | Resolves many-to-many |
+| Parent table | One-side / referenced table |
+| Child table | Many-side / table with foreign key |
+| Cardinality | Number relationship between records |
 | Referential integrity | Foreign key must match existing primary key |
-| `1` | One |
-| `*` | Many |
-| Main benefit | Reduces repeated data and improves consistency |
-| Exam phrase | Relationships connect tables using primary and foreign keys so related data can be stored separately and linked when needed |
+| Redundancy reduction | Store data once and reference by key |
+| One-to-many FK placement | Foreign key goes in many-side table |
+| Many-to-many design | Use linking table with foreign keys |
+| Exam phrase | Relationships connect tables using primary and foreign keys, reducing duplication and allowing related data to be queried correctly |
 
 ---
 
-## 26. Quick Self-test
+## 39. Quick Self-test
 
 Before moving on, students should be able to answer these:
 
-1. What is a relationship in a database?
-2. How do primary keys and foreign keys create relationships?
-3. What is a one-to-one relationship?
-4. What is a one-to-many relationship?
-5. What is a many-to-many relationship?
-6. Why does many-to-many usually need a linking table?
-7. What is a parent table?
-8. What is a child table?
-9. What is referential integrity?
-10. How can relationships reduce data redundancy?
+1. What is a database relationship?
+2. What is a one-to-one relationship?
+3. What is a one-to-many relationship?
+4. What is a many-to-many relationship?
+5. Why is a linking table needed?
+6. Where does the foreign key go in a one-to-many relationship?
+7. What is referential integrity?
+8. How do relationships reduce redundancy?
+9. Give one example of a many-to-many relationship.
+10. Why is `Course1`, `Course2`, `Course3` poor design?
