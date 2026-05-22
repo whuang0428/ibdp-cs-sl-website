@@ -1,20 +1,21 @@
-# SQL WHERE and ORDER BY
+# SQL Conditions and Sorting
 
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
 
 - explain the purpose of the `WHERE` clause
-- explain the purpose of the `ORDER BY` clause
-- write SQL queries that filter records using `WHERE`
-- write SQL queries that sort records using `ORDER BY`
-- use comparison operators such as `=`, `>`, `<`, `>=`, `<=`, and `<>`
-- use text values correctly in SQL conditions
-- use `AND` and `OR` in simple conditions
-- sort query results in ascending and descending order
-- predict the result of SQL queries using `WHERE` and `ORDER BY`
-- identify and correct common SQL filtering and sorting mistakes
-- answer exam-style questions about SQL filtering and sorting
+- write SQL queries that filter records using conditions
+- use comparison operators such as `=`, `<>`, `<`, `>`, `<=`, and `>=`
+- use text and numeric conditions correctly
+- combine conditions using `AND`, `OR`, and `NOT`
+- use `ORDER BY` to sort query results
+- sort results in ascending and descending order
+- distinguish selecting fields, filtering records, and sorting results
+- interpret SQL queries with `WHERE` and `ORDER BY`
+- identify common SQL syntax and logic mistakes
+- apply SQL filtering and sorting to school, library, shop, hospital, and game examples
+- answer exam-style questions about SQL conditions and sorting
 
 ---
 
@@ -24,13 +25,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | A3 Databases |
 | Label | SL Core |
-| Main skill | Filtering and sorting data in SQL queries |
-| Connected topics | SQL SELECT basics, tables, fields, records, data types, relationships |
-| Practical focus | Writing `SELECT ... FROM ... WHERE ... ORDER BY ...` queries |
-| Exam relevance | SQL writing, SQL interpretation, result prediction, error correction |
+| Main skill | Retrieving specific records from database tables using SQL conditions and sorting |
+| Connected topics | SQL SELECT, tables/records/fields, keys, relationships, normalization, database security |
+| Practical focus | Writing queries that filter and order data clearly |
+| Exam relevance | `WHERE`, comparison operators, `AND`/`OR`, `ORDER BY`, query interpretation |
 
 ::: tip Learning Focus
-`WHERE` filters records. `ORDER BY` sorts records. Students must not confuse these two clauses.
+`SELECT` chooses fields. `FROM` chooses the table. `WHERE` filters records. `ORDER BY` sorts the result.
 :::
 
 ---
@@ -39,19 +40,28 @@ By the end of this lesson, students should be able to:
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| `WHERE` | 条件筛选 | SQL clause used to filter records |
-| `ORDER BY` | 排序 | SQL clause used to sort the result set |
-| Condition | 条件 | A test used to decide which records are included |
-| Comparison operator | 比较运算符 | Operator such as `=`, `>`, `<`, `>=`, `<=`, `<>` |
-| `ASC` | 升序 | Sort in ascending order |
-| `DESC` | 降序 | Sort in descending order |
-| `AND` | 并且 | All conditions must be true |
-| `OR` | 或者 | At least one condition must be true |
-| Result set | 查询结果集 | The output table returned by a query |
-| Filter | 筛选 | Include only records that match a condition |
-| Sort | 排序 | Arrange records in a chosen order |
-| String literal | 字符串值 | Text value written in quotes, such as `'Alice'` |
-| Numeric value | 数值 | Number used without quotes in SQL conditions |
+| SQL | 结构化查询语言 | Language used to query and manage relational databases |
+| Query | 查询 | Request for data from a database |
+| SELECT | 选择字段 | Chooses fields/columns to display |
+| FROM | 来自哪个表 | Chooses the table to query |
+| WHERE | 条件过滤 | Filters records based on a condition |
+| Condition | 条件 | Test that each record must satisfy |
+| Comparison operator | 比较运算符 | Operator used to compare values |
+| `=` | 等于 | Equal to |
+| `<>` | 不等于 | Not equal to |
+| `<` | 小于 | Less than |
+| `>` | 大于 | Greater than |
+| `<=` | 小于等于 | Less than or equal to |
+| `>=` | 大于等于 | Greater than or equal to |
+| AND | 并且 | Both conditions must be true |
+| OR | 或者 | At least one condition must be true |
+| NOT | 非 | Reverses a condition |
+| ORDER BY | 排序 | Sorts query results |
+| ASC | 升序 | Ascending order |
+| DESC | 降序 | Descending order |
+| String literal | 字符串常量 | Text value written in quotes |
+| Numeric value | 数值 | Number used without quotes in many SQL systems |
+| Result set | 结果集 | Data returned by a query |
 
 ---
 
@@ -62,68 +72,59 @@ By the end of this lesson, students should be able to:
 
 ### 中文讲解
 
-在上一页中，我们学习了基础 SQL：
+上一页我们学习了最基础的 SQL：
 
 ```sql
-SELECT fieldName
-FROM tableName;
+SELECT FirstName, LastName
+FROM Student;
 ```
 
-这个结构会显示 table 中所有 records 的指定 fields。
+这个 query 会显示 Student table 中所有 records 的名字。
 
-但是在真实查询中，我们经常不想显示所有 records。  
-我们可能只想找：
-
-```text
-Year 12 的学生
-成绩大于 80 的学生
-库存小于 10 的商品
-价格从低到高排列的商品
-```
-
-这时就需要：
-
-```text
-WHERE = filter records
-ORDER BY = sort records
-```
-
-例如：
+但实际使用中，我们经常只想找一部分 records。  
+这时候就需要：
 
 ```sql
-SELECT name, averageMark
+WHERE
+```
+
+例如只找 GradeLevel 是 10 的学生：
+
+```sql
+SELECT FirstName, LastName
 FROM Student
-WHERE averageMark >= 80;
+WHERE GradeLevel = 10;
 ```
 
-意思是：
+这里：
 
 ```text
-从 Student table 中
-显示 name 和 averageMark
-只保留 averageMark 大于等于 80 的 records
+SELECT FirstName, LastName = 显示哪些 fields
+FROM Student = 从哪个 table 查
+WHERE GradeLevel = 10 = 只保留符合条件的 records
 ```
 
-如果还想排序：
+如果想排序，就使用：
 
 ```sql
-SELECT name, averageMark
+ORDER BY
+```
+
+例如按 LastName 排序：
+
+```sql
+SELECT FirstName, LastName
 FROM Student
-ORDER BY averageMark DESC;
+ORDER BY LastName ASC;
 ```
 
-意思是：
+简单来说：
 
 ```text
-显示学生姓名和平均分
-按照 averageMark 从高到低排序
-```
-
-最重要的区分是：
-
-```text
-WHERE 决定哪些 records 出现
-ORDER BY 决定 records 出现的顺序
+SELECT = choose columns
+FROM = choose table
+WHERE = filter rows
+ORDER BY = sort the result
 ```
 
 </template>
@@ -135,65 +136,56 @@ ORDER BY 决定 records 出现的顺序
 In the previous page, we learned basic SQL:
 
 ```sql
-SELECT fieldName
-FROM tableName;
+SELECT FirstName, LastName
+FROM Student;
 ```
 
-This structure displays selected fields from all records in a table.
+This query displays the names of all records in the Student table.
 
-However, in real queries, we often do not want every record.  
-We may only want:
-
-```text
-students in Year 12
-students with marks above 80
-products with stock below 10
-products sorted from lowest price to highest price
-```
-
-This is where we use:
-
-```text
-WHERE = filter records
-ORDER BY = sort records
-```
-
-For example:
+But in real use, we often want only some records.  
+For this, we use:
 
 ```sql
-SELECT name, averageMark
-FROM Student
-WHERE averageMark >= 80;
+WHERE
 ```
 
-This means:
-
-```text
-from the Student table,
-display name and averageMark,
-but only include records where averageMark is at least 80
-```
-
-If we want sorting:
+For example, to find only students in GradeLevel 10:
 
 ```sql
-SELECT name, averageMark
+SELECT FirstName, LastName
 FROM Student
-ORDER BY averageMark DESC;
+WHERE GradeLevel = 10;
 ```
 
-This means:
+Here:
 
 ```text
-display student names and average marks,
-sorted from highest averageMark to lowest
+SELECT FirstName, LastName = which fields to display
+FROM Student = which table to query
+WHERE GradeLevel = 10 = only keep records that match the condition
 ```
 
-The most important distinction is:
+If we want to sort the result, we use:
+
+```sql
+ORDER BY
+```
+
+For example, sort by LastName:
+
+```sql
+SELECT FirstName, LastName
+FROM Student
+ORDER BY LastName ASC;
+```
+
+In simple terms:
 
 ```text
-WHERE decides which records appear
-ORDER BY decides the order of the records
+SELECT = choose columns
+FROM = choose table
+WHERE = filter rows
+ORDER BY = sort the result
 ```
 
 </template>
@@ -201,769 +193,1292 @@ ORDER BY decides the order of the records
 
 ---
 
-## 5. Example Table Used in This Page
+## 5. Basic Query Structure
 
-### Student Table
-
-| studentId | name | yearGroup | averageMark | active |
-|---|---|---:|---:|---|
-| S001 | Alice | 12 | 85.5 | true |
-| S002 | Ben | 12 | 62.0 | true |
-| S003 | Clara | 13 | 91.0 | true |
-| S004 | David | 13 | 48.5 | false |
-| S005 | Eva | 12 | 78.0 | true |
-
-### Fields
-
-```text
-studentId
-name
-yearGroup
-averageMark
-active
-```
-
----
-
-## 6. WHERE Clause
-
-The `WHERE` clause filters records.
-
-### Basic Pattern
+A basic SQL query with filtering and sorting can follow this structure:
 
 ```sql
 SELECT field1, field2
-FROM tableName
+FROM table_name
+WHERE condition
+ORDER BY field_name ASC;
+```
+
+### Clause Order
+
+The usual order is:
+
+```text
+SELECT
+FROM
+WHERE
+ORDER BY
+```
+
+### Example
+
+```sql
+SELECT FirstName, LastName, GradeLevel
+FROM Student
+WHERE GradeLevel = 10
+ORDER BY LastName ASC;
+```
+
+### Meaning
+
+```text
+Show FirstName, LastName, and GradeLevel
+from the Student table
+only for students in GradeLevel 10
+sorted by LastName in ascending order
+```
+
+::: warning Common Exam Mistake
+Do not write `ORDER BY` before `WHERE`. The usual order is `WHERE` before `ORDER BY`.
+:::
+
+---
+
+## 6. Sample Tables Used in This Page
+
+### Student Table
+
+| StudentID | FirstName | LastName | GradeLevel | Score |
+|---:|---|---|---:|---:|
+| 101 | Amy | Chen | 10 | 92 |
+| 102 | Ben | Wang | 10 | 78 |
+| 103 | Cara | Liu | 11 | 88 |
+| 104 | David | Zhang | 11 | 65 |
+| 105 | Eva | Li | 10 | 95 |
+
+### Product Table
+
+| ProductID | ProductName | Category | Price | StockQuantity |
+|---:|---|---|---:|---:|
+| 201 | Keyboard | Accessory | 49.99 | 30 |
+| 202 | Mouse | Accessory | 19.99 | 50 |
+| 203 | Monitor | Display | 179.99 | 12 |
+| 204 | Laptop | Computer | 999.99 | 5 |
+| 205 | USB Cable | Accessory | 9.99 | 100 |
+
+### Book Table
+
+| BookID | Title | Author | PublicationYear | Available |
+|---:|---|---|---:|---|
+| 501 | Dune | Frank Herbert | 1965 | true |
+| 502 | The Hobbit | J.R.R. Tolkien | 1937 | false |
+| 503 | Foundation | Isaac Asimov | 1951 | true |
+| 504 | Neuromancer | William Gibson | 1984 | true |
+
+---
+
+## 7. WHERE Clause
+
+The `WHERE` clause filters records.
+
+### Pattern
+
+```sql
+SELECT field1, field2
+FROM table_name
 WHERE condition;
 ```
 
 ### Example
 
 ```sql
-SELECT name, averageMark
+SELECT FirstName, LastName, GradeLevel
 FROM Student
-WHERE yearGroup = 12;
+WHERE GradeLevel = 10;
 ```
 
 ### Result
 
-| name | averageMark |
-|---|---:|
-| Alice | 85.5 |
-| Ben | 62.0 |
-| Eva | 78.0 |
+| FirstName | LastName | GradeLevel |
+|---|---|---:|
+| Amy | Chen | 10 |
+| Ben | Wang | 10 |
+| Eva | Li | 10 |
 
-### Explanation
+### Key Idea
 
-| SQL Part | Meaning |
-|---|---|
-| `SELECT name, averageMark` | Display these fields |
-| `FROM Student` | Use the Student table |
-| `WHERE yearGroup = 12` | Include only records where yearGroup is 12 |
-
-::: tip Exam Phrase
-`WHERE` filters records so that only records matching the condition are included in the result set.
-:::
+`WHERE` does not choose columns.  
+It chooses which rows/records should be included.
 
 ---
 
-## 7. Comparison Operators
+## 8. Comparison Operators
 
-SQL uses comparison operators in conditions.
+SQL conditions often use comparison operators.
 
 | Operator | Meaning | Example |
 |---|---|---|
-| `=` | equal to | `yearGroup = 12` |
-| `>` | greater than | `averageMark > 80` |
-| `<` | less than | `averageMark < 50` |
-| `>=` | greater than or equal to | `averageMark >= 80` |
-| `<=` | less than or equal to | `averageMark <= 60` |
-| `<>` | not equal to | `yearGroup <> 12` |
-
-Some DBMSs also allow `!=` for not equal, but `<>` is standard SQL style.
-
----
-
-## 8. Numeric Conditions
-
-Numbers are normally written without quotes.
-
-### Query
-
-```sql
-SELECT name, averageMark
-FROM Student
-WHERE averageMark >= 80;
-```
-
-### Result
-
-| name | averageMark |
-|---|---:|
-| Alice | 85.5 |
-| Clara | 91.0 |
-
-### Explanation
-
-Only records where `averageMark` is at least 80 are included.
-
----
-
-## 9. Text Conditions
-
-Text values should usually be written in quotes.
-
-### Query
-
-```sql
-SELECT studentId, name
-FROM Student
-WHERE name = 'Alice';
-```
-
-### Result
-
-| studentId | name |
-|---|---|
-| S001 | Alice |
-
-### Important
-
-Use quotes around text values:
-
-```sql
-WHERE name = 'Alice'
-```
-
-Not:
-
-```sql
-WHERE name = Alice
-```
-
-Without quotes, the DBMS may think Alice is a field name.
-
----
-
-## 10. Boolean Conditions
-
-Boolean values depend on the DBMS. In teaching examples, we can use:
-
-```sql
-WHERE active = true;
-```
-
-### Query
-
-```sql
-SELECT name, active
-FROM Student
-WHERE active = true;
-```
-
-### Result
-
-| name | active |
-|---|---|
-| Alice | true |
-| Ben | true |
-| Clara | true |
-| Eva | true |
-
-Some DBMSs may use `TRUE`, `1`, or different Boolean handling.  
-For exam-style questions, follow the format used in the question.
-
----
-
-## 11. ORDER BY Clause
-
-The `ORDER BY` clause sorts the result set.
-
-### Basic Pattern
-
-```sql
-SELECT field1, field2
-FROM tableName
-ORDER BY fieldName;
-```
+| `=` | equal to | `GradeLevel = 10` |
+| `<>` | not equal to | `GradeLevel <> 10` |
+| `<` | less than | `Price < 50` |
+| `>` | greater than | `Score > 80` |
+| `<=` | less than or equal to | `Score <= 70` |
+| `>=` | greater than or equal to | `StockQuantity >= 20` |
 
 ### Example
 
 ```sql
-SELECT name, averageMark
+SELECT FirstName, Score
 FROM Student
-ORDER BY averageMark;
+WHERE Score > 80;
+```
+
+This returns students with scores greater than 80.
+
+---
+
+## 9. Equal To Condition
+
+Use `=` to match exact values.
+
+### Numeric Example
+
+```sql
+SELECT FirstName, LastName
+FROM Student
+WHERE GradeLevel = 10;
+```
+
+### Text Example
+
+```sql
+SELECT ProductName, Price
+FROM Product
+WHERE Category = 'Accessory';
+```
+
+### Important
+
+Text values are usually written in quotes:
+
+```sql
+'Accessory'
+'Computer Science'
+'Amy'
+```
+
+Numeric values usually do not need quotes:
+
+```sql
+10
+92
+49.99
+```
+
+---
+
+## 10. Not Equal To Condition
+
+Use `<>` to mean not equal to.
+
+### Example
+
+```sql
+SELECT FirstName, LastName, GradeLevel
+FROM Student
+WHERE GradeLevel <> 10;
 ```
 
 ### Result
 
-| name | averageMark |
-|---|---:|
-| David | 48.5 |
-| Ben | 62.0 |
-| Eva | 78.0 |
-| Alice | 85.5 |
-| Clara | 91.0 |
+| FirstName | LastName | GradeLevel |
+|---|---|---:|
+| Cara | Liu | 11 |
+| David | Zhang | 11 |
 
-By default, many SQL systems sort in ascending order.
+### Note
 
----
-
-## 12. ASC and DESC
-
-| Keyword | Meaning | Example |
-|---|---|---|
-| `ASC` | ascending order | smallest to largest, A to Z |
-| `DESC` | descending order | largest to smallest, Z to A |
-
-### Ascending
-
-```sql
-SELECT name, averageMark
-FROM Student
-ORDER BY averageMark ASC;
-```
-
-Result:
-
-| name | averageMark |
-|---|---:|
-| David | 48.5 |
-| Ben | 62.0 |
-| Eva | 78.0 |
-| Alice | 85.5 |
-| Clara | 91.0 |
-
-### Descending
-
-```sql
-SELECT name, averageMark
-FROM Student
-ORDER BY averageMark DESC;
-```
-
-Result:
-
-| name | averageMark |
-|---|---:|
-| Clara | 91.0 |
-| Alice | 85.5 |
-| Eva | 78.0 |
-| Ben | 62.0 |
-| David | 48.5 |
+Some SQL systems also support `!=`, but `<>` is standard SQL and exam-friendly.
 
 ---
 
-## 13. Sorting Text
+## 11. Greater Than and Less Than
 
-Text can also be sorted.
+Use comparison operators for numbers and dates.
 
-### Query
-
-```sql
-SELECT name, yearGroup
-FROM Student
-ORDER BY name ASC;
-```
-
-### Result
-
-| name | yearGroup |
-|---|---:|
-| Alice | 12 |
-| Ben | 12 |
-| Clara | 13 |
-| David | 13 |
-| Eva | 12 |
-
-### Descending Text
+### Greater Than
 
 ```sql
-SELECT name, yearGroup
+SELECT FirstName, Score
 FROM Student
-ORDER BY name DESC;
+WHERE Score > 80;
 ```
 
-Result:
+### Less Than
 
-| name | yearGroup |
+```sql
+SELECT ProductName, Price
+FROM Product
+WHERE Price < 50;
+```
+
+### Result for Product Query
+
+| ProductName | Price |
 |---|---:|
-| Eva | 12 |
-| David | 13 |
-| Clara | 13 |
-| Ben | 12 |
-| Alice | 12 |
+| Keyboard | 49.99 |
+| Mouse | 19.99 |
+| USB Cable | 9.99 |
 
 ---
 
-## 14. WHERE and ORDER BY Together
+## 12. Greater Than or Equal To and Less Than or Equal To
 
-A query can filter records first, then sort the result.
+### Greater Than or Equal To
+
+```sql
+SELECT FirstName, Score
+FROM Student
+WHERE Score >= 90;
+```
+
+### Less Than or Equal To
+
+```sql
+SELECT FirstName, Score
+FROM Student
+WHERE Score <= 70;
+```
+
+### Key Difference
+
+```text
+> 90 means more than 90
+>= 90 means 90 or more
+```
+
+```text
+< 70 means less than 70
+<= 70 means 70 or less
+```
+
+---
+
+## 13. Text Conditions
+
+Text values usually need quotes.
+
+### Correct
+
+```sql
+SELECT ProductName, Price
+FROM Product
+WHERE Category = 'Accessory';
+```
+
+### Incorrect
+
+```sql
+SELECT ProductName, Price
+FROM Product
+WHERE Category = Accessory;
+```
+
+### Why Incorrect?
+
+Without quotes, SQL may treat `Accessory` as a field name instead of a text value.
+
+---
+
+## 14. Boolean Conditions
+
+Some tables include Boolean fields.
+
+Example:
+
+| BookID | Title | Available |
+|---:|---|---|
+| 501 | Dune | true |
+| 502 | The Hobbit | false |
+
+### Example
+
+```sql
+SELECT Title
+FROM Book
+WHERE Available = true;
+```
+
+### Note
+
+Boolean syntax can vary slightly between database systems.
+
+Some systems use:
+
+```sql
+WHERE Available = 1
+```
+
+For exam-style answers, use the style shown in the question or table.
+
+---
+
+## 15. Date Conditions Preview
+
+Date values are often written in quotes.
+
+### Example
+
+```sql
+SELECT Title, PublicationYear
+FROM Book
+WHERE PublicationYear > 1960;
+```
+
+For actual date fields, you may see:
+
+```sql
+SELECT AppointmentID, AppointmentDate
+FROM Appointment
+WHERE AppointmentDate = '2026-05-22';
+```
+
+### Important
+
+Different database systems may format dates differently.  
+In exams, follow the date format given in the question.
+
+---
+
+## 16. AND
+
+`AND` combines conditions where both conditions must be true.
 
 ### Pattern
 
 ```sql
 SELECT field1, field2
-FROM tableName
-WHERE condition
-ORDER BY fieldName ASC;
+FROM table_name
+WHERE condition1 AND condition2;
 ```
 
 ### Example
 
 ```sql
-SELECT name, averageMark
+SELECT FirstName, LastName, GradeLevel, Score
 FROM Student
-WHERE yearGroup = 12
-ORDER BY averageMark DESC;
+WHERE GradeLevel = 10 AND Score >= 90;
 ```
 
 ### Result
 
-| name | averageMark |
-|---|---:|
-| Alice | 85.5 |
-| Eva | 78.0 |
-| Ben | 62.0 |
-
-### Explanation
-
-First, `WHERE yearGroup = 12` keeps only:
-
-```text
-Alice
-Ben
-Eva
-```
-
-Then, `ORDER BY averageMark DESC` sorts them from highest mark to lowest.
-
-::: warning Clause Order
-Use `WHERE` before `ORDER BY`.
-
-Correct:
-
-```sql
-SELECT name
-FROM Student
-WHERE yearGroup = 12
-ORDER BY name;
-```
-
-Incorrect:
-
-```sql
-SELECT name
-FROM Student
-ORDER BY name
-WHERE yearGroup = 12;
-```
-:::
-
----
-
-## 15. AND Conditions
-
-`AND` means all conditions must be true.
-
-### Query
-
-```sql
-SELECT name, yearGroup, averageMark
-FROM Student
-WHERE yearGroup = 12 AND averageMark >= 75;
-```
-
-### Result
-
-| name | yearGroup | averageMark |
-|---|---:|---:|
-| Alice | 12 | 85.5 |
-| Eva | 12 | 78.0 |
-
-### Explanation
-
-A record must satisfy both:
-
-```text
-yearGroup = 12
-averageMark >= 75
-```
-
-Ben is Year 12, but his averageMark is 62.0, so he is not included.
-
----
-
-## 16. OR Conditions
-
-`OR` means at least one condition must be true.
-
-### Query
-
-```sql
-SELECT name, yearGroup, averageMark
-FROM Student
-WHERE yearGroup = 13 OR averageMark >= 85;
-```
-
-### Result
-
-| name | yearGroup | averageMark |
-|---|---:|---:|
-| Alice | 12 | 85.5 |
-| Clara | 13 | 91.0 |
-| David | 13 | 48.5 |
-
-### Explanation
-
-A record is included if:
-
-```text
-yearGroup = 13
-or
-averageMark >= 85
-```
-
-Alice is included because averageMark is 85.5.  
-Clara and David are included because yearGroup is 13.
-
----
-
-## 17. AND vs OR
-
-| Clause | Meaning | Records Included |
-|---|---|---|
-| `AND` | all conditions must be true | narrower result |
-| `OR` | at least one condition true | wider result |
-
-### Example
-
-```sql
-WHERE yearGroup = 12 AND averageMark >= 75
-```
-
-Includes only Year 12 students with averageMark at least 75.
-
-```sql
-WHERE yearGroup = 12 OR averageMark >= 75
-```
-
-Includes Year 12 students, plus any students from other year groups with averageMark at least 75.
-
-::: tip Quick Memory
-`AND` makes the filter stricter.  
-`OR` makes the filter wider.
-:::
-
----
-
-## 18. Product Table Examples
-
-### Product Table
-
-| productId | productName | price | stock |
+| FirstName | LastName | GradeLevel | Score |
 |---|---|---:|---:|
-| P001 | Keyboard | 49.99 | 12 |
-| P002 | Mouse | 19.99 | 30 |
-| P003 | Monitor | 159.99 | 5 |
-| P004 | Webcam | 69.99 | 8 |
+| Amy | Chen | 10 | 92 |
+| Eva | Li | 10 | 95 |
 
-### Example 1: Low stock
+### Meaning
 
-```sql
-SELECT productName, stock
-FROM Product
-WHERE stock < 10;
+Only students who are both:
+
+```text
+GradeLevel = 10
+Score >= 90
 ```
 
-Result:
+are returned.
 
-| productName | stock |
-|---|---:|
-| Monitor | 5 |
-| Webcam | 8 |
+---
 
-### Example 2: Sort by price
+## 17. OR
+
+`OR` combines conditions where at least one condition must be true.
+
+### Example
 
 ```sql
-SELECT productName, price
-FROM Product
-ORDER BY price ASC;
+SELECT FirstName, LastName, GradeLevel
+FROM Student
+WHERE GradeLevel = 10 OR GradeLevel = 11;
 ```
 
-Result:
+This returns records where either condition is true.
 
-| productName | price |
+### Product Example
+
+```sql
+SELECT ProductName, Category
+FROM Product
+WHERE Category = 'Accessory' OR Category = 'Display';
+```
+
+### Meaning
+
+Show products that are either:
+
+```text
+Accessory
+or Display
+```
+
+---
+
+## 18. AND vs OR
+
+| Operator | Meaning | Result |
+|---|---|---|
+| AND | both conditions true | narrower result |
+| OR | at least one condition true | wider result |
+
+### Example
+
+```sql
+WHERE Category = 'Accessory' AND Price < 20
+```
+
+means:
+
+```text
+Accessory products that are also cheaper than 20
+```
+
+```sql
+WHERE Category = 'Accessory' OR Price < 20
+```
+
+means:
+
+```text
+products that are Accessory, plus any product cheaper than 20
+```
+
+### Common Mistake
+
+Students often use `OR` when they need `AND`.
+
+---
+
+## 19. NOT
+
+`NOT` reverses a condition.
+
+### Example
+
+```sql
+SELECT ProductName, Category
+FROM Product
+WHERE NOT Category = 'Accessory';
+```
+
+This means:
+
+```text
+show products that are not in the Accessory category
+```
+
+Equivalent idea:
+
+```sql
+WHERE Category <> 'Accessory'
+```
+
+### Use Carefully
+
+`NOT` can make conditions harder to read.  
+For simple not-equal comparisons, `<>` is often clearer.
+
+---
+
+## 20. Parentheses in Conditions
+
+Parentheses make the logic clearer when using `AND` and `OR`.
+
+### Example
+
+```sql
+SELECT ProductName, Category, Price
+FROM Product
+WHERE Category = 'Accessory' AND (Price < 20 OR StockQuantity > 80);
+```
+
+### Why Parentheses Matter
+
+They show which conditions should be grouped together.
+
+Without parentheses, the database may interpret the condition differently from what the student intended.
+
+### Exam Advice
+
+Use parentheses when a query has both `AND` and `OR`.
+
+---
+
+## 21. ORDER BY
+
+`ORDER BY` sorts the result set.
+
+### Pattern
+
+```sql
+SELECT field1, field2
+FROM table_name
+ORDER BY field_name;
+```
+
+### Example
+
+```sql
+SELECT FirstName, LastName, Score
+FROM Student
+ORDER BY Score;
+```
+
+By default, many SQL systems sort in ascending order.
+
+### Result
+
+| FirstName | LastName | Score |
+|---|---|---:|
+| David | Zhang | 65 |
+| Ben | Wang | 78 |
+| Cara | Liu | 88 |
+| Amy | Chen | 92 |
+| Eva | Li | 95 |
+
+---
+
+## 22. ASC and DESC
+
+`ASC` means ascending order.
+
+```sql
+SELECT FirstName, Score
+FROM Student
+ORDER BY Score ASC;
+```
+
+`DESC` means descending order.
+
+```sql
+SELECT FirstName, Score
+FROM Student
+ORDER BY Score DESC;
+```
+
+### Ascending
+
+```text
+small to large
+A to Z
+oldest to newest in many date contexts
+```
+
+### Descending
+
+```text
+large to small
+Z to A
+newest to oldest in many date contexts
+```
+
+---
+
+## 23. Sort by Text Field
+
+### Example
+
+```sql
+SELECT FirstName, LastName
+FROM Student
+ORDER BY LastName ASC;
+```
+
+### Result
+
+| FirstName | LastName |
+|---|---|
+| Amy | Chen |
+| Eva | Li |
+| Cara | Liu |
+| Ben | Wang |
+| David | Zhang |
+
+### Explanation
+
+The result is sorted alphabetically by `LastName`.
+
+---
+
+## 24. Sort by Numeric Field
+
+### Example
+
+```sql
+SELECT ProductName, Price
+FROM Product
+ORDER BY Price DESC;
+```
+
+### Result
+
+| ProductName | Price |
 |---|---:|
+| Laptop | 999.99 |
+| Monitor | 179.99 |
+| Keyboard | 49.99 |
+| Mouse | 19.99 |
+| USB Cable | 9.99 |
+
+### Explanation
+
+`DESC` sorts the products from highest price to lowest price.
+
+---
+
+## 25. WHERE and ORDER BY Together
+
+You can filter records first, then sort the result.
+
+### Example
+
+```sql
+SELECT ProductName, Category, Price
+FROM Product
+WHERE Category = 'Accessory'
+ORDER BY Price ASC;
+```
+
+### Result
+
+| ProductName | Category | Price |
+|---|---|---:|
+| USB Cable | Accessory | 9.99 |
+| Mouse | Accessory | 19.99 |
+| Keyboard | Accessory | 49.99 |
+
+### Meaning
+
+```text
+First filter to only Accessory products.
+Then sort those products by Price from low to high.
+```
+
+---
+
+## 26. Sorting by Multiple Fields
+
+SQL can sort by more than one field.
+
+### Example
+
+```sql
+SELECT FirstName, LastName, GradeLevel, Score
+FROM Student
+ORDER BY GradeLevel ASC, Score DESC;
+```
+
+### Meaning
+
+```text
+Sort by GradeLevel from low to high.
+For students with the same GradeLevel, sort by Score from high to low.
+```
+
+### Level Control
+
+This is useful, but many exam questions only require sorting by one field.
+
+---
+
+## 27. Selecting, Filtering, and Sorting
+
+These three actions are different.
+
+| SQL Part | What It Does | Example |
+|---|---|---|
+| SELECT | chooses fields/columns | `SELECT FirstName, Score` |
+| FROM | chooses table | `FROM Student` |
+| WHERE | filters records/rows | `WHERE Score >= 90` |
+| ORDER BY | sorts output | `ORDER BY Score DESC` |
+
+### Example
+
+```sql
+SELECT FirstName, Score
+FROM Student
+WHERE GradeLevel = 10
+ORDER BY Score DESC;
+```
+
+Meaning:
+
+```text
+show FirstName and Score
+from Student
+only GradeLevel 10 records
+sort from highest score to lowest
+```
+
+---
+
+## 28. Query Interpretation Method
+
+When reading a query, use this order:
+
+```text
+1. FROM: identify the table.
+2. WHERE: identify which records are included.
+3. SELECT: identify which fields are displayed.
+4. ORDER BY: identify how results are sorted.
+```
+
+### Example
+
+```sql
+SELECT ProductName, Price
+FROM Product
+WHERE Price < 50
+ORDER BY Price DESC;
+```
+
+Interpretation:
+
+```text
+Table = Product
+Filter = Price less than 50
+Fields shown = ProductName and Price
+Sort = highest price first among matching products
+```
+
+---
+
+## 29. Writing Query Method
+
+When writing a query from a prompt:
+
+```text
+1. Identify table.
+2. Identify fields to display.
+3. Identify condition.
+4. Identify sorting requirement.
+5. Write clauses in SQL order.
+```
+
+### Prompt
+
+```text
+Show product names and prices for products cheaper than 50, sorted by price from highest to lowest.
+```
+
+### SQL
+
+```sql
+SELECT ProductName, Price
+FROM Product
+WHERE Price < 50
+ORDER BY Price DESC;
+```
+
+---
+
+## 30. Worked Example: Grade 10 Students
+
+### Prompt
+
+Show the first and last names of Grade 10 students.
+
+### SQL
+
+```sql
+SELECT FirstName, LastName
+FROM Student
+WHERE GradeLevel = 10;
+```
+
+### Explanation
+
+```text
+SELECT chooses name fields.
+FROM uses Student table.
+WHERE filters to GradeLevel 10 only.
+```
+
+---
+
+## 31. Worked Example: High Scores
+
+### Prompt
+
+Show students with scores of at least 90, highest score first.
+
+### SQL
+
+```sql
+SELECT FirstName, LastName, Score
+FROM Student
+WHERE Score >= 90
+ORDER BY Score DESC;
+```
+
+### Result
+
+| FirstName | LastName | Score |
+|---|---|---:|
+| Eva | Li | 95 |
+| Amy | Chen | 92 |
+
+---
+
+## 32. Worked Example: Accessory Products
+
+### Prompt
+
+Show accessory products sorted by price from low to high.
+
+### SQL
+
+```sql
+SELECT ProductName, Price
+FROM Product
+WHERE Category = 'Accessory'
+ORDER BY Price ASC;
+```
+
+### Result
+
+| ProductName | Price |
+|---|---:|
+| USB Cable | 9.99 |
 | Mouse | 19.99 |
 | Keyboard | 49.99 |
-| Webcam | 69.99 |
-| Monitor | 159.99 |
 
-### Example 3: Expensive low-stock items
+---
+
+## 33. Worked Example: Low Stock Products
+
+### Prompt
+
+Show products with stock quantity less than 20.
+
+### SQL
 
 ```sql
-SELECT productName, price, stock
+SELECT ProductName, StockQuantity
 FROM Product
-WHERE price > 50 AND stock < 10
-ORDER BY price DESC;
+WHERE StockQuantity < 20;
 ```
 
-Result:
+### Result
 
-| productName | price | stock |
-|---|---:|---:|
-| Monitor | 159.99 | 5 |
-| Webcam | 69.99 | 8 |
-
----
-
-## 19. Query Reading Method
-
-When reading SQL with `WHERE` and `ORDER BY`, use this method:
-
-```text
-1. FROM: identify the table
-2. WHERE: filter records
-3. SELECT: choose displayed fields
-4. ORDER BY: sort the result
-```
-
-### Example
-
-```sql
-SELECT name, averageMark
-FROM Student
-WHERE averageMark >= 70
-ORDER BY name ASC;
-```
-
-Step-by-step:
-
-| Step | Result |
-|---|---|
-| FROM | Use Student table |
-| WHERE | Keep Alice, Clara, Eva |
-| SELECT | Show name and averageMark |
-| ORDER BY | Sort by name A to Z |
-
-Final result:
-
-| name | averageMark |
+| ProductName | StockQuantity |
 |---|---:|
-| Alice | 85.5 |
-| Clara | 91.0 |
-| Eva | 78.0 |
+| Monitor | 12 |
+| Laptop | 5 |
 
 ---
 
-## 20. Common Mistakes
+## 34. Worked Example: Available Books
 
-| Mistake | Why it is wrong | Better habit |
-|---|---|---|
-| Confusing `WHERE` and `ORDER BY` | WHERE filters; ORDER BY sorts | Use correct clause |
-| Putting `ORDER BY` before `WHERE` | SQL clause order is wrong | `WHERE` comes before `ORDER BY` |
-| Forgetting quotes around text | Text may be treated as field name | Use `'Alice'` |
-| Using `=` for text without quotes | Syntax/logical error | `WHERE name = 'Alice'` |
-| Using Java `==` in SQL | SQL uses `=` for equality | Use `WHERE yearGroup = 12` |
-| Writing `=>` instead of `>=` | Wrong operator | Use `>=` |
-| Missing commas in SELECT | Syntax error | Separate selected fields with commas |
-| Thinking `ORDER BY` removes records | It only changes order | Use WHERE to filter |
-| Thinking `WHERE` sorts records | It only filters records | Use ORDER BY to sort |
-| Wrong table or field name | Query cannot run | Copy names exactly from schema |
-| Using AND when OR is needed | Result too narrow | Check condition meaning |
-| Using OR when AND is needed | Result too broad | Check condition meaning |
+### Prompt
 
----
+Show available books sorted by publication year.
 
-## 21. Guided Practice
-
-### Practice 1: Basic WHERE
-
-Using Student table, write a query to show names of Year 13 students.
-
-<details>
-<summary>Suggested Answer</summary>
+### SQL
 
 ```sql
-SELECT name
-FROM Student
-WHERE yearGroup = 13;
+SELECT Title, Author, PublicationYear
+FROM Book
+WHERE Available = true
+ORDER BY PublicationYear ASC;
 ```
 
-</details>
+### Result
+
+| Title | Author | PublicationYear |
+|---|---|---:|
+| Foundation | Isaac Asimov | 1951 |
+| Dune | Frank Herbert | 1965 |
+| Neuromancer | William Gibson | 1984 |
 
 ---
 
-### Practice 2: Numeric Filter
+## 35. Worked Example: AND Condition
 
-Write a query to show `name` and `averageMark` for students with `averageMark` below 50.
+### Prompt
 
-<details>
-<summary>Suggested Answer</summary>
+Show Grade 10 students with score above 80.
+
+### SQL
 
 ```sql
-SELECT name, averageMark
+SELECT FirstName, LastName, Score
 FROM Student
-WHERE averageMark < 50;
+WHERE GradeLevel = 10 AND Score > 80;
 ```
 
-</details>
+### Result
+
+| FirstName | LastName | Score |
+|---|---|---:|
+| Amy | Chen | 92 |
+| Eva | Li | 95 |
 
 ---
 
-### Practice 3: ORDER BY
+## 36. Worked Example: OR Condition
 
-Write a query to show all student names and average marks sorted from highest mark to lowest.
+### Prompt
 
-<details>
-<summary>Suggested Answer</summary>
+Show products in the Accessory or Display category.
+
+### SQL
 
 ```sql
-SELECT name, averageMark
-FROM Student
-ORDER BY averageMark DESC;
+SELECT ProductName, Category
+FROM Product
+WHERE Category = 'Accessory' OR Category = 'Display';
 ```
 
-</details>
+### Result
+
+| ProductName | Category |
+|---|---|
+| Keyboard | Accessory |
+| Mouse | Accessory |
+| Monitor | Display |
+| USB Cable | Accessory |
 
 ---
 
-### Practice 4: WHERE + ORDER BY
+## 37. Worked Example: Correct the Query
 
-Write a query to show Year 12 students sorted by name A to Z.
-
-<details>
-<summary>Suggested Answer</summary>
+### Incorrect Query
 
 ```sql
-SELECT name, yearGroup
-FROM Student
-WHERE yearGroup = 12
-ORDER BY name ASC;
+SELECT ProductName, Price
+FROM Product
+ORDER BY Price DESC
+WHERE Price < 50;
 ```
 
-</details>
-
----
-
-### Practice 5: Find the Error
-
-```sql
-SELECT name
-FROM Student
-ORDER BY name
-WHERE yearGroup = 12;
-```
-
-<details>
-<summary>Suggested Answer</summary>
+### Problem
 
 `WHERE` must come before `ORDER BY`.
 
-Correct:
+### Correct Query
 
 ```sql
-SELECT name
+SELECT ProductName, Price
+FROM Product
+WHERE Price < 50
+ORDER BY Price DESC;
+```
+
+---
+
+## 38. Worked Example: Text Quotes
+
+### Incorrect Query
+
+```sql
+SELECT ProductName
+FROM Product
+WHERE Category = Accessory;
+```
+
+### Problem
+
+Text value should be in quotes.
+
+### Correct Query
+
+```sql
+SELECT ProductName
+FROM Product
+WHERE Category = 'Accessory';
+```
+
+---
+
+## 39. LIKE Preview
+
+Some SQL systems use `LIKE` to match patterns in text.
+
+### Example
+
+```sql
+SELECT FirstName, LastName
 FROM Student
-WHERE yearGroup = 12
-ORDER BY name;
+WHERE LastName LIKE 'C%';
+```
+
+This may mean:
+
+```text
+last names starting with C
+```
+
+### Level Control
+
+`LIKE` is useful, but if your syllabus or exam question only expects basic comparison operators, use simple `=` conditions unless pattern matching is requested.
+
+---
+
+## 40. IN Preview
+
+Some SQL systems use `IN` as a shorter way to check multiple values.
+
+### Example
+
+```sql
+SELECT ProductName, Category
+FROM Product
+WHERE Category IN ('Accessory', 'Display');
+```
+
+This is similar to:
+
+```sql
+WHERE Category = 'Accessory' OR Category = 'Display'
+```
+
+### Level Control
+
+Use `OR` if the exam expects simpler SQL.
+
+---
+
+## 41. Scenario Answer Bank
+
+### If Asked: “Filter records”
+
+Use:
+
+```sql
+SELECT Field1, Field2
+FROM TableName
+WHERE FieldName = value;
+```
+
+### If Asked: “Sort records”
+
+Use:
+
+```sql
+SELECT Field1, Field2
+FROM TableName
+ORDER BY FieldName ASC;
+```
+
+or:
+
+```sql
+ORDER BY FieldName DESC;
+```
+
+### If Asked: “Filter and sort”
+
+Use:
+
+```sql
+SELECT Field1, Field2
+FROM TableName
+WHERE condition
+ORDER BY FieldName ASC;
+```
+
+### If Asked: “Explain a query”
+
+Use this structure:
+
+```text
+The query retrieves [fields] from the [table] table. It only includes records where [condition]. The result is sorted by [field] in [ascending/descending] order.
+```
+
+---
+
+## 42. Common Mistakes
+
+| Mistake | Why it is wrong | Correct idea |
+|---|---|---|
+| Putting `ORDER BY` before `WHERE` | wrong clause order | `WHERE` before `ORDER BY` |
+| Forgetting quotes around text | SQL treats it as field name | use `'text'` |
+| Using `=` for all comparisons | sometimes need `<`, `>`, `<>`, etc. | choose operator carefully |
+| Confusing `AND` and `OR` | changes result size | `AND` narrows, `OR` widens |
+| Thinking `WHERE` selects columns | `WHERE` filters rows | `SELECT` chooses columns |
+| Thinking `ORDER BY` filters data | it only sorts result | use `WHERE` to filter |
+| Using field not in table | invalid query | check table schema |
+| Forgetting comma in SELECT fields | syntax error | separate fields with commas |
+| Sorting by wrong field | result order incorrect | match prompt carefully |
+| Using DESC when ASC needed | reverse order | ASC low-to-high, DESC high-to-low |
+
+---
+
+## 43. Guided Practice
+
+### Practice 1: WHERE
+
+Write a query to show students in GradeLevel 10.
+
+<details>
+<summary>Suggested Answer</summary>
+
+```sql
+SELECT *
+FROM Student
+WHERE GradeLevel = 10;
 ```
 
 </details>
 
 ---
 
-## 22. Independent Practice
+### Practice 2: Greater Than
+
+Write a query to show students with Score greater than 80.
+
+<details>
+<summary>Suggested Answer</summary>
+
+```sql
+SELECT FirstName, LastName, Score
+FROM Student
+WHERE Score > 80;
+```
+
+</details>
+
+---
+
+### Practice 3: Text Condition
+
+Write a query to show products in the Accessory category.
+
+<details>
+<summary>Suggested Answer</summary>
+
+```sql
+SELECT ProductName, Price
+FROM Product
+WHERE Category = 'Accessory';
+```
+
+</details>
+
+---
+
+### Practice 4: ORDER BY
+
+Write a query to show product names and prices sorted from highest price to lowest price.
+
+<details>
+<summary>Suggested Answer</summary>
+
+```sql
+SELECT ProductName, Price
+FROM Product
+ORDER BY Price DESC;
+```
+
+</details>
+
+---
+
+### Practice 5: AND
+
+Write a query to show GradeLevel 10 students with Score at least 90.
+
+<details>
+<summary>Suggested Answer</summary>
+
+```sql
+SELECT FirstName, LastName, Score
+FROM Student
+WHERE GradeLevel = 10 AND Score >= 90;
+```
+
+</details>
+
+---
+
+## 44. Independent Practice
 
 ### Question 1
 
-Explain the difference between `WHERE` and `ORDER BY`.
+Explain what the `WHERE` clause does.
 
 ### Question 2
 
-Using the Student table, write a query to display names of active students.
+Explain what the `ORDER BY` clause does.
 
 ### Question 3
 
-Write a query to display `name` and `averageMark` for students with averageMark at least 80.
+Write a query to show all products cheaper than 50.
 
 ### Question 4
 
-Write a query to display all student fields sorted by `yearGroup` ascending.
+Write a query to show products in the `Accessory` category.
 
 ### Question 5
 
-Write a query to display student names sorted Z to A.
+Write a query to show students with Score greater than or equal to 90.
 
 ### Question 6
 
-Write a query to display Year 13 students sorted by averageMark descending.
+Write a query to show students not in GradeLevel 10.
 
 ### Question 7
 
-Write a query using `AND` to display active Year 12 students.
+Write a query to show products sorted by price from low to high.
 
 ### Question 8
 
-Write a query using `OR` to display students who are either Year 13 or have averageMark below 50.
+Write a query to show available books sorted by title alphabetically.
 
 ### Question 9
 
-Correct this SQL:
-
-```sql
-SELECT name averageMark
-FROM Student
-WHERE averageMark => 80;
-```
+Explain the difference between `AND` and `OR`.
 
 ### Question 10
 
-Correct this SQL:
+Correct this query:
 
 ```sql
-SELECT name
-FROM Student
-WHERE name = Alice;
+SELECT ProductName, Price
+FROM Product
+ORDER BY Price ASC
+WHERE Category = 'Accessory';
 ```
 
 ---
 
-## 23. Exam-style Questions
+## 45. Exam-style Questions
 
 ### Question 1 [4 marks]
 
-Explain the purpose of `WHERE` and `ORDER BY`.
+Explain what this query does.
+
+```sql
+SELECT FirstName, LastName
+FROM Student
+WHERE GradeLevel = 10;
+```
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-`WHERE` is used to filter records so that only records matching a condition are included in the result set. `ORDER BY` is used to sort the result set by a specified field, either in ascending or descending order.
+The query retrieves the `FirstName` and `LastName` fields from the `Student` table. It only returns records where `GradeLevel` is equal to 10.
 
 </details>
 
 ---
 
-### Question 2 [4 marks]
+### Question 2 [5 marks]
 
-Using the Product table:
-
-| productId | productName | price | stock |
-|---|---|---:|---:|
-| P001 | Keyboard | 49.99 | 12 |
-| P002 | Mouse | 19.99 | 30 |
-| P003 | Monitor | 159.99 | 5 |
-
-Write a query to display product names and prices for products with price greater than 50.
+Write an SQL query to display `ProductName` and `Price` from the `Product` table for products with price less than 50.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
 ```sql
-SELECT productName, price
+SELECT ProductName, Price
 FROM Product
-WHERE price > 50;
+WHERE Price < 50;
 ```
 
 </details>
@@ -972,65 +1487,36 @@ WHERE price > 50;
 
 ### Question 3 [5 marks]
 
-State the result of this query.
-
-```sql
-SELECT name, averageMark
-FROM Student
-WHERE averageMark >= 80
-ORDER BY averageMark DESC;
-```
-
-Using:
-
-| studentId | name | yearGroup | averageMark |
-|---|---|---:|---:|
-| S001 | Alice | 12 | 85.5 |
-| S002 | Ben | 12 | 62.0 |
-| S003 | Clara | 13 | 91.0 |
-| S004 | David | 13 | 48.5 |
+Write an SQL query to display all fields from the `Book` table for books that are available.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-| name | averageMark |
-|---|---:|
-| Clara | 91.0 |
-| Alice | 85.5 |
+```sql
+SELECT *
+FROM Book
+WHERE Available = true;
+```
 
-Only records with averageMark at least 80 are included, then they are sorted by averageMark descending.
+Equivalent Boolean syntax may be accepted depending on the DBMS or question format.
 
 </details>
 
 ---
 
-### Question 4 [5 marks]
+### Question 4 [6 marks]
 
-Identify and correct the errors.
-
-```sql
-SELECT name averageMark
-FROM Student
-ORDER BY averageMark DESC
-WHERE yearGroup = 12;
-```
+Write an SQL query to display product names and prices for products in the `Accessory` category, sorted by price from highest to lowest.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Correct query:
-
 ```sql
-SELECT name, averageMark
-FROM Student
-WHERE yearGroup = 12
-ORDER BY averageMark DESC;
+SELECT ProductName, Price
+FROM Product
+WHERE Category = 'Accessory'
+ORDER BY Price DESC;
 ```
-
-Errors:
-
-- Missing comma between `name` and `averageMark`.
-- `WHERE` must come before `ORDER BY`.
 
 </details>
 
@@ -1038,168 +1524,196 @@ Errors:
 
 ### Question 5 [6 marks]
 
-Explain the difference between these two conditions:
+A student writes this query:
 
 ```sql
-WHERE yearGroup = 12 AND averageMark >= 75
+SELECT ProductName, Price
+FROM Product
+ORDER BY Price DESC
+WHERE Price < 50;
 ```
 
-```sql
-WHERE yearGroup = 12 OR averageMark >= 75
-```
+Identify the error and correct the query.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-The first condition uses `AND`, so a record must satisfy both conditions: the student must be in Year 12 and have an average mark of at least 75. The second condition uses `OR`, so a record is included if either condition is true. This means it includes all Year 12 students as well as any students in other year groups with an average mark of at least 75. Therefore, `OR` usually returns more records than `AND`.
+The error is that `ORDER BY` has been placed before `WHERE`. The `WHERE` clause should come before `ORDER BY`. The corrected query is:
+
+```sql
+SELECT ProductName, Price
+FROM Product
+WHERE Price < 50
+ORDER BY Price DESC;
+```
 
 </details>
 
 ---
 
-## 24. Classroom Activity
+## 46. Classroom Activity
 
-### Activity 1: Human Filter
+### Activity 1: Human WHERE Filter
 
-Students act as records holding cards:
+Give students record cards from a Student table.
+
+The teacher gives conditions such as:
 
 ```text
-name
-yearGroup
-averageMark
+GradeLevel = 10
+Score >= 90
+GradeLevel = 10 AND Score >= 90
 ```
 
-The teacher gives SQL conditions such as:
-
-```sql
-WHERE yearGroup = 12
-WHERE averageMark >= 80
-```
-
-Only matching students remain standing.
+Students stand if their record matches the condition.
 
 ---
 
-### Activity 2: Human Sort
+### Activity 2: Sorting Race
 
-Students hold averageMark cards and arrange themselves according to:
+Students receive Product cards with prices.
+
+They sort cards by:
+
+```text
+Price ASC
+Price DESC
+ProductName ASC
+StockQuantity DESC
+```
+
+Then connect this to `ORDER BY`.
+
+---
+
+### Activity 3: Fix Broken SQL
+
+Students fix:
 
 ```sql
-ORDER BY averageMark ASC
-ORDER BY averageMark DESC
+SELECT FirstName, LastName
+FROM Student
+ORDER BY LastName
+WHERE GradeLevel = 10;
+```
+
+```sql
+SELECT ProductName Price
+FROM Product
+WHERE Category = Accessory;
+```
+
+```sql
+SELECT Title
+WHERE Available = true
+FROM Book;
 ```
 
 ---
 
-### Activity 3: SQL Error Detective
-
-Groups correct SQL snippets:
-
-```sql
-WHERE name = Alice
-ORDER BY name WHERE yearGroup = 12
-WHERE averageMark => 80
-SELECT name averageMark
-```
-
-They must explain the mistake, not only correct it.
-
----
-
-## 25. Homework
+## 47. Homework
 
 ### Homework Part A: Concept Explanation
 
-In 4-5 sentences, explain the difference between filtering and sorting in SQL.
+In 6-8 sentences, explain how `SELECT`, `FROM`, `WHERE`, and `ORDER BY` work together.
 
 ---
 
-### Homework Part B: Query Writing
+### Homework Part B: Write Queries
 
-Using this Player table:
+Using this table:
 
-| playerId | username | score | level | active |
-|---|---|---:|---:|---|
-| P001 | Dragon | 1500 | 12 | true |
-| P002 | Shadow | 900 | 8 | true |
-| P003 | Nova | 2100 | 15 | false |
-| P004 | Echo | 1200 | 10 | true |
+```text
+Book(BookID, Title, Author, PublicationYear, Available)
+```
 
 Write queries to:
 
-1. display usernames with score greater than 1000
-2. display all players sorted by score descending
-3. display active players sorted by username ascending
-4. display players with level at least 10 and active true
-5. display players with score below 1000 or active false
-
----
-
-### Homework Part C: Result Prediction
-
-State the result of:
-
-```sql
-SELECT username, score
-FROM Player
-WHERE score >= 1200
-ORDER BY score ASC;
+```text
+1. show all available books
+2. show titles published after 1960
+3. show titles and authors sorted by title
+4. show unavailable books
+5. show all books sorted by publication year from newest to oldest
 ```
 
 ---
 
-### Homework Part D: Error Correction
+### Homework Part C: Interpret Queries
 
-Correct these queries:
+Explain what each query returns:
 
 ```sql
-SELECT username score
-FROM Player
-WHERE score > 1000;
+SELECT Title, Author
+FROM Book
+WHERE Available = true;
+```
 
-SELECT username
-FROM Player
-ORDER BY username
-WHERE active = true;
+```sql
+SELECT ProductName, Price
+FROM Product
+WHERE Price >= 100
+ORDER BY Price DESC;
+```
 
-SELECT username
-FROM Player
-WHERE username = Dragon;
+```sql
+SELECT FirstName, LastName, Score
+FROM Student
+WHERE GradeLevel = 10 AND Score >= 90;
 ```
 
 ---
 
-## 26. One-page Revision Summary
+### Homework Part D: Misconception Correction
+
+Correct these statements:
+
+```text
+WHERE chooses which columns are displayed.
+ORDER BY removes records that do not match a condition.
+Text values never need quotes in SQL.
+AND means at least one condition is true.
+DESC sorts from low to high.
+```
+
+---
+
+## 48. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| `WHERE` | Filters records |
-| `ORDER BY` | Sorts result set |
-| `ASC` | Ascending order |
-| `DESC` | Descending order |
-| `=` | Equal to in SQL |
+| SELECT | Chooses fields/columns |
+| FROM | Chooses table |
+| WHERE | Filters records/rows |
+| ORDER BY | Sorts result |
+| `=` | Equal to |
 | `<>` | Not equal to |
-| `AND` | All conditions true |
-| `OR` | At least one condition true |
-| Text values | Usually use quotes |
-| Numeric values | Usually no quotes |
-| Correct clause order | `SELECT → FROM → WHERE → ORDER BY` |
-| Common mistake | Using Java `==` instead of SQL `=` |
-| Exam phrase | `WHERE` controls which records are returned, while `ORDER BY` controls the order of returned records |
+| `>` | Greater than |
+| `<` | Less than |
+| `>=` | Greater than or equal |
+| `<=` | Less than or equal |
+| AND | Both conditions true |
+| OR | At least one condition true |
+| NOT | Reverses condition |
+| ASC | Ascending order |
+| DESC | Descending order |
+| Text values | Usually written in quotes |
+| Clause order | `SELECT`, `FROM`, `WHERE`, `ORDER BY` |
+| Exam phrase | `WHERE` filters records based on a condition, and `ORDER BY` sorts the result set in ascending or descending order |
 
 ---
 
-## 27. Quick Self-test
+## 49. Quick Self-test
 
 Before moving on, students should be able to answer these:
 
 1. What does `WHERE` do?
 2. What does `ORDER BY` do?
-3. What is the difference between filtering and sorting?
-4. What does `ASC` mean?
-5. What does `DESC` mean?
-6. Which comes first: `WHERE` or `ORDER BY`?
-7. How do you write a text condition for name Alice?
-8. What operator means not equal to?
-9. What is the difference between `AND` and `OR`?
-10. What is wrong with `WHERE score => 100`?
+3. What does `ASC` mean?
+4. What does `DESC` mean?
+5. What is the difference between `AND` and `OR`?
+6. How do you write a text value in SQL?
+7. What operator means not equal to?
+8. Which clause comes first: `WHERE` or `ORDER BY`?
+9. Does `ORDER BY` filter records?
+10. Write one query using both `WHERE` and `ORDER BY`.
