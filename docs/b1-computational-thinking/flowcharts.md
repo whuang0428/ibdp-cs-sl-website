@@ -4,13 +4,18 @@
 
 By the end of this lesson, students should be able to:
 
-- define a **flowchart**
-- identify common flowchart symbols
-- explain why flowcharts are useful in algorithm design
+- define flowchart
+- explain why flowcharts are useful in computational thinking
+- recognize common flowchart symbols
+- use start/end, process, input/output, decision, and arrows correctly
 - represent sequence, selection, and iteration using flowcharts
-- convert simple pseudocode into a flowchart-style structure
-- explain the logic of a flowchart using clear CS vocabulary
-- connect flowcharts to Java code and program planning
+- convert simple algorithms into flowcharts
+- convert simple flowcharts into algorithms or pseudocode
+- follow a flowchart step by step
+- predict the output of a flowchart
+- identify logic errors in flowcharts
+- explain how flowcharts support algorithm design and communication
+- answer exam-style questions about flowcharts
 
 ---
 
@@ -20,12 +25,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | B1 Computational Thinking |
 | Label | SL Core |
-| Main skill | Representing algorithms visually |
-| Connected units | B2 Programming, IA project, algorithm design |
-| Exam relevance | Algorithm design, flowchart interpretation, pseudocode conversion, problem-solving questions |
+| Main skill | Representing algorithm logic visually using standard flowchart symbols |
+| Connected topics | Algorithms, sequence, selection, iteration, trace tables, pseudocode |
+| Practical focus | Reading, completing, drawing, and explaining flowcharts |
+| Exam relevance | Symbol recognition, control flow, decisions, loops, output prediction, algorithm conversion |
 
 ::: tip Learning Focus
-A flowchart is not just a drawing. It is a visual representation of an algorithm. Every symbol and arrow should show clear logic.
+A flowchart is a graphical representation of an algorithm. It uses standard symbols and arrows to show the order of steps, decisions, and loops.
 :::
 
 ---
@@ -34,15 +40,24 @@ A flowchart is not just a drawing. It is a visual representation of an algorithm
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Flowchart | 流程图 | A diagram that shows the steps and logic of an algorithm |
-| Terminator | 起止符 | Symbol used for Start and End |
-| Process | 处理步骤 | An action or calculation |
-| Input / Output | 输入 / 输出 | Data entering or leaving the algorithm |
-| Decision | 判断 | A condition with different paths, usually Yes/No or True/False |
-| Flowline | 流程线 | Arrow showing the direction of execution |
-| Sequence | 顺序结构 | Steps carried out one after another |
-| Selection | 选择结构 | A decision that chooses between paths |
-| Iteration | 循环结构 | Repetition of steps |
+| Flowchart | 流程图 | Diagram that represents an algorithm using symbols and arrows |
+| Algorithm | 算法 | Step-by-step method for solving a problem |
+| Flowline / Arrow | 流程线 / 箭头 | Shows the direction of control flow |
+| Start/End | 开始/结束 | Terminator symbol showing beginning or end |
+| Process | 处理 | Operation or calculation step |
+| Input/Output | 输入/输出 | Data entering or leaving the algorithm |
+| Decision | 判断 | Condition with different paths, usually Yes/No |
+| Sequence | 顺序结构 | Steps happen in order |
+| Selection | 选择结构 | Different path chosen based on condition |
+| Iteration | 迭代 / 循环 | Repeated steps |
+| Condition | 条件 | True/false expression used in decision |
+| Connector | 连接符 | Symbol used to join flowchart parts |
+| Trace | 跟踪 | Follow the flowchart step by step |
+| Dry run | 手动运行 | Manually run an algorithm or flowchart |
+| Logic error | 逻辑错误 | Flowchart runs but gives wrong result |
+| Control flow | 控制流 | Order in which steps are followed |
+| Loop body | 循环体 | Steps repeated inside a loop |
+| Branch | 分支 | One path after a decision |
 
 ---
 
@@ -53,31 +68,52 @@ A flowchart is not just a drawing. It is a visual representation of an algorithm
 
 ### 中文讲解
 
-**Flowchart（流程图）** 是一种用图形方式表示算法的方法。
+**Flowchart（流程图）** 是一种用图形表示 algorithm 的方式。  
+它不是 code，但是它可以清楚展示 algorithm 的执行顺序。
 
-在写代码之前，我们可以先用流程图把程序逻辑画出来。这样做的好处是：学生可以更直观看到程序执行的顺序、判断条件、循环结构和输出结果。
+Flowchart 常用 symbols：
 
-流程图特别适合帮助学生理解：
+```text
+Oval = Start / End
+Rectangle = Process
+Parallelogram = Input / Output
+Diamond = Decision
+Arrow = direction of flow
+```
 
-- 程序从哪里开始
-- 每一步做什么
-- 哪些地方需要输入
-- 哪些地方会输出结果
-- 条件判断之后走哪一条路径
-- 循环什么时候继续、什么时候停止
+例如判断一个学生是否 pass：
 
-常见流程图符号包括：
+```text
+Start
+Input score
+score >= 50?
+Yes → Output Pass
+No → Output Fail
+End
+```
 
-| Symbol Type | 中文 | Meaning |
-|---|---|---|
-| Oval | 起止符 | Start or End |
-| Rectangle | 处理框 | Process or calculation |
-| Parallelogram | 输入/输出框 | Input or Output |
-| Diamond | 判断框 | Decision / condition |
-| Arrow | 流程线 | Shows direction of execution |
+Flowchart 最重要的是：
 
-流程图和 pseudocode 的关系很密切。  
-Pseudocode 用文字写算法，flowchart 用图形表示算法。它们表达的是同一个逻辑，只是形式不同。
+```text
+follow the arrows
+check each decision
+choose the correct branch
+repeat if arrow goes back
+```
+
+Flowchart 可以表示三种基本 algorithm structure：
+
+```text
+sequence = one step after another
+selection = decision with Yes/No paths
+iteration = loop where arrows go back to repeat
+```
+
+简单来说：
+
+```text
+flowchart = visual algorithm
+```
 
 </template>
 
@@ -85,80 +121,646 @@ Pseudocode 用文字写算法，flowchart 用图形表示算法。它们表达�
 
 ### English Explanation
 
-A **flowchart** is a visual way to represent an algorithm.
+A **flowchart** is a way to represent an algorithm using a diagram.  
+It is not code, but it clearly shows the order of algorithm steps.
 
-Before writing code, programmers can use a flowchart to show the logic of the program. This helps students see the order of execution, decision points, loops, and outputs more clearly.
+Common flowchart symbols:
 
-Flowcharts are especially useful for understanding:
+```text
+Oval = Start / End
+Rectangle = Process
+Parallelogram = Input / Output
+Diamond = Decision
+Arrow = direction of flow
+```
 
-- where the algorithm starts
-- what each step does
-- where input is needed
-- where output is produced
-- which path is followed after a condition
-- when a loop continues or stops
+Example: deciding whether a student passes:
 
-Common flowchart symbols include:
+```text
+Start
+Input score
+score >= 50?
+Yes → Output Pass
+No → Output Fail
+End
+```
 
-| Symbol Type | Meaning |
-|---|---|
-| Oval | Start or End |
-| Rectangle | Process or calculation |
-| Parallelogram | Input or Output |
-| Diamond | Decision or condition |
-| Arrow | Direction of execution |
+The most important rule is:
 
-Flowcharts and pseudocode are closely connected.  
-Pseudocode describes an algorithm using structured text, while a flowchart shows the same logic visually.
+```text
+follow the arrows
+check each decision
+choose the correct branch
+repeat if an arrow goes back
+```
+
+Flowcharts can represent the three main algorithm structures:
+
+```text
+sequence = one step after another
+selection = decision with Yes/No paths
+iteration = loop where arrows go back to repeat
+```
+
+In simple terms:
+
+```text
+flowchart = visual algorithm
+```
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. Real-life Example
+## 5. What Is a Flowchart?
 
-### Example: Student Pass/Fail Decision
+A flowchart is a graphical representation of an algorithm.
 
-A school wants an algorithm that decides whether a student passes.
-
-Rule:
-
-> If the mark is 50 or above, output Pass. Otherwise, output Fail.
-
-### Text-based flowchart structure
+It uses symbols and arrows to show:
 
 ```text
-[Start]
-   ↓
-[Input mark]
-   ↓
-<Is mark >= 50?>
-   ├── Yes → [Output "Pass"] → [End]
-   └── No  → [Output "Fail"] → [End]
+where the algorithm starts
+what input is needed
+what processing happens
+what decisions are made
+what output is produced
+where the algorithm ends
 ```
 
-### Explanation
+### Simple Definition
 
-| Flowchart Part | Purpose |
-|---|---|
-| Start | Shows where the algorithm begins |
-| Input mark | Gets the student's mark |
-| Decision | Checks whether the mark is at least 50 |
-| Yes path | Runs if the condition is true |
-| No path | Runs if the condition is false |
-| Output | Displays Pass or Fail |
-| End | Shows where the algorithm stops |
+```text
+A flowchart is a diagram that shows the steps of an algorithm using standard symbols and arrows.
+```
 
-::: info Why this is useful
-The flowchart makes the selection logic visible. Students can clearly see that only one of the two output paths will be followed.
+::: tip Exam Phrase
+A flowchart is a graphical representation of an algorithm that uses standard symbols and arrows to show the order of steps and decisions.
 :::
 
 ---
 
-## 6. IB Pseudocode Pattern
+## 6. Why Flowcharts Are Useful
 
-The same logic can be written in IB-style pseudocode.
+Flowcharts are useful because they make algorithm logic easier to see.
+
+### Benefits
+
+| Benefit | Explanation |
+|---|---|
+| Visual | easier to follow than long text |
+| Shows order | arrows show which step happens next |
+| Shows decisions | diamond symbols show conditions clearly |
+| Shows loops | arrows can return to earlier steps |
+| Helps planning | algorithm can be designed before coding |
+| Helps communication | other people can understand the logic |
+| Helps debugging | mistakes in flow can be spotted |
+| Supports conversion | can be converted into pseudocode or program code |
+
+### Key Idea
+
+A flowchart is useful when you want to see the structure of an algorithm clearly.
+
+---
+
+## 7. Common Flowchart Symbols
+
+| Symbol | Name | Purpose |
+|---|---|---|
+| Oval | Terminator | Start or End |
+| Rectangle | Process | Calculation or action |
+| Parallelogram | Input/Output | Input data or output result |
+| Diamond | Decision | True/false or Yes/No condition |
+| Arrow | Flowline | Direction of control flow |
+| Circle | Connector | Connects separated parts of a flowchart |
+
+### Important
+
+Use the correct symbol for the correct purpose.
+
+Common mistake:
+
+```text
+using a rectangle for a decision
+```
+
+Better:
+
+```text
+use a diamond for conditions such as score >= 50?
+```
+
+---
+
+## 8. Start and End Symbol
+
+The start/end symbol is usually an oval.
+
+### Use
+
+```text
+Start
+End
+```
+
+### Rules
+
+```text
+Every flowchart should have a clear Start.
+Every flowchart should have at least one End.
+Control flow should begin at Start and eventually reach End.
+```
+
+### Example
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input score/]
+    B --> C([End])
+```
+
+---
+
+## 9. Process Symbol
+
+A process symbol is usually a rectangle.
+
+It is used for:
+
+```text
+calculation
+assignment
+updating a variable
+processing data
+performing an action
+```
+
+### Examples
+
+```text
+total ← total + score
+average ← total / count
+count ← count + 1
+discount ← price * 0.10
+```
+
+### Mermaid Example
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[total ← 0]
+    B --> C[count ← count + 1]
+    C --> D([End])
+```
+
+---
+
+## 10. Input/Output Symbol
+
+Input/output is usually shown using a parallelogram.
+
+### Input Examples
+
+```text
+Input score
+Input username
+Input price
+Input password
+```
+
+### Output Examples
+
+```text
+Output average
+Output "Pass"
+Output finalPrice
+Output "Access denied"
+```
+
+### Mermaid Example
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input score/]
+    B --> C[/Output score/]
+    C --> D([End])
+```
+
+---
+
+## 11. Decision Symbol
+
+A decision is usually shown using a diamond.
+
+It contains a condition.
+
+### Examples
+
+```text
+score >= 50?
+password = storedPassword?
+count < 10?
+total > 100?
+found = true?
+```
+
+### Branches
+
+A decision usually has two branches:
+
+```text
+Yes / No
+True / False
+```
+
+### Mermaid Example
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input score/]
+    B --> C{score >= 50?}
+    C -- Yes --> D[/Output "Pass"/]
+    C -- No --> E[/Output "Fail"/]
+    D --> F([End])
+    E --> F
+```
+
+---
+
+## 12. Arrows / Flowlines
+
+Arrows show the direction of control flow.
+
+### Rules
+
+```text
+follow arrows from Start
+arrows show the next step
+decisions should have labelled branches
+loops use arrows going back to earlier steps
+avoid crossing arrows if possible
+```
+
+### Common Mistake
+
+Do not assume the next step based on position only.  
+Always follow the arrow.
+
+---
+
+## 13. Sequence in Flowcharts
+
+Sequence means steps happen in order.
+
+### Example: Rectangle Area
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input length/]
+    B --> C[/Input width/]
+    C --> D[area ← length * width]
+    D --> E[/Output area/]
+    E --> F([End])
+```
+
+### Explanation
+
+The algorithm:
+
+```text
+inputs length
+inputs width
+calculates area
+outputs area
+```
+
+This is sequence because each step follows the previous one.
+
+---
+
+## 14. Selection in Flowcharts
+
+Selection means the flowchart chooses a path based on a condition.
+
+### Example: Pass or Fail
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input score/]
+    B --> C{score >= 50?}
+    C -- Yes --> D[/Output "Pass"/]
+    C -- No --> E[/Output "Fail"/]
+    D --> F([End])
+    E --> F
+```
+
+### Pseudocode Equivalent
+
+```text
+INPUT score
+
+IF score >= 50 THEN
+    OUTPUT "Pass"
+ELSE
+    OUTPUT "Fail"
+ENDIF
+```
+
+### Key Idea
+
+The diamond creates different branches.
+
+---
+
+## 15. Iteration in Flowcharts
+
+Iteration means steps are repeated.
+
+### Example: Count from 1 to 5
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[count ← 1]
+    B --> C{count <= 5?}
+    C -- Yes --> D[/Output count/]
+    D --> E[count ← count + 1]
+    E --> C
+    C -- No --> F([End])
+```
+
+### Pseudocode Equivalent
+
+```text
+count ← 1
+
+WHILE count <= 5
+    OUTPUT count
+    count ← count + 1
+ENDWHILE
+```
+
+### Key Idea
+
+An arrow goes back to the decision to repeat the loop.
+
+---
+
+## 16. Flowchart for FOR Loop
+
+A FOR loop can be represented using a counter and decision.
+
+### Example: Add 5 Scores
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[total ← 0]
+    B --> C[count ← 1]
+    C --> D{count <= 5?}
+    D -- Yes --> E[/Input score/]
+    E --> F[total ← total + score]
+    F --> G[count ← count + 1]
+    G --> D
+    D -- No --> H[/Output total/]
+    H --> I([End])
+```
+
+### Key Variables
+
+```text
+total = accumulator
+count = counter
+score = input
+```
+
+---
+
+## 17. Flowchart for WHILE Loop
+
+A WHILE loop checks the condition before the loop body.
+
+### Example: Password Until Correct
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input password/]
+    B --> C{password = "secret"?}
+    C -- No --> D[/Output "Try again"/]
+    D --> B
+    C -- Yes --> E[/Output "Access granted"/]
+    E --> F([End])
+```
+
+### Key Point
+
+If the condition is false, the loop repeats.
+
+---
+
+## 18. Flowchart for REPEAT UNTIL
+
+A REPEAT UNTIL loop runs at least once.
+
+### Example
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input password/]
+    B --> C{password = "secret"?}
+    C -- No --> B
+    C -- Yes --> D[/Output "Access granted"/]
+    D --> E([End])
+```
+
+### Difference from WHILE
+
+```text
+WHILE checks before loop body
+REPEAT UNTIL checks after loop body
+```
+
+In a flowchart, this usually means the input/action occurs before the decision.
+
+---
+
+## 19. Nested Decisions
+
+A flowchart may contain decisions inside other decisions.
+
+### Example: Grade Boundary
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input mark/]
+    B --> C{mark >= 80?}
+    C -- Yes --> D[/Output "A"/]
+    C -- No --> E{mark >= 60?}
+    E -- Yes --> F[/Output "B"/]
+    E -- No --> G{mark >= 50?}
+    G -- Yes --> H[/Output "C"/]
+    G -- No --> I[/Output "Fail"/]
+    D --> J([End])
+    F --> J
+    H --> J
+    I --> J
+```
+
+### Key Idea
+
+Each decision should be checked only when the flow reaches it.
+
+---
+
+## 20. Flowchart Reading Method
+
+To read a flowchart:
+
+```text
+1. Start at the Start symbol.
+2. Follow the arrow to the next symbol.
+3. For process symbols, update variables.
+4. For input symbols, use the given input value.
+5. For output symbols, record the output.
+6. For decision symbols, evaluate the condition.
+7. Follow the correct branch.
+8. Continue until End is reached.
+```
+
+### Exam Tip
+
+Do not skip variable updates.  
+Most trace-table errors happen because students forget to update variables inside loops.
+
+---
+
+## 21. Converting Algorithm to Flowchart
+
+Use this mapping:
+
+| Algorithm Step | Flowchart Symbol |
+|---|---|
+| Start | Oval |
+| End | Oval |
+| INPUT | Parallelogram |
+| OUTPUT | Parallelogram |
+| assignment/calculation | Rectangle |
+| IF condition | Diamond |
+| WHILE condition | Diamond with loop arrow |
+| FOR loop | counter + decision + update |
+| repeated step | arrow back |
+
+### Example
+
+Algorithm:
+
+```text
+INPUT score
+IF score >= 50 THEN
+    OUTPUT "Pass"
+ELSE
+    OUTPUT "Fail"
+ENDIF
+```
+
+Flowchart:
+
+```text
+Start → Input score → score >= 50? → Yes: Output Pass → End
+                                      → No: Output Fail → End
+```
+
+---
+
+## 22. Converting Flowchart to Pseudocode
+
+To convert a flowchart to pseudocode:
+
+```text
+1. Follow the arrows from Start.
+2. Write INPUT/OUTPUT steps.
+3. Write process steps as assignments.
+4. Write decision branches as IF/ELSE.
+5. Write loop arrows as WHILE/FOR/REPEAT.
+6. Stop at End.
+```
+
+### Example
+
+Flowchart idea:
+
+```text
+Start → Input score → score >= 50? → Output Pass/Fail → End
+```
+
+Pseudocode:
+
+```text
+INPUT score
+
+IF score >= 50 THEN
+    OUTPUT "Pass"
+ELSE
+    OUTPUT "Fail"
+ENDIF
+```
+
+---
+
+## 23. Worked Example: Rectangle Area
+
+### Problem
+
+Input length and width. Output area.
+
+### Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input length/]
+    B --> C[/Input width/]
+    C --> D[area ← length * width]
+    D --> E[/Output area/]
+    E --> F([End])
+```
+
+### Pseudocode
+
+```text
+INPUT length
+INPUT width
+area ← length * width
+OUTPUT area
+```
+
+### Structures
+
+```text
+sequence
+input
+process
+output
+```
+
+---
+
+## 24. Worked Example: Pass or Fail
+
+### Problem
+
+Input a mark. Output Pass if mark is at least 50. Otherwise output Fail.
+
+### Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input mark/]
+    B --> C{mark >= 50?}
+    C -- Yes --> D[/Output "Pass"/]
+    C -- No --> E[/Output "Fail"/]
+    D --> F([End])
+    E --> F
+```
+
+### Pseudocode
 
 ```text
 INPUT mark
@@ -167,309 +769,440 @@ IF mark >= 50 THEN
     OUTPUT "Pass"
 ELSE
     OUTPUT "Fail"
-END IF
+ENDIF
 ```
 
-### Connection between flowchart and pseudocode
+### Structure
 
-| Flowchart Element | Pseudocode Equivalent |
-|---|---|
-| Input symbol | `INPUT mark` |
-| Decision diamond | `IF mark >= 50 THEN` |
-| Yes branch | statements inside IF |
-| No branch | statements inside ELSE |
-| Output symbol | `OUTPUT "Pass"` or `OUTPUT "Fail"` |
-| End symbol | end of algorithm |
-
-::: tip Exam Note
-If asked to construct a flowchart, make sure decision branches are clearly labelled, such as Yes/No or True/False.
-:::
-
----
-
-## 7. Java Code Example
-
-Below is the Java version of the same algorithm.
-
-```java
-public class PassFailFlowchartExample {
-    public static void main(String[] args) {
-        int mark = 68;
-
-        if (mark >= 50) {
-            System.out.println("Pass");
-        } else {
-            System.out.println("Fail");
-        }
-    }
-}
-```
-
-Another example: checking whether a user can enter a competition.
-
-Rule:
-
-> A student can enter if their age is 16 or above.
-
-```java
-public class CompetitionEntry {
-    public static void main(String[] args) {
-        int age = 15;
-
-        if (age >= 16) {
-            System.out.println("Allowed to enter");
-        } else {
-            System.out.println("Not allowed to enter");
-        }
-    }
-}
+```text
+selection
 ```
 
 ---
 
-## 8. Line-by-line Code Explanation
+## 25. Worked Example: Discount Calculator
 
-### Pass/Fail Example
+### Problem
 
-| Code Part | Flowchart Connection | Explanation |
-|---|---|---|
-| `int mark = 68;` | Input / stored value | Provides the data for the decision |
-| `if (mark >= 50)` | Decision diamond | Checks the condition |
-| `System.out.println("Pass");` | Yes branch output | Runs when the condition is true |
-| `else` | No branch | Gives the alternative path |
-| `System.out.println("Fail");` | No branch output | Runs when the condition is false |
+Input total price. If total is over 100, apply 10% discount. Output final price.
 
-### Competition Entry Example
+### Flowchart
 
-| Code Part | Flowchart Connection | Explanation |
-|---|---|---|
-| `int age = 15;` | Input / stored value | Stores the age |
-| `if (age >= 16)` | Decision diamond | Checks whether the user is old enough |
-| `"Allowed to enter"` | Yes path | Output if condition is true |
-| `"Not allowed to enter"` | No path | Output if condition is false |
-
-### Why this connects to flowcharts
-
-A flowchart shows the same decision structure before code is written.
-
-| Algorithm design | Java code |
-|---|---|
-| Decision diamond | `if (...)` |
-| Yes branch | code inside IF block |
-| No branch | code inside ELSE block |
-| Output symbol | `System.out.println(...)` |
-
----
-
-## 9. Step-by-step Execution
-
-### Example 1: mark = 68
-
-Flowchart logic:
-
-```text
-[Start]
-   ↓
-[Input mark = 68]
-   ↓
-<Is mark >= 50?>
-   ↓ Yes
-[Output "Pass"]
-   ↓
-[End]
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input total/]
+    B --> C{total > 100?}
+    C -- Yes --> D[discount ← total * 0.10]
+    C -- No --> E[discount ← 0]
+    D --> F[finalPrice ← total - discount]
+    E --> F
+    F --> G[/Output finalPrice/]
+    G --> H([End])
 ```
 
-Execution table:
-
-| Step | Action | Result |
-|---|---|---|
-| 1 | Store mark | mark = 68 |
-| 2 | Check mark >= 50 | 68 >= 50 is true |
-| 3 | Follow Yes branch | Output Pass |
-| 4 | End algorithm | Algorithm stops |
-
-Final output:
+### Pseudocode
 
 ```text
-Pass
-```
+INPUT total
 
-### Example 2: age = 15
-
-| Step | Action | Result |
-|---|---|---|
-| 1 | Store age | age = 15 |
-| 2 | Check age >= 16 | 15 >= 16 is false |
-| 3 | Follow No branch | Output Not allowed to enter |
-| 4 | End algorithm | Algorithm stops |
-
-Final output:
-
-```text
-Not allowed to enter
-```
-
----
-
-## 10. Common Mistakes
-
-| Mistake | Why it is a problem | Better habit |
-|---|---|---|
-| Using the wrong symbol | The flowchart becomes unclear | Use standard symbols |
-| Forgetting arrows | Execution order is unclear | Add arrows between all steps |
-| Not labelling decision branches | The reader cannot tell which path is true or false | Label branches Yes/No or True/False |
-| No Start or End | The algorithm looks incomplete | Include clear start and end points |
-| Putting a condition inside a process box | Decision logic becomes unclear | Use a diamond for conditions |
-| Creating branches that never reconnect or end | Flow becomes confusing | Make sure every path leads somewhere |
-| Drawing a flowchart after writing messy code | The flowchart may copy bad design | Plan logic first |
-
----
-
-## 11. Guided Practice
-
-### Practice 1: Even or Odd
-
-Create a text-based flowchart for an algorithm that inputs a number and outputs whether it is even or odd.
-
-<details>
-<summary>Suggested Answer</summary>
-
-```text
-[Start]
-   ↓
-[Input number]
-   ↓
-<Is number MOD 2 = 0?>
-   ├── Yes → [Output "Even"] → [End]
-   └── No  → [Output "Odd"] → [End]
-```
-
-</details>
-
----
-
-### Practice 2: Match Flowchart to Pseudocode
-
-Flowchart structure:
-
-```text
-[Start]
-   ↓
-[Input temperature]
-   ↓
-<Is temperature > 30?>
-   ├── Yes → [Output "Hot"] → [End]
-   └── No  → [Output "Not hot"] → [End]
-```
-
-Write the matching pseudocode.
-
-<details>
-<summary>Suggested Answer</summary>
-
-```text
-INPUT temperature
-
-IF temperature > 30 THEN
-    OUTPUT "Hot"
+IF total > 100 THEN
+    discount ← total * 0.10
 ELSE
-    OUTPUT "Not hot"
-END IF
+    discount ← 0
+ENDIF
+
+finalPrice ← total - discount
+OUTPUT finalPrice
 ```
 
-</details>
+---
+
+## 26. Worked Example: Add Five Scores
+
+### Problem
+
+Input five scores and output the total.
+
+### Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[total ← 0]
+    B --> C[count ← 1]
+    C --> D{count <= 5?}
+    D -- Yes --> E[/Input score/]
+    E --> F[total ← total + score]
+    F --> G[count ← count + 1]
+    G --> D
+    D -- No --> H[/Output total/]
+    H --> I([End])
+```
+
+### Pseudocode
+
+```text
+total ← 0
+count ← 1
+
+WHILE count <= 5
+    INPUT score
+    total ← total + score
+    count ← count + 1
+ENDWHILE
+
+OUTPUT total
+```
 
 ---
 
-### Practice 3: Identify Symbols
+## 27. Worked Example: Find Largest Number
 
-For the pass/fail algorithm, identify the symbol type for each step.
+### Problem
 
-| Step | Symbol Type |
-|---|---|
-| Start | Terminator |
-| Input mark | Input / Output |
-| Is mark >= 50? | Decision |
-| Output Pass | Input / Output |
-| End | Terminator |
+Input five numbers and output the largest.
+
+### Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input number/]
+    B --> C[largest ← number]
+    C --> D[count ← 2]
+    D --> E{count <= 5?}
+    E -- Yes --> F[/Input number/]
+    F --> G{number > largest?}
+    G -- Yes --> H[largest ← number]
+    G -- No --> I[count ← count + 1]
+    H --> I
+    I --> E
+    E -- No --> J[/Output largest/]
+    J --> K([End])
+```
+
+### Key Idea
+
+The first input becomes the starting value of `largest`.
+
+### Common Mistake
+
+Starting `largest` at 0 may fail if all numbers are negative.
 
 ---
 
-## 12. Independent Practice
+## 28. Worked Example: Password Attempts
 
-Complete these tasks without looking at answers first.
+### Problem
 
-### Task 1
+Allow up to three password attempts.
 
-Create a text-based flowchart for a program that inputs a mark and outputs:
+### Flowchart
 
-- `"A"` if the mark is 80 or above
-- `"B"` if the mark is 60 to 79
-- `"C"` otherwise
+```mermaid
+flowchart TD
+    A([Start]) --> B[attempts ← 0]
+    B --> C[loggedIn ← false]
+    C --> D{attempts < 3 AND loggedIn = false?}
+    D -- Yes --> E[/Input password/]
+    E --> F[attempts ← attempts + 1]
+    F --> G{password = "secret"?}
+    G -- Yes --> H[loggedIn ← true]
+    G -- No --> I[/Output "Incorrect"/]
+    H --> D
+    I --> D
+    D -- No --> J{loggedIn = true?}
+    J -- Yes --> K[/Output "Access granted"/]
+    J -- No --> L[/Output "Access denied"/]
+    K --> M([End])
+    L --> M
+```
 
-### Task 2
+### Variables
 
-Write the IB-style pseudocode for your flowchart in Task 1.
+```text
+attempts = counter
+loggedIn = flag
+```
 
-### Task 3
+---
 
-Write Java code for your flowchart in Task 1.
+## 29. Worked Example: Linear Search
 
-### Task 4
+### Problem
 
-Explain why a decision symbol is needed in your flowchart.
+Search a list for a target.
 
-### Task 5
+### Flowchart Idea
 
-Create three test values and predict the output.
+```mermaid
+flowchart TD
+    A([Start]) --> B[found ← false]
+    B --> C[index ← 1]
+    C --> D{index <= length AND found = false?}
+    D -- Yes --> E{list[index] = target?}
+    E -- Yes --> F[found ← true]
+    E -- No --> G[index ← index + 1]
+    F --> G
+    G --> D
+    D -- No --> H{found = true?}
+    H -- Yes --> I[/Output "Found"/]
+    H -- No --> J[/Output "Not found"/]
+    I --> K([End])
+    J --> K
+```
 
-| Test Mark | Expected Output | Reason |
+### Key Idea
+
+The loop continues while there are still items and the target has not been found.
+
+---
+
+## 30. Common Flowchart Errors
+
+| Error | Why It Is a Problem | Fix |
 |---|---|---|
+| Missing Start or End | unclear where algorithm begins/ends | add terminator symbols |
+| Wrong symbol | meaning becomes unclear | use correct standard symbol |
+| Decision not in diamond | condition not clearly shown | use diamond |
+| Branches not labelled | unclear which path is true/false | label Yes/No |
+| No arrow direction | order cannot be followed | add arrows |
+| Loop never updates variable | infinite loop risk | update counter/condition variable |
+| Output in wrong place | output repeated or missing | check flow |
+| Process before input | variable may not have value | input first |
+| Missing join after selection | paths do not reconnect | connect branches properly |
+| Too much text in symbol | hard to read | keep short and clear |
 
 ---
 
-## 13. Exam-style Questions
+## 31. Flowchart Exam Strategy
 
-### Question 1 [2 marks]
+When answering flowchart questions:
 
-State what a flowchart is used for.
+```text
+1. Identify Start and End.
+2. Follow arrows exactly.
+3. Label each decision branch.
+4. Track variables carefully.
+5. Watch for loops.
+6. Check where outputs happen.
+7. Use given inputs in order.
+8. Do not assume all branches run.
+9. Stop when End is reached.
+```
+
+### For Drawing Questions
+
+Make sure to include:
+
+```text
+correct symbols
+clear arrows
+labelled decision branches
+correct loop back arrow
+clear output
+clear End
+```
+
+---
+
+## 32. Scenario Answer Bank
+
+### If Asked: “Define flowchart”
+
+```text
+A flowchart is a graphical representation of an algorithm that uses standard symbols and arrows to show the order of steps and decisions.
+```
+
+### If Asked: “Why are flowcharts useful?”
+
+```text
+Flowcharts are useful because they visually show the logic of an algorithm, including sequence, decisions, and loops, making the algorithm easier to understand and check.
+```
+
+### If Asked: “What does a diamond show?”
+
+```text
+A diamond represents a decision or condition, usually with Yes/No or True/False branches.
+```
+
+### If Asked: “How does a flowchart show iteration?”
+
+```text
+Iteration is shown by an arrow that returns to an earlier decision or step, causing part of the flowchart to repeat while a condition is true.
+```
+
+### If Asked: “Convert to pseudocode”
+
+Use this pattern:
+
+```text
+Start/End are not usually written as code.
+Input/output symbols become INPUT/OUTPUT.
+Process symbols become assignments or actions.
+Decision diamonds become IF/ELSE or loop conditions.
+```
+
+---
+
+## 33. Common Misconceptions
+
+| Mistake | Why it is wrong | Better understanding |
+|---|---|---|
+| Flowchart is code | It is a diagram of an algorithm | visual representation |
+| Arrows are optional | arrows show order | always include flowlines |
+| Diamond is for calculation | diamond is for decision | rectangle is process |
+| Rectangle is for input | parallelogram is input/output | use correct symbol |
+| All branches run | only one branch after decision runs | follow condition |
+| Loop arrows are mistakes | arrows can go back for iteration | loop repeats |
+| Position decides order | arrows decide order | follow arrows |
+| Output happens automatically at end | output happens only at output symbol | track output |
+| Decision does not need labels | branch direction may be unclear | label Yes/No |
+| Flowchart can have no End | algorithm should finish | include End |
+
+---
+
+## 34. Guided Practice
+
+### Practice 1: Symbol
+
+What symbol is used for a decision?
 
 <details>
-<summary>Mark Scheme Style Answer</summary>
+<summary>Suggested Answer</summary>
 
-Award marks for:
-
-- it visually represents an algorithm or process
-- it shows the sequence of steps, decisions, and flow of control
-
-Example answer:
-
-A flowchart is used to visually represent an algorithm, showing the order of steps and the decisions made during execution.
+A diamond.
 
 </details>
 
 ---
 
-### Question 2 [4 marks]
+### Practice 2: Symbol
 
-A program inputs a student's mark and outputs `"Pass"` if the mark is at least 50, otherwise outputs `"Fail"`.
+What symbol is used for input or output?
 
-Describe the main flowchart symbols that would be used.
+<details>
+<summary>Suggested Answer</summary>
+
+A parallelogram.
+
+</details>
+
+---
+
+### Practice 3: Selection
+
+A flowchart checks `score >= 50?` and outputs Pass or Fail. What structure is used?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Selection, because the flowchart chooses between two branches based on a condition.
+
+</details>
+
+---
+
+### Practice 4: Iteration
+
+A flowchart arrow goes back to an earlier decision after increasing `count`. What structure is this?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Iteration, because part of the algorithm repeats.
+
+</details>
+
+---
+
+### Practice 5: Common Error
+
+A loop checks `count <= 10` but never changes `count`. What may happen?
+
+<details>
+<summary>Suggested Answer</summary>
+
+The loop may never end because the condition may remain true forever.
+
+</details>
+
+---
+
+## 35. Independent Practice
+
+### Question 1
+
+Define flowchart.
+
+### Question 2
+
+List five common flowchart symbols and their meanings.
+
+### Question 3
+
+Explain how flowcharts show sequence, selection, and iteration.
+
+### Question 4
+
+Draw or describe a flowchart for inputting a score and outputting Pass or Fail.
+
+### Question 5
+
+Draw or describe a flowchart for inputting two numbers and outputting the larger number.
+
+### Question 6
+
+Draw or describe a flowchart for inputting five scores and outputting the total.
+
+### Question 7
+
+Convert this pseudocode into a flowchart description:
+
+```text
+INPUT age
+IF age >= 18 THEN
+    OUTPUT "Adult"
+ELSE
+    OUTPUT "Child"
+ENDIF
+```
+
+### Question 8
+
+Convert a simple pass/fail flowchart into pseudocode.
+
+### Question 9
+
+Explain two common mistakes when drawing flowcharts.
+
+### Question 10
+
+Explain why flowcharts help debug algorithms.
+
+---
+
+## 36. Exam-style Questions
+
+### Question 1 [4 marks]
+
+Define flowchart and explain one benefit of using one.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Award marks for points such as:
+A flowchart is a graphical representation of an algorithm using standard symbols and arrows to show the order of steps and decisions. One benefit is that it visually shows the logic of the algorithm, making it easier to understand, communicate, and check for errors.
 
-- terminator symbol for Start and End
-- input/output symbol for inputting the mark
-- decision symbol for checking whether mark >= 50
-- input/output symbol for outputting Pass or Fail
-- arrows to show the direction of flow
+</details>
 
-Example answer:
+---
 
-The flowchart would use a terminator for Start and End, an input/output symbol to input the mark, a decision symbol to test whether the mark is at least 50, and output symbols for Pass and Fail. Arrows would show the direction of execution.
+### Question 2 [5 marks]
+
+State the purpose of the following flowchart symbols: oval, rectangle, parallelogram, diamond, arrow.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+An oval is used for Start or End. A rectangle is used for a process or calculation. A parallelogram is used for input or output. A diamond is used for a decision or condition. An arrow shows the direction of control flow.
 
 </details>
 
@@ -477,120 +1210,189 @@ The flowchart would use a terminator for Start and End, an input/output symbol t
 
 ### Question 3 [6 marks]
 
-A cinema gives a discount if a customer is under 18. Otherwise, the customer pays the normal price.
-
-Construct a flowchart-style solution using text and explain how selection is represented.
+Describe a flowchart that inputs a mark and outputs `Pass` if the mark is at least 50, otherwise outputs `Fail`.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Award marks for points such as:
-
-- starts the algorithm
-- inputs age
-- uses a decision to check age < 18
-- outputs discount price if true
-- outputs normal price if false
-- ends the algorithm
-- explains that selection is represented by a decision with two branches
-
-Example text-based flowchart:
-
-```text
-[Start]
-   ↓
-[Input age]
-   ↓
-<Is age < 18?>
-   ├── Yes → [Output "Discount price"] → [End]
-   └── No  → [Output "Normal price"] → [End]
-```
-
-Selection is represented by the decision condition `age < 18`. The algorithm follows one branch if the condition is true and another branch if it is false.
+The flowchart starts with a Start symbol, then an input/output symbol to input the mark. It then uses a decision diamond with the condition `mark >= 50?`. The Yes branch goes to an output symbol displaying `Pass`. The No branch goes to an output symbol displaying `Fail`. Both branches then connect to the End symbol.
 
 </details>
 
 ---
 
-## 14. Classroom Activity
+### Question 4 [6 marks]
 
-### Activity: Flowchart Relay
+Explain how a loop is represented in a flowchart and give an example.
 
-**Time:** 15-20 minutes  
-**Grouping:** Pairs or small groups
+<details>
+<summary>Mark Scheme Style Answer</summary>
 
-Each group chooses one problem:
+A loop is represented by a decision symbol and an arrow that returns to an earlier step if the loop should continue. For example, a flowchart that outputs numbers from 1 to 5 may initialize `count` to 1, check `count <= 5?`, output `count`, increase `count`, and then use an arrow back to the decision. When the condition is false, the flow continues to End.
 
-1. Check if a password is at least 8 characters long  
-2. Decide whether a number is positive, negative, or zero  
-3. Calculate whether a student gets a discount based on age  
-4. Decide whether a temperature is cold, normal, or hot  
-
-For your chosen problem:
-
-1. Write the problem rule.
-2. Identify input.
-3. Identify decisions.
-4. Create a text-based flowchart.
-5. Convert the flowchart into pseudocode.
-6. Write one Java `if` statement that matches the decision.
-
-| Part | Your Answer |
-|---|---|
-| Input |  |
-| Decision condition |  |
-| Yes / True output |  |
-| No / False output |  |
-| Pseudocode |  |
-| Java condition |  |
-
-::: tip Exit Ticket
-Before leaving, write one sentence explaining why decision branches should be labelled in a flowchart.
-:::
+</details>
 
 ---
 
-## 15. Homework
+### Question 5 [6 marks]
 
-### Homework Task
+A flowchart has a decision symbol but the branches are not labelled. Explain why this is a problem and how to fix it.
 
-Choose one of the following systems:
+<details>
+<summary>Mark Scheme Style Answer</summary>
 
-- cinema ticket discount checker
-- student grade classifier
-- simple login checker
-- delivery fee decision system
-- competition entry checker
+This is a problem because it is unclear which branch should be followed when the condition is true or false. The reader may choose the wrong path, causing misunderstanding of the algorithm. The branches should be labelled clearly, usually as Yes/No or True/False.
 
-Complete the following:
+</details>
 
-1. Write a short description of the system.
-2. Identify input, processing, and output.
-3. Create a text-based flowchart.
-4. Write matching IB-style pseudocode.
-5. Write equivalent Java code.
-6. Create three test cases.
-7. Write one exam-style paragraph explaining how the flowchart represents the algorithm.
+---
 
-### Suggested Paragraph Structure
+## 37. Classroom Activity
+
+### Activity 1: Symbol Match
+
+Students match symbols to meanings:
 
 ```text
-The flowchart represents the algorithm by showing ...
-The input is ...
-The decision symbol checks whether ...
-If the condition is true, the algorithm ...
-If the condition is false, the algorithm ...
-This makes the logic easier to understand because ...
+oval
+rectangle
+parallelogram
+diamond
+arrow
+connector
+```
+
+Meanings:
+
+```text
+start/end
+process
+input/output
+decision
+flow direction
+connect parts
 ```
 
 ---
 
-## 16. One-page Revision Summary
+### Activity 2: Algorithm to Flowchart
+
+Students convert these algorithms into flowchart descriptions:
+
+```text
+rectangle area
+pass/fail
+discount calculator
+count from 1 to 5
+add five scores
+```
+
+---
+
+### Activity 3: Flowchart Debugging
+
+Give students faulty flowcharts with:
+
+```text
+missing End
+unlabelled decision branches
+loop without counter update
+wrong symbol
+output in wrong place
+arrow pointing the wrong way
+```
+
+Students identify and fix the issue.
+
+---
+
+## 38. Homework
+
+### Homework Part A: Concept Explanation
+
+In 6-8 sentences, explain what a flowchart is and how it can show sequence, selection, and iteration.
+
+---
+
+### Homework Part B: Flowchart Design
+
+Draw or describe flowcharts for:
+
+```text
+1. input two numbers and output their sum
+2. input a score and output Pass/Fail
+3. input 5 prices and output total
+4. input password until it is correct
+```
+
+---
+
+### Homework Part C: Conversion
+
+Convert this pseudocode into a flowchart description:
+
+```text
+INPUT total
+
+IF total > 100 THEN
+    discount ← total * 0.10
+ELSE
+    discount ← 0
+ENDIF
+
+finalPrice ← total - discount
+OUTPUT finalPrice
+```
+
+---
+
+### Homework Part D: Misconception Correction
+
+Correct these statements:
+
+```text
+A flowchart does not need arrows.
+A diamond is used for calculation.
+All branches after a decision are followed.
+A loop arrow means the flowchart is wrong.
+A flowchart does not need an End symbol.
+```
+
+---
+
+## 39. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| Definition | A flowchart visually represents an algorithm |
-| Main symbols | Terminator, process, input/output, decision, arrow |
-| Programming link | Decision diamonds often become Java `if` statements |
-| Exam skill | Label decision branches clearly |
-| Common phrase | "The arrows show the direction of execution." |
+| Flowchart | Graphical representation of an algorithm |
+| Oval | Start / End |
+| Rectangle | Process / calculation / assignment |
+| Parallelogram | Input / Output |
+| Diamond | Decision / condition |
+| Arrow | Direction of control flow |
+| Connector | Joins separated parts |
+| Sequence | Steps happen in order |
+| Selection | Decision creates branches |
+| Iteration | Arrow returns to repeat steps |
+| Condition | True/false expression inside decision |
+| Yes/No labels | Show which branch to follow |
+| Loop body | Steps repeated in a loop |
+| Common error | missing arrows, wrong symbols, unlabelled branches |
+| Exam phrase | A flowchart uses standard symbols and arrows to visually show the steps, decisions, and loops in an algorithm |
+
+---
+
+## 40. Quick Self-test
+
+Before moving on, students should be able to answer these:
+
+1. What is a flowchart?
+2. What symbol is used for Start/End?
+3. What symbol is used for a process?
+4. What symbol is used for input/output?
+5. What symbol is used for a decision?
+6. What do arrows show?
+7. How does a flowchart show selection?
+8. How does a flowchart show iteration?
+9. Why should decision branches be labelled?
+10. What is one common flowchart error?
