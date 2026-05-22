@@ -4,12 +4,17 @@
 
 By the end of this lesson, students should be able to:
 
-- define **abstraction**
+- define abstraction
 - explain why abstraction is useful in computational thinking
-- distinguish between relevant and irrelevant details
-- simplify a real-world problem into a useful model
-- apply abstraction when designing algorithms and programs
-- write an exam-style explanation using clear CS vocabulary
+- identify important and unnecessary details in a problem
+- simplify a problem by focusing on relevant information
+- distinguish abstraction from decomposition
+- explain how abstraction helps algorithm design
+- explain how abstraction helps modelling real-world systems
+- identify examples of abstraction in maps, login systems, games, databases, and apps
+- explain risks of removing too much detail
+- connect abstraction to algorithms, flowcharts, data models, and programming
+- answer exam-style questions about abstraction
 
 ---
 
@@ -19,12 +24,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | B1 Computational Thinking |
 | Label | SL Core |
-| Main skill | Simplifying problems by focusing on important details |
-| Connected units | B2 Programming, B3 OOP, A3 Databases, A4 Machine Learning, IA project |
-| Exam relevance | Scenario-based explanation questions, algorithm design, modelling, data selection |
+| Main skill | Simplifying a problem by focusing on relevant details and ignoring unnecessary details |
+| Connected topics | Decomposition, algorithms, flowcharts, trace tables, databases, programming |
+| Practical focus | Deciding which details matter for the solution |
+| Exam relevance | Definition, benefits, examples, decomposition vs abstraction, scenario explanation |
 
 ::: tip Learning Focus
-Abstraction is about deciding **what matters** and **what can be ignored** for a specific problem. It is not random guessing or deleting information blindly.
+Abstraction means focusing on the important details of a problem and ignoring unnecessary details. It helps reduce complexity and makes algorithm design easier.
 :::
 
 ---
@@ -33,13 +39,23 @@ Abstraction is about deciding **what matters** and **what can be ignored** for a
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Abstraction | 抽象化 | Focusing on essential details and ignoring unnecessary details |
-| Relevant detail | 相关信息 | Information needed to solve the problem |
-| Irrelevant detail | 无关信息 | Information that does not affect the solution |
-| Model | 模型 | A simplified representation of a real-world system |
-| Complexity | 复杂度 | The amount of detail or difficulty in a problem |
-| Generalization | 概括 | Creating a solution that works for a group of similar cases |
-| Requirement | 需求 | Something the system needs to do |
+| Abstraction | 抽象 | Focusing on important details and ignoring unnecessary details |
+| Relevant detail | 相关细节 | Detail needed to solve the problem |
+| Irrelevant detail | 无关细节 | Detail not needed for the solution |
+| Essential information | 关键信息 | Information that must be kept |
+| Simplification | 简化 | Making a problem easier to understand or solve |
+| Model | 模型 | Simplified representation of a real system |
+| Representation | 表示 | How information is shown or described |
+| Complexity | 复杂度 | How difficult a problem/system is to understand or manage |
+| Decomposition | 分解 | Breaking a problem into smaller sub-problems |
+| Algorithm | 算法 | Step-by-step method for solving a problem |
+| Data model | 数据模型 | Simplified structure showing data and relationships |
+| Generalization | 概括 | Creating a common idea from similar examples |
+| Pattern | 模式 | Repeated structure or relationship |
+| Interface | 接口 | Simplified way for users/systems to interact with complexity |
+| Detail hiding | 细节隐藏 | Hiding unnecessary internal details |
+| Assumption | 假设 | Simplifying idea accepted for solving a problem |
+| Boundary | 边界 | Limit of what is included in the model/solution |
 
 ---
 
@@ -50,39 +66,71 @@ Abstraction is about deciding **what matters** and **what can be ignored** for a
 
 ### 中文讲解
 
-**Abstraction（抽象化）** 指的是在解决问题时，只保留重要的信息，忽略暂时不需要的细节。
+**Abstraction（抽象）** 是 computational thinking 中用来降低复杂度的方法。
 
-现实世界的问题通常非常复杂。如果我们把所有细节都放进程序里，程序会变得很难设计、很难测试，也很难维护。所以在计算机科学中，我们会先判断：
+它的意思是：
 
-- 哪些信息是解决问题必须用到的？
-- 哪些信息不会影响程序结果？
-- 哪些细节可以先忽略？
-- 我们能不能把现实问题简化成一个模型？
+```text
+focus on important details
+ignore unnecessary details
+```
 
-例如，我们要设计一个“公交车到站提醒系统”。重要的信息可能包括：
+比如设计一个 route-finding app。  
+重要的信息可能是：
 
-- 公交车编号
-- 当前站点
-- 目标站点
-- 预计到达时间
-- 车辆当前位置
+```text
+start location
+destination
+roads
+distance
+traffic
+speed limit
+```
 
-不重要的信息可能包括：
+不重要的信息可能是：
 
-- 司机今天穿什么鞋
-- 座椅的颜色
-- 乘客正在听什么音乐
-- 车窗上有没有贴纸
+```text
+building colour
+shop window design
+tree shape
+billboard text
+```
 
-这些细节在现实中存在，但对“到站提醒”这个程序没有帮助，所以可以忽略。
+因为这些信息不会影响路线计算。
 
-Abstraction 的核心作用是：
+Abstraction 的重点不是“随便删细节”。  
+而是判断：
 
-- 降低问题复杂度
-- 帮助程序员专注于关键需求
-- 让算法更清晰
-- 让模型更容易实现
-- 避免程序包含太多无用信息
+```text
+哪些 detail 对解决问题有用
+哪些 detail 可以暂时忽略
+```
+
+例如设计 login algorithm。  
+重要信息是：
+
+```text
+username
+password
+stored username
+stored password
+whether they match
+```
+
+不重要信息是：
+
+```text
+button colour
+background image
+font style
+animation effect
+```
+
+简单来说：
+
+```text
+abstraction = keep what matters, ignore what does not matter
+```
 
 </template>
 
@@ -90,366 +138,1101 @@ Abstraction 的核心作用是：
 
 ### English Explanation
 
-**Abstraction** means focusing on the essential details of a problem and ignoring unnecessary details.
+**Abstraction** is a computational thinking method used to reduce complexity.
 
-Real-world problems are often very complex. If a program tries to include every detail, the solution may become difficult to design, test, and maintain. In computer science, we first decide:
+It means:
 
-- Which information is needed to solve the problem?
-- Which information does not affect the result?
-- Which details can be ignored?
-- Can the real-world problem be simplified into a useful model?
+```text
+focus on important details
+ignore unnecessary details
+```
 
-For example, if we design a bus arrival reminder system, relevant details may include:
+For example, when designing a route-finding app, important information may include:
 
-- bus number
-- current stop
-- destination stop
-- estimated arrival time
-- bus location
+```text
+start location
+destination
+roads
+distance
+traffic
+speed limit
+```
 
-Irrelevant details may include:
+Unnecessary information may include:
 
-- the driver's shoes
-- the colour of the seats
-- what music a passenger is listening to
-- stickers on the window
+```text
+building colour
+shop window design
+tree shape
+billboard text
+```
 
-These details may exist in the real world, but they do not help solve the bus arrival problem, so they can be ignored.
+because these details do not affect route calculation.
 
-The main benefits of abstraction are:
+Abstraction does not mean randomly deleting details.  
+It means deciding:
 
-- reducing complexity
-- helping programmers focus on key requirements
-- making algorithms clearer
-- making models easier to implement
-- avoiding unnecessary information in a program
+```text
+which details are useful for solving the problem
+which details can be ignored for now
+```
+
+For example, when designing a login algorithm, important information includes:
+
+```text
+username
+password
+stored username
+stored password
+whether they match
+```
+
+Unnecessary information includes:
+
+```text
+button colour
+background image
+font style
+animation effect
+```
+
+In simple terms:
+
+```text
+abstraction = keep what matters, ignore what does not matter
+```
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. Real-life Example
+## 5. What Is Abstraction?
 
-### Example: Food Delivery App
+Abstraction is the process of reducing complexity by focusing on relevant details and ignoring unnecessary details.
 
-A company wants to create a food delivery app.
-
-The real world contains many details:
-
-- restaurant name
-- restaurant location
-- customer address
-- menu items
-- item prices
-- delivery driver location
-- payment status
-- weather
-- colour of restaurant walls
-- chef's favourite song
-- customer's phone wallpaper
-
-A good programmer must decide which details are relevant.
-
-| Detail | Relevant? | Reason |
-|---|---|---|
-| Restaurant name | Yes | User needs to choose a restaurant |
-| Customer address | Yes | Needed for delivery |
-| Menu items | Yes | User needs to order food |
-| Item prices | Yes | Needed to calculate cost |
-| Driver location | Yes | Needed for delivery tracking |
-| Weather | Maybe | Could affect delivery time, but may not be needed in first version |
-| Colour of restaurant walls | No | Does not affect ordering or delivery |
-| Chef's favourite song | No | Does not affect the system |
-| Customer's phone wallpaper | No | Not needed for food ordering |
-
-::: info Abstraction Decision
-The programmer keeps the details needed for ordering, payment, and delivery, and ignores details that do not affect the system.
-:::
-
----
-
-## 6. IB Pseudocode Pattern
-
-Abstraction can be shown by designing an algorithm that only uses relevant data.
-
-Example: Calculate delivery cost
-
-Relevant inputs:
-
-- distance
-- base fee
-- price per kilometre
-
-Irrelevant details:
-
-- driver name
-- restaurant wall colour
-- music in restaurant
+### Simple Definition
 
 ```text
-BEGIN CalculateDeliveryFee
-    INPUT distance
-    baseFee = 5
-    pricePerKm = 1.2
-    deliveryFee = baseFee + distance * pricePerKm
-    OUTPUT deliveryFee
-END
+Abstraction keeps the important details needed to solve a problem and leaves out details that are not needed.
 ```
 
-This algorithm abstracts the real delivery situation into only the values needed to calculate the fee.
+### Example
 
-::: tip Exam Note
-If an exam asks how abstraction is used, explain **which details are kept**, **which details are ignored**, and **why this makes the problem easier to solve**.
+Problem:
+
+```text
+Calculate whether a student passes.
+```
+
+Important details:
+
+```text
+student score
+pass mark
+comparison rule
+```
+
+Unnecessary details:
+
+```text
+student hair colour
+desk number
+font style on report
+classroom wall colour
+```
+
+::: tip Exam Phrase
+Abstraction reduces complexity by focusing on the important details of a problem and ignoring irrelevant details.
 :::
 
 ---
 
-## 7. Java Code Example
+## 6. Why Abstraction Is Useful
 
-Below is a simple Java example showing abstraction in a delivery fee calculation.
+Abstraction helps because real-world systems contain too much detail.
 
-```java
-public class DeliveryFeeCalculator {
-    public static void main(String[] args) {
-        double distance = 4.5;
+### Benefits
 
-        double fee = calculateDeliveryFee(distance);
-
-        System.out.println("Delivery fee: $" + fee);
-    }
-
-    public static double calculateDeliveryFee(double distance) {
-        double baseFee = 5.0;
-        double pricePerKm = 1.2;
-
-        return baseFee + distance * pricePerKm;
-    }
-}
-```
-
-This program ignores many real-world details and focuses only on the data needed for the calculation.
-
----
-
-## 8. Line-by-line Code Explanation
-
-| Code Part | Explanation |
+| Benefit | Explanation |
 |---|---|
-| `double distance = 4.5;` | Stores the relevant input: delivery distance |
-| `calculateDeliveryFee(distance)` | Calls a method that calculates the fee |
-| `baseFee = 5.0` | Stores the fixed starting fee |
-| `pricePerKm = 1.2` | Stores the cost per kilometre |
-| `return baseFee + distance * pricePerKm;` | Calculates and returns the delivery fee |
-| `System.out.println(...)` | Outputs the result |
+| Reduces complexity | fewer details need to be considered |
+| Makes problem clearer | focus stays on what matters |
+| Helps algorithm design | steps can be based on relevant data |
+| Saves time | unnecessary details are not processed |
+| Improves communication | simplified models are easier to explain |
+| Supports reuse | general ideas can be reused in similar problems |
+| Makes testing easier | test important logic instead of irrelevant features |
+| Helps modelling | real systems can be represented in simpler forms |
 
-### Why this shows abstraction
+### Key Idea
 
-The program does not include every real-world detail about delivery.
-
-It ignores:
-
-- driver's clothes
-- restaurant decoration
-- food smell
-- customer's phone model
-
-It keeps:
-
-- distance
-- base fee
-- price per kilometre
-
-This is abstraction because the program focuses only on the essential details needed for the calculation.
+A problem becomes easier when irrelevant detail is removed.
 
 ---
 
-## 9. Step-by-step Execution
+## 7. Relevant and Irrelevant Details
 
-Given:
+The most important skill in abstraction is deciding what matters.
 
-| Variable | Value |
-|---|---:|
-| distance | 4.5 |
-| baseFee | 5.0 |
-| pricePerKm | 1.2 |
+### Relevant Details
 
-Execution:
+Relevant details are needed to solve the problem.
 
-| Step | Action | Result |
-|---|---|---|
-| 1 | Store distance | distance = 4.5 |
-| 2 | Call calculateDeliveryFee(4.5) | method starts |
-| 3 | Set baseFee | baseFee = 5.0 |
-| 4 | Set pricePerKm | pricePerKm = 1.2 |
-| 5 | Calculate fee | 5.0 + 4.5 × 1.2 = 10.4 |
-| 6 | Output fee | Delivery fee: $10.4 |
+### Irrelevant Details
 
-Final output:
+Irrelevant details do not affect the solution.
 
-```text
-Delivery fee: $10.4
-```
-
----
-
-## 10. Common Mistakes
-
-| Mistake | Why it is a problem | Better habit |
-|---|---|---|
-| Thinking abstraction means removing random details | Important information may be lost | Remove only details that do not affect the solution |
-| Keeping every real-world detail | The system becomes too complex | Focus on requirements |
-| Ignoring the purpose of the system | You may keep the wrong information | Ask what the system needs to achieve |
-| Confusing abstraction with decomposition | They are different skills | Decomposition breaks into parts; abstraction simplifies details |
-| Saying “ignore details” without examples | Exam answer may be too vague | Name specific relevant and irrelevant details |
-
----
-
-## 11. Guided Practice
-
-### Practice 1: School Attendance System
-
-A school wants to design an attendance system.
-
-Identify relevant and irrelevant details.
-
-<details>
-<summary>Suggested Answer</summary>
+### Example: Password Strength Checker
 
 Relevant details:
 
-- student ID
-- student name
-- date
-- attendance status
-- class
-- teacher
+```text
+password length
+uppercase letters
+lowercase letters
+digits
+special characters
+```
 
 Irrelevant details:
 
-- student's favourite food
-- colour of student's bag
-- teacher's hairstyle
-- classroom wall colour
+```text
+screen brightness
+keyboard colour
+user's favourite food
+button animation
+```
 
-Explanation:
+### Exam Tip
 
-The relevant details are needed to record and check attendance. The irrelevant details do not affect whether a student is present or absent.
-
-</details>
-
----
-
-### Practice 2: Choose Useful Data
-
-A cinema booking system needs to reserve seats.
-
-| Detail | Relevant or Irrelevant? |
-|---|---|
-| movie title | Relevant |
-| show time | Relevant |
-| seat number | Relevant |
-| payment status | Relevant |
-| customer's shoe size | Irrelevant |
-| cinema carpet pattern | Irrelevant |
+Always connect the detail to the purpose of the algorithm.
 
 ---
 
-### Practice 3: Java Variable Planning
+## 8. Abstraction vs Decomposition
 
-For a cinema booking system, choose suitable variables for the important details.
+Students often confuse abstraction and decomposition.
+
+| Concept | Meaning | Main Question |
+|---|---|---|
+| Decomposition | break a problem into smaller parts | What parts make up the problem? |
+| Abstraction | remove unnecessary detail | What details are important? |
+
+### Example: Online Shop
+
+Decomposition:
+
+```text
+login
+search products
+shopping cart
+payment
+delivery tracking
+```
+
+Abstraction:
+
+```text
+keep product name, price, quantity, customer address
+ignore product shelf colour, page background image, button animation
+```
+
+### Quick Memory
+
+```text
+decomposition = split into parts
+abstraction = simplify by detail selection
+```
+
+---
+
+## 9. Abstraction and Algorithms
+
+Algorithms need only the details required for solving the problem.
+
+### Example: Area of Rectangle
+
+Important details:
+
+```text
+length
+width
+formula: area = length * width
+```
+
+Unnecessary details:
+
+```text
+paper colour
+room temperature
+person calculating it
+```
+
+Algorithm:
+
+```text
+INPUT length
+INPUT width
+area ← length * width
+OUTPUT area
+```
+
+### Key Point
+
+Abstraction helps identify the variables and operations needed in the algorithm.
+
+---
+
+## 10. Abstraction and Modelling
+
+A model is a simplified representation of a real system.
+
+### Example: Weather App
+
+A weather app may model weather using:
+
+```text
+temperature
+humidity
+wind speed
+rain chance
+location
+time
+```
+
+It may ignore:
+
+```text
+exact shape of each cloud
+colour of nearby buildings
+number of birds in the sky
+```
+
+### Why?
+
+The model only keeps information useful for weather prediction/display.
+
+### Exam Phrase
+
+Abstraction is used to create simplified models that include important features and ignore unnecessary details.
+
+---
+
+## 11. Abstraction in Maps
+
+A map is a strong example of abstraction.
+
+### Road Map Keeps
+
+```text
+roads
+road names
+junctions
+distances
+landmarks
+directions
+```
+
+### Road Map Ignores
+
+```text
+every tree
+exact building colour
+every window
+road surface texture
+people walking
+```
+
+### Why?
+
+A road map is designed for navigation, not for showing every real-world detail.
+
+### Key Idea
+
+Different maps use different abstractions depending on purpose.
+
+---
+
+## 12. Abstraction in Databases
+
+A database stores important data about entities.
+
+### Example: Student Table
+
+Useful fields:
+
+```text
+StudentID
+Name
+DateOfBirth
+Class
+Email
+```
+
+Usually unnecessary for school records:
+
+```text
+favourite snack
+shoe colour
+desk position
+hair style
+```
+
+### Link to A3
+
+Database design uses abstraction by deciding:
+
+```text
+what entities are important
+what attributes are needed
+what relationships matter
+```
+
+### Key Idea
+
+A table is not the whole real student.  
+It is an abstract representation containing only useful data.
+
+---
+
+## 13. Abstraction in Games
+
+Games use abstraction constantly.
+
+### Example: Racing Game
+
+Important details:
+
+```text
+car speed
+position
+direction
+track boundary
+collision
+lap time
+```
+
+Unnecessary details may include:
+
+```text
+every screw in the car engine
+exact temperature of each tyre
+every leaf beside the track
+```
+
+### Why?
+
+The game keeps enough detail to make gameplay work, but not every real-world detail.
+
+### Important
+
+More realistic games may include more details, but still not everything.
+
+---
+
+## 14. Abstraction in User Interfaces
+
+A user interface hides complex internal details.
+
+### Example: Save Button
+
+The user clicks:
+
+```text
+Save
+```
+
+The system may internally:
+
+```text
+check file changes
+open file connection
+write data
+handle errors
+update version history
+sync to cloud
+```
+
+The user does not need to know all internal steps.
+
+### Key Idea
+
+Interfaces use abstraction to make systems easier to use.
+
+---
+
+## 15. Detail Hiding
+
+Detail hiding means hiding internal complexity.
+
+### Example: Function
+
+A function may be called:
+
+```text
+calculateAverage(scores)
+```
+
+The user of the function does not need to know every internal step.
+
+They only need to know:
+
+```text
+input = scores
+output = average
+```
+
+### Why Useful?
+
+```text
+simpler code use
+less repeated detail
+easier maintenance
+clearer program structure
+```
+
+### Programming Link
+
+Functions, libraries, and APIs all use abstraction.
+
+---
+
+## 16. Abstraction and Generalization
+
+Generalization means finding a common pattern from similar cases.
+
+### Example
+
+Instead of writing separate algorithms:
+
+```text
+calculate average for maths
+calculate average for English
+calculate average for science
+```
+
+Use one general algorithm:
+
+```text
+calculate average for any list of scores
+```
+
+### Benefit
+
+The same solution can be reused.
+
+### Key Idea
+
+Abstraction helps move from one specific case to a more general solution.
+
+---
+
+## 17. Abstraction Level
+
+Abstraction can happen at different levels.
+
+### High-Level Abstraction
+
+```text
+process payment
+```
+
+This hides many details.
+
+### Lower-Level Detail
+
+```text
+input card number
+validate card number
+send request to payment provider
+receive confirmation
+record transaction
+```
+
+### Key Idea
+
+Use the level of detail that matches the task.
+
+Exam answers usually need enough detail to show understanding, but not every implementation detail.
+
+---
+
+## 18. Too Much or Too Little Detail
+
+Good abstraction keeps the right amount of detail.
+
+### Too Much Detail
+
+Problem becomes complex and hard to solve.
+
+Example:
+
+```text
+including button colour in a login algorithm
+```
+
+### Too Little Detail
+
+Important information is missing.
+
+Example:
+
+```text
+login algorithm ignores password
+```
+
+### Good Balance
+
+Keep details that affect the logic or output.  
+Ignore details that do not affect the solution.
+
+---
+
+## 19. Risk of Bad Abstraction
+
+Bad abstraction can cause wrong solutions.
+
+### Removing Too Much Detail
+
+A route app ignores traffic.
+
+Result:
+
+```text
+route may be unrealistic or slow
+```
+
+### Keeping Too Much Detail
+
+A route app considers every building colour.
+
+Result:
+
+```text
+unnecessary complexity
+slower design
+confusing algorithm
+```
+
+### Key Exam Point
+
+Abstraction is useful, but important details must not be removed.
+
+---
+
+## 20. How to Apply Abstraction
+
+A practical method:
+
+```text
+1. Read the problem.
+2. Identify the goal.
+3. Identify required inputs and outputs.
+4. List possible details.
+5. Decide which details affect the solution.
+6. Ignore details that do not affect the solution.
+7. Design the algorithm/model using the relevant details.
+```
+
+### Helpful Questions
+
+```text
+Does this detail affect the output?
+Is this detail needed for a decision?
+Is this detail needed for a calculation?
+Is this detail needed for storage?
+Can the algorithm work without it?
+Would including it make the solution unnecessarily complex?
+```
+
+---
+
+## 21. Worked Example: Login System
+
+### Problem
+
+Check if a user can log in.
+
+### Important Details
+
+```text
+entered username
+entered password
+stored username
+stored password
+match or not match
+```
+
+### Unnecessary Details
+
+```text
+button colour
+font style
+background image
+screen size
+animation
+```
+
+### Abstracted Algorithm
+
+```text
+INPUT username
+INPUT password
+
+IF username = storedUsername AND password = storedPassword THEN
+    OUTPUT "Access granted"
+ELSE
+    OUTPUT "Access denied"
+ENDIF
+```
+
+### Explanation
+
+The algorithm keeps the details needed to check login and ignores visual details that do not affect access.
+
+---
+
+## 22. Worked Example: Route Planning
+
+### Problem
+
+Find a route from one place to another.
+
+### Important Details
+
+```text
+start point
+destination
+roads
+distances
+traffic
+road closures
+travel mode
+```
+
+### Unnecessary Details
+
+```text
+building colours
+shop signs
+tree shapes
+car paint colours
+cloud shapes
+```
+
+### Explanation
+
+The route algorithm needs details that affect travel time or path choice.  
+It ignores details that do not affect navigation.
+
+---
+
+## 23. Worked Example: Grade Calculator
+
+### Problem
+
+Calculate a student's grade from marks.
+
+### Important Details
+
+```text
+marks
+total mark
+percentage
+grade boundaries
+```
+
+### Unnecessary Details
+
+```text
+student's favourite colour
+classroom temperature
+paper colour
+chair number
+```
+
+### Algorithm
+
+```text
+INPUT mark
+IF mark >= 80 THEN
+    OUTPUT "A"
+ELSE IF mark >= 60 THEN
+    OUTPUT "B"
+ELSE IF mark >= 50 THEN
+    OUTPUT "C"
+ELSE
+    OUTPUT "Fail"
+ENDIF
+```
+
+### Abstraction
+
+Only marks and grade boundaries are needed.
+
+---
+
+## 24. Worked Example: Library Search
+
+### Problem
+
+Search for a book in a library system.
+
+### Important Details
+
+```text
+book title
+author
+ISBN
+availability
+location/shelf
+```
+
+### Unnecessary Details
+
+```text
+cover colour if not searched
+exact weight of book
+font on cover
+number of pages if not needed
+```
+
+### Explanation
+
+The system keeps information needed to find and borrow the book.  
+It does not need every physical detail.
+
+---
+
+## 25. Worked Example: Game Collision
+
+### Problem
+
+Check if a player hits an enemy.
+
+### Important Details
+
+```text
+player position
+enemy position
+player size/hitbox
+enemy size/hitbox
+collision rule
+```
+
+### Unnecessary Details
+
+```text
+player costume colour
+background music
+cloud shape
+menu font
+```
+
+### Explanation
+
+Collision detection abstracts game objects as positions and hitboxes, not full real-world bodies.
+
+---
+
+## 26. Worked Example: Shopping Discount
+
+### Problem
+
+Calculate final price after discount.
+
+### Important Details
+
+```text
+original price
+membership status
+discount rate
+minimum spending threshold
+tax if required
+```
+
+### Unnecessary Details
+
+```text
+product shelf location
+cashier name
+store wall colour
+shopping bag colour
+```
+
+### Algorithm Idea
+
+```text
+INPUT price
+INPUT isMember
+
+IF isMember = true THEN
+    discount ← price * 0.10
+ELSE
+    discount ← 0
+ENDIF
+
+finalPrice ← price - discount
+OUTPUT finalPrice
+```
+
+### Explanation
+
+Only the data affecting final price is kept.
+
+---
+
+## 27. Worked Example: Attendance System
+
+### Problem
+
+Record whether students are present.
+
+### Important Details
+
+```text
+student ID
+student name
+date
+attendance status
+class
+teacher
+```
+
+### Unnecessary Details
+
+```text
+student hairstyle
+desk colour
+weather outside
+teacher's shoe colour
+```
+
+### Explanation
+
+The system abstracts students into records with fields needed for attendance, not all real-life details.
+
+---
+
+## 28. Abstraction in Exam Answers
+
+When asked about abstraction, do not only say:
+
+```text
+it makes things simple
+```
+
+This is too vague.
+
+### Stronger Answer
+
+```text
+Abstraction reduces complexity by keeping only the details needed for the solution and ignoring irrelevant details.
+```
+
+### Scenario-Based Answer
+
+```text
+For a login system, the username and password are important because they determine whether access is allowed. The colour of the login button can be ignored because it does not affect the login logic.
+```
+
+### Best Structure
+
+```text
+1. Define abstraction.
+2. Identify important details.
+3. Identify ignored details.
+4. Explain why ignoring them is useful.
+```
+
+---
+
+## 29. Scenario Answer Bank
+
+### If Asked: “Define abstraction”
+
+```text
+Abstraction is focusing on the important details of a problem and ignoring unnecessary details.
+```
+
+### If Asked: “Why is abstraction useful?”
+
+```text
+Abstraction reduces complexity because the algorithm only needs to consider details that affect the solution.
+```
+
+### If Asked: “Identify relevant details”
+
+```text
+The relevant details are [detail 1], [detail 2], and [detail 3] because they affect the required output or decision.
+```
+
+### If Asked: “Identify irrelevant details”
+
+```text
+The irrelevant details are [detail 1] and [detail 2] because they do not affect the algorithm's logic or output.
+```
+
+### If Asked: “Difference from decomposition”
+
+```text
+Decomposition breaks the problem into smaller parts, while abstraction removes unnecessary details and keeps the important information.
+```
+
+---
+
+## 30. Common Misconceptions
+
+| Mistake | Why it is wrong | Better understanding |
+|---|---|---|
+| Abstraction means deleting random details | Important details must be kept | remove only irrelevant details |
+| Abstraction and decomposition are the same | They solve complexity differently | abstraction filters details; decomposition splits parts |
+| Abstraction makes answers vague | Good abstraction is focused and clear | keep relevant logic |
+| All details should be removed | then solution may be wrong | keep details that affect output |
+| No details should be removed | problem remains too complex | ignore irrelevant details |
+| Visual details always matter | not for logic unless specified | depends on purpose |
+| Abstraction is only for diagrams | used in algorithms, databases, UI, programming | broad CT concept |
+| A model is the same as reality | model is simplified representation | it leaves out details |
+| Abstraction always improves accuracy | bad abstraction can remove needed info | choose carefully |
+| One abstraction fits every purpose | purpose decides what matters | different tasks need different details |
+
+---
+
+## 31. Guided Practice
+
+### Practice 1: Define
+
+What is abstraction?
 
 <details>
 <summary>Suggested Answer</summary>
 
-| Detail | Possible Java Variable |
-|---|---|
-| movie title | `movieTitle` |
-| show time | `showTime` |
-| seat number | `seatNumber` |
-| payment status | `isPaid` |
-| ticket price | `ticketPrice` |
+Abstraction is focusing on important details and ignoring unnecessary details.
 
 </details>
 
 ---
 
-## 12. Independent Practice
+### Practice 2: Relevant Detail
 
-Complete these tasks without looking at answers first.
-
-### Task 1
-
-A hospital wants to create an appointment booking system.
-
-List at least six relevant details and four irrelevant details.
-
-### Task 2
-
-Choose three relevant details and explain why each one is needed.
-
-| Detail | Why it is needed |
-|---|---|
-
-### Task 3
-
-Write suitable Java variable names for five relevant details.
-
-Example format:
-
-```java
-patientName
-appointmentTime
-doctorID
-```
-
-### Task 4
-
-Explain how abstraction would make the hospital appointment system easier to design.
-
----
-
-## 13. Exam-style Questions
-
-### Question 1 [2 marks]
-
-State what is meant by abstraction.
+For a route planning app, is road distance relevant?
 
 <details>
-<summary>Mark Scheme Style Answer</summary>
+<summary>Suggested Answer</summary>
 
-Award marks for:
-
-- focusing on important or essential details
-- ignoring unnecessary or irrelevant details
-
-Example answer:
-
-Abstraction is the process of focusing on the important details of a problem while ignoring unnecessary details.
+Yes. Road distance affects the route and travel time.
 
 </details>
 
 ---
 
-### Question 2 [4 marks]
+### Practice 3: Irrelevant Detail
 
-A school is designing a system to manage student grades.
+For a route planning app, is the colour of each building usually relevant?
 
-Explain how abstraction could be used when designing this system.
+<details>
+<summary>Suggested Answer</summary>
+
+No. Building colour does not usually affect route calculation.
+
+</details>
+
+---
+
+### Practice 4: Abstraction or Decomposition?
+
+Breaking an online shop into login, cart, payment, and delivery is abstraction or decomposition?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Decomposition, because the problem is being split into smaller parts.
+
+</details>
+
+---
+
+### Practice 5: Bad Abstraction
+
+A login algorithm ignores password and only checks username. What is the problem?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Too much important detail has been removed. The password is necessary for correct login logic and security.
+
+</details>
+
+---
+
+## 32. Independent Practice
+
+### Question 1
+
+Define abstraction.
+
+### Question 2
+
+Explain two benefits of abstraction.
+
+### Question 3
+
+Explain the difference between abstraction and decomposition.
+
+### Question 4
+
+For a password strength checker, identify four relevant details and two irrelevant details.
+
+### Question 5
+
+For a map app, identify four relevant details and three irrelevant details.
+
+### Question 6
+
+Explain why a database table is an example of abstraction.
+
+### Question 7
+
+Explain how abstraction helps algorithm design.
+
+### Question 8
+
+Give an example where removing too much detail causes a wrong solution.
+
+### Question 9
+
+Give an example where keeping too much detail makes a problem unnecessarily complex.
+
+### Question 10
+
+Explain how functions use abstraction in programming.
+
+---
+
+## 33. Exam-style Questions
+
+### Question 1 [4 marks]
+
+Define abstraction and explain why it is useful.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Award marks for points such as:
+Abstraction is focusing on the important details of a problem and ignoring unnecessary details. It is useful because it reduces complexity and allows the algorithm or model to focus only on information needed to solve the problem.
 
-- abstraction identifies the details needed for the grade system
-- relevant details may include student ID, subject, marks, grade boundaries, and final grade
-- irrelevant details such as favourite food or bag colour can be ignored
-- this reduces complexity and makes the system easier to design and implement
+</details>
 
-Example answer:
+---
 
-Abstraction can be used by focusing only on details needed for the grade system, such as student ID, subject, marks, and grade boundaries. Irrelevant details such as a student's favourite food or bag colour can be ignored. This reduces complexity and helps programmers design a clearer system.
+### Question 2 [5 marks]
+
+A login system checks whether a user should be allowed access. Identify two relevant and two irrelevant details.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Relevant details include the entered username and entered password because they determine whether access should be granted. Stored username and stored password are also relevant for comparison. Irrelevant details include the colour of the login button and the background image because they do not affect the login logic.
 
 </details>
 
@@ -457,99 +1240,194 @@ Abstraction can be used by focusing only on details needed for the grade system,
 
 ### Question 3 [6 marks]
 
-A delivery company wants to build a system that estimates delivery time.
-
-Discuss how abstraction can help the company design the system.
+Distinguish between abstraction and decomposition using a route planning app example.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Award marks for points such as:
-
-- abstraction helps identify the essential data needed for estimating delivery time
-- relevant data may include distance, traffic level, delivery address, driver location, and order time
-- irrelevant details such as the colour of the delivery vehicle or customer's phone wallpaper can be ignored
-- the real-world delivery situation can be simplified into a model
-- this model is easier to implement as an algorithm
-- reducing unnecessary detail makes the system easier to test, maintain, and improve
-
-Example answer:
-
-Abstraction helps the company focus on the data needed to estimate delivery time, such as distance, traffic conditions, driver location, delivery address, and order time. Details such as the colour of the delivery vehicle or the driver's clothes can be ignored because they do not affect the calculation. This simplifies the real-world problem into a model that can be implemented as an algorithm. It also makes the system easier to test and maintain.
+Decomposition breaks the route planning app into smaller parts, such as getting the start location, getting the destination, finding possible routes, calculating travel time, and displaying the route. Abstraction focuses on the relevant details needed for route planning, such as roads, distance, traffic, and road closures, while ignoring irrelevant details such as building colour or tree shape. Decomposition splits the problem, while abstraction filters the details.
 
 </details>
 
 ---
 
-## 14. Classroom Activity
+### Question 4 [6 marks]
 
-### Activity: Relevant or Irrelevant?
+Explain how abstraction can help when designing an algorithm for a grade calculator.
 
-**Time:** 10-15 minutes  
-**Grouping:** Pairs or small groups
+<details>
+<summary>Mark Scheme Style Answer</summary>
 
-Choose one system:
+Abstraction helps by identifying the details needed for the algorithm, such as the student's mark, total mark, percentage, and grade boundaries. Irrelevant details such as paper colour, classroom temperature, or the student's hairstyle can be ignored. This reduces complexity and allows the algorithm to focus on comparing the mark with grade boundaries and outputting the correct grade.
 
-1. online shopping system  
-2. school bus tracking system  
-3. hospital appointment system  
-4. student grade system  
-
-For your chosen system, complete this table:
-
-| Detail | Relevant or Irrelevant? | Reason |
-|---|---|---|
-
-Then answer:
-
-1. Which three details are most important? Why?  
-2. Which details can be ignored in the first version? Why?  
-3. How does abstraction make the system easier to design?
-
-::: tip Exit Ticket
-Before leaving, write one sentence explaining the difference between abstraction and decomposition.
-:::
+</details>
 
 ---
 
-## 15. Homework
+### Question 5 [6 marks]
 
-### Homework Task
+Explain one risk of using abstraction poorly.
 
-Choose one real-world system:
+<details>
+<summary>Mark Scheme Style Answer</summary>
 
-- food delivery app
-- school library system
-- fitness tracking app
-- cinema booking system
-- online learning platform
+A risk of poor abstraction is that important details may be removed. For example, if a route planning app ignores traffic or road closures, it may suggest a route that is slow or impossible. Abstraction should remove irrelevant details, but it must keep information that affects the output or correctness of the solution.
 
-Complete the following:
+</details>
 
-1. Write a short description of the system.
-2. List at least eight possible real-world details.
-3. Mark each detail as relevant or irrelevant.
-4. Explain why at least three irrelevant details can be ignored.
-5. Write suitable Java-style variable names for at least five relevant details.
-6. Write one exam-style paragraph explaining how abstraction helps design this system.
+---
 
-### Suggested Paragraph Structure
+## 34. Classroom Activity
+
+### Activity 1: Keep or Ignore
+
+Give students a scenario:
 
 ```text
-Abstraction can be used by focusing on important details such as ..., ..., and ... .
-Details such as ... can be ignored because they do not affect ... .
-This reduces complexity because ...
-It also makes the system easier to design and test because ...
+Design a school attendance system.
+```
+
+Students sort details into relevant and irrelevant:
+
+```text
+student ID
+student name
+date
+attendance status
+desk colour
+student shoe size
+teacher name
+weather
+class
 ```
 
 ---
 
-## 16. One-page Revision Summary
+### Activity 2: Abstraction vs Decomposition Sort
+
+Students classify each statement:
+
+```text
+split game into scoring and movement
+ignore background colour in score calculation
+split shop into cart and payment
+ignore product shelf colour for online checkout
+split library system into books and loans
+ignore book cover colour when searching by ISBN
+```
+
+---
+
+### Activity 3: Model the System
+
+Students choose one system:
+
+```text
+map app
+login system
+library system
+shopping discount calculator
+game collision system
+```
+
+They list:
+
+```text
+important details
+ignored details
+why each ignored detail is unnecessary
+one risk if an important detail is removed
+```
+
+---
+
+## 35. Homework
+
+### Homework Part A: Concept Explanation
+
+In 6-8 sentences, explain what abstraction is and why it is useful in computational thinking.
+
+---
+
+### Homework Part B: Scenario Table
+
+Choose three systems and complete:
+
+```text
+system
+important details
+unnecessary details
+reason for ignoring those details
+risk of removing too much detail
+```
+
+Suggested systems:
+
+```text
+login system
+route planner
+grade calculator
+library search
+game collision
+shopping discount
+attendance system
+```
+
+---
+
+### Homework Part C: Compare
+
+Explain the difference between decomposition and abstraction using your own example.
+
+---
+
+### Homework Part D: Misconception Correction
+
+Correct these statements:
+
+```text
+Abstraction means removing all details.
+Abstraction and decomposition are exactly the same.
+Irrelevant details are the same for every problem.
+A model must include every detail of the real world.
+Abstraction is only useful for diagrams, not algorithms.
+```
+
+---
+
+## 36. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
-| Definition | Abstraction focuses on essential details and ignores unnecessary details |
-| Main benefit | It reduces complexity |
-| Programming link | Relevant details become variables, inputs, outputs, or data fields |
-| Modelling link | Real-world systems can be simplified into models |
-| Exam phrase | "This reduces complexity and helps programmers focus on the requirements of the system." |
+| Abstraction | Focus on important details and ignore unnecessary details |
+| Main benefit | Reduces complexity |
+| Relevant detail | Affects solution/output/decision |
+| Irrelevant detail | Does not affect solution |
+| Model | Simplified representation of reality |
+| Detail hiding | Hiding internal complexity |
+| Generalization | Creating reusable common idea |
+| Algorithm link | Helps choose variables and steps |
+| Database link | Tables store only needed attributes |
+| UI link | Hides internal complexity from users |
+| Map example | Keeps roads/distance; ignores building colour |
+| Login example | Keeps username/password; ignores button colour |
+| Risk | Removing important details causes wrong solution |
+| Decomposition vs abstraction | split problem vs remove detail |
+| Exam phrase | Abstraction reduces complexity by keeping only details needed for the solution and ignoring irrelevant details |
+
+---
+
+## 37. Quick Self-test
+
+Before moving on, students should be able to answer these:
+
+1. What is abstraction?
+2. Why is abstraction useful?
+3. What is a relevant detail?
+4. What is an irrelevant detail?
+5. How is abstraction different from decomposition?
+6. Give two relevant details for a login system.
+7. Give two irrelevant details for a login algorithm.
+8. Why is a map an example of abstraction?
+9. What can go wrong if too much detail is removed?
+10. How does abstraction help algorithm design?
