@@ -4,15 +4,17 @@
 
 By the end of this lesson, students should be able to:
 
-- explain what a database is
-- distinguish data and information
+- define data, information, database, and DBMS
 - explain why databases are used
-- explain what a DBMS is
-- distinguish database, table, record, and field at a basic level
-- explain the difference between a flat file and a relational database
-- describe common advantages of using a database
-- identify basic database users and real-world database examples
-- explain why data needs to be organized, stored, searched, and protected
+- distinguish file-based storage and database systems
+- explain the purpose of a relational database at a basic level
+- identify common database components such as tables, records, fields, queries, forms, and reports
+- explain the difference between data and information
+- explain advantages and disadvantages of using databases
+- explain common database problems such as redundancy, inconsistency, and data isolation
+- describe the role of a database management system
+- apply database concepts to school, shop, hospital, library, and website scenarios
+- connect database fundamentals to tables, keys, relationships, ERDs, normalization, SQL, privacy, and transactions
 - answer exam-style questions about database fundamentals
 
 ---
@@ -23,13 +25,13 @@ By the end of this lesson, students should be able to:
 |---|---|
 | Unit | A3 Databases |
 | Label | SL Core |
-| Main skill | Understanding the purpose and structure of databases |
-| Connected topics | Data storage, structured data, tables, records, fields, keys, SQL, data integrity |
-| Practical focus | Relational database thinking + simple SQL preparation |
-| Exam relevance | Definitions, comparisons, scenario explanation, database advantages and issues |
+| Main skill | Understanding how data can be stored, organized, managed, searched, and protected |
+| Connected topics | Tables, records and fields, primary/foreign keys, relationships, ERDs, normalization, SQL, database security, transactions |
+| Practical focus | Explaining database use in real-world systems |
+| Exam relevance | Definitions, advantages/disadvantages, scenario explanation, DBMS role |
 
 ::: tip Learning Focus
-This page is the foundation of A3. Before students write SQL, they must understand what data is, how databases organize data, and why a DBMS is useful.
+A database is not just a table. A database is an organized collection of related data, usually managed by a DBMS so that data can be stored, searched, updated, controlled, and protected.
 :::
 
 ---
@@ -38,21 +40,26 @@ This page is the foundation of A3. Before students write SQL, they must understa
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
-| Data | 数据 | Raw facts or values without full context |
+| Data | 数据 | Raw facts or values without context |
 | Information | 信息 | Data that has been processed or given meaning |
-| Database | 数据库 | An organized collection of related data |
-| DBMS | 数据库管理系统 | Software used to create, manage, access, and protect databases |
-| Table | 表 | A structure that stores data about one type of entity |
-| Record | 记录 | One row in a table; one complete set of related data |
-| Field | 字段 | One column in a table; one data item in each record |
-| Entity | 实体 | A real-world thing stored in a database, such as Student or Course |
-| Attribute | 属性 | A property of an entity, often represented as a field |
-| Flat file | 平面文件 | A simple file or single table with no relational structure |
-| Relational database | 关系型数据库 | A database that stores data in related tables |
-| Query | 查询 | A request to retrieve or manipulate data |
-| SQL | 结构化查询语言 | A language used to query and manage relational databases |
-| Data redundancy | 数据冗余 | Unnecessary repeated data |
+| Database | 数据库 | Organized collection of related data |
+| DBMS | 数据库管理系统 | Software used to create, manage, control, and query databases |
+| Relational database | 关系型数据库 | Database that stores data in related tables |
+| Table | 表 | Structure that stores data about one entity type |
+| Record | 记录 | One row in a table, usually about one instance |
+| Field | 字段 | One column in a table, storing one type of data |
+| Entity | 实体 | Real-world object or concept stored in a database |
+| Attribute | 属性 | Property of an entity |
+| Query | 查询 | Request for data from a database |
+| Form | 表单 | Interface for entering or editing data |
+| Report | 报告 | Formatted output from database data |
+| Primary key | 主键 | Field that uniquely identifies each record |
+| Foreign key | 外键 | Field that links to a primary key in another table |
+| Data redundancy | 数据冗余 | Unnecessary duplicate data |
+| Data inconsistency | 数据不一致 | Same data stored in different ways or with conflicting values |
 | Data integrity | 数据完整性 | Accuracy, consistency, and reliability of data |
+| Data security | 数据安全 | Protection of data from unauthorized access or damage |
+| Transaction | 事务 | Group of database operations treated as one unit |
 
 ---
 
@@ -63,51 +70,69 @@ This page is the foundation of A3. Before students write SQL, they must understa
 
 ### 中文讲解
 
-**Database（数据库）** 是一个有组织的数据集合。它不是简单地把数据随便放在一起，而是按照一定结构保存数据，让程序和用户可以更容易地：
+**Database（数据库）** 是一个有组织的数据集合。  
+它不是随便把数据放在文件里，而是按照一定结构存储，方便：
 
 ```text
-store data
+add data
 search data
 update data
+delete data
 sort data
+filter data
 protect data
 share data
 ```
 
-例如，学校可能有很多学生信息：
+例如学校系统可能会存储：
 
 ```text
-studentId
-name
-yearGroup
-course
-teacher
-mark
+students
+teachers
+courses
+grades
+attendance
+parents
+rooms
 ```
 
-如果这些数据只写在很多 Word 文件或文本文件里，查找和更新会很麻烦。  
-数据库可以把这些数据放进 tables 里面，并且用 keys 和 relationships 把相关数据连接起来。
-
-数据库通常由 **DBMS（Database Management System）** 管理。  
-DBMS 是一种软件，用来帮助用户创建、查询、修改、保护数据库。
-
-例如：
+如果只用很多普通文件来保存这些数据，很容易出现问题：
 
 ```text
-MySQL
-PostgreSQL
-Microsoft Access
-SQLite
-Oracle Database
+same student data repeated many times
+one file updated but another file not updated
+data hard to search
+security hard to control
+backup difficult
+many users editing causes conflict
 ```
 
-学习 A3 Databases 的第一步不是马上写 SQL，而是理解：
+所以实际系统通常使用 **DBMS（Database Management System）** 来管理数据库。
 
-1. 数据为什么需要被组织
-2. 数据库和普通文件有什么不同
-3. table / record / field 是什么
-4. 为什么 relational database 会使用多个相关表
-5. DBMS 为什么重要
+DBMS 的作用包括：
+
+```text
+create database
+store data
+search/query data
+update data
+control access
+protect data
+backup and recovery
+maintain data integrity
+```
+
+很多现代数据库是 **relational database（关系型数据库）**。  
+它把数据存储在多个相关的 tables 中。
+
+简单来说：
+
+```text
+data = raw facts
+information = meaningful processed data
+database = organized collection of related data
+DBMS = software that manages the database
+```
 
 </template>
 
@@ -115,236 +140,178 @@ Oracle Database
 
 ### English Explanation
 
-A **database** is an organized collection of related data. It does not store data randomly. It stores data in a structured way so that programs and users can more easily:
+A **database** is an organized collection of data.  
+It is not just data randomly stored in files. It stores data in a structured way so it is easier to:
 
 ```text
-store data
+add data
 search data
 update data
+delete data
 sort data
+filter data
 protect data
 share data
 ```
 
-For example, a school may store many pieces of student information:
+For example, a school system may store:
 
 ```text
-studentId
-name
-yearGroup
-course
-teacher
-mark
+students
+teachers
+courses
+grades
+attendance
+parents
+rooms
 ```
 
-If this data is stored only in many Word documents or text files, searching and updating it becomes difficult.  
-A database can store this data in tables and connect related data using keys and relationships.
-
-A database is usually managed by a **DBMS**: Database Management System.  
-A DBMS is software used to create, query, update, and protect databases.
-
-Examples include:
+If this data is stored only in many ordinary files, problems can occur:
 
 ```text
-MySQL
-PostgreSQL
-Microsoft Access
-SQLite
-Oracle Database
+same student data repeated many times
+one file updated but another file not updated
+data hard to search
+security hard to control
+backup difficult
+many users editing causes conflict
 ```
 
-The first step in A3 Databases is not writing SQL immediately. Students first need to understand:
+Therefore, real systems often use a **DBMS**, or Database Management System, to manage the database.
 
-1. why data needs to be organized
-2. how a database is different from a normal file
-3. what table / record / field mean
-4. why a relational database uses multiple related tables
-5. why a DBMS is important
+A DBMS can:
+
+```text
+create database
+store data
+search/query data
+update data
+control access
+protect data
+backup and recovery
+maintain data integrity
+```
+
+Many modern databases are **relational databases**.  
+They store data in multiple related tables.
+
+In simple terms:
+
+```text
+data = raw facts
+information = meaningful processed data
+database = organized collection of related data
+DBMS = software that manages the database
+```
 
 </template>
 </LangBlock>
 
 ---
 
-## 5. Data vs Information
+## 5. Data and Information
 
-## 5.1 Data
+### Data
 
-Data is raw facts or values.
+Data means raw facts or values.
 
 Examples:
 
 ```text
-85
-Alice
-S001
-12
-C001
+Jerome
+17
+98
+2026-05-22
+A102
 ```
 
-By themselves, these values may not have full meaning.
+By itself, data may not have enough meaning.
 
-## 5.2 Information
+### Information
 
 Information is data that has been processed, organized, or given context.
 
 Example:
 
 ```text
-Alice, student S001, scored 85 in Computer Science.
+Student Jerome scored 98 in Computer Science on 2026-05-22.
 ```
 
-Now the raw data has meaning.
+This is more meaningful because the data has context.
 
 ### Comparison
 
 | Data | Information |
 |---|---|
-| Raw facts | Meaningful result |
-| May lack context | Has context |
-| Example: `85` | Example: `Alice scored 85` |
-| Input to processing | Output after processing |
-
-### Example
-
-| Raw Data | Context | Information |
-|---|---|---|
-| `85` | Alice's CS mark | Alice scored 85 in CS |
-| `12` | Year group | Alice is in Year 12 |
-| `C001` | Course code | Course is Computer Science |
+| raw facts | processed/meaningful data |
+| may lack context | has meaning and purpose |
+| example: `98` | example: `CS test score is 98` |
+| used as input | used for decision-making |
 
 ::: tip Exam Phrase
-Data is raw facts. Information is data that has been processed or given context so that it becomes meaningful.
+Data is raw facts or values, while information is data that has been processed or organized to have meaning.
 :::
 
 ---
 
-## 6. What is a Database?
+## 6. What Is a Database?
 
 A database is an organized collection of related data.
 
-### Example: School Database
+### Examples of Databases
+
+```text
+school student database
+library book database
+hospital patient database
+online shop product database
+bank account database
+game player account database
+airline booking database
+social media user database
+```
+
+### Why Organized?
+
+Data must be organized so that the system can:
+
+```text
+find records quickly
+avoid unnecessary duplication
+maintain accuracy
+control access
+support many users
+generate useful reports
+```
+
+### Simple Example
 
 A school database may store:
 
 ```text
-students
-teachers
-courses
-enrollments
-marks
+student details
+course details
+teacher details
+class enrollment
+grades
 attendance
 ```
 
-These data items are related.
-
-For example:
-
-```text
-A student enrolls in a course.
-A teacher teaches a course.
-A student receives a mark in a course.
-```
-
-### Why Organization Matters
-
-Without organization:
-
-```text
-data is hard to search
-data is hard to update
-data may be repeated
-data may become inconsistent
-data may be less secure
-```
-
-With a database:
-
-```text
-data is structured
-data can be queried
-data can be validated
-data can be protected
-data can be shared
-```
+These are related pieces of data.
 
 ---
 
-## 7. Database vs Simple File
+## 7. What Is a DBMS?
 
-A simple file can store data, but it usually has less structure and fewer management features.
+A **DBMS** is software used to manage databases.
 
-| Feature | Simple File | Database |
-|---|---|---|
-| Structure | Often simple or unstructured | Organized into tables and relationships |
-| Searching | May require custom code | Queries can retrieve data efficiently |
-| Updating | Can be difficult for large data | DBMS supports controlled updates |
-| Multi-user access | Usually limited | Often supports multiple users |
-| Security | Basic file permissions | DBMS can provide user roles and access control |
-| Data integrity | Must be handled manually | Constraints can help protect data |
-| Backup/recovery | Manual or external | DBMS may support backup and recovery tools |
-
-### Example
-
-A text file:
+DBMS stands for:
 
 ```text
-S001,Alice,12
-S002,Ben,12
-S003,Clara,13
+Database Management System
 ```
 
-A database table:
-
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
-
-The table is easier to query, validate, and connect to other tables.
-
----
-
-## 8. Database vs Spreadsheet
-
-Students often know spreadsheets, so this comparison is useful.
-
-| Feature | Spreadsheet | Database |
-|---|---|---|
-| Main purpose | Calculation, small data analysis, simple tables | Structured storage and management of related data |
-| Data relationships | Limited | Designed for related tables |
-| Large data | Can become slow or messy | Better for large structured datasets |
-| Multi-user control | Limited depending on tool | DBMS can manage concurrent users |
-| Data integrity | Manual or formula-based | Constraints and keys can enforce rules |
-| Query language | Filters/formulas | SQL queries |
-| Best use | Small tasks, quick calculations | Reliable long-term data storage |
-
-::: warning Important
-A spreadsheet can store tables, but that does not automatically make it a good relational database.
-:::
-
----
-
-## 9. What is a DBMS?
-
-A **DBMS** is a Database Management System.
-
-It is software that helps users and programs:
-
-```text
-create databases
-create tables
-insert data
-update data
-delete data
-search data
-control access
-back up data
-protect data integrity
-```
-
-### Examples of DBMS
+### Examples
 
 ```text
 MySQL
@@ -353,552 +320,1015 @@ SQLite
 Microsoft Access
 Oracle Database
 Microsoft SQL Server
+MongoDB
 ```
 
-### DBMS Responsibilities
+### Main Roles of a DBMS
 
-| Responsibility | Explanation |
+| Role | Explanation |
 |---|---|
-| Store data | Keeps data in database files |
-| Retrieve data | Allows queries to search data |
-| Update data | Allows controlled changes |
-| Security | Controls who can access data |
-| Integrity | Helps keep data accurate and consistent |
-| Backup/recovery | Helps restore data after problems |
-| Concurrency | Manages multiple users accessing data |
+| Create database | define tables and structures |
+| Store data | save records in organized form |
+| Query data | search and retrieve data |
+| Update data | insert, edit, and delete data |
+| Control access | manage users and permissions |
+| Maintain integrity | enforce rules and constraints |
+| Support backup | help recover after data loss |
+| Support transactions | ensure operations are completed safely |
+| Manage concurrency | allow multiple users to work safely |
+
+::: tip Exam Phrase
+A DBMS is software that allows users and applications to create, store, manage, query, update, protect, and maintain a database.
+:::
 
 ---
 
-## 10. Basic Database Structure Preview
+## 8. Database vs DBMS
 
-A relational database usually stores data in tables.
+Students often mix these up.
 
-### Student Table
-
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
-
-### Basic Terms
-
-| Term | Meaning | Example |
+| Concept | Meaning | Example |
 |---|---|---|
-| Table | Stores data about one entity | Student |
-| Field | A column in a table | studentId, name, yearGroup |
-| Record | A row in a table | S001, Alice, 12 |
-| Entity | Thing being stored | Student |
-| Attribute | Property of the entity | name |
+| Database | organized data itself | school student records |
+| DBMS | software managing the database | MySQL, Access, PostgreSQL |
 
-### Visual Reminder
+### Simple Analogy
 
 ```text
-Table = whole grid
-Field = column
-Record = row
-Value = one cell
+database = the organized collection of books
+DBMS = the librarian system that manages the books
+```
+
+### Example
+
+A school may have:
+
+```text
+database = student, teacher, course, attendance data
+DBMS = software used to store, search, update, and protect that data
 ```
 
 ---
 
-## 11. Tables, Records, and Fields
+## 9. Why Databases Are Used
 
-### Table
+Databases are used because they make data easier to manage.
 
-A table stores data about one type of thing.
+### Main Reasons
+
+```text
+store large amounts of related data
+search data quickly
+reduce unnecessary duplication
+keep data consistent
+allow multiple users
+control access permissions
+support backup and recovery
+generate reports
+support decision-making
+```
+
+### Example: School
+
+A school database can help answer:
+
+```text
+Which students are in Grade 10?
+Who teaches Computer Science?
+Which students were absent today?
+What is each student's average grade?
+Which parent should be contacted?
+```
+
+---
+
+## 10. File-based Storage vs Database
+
+Before databases, organizations often stored data in separate files.
 
 Example:
 
 ```text
-Student table stores student data.
-Course table stores course data.
-Teacher table stores teacher data.
+students.xlsx
+grades.xlsx
+attendance.xlsx
+parents.xlsx
+courses.xlsx
+```
+
+This can work for small tasks but becomes difficult as data grows.
+
+### Comparison
+
+| File-based Storage | Database System |
+|---|---|
+| data stored in separate files | data stored in organized database |
+| harder to link data | tables can be related |
+| more duplication | less unnecessary duplication |
+| harder to keep consistent | DBMS can enforce integrity |
+| limited multi-user support | supports multiple users better |
+| harder to control access | permissions can be managed |
+| searching may be slower/manual | queries can retrieve data efficiently |
+
+---
+
+## 11. Problems with File-based Systems
+
+### Data Redundancy
+
+Data redundancy means the same data is stored unnecessarily in multiple places.
+
+Example:
+
+```text
+student phone number appears in grades file, attendance file, and parent contact file
+```
+
+### Data Inconsistency
+
+Data inconsistency happens when duplicated data has different values.
+
+Example:
+
+```text
+one file says student's phone number is 1234
+another file says it is 5678
+```
+
+### Data Isolation
+
+Data isolation means data is separated in different files, making it hard to combine or search.
+
+Example:
+
+```text
+grades are in one file
+attendance is in another file
+parent contacts are in another file
+```
+
+It becomes difficult to answer:
+
+```text
+Which absent students also scored below 60?
+```
+
+---
+
+## 12. Relational Database Overview
+
+A relational database stores data in tables that can be linked.
+
+### Example Tables
+
+```text
+Student
+Course
+Teacher
+Enrollment
+Grade
+```
+
+Each table stores data about one main entity type.
+
+### Simple Table Example
+
+| StudentID | FirstName | LastName | GradeLevel |
+|---:|---|---|---:|
+| 101 | Amy | Chen | 10 |
+| 102 | Ben | Wang | 10 |
+| 103 | Cara | Liu | 11 |
+
+### Key Idea
+
+In a relational database:
+
+```text
+data is organized into tables
+records are rows
+fields are columns
+tables can be linked using keys
+```
+
+---
+
+## 13. Tables, Records, and Fields Preview
+
+A table stores data about one type of thing.
+
+### Table
+
+Example:
+
+```text
+Student
+```
+
+### Field
+
+A field is a column.
+
+Examples:
+
+```text
+StudentID
+FirstName
+LastName
+GradeLevel
+Email
 ```
 
 ### Record
 
-A record is one row in a table.
-
-Example:
-
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-
-This row is one student record.
-
-### Field
-
-A field is one column in a table.
+A record is a row.
 
 Example:
 
 ```text
-studentId
-name
-yearGroup
+101, Amy, Chen, 10, amy@example.com
 ```
 
-Each field stores one type of data.
+### Diagram
 
-::: tip Common Confusion
-Record = row.  
-Field = column.
-:::
+| StudentID | FirstName | LastName | GradeLevel |
+|---:|---|---|---:|
+| 101 | Amy | Chen | 10 |
+| 102 | Ben | Wang | 10 |
 
----
-
-## 12. Relational Database Preview
-
-A relational database uses multiple related tables.
-
-Instead of storing everything in one huge table, data is separated into smaller related tables.
-
-### Student Table
-
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-
-### Course Table
-
-| courseId | courseName |
-|---|---|
-| C001 | Computer Science |
-| C002 | Mathematics |
-
-### Enrollment Table
-
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
-| E003 | S001 | C002 |
-
-This shows:
+In this table:
 
 ```text
-Alice takes Computer Science and Mathematics.
-Ben takes Computer Science.
+fields = StudentID, FirstName, LastName, GradeLevel
+records = each row
 ```
 
-The tables are connected by ID fields.
-
 ---
 
-## 13. Why Not One Huge Table?
+## 14. Entity and Attribute
 
-A poor design might store everything in one table:
+These terms are often used in database design.
 
-| studentId | studentName | courseId | courseName | teacherName |
-|---|---|---|---|---|
-| S001 | Alice | C001 | Computer Science | Mr Smith |
-| S001 | Alice | C002 | Mathematics | Ms Green |
-| S002 | Ben | C001 | Computer Science | Mr Smith |
+### Entity
 
-Problems:
+An entity is a real-world object or concept that data is stored about.
 
-| Problem | Explanation |
-|---|---|
-| Repetition | Alice's name is repeated |
-| Redundancy | Course and teacher data are repeated |
-| Update problem | If Mr Smith's name changes, many rows must be updated |
-| Inconsistency risk | One row may be updated but another forgotten |
-| Storage waste | Repeated data uses extra storage |
-
-Relational databases reduce these problems by separating data into related tables.
-
----
-
-## 14. Primary Key Preview
-
-A **primary key** uniquely identifies each record in a table.
-
-In the Student table:
-
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
-
-The primary key can be:
+Examples:
 
 ```text
-studentId
+Student
+Teacher
+Course
+Book
+Customer
+Order
+Product
+Patient
+Appointment
 ```
 
-Why?
+### Attribute
 
-```text
-Each studentId is unique.
-It identifies one specific student.
-```
-
-### Bad Primary Key Example
-
-`name` is not always a good primary key because two students may have the same name.
-
-::: info Preview
-Primary keys will be explained fully in the Primary Keys and Foreign Keys page.
-:::
-
----
-
-## 15. Foreign Key Preview
-
-A **foreign key** is a field in one table that refers to a primary key in another table.
+An attribute is a property of an entity.
 
 Example:
 
-### Student Table
-
-| studentId | name |
-|---|---|
-| S001 | Alice |
-| S002 | Ben |
-
-### Enrollment Table
-
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
-
-In the Enrollment table:
-
 ```text
-studentId
+Student has StudentID, Name, DateOfBirth, Email
+Book has BookID, Title, Author, ISBN
 ```
 
-is a foreign key because it refers to `studentId` in the Student table.
+### Link to Tables
 
-This is how tables are linked.
+In a relational database:
 
-::: info Preview
-Foreign keys will be explained fully later. For now, remember that they connect related tables.
-:::
+```text
+entity often becomes table
+attribute often becomes field
+```
 
 ---
 
-## 16. Query Preview
+## 15. Keys Preview
 
-A query is a request for data.
+Keys are used to identify records and link tables.
 
-In relational databases, SQL is often used to write queries.
+### Primary Key
 
-### Example Table: Student
+A primary key uniquely identifies each record in a table.
 
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
+Example:
 
-### Example Query
+```text
+StudentID
+BookID
+OrderID
+CustomerID
+```
+
+### Foreign Key
+
+A foreign key links one table to another table.
+
+Example:
+
+```text
+Enrollment table has StudentID to link to Student table
+```
+
+### Why Keys Matter
+
+Keys help:
+
+```text
+identify records uniquely
+avoid confusion
+link related data
+support relationships
+maintain data integrity
+```
+
+Keys are covered in more detail in later pages.
+
+---
+
+## 16. Queries
+
+A query is a request for data from a database.
+
+### Query Examples
+
+```text
+Find all Grade 10 students.
+Find students whose score is above 80.
+Find all books borrowed by one student.
+Find orders placed after 2026-01-01.
+Find products with stock below 10.
+```
+
+### SQL Preview
+
+Many relational databases use SQL.
+
+Example:
 
 ```sql
-SELECT name
+SELECT FirstName, LastName
 FROM Student
-WHERE yearGroup = 12;
+WHERE GradeLevel = 10;
 ```
 
-### Result
+### Key Idea
 
-| name |
-|---|
-| Alice |
-| Ben |
-
-This query asks:
-
-```text
-Show the names of students in Year 12.
-```
-
-SQL will be taught in detail later.
+Queries allow users to retrieve specific information from large amounts of data.
 
 ---
 
-## 17. Advantages of Databases
+## 17. Forms and Reports
+
+### Forms
+
+Forms help users enter or edit data.
+
+Example:
+
+```text
+student registration form
+library book entry form
+patient appointment form
+order form
+```
+
+Forms can reduce input errors by using:
+
+```text
+drop-down lists
+required fields
+validation checks
+clear labels
+```
+
+### Reports
+
+Reports present database data in a useful format.
+
+Examples:
+
+```text
+attendance report
+grade report
+sales report
+stock report
+library overdue report
+```
+
+---
+
+## 18. Data Types Preview
+
+Fields usually have data types.
+
+Common data types include:
+
+| Data Type | Example |
+|---|---|
+| integer | `10` |
+| decimal/real | `98.5` |
+| text/string | `Amy Chen` |
+| date | `2026-05-22` |
+| Boolean | `true` / `false` |
+| currency | `$19.99` |
+
+### Why Data Types Matter
+
+Data types help:
+
+```text
+store data correctly
+validate input
+sort and compare values
+use storage efficiently
+avoid incorrect operations
+```
+
+Example:
+
+```text
+DateOfBirth should be date, not plain text
+Price should be decimal/currency, not text
+```
+
+---
+
+## 19. Data Validation and Verification Preview
+
+### Validation
+
+Validation checks whether data follows rules.
+
+Examples:
+
+```text
+age must be between 0 and 120
+email must contain @
+date must be valid
+required field cannot be blank
+score must be 0 to 100
+```
+
+### Verification
+
+Verification checks whether data was entered correctly.
+
+Examples:
+
+```text
+double entry of email address
+user checks confirmation screen
+proofreading entered data
+```
+
+### Difference
+
+```text
+validation = checks if data is reasonable/allowed
+verification = checks if data matches original/intended value
+```
+
+---
+
+## 20. Advantages of Databases
 
 | Advantage | Explanation |
 |---|---|
-| Reduced redundancy | Less unnecessary repeated data |
-| Improved consistency | Data is stored in one correct place |
-| Easier searching | Queries can retrieve specific data |
-| Easier updating | DBMS can update records systematically |
-| Data sharing | Multiple users/programs can access data |
-| Security | Access permissions can protect data |
-| Backup and recovery | Data can be backed up and restored |
-| Data integrity | Constraints can help keep data valid |
-| Scalability | Databases can handle large datasets better than simple files |
-
-### Example
-
-If a course name changes, a well-designed database may only need one update in the Course table, instead of updating many repeated rows.
+| Reduced redundancy | less unnecessary duplicated data |
+| Improved consistency | updates can be made in one place |
+| Better data sharing | multiple users/systems can access data |
+| Better security | access permissions can be controlled |
+| Efficient searching | queries can retrieve data quickly |
+| Data integrity | rules/constraints can protect accuracy |
+| Backup and recovery | DBMS can support recovery processes |
+| Multi-user access | many users can work with same data |
+| Reporting | useful information can be generated |
+| Scalability | can support growing data and users |
 
 ---
 
-## 18. Possible Issues with Databases
+## 21. Disadvantages and Challenges of Databases
 
-Databases are useful, but they also have issues.
-
-| Issue | Explanation |
+| Challenge | Explanation |
 |---|---|
-| Cost | DBMS software, servers, and maintenance may cost money |
-| Complexity | Database design and administration can be difficult |
-| Security risk | If compromised, large amounts of data may be exposed |
-| Privacy concern | Personal data must be protected carefully |
-| Need for backup | Data loss can be serious |
-| Dependence on system | If database fails, many services may stop |
-| Data quality issues | Poor input can still create poor data |
-| Training required | Users and administrators need knowledge |
+| Complexity | design and management can be difficult |
+| Cost | DBMS, servers, staff, training may be expensive |
+| Security risk | central data store can be a target |
+| Data breach impact | large amount of data may be exposed |
+| Dependency | organization may rely heavily on database |
+| Performance issues | poor design or many users can slow system |
+| Backup required | data loss can be serious |
+| Training needed | users/admins need skills |
+| Migration difficulty | moving from old systems can be hard |
+| Privacy concerns | personal data must be protected |
 
-::: tip Balanced Answer
-Exam answers often need both benefits and possible problems, depending on the question.
-:::
+### Balanced View
+
+Databases are powerful, but they must be designed, secured, and maintained properly.
 
 ---
 
-## 19. Real-world Database Examples
+## 22. Data Integrity
 
-| Scenario | Data Stored |
-|---|---|
-| School system | students, teachers, courses, marks, attendance |
-| Library system | books, borrowers, loans, due dates |
-| Online shop | products, customers, orders, payments |
-| Hospital system | patients, doctors, appointments, treatments |
-| Bank system | accounts, transactions, customers |
-| Game system | players, scores, items, match history |
-| Airline system | flights, passengers, bookings, seats |
+Data integrity means data is accurate, consistent, and reliable.
 
-### Example: Library System
+### Examples of Integrity Problems
 
-A library database may store:
+```text
+student has two different birth dates
+course record references a teacher who does not exist
+same order appears twice
+score is entered as 150 when maximum is 100
+deleted customer still has orders
+```
+
+### Ways to Improve Integrity
+
+```text
+primary keys
+foreign keys
+validation rules
+data types
+constraints
+transactions
+access control
+audit logs
+```
+
+---
+
+## 23. Data Security and Privacy Preview
+
+Databases often store sensitive data.
+
+Examples:
+
+```text
+student grades
+health records
+financial details
+customer addresses
+login details
+purchase history
+personal messages
+```
+
+### Security Measures
+
+```text
+authentication
+authorization
+permissions
+encryption
+backup
+audit logs
+firewalls
+least privilege
+regular updates
+```
+
+### Privacy Concerns
+
+Organizations should consider:
+
+```text
+what data is collected
+why it is collected
+who can access it
+how long it is kept
+how it is protected
+whether users gave consent
+```
+
+Database security and privacy are covered in more detail later.
+
+---
+
+## 24. Transactions and Recovery Preview
+
+A transaction is a group of database operations treated as one unit.
+
+### Example: Bank Transfer
+
+```text
+subtract $100 from Account A
+add $100 to Account B
+```
+
+Both steps must happen together.
+
+If one step fails:
+
+```text
+the whole transaction should be cancelled or rolled back
+```
+
+### Why Transactions Matter
+
+Transactions help protect:
+
+```text
+accuracy
+consistency
+reliability
+recovery after failure
+```
+
+Transactions are covered in more detail later.
+
+---
+
+## 25. Worked Example: School Database
+
+A school database may include:
+
+```text
+Student
+Teacher
+Course
+Enrollment
+Attendance
+Grade
+ParentContact
+```
+
+### Possible Questions
+
+```text
+Which students are enrolled in Computer Science?
+Which students were absent today?
+What is each student's average score?
+Which teacher teaches each course?
+Which parents should receive attendance alerts?
+```
+
+### Why Use Database?
+
+```text
+data can be linked
+student details are not repeated in every file
+queries can answer questions quickly
+permissions can protect sensitive records
+reports can be generated
+```
+
+---
+
+## 26. Worked Example: Library Database
+
+A library database may include:
 
 ```text
 Book
-Borrower
+Member
 Loan
+Author
+Category
 ```
 
-This makes it possible to answer:
+### Possible Questions
 
 ```text
-Which books are currently borrowed?
-Who borrowed this book?
 Which books are overdue?
+Which member borrowed a specific book?
+Which books are available?
+How many books are in each category?
+Which author wrote each book?
+```
+
+### Example Tables
+
+```text
+Book(BookID, Title, AuthorID, ISBN)
+Member(MemberID, Name, Email)
+Loan(LoanID, BookID, MemberID, LoanDate, ReturnDate)
+```
+
+This avoids storing full member details inside every loan record.
+
+---
+
+## 27. Worked Example: Online Shop Database
+
+An online shop database may include:
+
+```text
+Customer
+Product
+Order
+OrderItem
+Payment
+Delivery
+```
+
+### Possible Questions
+
+```text
+Which products are low in stock?
+Which orders did a customer place?
+What is the total value of an order?
+Which orders are waiting for delivery?
+Which products sell the most?
+```
+
+### Why Database Is Needed
+
+An online shop must handle:
+
+```text
+many customers
+many products
+many orders
+stock updates
+payment records
+delivery tracking
+security and privacy
 ```
 
 ---
 
-## 20. Worked Example: School Course Database
+## 28. Worked Example: Hospital Database
 
-### Student Table
+A hospital database may include:
 
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
+```text
+Patient
+Doctor
+Appointment
+Prescription
+Treatment
+MedicalRecord
+```
 
-### Course Table
+### Important Requirements
 
-| courseId | courseName |
-|---|---|
-| C001 | Computer Science |
-| C002 | Mathematics |
+```text
+accuracy
+privacy
+security
+availability
+audit logs
+backup and recovery
+controlled access
+```
 
-### Enrollment Table
+### Why Security Is Critical
 
-| enrollmentId | studentId | courseId |
-|---|---|---|
-| E001 | S001 | C001 |
-| E002 | S002 | C001 |
-| E003 | S001 | C002 |
-
-### Interpretation Questions
-
-| Question | Answer |
-|---|---|
-| How many student records are there? | 3 |
-| Which field identifies each student? | studentId |
-| Which table stores course names? | Course |
-| Which table links students and courses? | Enrollment |
-| Which student takes two courses? | Alice |
-| Which students take Computer Science? | Alice and Ben |
+Medical data is sensitive.  
+Unauthorized access or incorrect data can cause serious harm.
 
 ---
 
-## 21. Common Mistakes
+## 29. Databases and Websites
+
+Many websites use databases.
+
+Examples:
+
+```text
+user accounts
+login systems
+product catalogues
+blog posts
+comments
+messages
+leaderboards
+shopping carts
+course content
+```
+
+### Example: Login
+
+```text
+user enters username and password
+server checks database
+database returns matching account information
+server allows or rejects login
+```
+
+### Example: Search
+
+```text
+user searches for product
+server queries product database
+matching results are returned
+website displays products
+```
+
+---
+
+## 30. Databases and Cloud Systems
+
+Cloud services often depend on databases.
+
+Examples:
+
+```text
+cloud document metadata
+user accounts
+file permissions
+version history
+comments
+sharing links
+activity logs
+```
+
+### Benefits
+
+```text
+remote access
+scalability
+collaboration
+backup/recovery options
+centralized management
+```
+
+### Risks
+
+```text
+privacy concerns
+security misconfiguration
+provider dependency
+internet dependence
+data location/legal issues
+```
+
+---
+
+## 31. Choosing Whether to Use a Database
+
+A database is usually suitable when:
+
+```text
+there is a large amount of related data
+many users need access
+data must be searched or filtered
+data must be updated frequently
+relationships exist between data
+security and permissions are needed
+reports are needed
+data consistency matters
+```
+
+A simple file may be enough when:
+
+```text
+data is small
+one user edits it
+relationships are minimal
+searching is simple
+security needs are low
+```
+
+### Example
+
+A personal shopping list may not need a database.  
+A supermarket stock and sales system needs a database.
+
+---
+
+## 32. Common Mistakes
 
 | Mistake | Why it is wrong | Better understanding |
 |---|---|---|
-| Saying database is just a file | A database is organized and usually managed by DBMS | Database stores structured related data |
-| Confusing data and information | Raw values are not always meaningful | Information is processed/contextualized data |
-| Saying table and database are the same | A database may contain many tables | Table is one structure inside a database |
-| Record = column | Wrong direction | Record is a row |
-| Field = row | Wrong direction | Field is a column |
-| Thinking primary key is any important field | It must uniquely identify a record | Use unique ID |
-| Thinking foreign key is always unique | Foreign keys can repeat | Foreign key links to another table |
-| Storing all data in one table | Causes repetition and inconsistency | Use related tables |
-| Confusing WHERE and ORDER BY | WHERE filters, ORDER BY sorts | Learn SQL clauses separately |
-| Assuming DBMS is the database itself | DBMS manages the database | DBMS is software |
+| Database means one table only | A database may contain many related tables | Tables can be linked |
+| DBMS and database are the same | DBMS is software; database is data collection | Different concepts |
+| Data and information are the same | Data is raw; information has meaning | Context matters |
+| A spreadsheet is always a database | Spreadsheet can store data but lacks many DBMS features | Depends on use and structure |
+| Primary key is just any field | It uniquely identifies each record | Must be unique and not null |
+| More duplicated data is always fine | Redundancy can cause inconsistency | Reduce unnecessary duplication |
+| Security is only passwords | Security includes permissions, encryption, backups, logs | Layered controls needed |
+| Query means only SQL SELECT | Query is any request for data | SQL is one query language |
+| All databases are relational | Many are, but not all | This course mainly focuses on relational ideas |
+| Backup fixes wrong data automatically | Backup helps recovery, but integrity rules prevent errors | Both needed |
 
 ---
 
-## 22. Guided Practice
+## 33. Guided Practice
 
 ### Practice 1: Data or Information?
 
-Classify each as data or information.
+Classify:
 
-| Item | Data or Information? |
-|---|---|
-| `85` |
-| `Alice scored 85 in Computer Science` |
-| `S001` |
-| `Student S001 is Alice in Year 12` |
-
-<details>
-<summary>Suggested Answer</summary>
-
-| Item | Data or Information? |
-|---|---|
-| `85` | Data |
-| `Alice scored 85 in Computer Science` | Information |
-| `S001` | Data |
-| `Student S001 is Alice in Year 12` | Information |
-
-</details>
-
----
-
-### Practice 2: Record or Field?
-
-Using this table:
-
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-
-Answer:
-
-1. How many records are there?
-2. How many fields are there?
-3. Name one field.
-
-<details>
-<summary>Suggested Answer</summary>
-
-1. There are 2 records.
-2. There are 3 fields.
-3. Example field: `studentId`, `name`, or `yearGroup`.
-
-</details>
-
----
-
-### Practice 3: Identify the DBMS Role
-
-What does a DBMS do?
-
-<details>
-<summary>Suggested Answer</summary>
-
-A DBMS is software used to create, manage, query, update, and protect a database. It can also help with security, integrity, backup, and multi-user access.
-
-</details>
-
----
-
-### Practice 4: Why Not Use Name as Primary Key?
-
-Why might `name` be a poor primary key for a Student table?
-
-<details>
-<summary>Suggested Answer</summary>
-
-Two students may have the same name, so `name` may not uniquely identify each record. A unique student ID is better.
-
-</details>
-
----
-
-### Practice 5: Query Meaning
-
-What does this query ask for?
-
-```sql
-SELECT name
-FROM Student
-WHERE yearGroup = 12;
+```text
+98
+Student Amy scored 98 in Computer Science
 ```
 
 <details>
 <summary>Suggested Answer</summary>
 
-It asks for the names of students whose year group is 12.
+`98` is data because it is a raw value without context.  
+`Student Amy scored 98 in Computer Science` is information because it gives meaning and context.
 
 </details>
 
 ---
 
-## 23. Independent Practice
+### Practice 2: Database or DBMS?
 
-### Question 1
+Is MySQL a database or a DBMS?
 
-Define database.
+<details>
+<summary>Suggested Answer</summary>
 
-### Question 2
+MySQL is a DBMS because it is software used to manage databases.
 
-Explain the difference between data and information.
-
-### Question 3
-
-Explain what a DBMS is and give two tasks it performs.
-
-### Question 4
-
-Give three real-world examples of databases and state what data each stores.
-
-### Question 5
-
-Using this table, identify the table name, fields, and number of records.
-
-| bookId | title | author |
-|---|---|---|
-| B001 | Dune | Frank Herbert |
-| B002 | Animal Farm | George Orwell |
-| B003 | The Hobbit | J.R.R. Tolkien |
-
-### Question 6
-
-Explain why a database may be better than a simple text file for a school system.
-
-### Question 7
-
-Explain why one huge table can cause data redundancy.
-
-### Question 8
-
-Suggest a suitable primary key for a table of library books.
-
-### Question 9
-
-Explain how a foreign key can link two tables.
-
-### Question 10
-
-Write one simple SQL query using `SELECT`, `FROM`, and `WHERE` for the Student table.
+</details>
 
 ---
 
-## 24. Exam-style Questions
+### Practice 3: Redundancy
+
+A student's phone number is stored in five separate files. What problem may this cause?
+
+<details>
+<summary>Suggested Answer</summary>
+
+It may cause data redundancy and inconsistency. If the phone number changes in one file but not the others, the data becomes inconsistent.
+
+</details>
+
+---
+
+### Practice 4: Entity and Attribute
+
+For a library system, identify one entity and two attributes.
+
+<details>
+<summary>Suggested Answer</summary>
+
+Entity: Book.  
+Attributes: BookID, Title, Author, ISBN, PublicationYear.
+
+</details>
+
+---
+
+### Practice 5: Why Use a Database?
+
+Give one reason an online shop should use a database.
+
+<details>
+<summary>Suggested Answer</summary>
+
+An online shop has many related data items such as customers, products, orders, payments, and delivery records. A database helps store, search, update, link, and protect this data.
+
+</details>
+
+---
+
+## 34. Independent Practice
+
+### Question 1
+
+Define data and information.
+
+### Question 2
+
+Define database.
+
+### Question 3
+
+Define DBMS.
+
+### Question 4
+
+Explain the difference between a database and a DBMS.
+
+### Question 5
+
+Give three reasons why organizations use databases.
+
+### Question 6
+
+Explain two problems with file-based storage.
+
+### Question 7
+
+Explain the meaning of table, record, and field.
+
+### Question 8
+
+Explain what a relational database is at a basic level.
+
+### Question 9
+
+A school wants to store student, teacher, course, and grade data. Explain why a database is suitable.
+
+### Question 10
+
+Explain two advantages and two challenges of using a database.
+
+---
+
+## 35. Exam-style Questions
 
 ### Question 1 [4 marks]
 
@@ -907,33 +1337,33 @@ Define database and DBMS.
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-A database is an organized collection of related data. A DBMS, or Database Management System, is software used to create, manage, query, update, and protect a database.
+A database is an organized collection of related data. A DBMS, or Database Management System, is software used to create, store, manage, query, update, control, and protect a database.
 
 </details>
 
 ---
 
-### Question 2 [4 marks]
+### Question 2 [5 marks]
 
 Distinguish between data and information.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-Data is raw facts or values that may not have full meaning by themselves. Information is data that has been processed, organized, or given context so that it becomes meaningful. For example, `85` is data, while `Alice scored 85 in Computer Science` is information.
+Data is raw facts or values that may not have meaning by themselves, such as `98` or `2026-05-22`. Information is data that has been processed, organized, or given context so it has meaning, such as “Student Amy scored 98 in Computer Science on 2026-05-22.”
 
 </details>
 
 ---
 
-### Question 3 [5 marks]
+### Question 3 [6 marks]
 
-Explain two advantages of using a database instead of a simple file.
+Explain two advantages of using a database instead of separate files.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-A database can reduce data redundancy by storing related data in structured tables rather than repeating the same data many times. It can also improve searching because queries can retrieve specific records quickly. Other valid advantages include improved consistency, data sharing, security, backup and recovery, and data integrity.
+One advantage is reduced data redundancy because related data can be stored once and linked instead of repeated in many files. This can improve consistency because updates only need to be made in one place. Another advantage is better data access because users can query the database to find specific information quickly. A DBMS can also provide security controls, backup, integrity rules, and multi-user access.
 
 </details>
 
@@ -941,12 +1371,12 @@ A database can reduce data redundancy by storing related data in structured tabl
 
 ### Question 4 [6 marks]
 
-A school stores all student, course, and teacher data in one large table. Explain two problems this may cause.
+A school stores student details in one file, grades in another file, and attendance in another file. Explain two problems this may cause.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-One problem is data redundancy because student names, course names, or teacher names may be repeated in many rows. This wastes storage and makes updates harder. Another problem is inconsistency because if repeated data is changed in one row but not another, the database may contain conflicting values. Separating data into related tables can reduce these problems.
+One problem is data redundancy, because the same student details may be repeated in several files. This can lead to data inconsistency if one file is updated but another file still contains old data. Another problem is data isolation, because related data is stored in separate files, making it harder to combine data and answer questions such as which absent students also have low grades.
 
 </details>
 
@@ -954,140 +1384,168 @@ One problem is data redundancy because student names, course names, or teacher n
 
 ### Question 5 [6 marks]
 
-Using the table below, identify the number of records, number of fields, and a possible primary key.
-
-| studentId | name | yearGroup |
-|---|---|---:|
-| S001 | Alice | 12 |
-| S002 | Ben | 12 |
-| S003 | Clara | 13 |
+Explain why a hospital database must be designed and secured carefully.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-There are 3 records because there are 3 rows of student data. There are 3 fields: `studentId`, `name`, and `yearGroup`. A suitable primary key is `studentId` because it uniquely identifies each student record.
+A hospital database stores sensitive and important data such as patient records, appointments, prescriptions, and treatments. The data must be accurate and consistent because incorrect data could affect patient care. It must be protected with authentication, permissions, encryption, backups, and audit logs because unauthorized access could breach privacy. The database must also be available when needed because doctors and nurses may need quick access to patient information.
 
 </details>
 
 ---
 
-## 25. Classroom Activity
+## 36. Classroom Activity
 
-### Activity 1: Human Table
+### Activity 1: Data or Information Sort
 
-Students stand in rows to represent records. Each student holds cards for fields:
+Students sort cards into data or information.
 
-```text
-studentId
-name
-yearGroup
-```
-
-The class identifies:
+Examples:
 
 ```text
-table
-record
-field
-value
+17
+Grade 10
+Student ID 102
+Ben Wang is in Grade 10
+Book 304 is overdue
+2026-05-22
 ```
 
 ---
 
-### Activity 2: One Huge Table Problem
+### Activity 2: Entity and Attribute Brainstorm
 
-Give students a repeated table with student and course data. Ask them to highlight repeated data and suggest separate tables.
-
----
-
-### Activity 3: Database Examples Brainstorm
-
-Groups choose one real-world system:
+Groups choose one system:
 
 ```text
-library
-online shop
-hospital
-game
 school
+library
+hospital
+online shop
+game leaderboard
+restaurant booking
 ```
 
-They list:
+They identify:
 
 ```text
 entities
+attributes
 possible tables
-possible fields
-possible primary keys
+possible questions the database should answer
 ```
 
 ---
 
-## 26. Homework
+### Activity 3: File System Problem Simulation
+
+Give groups three separate paper files:
+
+```text
+student details
+attendance
+grades
+```
+
+Ask them to answer cross-file questions and update a student's phone number.
+
+Then discuss:
+
+```text
+redundancy
+inconsistency
+data isolation
+why a database helps
+```
+
+---
+
+## 37. Homework
 
 ### Homework Part A: Concept Explanation
 
-In 5-6 sentences, explain what a database is and why a school might use one.
+In 6-8 sentences, explain what a database is, what a DBMS does, and why databases are useful.
 
 ---
 
-### Homework Part B: Table Reading
+### Homework Part B: Scenario Table
 
-Given this table:
+Choose one scenario:
 
-| productId | productName | price | stock |
-|---|---|---:|---:|
-| P001 | Keyboard | 49.99 | 12 |
-| P002 | Mouse | 19.99 | 30 |
-| P003 | Monitor | 159.99 | 5 |
+```text
+school
+library
+hospital
+online shop
+bank
+game account system
+```
 
-Answer:
+Create a table with:
 
-1. How many records are there?
-2. How many fields are there?
-3. Which field could be the primary key?
-4. Give one example of data.
-5. Give one example of information based on the table.
-
----
-
-### Homework Part C: Scenario Design
-
-For a library system, suggest three possible tables and at least three fields for each table.
+```text
+possible entities
+possible attributes
+why a database is useful
+one security concern
+```
 
 ---
 
-### Homework Part D: Written Answer
+### Homework Part C: File-based Problems
 
-Explain two advantages and two possible issues of using a database.
+Explain these problems with examples:
+
+```text
+data redundancy
+data inconsistency
+data isolation
+```
 
 ---
 
-## 27. One-page Revision Summary
+### Homework Part D: Misconception Correction
+
+Correct these statements:
+
+```text
+A database is always just one table.
+A DBMS is the same as the data itself.
+Data and information mean exactly the same thing.
+Duplicating data in many files never causes problems.
+A database does not need security if it is only used by a school.
+```
+
+---
+
+## 38. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
 | Data | Raw facts or values |
-| Information | Data with meaning or context |
+| Information | Data with meaning/context |
 | Database | Organized collection of related data |
 | DBMS | Software that manages a database |
-| Table | Stores data about one entity |
-| Record | One row in a table |
-| Field | One column in a table |
-| Value | One item in a cell |
-| Entity | Real-world thing stored in a database |
+| Relational database | Stores data in related tables |
+| Table | Stores records about one entity type |
+| Field | Column / attribute |
+| Record | Row / one instance |
+| Entity | Object or concept stored about |
 | Attribute | Property of an entity |
-| Flat file | Simple file with limited relational structure |
-| Relational database | Data stored in related tables |
-| Primary key | Unique identifier for each record |
-| Foreign key | Field that links to another table |
 | Query | Request for data |
-| SQL | Language used to query relational databases |
-| Exam phrase | A database stores related data in an organized way so that it can be searched, updated, shared, and protected efficiently |
+| Form | Interface for entering/editing data |
+| Report | Formatted database output |
+| Redundancy | Unnecessary duplicated data |
+| Inconsistency | Conflicting versions of same data |
+| Data integrity | Accuracy and consistency of data |
+| Main benefit | organized, searchable, controlled, shared data |
+| Main risk | complexity, cost, privacy/security concerns |
+| Exam phrase | A database is an organized collection of related data managed by a DBMS, which supports storage, queries, updates, security, integrity, backup, and multi-user access |
 
 ---
 
-## 28. Quick Self-test
+## 39. Quick Self-test
 
 Before moving on, students should be able to answer these:
 
@@ -1096,8 +1554,8 @@ Before moving on, students should be able to answer these:
 3. What is a database?
 4. What is a DBMS?
 5. What is a table?
-6. What is a record?
-7. What is a field?
-8. What is the difference between a simple file and a database?
-9. Why can one huge table be a poor design?
-10. What is one advantage of using a database?
+6. What is a field?
+7. What is a record?
+8. What is data redundancy?
+9. What is data inconsistency?
+10. Why are databases useful?
