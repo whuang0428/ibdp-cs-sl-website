@@ -16,6 +16,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Interactive Demos', link: '/interactive-demos/' },
       { text: 'Roadmap', link: '/roadmap' },
       {
         text: 'B Theme',
@@ -252,6 +253,13 @@ export default defineConfig({
           { text: 'Command Terms', link: '/glossary/command-terms' }
         ]
       },
+	{
+  	text: 'Interactive Demos',
+  	items: [
+    	{ text: 'Overview', link: '/interactive-demos/' },
+    	{ text: 'Packet Switching', link: '/interactive-demos/packet-switching' }
+  	]
+	},
     ],
 
     outline: {

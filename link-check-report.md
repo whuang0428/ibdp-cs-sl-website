@@ -1,6 +1,6 @@
 ﻿# VitePress Link Check Report
 
-Generated: 2026-05-25 16:17:54
+Generated: 2026-05-25 16:23:28
 
 ## Summary
 
@@ -8,23 +8,14 @@ Generated: 2026-05-25 16:17:54
 |---|---:|
 | Markdown files scanned | 112 |
 | Valid routes found | 112 |
-| Internal links checked | 255 |
-| OK links | 255 |
+| Internal links checked | 258 |
+| OK links | 258 |
 | Broken links | 0 |
-| Possible orphan pages | 2 |
+| Possible orphan pages | 0 |
 
 ## Broken Links
 
 No broken internal links found.
-
-## Possible Orphan Pages
-
-These pages exist, but they may not be linked from `config.mts` navigation/sidebar.
-
-| Route | File |
-|---|---|
-| `/interactive-demos` | `docs/interactive-demos/index.md` |
-| `/interactive-demos/packet-switching` | `docs/interactive-demos/packet-switching.md` |
 
 ## Fix Rule
 
