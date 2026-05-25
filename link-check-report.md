@@ -1,17 +1,17 @@
 ﻿# VitePress Link Check Report
 
-Generated: 2026-05-25 16:09:30
+Generated: 2026-05-25 16:17:54
 
 ## Summary
 
 | Item | Count |
 |---|---:|
-| Markdown files scanned | 113 |
-| Valid routes found | 113 |
+| Markdown files scanned | 112 |
+| Valid routes found | 112 |
 | Internal links checked | 255 |
 | OK links | 255 |
 | Broken links | 0 |
-| Possible orphan pages | 3 |
+| Possible orphan pages | 2 |
 
 ## Broken Links
 
@@ -24,7 +24,6 @@ These pages exist, but they may not be linked from `config.mts` navigation/sideb
 | Route | File |
 |---|---|
 | `/interactive-demos` | `docs/interactive-demos/index.md` |
-| `/interactive-demos/binary-to-denary` | `docs/interactive-demos/binary-to-denary.md` |
 | `/interactive-demos/packet-switching` | `docs/interactive-demos/packet-switching.md` |
 
 ## Fix Rule
