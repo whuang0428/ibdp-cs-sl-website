@@ -1,4 +1,4 @@
-# A1 Computer Fundamentals
+﻿# A1 Computer Fundamentals
 
 ## 1. Module Overview
 
@@ -985,6 +985,4 @@ Before moving to the next module, students should be able to:
 | Control systems | Use sensors, controllers, actuators, and feedback |
 | Cloud computing | Uses remote servers over a network |
 
-::: tip Next Step
-After completing A1 pages, the next quality-control step should be **A1 Computer Fundamentals v1.1 Quality Review** to confirm the module is ready for classroom use.
-:::
+

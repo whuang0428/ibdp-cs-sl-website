@@ -1,4 +1,4 @@
-# Pseudocode and Java Cheatsheet
+﻿# Pseudocode and Java Cheatsheet
 
 ## 1. Lesson Goals
 
@@ -1955,6 +1955,4 @@ What invalid input should be rejected?
 | best habit | trace step by step | test with normal/boundary/invalid data |
 | best phrase | Pseudocode expresses algorithm logic, while Java implements the same logic with strict programming syntax. |
 
-::: tip Glossary Complete
-The Glossary content pages are now complete. The next step should be a **quality-control audit** across the site, starting with checking sidebar links, page files, and build output.
-:::
+

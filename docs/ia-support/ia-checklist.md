@@ -1,4 +1,4 @@
-# IA Checklist
+﻿# IA Checklist
 
 ## 1. Purpose of This Checklist
 
@@ -905,6 +905,4 @@ Does the final version match the tested version?
 | Backup | saved before submission |
 | Best phrase | The final IA should prove a clear chain from the original problem to the final evaluation. |
 
-::: tip IA Support Complete
-The IA Support content pages are now complete. The next section to refine can be **Glossary**, starting with `docs/glossary/index.md`, or a final quality-control pass across all IA pages.
-:::
+

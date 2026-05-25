@@ -1,4 +1,4 @@
-# Course Roadmap
+﻿# Course Roadmap
 
 ## 1. Course Structure
 
@@ -323,6 +323,4 @@ Do not include `.md` in the link.
 | IA Support | Support v1.0 completed |
 | Glossary | Support v1.0 completed |
 
-::: tip Next Stage
-After the framework and content v1.0 are complete, the next stage should be quality control: check links, improve page consistency, add more exam-style questions, and gradually enrich examples based on classroom use.
-:::
+
