@@ -1,33 +1,21 @@
 ﻿# VitePress Link Check Report
 
-Generated: 2026-05-25 13:48:27
+Generated: 2026-05-25 13:57:58
 
 ## Summary
 
 | Item | Count |
 |---|---:|
-| Markdown files scanned | 120 |
-| Valid routes found | 120 |
-| Internal links checked | 259 |
-| OK links | 259 |
+| Markdown files scanned | 110 |
+| Valid routes found | 110 |
+| Internal links checked | 254 |
+| OK links | 254 |
 | Broken links | 0 |
-| Possible orphan pages | 5 |
+| Possible orphan pages | 0 |
 
 ## Broken Links
 
 No broken internal links found.
-
-## Possible Orphan Pages
-
-These pages exist, but they may not be linked from `config.mts` navigation/sidebar.
-
-| Route | File |
-|---|---|
-| `/quality-control/b2-pre-loop-pages-audit` | `docs/quality-control/b2-pre-loop-pages-audit.md` |
-| `/quality-control/b2-programming-audit` | `docs/quality-control/b2-programming-audit.md` |
-| `/quality-control/b2-programming-v1-1-review` | `docs/quality-control/b2-programming-v1-1-review.md` |
-| `/quality-control/b3-oop-quality-audit` | `docs/quality-control/b3-oop-quality-audit.md` |
-| `/quality-control/b3-oop-v1-1-quality-review` | `docs/quality-control/b3-oop-v1-1-quality-review.md` |
 
 ## Fix Rule
 

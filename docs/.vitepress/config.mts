@@ -47,7 +47,6 @@ export default defineConfig({
           { text: 'Exam Practice', link: '/exam-practice/' },
           { text: 'IA Support', link: '/ia-support/' },
           { text: 'Glossary', link: '/glossary/' },
-          { text: 'Quality Control', link: '/quality-control/' }
         ]
       }
     ],
@@ -253,17 +252,6 @@ export default defineConfig({
           { text: 'Command Terms', link: '/glossary/command-terms' }
         ]
       },
-
-      {
-        text: 'Quality Control',
-        collapsed: true,
-        items: [
-          { text: 'Overview', link: '/quality-control/' },
-          { text: 'Teaching Quality Audit', link: '/quality-control/teaching-quality-audit' },
-          { text: 'Module Audit Table', link: '/quality-control/module-audit-table' },
-          { text: 'Upgrade Priority Plan', link: '/quality-control/upgrade-priority-plan' }
-        ]
-      }
     ],
 
     outline: {
