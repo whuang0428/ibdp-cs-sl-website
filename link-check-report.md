@@ -1,15 +1,15 @@
 ﻿# VitePress Link Check Report
 
-Generated: 2026-05-26 09:04:13
+Generated: 2026-05-26 09:09:04
 
 ## Summary
 
 | Item | Count |
 |---|---:|
-| Markdown files scanned | 114 |
-| Valid routes found | 114 |
-| Internal links checked | 262 |
-| OK links | 262 |
+| Markdown files scanned | 115 |
+| Valid routes found | 115 |
+| Internal links checked | 264 |
+| OK links | 264 |
 | Broken links | 0 |
 | Possible orphan pages | 0 |
 

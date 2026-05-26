@@ -15,6 +15,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [Packet Switching Interactive Demo](./packet-switching) | Networks | explaining how packets are routed, reordered, and reassembled |
 | [DNS Lookup and Web Request Interactive Demo](./dns-web-request) | Networks | explaining how a browser retrieves a webpage |
 | [Firewall Rule Simulator](./firewall-rule-simulator) | Network Security | deciding whether packets should be allowed or blocked |
+| [SQL SELECT Visualizer](./sql-select-visualizer) | Databases | building simple SELECT, WHERE, and ORDER BY queries |
 
 ## Suggested Use
 
@@ -31,8 +32,8 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-SQL SELECT Visualizer
 Normalization Demo
+SQL JOIN Visualizer
 Confusion Matrix Visualizer
 Trace Table Simulator
 Linear Search Demo

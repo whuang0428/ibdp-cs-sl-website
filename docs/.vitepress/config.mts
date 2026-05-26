@@ -69,7 +69,8 @@ export default defineConfig({
           { text: 'Overview', link: '/interactive-demos/' },
           { text: 'Packet Switching', link: '/interactive-demos/packet-switching' },
           { text: 'DNS Lookup and Web Request', link: '/interactive-demos/dns-web-request' },
-          { text: 'Firewall Rule Simulator', link: '/interactive-demos/firewall-rule-simulator' }
+          { text: 'Firewall Rule Simulator', link: '/interactive-demos/firewall-rule-simulator' },
+          { text: 'SQL SELECT Visualizer', link: '/interactive-demos/sql-select-visualizer' }
         ]
       },
 
