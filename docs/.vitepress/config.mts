@@ -73,7 +73,8 @@ export default defineConfig({
           { text: 'SQL SELECT Visualizer', link: '/interactive-demos/sql-select-visualizer' },
           { text: 'Normalization Demo', link: '/interactive-demos/normalization-demo' },
           { text: 'SQL JOIN Visualizer', link: '/interactive-demos/sql-join-visualizer' },
-          { text: 'Confusion Matrix Visualizer', link: '/interactive-demos/confusion-matrix-visualizer' }
+          { text: 'Confusion Matrix Visualizer', link: '/interactive-demos/confusion-matrix-visualizer' },
+          { text: 'Overfitting vs Underfitting', link: '/interactive-demos/overfitting-underfitting-visualizer' }
         ]
       },
 

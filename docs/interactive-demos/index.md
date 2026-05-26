@@ -19,6 +19,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [Normalization Demo](./normalization-demo) | Databases | reducing redundancy by splitting data into related tables |
 | [SQL JOIN Visualizer](./sql-join-visualizer) | Databases | combining related tables using primary and foreign keys |
 | [Confusion Matrix Visualizer](./confusion-matrix-visualizer) | Machine Learning | evaluating classification models |
+| [Overfitting vs Underfitting Visualizer](./overfitting-underfitting-visualizer) | Machine Learning | comparing training error and test error |
 
 ## Suggested Use
 
@@ -35,8 +36,8 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Overfitting vs Underfitting Visualizer
 Bias in Training Data Simulator
+k-Nearest Neighbour Demo
 Trace Table Simulator
 Linear Search Demo
 Bubble Sort Visualizer
