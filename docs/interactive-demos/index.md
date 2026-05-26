@@ -16,6 +16,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [DNS Lookup and Web Request Interactive Demo](./dns-web-request) | Networks | explaining how a browser retrieves a webpage |
 | [Firewall Rule Simulator](./firewall-rule-simulator) | Network Security | deciding whether packets should be allowed or blocked |
 | [SQL SELECT Visualizer](./sql-select-visualizer) | Databases | building simple SELECT, WHERE, and ORDER BY queries |
+| [Normalization Demo](./normalization-demo) | Databases | reducing redundancy by splitting data into related tables |
 
 ## Suggested Use
 
@@ -32,7 +33,6 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Normalization Demo
 SQL JOIN Visualizer
 Confusion Matrix Visualizer
 Trace Table Simulator

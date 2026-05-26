@@ -70,7 +70,8 @@ export default defineConfig({
           { text: 'Packet Switching', link: '/interactive-demos/packet-switching' },
           { text: 'DNS Lookup and Web Request', link: '/interactive-demos/dns-web-request' },
           { text: 'Firewall Rule Simulator', link: '/interactive-demos/firewall-rule-simulator' },
-          { text: 'SQL SELECT Visualizer', link: '/interactive-demos/sql-select-visualizer' }
+          { text: 'SQL SELECT Visualizer', link: '/interactive-demos/sql-select-visualizer' },
+          { text: 'Normalization Demo', link: '/interactive-demos/normalization-demo' }
         ]
       },
 
