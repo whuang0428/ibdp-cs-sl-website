@@ -21,6 +21,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [Confusion Matrix Visualizer](./confusion-matrix-visualizer) | Machine Learning | evaluating classification models |
 | [Overfitting vs Underfitting Visualizer](./overfitting-underfitting-visualizer) | Machine Learning | comparing training error and test error |
 | [Bias in Training Data Simulator](./bias-training-data-simulator) | Machine Learning | exploring how unrepresentative data affects predictions |
+| [k-Nearest Neighbour Classifier](./knn-classifier-demo) | Machine Learning | classifying an unknown item using nearest labelled examples |
 
 ## Suggested Use
 
@@ -37,8 +38,8 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-k-Nearest Neighbour Demo
 Trace Table Simulator
 Linear Search Demo
+Binary Search Demo
 Bubble Sort Visualizer
 ```
