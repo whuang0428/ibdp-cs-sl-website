@@ -18,6 +18,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [SQL SELECT Visualizer](./sql-select-visualizer) | Databases | building simple SELECT, WHERE, and ORDER BY queries |
 | [Normalization Demo](./normalization-demo) | Databases | reducing redundancy by splitting data into related tables |
 | [SQL JOIN Visualizer](./sql-join-visualizer) | Databases | combining related tables using primary and foreign keys |
+| [Confusion Matrix Visualizer](./confusion-matrix-visualizer) | Machine Learning | evaluating classification models |
 
 ## Suggested Use
 
@@ -34,7 +35,8 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Confusion Matrix Visualizer
+Overfitting vs Underfitting Visualizer
+Bias in Training Data Simulator
 Trace Table Simulator
 Linear Search Demo
 Bubble Sort Visualizer
