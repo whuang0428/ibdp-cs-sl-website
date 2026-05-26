@@ -24,6 +24,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [k-Nearest Neighbour Classifier](./knn-classifier-demo) | Machine Learning | classifying an unknown item using nearest labelled examples |
 | [Trace Table Simulator](./trace-table-simulator) | Computational Thinking | dry running pseudocode and recording variable changes |
 | [Flowchart Execution Demo](./flowchart-execution-demo) | Computational Thinking | tracing flowchart paths, decisions, and loops |
+| [Linear Search Visualizer](./linear-search-visualizer) | Programming | checking array elements one by one |
 
 ## Suggested Use
 
@@ -40,8 +41,8 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Linear Search Demo
 Binary Search Demo
 Bubble Sort Visualizer
 Selection Sort Visualizer
+Insertion Sort Visualizer
 ```

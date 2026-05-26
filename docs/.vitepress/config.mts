@@ -78,7 +78,8 @@ export default defineConfig({
           { text: 'Bias in Training Data', link: '/interactive-demos/bias-training-data-simulator' },
           { text: 'k-Nearest Neighbour Classifier', link: '/interactive-demos/knn-classifier-demo' },
           { text: 'Trace Table Simulator', link: '/interactive-demos/trace-table-simulator' },
-          { text: 'Flowchart Execution Demo', link: '/interactive-demos/flowchart-execution-demo' }
+          { text: 'Flowchart Execution Demo', link: '/interactive-demos/flowchart-execution-demo' },
+          { text: 'Linear Search Visualizer', link: '/interactive-demos/linear-search-visualizer' }
         ]
       },
 
