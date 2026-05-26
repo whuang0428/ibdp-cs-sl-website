@@ -34,6 +34,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [OOP Object Interaction Demo](./oop-object-interaction-demo) | Object-Oriented Programming | understanding classes, objects, attributes, and methods |
 | [Encapsulation Demo](./encapsulation-demo) | Object-Oriented Programming | protecting private data through public methods |
 | [Inheritance Demo](./inheritance-demo) | Object-Oriented Programming | reusing superclass features in subclasses |
+| [Object Reference Demo](./object-reference-demo) | Object-Oriented Programming | understanding references, aliasing, and object identity |
 
 ## Suggested Use
 
@@ -45,10 +46,4 @@ Use each demo in this order:
 3. Step through or change the inputs.
 4. Read the exam-style explanation.
 5. Complete the quick practice.
-```
-
-## Planned Future Demos
-
-```text
-Object Reference Demo
 ```

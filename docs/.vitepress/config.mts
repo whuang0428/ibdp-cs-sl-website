@@ -88,7 +88,8 @@ export default defineConfig({
           { text: 'Count / Sum / Average', link: '/interactive-demos/count-sum-average-visualizer' },
           { text: 'OOP Object Interaction Demo', link: '/interactive-demos/oop-object-interaction-demo' },
           { text: 'Encapsulation Demo', link: '/interactive-demos/encapsulation-demo' },
-          { text: 'Inheritance Demo', link: '/interactive-demos/inheritance-demo' }
+          { text: 'Inheritance Demo', link: '/interactive-demos/inheritance-demo' },
+          { text: 'Object Reference Demo', link: '/interactive-demos/object-reference-demo' }
         ]
       },
 
