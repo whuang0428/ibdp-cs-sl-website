@@ -85,7 +85,8 @@ export default defineConfig({
           { text: 'Selection Sort Visualizer', link: '/interactive-demos/selection-sort-visualizer' },
           { text: 'Insertion Sort Visualizer', link: '/interactive-demos/insertion-sort-visualizer' },
           { text: 'Find Maximum / Minimum', link: '/interactive-demos/find-max-min-visualizer' },
-          { text: 'Count / Sum / Average', link: '/interactive-demos/count-sum-average-visualizer' }
+          { text: 'Count / Sum / Average', link: '/interactive-demos/count-sum-average-visualizer' },
+          { text: 'OOP Object Interaction Demo', link: '/interactive-demos/oop-object-interaction-demo' }
         ]
       },
 
