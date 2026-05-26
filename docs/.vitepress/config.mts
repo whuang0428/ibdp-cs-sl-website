@@ -71,7 +71,8 @@ export default defineConfig({
           { text: 'DNS Lookup and Web Request', link: '/interactive-demos/dns-web-request' },
           { text: 'Firewall Rule Simulator', link: '/interactive-demos/firewall-rule-simulator' },
           { text: 'SQL SELECT Visualizer', link: '/interactive-demos/sql-select-visualizer' },
-          { text: 'Normalization Demo', link: '/interactive-demos/normalization-demo' }
+          { text: 'Normalization Demo', link: '/interactive-demos/normalization-demo' },
+          { text: 'SQL JOIN Visualizer', link: '/interactive-demos/sql-join-visualizer' }
         ]
       },
 

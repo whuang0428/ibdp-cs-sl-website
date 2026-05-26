@@ -17,6 +17,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [Firewall Rule Simulator](./firewall-rule-simulator) | Network Security | deciding whether packets should be allowed or blocked |
 | [SQL SELECT Visualizer](./sql-select-visualizer) | Databases | building simple SELECT, WHERE, and ORDER BY queries |
 | [Normalization Demo](./normalization-demo) | Databases | reducing redundancy by splitting data into related tables |
+| [SQL JOIN Visualizer](./sql-join-visualizer) | Databases | combining related tables using primary and foreign keys |
 
 ## Suggested Use
 
@@ -33,7 +34,6 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-SQL JOIN Visualizer
 Confusion Matrix Visualizer
 Trace Table Simulator
 Linear Search Demo
