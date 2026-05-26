@@ -47,7 +47,7 @@ export default defineConfig({
         items: [
           { text: 'Exam Practice', link: '/exam-practice/' },
           { text: 'IA Support', link: '/ia-support/' },
-          { text: 'Glossary', link: '/glossary/' },
+          { text: 'Glossary', link: '/glossary/' }
         ]
       }
     ],
@@ -59,6 +59,16 @@ export default defineConfig({
         items: [
           { text: 'Start Here', link: '/' },
           { text: 'Course Roadmap', link: '/roadmap' }
+        ]
+      },
+
+      {
+        text: 'Interactive Demos',
+        collapsed: true,
+        items: [
+          { text: 'Overview', link: '/interactive-demos/' },
+          { text: 'Packet Switching', link: '/interactive-demos/packet-switching' },
+          { text: 'DNS Lookup and Web Request', link: '/interactive-demos/dns-web-request' }
         ]
       },
 
@@ -252,14 +262,7 @@ export default defineConfig({
           { text: 'Pseudocode and Java Cheatsheet', link: '/glossary/pseudocode-java-cheatsheet' },
           { text: 'Command Terms', link: '/glossary/command-terms' }
         ]
-      },
-	{
-  	text: 'Interactive Demos',
-  	items: [
-    	{ text: 'Overview', link: '/interactive-demos/' },
-    	{ text: 'Packet Switching', link: '/interactive-demos/packet-switching' }
-  	]
-	},
+      }
     ],
 
     outline: {

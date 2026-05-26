@@ -13,6 +13,7 @@ These demos are designed for understanding, not just memorising. Students should
 | Demo | Topic | Main Skill |
 |---|---|---|
 | [Packet Switching Interactive Demo](./packet-switching) | Networks | explaining how packets are routed, reordered, and reassembled |
+| [DNS Lookup and Web Request Interactive Demo](./dns-web-request) | Networks | explaining how a browser retrieves a webpage |
 
 ## Suggested Use
 
@@ -29,7 +30,6 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-DNS Lookup + Web Request
 Firewall Rule Simulator
 SQL SELECT Visualizer
 Normalization Demo
