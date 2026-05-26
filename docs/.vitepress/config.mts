@@ -74,7 +74,8 @@ export default defineConfig({
           { text: 'Normalization Demo', link: '/interactive-demos/normalization-demo' },
           { text: 'SQL JOIN Visualizer', link: '/interactive-demos/sql-join-visualizer' },
           { text: 'Confusion Matrix Visualizer', link: '/interactive-demos/confusion-matrix-visualizer' },
-          { text: 'Overfitting vs Underfitting', link: '/interactive-demos/overfitting-underfitting-visualizer' }
+          { text: 'Overfitting vs Underfitting', link: '/interactive-demos/overfitting-underfitting-visualizer' },
+          { text: 'Bias in Training Data', link: '/interactive-demos/bias-training-data-simulator' }
         ]
       },
 
