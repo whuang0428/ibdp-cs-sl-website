@@ -87,7 +87,8 @@ export default defineConfig({
           { text: 'Find Maximum / Minimum', link: '/interactive-demos/find-max-min-visualizer' },
           { text: 'Count / Sum / Average', link: '/interactive-demos/count-sum-average-visualizer' },
           { text: 'OOP Object Interaction Demo', link: '/interactive-demos/oop-object-interaction-demo' },
-          { text: 'Encapsulation Demo', link: '/interactive-demos/encapsulation-demo' }
+          { text: 'Encapsulation Demo', link: '/interactive-demos/encapsulation-demo' },
+          { text: 'Inheritance Demo', link: '/interactive-demos/inheritance-demo' }
         ]
       },
 

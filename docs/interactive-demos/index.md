@@ -33,6 +33,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [Count / Sum / Average Visualizer](./count-sum-average-visualizer) | Programming | using counters and accumulators during array traversal |
 | [OOP Object Interaction Demo](./oop-object-interaction-demo) | Object-Oriented Programming | understanding classes, objects, attributes, and methods |
 | [Encapsulation Demo](./encapsulation-demo) | Object-Oriented Programming | protecting private data through public methods |
+| [Inheritance Demo](./inheritance-demo) | Object-Oriented Programming | reusing superclass features in subclasses |
 
 ## Suggested Use
 
@@ -49,6 +50,5 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Inheritance Demo
 Object Reference Demo
 ```
