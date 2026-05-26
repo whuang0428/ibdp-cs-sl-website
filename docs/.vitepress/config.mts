@@ -81,7 +81,8 @@ export default defineConfig({
           { text: 'Flowchart Execution Demo', link: '/interactive-demos/flowchart-execution-demo' },
           { text: 'Linear Search Visualizer', link: '/interactive-demos/linear-search-visualizer' },
           { text: 'Binary Search Visualizer', link: '/interactive-demos/binary-search-visualizer' },
-          { text: 'Bubble Sort Visualizer', link: '/interactive-demos/bubble-sort-visualizer' }
+          { text: 'Bubble Sort Visualizer', link: '/interactive-demos/bubble-sort-visualizer' },
+          { text: 'Selection Sort Visualizer', link: '/interactive-demos/selection-sort-visualizer' }
         ]
       },
 
