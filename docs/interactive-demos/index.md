@@ -22,6 +22,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [Overfitting vs Underfitting Visualizer](./overfitting-underfitting-visualizer) | Machine Learning | comparing training error and test error |
 | [Bias in Training Data Simulator](./bias-training-data-simulator) | Machine Learning | exploring how unrepresentative data affects predictions |
 | [k-Nearest Neighbour Classifier](./knn-classifier-demo) | Machine Learning | classifying an unknown item using nearest labelled examples |
+| [Trace Table Simulator](./trace-table-simulator) | Computational Thinking | dry running pseudocode and recording variable changes |
 
 ## Suggested Use
 
@@ -38,7 +39,7 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Trace Table Simulator
+Flowchart Execution Demo
 Linear Search Demo
 Binary Search Demo
 Bubble Sort Visualizer

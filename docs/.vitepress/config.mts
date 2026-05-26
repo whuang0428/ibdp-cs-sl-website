@@ -76,7 +76,8 @@ export default defineConfig({
           { text: 'Confusion Matrix Visualizer', link: '/interactive-demos/confusion-matrix-visualizer' },
           { text: 'Overfitting vs Underfitting', link: '/interactive-demos/overfitting-underfitting-visualizer' },
           { text: 'Bias in Training Data', link: '/interactive-demos/bias-training-data-simulator' },
-          { text: 'k-Nearest Neighbour Classifier', link: '/interactive-demos/knn-classifier-demo' }
+          { text: 'k-Nearest Neighbour Classifier', link: '/interactive-demos/knn-classifier-demo' },
+          { text: 'Trace Table Simulator', link: '/interactive-demos/trace-table-simulator' }
         ]
       },
 
