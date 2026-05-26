@@ -29,6 +29,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [Bubble Sort Visualizer](./bubble-sort-visualizer) | Programming | comparing and swapping adjacent values |
 | [Selection Sort Visualizer](./selection-sort-visualizer) | Programming | selecting the smallest value from the unsorted part |
 | [Insertion Sort Visualizer](./insertion-sort-visualizer) | Programming | inserting each key into the sorted part |
+| [Find Maximum / Minimum Visualizer](./find-max-min-visualizer) | Programming | traversing an array to update the current best value |
 
 ## Suggested Use
 
@@ -45,8 +46,8 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Find Max / Min Demo
 Count / Sum / Average Demo
 Array Traversal Demo
 Stack and Queue Demo
+Recursion Call Stack Demo
 ```

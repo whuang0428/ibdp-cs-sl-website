@@ -83,7 +83,8 @@ export default defineConfig({
           { text: 'Binary Search Visualizer', link: '/interactive-demos/binary-search-visualizer' },
           { text: 'Bubble Sort Visualizer', link: '/interactive-demos/bubble-sort-visualizer' },
           { text: 'Selection Sort Visualizer', link: '/interactive-demos/selection-sort-visualizer' },
-          { text: 'Insertion Sort Visualizer', link: '/interactive-demos/insertion-sort-visualizer' }
+          { text: 'Insertion Sort Visualizer', link: '/interactive-demos/insertion-sort-visualizer' },
+          { text: 'Find Maximum / Minimum', link: '/interactive-demos/find-max-min-visualizer' }
         ]
       },
 
