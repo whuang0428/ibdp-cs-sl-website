@@ -82,7 +82,8 @@ export default defineConfig({
           { text: 'Linear Search Visualizer', link: '/interactive-demos/linear-search-visualizer' },
           { text: 'Binary Search Visualizer', link: '/interactive-demos/binary-search-visualizer' },
           { text: 'Bubble Sort Visualizer', link: '/interactive-demos/bubble-sort-visualizer' },
-          { text: 'Selection Sort Visualizer', link: '/interactive-demos/selection-sort-visualizer' }
+          { text: 'Selection Sort Visualizer', link: '/interactive-demos/selection-sort-visualizer' },
+          { text: 'Insertion Sort Visualizer', link: '/interactive-demos/insertion-sort-visualizer' }
         ]
       },
 

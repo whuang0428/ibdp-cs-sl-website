@@ -28,6 +28,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [Binary Search Visualizer](./binary-search-visualizer) | Programming | halving a sorted search range using low, mid, and high |
 | [Bubble Sort Visualizer](./bubble-sort-visualizer) | Programming | comparing and swapping adjacent values |
 | [Selection Sort Visualizer](./selection-sort-visualizer) | Programming | selecting the smallest value from the unsorted part |
+| [Insertion Sort Visualizer](./insertion-sort-visualizer) | Programming | inserting each key into the sorted part |
 
 ## Suggested Use
 
@@ -44,8 +45,8 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Insertion Sort Visualizer
 Find Max / Min Demo
 Count / Sum / Average Demo
 Array Traversal Demo
+Stack and Queue Demo
 ```
