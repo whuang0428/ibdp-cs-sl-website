@@ -26,6 +26,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [Flowchart Execution Demo](./flowchart-execution-demo) | Computational Thinking | tracing flowchart paths, decisions, and loops |
 | [Linear Search Visualizer](./linear-search-visualizer) | Programming | checking array elements one by one |
 | [Binary Search Visualizer](./binary-search-visualizer) | Programming | halving a sorted search range using low, mid, and high |
+| [Bubble Sort Visualizer](./bubble-sort-visualizer) | Programming | comparing and swapping adjacent values |
 
 ## Suggested Use
 
@@ -42,8 +43,8 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Bubble Sort Visualizer
 Selection Sort Visualizer
 Insertion Sort Visualizer
 Find Max / Min Demo
+Count / Sum / Average Demo
 ```

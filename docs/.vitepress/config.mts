@@ -80,7 +80,8 @@ export default defineConfig({
           { text: 'Trace Table Simulator', link: '/interactive-demos/trace-table-simulator' },
           { text: 'Flowchart Execution Demo', link: '/interactive-demos/flowchart-execution-demo' },
           { text: 'Linear Search Visualizer', link: '/interactive-demos/linear-search-visualizer' },
-          { text: 'Binary Search Visualizer', link: '/interactive-demos/binary-search-visualizer' }
+          { text: 'Binary Search Visualizer', link: '/interactive-demos/binary-search-visualizer' },
+          { text: 'Bubble Sort Visualizer', link: '/interactive-demos/bubble-sort-visualizer' }
         ]
       },
 
