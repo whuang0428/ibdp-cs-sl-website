@@ -25,6 +25,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [Trace Table Simulator](./trace-table-simulator) | Computational Thinking | dry running pseudocode and recording variable changes |
 | [Flowchart Execution Demo](./flowchart-execution-demo) | Computational Thinking | tracing flowchart paths, decisions, and loops |
 | [Linear Search Visualizer](./linear-search-visualizer) | Programming | checking array elements one by one |
+| [Binary Search Visualizer](./binary-search-visualizer) | Programming | halving a sorted search range using low, mid, and high |
 
 ## Suggested Use
 
@@ -41,8 +42,8 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Binary Search Demo
 Bubble Sort Visualizer
 Selection Sort Visualizer
 Insertion Sort Visualizer
+Find Max / Min Demo
 ```

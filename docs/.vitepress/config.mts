@@ -79,7 +79,8 @@ export default defineConfig({
           { text: 'k-Nearest Neighbour Classifier', link: '/interactive-demos/knn-classifier-demo' },
           { text: 'Trace Table Simulator', link: '/interactive-demos/trace-table-simulator' },
           { text: 'Flowchart Execution Demo', link: '/interactive-demos/flowchart-execution-demo' },
-          { text: 'Linear Search Visualizer', link: '/interactive-demos/linear-search-visualizer' }
+          { text: 'Linear Search Visualizer', link: '/interactive-demos/linear-search-visualizer' },
+          { text: 'Binary Search Visualizer', link: '/interactive-demos/binary-search-visualizer' }
         ]
       },
 
