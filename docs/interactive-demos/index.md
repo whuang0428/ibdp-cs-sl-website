@@ -30,6 +30,7 @@ These demos are designed for understanding, not just memorising. Students should
 | [Selection Sort Visualizer](./selection-sort-visualizer) | Programming | selecting the smallest value from the unsorted part |
 | [Insertion Sort Visualizer](./insertion-sort-visualizer) | Programming | inserting each key into the sorted part |
 | [Find Maximum / Minimum Visualizer](./find-max-min-visualizer) | Programming | traversing an array to update the current best value |
+| [Count / Sum / Average Visualizer](./count-sum-average-visualizer) | Programming | using counters and accumulators during array traversal |
 
 ## Suggested Use
 
@@ -46,8 +47,8 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Count / Sum / Average Demo
 Array Traversal Demo
 Stack and Queue Demo
 Recursion Call Stack Demo
+OOP Object Interaction Demo
 ```

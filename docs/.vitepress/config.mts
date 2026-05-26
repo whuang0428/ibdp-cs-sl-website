@@ -84,7 +84,8 @@ export default defineConfig({
           { text: 'Bubble Sort Visualizer', link: '/interactive-demos/bubble-sort-visualizer' },
           { text: 'Selection Sort Visualizer', link: '/interactive-demos/selection-sort-visualizer' },
           { text: 'Insertion Sort Visualizer', link: '/interactive-demos/insertion-sort-visualizer' },
-          { text: 'Find Maximum / Minimum', link: '/interactive-demos/find-max-min-visualizer' }
+          { text: 'Find Maximum / Minimum', link: '/interactive-demos/find-max-min-visualizer' },
+          { text: 'Count / Sum / Average', link: '/interactive-demos/count-sum-average-visualizer' }
         ]
       },
 
