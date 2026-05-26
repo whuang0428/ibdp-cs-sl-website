@@ -14,6 +14,7 @@ These demos are designed for understanding, not just memorising. Students should
 |---|---|---|
 | [Packet Switching Interactive Demo](./packet-switching) | Networks | explaining how packets are routed, reordered, and reassembled |
 | [DNS Lookup and Web Request Interactive Demo](./dns-web-request) | Networks | explaining how a browser retrieves a webpage |
+| [Firewall Rule Simulator](./firewall-rule-simulator) | Network Security | deciding whether packets should be allowed or blocked |
 
 ## Suggested Use
 
@@ -22,7 +23,7 @@ Use each demo in this order:
 ```text
 1. Read the learning goals.
 2. Try the interactive demo.
-3. Step through the process.
+3. Step through or change the inputs.
 4. Read the exam-style explanation.
 5. Complete the quick practice.
 ```
@@ -30,7 +31,6 @@ Use each demo in this order:
 ## Planned Future Demos
 
 ```text
-Firewall Rule Simulator
 SQL SELECT Visualizer
 Normalization Demo
 Confusion Matrix Visualizer
