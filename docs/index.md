@@ -8,13 +8,13 @@ hero:
   actions:
     - theme: brand
       text: Start Learning
-      link: /roadmap
+      link: ./roadmap
     - theme: alt
       text: Interactive Demos
-      link: /interactive-demos/
+      link: ./interactive-demos/
     - theme: alt
       text: Exam Practice
-      link: /exam-practice/
+      link: ./exam-practice/
 
 features:
   - title: Clear SL Content
@@ -29,37 +29,37 @@ features:
 
 <div class="student-nav-grid">
 
-<a class="student-nav-card primary-card" href="/roadmap">
+<a class="student-nav-card primary-card" href="./roadmap">
   <span class="card-tag">Start here</span>
   <h3>I am new to the course</h3>
   <p>Follow the roadmap and learn the SL topics in a sensible order.</p>
 </a>
 
-<a class="student-nav-card" href="/interactive-demos/">
+<a class="student-nav-card" href="./interactive-demos/">
   <span class="card-tag">Visual learning</span>
   <h3>I want to understand a process</h3>
   <p>Use demos for packet switching, DNS, SQL, machine learning, searching, sorting, and OOP.</p>
 </a>
 
-<a class="student-nav-card" href="/exam-practice/">
+<a class="student-nav-card" href="./exam-practice/">
   <span class="card-tag">Exam mode</span>
   <h3>I want to practise exam questions</h3>
   <p>Review exam-style questions, model answers, and mark-scheme style phrases.</p>
 </a>
 
-<a class="student-nav-card" href="/glossary/">
+<a class="student-nav-card" href="./glossary/">
   <span class="card-tag">Quick lookup</span>
   <h3>I need a definition quickly</h3>
   <p>Check key terms and short explanations before answering questions.</p>
 </a>
 
-<a class="student-nav-card" href="/ia-support/">
+<a class="student-nav-card" href="./ia-support/">
   <span class="card-tag">Project support</span>
   <h3>I am working on my IA</h3>
   <p>Use IA support pages to plan, check, and improve your project work.</p>
 </a>
 
-<a class="student-nav-card" href="/b2-programming/">
+<a class="student-nav-card" href="./b2-programming/">
   <span class="card-tag">Coding focus</span>
   <h3>I want to improve programming</h3>
   <p>Review algorithms, arrays, searching, sorting, and programming logic.</p>
@@ -71,37 +71,37 @@ features:
 
 <div class="module-grid">
 
-<a class="module-card" href="/a1-computer-fundamentals/">
+<a class="module-card" href="./a1-computer-fundamentals/">
   <h3>A1 Computer Fundamentals</h3>
   <p>Computer systems, data representation, logic, hardware, software, and system concepts.</p>
 </a>
 
-<a class="module-card" href="/a2-networks/">
+<a class="module-card" href="./a2-networks/">
   <h3>A2 Networks</h3>
   <p>Network types, packet switching, protocols, DNS, web requests, and network security.</p>
 </a>
 
-<a class="module-card" href="/a3-databases/">
+<a class="module-card" href="./a3-databases/">
   <h3>A3 Databases</h3>
   <p>Tables, keys, relationships, SQL, normalization, and database design.</p>
 </a>
 
-<a class="module-card" href="/a4-machine-learning/">
+<a class="module-card" href="./a4-machine-learning/">
   <h3>A4 Machine Learning</h3>
   <p>Training data, classification, model evaluation, bias, and overfitting.</p>
 </a>
 
-<a class="module-card" href="/b1-computational-thinking/">
+<a class="module-card" href="./b1-computational-thinking/">
   <h3>B1 Computational Thinking</h3>
   <p>Problem-solving, algorithms, pseudocode, flowcharts, trace tables, and decomposition.</p>
 </a>
 
-<a class="module-card" href="/b2-programming/">
+<a class="module-card" href="./b2-programming/">
   <h3>B2 Programming</h3>
   <p>Programming constructs, arrays, searching, sorting, counters, accumulators, and logic.</p>
 </a>
 
-<a class="module-card" href="/b3-oop/">
+<a class="module-card" href="./b3-oop/">
   <h3>B3 Object-Oriented Programming</h3>
   <p>Classes, objects, attributes, methods, encapsulation, inheritance, and references.</p>
 </a>
@@ -112,25 +112,25 @@ features:
 
 | Stage | What to study | Why it matters |
 |---|---|---|
-| 1 | [A1 Computer Fundamentals](/a1-computer-fundamentals/) | Builds the basic language of computer science. |
-| 2 | [A2 Networks](/a2-networks/) | Helps explain real-world communication and web systems. |
-| 3 | [A3 Databases](/a3-databases/) | Prepares you for SQL, keys, relationships, and data questions. |
-| 4 | [A4 Machine Learning](/a4-machine-learning/) | Develops understanding of modern AI concepts and model evaluation. |
-| 5 | [B1 Computational Thinking](/b1-computational-thinking/) | Strengthens algorithm tracing and problem-solving. |
-| 6 | [B2 Programming](/b2-programming/) | Builds core coding logic and exam algorithm skills. |
-| 7 | [B3 OOP](/b3-oop/) | Helps understand class-based programming and object interaction. |
-| 8 | [Exam Practice](/exam-practice/) | Converts knowledge into marks. |
+| 1 | [A1 Computer Fundamentals](./a1-computer-fundamentals/) | Builds the basic language of computer science. |
+| 2 | [A2 Networks](./a2-networks/) | Helps explain real-world communication and web systems. |
+| 3 | [A3 Databases](./a3-databases/) | Prepares you for SQL, keys, relationships, and data questions. |
+| 4 | [A4 Machine Learning](./a4-machine-learning/) | Develops understanding of modern AI concepts and model evaluation. |
+| 5 | [B1 Computational Thinking](./b1-computational-thinking/) | Strengthens algorithm tracing and problem-solving. |
+| 6 | [B2 Programming](./b2-programming/) | Builds core coding logic and exam algorithm skills. |
+| 7 | [B3 OOP](./b3-oop/) | Helps understand class-based programming and object interaction. |
+| 8 | [Exam Practice](./exam-practice/) | Converts knowledge into marks. |
 
 ## Quick Access
 
 <div class="quick-grid">
 
-<a href="/interactive-demos/">Interactive Demos</a>
-<a href="/exam-practice/">Exam Practice</a>
-<a href="/glossary/">Glossary</a>
-<a href="/ia-support/">IA Support</a>
-<a href="/extension-hl-programming/">HL Programming Extension</a>
-<a href="/extension-social-engineering/">Social Engineering Extension</a>
+<a href="./interactive-demos/">Interactive Demos</a>
+<a href="./exam-practice/">Exam Practice</a>
+<a href="./glossary/">Glossary</a>
+<a href="./ia-support/">IA Support</a>
+<a href="./extension-hl-programming/">HL Programming Extension</a>
+<a href="./extension-social-engineering/">Social Engineering Extension</a>
 
 </div>
 
