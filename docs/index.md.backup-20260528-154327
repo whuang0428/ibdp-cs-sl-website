@@ -1,4 +1,4 @@
-﻿---
+---
 layout: home
 
 hero:
@@ -130,7 +130,7 @@ features:
 <a href="./glossary/">Glossary</a>
 <a href="./ia-support/">IA Support</a>
 <a href="./extension-hl-programming/">HL Programming Extension</a>
-<a href="./extension-software-engineering/">Software Engineering Extension</a>
+<a href="./extension-social-engineering/">Social Engineering Extension</a>
 
 </div>
 
@@ -273,4 +273,3 @@ Read the topic page first, then use an interactive demo if the topic has a proce
   }
 }
 </style>
-

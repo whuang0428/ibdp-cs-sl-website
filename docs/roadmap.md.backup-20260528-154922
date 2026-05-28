@@ -14,7 +14,7 @@ This website follows the school's IBDP Computer Science SL teaching order.
 | 6 | A2 Networks | Explain network communication, protocols, security, and web access | `/a2-networks/` |
 | 7 | A4 Machine Learning | Introduce ML workflow, evaluation, ethics, and limitations | `/a4-machine-learning/` |
 | 8 | HL Programming Extension | Strengthen programming beyond SL | `/extension-hl-programming/` |
-| 9 | Software Engineering | Understand structured software development and maintenance | `/extension-software-engineering/` |
+| 9 | Social Engineering Awareness | Build defensive cybersecurity awareness | `/extension-social-engineering/` |
 | 10 | Exam / IA / Glossary | Support assessment and revision | `/exam-practice/`, `/ia-support/`, `/glossary/` |
 
 ---
@@ -199,7 +199,7 @@ The school has around **5 lessons per week**. Actual speed can change depending 
 | A2 Networks | 4-6 weeks | Focus on packet/DNS/security process explanations |
 | A4 Machine Learning | 3-4 weeks | Use simple datasets and ethics scenarios |
 | HL Programming Extension | Flexible | Use for advanced students or after B3 |
-| Software Engineering | 1-2 weeks or embedded | Can support IA development and programming projects |
+| Social Engineering Awareness | 1-2 weeks or embedded | Can be integrated with A2 Networks |
 | Exam Practice and IA Support | Ongoing | Use after each module and near assessment periods |
 
 ---
@@ -318,10 +318,9 @@ Do not include `.md` in the link.
 | A2 Networks | Content v1.0 completed |
 | A4 Machine Learning | Content v1.0 completed |
 | HL Programming Extension | Content v1.0 completed |
-| Software Engineering | Content v1.0 completed |
+| Social Engineering Awareness | Content v1.0 completed |
 | Exam Practice | Support v1.0 completed |
 | IA Support | Support v1.0 completed |
 | Glossary | Support v1.0 completed |
-
 
 

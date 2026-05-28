@@ -1,4 +1,4 @@
-﻿import { defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'IBDP CS SL',
@@ -39,7 +39,7 @@ export default defineConfig({
         text: 'Extensions',
         items: [
           { text: 'HL Programming', link: '/extension-hl-programming/' },
-          { text: 'Software Engineering', link: '/extension-software-engineering/' }
+          { text: 'Social Engineering Awareness', link: '/extension-social-engineering/' }
         ]
       },
       {
@@ -229,12 +229,19 @@ export default defineConfig({
       },
 
       {
-        text: 'Software Engineering',
+        text: 'Social Engineering Awareness',
         collapsed: true,
         items: [
-          { text: 'Overview', link: '/extension-software-engineering/' },
-          { text: 'What is Software Engineering?', link: '/extension-software-engineering/what-is-software-engineering' },
-]
+          { text: 'Overview', link: '/extension-social-engineering/' },
+          { text: 'What is Social Engineering?', link: '/extension-social-engineering/what-is-social-engineering' },
+          { text: 'Human Factors and Trust', link: '/extension-social-engineering/human-factors-and-trust' },
+          { text: 'Phishing and Spear Phishing', link: '/extension-social-engineering/phishing-and-spear-phishing' },
+          { text: 'Pretexting, Baiting and Quid Pro Quo', link: '/extension-social-engineering/pretexting-baiting-quid-pro-quo' },
+          { text: 'Tailgating and Physical Security', link: '/extension-social-engineering/tailgating-physical-security' },
+          { text: 'OSINT and Digital Footprints', link: '/extension-social-engineering/osint-digital-footprints' },
+          { text: 'Defending Against Social Engineering', link: '/extension-social-engineering/defending-against-social-engineering' },
+          { text: 'Incident Response and Reporting', link: '/extension-social-engineering/incident-response-reporting' }
+        ]
       },
 
       {
@@ -303,5 +310,3 @@ export default defineConfig({
     lineNumbers: true
   }
 })
-
-

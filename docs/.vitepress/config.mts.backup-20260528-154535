@@ -234,7 +234,14 @@ export default defineConfig({
         items: [
           { text: 'Overview', link: '/extension-software-engineering/' },
           { text: 'What is Software Engineering?', link: '/extension-software-engineering/what-is-software-engineering' },
-]
+          { text: 'Human Factors and Trust', link: '/extension-software-engineering/human-factors-and-trust' },
+          { text: 'Phishing and Spear Phishing', link: '/extension-software-engineering/phishing-and-spear-phishing' },
+          { text: 'Pretexting, Baiting and Quid Pro Quo', link: '/extension-software-engineering/pretexting-baiting-quid-pro-quo' },
+          { text: 'Tailgating and Physical Security', link: '/extension-software-engineering/tailgating-physical-security' },
+          { text: 'OSINT and Digital Footprints', link: '/extension-software-engineering/osint-digital-footprints' },
+          { text: 'Defending Against Software Engineering', link: '/extension-software-engineering/defending-against-social-engineering' },
+          { text: 'Incident Response and Reporting', link: '/extension-software-engineering/incident-response-reporting' }
+        ]
       },
 
       {
@@ -303,5 +310,4 @@ export default defineConfig({
     lineNumbers: true
   }
 })
-
 

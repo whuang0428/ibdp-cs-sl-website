@@ -1,4 +1,4 @@
-﻿# Exception Handling and Robust Programs
+# Exception Handling and Robust Programs
 
 ## 1. Lesson Goals
 
@@ -1383,6 +1383,5 @@ Finally only runs when an error happens.
 | Exam phrase | exception handling improves robustness by allowing a program to catch runtime errors and respond safely instead of terminating unexpectedly |
 
 ::: tip Next Step
-HL Programming Extension content pages are now complete. The next main section to refine should be **Software Engineering**, starting with its `index.md`.
+HL Programming Extension content pages are now complete. The next main section to refine should be **Social Engineering Awareness**, starting with its real `index.md`.
 :::
-
