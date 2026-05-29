@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import BubbleSortVisualizer from '../.vitepress/components/demos/BubbleSortVisualizer.vue'
 </script>
 
@@ -79,3 +79,4 @@ Why can bubble sort be inefficient?
 Bubble sort can be inefficient because it may need many passes, comparisons, and swaps, especially for large arrays.
 
 </details>
+

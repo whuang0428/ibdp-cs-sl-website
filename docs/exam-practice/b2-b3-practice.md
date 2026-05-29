@@ -1,4 +1,4 @@
-# B2 and B3 Practice
+﻿# B2 and B3 Practice
 
 ## 1. Page Purpose
 
@@ -1886,6 +1886,3 @@ Before a programming/OOP test, students should be able to:
 | Encapsulation | restricts direct access to data |
 | UML | class name, attributes, methods |
 
-::: tip Next Step
-After this page, the next Exam Practice page should be **A1 and A2 Practice**, using the real file name `a1-a2-practice.md`.
-:::

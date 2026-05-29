@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import LinearSearchVisualizer from '../.vitepress/components/demos/LinearSearchVisualizer.vue'
 </script>
 
@@ -81,3 +81,4 @@ What is the worst case for linear search?
 The worst case is when the target is at the last index or not in the list, so every element must be checked.
 
 </details>
+

@@ -1812,7 +1812,7 @@ if (name == "Anna") {
 
 ---
 
-## 48. Classroom Activity
+## 48. Practice Activity
 
 ### Activity 1: Pseudocode to Java Relay
 
@@ -1901,38 +1901,6 @@ Answer:
 
 ---
 
-## 50. Teacher Notes
-
-### Teaching Emphasis
-
-Students should not treat pseudocode and Java as two unrelated topics. The same logic appears in both.
-
-Useful teaching sequence:
-
-```text
-pseudocode → trace → Java → test → explain
-```
-
-Students often know syntax but cannot explain the logic. Ask them to explain each program using:
-
-```text
-input → processing → output
-```
-
-### Suggested Teacher Questions
-
-```text
-What is the input?
-What condition controls the loop?
-When does the loop stop?
-Which variable changes?
-What is the output?
-What data structure is used?
-What invalid input should be rejected?
-```
-
----
-
 ## 51. One-page Pseudocode and Java Sheet
 
 | Concept | Pseudocode | Java |
@@ -1954,5 +1922,4 @@ What invalid input should be rejected?
 | string compare | `name = "Anna"` | `name.equals("Anna")` |
 | best habit | trace step by step | test with normal/boundary/invalid data |
 | best phrase | Pseudocode expresses algorithm logic, while Java implements the same logic with strict programming syntax. |
-
 

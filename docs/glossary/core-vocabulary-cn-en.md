@@ -1,4 +1,4 @@
-# Core Vocabulary CN-EN
+﻿# Core Vocabulary CN-EN
 
 ## 1. Lesson Goals
 
@@ -781,7 +781,7 @@ B2 Programming
 
 ---
 
-## 29. Classroom Activity
+## 29. Practice Activity
 
 ### Activity 1: CN to EN Fast Recall
 
@@ -871,33 +871,6 @@ Answer:
 
 ---
 
-## 31. Teacher Notes
-
-### Teaching Emphasis
-
-Students often understand the topic but lose marks because of vague wording. Encourage them to practise vocabulary in full answer sentences.
-
-Useful classroom routine:
-
-```text
-term → Chinese meaning → one-line definition → scenario sentence → common mistake
-```
-
-For bilingual learners, do not stop at translation. Translation should lead to precise English explanation.
-
-### Suggested Teacher Questions
-
-```text
-Can you define this without using the word "thing"?
-Can you give a scenario example?
-Which term is commonly confused with this?
-What would the mark scheme likely accept?
-Is your answer overclaiming?
-Can you make it more specific?
-```
-
----
-
 ## 32. One-page Core Vocabulary Sheet
 
 | Area | Must-know Terms |
@@ -913,6 +886,3 @@ Can you make it more specific?
 | Best study method | term → definition → example → exam sentence |
 | Best phrase | Precise technical vocabulary helps turn understanding into exam marks. |
 
-::: tip Next Step
-After this page, the next page should be **Pseudocode and Java Cheatsheet**, using the real file name `pseudocode-java-cheatsheet.md`.
-:::

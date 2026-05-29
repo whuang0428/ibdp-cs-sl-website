@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import KNNClassifierDemo from '../.vitepress/components/demos/KNNClassifierDemo.vue'
 </script>
 
@@ -82,3 +82,4 @@ Explain why kNN is supervised learning.
 kNN is supervised learning because it uses labelled training examples. The known labels are used to classify a new unknown item.
 
 </details>
+

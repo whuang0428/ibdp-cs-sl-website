@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import SelectionSortVisualizer from '../.vitepress/components/demos/SelectionSortVisualizer.vue'
 </script>
 
@@ -80,3 +80,4 @@ How is selection sort different from bubble sort?
 Selection sort finds the smallest value in the unsorted part and swaps it into position. Bubble sort repeatedly compares and swaps adjacent values.
 
 </details>
+

@@ -1,4 +1,4 @@
-# Mark Scheme Skills
+﻿# Mark Scheme Skills
 
 ## 1. Page Purpose
 
@@ -1154,44 +1154,6 @@ Improve one weak sentence.
 
 ---
 
-## 27. Marking Symbols for Teachers
-
-A simple teacher marking system:
-
-| Symbol | Meaning |
-|---|---|
-| ✓ | correct mark-worthy point |
-| + | expansion needed |
-| S | scenario link needed |
-| T | technical term needed |
-| R | repeated point |
-| V | vague wording |
-| X | incorrect concept |
-| C | conclusion needed |
-| ? | unclear meaning |
-
-### Example Feedback
-
-Student answer:
-
-```text
-It is secure and safe.
-```
-
-Teacher feedback:
-
-```text
-V + T + explain how
-```
-
-Improved answer:
-
-```text
-It improves security by encrypting data so that intercepted messages cannot be read without the decryption key.
-```
-
----
-
 ## 28. Common Repeated Points
 
 Students often repeat the same idea in different words.
@@ -1628,6 +1590,3 @@ Before moving on, students should be able to answer these:
 | Self-mark | underline points and missing expansions |
 | Rewrite | add technical term + explanation + scenario |
 
-::: tip Next Step
-After this page, the next Exam Practice page should be **B1 Practice**, using the real file name `b1-practice.md`.
-:::

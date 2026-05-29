@@ -1,4 +1,4 @@
-# IA Support
+﻿# IA Support
 
 ## 1. Section Overview
 
@@ -837,7 +837,7 @@ Explain how the problem, criteria, testing, and evaluation should connect.
 
 ---
 
-## 24. Classroom Activity
+## 24. Practice Activity
 
 ### Activity 1: Good or Weak IA Idea?
 
@@ -892,36 +892,6 @@ requirement → success criterion → design → development → testing → eva
 
 ---
 
-## 25. Teacher Notes
-
-### Teaching Emphasis
-
-Focus on:
-
-```text
-real client/user
-specific problem
-measurable success criteria
-evidence-based development
-testing with different data types
-evaluation against criteria
-```
-
-Students often need help narrowing the project scope. A smaller but well-documented product is usually stronger than an oversized unfinished product.
-
-### Suggested Teacher Questions
-
-```text
-Who exactly needs this product?
-What do they currently do?
-What is the evidence that this is a real problem?
-How will you know the product is successful?
-Which success criterion will be hardest to test?
-What feature shows your programming skill?
-```
-
----
-
 ## 26. One-page IA Overview Sheet
 
 | Part | What It Must Do |
@@ -941,6 +911,3 @@ What feature shows your programming skill?
 | Main risk | weak links between criteria, testing, and evaluation |
 | Best habit | keep the whole IA connected from problem to evaluation |
 
-::: tip Next Step
-After this overview page, the next page should be **IA Overview**, using the real file name `ia-overview.md`.
-:::

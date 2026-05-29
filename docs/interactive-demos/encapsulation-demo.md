@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import EncapsulationDemo from '../.vitepress/components/demos/EncapsulationDemo.vue'
 </script>
 
@@ -81,3 +81,4 @@ How does encapsulation help data integrity?
 Encapsulation helps data integrity because public methods can validate changes before private attributes are updated. This reduces invalid or inconsistent object states.
 
 </details>
+

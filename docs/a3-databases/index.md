@@ -1,4 +1,4 @@
-# A3 Databases
+﻿# A3 Databases
 
 ## 1. Module Overview
 
@@ -654,49 +654,6 @@ This resolves the many-to-many relationship between Student and Course.
 
 ---
 
-## 17. Suggested Teaching Pacing
-
-Actual pacing depends on student background and classroom performance.
-
-| Topic | Suggested Lessons | Notes |
-|---|---:|---|
-| Database Fundamentals | 1-2 | Use real-world examples |
-| Tables, Records, and Fields | 2 | Must fix row/column confusion |
-| Primary and Foreign Keys | 2 | Use many table examples |
-| Relationships | 2-3 | Spend time on many-to-many |
-| SQL SELECT | 2 | Query reading + writing |
-| SQL Conditions and Sorting | 2-3 | WHERE vs ORDER BY needs practice |
-| Normalization | 2-3 | Focus on redesigning poor tables |
-| Transactions and Recovery | 1-2 | Use bank transfer and shop examples |
-| Security and Privacy | 1-2 | Scenario written answers |
-| ERD Basics | 2-3 | Scenario → ERD → tables |
-
----
-
-## 18. Recommended Classroom Routine
-
-For each A3 lesson, use this pattern:
-
-```text
-1. Start with a real-world database scenario
-2. Show a small table
-3. Identify table, records, fields, and keys
-4. Explain relationship or query
-5. Work through one example step by step
-6. Ask students to predict result or redesign table
-7. Discuss common mistakes
-8. Practise one exam-style question
-9. Assign one small design or SQL homework
-```
-
-This keeps each lesson connected across:
-
-```text
-scenario → table → structure → query/design → exam answer
-```
-
----
-
 ## 19. Student Revision Routine
 
 Students should revise A3 using this method:
@@ -1012,3 +969,4 @@ Before moving to A1 Computer Fundamentals, students should be able to:
 ::: tip Next Module
 After A3, the teaching sequence moves to **A1 Computer Fundamentals**. Students will shift from database systems to hardware, software, operating systems, and fundamental computer architecture ideas.
 :::
+

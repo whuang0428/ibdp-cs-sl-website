@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import FindMaxMinVisualizer from '../.vitepress/components/demos/FindMaxMinVisualizer.vue'
 </script>
 
@@ -83,3 +83,4 @@ What is array traversal?
 Array traversal means visiting each element in an array, usually using a loop.
 
 </details>
+

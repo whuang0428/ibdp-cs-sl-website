@@ -1,4 +1,4 @@
-# ArrayList and Dynamic Lists
+﻿# ArrayList and Dynamic Lists
 
 ## 1. Lesson Goals
 
@@ -1289,7 +1289,7 @@ Give three scenarios where a dynamic list is more suitable than an array.
 
 ---
 
-## 36. Classroom Activity
+## 36. Practice Activity
 
 ### Activity 1: Human Dynamic List
 
@@ -1408,6 +1408,3 @@ ArrayLists are always better than arrays.
 | Best scenario | use ArrayList when item count changes |
 | Exam phrase | dynamic lists are suitable when elements need to be added or removed while the program runs |
 
-::: tip Next Step
-After this page, the next page should be **Recursion**, using the real file name `recursion.md`.
-:::

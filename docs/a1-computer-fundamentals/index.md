@@ -629,56 +629,6 @@ collaboration tools
 
 ---
 
-## 17. Suggested Teaching Pacing
-
-Actual pacing depends on class background.
-
-| Topic | Suggested Lessons | Notes |
-|---|---:|---|
-| Overview | 1 | Build whole-system model |
-| Computer Hardware | 1-2 | Classification and scenarios |
-| CPU Components | 2 | CU, ALU, registers, cache |
-| Fetch-Decode-Execute | 2 | Step-by-step register tracing |
-| Primary Memory | 1-2 | RAM/ROM/cache and volatility |
-| Secondary Storage | 1-2 | SSD/HDD/cloud and scenarios |
-| Data Representation | 3-4 | Binary conversion + images/sound |
-| Logic Gates | 2-3 | Truth tables need practice |
-| Operating Systems | 2 | OS functions and scenarios |
-| Control Systems | 2 | Sensors, actuators, feedback |
-| Cloud Computing | 1-2 | Advantages, risks, service models |
-
----
-
-## 18. Recommended Classroom Routine
-
-For each A1 lesson, use this structure:
-
-```text
-1. Start with an everyday scenario
-2. Identify the components involved
-3. Explain key terms
-4. Show a diagram or flow
-5. Work through one example
-6. Discuss common mistakes
-7. Complete guided practice
-8. Answer one exam-style question
-9. Assign short homework
-```
-
-### Example
-
-For Primary Memory:
-
-```text
-Scenario: opening a browser and IDE
-Components: SSD, RAM, cache, CPU
-Diagram: storage → RAM → cache → CPU
-Common mistake: RAM is not long-term storage
-Exam question: compare RAM and ROM
-```
-
----
-
 ## 19. Student Revision Routine
 
 Students should revise A1 by asking:
@@ -984,5 +934,4 @@ Before moving to the next module, students should be able to:
 | Operating systems | Manage hardware/software resources |
 | Control systems | Use sensors, controllers, actuators, and feedback |
 | Cloud computing | Uses remote servers over a network |
-
 

@@ -1,4 +1,4 @@
-# B1 Computational Thinking
+﻿# B1 Computational Thinking
 
 ## 1. Module Overview
 
@@ -1159,6 +1159,3 @@ Before moving to the next module, students should be able to:
 | Logic error | Algorithm runs but gives wrong result |
 | Exam phrase | Computational thinking helps solve problems by decomposing them, abstracting details, designing algorithms, and testing the solution |
 
-::: tip Next Step
-After this overview page, the next B1 page should be **Decomposition**, using the real file name `decomposition.md`.
-:::

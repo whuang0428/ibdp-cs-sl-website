@@ -1,4 +1,4 @@
-# Mini Mock Exam Bank
+﻿# Mini Mock Exam Bank
 
 ## 1. Page Purpose
 
@@ -1453,3 +1453,4 @@ After completing a mini mock, students should fill in this reflection.
 ::: tip Completion Note
 This page completes the main Exam Practice sidebar set. A future upgrade could add printable PDF mock papers or separate student/teacher versions.
 :::
+

@@ -1,4 +1,4 @@
-# Development and Testing
+﻿# Development and Testing
 
 ## 1. Lesson Goals
 
@@ -1107,7 +1107,7 @@ Explain how testing supports evaluation.
 
 ---
 
-## 36. Classroom Activity
+## 36. Practice Activity
 
 ### Activity 1: Code Explanation Practice
 
@@ -1204,39 +1204,6 @@ The program did not crash.
 
 ---
 
-## 38. Teacher Notes
-
-### Teaching Emphasis
-
-Students often need support with writing technical explanations. Encourage them to explain not only what the code is, but why it matters.
-
-Good development evidence should show computational thinking:
-
-```text
-data structures
-algorithms
-validation
-storage
-debugging
-iteration
-```
-
-Good testing should not be treated as a decoration at the end. It should be planned from the success criteria.
-
-### Suggested Teacher Questions
-
-```text
-Which success criterion does this feature support?
-What is the input, process, and output?
-Why did you choose this data structure?
-What invalid data could break this feature?
-What did you expect before running the test?
-What evidence proves the result?
-What changed after a failed test?
-```
-
----
-
 ## 39. One-page Development and Testing Sheet
 
 | Area | Key Reminder |
@@ -1259,6 +1226,3 @@ What changed after a failed test?
 | Best exam structure | criterion → feature → code/evidence → test → result |
 | Best phrase | Development explains how features were built, while testing provides evidence that those features meet the success criteria. |
 
-::: tip Next Step
-After this page, the next page should be **Evaluation and Reflection**, using the real file name `evaluation-and-reflection.md`.
-:::

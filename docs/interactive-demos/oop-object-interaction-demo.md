@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import OOPObjectInteractionDemo from '../.vitepress/components/demos/OOPObjectInteractionDemo.vue'
 </script>
 
@@ -82,3 +82,4 @@ Why does depositing money into one account object not change another account obj
 Each object has its own attribute values. The deposit method updates the balance of the object it is called on, not every object of the class.
 
 </details>
+

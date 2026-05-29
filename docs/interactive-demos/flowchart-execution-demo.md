@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import FlowchartExecutionDemo from '../.vitepress/components/demos/FlowchartExecutionDemo.vue'
 </script>
 
@@ -82,3 +82,4 @@ Why is it important to follow arrows in order?
 The arrows show the order in which the algorithm executes. If they are not followed correctly, variable values and output may be traced incorrectly.
 
 </details>
+

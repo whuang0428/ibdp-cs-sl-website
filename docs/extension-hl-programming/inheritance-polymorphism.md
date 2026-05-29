@@ -1,4 +1,4 @@
-# Inheritance and Polymorphism
+﻿# Inheritance and Polymorphism
 
 ## 1. Lesson Goals
 
@@ -1399,7 +1399,7 @@ Write a Java-style example with a superclass and one subclass.
 
 ---
 
-## 34. Classroom Activity
+## 34. Practice Activity
 
 ### Activity 1: Is-a or Has-a?
 
@@ -1550,6 +1550,3 @@ Car is an Engine is a good inheritance relationship.
 | Main warning | wrong hierarchy makes code harder to maintain |
 | Exam phrase | inheritance supports code reuse, while polymorphism allows different subclass objects to respond differently to the same method call |
 
-::: tip Next Step
-After this page, the next page should be **Exception Handling and Robust Programs**, using the real file name `exception-handling-robust-programs.md`.
-:::

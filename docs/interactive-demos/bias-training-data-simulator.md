@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import BiasTrainingDataSimulator from '../.vitepress/components/demos/BiasTrainingDataSimulator.vue'
 </script>
 
@@ -86,3 +86,4 @@ evaluate performance separately for different groups or conditions
 ```
 
 </details>
+

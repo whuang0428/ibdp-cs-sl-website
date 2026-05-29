@@ -1,4 +1,4 @@
-# B1 Practice
+﻿# B1 Practice
 
 ## 1. Page Purpose
 
@@ -1240,6 +1240,3 @@ Before a B1 test, students should be able to:
 | Logic error | algorithm runs but gives wrong result |
 | Best exam habit | trace carefully and use mark scheme phrases |
 
-::: tip Next Step
-After this page, the next Exam Practice page should be **B2 and B3 Practice**, using the real file name `b2-b3-practice.md`.
-:::

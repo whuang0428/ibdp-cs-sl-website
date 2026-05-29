@@ -1,4 +1,4 @@
-# A2 Networks
+﻿# A2 Networks
 
 ## 1. Module Overview
 
@@ -600,55 +600,6 @@ Encryption does not replace backups.
 
 ---
 
-## 18. Suggested Teaching Pacing
-
-Actual pacing depends on class background.
-
-| Topic | Suggested Lessons | Notes |
-|---|---:|---|
-| Overview | 1 | Big picture and vocabulary |
-| Network Fundamentals | 1-2 | Purpose, nodes, protocols, bandwidth/latency |
-| LAN and WAN | 1 | Coverage, ownership, internet |
-| Network Devices | 2 | Router/switch/modem/AP confusion needs practice |
-| Client-Server and Peer-to-Peer | 1-2 | Scenario comparison |
-| TCP/IP Model | 2 | Layers and protocols |
-| Packet Switching | 2 | Packet fields and process |
-| DNS and Web Access | 2 | Step-by-step website access |
-| Wired and Wireless Transmission | 1-2 | Comparison and scenario choice |
-| Network Security | 3 | Threats and protections |
-| Encryption, VPN and NAT | 2 | Distinguish three concepts clearly |
-
----
-
-## 19. Recommended Classroom Routine
-
-For each A2 lesson, use this structure:
-
-```text
-1. Start with a real network scenario
-2. Identify devices and roles
-3. Explain key terms
-4. Draw the communication path
-5. Connect to protocols / packets / security
-6. Discuss common misconceptions
-7. Complete guided practice
-8. Answer one exam-style question
-9. Assign short scenario homework
-```
-
-### Example: DNS and Web Access
-
-```text
-Scenario: student opens school LMS
-Devices: browser, DNS resolver, router, web server
-Protocols: DNS, HTTPS, TCP/IP
-Packets: request and response data
-Security: HTTPS, authentication
-Exam skill: describe the process step by step
-```
-
----
-
 ## 20. Student Revision Routine
 
 For A2 scenario questions, students should ask:
@@ -942,6 +893,3 @@ Before moving to the next module, students should be able to:
 | VPN | Creates encrypted tunnel |
 | NAT | Translates private/public IP addresses |
 
-::: tip Next Step
-After completing A2, the next module in the sidebar is **A3 Databases**. The first A3 content page should be generated using the real file names from `config.mts` to avoid 404 errors.
-:::

@@ -1,4 +1,4 @@
-# Searching and Sorting Extension
+﻿# Searching and Sorting Extension
 
 ## 1. Lesson Goals
 
@@ -1251,7 +1251,7 @@ Explain one common boundary error in binary search.
 
 ---
 
-## 34. Classroom Activity
+## 34. Practice Activity
 
 ### Activity 1: Human Linear Search
 
@@ -1373,6 +1373,3 @@ Sorting is only useful for numbers.
 | Common error | wrong loop boundary or unsorted binary search |
 | Exam phrase | binary search is more efficient for large sorted lists because it halves the search space each step |
 
-::: tip Next Step
-After this page, the next page should be **Inheritance and Polymorphism**, using the real file name `inheritance-polymorphism.md`.
-:::

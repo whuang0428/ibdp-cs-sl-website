@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import DNSWebRequestDemo from '../.vitepress/components/demos/DNSWebRequestDemo.vue'
 </script>
 
@@ -79,3 +79,4 @@ State the difference between DNS and HTTP.
 DNS translates a domain name into an IP address. HTTP or HTTPS is used by the browser to request web resources from the server.
 
 </details>
+

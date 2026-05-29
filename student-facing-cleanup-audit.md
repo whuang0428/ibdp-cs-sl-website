@@ -1,0 +1,880 @@
+﻿- docs\roadmap.md:17 | 9 | Software Engineering | Understand structured software development and maintenance | `/extension-software-engineering/` |
+- docs\a1-computer-fundamentals\cloud-computing.md:229 | Maintenance | user/organization manages hardware | provider manages infrastructure |
+- docs\a1-computer-fundamentals\cloud-computing.md:304 GitHub Codespaces
+- docs\a1-computer-fundamentals\cloud-computing.md:432 deployment tools
+- docs\a1-computer-fundamentals\cloud-computing.md:441 web app deployment services
+- docs\a1-computer-fundamentals\cloud-computing.md:568 | Reduced local maintenance | provider manages much infrastructure |
+- docs\a1-computer-fundamentals\cloud-computing.md:664 audit logs
+- docs\a1-computer-fundamentals\cloud-computing.md:767 teachers can share resources easily
+- docs\a1-computer-fundamentals\cloud-computing.md:793 deployment platforms
+- docs\a1-computer-fundamentals\cloud-computing.md:811 deployment
+- docs\a1-computer-fundamentals\cloud-computing.md:814 This can make deployment easier than managing a physical server.
+- docs\a1-computer-fundamentals\cloud-computing.md:828 less local server maintenance
+- docs\a1-computer-fundamentals\cloud-computing.md:866 easy sharing with teacher
+- docs\a1-computer-fundamentals\cloud-computing.md:920 | Local server | more direct control, can work on local network | hardware maintenance, backup responsibility |
+- docs\a1-computer-fundamentals\cloud-computing.md:921 | Cloud storage | access anywhere, easier sharing, provider maintenance | internet dependence, privacy/provider concerns |
+- docs\a1-computer-fundamentals\cloud-computing.md:934 maintenance ability
+- docs\a1-computer-fundamentals\cloud-computing.md:1102 One advantage is that students and teachers can access files and services from different locations and devices. Another advantage is easier collaboration, because multiple users can work on shared documents. A disadvantage is dependence on internet access or provider availability. There may also be privacy and security concerns when storing student data with a third-party provider.
+- docs\a1-computer-fundamentals\cloud-computing.md:1134 ## 33. Classroom Activity
+- docs\a1-computer-fundamentals\cloud-computing.md:1247 | PaaS | Cloud platform for app development/deployment |
+- docs\a1-computer-fundamentals\computer-hardware.md:317 | Projector | large visual display | classroom presentation |
+- docs\a1-computer-fundamentals\computer-hardware.md:983 ## 26. Classroom Activity
+- docs\a1-computer-fundamentals\control-systems.md:868 | Cost | Sensors/controllers/maintenance can be expensive |
+- docs\a1-computer-fundamentals\control-systems.md:1094 ## 29. Classroom Activity
+- docs\a1-computer-fundamentals\cpu-components.md:300 what to do
+- docs\a1-computer-fundamentals\cpu-components.md:301 when to do it
+- docs\a1-computer-fundamentals\cpu-components.md:1048 ## 30. Classroom Activity
+- docs\a1-computer-fundamentals\data-representation.md:1168 ## 31. Classroom Activity
+- docs\a1-computer-fundamentals\fetch-decode-execute.md:946 ## 27. Classroom Activity
+- docs\a1-computer-fundamentals\index.md:628 | provider maintenance | less direct control |
+- docs\a1-computer-fundamentals\index.md:632 ## 17. Suggested Teaching Pacing
+- docs\a1-computer-fundamentals\index.md:634 Actual pacing depends on class background.
+- docs\a1-computer-fundamentals\index.md:652 ## 18. Recommended Classroom Routine
+- docs\a1-computer-fundamentals\index.md:784 Software is the programs and instructions that tell hardware what to do.
+- docs\a1-computer-fundamentals\logic-gates.md:829 if (isAdmin || isTeacher) {
+- docs\a1-computer-fundamentals\logic-gates.md:837 isAdmin OR isTeacher
+- docs\a1-computer-fundamentals\logic-gates.md:1221 ## 31. Classroom Activity
+- docs\a1-computer-fundamentals\operating-systems.md:359 PowerShell
+- docs\a1-computer-fundamentals\operating-systems.md:435 what to do when memory is full
+- docs\a1-computer-fundamentals\operating-systems.md:607 | Parent/teacher account | manage child/student settings |
+- docs\a1-computer-fundamentals\operating-systems.md:1017 ## 29. Classroom Activity
+- docs\a1-computer-fundamentals\operating-systems.md:1056 server maintenance
+- docs\a1-computer-fundamentals\primary-memory.md:901 ## 27. Classroom Activity
+- docs\a1-computer-fundamentals\secondary-storage.md:1016 ## 29. Classroom Activity
+- docs\a2-networks\client-server-peer-to-peer.md:361 | Easier maintenance | updates can be applied to server-side services |
+- docs\a2-networks\client-server-peer-to-peer.md:373 | Server cost | dedicated servers and maintenance can be expensive |
+- docs\a2-networks\client-server-peer-to-peer.md:1111 ## 30. Classroom Activity
+- docs\a2-networks\dns-web-access.md:1189 A 404 error means that the server was reached but the requested resource or path was not found. DNS may have worked correctly because the browser was able to locate the server. The error may be caused by a deleted page, incorrect path, broken link, or missing file on the web server.
+- docs\a2-networks\dns-web-access.md:1195 ## 34. Classroom Activity
+- docs\a2-networks\encryption-vpn-nat.md:484 A teacher working from home connects to the school VPN to access internal staff files.
+- docs\a2-networks\encryption-vpn-nat.md:487 teacher laptop → VPN tunnel → school network
+- docs\a2-networks\encryption-vpn-nat.md:809 teacher computers
+- docs\a2-networks\encryption-vpn-nat.md:1172 ## 43. Classroom Activity
+- docs\a2-networks\index.md:603 ## 18. Suggested Teaching Pacing
+- docs\a2-networks\index.md:605 Actual pacing depends on class background.
+- docs\a2-networks\index.md:623 ## 19. Recommended Classroom Routine
+- docs\a2-networks\index.md:945 ::: tip Next Step
+- docs\a2-networks\lan-wan.md:44 | Local area | 本地区域 | Small area such as home, classroom, office, or school building |
+- docs\a2-networks\lan-wan.md:80 classroom
+- docs\a2-networks\lan-wan.md:137 classroom
+- docs\a2-networks\lan-wan.md:189 classroom
+- docs\a2-networks\lan-wan.md:218 PC2[Teacher PC] --- SW
+- docs\a2-networks\lan-wan.md:344 maintenance
+- docs\a2-networks\lan-wan.md:394 IT maintenance
+- docs\a2-networks\lan-wan.md:410 maintenance contracts
+- docs\a2-networks\lan-wan.md:483 teacher laptops
+- docs\a2-networks\lan-wan.md:629 classroom computers
+- docs\a2-networks\lan-wan.md:642 classroom computers connected to school server and printer
+- docs\a2-networks\lan-wan.md:756 | computers in one classroom share printer | LAN | same local area |
+- docs\a2-networks\lan-wan.md:774 | Easier maintenance | IT can manage local infrastructure |
+- docs\a2-networks\lan-wan.md:786 | Maintenance needed | requires network management |
+- docs\a2-networks\lan-wan.md:919 using shared classroom resources
+- docs\a2-networks\lan-wan.md:1105 A LAN, or Local Area Network, is a network that connects devices within a small geographical area, such as a home, classroom, school building, or office. An example is a school computer lab where computers and printers are connected together.
+- docs\a2-networks\lan-wan.md:1144 Printing from a classroom computer to a school printer and accessing a local school file server mainly use the LAN because the devices are within the school network. Accessing an external website, cloud learning platform, or video call with another school uses a WAN or the internet because data travels outside the local network to remote systems.
+- docs\a2-networks\lan-wan.md:1163 ## 33. Classroom Activity
+- docs\a2-networks\lan-wan.md:1174 printer shared in classroom
+- docs\a2-networks\lan-wan.md:1214 maintenance
+- docs\a2-networks\network-devices.md:208 C1[Classroom PCs] --> SW1[Switch]
+- docs\a2-networks\network-devices.md:209 C2[Teacher PCs] --> SW1
+- docs\a2-networks\network-devices.md:692 switches in classrooms
+- docs\a2-networks\network-devices.md:757 | connect many PCs in one classroom | switch | connects devices in LAN |
+- docs\a2-networks\network-devices.md:821 | all classroom PCs cannot connect | switch, uplink cable |
+- docs\a2-networks\network-devices.md:1013 A school wants to provide wired and wireless network access for classrooms. Identify three network devices needed and explain their roles.
+- docs\a2-networks\network-devices.md:1018 A switch can connect wired classroom computers and printers within the LAN. Wireless access points can allow laptops, tablets, and phones to connect using Wi-Fi. A router can connect the school LAN to another network such as the internet. A firewall may also be used to filter traffic and protect the school network.
+- docs\a2-networks\network-devices.md:1024 ## 31. Classroom Activity
+- docs\a2-networks\network-fundamentals.md:666 | Cost | hardware, software, maintenance, staff |
+- docs\a2-networks\network-fundamentals.md:751 teacher laptops
+- docs\a2-networks\network-fundamentals.md:765 teachers share lesson materials
+- docs\a2-networks\network-fundamentals.md:1032 A network allows resource sharing, so students and teachers can share printers, files, internet access, or storage. It also supports centralized management, allowing the school to manage user accounts, permissions, software updates, and backups more easily. It can also improve communication and collaboration through shared documents or learning platforms.
+- docs\a2-networks\network-fundamentals.md:1077 ## 29. Classroom Activity
+- docs\a2-networks\network-fundamentals.md:1149 A school wants to connect 30 classroom computers, 3 printers, a file server, and internet access.
+- docs\a2-networks\network-security.md:234 teacher files
+- docs\a2-networks\network-security.md:490 pretending to be a trusted teacher or manager
+- docs\a2-networks\network-security.md:643 student tries to access teacher files
+- docs\a2-networks\network-security.md:691 regular audits
+- docs\a2-networks\network-security.md:809 What are you allowed to do?
+- docs\a2-networks\network-security.md:826 open teacher gradebook
+- docs\a2-networks\network-security.md:1109 student network separate from teacher/admin network
+- docs\a2-networks\network-security.md:1111 server network separate from classroom devices
+- docs\a2-networks\network-security.md:1127 If a student's device is infected, segmentation can help prevent it from reaching teacher/admin systems.
+- docs\a2-networks\network-security.md:1203 teacher files
+- docs\a2-networks\network-security.md:1450 A student can open their own folder but not a teacher folder. What security concept is this?
+- docs\a2-networks\network-security.md:1579 Authentication verifies the user's identity, for example a student entering a username and password to log in. Authorization controls what the authenticated user is allowed to access, for example allowing the student to open their own files but not teacher grade files. Authentication answers who the user is, while authorization answers what the user can do.
+- docs\a2-networks\network-security.md:1598 ## 42. Classroom Activity
+- docs\a2-networks\packet-switching.md:1040 ## 32. Classroom Activity
+- docs\a2-networks\tcp-ip-model.md:102 Application layer = what service/application wants to do
+- docs\a2-networks\tcp-ip-model.md:160 Application layer = what service/application wants to do
+- docs\a2-networks\tcp-ip-model.md:703 Focus on the TCP/IP model unless the syllabus or teacher specifically asks for OSI.
+- docs\a2-networks\tcp-ip-model.md:940 ## 31. Classroom Activity
+- docs\a2-networks\wired-wireless-transmission.md:479 easy access in classrooms and public spaces
+- docs\a2-networks\wired-wireless-transmission.md:771 | Wi-Fi | home/classroom/building range depending on walls and APs |
+- docs\a2-networks\wired-wireless-transmission.md:938 Ethernet supports reliable classroom/lab computers
+- docs\a2-networks\wired-wireless-transmission.md:1235 The school may use wired Ethernet for desktop computer labs because the devices are fixed in place and need stable, fast, low-latency connections. It may use wireless Wi-Fi for student laptops and tablets because these devices need mobility and convenient access in classrooms, libraries, and shared spaces. Using both methods provides reliability for fixed infrastructure and flexibility for portable devices.
+- docs\a2-networks\wired-wireless-transmission.md:1267 ## 35. Classroom Activity
+- docs\a2-networks\wired-wireless-transmission.md:1303 maintenance
+- docs\a2-networks\wired-wireless-transmission.md:1314 slow Wi-Fi in one classroom
+- docs\a2-networks\wired-wireless-transmission.md:1363 2. student phone in classroom
+- docs\a3-databases\database-fundamentals.md:91 teachers
+- docs\a3-databases\database-fundamentals.md:161 teachers
+- docs\a3-databases\database-fundamentals.md:294 teacher details
+- docs\a3-databases\database-fundamentals.md:337 | Support transactions | ensure operations are completed safely |
+- docs\a3-databases\database-fundamentals.md:367 database = student, teacher, course, attendance data
+- docs\a3-databases\database-fundamentals.md:487 Teacher
+- docs\a3-databases\database-fundamentals.md:579 Teacher
+- docs\a3-databases\database-fundamentals.md:845 course record references a teacher who does not exist
+- docs\a3-databases\database-fundamentals.md:861 audit logs
+- docs\a3-databases\database-fundamentals.md:890 audit logs
+- docs\a3-databases\database-fundamentals.md:953 Teacher
+- docs\a3-databases\database-fundamentals.md:967 Which teacher teaches each course?
+- docs\a3-databases\database-fundamentals.md:1076 audit logs
+- docs\a3-databases\database-fundamentals.md:1323 A school wants to store student, teacher, course, and grade data. Explain why a database is suitable.
+- docs\a3-databases\database-fundamentals.md:1392 A hospital database stores sensitive and important data such as patient records, appointments, prescriptions, and treatments. The data must be accurate and consistent because incorrect data could affect patient care. It must be protected with authentication, permissions, encryption, backups, and audit logs because unauthorized access could breach privacy. The database must also be available when needed because doctors and nurses may need quick access to patient information.
+- docs\a3-databases\database-fundamentals.md:1398 ## 36. Classroom Activity
+- docs\a3-databases\database-security-privacy.md:59 | Audit log | 审计日志 | Record of database activity |
+- docs\a3-databases\database-security-privacy.md:95 what each user is allowed to do
+- docs\a3-databases\database-security-privacy.md:115 audit logs
+- docs\a3-databases\database-security-privacy.md:163 what each user is allowed to do
+- docs\a3-databases\database-security-privacy.md:183 audit logs
+- docs\a3-databases\database-security-privacy.md:226 only authorized teachers can log in
+- docs\a3-databases\database-security-privacy.md:340 audit logs
+- docs\a3-databases\database-security-privacy.md:479 student uses teacher's logged-in computer
+- docs\a3-databases\database-security-privacy.md:489 audit logs
+- docs\a3-databases\database-security-privacy.md:528 audit logs
+- docs\a3-databases\database-security-privacy.md:595 regular audits
+- docs\a3-databases\database-security-privacy.md:647 What are you allowed to do?
+- docs\a3-databases\database-security-privacy.md:657 | Teacher | view grades for own classes |
+- docs\a3-databases\database-security-privacy.md:703 delete audit logs
+- docs\a3-databases\database-security-privacy.md:709 Users should only have the minimum access needed to do their work.
+- docs\a3-databases\database-security-privacy.md:721 Teacher
+- docs\a3-databases\database-security-privacy.md:741 Instead of giving each teacher permissions one by one, the system gives the `Teacher` role access to relevant class records.
+- docs\a3-databases\database-security-privacy.md:854 ## 23. Audit Logs
+- docs\a3-databases\database-security-privacy.md:856 Audit logs record database activity.
+- docs\a3-databases\database-security-privacy.md:945 test updates before major deployment
+- docs\a3-databases\database-security-privacy.md:962 | Audit logs | track activity and misuse |
+- docs\a3-databases\database-security-privacy.md:1169 student tries to view teacher grade records
+- docs\a3-databases\database-security-privacy.md:1172 teacher sees records outside their class
+- docs\a3-databases\database-security-privacy.md:1181 audit logs
+- docs\a3-databases\database-security-privacy.md:1186 student/teacher privacy rules
+- docs\a3-databases\database-security-privacy.md:1211 audit logs
+- docs\a3-databases\database-security-privacy.md:1266 audit logs
+- docs\a3-databases\database-security-privacy.md:1280 hardware maintenance
+- docs\a3-databases\database-security-privacy.md:1311 audit cloud access logs
+- docs\a3-databases\database-security-privacy.md:1414 | Admin should access everything all the time | Too risky | Use least privilege and auditing |
+- docs\a3-databases\database-security-privacy.md:1418 | Audit logs prevent all attacks | Logs help detection/investigation | Prevention controls still needed |
+- docs\a3-databases\database-security-privacy.md:1442 A teacher logs in with username and password. Is this authentication or authorization?
+- docs\a3-databases\database-security-privacy.md:1520 Explain how audit logs help protect a database.
+- docs\a3-databases\database-security-privacy.md:1558 Authentication checks the user's identity, for example by username, password, or MFA. Authorization controls what the authenticated user is allowed to access or do, such as reading, updating, or deleting records. For example, a teacher may authenticate by logging in, but authorization decides whether they can view only their own class records.
+- docs\a3-databases\database-security-privacy.md:1584 Role-based access control should be used so students, teachers, administrators, and medical staff only access data needed for their role. MFA and strong authentication should protect staff accounts because stolen credentials could expose sensitive records. Encryption can protect data in transit and backups. Audit logs can record who accessed or changed records. Regular backups are needed so data can be recovered after deletion, corruption, or ransomware.
+- docs\a3-databases\database-security-privacy.md:1603 ## 44. Classroom Activity
+- docs\a3-databases\database-security-privacy.md:1625 audit logs
+- docs\a3-databases\database-security-privacy.md:1742 | Audit log | Records activity |
+- docs\a3-databases\erd-basics.md:97 Teacher
+- docs\a3-databases\erd-basics.md:108 Teacher: TeacherID, TeacherName
+- docs\a3-databases\erd-basics.md:114 Teacher teaches Course
+- docs\a3-databases\erd-basics.md:166 Teacher
+- docs\a3-databases\erd-basics.md:177 Teacher: TeacherID, TeacherName
+- docs\a3-databases\erd-basics.md:183 Teacher teaches Course
+- docs\a3-databases\erd-basics.md:280 Teacher
+- docs\a3-databases\erd-basics.md:372 TeacherName
+- docs\a3-databases\erd-basics.md:392 Teacher teaches Course
+- docs\a3-databases\erd-basics.md:456 Different teachers and textbooks may use slightly different ERD notation.
+- docs\a3-databases\erd-basics.md:523 | one teacher teaches many courses | one-to-many |
+- docs\a3-databases\erd-basics.md:1174 Student(StudentID, Name, TeacherName)
+- docs\a3-databases\erd-basics.md:1177 if students can have many teachers through courses.
+- docs\a3-databases\erd-basics.md:1183 Teacher
+- docs\a3-databases\erd-basics.md:1497 ## 35. Classroom Activity
+- docs\a3-databases\index.md:53 - explain transactions, commit, rollback, and recovery
+- docs\a3-databases\index.md:97 | 8 | Transactions and Recovery | transaction, commit, rollback, ACID, backup, recovery | [Open](./transactions-recovery) |
+- docs\a3-databases\index.md:159 Teacher table
+- docs\a3-databases\index.md:225 Teacher table
+- docs\a3-databases\index.md:309 | courseId | courseName | teacherId |
+- docs\a3-databases\index.md:314 ### Teacher Table
+- docs\a3-databases\index.md:316 | teacherId | teacherName |
+- docs\a3-databases\index.md:332 Teacher 1 -------- * Course
+- docs\a3-databases\index.md:362 Course(courseId, courseName, teacherId)
+- docs\a3-databases\index.md:363 Teacher(teacherId, teacherName)
+- docs\a3-databases\index.md:370 StudentCourse(studentId, studentName, course1, course2, teacher1, teacher2)
+- docs\a3-databases\index.md:379 repeated teacher data
+- docs\a3-databases\index.md:511 | studentId | studentName | course1 | course2 | teacher1 | teacher2 |
+- docs\a3-databases\index.md:520 Teacher(teacherId, teacherName)
+- docs\a3-databases\index.md:521 Course(courseId, courseName, teacherId)
+- docs\a3-databases\index.md:551 all completed
+- docs\a3-databases\index.md:560 | Commit | save successful changes |
+- docs\a3-databases\index.md:565 | Durability | committed changes survive failure |
+- docs\a3-databases\index.md:607 | Audit log | tracks actions |
+- docs\a3-databases\index.md:657 ## 17. Suggested Teaching Pacing
+- docs\a3-databases\index.md:659 Actual pacing depends on student background and classroom performance.
+- docs\a3-databases\index.md:676 ## 18. Recommended Classroom Routine
+- docs\a3-databases\index.md:771 - explain transactions, commit, rollback
+- docs\a3-databases\index.md:887 Authorization checks what that user is allowed to do.
+- docs\a3-databases\index.md:918 teachers
+- docs\a3-databases\index.md:941 Teacher
+- docs\a3-databases\index.md:986 - [ ] explain transactions, commit, and rollback
+- docs\a3-databases\normalization.md:94 | StudentID | StudentName | Course1 | Course2 | TeacherName | TeacherEmail |
+- docs\a3-databases\normalization.md:102 Teacher details may repeat
+- docs\a3-databases\normalization.md:103 Student, Course, Teacher data are mixed together
+- docs\a3-databases\normalization.md:105 hard to update teacher email consistently
+- docs\a3-databases\normalization.md:112 Course(CourseID, CourseName, TeacherID)
+- docs\a3-databases\normalization.md:113 Teacher(TeacherID, TeacherName, TeacherEmail)
+- docs\a3-databases\normalization.md:152 | StudentID | StudentName | Course1 | Course2 | TeacherName | TeacherEmail |
+- docs\a3-databases\normalization.md:160 Teacher details may repeat
+- docs\a3-databases\normalization.md:161 Student, Course, Teacher data are mixed together
+- docs\a3-databases\normalization.md:163 hard to update teacher email consistently
+- docs\a3-databases\normalization.md:170 Course(CourseID, CourseName, TeacherID)
+- docs\a3-databases\normalization.md:171 Teacher(TeacherID, TeacherName, TeacherEmail)
+- docs\a3-databases\normalization.md:210 one big StudentCourseTeacher table
+- docs\a3-databases\normalization.md:218 Teacher
+- docs\a3-databases\normalization.md:236 | StudentID | StudentName | CourseName | TeacherName | TeacherEmail |
+- docs\a3-databases\normalization.md:244 Teacher data is repeated:
+- docs\a3-databases\normalization.md:251 If the teacher email changes, every row must be updated.
+- docs\a3-databases\normalization.md:257 Separate teacher data:
+- docs\a3-databases\normalization.md:260 Teacher(TeacherID, TeacherName, TeacherEmail)
+- docs\a3-databases\normalization.md:261 Course(CourseID, CourseName, TeacherID)
+- docs\a3-databases\normalization.md:290 more difficult maintenance
+- docs\a3-databases\normalization.md:369 | StudentID | StudentName | CourseName | TeacherEmail |
+- docs\a3-databases\normalization.md:379 | StudentID | StudentName | CourseName | TeacherEmail |
+- docs\a3-databases\normalization.md:388 Store teacher email once:
+- docs\a3-databases\normalization.md:391 Teacher(TeacherID, TeacherName, TeacherEmail)
+- docs\a3-databases\normalization.md:392 Course(CourseID, CourseName, TeacherID)
+- docs\a3-databases\normalization.md:405 | StudentID | StudentName | CourseName | TeacherName |
+- docs\a3-databases\normalization.md:422 Course(CourseID, CourseName, TeacherID)
+- docs\a3-databases\normalization.md:435 | StudentID | StudentName | CourseName | TeacherName |
+- docs\a3-databases\normalization.md:443 TeacherName = Mr Lee
+- docs\a3-databases\normalization.md:446 This is a problem because deleting an enrollment should not delete course or teacher information.
+- docs\a3-databases\normalization.md:450 Store course and teacher in separate tables:
+- docs\a3-databases\normalization.md:453 Course(CourseID, CourseName, TeacherID)
+- docs\a3-databases\normalization.md:454 Teacher(TeacherID, TeacherName)
+- docs\a3-databases\normalization.md:786 | StudentID | StudentName | CourseID | CourseName | TeacherName |
+- docs\a3-databases\normalization.md:797 TeacherName repeated
+- docs\a3-databases\normalization.md:798 update anomaly if course or teacher changes
+- docs\a3-databases\normalization.md:800 mixed student, course, and teacher data
+- docs\a3-databases\normalization.md:807 Teacher(TeacherID, TeacherName)
+- docs\a3-databases\normalization.md:808 Course(CourseID, CourseName, TeacherID)
+- docs\a3-databases\normalization.md:817 Course.TeacherID → Teacher.TeacherID
+- docs\a3-databases\normalization.md:1033 | Easier maintenance | changes are easier to manage |
+- docs\a3-databases\normalization.md:1058 maintenance
+- docs\a3-databases\normalization.md:1154 | StudentID | StudentName | CourseName | TeacherEmail |
+- docs\a3-databases\normalization.md:1162 `CourseName = CS` and `TeacherEmail = lee@school.edu` are repeated. This may cause redundancy and update problems.
+- docs\a3-databases\normalization.md:1187 What problem happens if a teacher email is repeated in many rows?
+- docs\a3-databases\normalization.md:1192 If the teacher email changes, every repeated row must be updated. If one row is missed, the database becomes inconsistent. This is an update anomaly.
+- docs\a3-databases\normalization.md:1255 StudentID, StudentName, CourseID, CourseName, TeacherName
+- docs\a3-databases\normalization.md:1307 An insertion anomaly occurs if a new course cannot be added unless a student is enrolled in it. An update anomaly occurs if a teacher's email is repeated in many student-course rows and must be changed in every row; if one row is missed, the data becomes inconsistent. A deletion anomaly occurs if deleting the last student enrolled in a course also removes the only stored information about that course or teacher.
+- docs\a3-databases\normalization.md:1349 ## 37. Classroom Activity
+- docs\a3-databases\normalization.md:1371 StudentID, StudentName, Course1, Course2, TeacherName, TeacherEmail
+- docs\a3-databases\normalization.md:1379 Teacher
+- docs\a3-databases\normalization.md:1391 One student updates teacher email in only some rows.
+- docs\a3-databases\primary-foreign-keys.md:678 Usually, deleting a student record with grades should be controlled carefully because grades need to remain accurate and auditable.
+- docs\a3-databases\primary-foreign-keys.md:820 | StudentName | CourseName | TeacherName | TeacherEmail |
+- docs\a3-databases\primary-foreign-keys.md:826 Teacher details are repeated many times.
+- docs\a3-databases\primary-foreign-keys.md:831 Teacher(TeacherID, TeacherName, TeacherEmail)
+- docs\a3-databases\primary-foreign-keys.md:832 Course(CourseID, CourseName, TeacherID)
+- docs\a3-databases\primary-foreign-keys.md:837 Now `TeacherID` can link Course to Teacher.
+- docs\a3-databases\primary-foreign-keys.md:839 This reduces duplicate teacher data.
+- docs\a3-databases\primary-foreign-keys.md:1395 ## 36. Classroom Activity
+- docs\a3-databases\relationships.md:78 Teacher table
+- docs\a3-databases\relationships.md:89 Teacher.TeacherID → Course.TeacherID
+- docs\a3-databases\relationships.md:103 one teacher teaches many courses = one-to-many
+- docs\a3-databases\relationships.md:145 Teacher table
+- docs\a3-databases\relationships.md:156 Teacher.TeacherID → Course.TeacherID
+- docs\a3-databases\relationships.md:170 one teacher teaches many courses = one-to-many
+- docs\a3-databases\relationships.md:250 | StudentName | CourseName | TeacherName | TeacherEmail |
+- docs\a3-databases\relationships.md:256 Teacher data is repeated.
+- docs\a3-databases\relationships.md:263 Teacher(TeacherID, TeacherName, TeacherEmail)
+- docs\a3-databases\relationships.md:264 Course(CourseID, CourseName, TeacherID)
+- docs\a3-databases\relationships.md:484 | teacher teaches courses | 1:M |
+- docs\a3-databases\relationships.md:906 ## 25. Worked Example: Teacher and Course
+- docs\a3-databases\relationships.md:910 One teacher can teach many courses.
+- docs\a3-databases\relationships.md:911 Each course has one main teacher.
+- docs\a3-databases\relationships.md:918 Teacher(TeacherID, TeacherName)
+- docs\a3-databases\relationships.md:919 Course(CourseID, CourseName, TeacherID)
+- docs\a3-databases\relationships.md:925 Teacher 1 ─── many Course
+- docs\a3-databases\relationships.md:931 Course.TeacherID → Teacher.TeacherID
+- docs\a3-databases\relationships.md:1347 ## 36. Classroom Activity
+- docs\a3-databases\relationships.md:1359 teacher teaches courses
+- docs\a3-databases\relationships.md:1406 1. one teacher teaches many classes
+- docs\a3-databases\sql-conditions-sorting.md:1554 ## 46. Classroom Activity
+- docs\a3-databases\sql-conditions-sorting.md:1560 The teacher gives conditions such as:
+- docs\a3-databases\sql-select.md:304 | CourseID | CourseName | TeacherName |
+- docs\a3-databases\sql-select.md:667 This query does not show `TeacherName` because it was not listed after `SELECT`.
+- docs\a3-databases\sql-select.md:981 If a teacher only needs student names:
+- docs\a3-databases\sql-select.md:1461 CourseID, CourseName, TeacherName
+- docs\a3-databases\sql-select.md:1503 ## 41. Classroom Activity
+- docs\a3-databases\tables-records-fields.md:215 | `Teacher` | teachers |
+- docs\a3-databases\tables-records-fields.md:236 StudentCourseTeacher table stores students, courses, and teachers all together.
+- docs\a3-databases\tables-records-fields.md:461 teacherName
+- docs\a3-databases\tables-records-fields.md:468 Those fields belong better in Teacher or Course tables.
+- docs\a3-databases\tables-records-fields.md:553 | studentId | studentName | courseId | courseName | teacherName |
+- docs\a3-databases\tables-records-fields.md:564 teacher data is repeated
+- docs\a3-databases\tables-records-fields.md:816 teacherName
+- docs\a3-databases\tables-records-fields.md:825 `teacherName` belongs better in a Teacher table.
+- docs\a3-databases\tables-records-fields.md:908 | studentName | courseName | teacherName | teacherEmail |
+- docs\a3-databases\tables-records-fields.md:960 Explain why it is poor design to store students, courses, and teachers in one large table.
+- docs\a3-databases\tables-records-fields.md:965 Storing students, courses, and teachers in one large table can cause repeated data. For example, the same student name or teacher name may appear in many rows. This wastes storage and can cause inconsistency if one copy is updated but another is not. A better design is to separate the data into related tables such as Student, Course, and Teacher.
+- docs\a3-databases\tables-records-fields.md:1009 ## 24. Classroom Activity
+- docs\a3-databases\tables-records-fields.md:1041 teacherEmail
+- docs\a3-databases\tables-records-fields.md:1052 Teacher
+- docs\a3-databases\transactions-recovery.md:9 - explain commit and rollback
+- docs\a3-databases\transactions-recovery.md:15 - explain how transaction logs can help undo incomplete transactions and redo committed transactions
+- docs\a3-databases\transactions-recovery.md:31 | Exam relevance | Transaction definition, commit/rollback, consistency, backup/recovery, transaction logs |
+- docs\a3-databases\transactions-recovery.md:45 | Commit | 提交 | Permanently saves a successful transaction |
+- docs\a3-databases\transactions-recovery.md:89 all operations succeed → commit
+- docs\a3-databases\transactions-recovery.md:108 commit = save successful changes
+- docs\a3-databases\transactions-recovery.md:128 These steps must be completed as one unit.
+- docs\a3-databases\transactions-recovery.md:129 If only the first step is completed and the system crashes, Account A loses money but Account B does not receive it.
+- docs\a3-databases\transactions-recovery.md:137 all operations succeed → commit
+- docs\a3-databases\transactions-recovery.md:146 no half-completed update
+- docs\a3-databases\transactions-recovery.md:156 commit = save successful changes
+- docs\a3-databases\transactions-recovery.md:177 if all succeed → COMMIT
+- docs\a3-databases\transactions-recovery.md:196 A transaction is a group of database operations treated as one unit, so either all operations are completed successfully or none are applied.
+- docs\a3-databases\transactions-recovery.md:227 grade changed but audit log missing
+- docs\a3-databases\transactions-recovery.md:243 ## 7. Commit
+- docs\a3-databases\transactions-recovery.md:245 `COMMIT` means saving all successful transaction changes permanently.
+- docs\a3-databases\transactions-recovery.md:253 COMMIT
+- docs\a3-databases\transactions-recovery.md:256 After commit:
+- docs\a3-databases\transactions-recovery.md:266 A commit permanently saves all changes made by a successful transaction.
+- docs\a3-databases\transactions-recovery.md:295 system crashes before commit
+- docs\a3-databases\transactions-recovery.md:349 | Durability | committed changes survive failure |
+- docs\a3-databases\transactions-recovery.md:357 commit
+- docs\a3-databases\transactions-recovery.md:384 If a transaction would break these rules, it should not be committed.
+- docs\a3-databases\transactions-recovery.md:481 This is only a preview. The main focus is still commit, rollback, and recovery.
+- docs\a3-databases\transactions-recovery.md:496 commit record
+- docs\a3-databases\transactions-recovery.md:508 redo committed transactions
+- docs\a3-databases\transactions-recovery.md:511 support audit trails
+- docs\a3-databases\transactions-recovery.md:515 A transaction log records database changes so incomplete transactions can be rolled back and committed transactions can be recovered after failure.
+- docs\a3-databases\transactions-recovery.md:543 redo committed transactions
+- docs\a3-databases\transactions-recovery.md:628 ### If Transaction Was Not Committed
+- docs\a3-databases\transactions-recovery.md:634 ### If Transaction Was Committed
+- docs\a3-databases\transactions-recovery.md:645 redo committed transactions if necessary
+- docs\a3-databases\transactions-recovery.md:685 COMMIT
+- docs\a3-databases\transactions-recovery.md:710 COMMIT
+- docs\a3-databases\transactions-recovery.md:740 COMMIT
+- docs\a3-databases\transactions-recovery.md:764 COMMIT
+- docs\a3-databases\transactions-recovery.md:783 record teacher ID
+- docs\a3-databases\transactions-recovery.md:785 create audit log entry
+- docs\a3-databases\transactions-recovery.md:786 COMMIT
+- docs\a3-databases\transactions-recovery.md:789 ### If Audit Log Fails
+- docs\a3-databases\transactions-recovery.md:810 committed transaction → redo if needed
+- docs\a3-databases\transactions-recovery.md:811 uncommitted transaction → rollback
+- docs\a3-databases\transactions-recovery.md:831 use audit log to identify what changed
+- docs\a3-databases\transactions-recovery.md:880 constraints stop invalid commits
+- docs\a3-databases\transactions-recovery.md:887 audit logs show who changed data
+- docs\a3-databases\transactions-recovery.md:905 A transaction is a group of database operations treated as one unit. It should either be fully completed and committed, or rolled back so that no partial update remains.
+- docs\a3-databases\transactions-recovery.md:923 After a crash, the DBMS uses transaction logs to identify committed and incomplete transactions. Committed transactions may be redone, while incomplete transactions are rolled back.
+- docs\a3-databases\transactions-recovery.md:933 | Commit cancels changes | Commit saves changes | Rollback cancels changes |
+- docs\a3-databases\transactions-recovery.md:934 | Rollback is used after success | Rollback is used after failure/cancel | Commit after success |
+- docs\a3-databases\transactions-recovery.md:941 | Transaction logs are just privacy logs | They record changes for recovery | Audit logs and transaction logs can overlap but are not identical |
+- docs\a3-databases\transactions-recovery.md:947 ### Practice 1: Commit or Rollback?
+- docs\a3-databases\transactions-recovery.md:949 A transfer completes every required step successfully. Should the database commit or rollback?
+- docs\a3-databases\transactions-recovery.md:954 Commit, because all required operations succeeded.
+- docs\a3-databases\transactions-recovery.md:980 Atomicity means all operations in a transaction are completed, or none are applied. It is an all-or-nothing rule.
+- docs\a3-databases\transactions-recovery.md:993 It can help the DBMS undo incomplete transactions and redo committed transactions, returning the database to a consistent state.
+- docs\a3-databases\transactions-recovery.md:1024 Explain commit and rollback.
+- docs\a3-databases\transactions-recovery.md:1065 A database transaction is a group of database operations treated as a single unit. It is used so that either all operations are completed and saved, or none are applied. This prevents partial updates and helps maintain database consistency and integrity.
+- docs\a3-databases\transactions-recovery.md:1073 Explain the difference between commit and rollback.
+- docs\a3-databases\transactions-recovery.md:1078 Commit permanently saves the changes made by a successful transaction. Rollback undoes changes made by a transaction that fails or is cancelled, returning the database to a previous consistent state. Commit is used after success, while rollback is used when the transaction cannot safely complete.
+- docs\a3-databases\transactions-recovery.md:1091 The subtraction and addition must both happen together. If money is subtracted from the first account but the system fails before adding it to the second account, the database becomes inconsistent and money appears to be lost. Treating the operations as a transaction means all steps are committed only if they succeed. If any step fails, the transaction is rolled back so no partial transfer remains.
+- docs\a3-databases\transactions-recovery.md:1104 A transaction log records changes made by transactions, including whether they were committed. After a crash, the DBMS can use the log to identify incomplete transactions and roll them back. It can also redo committed transactions if their changes were not fully written before the crash. This helps return the database to a consistent state.
+- docs\a3-databases\transactions-recovery.md:1117 Regular backups can be used to restore the database to a previous saved version. Transaction logs can help recover more recent committed changes and undo incomplete transactions. Tested restore procedures are important so staff know that backups can be recovered successfully. Offsite or protected backups can help if the main system is damaged by ransomware, hardware failure, or disaster.
+- docs\a3-databases\transactions-recovery.md:1123 ## 36. Classroom Activity
+- docs\a3-databases\transactions-recovery.md:1138 They simulate a successful commit and a failed transfer that needs rollback.
+- docs\a3-databases\transactions-recovery.md:1142 ### Activity 2: Commit or Rollback Sort
+- docs\a3-databases\transactions-recovery.md:1150 grade update saved and audit log saved
+- docs\a3-databases\transactions-recovery.md:1151 server crash before commit
+- docs\a3-databases\transactions-recovery.md:1154 They decide whether the database should commit or rollback.
+- docs\a3-databases\transactions-recovery.md:1178 In 6-8 sentences, explain what a transaction is and why commit and rollback are needed.
+- docs\a3-databases\transactions-recovery.md:1204 Commit cancels a transaction.
+- docs\a3-databases\transactions-recovery.md:1217 | Commit | Saves successful transaction changes |
+- docs\a3-databases\transactions-recovery.md:1222 | Durability | Committed changes survive failure |
+- docs\a3-databases\transactions-recovery.md:1230 | Exam phrase | Transactions protect database integrity by ensuring related operations are committed together or rolled back if failure occurs |
+- docs\a3-databases\transactions-recovery.md:1239 2. What does commit mean?
+- docs\a4-machine-learning\bias-ethics-privacy.md:342 A dataset labels student behaviour as "problematic" based on inconsistent teacher reports.
+- docs\a4-machine-learning\bias-ethics-privacy.md:513 audit logs
+- docs\a4-machine-learning\bias-ethics-privacy.md:558 teachers/doctors/staff review outputs
+- docs\a4-machine-learning\bias-ethics-privacy.md:559 regulators/auditors inspect systems
+- docs\a4-machine-learning\bias-ethics-privacy.md:623 A teacher sees that an ML system labels a student as "high risk" and accepts it without reviewing context.
+- docs\a4-machine-learning\bias-ethics-privacy.md:812 teachers can access only their students' relevant records
+- docs\a4-machine-learning\bias-ethics-privacy.md:913 monitoring after deployment
+- docs\a4-machine-learning\bias-ethics-privacy.md:958 audit data access
+- docs\a4-machine-learning\bias-ethics-privacy.md:993 monitor outcomes after deployment
+- docs\a4-machine-learning\bias-ethics-privacy.md:1023 teacher over-reliance
+- docs\a4-machine-learning\bias-ethics-privacy.md:1037 human review by teachers
+- docs\a4-machine-learning\bias-ethics-privacy.md:1210 | Ethics only matters after deployment | ethics should be considered from design stage | build responsibly |
+- docs\a4-machine-learning\bias-ethics-privacy.md:1364 One privacy concern is that the system may collect sensitive student data, such as grades, attendance, or behaviour records. A control is data minimization, collecting only data needed for support and protecting it with access control and encryption. One ethical concern is unfair labelling, where students may be treated negatively because of a prediction. A control is human oversight, so teachers review predictions and use them to provide support rather than punishment. The school should also check fairness across student groups and allow correction or appeal.
+- docs\a4-machine-learning\bias-ethics-privacy.md:1396 ## 43. Classroom Activity
+- docs\a4-machine-learning\bias-ethics-privacy.md:1448 teacher/domain expert
+- docs\a4-machine-learning\classification-regression.md:1443 ## 41. Classroom Activity
+- docs\a4-machine-learning\data-features-labels.md:1107 teacher over-reliance on prediction
+- docs\a4-machine-learning\data-features-labels.md:1114 The model should support teachers, not automatically punish students.
+- docs\a4-machine-learning\data-features-labels.md:1464 ## 40. Classroom Activity
+- docs\a4-machine-learning\index.md:352 deployment = classify new emails
+- docs\a4-machine-learning\index.md:691 | cost | data, training, staff, compute, maintenance |
+- docs\a4-machine-learning\index.md:700 ## 20. Suggested Teaching Pacing
+- docs\a4-machine-learning\index.md:702 Actual pacing depends on class level.
+- docs\a4-machine-learning\index.md:720 ## 21. Recommended Classroom Routine
+- docs\a4-machine-learning\index.md:1130 ::: tip Next Step
+- docs\a4-machine-learning\index.md:1131 A4 Machine Learning sidebar content is now complete after this overview page. A sensible next step is to move into **B1 Computational Thinking** or build **A3/A4 exam-practice pages** using the completed A3 and A4 content.
+- docs\a4-machine-learning\ml-applications-limitations.md:106 needs monitoring after deployment
+- docs\a4-machine-learning\ml-applications-limitations.md:168 needs monitoring after deployment
+- docs\a4-machine-learning\ml-applications-limitations.md:486 teacher decision support
+- docs\a4-machine-learning\ml-applications-limitations.md:495 over-reliance by teachers
+- docs\a4-machine-learning\ml-applications-limitations.md:558 predictive maintenance
+- docs\a4-machine-learning\ml-applications-limitations.md:568 predicts maintenance needs
+- docs\a4-machine-learning\ml-applications-limitations.md:807 | Cost | training and maintenance can be expensive |
+- docs\a4-machine-learning\ml-applications-limitations.md:878 monitoring after deployment
+- docs\a4-machine-learning\ml-applications-limitations.md:1035 A teacher may accept a student risk label without considering personal circumstances.
+- docs\a4-machine-learning\ml-applications-limitations.md:1065 maintenance
+- docs\a4-machine-learning\ml-applications-limitations.md:1245 teacher decision support
+- docs\a4-machine-learning\ml-applications-limitations.md:1255 teacher over-reliance
+- docs\a4-machine-learning\ml-applications-limitations.md:1557 One benefit is that the model may help identify students who need support early, allowing teachers to intervene. One risk is that students may be unfairly labelled or treated differently if the model is biased or incorrect. A safeguard is to use human oversight, so teachers review predictions and use them to provide support rather than punishment. The school should also minimize personal data, protect student records, and check fairness across groups.
+- docs\a4-machine-learning\ml-applications-limitations.md:1565 Explain why a machine learning system may need monitoring after deployment.
+- docs\a4-machine-learning\ml-applications-limitations.md:1576 ## 42. Classroom Activity
+- docs\a4-machine-learning\ml-fundamentals.md:1438 ## 40. Classroom Activity
+- docs\a4-machine-learning\model-evaluation.md:1090 The model should support teachers and students, not automatically punish students.
+- docs\a4-machine-learning\model-evaluation.md:1386 ## 40. Classroom Activity
+- docs\a4-machine-learning\overfitting-underfitting.md:910 ## 31. Monitoring After Deployment
+- docs\a4-machine-learning\overfitting-underfitting.md:1312 ## 42. Classroom Activity
+- docs\a4-machine-learning\supervised-learning.md:276 It is like a teacher giving practice questions with answers.
+- docs\a4-machine-learning\supervised-learning.md:959 | Maintenance needed | model may become outdated as data changes |
+- docs\a4-machine-learning\supervised-learning.md:1466 ## 45. Classroom Activity
+- docs\a4-machine-learning\training-testing-validation.md:279 A teacher trains three spam detection models.
+- docs\a4-machine-learning\training-testing-validation.md:1001 ## 33. Monitoring After Deployment
+- docs\a4-machine-learning\training-testing-validation.md:1003 Testing before deployment is not enough.
+- docs\a4-machine-learning\training-testing-validation.md:1197 Explain why a model should still be monitored after deployment.
+- docs\a4-machine-learning\training-testing-validation.md:1268 ## 39. Classroom Activity
+- docs\a4-machine-learning\training-testing-validation.md:1394 | Monitoring | Check model after deployment |
+- docs\a4-machine-learning\training-testing-validation.md:1412 10. Why might a model need monitoring after deployment?
+- docs\a4-machine-learning\unsupervised-learning.md:814 If a school groups students by learning behaviour, teachers should use the groups to provide support, not to label students unfairly.
+- docs\a4-machine-learning\unsupervised-learning.md:1301 ## 39. Classroom Activity
+- docs\b1-computational-thinking\abstraction.md:242 classroom wall colour
+- docs\b1-computational-thinking\abstraction.md:591 easier maintenance
+- docs\b1-computational-thinking\abstraction.md:850 classroom temperature
+- docs\b1-computational-thinking\abstraction.md:1000 teacher
+- docs\b1-computational-thinking\abstraction.md:1009 teacher's shoe colour
+- docs\b1-computational-thinking\abstraction.md:1261 Abstraction helps by identifying the details needed for the algorithm, such as the student's mark, total mark, percentage, and grade boundaries. Irrelevant details such as paper colour, classroom temperature, or the student's hairstyle can be ignored. This reduces complexity and allows the algorithm to focus on comparing the mark with grade boundaries and outputting the correct grade.
+- docs\b1-computational-thinking\abstraction.md:1280 ## 34. Classroom Activity
+- docs\b1-computational-thinking\abstraction.md:1299 teacher name
+- docs\b1-computational-thinking\algorithms.md:1532 ## 41. Classroom Activity
+- docs\b1-computational-thinking\decomposition.md:52 | Maintenance | 维护 | Updating or fixing a system after it is built |
+- docs\b1-computational-thinking\decomposition.md:209 allow teachers to edit records
+- docs\b1-computational-thinking\decomposition.md:578 teacher records
+- docs\b1-computational-thinking\decomposition.md:1202 The attendance system can be decomposed into storing student records, recording attendance, checking absent students, generating attendance reports, allowing teachers to edit records, and sending notifications to parents. These parts separate the main tasks of the system and make it easier to design and test.
+- docs\b1-computational-thinking\decomposition.md:1215 Decomposition breaks the large system into smaller sub-problems or modules. Different team members can work on different modules, such as login, payment, search, or reports. This reduces complexity and allows work to happen in parallel. Each module can be tested separately before being combined with the rest of the system, making debugging and maintenance easier.
+- docs\b1-computational-thinking\decomposition.md:1247 ## 34. Classroom Activity
+- docs\b1-computational-thinking\decomposition.md:1359 | Maintenance | Parts can be updated more easily |
+- docs\b1-computational-thinking\flowcharts.md:398 arrows show the next step
+- docs\b1-computational-thinking\flowcharts.md:406 Do not assume the next step based on position only.
+- docs\b1-computational-thinking\flowcharts.md:1250 ## 37. Classroom Activity
+- docs\b1-computational-thinking\index.md:1162 ::: tip Next Step
+- docs\b1-computational-thinking\trace-tables.md:1644 ## 41. Classroom Activity
+- docs\b2-programming\arrays.md:168 A teacher wants to store marks for one class.
+- docs\b2-programming\arrays.md:190 The teacher can now process all marks using a loop.
+- docs\b2-programming\arrays.md:252 Different teachers and resources may write pseudocode slightly differently. The main idea is the same: an array stores multiple values using one name and indexes.
+- docs\b2-programming\arrays.md:510 | `(double) total` | Converts total to double to avoid integer-only division |
+- docs\b2-programming\arrays.md:1173 ## 22. Classroom Activity
+- docs\b2-programming\arrays.md:1179 The teacher asks:
+- docs\b2-programming\data-types.md:976 Both `total` and `count` are integers, so Java performs integer division first. `155 / 2` gives `77`, with the decimal part removed. This integer result is then stored as `77.0` in the double variable. To fix it, one value should be converted to double, for example `double average = (double) total / count;` or division can use `2.0`.
+- docs\b2-programming\data-types.md:1008 ## 25. Classroom Activity
+- docs\b2-programming\file-processing.md:136 A teacher has a file called:
+- docs\b2-programming\file-processing.md:938 ## 24. Classroom Activity
+- docs\b2-programming\index.md:94 ::: tip Teacher Strategy
+- docs\b2-programming\index.md:284 ## 9. Suggested Teaching Pacing
+- docs\b2-programming\index.md:304 ## 10. Recommended Classroom Routine
+- docs\b2-programming\input-output.md:855 | Integer division mistake | Average may lose decimal part | Use `2.0` or cast to double |
+- docs\b2-programming\input-output.md:1176 ## 27. Classroom Activity
+- docs\b2-programming\loops.md:946 ## 18. Classroom Activity
+- docs\b2-programming\programming-basics.md:44 | Instruction | 指令 | A command that tells the computer what to do |
+- docs\b2-programming\programming-basics.md:400 | Maintenance | Makes code easier to change later |
+- docs\b2-programming\programming-basics.md:1056 ## 24. Classroom Activity
+- docs\b2-programming\searching.md:132 A teacher has a list of students:
+- docs\b2-programming\searching.md:138 The teacher wants to check whether `"David"` is in the class.
+- docs\b2-programming\searching.md:980 ## 19. Classroom Activity
+- docs\b2-programming\selection.md:561 2. they have completed the basic programming course
+- docs\b2-programming\selection.md:569 boolean completedBasicCourse = true;
+- docs\b2-programming\selection.md:572 if (completedBasicCourse) {
+- docs\b2-programming\selection.md:586 | mark | completedBasicCourse | Outer condition `mark >= 80` | Inner condition | Output |
+- docs\b2-programming\selection.md:600 if (completedBasicCourse) {
+- docs\b2-programming\selection.md:609 if (mark >= 80 && completedBasicCourse) {
+- docs\b2-programming\selection.md:936 if (completedProject) {
+- docs\b2-programming\selection.md:1073 ## 23. Classroom Activity
+- docs\b2-programming\sorting.md:141 A teacher has student scores:
+- docs\b2-programming\sorting.md:956 ## 20. Classroom Activity
+- docs\b2-programming\testing-debugging.md:378 ### What to Do if a Test Fails
+- docs\b2-programming\testing-debugging.md:964 ## 20. Classroom Activity
+- docs\b2-programming\variables.md:1013 ## 22. Classroom Activity
+- docs\b2-programming\variables.md:1027 The teacher reads assignment statements, and students update the cards.
+- docs\b3-oop\accessors-mutators.md:1064 ## 24. Classroom Activity
+- docs\b3-oop\attributes-methods.md:1025 ## 24. Classroom Activity
+- docs\b3-oop\attributes-methods.md:1039 The teacher calls method actions:
+- docs\b3-oop\attributes-methods.md:1150 | Behaviour | What methods allow an object to do |
+- docs\b3-oop\classes-objects.md:884 ## 20. Classroom Activity
+- docs\b3-oop\constructors.md:922 ## 20. Classroom Activity
+- docs\b3-oop\encapsulation.md:539 | Easier maintenance | Rules can be changed inside the class |
+- docs\b3-oop\encapsulation.md:985 ## 22. Classroom Activity
+- docs\b3-oop\hl-multiple-classes.md:75 Teacher
+- docs\b3-oop\hl-multiple-classes.md:120 Teacher
+- docs\b3-oop\hl-multiple-classes.md:155 | Easier maintenance | Changes to one class are easier to control |
+- docs\b3-oop\hl-multiple-classes.md:986 ## 23. Classroom Activity
+- docs\b3-oop\hl-multiple-classes.md:1027 Classroom + Student
+- docs\b3-oop\index.md:410 ## 12. Suggested Teaching Pacing
+- docs\b3-oop\index.md:426 ## 13. Recommended Classroom Routine
+- docs\b3-oop\uml-class-diagrams.md:985 ## 21. Classroom Activity
+- docs\exam-practice\a1-a2-practice.md:547 Accounting records or monitors how system resources are used, such as CPU time, storage, memory, or user activity. This can be used for billing, auditing, performance monitoring, or detecting misuse.
+- docs\exam-practice\a1-a2-practice.md:588 PaaS provides a ready-made development and deployment environment, so developers can focus on writing applications without managing the underlying servers, operating systems, and infrastructure.
+- docs\exam-practice\a1-a2-practice.md:924 A school may use wired connections for fixed devices such as servers or desktop computers because wired networks can be faster and more reliable. Wireless networks can support mobile devices such as laptops and tablets, giving students and teachers more flexibility.
+- docs\exam-practice\a1-a2-practice.md:1458 ::: tip Next Step
+- docs\exam-practice\a3-a4-practice.md:654 Explain why audit logs may be used in a database system.
+- docs\exam-practice\a3-a4-practice.md:659 Audit logs record database activity such as logins, changes, and access to sensitive records. They can help detect misuse, investigate security incidents, and provide accountability.
+- docs\exam-practice\a3-a4-practice.md:672 Access control should be used so only authorized staff can view or change patient records. Encryption should protect patient data if it is stored or transmitted. Other valid controls include audit logs, data minimization, anonymization/pseudonymization, backups, user training, and retention limits.
+- docs\exam-practice\a3-a4-practice.md:726 Atomicity is important because both the debit from Account A and the credit to Account B must be completed together. If one operation succeeds but the other fails, money could disappear or be duplicated. Atomicity ensures the whole transfer completes or is rolled back.
+- docs\exam-practice\a3-a4-practice.md:1228 One ethical concern is unfair labelling if the model wrongly identifies a student as at risk, which could affect teacher expectations or student confidence. Another concern is privacy because the model may use sensitive data such as attendance, grades, behaviour, or learning platform activity. The school should use human oversight, fairness checks, data minimization, and clear communication so predictions are used for support rather than punishment.
+- docs\exam-practice\a3-a4-practice.md:1530 Access control should restrict student records to authorized staff only, such as teachers or administrators who need the data. Authentication such as strong passwords or multi-factor authentication can reduce unauthorized access. Encryption can protect stored or transmitted data so it cannot be read if intercepted or stolen. Audit logs can record access and changes, helping investigate misuse. The school should also use data minimization and retention policies so it only stores necessary data for an appropriate time. Overall, these controls help protect sensitive student data and reduce privacy risks.
+- docs\exam-practice\a3-a4-practice.md:1640 A machine learning system could help identify students who may need support earlier by analysing data such as attendance, previous grades, assignment completion, and learning platform activity. This could allow teachers to provide extra help before the final exam.
+- docs\exam-practice\a3-a4-practice.md:1646 Overall, the system could be useful as a decision-support tool, but it should not automatically make decisions about students without teacher review and strong privacy safeguards.
+- docs\exam-practice\a3-a4-practice.md:1733 ::: tip Next Step
+- docs\exam-practice\b1-practice.md:1243 ::: tip Next Step
+- docs\exam-practice\b2-b3-practice.md:1889 ::: tip Next Step
+- docs\exam-practice\command-terms.md:196 ### What to Do
+- docs\exam-practice\command-terms.md:242 ### What to Do
+- docs\exam-practice\command-terms.md:288 ### What to Do
+- docs\exam-practice\command-terms.md:322 ### What to Do
+- docs\exam-practice\command-terms.md:376 ### What to Do
+- docs\exam-practice\command-terms.md:424 ### What to Do
+- docs\exam-practice\command-terms.md:472 ### What to Do
+- docs\exam-practice\command-terms.md:530 ### What to Do
+- docs\exam-practice\command-terms.md:578 ### What to Do
+- docs\exam-practice\command-terms.md:618 ### What to Do
+- docs\exam-practice\command-terms.md:656 ### What to Do
+- docs\exam-practice\command-terms.md:690 ### What to Do
+- docs\exam-practice\command-terms.md:722 ### What to Do
+- docs\exam-practice\command-terms.md:808 ### What to Do
+- docs\exam-practice\command-terms.md:856 ### What to Do
+- docs\exam-practice\command-terms.md:902 ### What to Do
+- docs\exam-practice\command-terms.md:1279 A machine learning system could help the school identify students who may need support earlier by analysing data such as attendance, previous grades, and assignment completion. This could allow teachers to provide extra help before the final exam.
+- docs\exam-practice\command-terms.md:1283 Privacy is another concern because the system may process sensitive student data. The school should use data minimization, access control, and human oversight. Teachers should review predictions and use them to support students rather than punish them.
+- docs\exam-practice\command-terms.md:1285 Overall, the system could be useful as a decision-support tool, but it should not make automatic decisions about students without teacher review, fairness testing, and privacy protection.
+- docs\exam-practice\command-terms.md:1629 ::: tip Next Step
+- docs\exam-practice\index.md:341 | Command Term | What to Do | Typical Answer Style |
+- docs\exam-practice\index.md:658 ## 18. Teacher Marking Routine
+- docs\exam-practice\index.md:884 ::: tip Next Step
+- docs\exam-practice\mark-scheme-skills.md:1157 ## 27. Marking Symbols for Teachers
+- docs\exam-practice\mark-scheme-skills.md:1159 A simple teacher marking system:
+- docs\exam-practice\mark-scheme-skills.md:1181 Teacher feedback:
+- docs\exam-practice\mark-scheme-skills.md:1418 A machine learning system could help identify students who may need support earlier by analysing data such as attendance, previous grades, and assignment completion. This could allow teachers to provide targeted help before students fail.
+- docs\exam-practice\mark-scheme-skills.md:1424 Overall, the system could be useful as a decision-support tool, but it should not automatically make decisions about students without teacher review and strong privacy safeguards.
+- docs\exam-practice\mark-scheme-skills.md:1612 | Skill | What to Do |
+- docs\exam-practice\mark-scheme-skills.md:1631 ::: tip Next Step
+- docs\exam-practice\mini-mock-exam-bank.md:1000 Access control should restrict student records to authorized staff only, reducing the risk of unauthorized viewing or editing. Encryption can protect stored or transmitted data so that if it is accessed or intercepted, it cannot be understood without the key. Other valid answers include audit logs, data minimization, retention limits, and backups.
+- docs\exam-practice\mini-mock-exam-bank.md:1300 A school stores student records in a database. It also uses a machine learning system to identify students who may need academic support. Teachers access the system through the school network and sometimes from home.
+- docs\exam-practice\mini-mock-exam-bank.md:1319 Explain two security controls that should be used when teachers access the system from home.
+- docs\exam-practice\mini-mock-exam-bank.md:1324 A VPN can create an encrypted tunnel between the teacher's device and the school network, reducing the risk that data is intercepted over the internet. Multi-factor authentication can require a password and a second verification method, reducing unauthorized access if a password is stolen. Other valid answers include access control, encryption, device management, and monitoring.
+- docs\exam-practice\mini-mock-exam-bank.md:1365 One benefit is that the system may identify students needing support earlier by analysing patterns in attendance, grades, or assignment completion. This could help teachers provide intervention before final exams. One risk is that the model may make incorrect or biased predictions, such as falsely labelling a student as at risk, which could affect teacher expectations or student confidence.
+- docs\exam-practice\mini-mock-exam-bank.md:1378 The ML system could be useful because it can analyse large amounts of student data, such as attendance, previous grades, and assignment completion, to identify students who may need support earlier. This may help teachers provide targeted help before students fail.
+- docs\exam-practice\mini-mock-exam-bank.md:1382 Privacy is also important because the system processes sensitive student data. The school should use data minimization, access control, transparency, fairness testing, and human oversight. Teachers should review predictions and use them to support students rather than punish them.
+- docs\exam-practice\mini-mock-exam-bank.md:1384 Overall, the system could be suitable as a decision-support tool, but it should not automatically make important decisions without teacher judgement, privacy safeguards, and regular monitoring.
+- docs\exam-practice\mini-mock-exam-bank.md:1438 | Skill | What to Do |
+- docs\exam-practice\mini-mock-exam-bank.md:1454 This page completes the main Exam Practice sidebar set. A future upgrade could add printable PDF mock papers or separate student/teacher versions.
+- docs\exam-practice\paper-1-overview.md:784 auditing/logging
+- docs\exam-practice\paper-1-overview.md:1000 Accounting records or monitors how system resources are used, such as CPU time, memory, storage, or user activity. This can support billing, auditing, performance monitoring, or detecting misuse.
+- docs\exam-practice\paper-1-overview.md:1092 Atomicity ensures that a transaction is treated as one complete unit. Across multiple nodes, either all required updates are completed successfully on all relevant nodes, or the transaction is rolled back so no partial update remains.
+- docs\exam-practice\paper-1-overview.md:1233 ::: tip Next Step
+- docs\extension-hl-programming\advanced-arrays-2d-arrays.md:1165 ## 30. Classroom Activity
+- docs\extension-hl-programming\advanced-arrays-2d-arrays.md:1171 The teacher asks:
+- docs\extension-hl-programming\advanced-arrays-2d-arrays.md:1286 ::: tip Next Step
+- docs\extension-hl-programming\arraylist-dynamic-lists.md:1292 ## 36. Classroom Activity
+- docs\extension-hl-programming\arraylist-dynamic-lists.md:1298 The teacher performs operations:
+- docs\extension-hl-programming\arraylist-dynamic-lists.md:1411 ::: tip Next Step
+- docs\extension-hl-programming\exception-handling-robust-programs.md:1252 ## 34. Classroom Activity
+- docs\extension-hl-programming\exception-handling-robust-programs.md:1385 ::: tip Next Step
+- docs\extension-hl-programming\index.md:34 - explain stack operations such as push and pop
+- docs\extension-hl-programming\index.md:55 | 5 | Stacks and Queues | LIFO, FIFO, push/pop, enqueue/dequeue | [Open](./stacks-queues) |
+- docs\extension-hl-programming\index.md:225 | Push | add item to top of stack |
+- docs\extension-hl-programming\index.md:387 push = add to top
+- docs\extension-hl-programming\index.md:658 | push/pop | enqueue/dequeue |
+- docs\extension-hl-programming\index.md:830 A stack is suitable because it follows LIFO, meaning the last item added is the first item removed. In an undo feature, the most recent action should be undone first, so each action can be pushed onto the stack and popped when the user selects undo.
+- docs\extension-hl-programming\index.md:919 ::: tip Next Step
+- docs\extension-hl-programming\inheritance-polymorphism.md:84 Teacher is a Person
+- docs\extension-hl-programming\inheritance-polymorphism.md:163 Teacher is a Person
+- docs\extension-hl-programming\inheritance-polymorphism.md:935 | Easier maintenance | common changes made in superclass |
+- docs\extension-hl-programming\inheritance-polymorphism.md:972 A school system stores teachers and students.
+- docs\extension-hl-programming\inheritance-polymorphism.md:989 Teacher-specific data:
+- docs\extension-hl-programming\inheritance-polymorphism.md:1001 └── Teacher
+- docs\extension-hl-programming\inheritance-polymorphism.md:1007 `Teacher` is a `Person`.
+- docs\extension-hl-programming\inheritance-polymorphism.md:1263 A school system has `Person`, `Student`, and `Teacher` classes. Explain why inheritance is suitable.
+- docs\extension-hl-programming\inheritance-polymorphism.md:1268 Inheritance is suitable because both `Student` and `Teacher` are types of `Person`. Shared attributes such as name, email, and date of birth can be stored in the `Person` superclass. `Student` can add student-specific data such as student ID and grade level, while `Teacher` can add staff ID and subject. This reduces duplicated code and creates a clear class hierarchy.
+- docs\extension-hl-programming\inheritance-polymorphism.md:1402 ## 34. Classroom Activity
+- docs\extension-hl-programming\inheritance-polymorphism.md:1423 Teacher / Employee
+- docs\extension-hl-programming\inheritance-polymorphism.md:1463 Teacher calls:
+- docs\extension-hl-programming\inheritance-polymorphism.md:1553 ::: tip Next Step
+- docs\extension-hl-programming\linked-lists.md:763 ### Push at Head
+- docs\extension-hl-programming\linked-lists.md:1212 ## 36. Classroom Activity
+- docs\extension-hl-programming\linked-lists.md:1237 ### Activity 2: Broken Links
+- docs\extension-hl-programming\linked-lists.md:1344 ::: tip Next Step
+- docs\extension-hl-programming\recursion.md:1368 ## 32. Classroom Activity
+- docs\extension-hl-programming\recursion.md:1484 ::: tip Next Step
+- docs\extension-hl-programming\searching-sorting-extension.md:855 | simple classroom trace | bubble sort | easy to see swaps |
+- docs\extension-hl-programming\searching-sorting-extension.md:1254 ## 34. Classroom Activity
+- docs\extension-hl-programming\searching-sorting-extension.md:1376 ::: tip Next Step
+- docs\extension-hl-programming\stacks-queues.md:10 - describe stack operations: push, pop, peek, isEmpty
+- docs\extension-hl-programming\stacks-queues.md:31 | Practical focus | Push/pop, enqueue/dequeue, tracing operations, scenario choice |
+- docs\extension-hl-programming\stacks-queues.md:50 | Push | 入栈 | Add an item to the top of a stack |
+- docs\extension-hl-programming\stacks-queues.md:86 push = 放一个盘子到最上面
+- docs\extension-hl-programming\stacks-queues.md:150 push = put a plate on top
+- docs\extension-hl-programming\stacks-queues.md:214 push(item) = add item to top
+- docs\extension-hl-programming\stacks-queues.md:239 push("A")
+- docs\extension-hl-programming\stacks-queues.md:240 push("B")
+- docs\extension-hl-programming\stacks-queues.md:241 push("C")
+- docs\extension-hl-programming\stacks-queues.md:277 | push(x) | add x to top | stack grows by one |
+- docs\extension-hl-programming\stacks-queues.md:295 push(10)
+- docs\extension-hl-programming\stacks-queues.md:296 push(20)
+- docs\extension-hl-programming\stacks-queues.md:297 push(30)
+- docs\extension-hl-programming\stacks-queues.md:299 push(40)
+- docs\extension-hl-programming\stacks-queues.md:308 | 1 | push(10) | [10] |  |
+- docs\extension-hl-programming\stacks-queues.md:309 | 2 | push(20) | [10, 20] |  |
+- docs\extension-hl-programming\stacks-queues.md:310 | 3 | push(30) | [10, 20, 30] |  |
+- docs\extension-hl-programming\stacks-queues.md:312 | 5 | push(40) | [10, 20, 40] |  |
+- docs\extension-hl-programming\stacks-queues.md:441 | Add operation | push | enqueue |
+- docs\extension-hl-programming\stacks-queues.md:461 push C
+- docs\extension-hl-programming\stacks-queues.md:462 push B
+- docs\extension-hl-programming\stacks-queues.md:463 push A
+- docs\extension-hl-programming\stacks-queues.md:553 push each visited page
+- docs\extension-hl-programming\stacks-queues.md:607 push opening brackets
+- docs\extension-hl-programming\stacks-queues.md:725 push to full stack
+- docs\extension-hl-programming\stacks-queues.md:769 ### Push
+- docs\extension-hl-programming\stacks-queues.md:772 PROCEDURE push(stack, item)
+- docs\extension-hl-programming\stacks-queues.md:854 ### Push
+- docs\extension-hl-programming\stacks-queues.md:952 push("A")
+- docs\extension-hl-programming\stacks-queues.md:953 push("B")
+- docs\extension-hl-programming\stacks-queues.md:955 push("C")
+- docs\extension-hl-programming\stacks-queues.md:956 push("D")
+- docs\extension-hl-programming\stacks-queues.md:965 | 1 | push("A") | [A] |  |
+- docs\extension-hl-programming\stacks-queues.md:966 | 2 | push("B") | [A, B] |  |
+- docs\extension-hl-programming\stacks-queues.md:968 | 4 | push("C") | [A, C] |  |
+- docs\extension-hl-programming\stacks-queues.md:969 | 5 | push("D") | [A, C, D] |  |
+- docs\extension-hl-programming\stacks-queues.md:1030 Characters can be pushed in order and popped in reverse order.
+- docs\extension-hl-programming\stacks-queues.md:1112 | pop described as adding | pop removes top item | push adds, pop removes |
+- docs\extension-hl-programming\stacks-queues.md:1159 A stack follows LIFO, so the most recently added item is removed first using operations such as push and pop. A queue follows FIFO, so the earliest added item is removed first using operations such as enqueue and dequeue. A stack is suitable for undo actions, while a queue is suitable for printer jobs.
+- docs\extension-hl-programming\stacks-queues.md:1172 A stack is suitable because it follows LIFO. The most recent action is pushed onto the stack and should be popped first when the user chooses undo. This matches the way undo reverses the latest action before earlier actions.
+- docs\extension-hl-programming\stacks-queues.md:1196 push(1)
+- docs\extension-hl-programming\stacks-queues.md:1197 push(2)
+- docs\extension-hl-programming\stacks-queues.md:1199 push(3)
+- docs\extension-hl-programming\stacks-queues.md:1208 | push(1) | [1] |  |
+- docs\extension-hl-programming\stacks-queues.md:1209 | push(2) | [1, 2] |  |
+- docs\extension-hl-programming\stacks-queues.md:1211 | push(3) | [1, 3] |  |
+- docs\extension-hl-programming\stacks-queues.md:1264 Underflow occurs when trying to remove an item from an empty stack or queue, such as popping an empty stack. Overflow occurs when trying to add an item to a full fixed-size stack or queue, such as pushing to a full stack.
+- docs\extension-hl-programming\stacks-queues.md:1305 `push`
+- docs\extension-hl-programming\stacks-queues.md:1329 push("A")
+- docs\extension-hl-programming\stacks-queues.md:1330 push("B")
+- docs\extension-hl-programming\stacks-queues.md:1414 ## 38. Classroom Activity
+- docs\extension-hl-programming\stacks-queues.md:1420 Teacher calls:
+- docs\extension-hl-programming\stacks-queues.md:1423 push A
+- docs\extension-hl-programming\stacks-queues.md:1424 push B
+- docs\extension-hl-programming\stacks-queues.md:1425 push C
+- docs\extension-hl-programming\stacks-queues.md:1438 Teacher calls:
+- docs\extension-hl-programming\stacks-queues.md:1488 push("red")
+- docs\extension-hl-programming\stacks-queues.md:1489 push("blue")
+- docs\extension-hl-programming\stacks-queues.md:1490 push("green")
+- docs\extension-hl-programming\stacks-queues.md:1492 push("yellow")
+- docs\extension-hl-programming\stacks-queues.md:1546 | Push | add to top of stack |
+- docs\extension-hl-programming\stacks-queues.md:1560 ::: tip Next Step
+- docs\extension-software-engineering\index.md:7 This section helps students understand software development as more than just writing code. Good software needs clear requirements, careful design, testing, documentation, teamwork, and long-term maintenance.
+- docs\extension-software-engineering\index.md:26 | Requirements | What the user or client needs the system to do |
+- docs\extension-software-engineering\index.md:31 | Maintenance | Fixing, updating, and improving software after release |
+- docs\extension-software-engineering\index.md:56 | Often solves one specific problem | Manages requirements, design, testing, deployment, and maintenance |
+- docs\extension-software-engineering\what-is-software-engineering.md:43 what users need the calculator to do
+- docs\extension-software-engineering\what-is-software-engineering.md:47 how to document the code
+- docs\extension-software-engineering\what-is-software-engineering.md:59 | Deployment | Release the software for users |
+- docs\extension-software-engineering\what-is-software-engineering.md:60 | Maintenance | Fix, update, and improve the software |
+- docs\extension-software-engineering\what-is-software-engineering.md:92 ## Why Maintenance Matters
+- docs\extension-software-engineering\what-is-software-engineering.md:96 Maintenance may include:
+- docs\extension-software-engineering\what-is-software-engineering.md:110 Software engineering is a structured approach to software development. It includes requirements analysis, design, implementation, testing, documentation, deployment, and maintenance. It is important because it helps developers build software that meets user needs, reduces errors, and can be maintained or improved over time.
+- docs\extension-software-engineering\what-is-software-engineering.md:119 | not documenting code | future changes become harder | documentation supports maintenance |
+- docs\extension-software-engineering\what-is-software-engineering.md:120 | thinking software is finished after release | software often needs updates | maintenance is part of the life cycle |
+- docs\extension-software-engineering\what-is-software-engineering.md:131 Programming focuses mainly on writing code. Software engineering covers the whole process of creating software, including requirements, design, coding, testing, documentation, and maintenance.
+- docs\extension-software-engineering\what-is-software-engineering.md:142 Requirements are important because they describe what the user needs the system to do. They guide the design, implementation, and testing of the software.
+- docs\extension-software-engineering\what-is-software-engineering.md:148 Why is software maintenance important?
+- docs\extension-software-engineering\what-is-software-engineering.md:153 Maintenance is important because software often needs to be fixed, updated, improved, or adapted to new user needs after it has been released.
+- docs\glossary\command-terms.md:173 | Command Term | What To Do | Typical Answer Style |
+- docs\glossary\command-terms.md:226 ### What To Do
+- docs\glossary\command-terms.md:262 ### What To Do
+- docs\glossary\command-terms.md:292 ### What To Do
+- docs\glossary\command-terms.md:323 ### What To Do
+- docs\glossary\command-terms.md:361 ### What To Do
+- docs\glossary\command-terms.md:391 ### What To Do
+- docs\glossary\command-terms.md:429 ### What To Do
+- docs\glossary\command-terms.md:468 ### What To Do
+- docs\glossary\command-terms.md:499 ### What To Do
+- docs\glossary\command-terms.md:524 ### What To Do
+- docs\glossary\command-terms.md:554 ### What To Do
+- docs\glossary\command-terms.md:582 Cloud storage allows students and teachers to access files from different devices, which supports remote learning and collaboration. However, it also depends on internet access and creates privacy/security concerns if accounts are compromised. The school should use access control, MFA, and clear data policies if cloud storage is used.
+- docs\glossary\command-terms.md:591 ### What To Do
+- docs\glossary\command-terms.md:630 ### What To Do
+- docs\glossary\command-terms.md:660 ### What To Do
+- docs\glossary\command-terms.md:690 ### What To Do
+- docs\glossary\command-terms.md:720 ### What To Do
+- docs\glossary\command-terms.md:753 ### What To Do
+- docs\glossary\command-terms.md:788 ### What To Do
+- docs\glossary\command-terms.md:806 If the booking system does not validate dates, a user may enter an impossible or unavailable date. This could cause incorrect bookings to be stored, leading to double booking or failed reservations. Poor validation may also make reports unreliable because the stored data is not consistent.
+- docs\glossary\command-terms.md:1275 ## 34. Classroom Activity
+- docs\glossary\command-terms.md:1378 ## 36. Teacher Notes
+- docs\glossary\command-terms.md:1384 A good classroom routine is:
+- docs\glossary\command-terms.md:1392 ### Suggested Teacher Questions
+- docs\glossary\command-terms.md:1430 ::: tip Next Step
+- docs\glossary\core-vocabulary-cn-en.md:166 | Software | 软件 | programs/instructions run by hardware | Software is a set of instructions that tells hardware what to do. |
+- docs\glossary\core-vocabulary-cn-en.md:506 | Requirement | 需求 | what system must do | A requirement describes what the client or user needs the system to do. |
+- docs\glossary\core-vocabulary-cn-en.md:579 Software: programs that tell hardware what to do.
+- docs\glossary\core-vocabulary-cn-en.md:784 ## 29. Classroom Activity
+- docs\glossary\core-vocabulary-cn-en.md:874 ## 31. Teacher Notes
+- docs\glossary\core-vocabulary-cn-en.md:880 Useful classroom routine:
+- docs\glossary\core-vocabulary-cn-en.md:888 ### Suggested Teacher Questions
+- docs\glossary\core-vocabulary-cn-en.md:916 ::: tip Next Step
+- docs\glossary\index.md:655 ## 18. Classroom Activity
+- docs\glossary\index.md:706 ## 19. Teacher Notes
+- docs\glossary\index.md:722 ### Suggested Teacher Questions
+- docs\glossary\index.md:753 ::: tip Next Step
+- docs\glossary\pseudocode-java-cheatsheet.md:129 What is this structure trying to do?
+- docs\glossary\pseudocode-java-cheatsheet.md:161 Different schools and exam boards may use slightly different pseudocode conventions. Focus on the algorithmic logic and follow your teacher's style.
+- docs\glossary\pseudocode-java-cheatsheet.md:1303 if (!status.equals("Completed") && !status.equals("Missing")) {
+- docs\glossary\pseudocode-java-cheatsheet.md:1399 | integer division | average becomes whole number | cast to double |
+- docs\glossary\pseudocode-java-cheatsheet.md:1419 This algorithm takes a student name as input. It loops through the list of homework records and compares each record's student name with the input. Matching records are added to a results list. The output is a table of all matching records. This supports the success criterion that the teacher can search homework history by student name.
+- docs\glossary\pseudocode-java-cheatsheet.md:1559 String[] statuses = {"Completed", "Missing", "Missing", "Completed"};
+- docs\glossary\pseudocode-java-cheatsheet.md:1815 ## 48. Classroom Activity
+- docs\glossary\pseudocode-java-cheatsheet.md:1904 ## 50. Teacher Notes
+- docs\glossary\pseudocode-java-cheatsheet.md:1922 ### Suggested Teacher Questions
+- docs\ia-support\design-and-success-criteria.md:106 The teacher can add a homework record with student name, task name, due date, and completion status.
+- docs\ia-support\design-and-success-criteria.md:108 The teacher can search records by student name and view all matching results.
+- docs\ia-support\design-and-success-criteria.md:165 The teacher can add a homework record with student name, task name, due date, and completion status.
+- docs\ia-support\design-and-success-criteria.md:167 The teacher can search records by student name and view all matching results.
+- docs\ia-support\design-and-success-criteria.md:212 | Requirement | something the client/user needs the system to do |
+- docs\ia-support\design-and-success-criteria.md:242 Teacher cannot quickly find homework history.
+- docs\ia-support\design-and-success-criteria.md:248 The teacher can enter a student name and the system displays all matching homework records.
+- docs\ia-support\design-and-success-criteria.md:375 The teacher can add a homework record with student name, task name, due date, and completion status, and the system saves it to the record list.
+- docs\ia-support\design-and-success-criteria.md:496 | Status:       [Completed v]          |
+- docs\ia-support\design-and-success-criteria.md:596 | status | String/Boolean | completed or missing | selected from options |
+- docs\ia-support\design-and-success-criteria.md:643 The teacher can search records by student name and view all matching results.
+- docs\ia-support\design-and-success-criteria.md:734 I added a Save Record button at the bottom of the form so the teacher can check all required fields before submitting the record.
+- docs\ia-support\design-and-success-criteria.md:787 The teacher needs to record homework completion and quickly find missing homework patterns.
+- docs\ia-support\design-and-success-criteria.md:792 1. The teacher can add a homework record with student name, task name, due date, and completion status.
+- docs\ia-support\design-and-success-criteria.md:794 3. The teacher can search records by student name and view all matching records.
+- docs\ia-support\design-and-success-criteria.md:795 4. The teacher can edit or delete an incorrect homework record.
+- docs\ia-support\design-and-success-criteria.md:1006 It describes an implementation feature, not a measurable user success. A better criterion would describe what persistent storage allows the user to do.
+- docs\ia-support\design-and-success-criteria.md:1056 ## 34. Classroom Activity
+- docs\ia-support\design-and-success-criteria.md:1159 ## 36. Teacher Notes
+- docs\ia-support\design-and-success-criteria.md:1175 ### Suggested Teacher Questions
+- docs\ia-support\design-and-success-criteria.md:1208 ::: tip Next Step
+- docs\ia-support\development-and-testing.md:344 This code loops through each homework record stored in the records list. For each record, it compares the stored student name with the search input. If the names match, the record is added to the results list. This supports Success Criterion 3 because it allows the teacher to find all records for one student.
+- docs\ia-support\development-and-testing.md:522 The teacher can search records by student name and view all matching records.
+- docs\ia-support\development-and-testing.md:666 teacher adds a homework record
+- docs\ia-support\development-and-testing.md:679 completed task checklist
+- docs\ia-support\development-and-testing.md:723 ### How to Document a Failed Test
+- docs\ia-support\development-and-testing.md:805 SC3: The teacher can search records by student name and view all matching records.
+- docs\ia-support\development-and-testing.md:826 The search feature loops through all stored records and compares each record's student name with the user's search input. Matching records are added to a results list and displayed in a table. This supports SC3 because the teacher can quickly view all homework records for one student.
+- docs\ia-support\development-and-testing.md:862 The summary algorithm checks each homework record from the selected week. If the completion status is "Missing", the student's missing count increases by one. The final counts are displayed in a summary table, helping the teacher identify repeated missing homework.
+- docs\ia-support\development-and-testing.md:880 | 1 | SC1 | Add record | Anna, Essay, 12/05, Completed | record saved | record saved | Pass | Fig. 1 |
+- docs\ia-support\development-and-testing.md:1034 A better row should include test data, expected result, actual result, pass/fail, and evidence. For example: test data = Anna, Task 1, 12/05, Completed; expected = record saved and displayed; actual = record saved and displayed; pass; evidence = screenshot.
+- docs\ia-support\development-and-testing.md:1110 ## 36. Classroom Activity
+- docs\ia-support\development-and-testing.md:1207 ## 38. Teacher Notes
+- docs\ia-support\development-and-testing.md:1226 ### Suggested Teacher Questions
+- docs\ia-support\development-and-testing.md:1262 ::: tip Next Step
+- docs\ia-support\evaluation-and-reflection.md:79 Success Criterion 3 was achieved because Test 4 shows that searching for "Anna" returned all matching records. The teacher also said this feature makes it faster to find a student's homework history.
+- docs\ia-support\evaluation-and-reflection.md:116 Success Criterion 3 was achieved because Test 5 shows that the teacher can search by student name and all matching records are displayed. The client also said this feature is useful because it reduces the time needed to find old homework records. However, the search currently requires exact spelling, so a future improvement would be to add partial matching or typo tolerance.
+- docs\ia-support\evaluation-and-reflection.md:171 Success Criterion 3 was achieved because Test 5 shows that the teacher can search by student name and all matching records are displayed. The client also said this feature is useful because it reduces the time needed to find old homework records. However, the search currently requires exact spelling, so a future improvement would be to add partial matching or typo tolerance.
+- docs\ia-support\evaluation-and-reflection.md:314 feature was not completed
+- docs\ia-support\evaluation-and-reflection.md:396 core features completed
+- docs\ia-support\evaluation-and-reflection.md:409 One strength is that the system reduces manual searching. In the old paper method, the teacher had to check several pages, but the final product displays matching student records immediately after a search.
+- docs\ia-support\evaluation-and-reflection.md:450 A limitation is that the search function requires exact spelling. If the teacher mistypes a student's name, the system shows no results even when records exist. This limits usability for larger classes.
+- docs\ia-support\evaluation-and-reflection.md:468 Add partial search so the teacher can find records even if only part of the student's name is entered.
+- docs\ia-support\evaluation-and-reflection.md:484 | no user roles | add teacher/admin roles | better access control |
+- docs\ia-support\evaluation-and-reflection.md:563 client completed task without help
+- docs\ia-support\evaluation-and-reflection.md:638 Overall, the product solves the client's main problem because the teacher can now add, search, and summarize homework records digitally instead of manually checking a paper notebook. Five of the six success criteria were fully achieved, while the search criterion was partly achieved because it requires exact spelling. The product is suitable for the client's current class, but future work should improve search flexibility and add export options.
+- docs\ia-support\evaluation-and-reflection.md:679 The teacher can add a homework record with student name, task name, due date, and completion status.
+- docs\ia-support\evaluation-and-reflection.md:685 This criterion was achieved. Test 1 shows that a valid homework record containing student name, task name, due date, and completion status was saved and displayed in the records table. The client also completed this task during user testing without extra help. This shows that the basic record entry feature meets the client's need to replace the paper notebook.
+- docs\ia-support\evaluation-and-reflection.md:695 The teacher can search records by student name and view all matching records.
+- docs\ia-support\evaluation-and-reflection.md:873 A future improvement would be to add a date range summary so the teacher can compare missing homework patterns across several weeks.
+- docs\ia-support\evaluation-and-reflection.md:936 ## 31. Classroom Activity
+- docs\ia-support\evaluation-and-reflection.md:1042 ## 33. Teacher Notes
+- docs\ia-support\evaluation-and-reflection.md:1050 ### Suggested Teacher Questions
+- docs\ia-support\evaluation-and-reflection.md:1073 | Not achieved | not completed or not supported by evidence |
+- docs\ia-support\evaluation-and-reflection.md:1083 ::: tip Next Step
+- docs\ia-support\ia-checklist.md:437 Students should follow official school and IB guidance. If unsure, ask the teacher before using external code, AI tools, libraries, or templates.
+- docs\ia-support\ia-checklist.md:588 Overall, the product mostly solves the teacher's original homework tracking problem because it allows records to be added, searched, saved, and summarized. This is supported by Tests 1-8 and the client's feedback that searching records is faster than using the paper notebook. The main limitation is that search requires exact spelling, which may make some records harder to find. A realistic future improvement would be to add partial and case-insensitive search.
+- docs\ia-support\ia-checklist.md:807 ## 24. Classroom Activity
+- docs\ia-support\ia-checklist.md:809 ### Activity 1: IA Audit Pair Review
+- docs\ia-support\ia-checklist.md:857 ## 25. Teacher Notes
+- docs\ia-support\ia-checklist.md:863 The most useful teacher intervention is often to ask:
+- docs\ia-support\ia-checklist.md:872 ### Suggested Teacher Questions
+- docs\ia-support\ia-overview.md:246 Your teacher's official IA structure and school requirements should be followed. This page gives a practical student-friendly structure for planning.
+- docs\ia-support\ia-overview.md:355 | Homework tracker | teacher | teacher |
+- docs\ia-support\ia-overview.md:398 The system must allow the teacher to add homework records.
+- docs\ia-support\ia-overview.md:404 The interface should be simple enough for the teacher to use without training.
+- docs\ia-support\ia-overview.md:410 The system should run on the teacher's Windows laptop.
+- docs\ia-support\ia-overview.md:672 many features but none completed well
+- docs\ia-support\ia-overview.md:720 ask teacher when unsure
+- docs\ia-support\ia-overview.md:726 copying a GitHub project
+- docs\ia-support\ia-overview.md:936 ## 26. Classroom Activity
+- docs\ia-support\ia-overview.md:988 ## 27. Teacher Notes
+- docs\ia-support\ia-overview.md:1004 ### Suggested Teacher Questions
+- docs\ia-support\ia-overview.md:1036 ::: tip Next Step
+- docs\ia-support\index.md:218 | Requirement | something the client/user needs the system to do |
+- docs\ia-support\index.md:280 A teacher needs a tool to track student homework completion.
+- docs\ia-support\index.md:327 Client: teacher
+- docs\ia-support\index.md:328 Users: teacher and students
+- docs\ia-support\index.md:364 The client currently uses [current method] to do [task]. This causes [specific problems], such as [example]. A computer-based solution is suitable because it can [benefit], [benefit], and [benefit].
+- docs\ia-support\index.md:370 The teacher currently records homework completion in a paper notebook. This makes it difficult to search student records quickly and identify repeated missing homework. A computer-based solution is suitable because it can store records, search by student name, and generate summary information.
+- docs\ia-support\index.md:403 The teacher can add a new homework record with student name, task, date, and completion status.
+- docs\ia-support\index.md:407 The teacher can export or view a weekly report.
+- docs\ia-support\index.md:615 Always follow the official instructions and teacher guidance for final formatting. This structure is a student-friendly planning model.
+- docs\ia-support\index.md:840 ## 24. Classroom Activity
+- docs\ia-support\index.md:857 homework tracker for a teacher
+- docs\ia-support\index.md:895 ## 25. Teacher Notes
+- docs\ia-support\index.md:912 ### Suggested Teacher Questions
+- docs\ia-support\index.md:944 ::: tip Next Step
+- docs\ia-support\problem-analysis.md:39 What task are they trying to do?
+- docs\ia-support\problem-analysis.md:164 | Requirement | something the client/user needs the system to do |
+- docs\ia-support\problem-analysis.md:172 | Feasibility | whether the project can realistically be completed with available time and skills |
+- docs\ia-support\problem-analysis.md:186 | Problem | what is wrong now | teacher cannot quickly find missing homework records |
+- docs\ia-support\problem-analysis.md:201 The teacher cannot quickly find a student's homework history because records are stored on paper and must be checked manually.
+- docs\ia-support\problem-analysis.md:207 The system should allow the teacher to search records by student name.
+- docs\ia-support\problem-analysis.md:226 | homework tracker | teacher | teacher |
+- docs\ia-support\problem-analysis.md:282 The teacher currently records homework completion in a paper notebook after each lesson. Each row includes the date, student name, task name, and whether the task was completed. To find a student's history, the teacher must manually check several pages. Weekly summaries are counted by hand, which takes time and may lead to mistakes.
+- docs\ia-support\problem-analysis.md:315 The current paper system is slow because the teacher must manually search through many pages to find one student's missing homework history. It is also error-prone because weekly totals are counted by hand.
+- docs\ia-support\problem-analysis.md:354 From the client interview, the teacher explained that finding a student's previous homework records can take several minutes because the records are spread across different pages. This supports the need for a searchable digital system.
+- docs\ia-support\problem-analysis.md:423 The system should allow the teacher to search homework records by student name and display all matching results.
+- docs\ia-support\problem-analysis.md:642 Feasibility means whether the project can realistically be completed.
+- docs\ia-support\problem-analysis.md:648 Can it be completed in the available time?
+- docs\ia-support\problem-analysis.md:672 The teacher cannot quickly find a student's missing homework history.
+- docs\ia-support\problem-analysis.md:678 The teacher can enter a student name and the system displays all matching homework records.
+- docs\ia-support\problem-analysis.md:728 The client is a Grade 10 teacher. The teacher currently records homework completion in a paper notebook after each lesson.
+- docs\ia-support\problem-analysis.md:734 It is slow to search for one student's missing homework history because the teacher must check many pages manually. Weekly totals are also counted by hand, which can lead to mistakes.
+- docs\ia-support\problem-analysis.md:740 The system should allow the teacher to add homework records, search by student name, edit incorrect records, and generate weekly missing homework summaries.
+- docs\ia-support\problem-analysis.md:868 The teacher wants an app with a search button.
+- docs\ia-support\problem-analysis.md:874 The real problem might be that the teacher cannot quickly find student records using the current paper or spreadsheet system.
+- docs\ia-support\problem-analysis.md:891 The current paper system is slow because the teacher must manually check many pages to find one student's previous homework records.
+- docs\ia-support\problem-analysis.md:975 ## 28. Classroom Activity
+- docs\ia-support\problem-analysis.md:991 The teacher cannot quickly find old records.
+- docs\ia-support\problem-analysis.md:1029 homework tracking system for one teacher and one class
+- docs\ia-support\problem-analysis.md:1090 ## 30. Teacher Notes
+- docs\ia-support\problem-analysis.md:1108 ### Suggested Teacher Questions
+- docs\ia-support\problem-analysis.md:1140 ::: tip Next Step
+- docs\interactive-demos\bias-training-data-simulator.md:2 import BiasTrainingDataSimulator from '../.vitepress/components/demos/BiasTrainingDataSimulator.vue'
+- docs\interactive-demos\binary-search-visualizer.md:2 import BinarySearchVisualizer from '../.vitepress/components/demos/BinarySearchVisualizer.vue'
+- docs\interactive-demos\bubble-sort-visualizer.md:2 import BubbleSortVisualizer from '../.vitepress/components/demos/BubbleSortVisualizer.vue'
+- docs\interactive-demos\confusion-matrix-visualizer.md:2 import ConfusionMatrixVisualizer from '../.vitepress/components/demos/ConfusionMatrixVisualizer.vue'
+- docs\interactive-demos\count-sum-average-visualizer.md:2 import CountSumAverageVisualizer from '../.vitepress/components/demos/CountSumAverageVisualizer.vue'
+- docs\interactive-demos\dns-web-request.md:2 import DNSWebRequestDemo from '../.vitepress/components/demos/DNSWebRequestDemo.vue'
+- docs\interactive-demos\encapsulation-demo.md:2 import EncapsulationDemo from '../.vitepress/components/demos/EncapsulationDemo.vue'
+- docs\interactive-demos\find-max-min-visualizer.md:2 import FindMaxMinVisualizer from '../.vitepress/components/demos/FindMaxMinVisualizer.vue'
+- docs\interactive-demos\firewall-rule-simulator.md:2 import FirewallRuleSimulator from '../.vitepress/components/demos/FirewallRuleSimulator.vue'
+- docs\interactive-demos\flowchart-execution-demo.md:2 import FlowchartExecutionDemo from '../.vitepress/components/demos/FlowchartExecutionDemo.vue'
+- docs\interactive-demos\inheritance-demo.md:2 import InheritanceDemo from '../.vitepress/components/demos/InheritanceDemo.vue'
+- docs\interactive-demos\insertion-sort-visualizer.md:2 import InsertionSortVisualizer from '../.vitepress/components/demos/InsertionSortVisualizer.vue'
+- docs\interactive-demos\knn-classifier-demo.md:2 import KNNClassifierDemo from '../.vitepress/components/demos/KNNClassifierDemo.vue'
+- docs\interactive-demos\linear-search-visualizer.md:2 import LinearSearchVisualizer from '../.vitepress/components/demos/LinearSearchVisualizer.vue'
+- docs\interactive-demos\normalization-demo.md:2 import NormalizationDemo from '../.vitepress/components/demos/NormalizationDemo.vue'
+- docs\interactive-demos\object-reference-demo.md:2 import ObjectReferenceDemo from '../.vitepress/components/demos/ObjectReferenceDemo.vue'
+- docs\interactive-demos\oop-object-interaction-demo.md:2 import OOPObjectInteractionDemo from '../.vitepress/components/demos/OOPObjectInteractionDemo.vue'
+- docs\interactive-demos\overfitting-underfitting-visualizer.md:2 import OverfittingUnderfittingVisualizer from '../.vitepress/components/demos/OverfittingUnderfittingVisualizer.vue'
+- docs\interactive-demos\packet-switching.md:2 import PacketSwitchingDemo from '../.vitepress/components/demos/PacketSwitchingDemo.vue'
+- docs\interactive-demos\selection-sort-visualizer.md:2 import SelectionSortVisualizer from '../.vitepress/components/demos/SelectionSortVisualizer.vue'
+- docs\interactive-demos\sql-join-visualizer.md:2 import SQLJoinVisualizer from '../.vitepress/components/demos/SQLJoinVisualizer.vue'
+- docs\interactive-demos\sql-select-visualizer.md:2 import SQLSelectVisualizer from '../.vitepress/components/demos/SQLSelectVisualizer.vue'
+- docs\interactive-demos\trace-table-simulator.md:2 import TraceTableSimulator from '../.vitepress/components/demos/TraceTableSimulator.vue'

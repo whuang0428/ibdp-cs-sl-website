@@ -1,4 +1,4 @@
-# A1 and A2 Practice
+﻿# A1 and A2 Practice
 
 ## 1. Page Purpose
 
@@ -1455,6 +1455,3 @@ Before an A1/A2 test, students should be able to:
 | NAT | private IP to public IP mapping |
 | Best exam habit | name device/control, explain how it works, link to scenario |
 
-::: tip Next Step
-After this page, the next Exam Practice page should be **A3 and A4 Practice**, using the real file name `a3-a4-practice.md`.
-:::

@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import CountSumAverageVisualizer from '../.vitepress/components/demos/CountSumAverageVisualizer.vue'
 </script>
 
@@ -83,3 +83,4 @@ Why should the algorithm check for `count = 0` before calculating average?
 If count is 0, calculating `sum / count` would divide by zero, which is an error.
 
 </details>
+

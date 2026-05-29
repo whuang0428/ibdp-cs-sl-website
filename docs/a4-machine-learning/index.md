@@ -1,4 +1,4 @@
-# A4 Machine Learning
+﻿# A4 Machine Learning
 
 ## 1. Module Overview
 
@@ -697,56 +697,6 @@ ML can find complex patterns and support prediction, but it depends on data qual
 
 ---
 
-## 20. Suggested Teaching Pacing
-
-Actual pacing depends on class level.
-
-| Topic | Suggested Lessons | Notes |
-|---|---:|---|
-| Overview | 1 | Big picture and vocabulary |
-| ML Fundamentals | 1-2 | AI vs ML, workflow, basic examples |
-| Data, Features and Labels | 2 | Core vocabulary and scenario practice |
-| Supervised Learning | 2 | Labelled data and prediction |
-| Unsupervised Learning | 1-2 | Clustering and anomaly detection |
-| Training, Testing and Validation | 2 | Data split and generalization |
-| Classification and Regression | 2 | Task identification |
-| Model Evaluation | 2-3 | Accuracy, confusion matrix, precision/recall, regression error |
-| Overfitting and Underfitting | 1-2 | Result interpretation |
-| Bias, Ethics and Privacy | 2-3 | Scenario discussion and safeguards |
-| Applications and Limitations | 2 | Benefit-risk-safeguard answers |
-
----
-
-## 21. Recommended Classroom Routine
-
-For each A4 lesson, use this routine:
-
-```text
-1. Start with a real ML scenario.
-2. Identify the data.
-3. Identify features and labels if supervised.
-4. Identify the learning type.
-5. Identify the output.
-6. Discuss evaluation.
-7. Discuss limitations and risks.
-8. Recommend safeguards.
-9. Complete one exam-style question.
-```
-
-### Example: Fraud Detection
-
-```text
-data = transactions
-features = amount, location, device, time
-label = fraud / not fraud
-learning type = supervised classification or anomaly detection
-evaluation = precision, recall, confusion matrix
-risk = false positives, false negatives, privacy
-safeguard = human review, monitoring, privacy protection
-```
-
----
-
 ## 22. Student Revision Routine
 
 For any A4 scenario question, students should ask:
@@ -1127,6 +1077,3 @@ Before moving to the next module, students should be able to:
 | Human oversight | Human review of important outputs |
 | Limitation | ML can be wrong, biased, costly, hard to explain, or privacy-risky |
 
-::: tip Next Step
-A4 Machine Learning sidebar content is now complete after this overview page. A sensible next step is to move into **B1 Computational Thinking** or build **A3/A4 exam-practice pages** using the completed A3 and A4 content.
-:::

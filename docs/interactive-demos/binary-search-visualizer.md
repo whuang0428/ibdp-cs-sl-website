@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import BinarySearchVisualizer from '../.vitepress/components/demos/BinarySearchVisualizer.vue'
 </script>
 
@@ -81,3 +81,4 @@ State one advantage of binary search compared with linear search.
 Binary search is more efficient for long sorted lists because it eliminates about half of the remaining search range after each comparison.
 
 </details>
+

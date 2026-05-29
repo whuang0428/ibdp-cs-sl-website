@@ -1,4 +1,4 @@
-# A3 and A4 Practice
+﻿# A3 and A4 Practice
 
 ## 1. Page Purpose
 
@@ -1730,6 +1730,3 @@ Before an A3/A4 test, students should be able to:
 | Bias | unfair/systematic distortion |
 | Best exam habit | identify data/tables/features, then explain with scenario link |
 
-::: tip Next Step
-After this page, the next Exam Practice page should be **Mini Mock Exam Bank**, using the real file name `mini-mock-exam-bank.md`.
-:::

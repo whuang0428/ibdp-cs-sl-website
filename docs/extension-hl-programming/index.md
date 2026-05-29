@@ -1,4 +1,4 @@
-# HL Programming Extension
+﻿# HL Programming Extension
 
 ## 1. Section Overview
 
@@ -916,6 +916,3 @@ Students should be able to:
 | Exception handling | catches/responds to runtime errors |
 | Robustness | program handles unexpected situations safely |
 
-::: tip Next Step
-After this overview page, the next page should be **Advanced Arrays and 2D Arrays**, using the real file name `advanced-arrays-2d-arrays.md`.
-:::

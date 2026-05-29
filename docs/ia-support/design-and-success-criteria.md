@@ -1,4 +1,4 @@
-# Design and Success Criteria
+﻿# Design and Success Criteria
 
 ## 1. Lesson Goals
 
@@ -1053,7 +1053,7 @@ Explain how success criteria connect to testing and evaluation.
 
 ---
 
-## 34. Classroom Activity
+## 34. Practice Activity
 
 ### Activity 1: Criteria Rewrite Workshop
 
@@ -1156,36 +1156,6 @@ The user likes the system.
 
 ---
 
-## 36. Teacher Notes
-
-### Teaching Emphasis
-
-Students often struggle with making criteria measurable. Encourage them to write criteria that can be tested with actual input and expected output.
-
-A good design page should not only show screens. It should also show computational thinking:
-
-```text
-data structure
-algorithm
-validation
-processing
-storage
-```
-
-### Suggested Teacher Questions
-
-```text
-How will you prove this criterion is achieved?
-What test data would check it?
-Which design feature supports it?
-What data must be stored?
-What algorithm is needed?
-What invalid input could occur?
-Why did you choose this design?
-```
-
----
-
 ## 37. One-page Design and Criteria Sheet
 
 | Area | Key Reminder |
@@ -1205,6 +1175,3 @@ Why did you choose this design?
 | Common risk | vague criteria like “easy” or “good” |
 | Best phrase | Success criteria define what the product must achieve, while design explains how the product will achieve it. |
 
-::: tip Next Step
-After this page, the next page should be **Development and Testing**, using the real file name `development-and-testing.md`.
-:::

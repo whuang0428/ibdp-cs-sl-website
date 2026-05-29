@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import OverfittingUnderfittingVisualizer from '../.vitepress/components/demos/OverfittingUnderfittingVisualizer.vue'
 </script>
 
@@ -81,3 +81,4 @@ Why is test data important?
 Test data is important because it checks how well the model performs on unseen data. This helps show whether the model generalizes or only memorises the training data.
 
 </details>
+

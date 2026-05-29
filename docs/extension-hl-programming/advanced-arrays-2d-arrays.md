@@ -1,4 +1,4 @@
-# Advanced Arrays and 2D Arrays
+﻿# Advanced Arrays and 2D Arrays
 
 ## 1. Lesson Goals
 
@@ -1162,7 +1162,7 @@ Compare arrays and dynamic lists.
 
 ---
 
-## 30. Classroom Activity
+## 30. Practice Activity
 
 ### Activity 1: Human Array
 
@@ -1283,6 +1283,3 @@ Starting maximum at 0 always works.
 | Array vs dynamic list | fixed size vs grow/shrink |
 | Exam phrase | arrays store related values and allow them to be processed efficiently using loops |
 
-::: tip Next Step
-After this page, the next page should be **ArrayList and Dynamic Lists**, using the real file name `arraylist-dynamic-lists.md`.
-:::

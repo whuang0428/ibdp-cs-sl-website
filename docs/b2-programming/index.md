@@ -1,4 +1,4 @@
-# B2 Programming
+﻿# B2 Programming
 
 ## 1. Module Overview
 
@@ -281,47 +281,6 @@ IB pseudocode is less strict than Java. Java code must follow exact syntax, incl
 
 ---
 
-## 9. Suggested Teaching Pacing
-
-Actual speed depends on student background and class performance.
-
-| Topic | Suggested Lessons | Notes |
-|---|---:|---|
-| Programming Basics | 2-3 | Focus on IPO model and Java structure |
-| Input and Output | 2-3 | Scanner needs live coding practice |
-| Variables | 2-3 | Use trace tables heavily |
-| Data Types | 2 | Include integer division and String issues |
-| Selection | 3-4 | Include validation and Boolean logic |
-| Loops | 5-7 | Slow down; trace many examples |
-| Arrays | 5-7 | Use traversal, total, count, max/min |
-| Searching | 3-4 | Focus on found flag and not found case |
-| Sorting | 4-6 | Use physical/card tracing first |
-| Testing and Debugging | 3-4 | Connect to every programming task |
-| File Processing | 2-4 | Use as practical extension or later application |
-
----
-
-## 10. Recommended Classroom Routine
-
-For each programming lesson, use this pattern:
-
-```text
-1. Review previous pattern
-2. Introduce new concept
-3. Show IB pseudocode
-4. Show Java code
-5. Explain line by line
-6. Trace by hand
-7. Predict output
-8. Modify code
-9. Write similar code independently
-10. Check using test data
-```
-
-This routine builds both coding skill and exam explanation skill.
-
----
-
 ## 11. Student Revision Routine
 
 Students should revise programming in this order:
@@ -575,3 +534,4 @@ Before moving to B3 Object-Oriented Programming, students should be able to:
 ::: tip Next Module
 After B2, students move to **B3 Object-Oriented Programming**, where programs are organized using classes and objects.
 :::
+

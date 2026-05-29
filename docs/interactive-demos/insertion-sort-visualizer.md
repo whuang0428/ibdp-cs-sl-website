@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import InsertionSortVisualizer from '../.vitepress/components/demos/InsertionSortVisualizer.vue'
 </script>
 
@@ -80,3 +80,4 @@ When can insertion sort work especially well?
 Insertion sort can work well when the data is already almost sorted, because fewer shifts may be needed.
 
 </details>
+

@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import FirewallRuleSimulator from '../.vitepress/components/demos/FirewallRuleSimulator.vue'
 </script>
 
@@ -94,3 +94,4 @@ Explain why a default block policy is usually safer than a default allow policy.
 A default block policy blocks traffic that does not match an allowed rule. This is safer because unknown or unexpected traffic is denied instead of being allowed into the network.
 
 </details>
+

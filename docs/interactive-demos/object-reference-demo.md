@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import ObjectReferenceDemo from '../.vitepress/components/demos/ObjectReferenceDemo.vue'
 </script>
 
@@ -82,3 +82,4 @@ Can two different objects have the same attribute values?
 Yes. Two different objects can store the same values, but they are still separate objects if they have different references in memory.
 
 </details>
+

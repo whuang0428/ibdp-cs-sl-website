@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import SQLJoinVisualizer from '../.vitepress/components/demos/SQLJoinVisualizer.vue'
 </script>
 
@@ -88,3 +88,4 @@ Explain why a database may store Customers and Orders in separate tables.
 Storing Customers and Orders separately reduces repeated customer data. Orders can link to customers using a foreign key, so customer details do not need to be repeated in every order record.
 
 </details>
+

@@ -1,0 +1,909 @@
+﻿# IA Checklist
+
+## 1. Purpose of This Checklist
+
+This checklist helps students complete a final review before submitting the IBDP Computer Science IA.
+
+It is designed to check whether the IA has a clear and connected project chain:
+
+```text
+problem → client/user needs → success criteria → design → development → testing → evaluation
+```
+
+::: tip Main Idea
+A strong IA is not only a working product. It is a well-documented project with evidence, testing, and evaluation linked back to the original problem.
+:::
+
+---
+
+## 2. How to Use This Checklist
+
+Use this checklist in three stages:
+
+```text
+1. Before development
+2. During development and testing
+3. Before final submission
+```
+
+Do not wait until the final day.  
+If a problem is found late, it may affect several sections.
+
+For example:
+
+```text
+If success criteria are vague,
+then testing becomes weak,
+and evaluation becomes unsupported.
+```
+
+---
+
+## 3. Overall IA Connection Check
+
+Before checking each section, ask whether the whole IA feels connected.
+
+| Question | Yes / No / Fix Needed |
+|---|---|
+| Is there a clear client/user? |  |
+| Is the problem specific and realistic? |  |
+| Are requirements based on client/user needs? |  |
+| Are success criteria measurable? |  |
+| Does the design support the criteria? |  |
+| Does development show the criteria being implemented? |  |
+| Does testing test the criteria? |  |
+| Does evaluation judge the criteria? |  |
+| Are limitations and improvements specific? |  |
+| Does the final product solve the original problem? |  |
+
+---
+
+## 4. Bilingual Explanation
+
+<LangBlock>
+<template #cn>
+
+### 中文讲解
+
+IA Checklist 的作用是帮你检查整篇 IA 有没有形成闭环。
+
+最重要的不是看某一个部分有没有写很多，而是看它们有没有连起来：
+
+```text
+Problem Analysis 说用户有什么问题
+Success Criteria 说明怎么判断成功
+Design 计划怎么实现
+Development 展示怎么做出来
+Testing 证明它能不能工作
+Evaluation 判断是否达到 criteria
+```
+
+如果前面写了一个功能，但后面没有设计、没有测试、没有评价，就会显得很断。
+
+比如：
+
+```text
+success criterion: user can search records
+```
+
+那么后面应该能看到：
+
+```text
+design: search screen / search algorithm
+development: search code and explanation
+testing: search tests
+evaluation: whether search criterion was achieved
+```
+
+最后检查时，不要只问：
+
+```text
+我的程序能不能运行？
+```
+
+还要问：
+
+```text
+我的文档有没有证明它为什么需要？
+有没有证明它怎么做出来？
+有没有证明它达到要求？
+有没有诚实说明不足？
+```
+
+</template>
+
+<template #en>
+
+### English Explanation
+
+The IA checklist helps you check whether the whole IA forms a complete chain.
+
+The most important thing is not whether one section is very long. The important thing is whether the sections connect:
+
+```text
+Problem Analysis explains the user's problem
+Success Criteria define how success will be judged
+Design plans how to implement the solution
+Development shows how it was built
+Testing proves whether it works
+Evaluation judges whether the criteria were achieved
+```
+
+If a feature is mentioned early but is not designed, tested, or evaluated later, the IA feels disconnected.
+
+For example:
+
+```text
+success criterion: user can search records
+```
+
+Then later, the IA should include:
+
+```text
+design: search screen / search algorithm
+development: search code and explanation
+testing: search tests
+evaluation: whether search criterion was achieved
+```
+
+At the final check, do not only ask:
+
+```text
+Does my program run?
+```
+
+Also ask:
+
+```text
+Does my documentation prove why the product is needed?
+Does it prove how it was built?
+Does it prove whether it met the requirements?
+Does it honestly explain limitations?
+```
+
+</template>
+</LangBlock>
+
+---
+
+## 5. Quick Final Risk Check
+
+These are high-risk issues that often weaken IA submissions.
+
+| Risk | Why It Is Serious | Fix |
+|---|---|---|
+| no clear client/user | problem feels invented | identify client/user and needs |
+| vague problem | criteria become weak | describe current system and specific issues |
+| vague success criteria | cannot test/evaluate | rewrite as measurable criteria |
+| design does not match product | planning looks weak | update/explain design changes |
+| development is only screenshots | no technical explanation | add code snippets and explanations |
+| testing only valid data | weak robustness | add invalid/boundary tests |
+| no expected results | testing unclear | write expected vs actual |
+| no evaluation against criteria | unsupported conclusion | evaluate each criterion |
+| no limitations | unrealistic | add honest specific limitations |
+| no evidence | claims unsupported | add screenshots, tests, feedback |
+
+---
+
+## 6. Problem Analysis Checklist
+
+### Client and User
+
+| Check | Done? |
+|---|---|
+| The client is clearly identified. |  |
+| The target user(s) are clearly identified. |  |
+| The difference between client and user is clear if they are different. |  |
+| The client/user has a realistic need. |  |
+| The project is not just based on the student's personal interest. |  |
+
+### Current System
+
+| Check | Done? |
+|---|---|
+| The current method/system is described. |  |
+| It explains who uses the current method. |  |
+| It explains what data or information is currently used. |  |
+| It explains how records are currently stored or managed. |  |
+| It explains what is slow, difficult, inaccurate, or inconvenient. |  |
+
+### Problem and Evidence
+
+| Check | Done? |
+|---|---|
+| At least two specific problems are explained. |  |
+| The problem is not described only as “bad” or “slow”. |  |
+| Evidence from client/user or current method is included. |  |
+| Private or sensitive information is removed or anonymized. |  |
+| The need for a computer-based solution is justified. |  |
+
+### Requirements, Constraints, and Scope
+
+| Check | Done? |
+|---|---|
+| Functional requirements are listed. |  |
+| Non-functional requirements are considered where relevant. |  |
+| Constraints are explained. |  |
+| Project scope is realistic. |  |
+| Out-of-scope features are explained if needed. |  |
+| Requirements can lead naturally to success criteria. |  |
+
+---
+
+## 7. Success Criteria Checklist
+
+| Check | Done? |
+|---|---|
+| There are usually 5-8 success criteria. |  |
+| Each criterion links to a client/user need. |  |
+| Each criterion is specific. |  |
+| Each criterion is measurable. |  |
+| Each criterion is testable. |  |
+| Criteria are not only about appearance. |  |
+| Criteria are not vague words such as “good”, “fast”, or “easy” without detail. |  |
+| At least one criterion checks validation or error handling where relevant. |  |
+| Data storage/retrieval is included if the product stores data. |  |
+| Search/filter/sort/report features are included if they are core needs. |  |
+| Each criterion can be evaluated as achieved, partly achieved, or not achieved. |  |
+
+### Weak Criteria Warning
+
+Rewrite criteria like:
+
+```text
+The system is useful.
+The system looks good.
+The system works well.
+The system is easy to use.
+The system is fast.
+```
+
+Make them measurable.
+
+---
+
+## 8. Design Checklist
+
+### General Design
+
+| Check | Done? |
+|---|---|
+| Design was planned before or during development, not only after completion. |  |
+| Design links to success criteria. |  |
+| Design explains how the user will complete key tasks. |  |
+| Design decisions are justified. |  |
+| Major design changes are explained. |  |
+
+### User Interface and Navigation
+
+| Check | Done? |
+|---|---|
+| Main screens/pages are planned. |  |
+| Wireframes or screen sketches are included where useful. |  |
+| Navigation between screens/pages is clear. |  |
+| Buttons, menus, and form fields are labelled clearly. |  |
+| Error messages or feedback messages are planned. |  |
+
+### Data and Processing
+
+| Check | Done? |
+|---|---|
+| Inputs and outputs are identified. |  |
+| Data structures or database/file structure are planned. |  |
+| Important fields and data types are listed. |  |
+| Storage and retrieval are explained if used. |  |
+| Important algorithms are planned with pseudocode or flowcharts. |  |
+| Search/filter/sort/calculation logic is explained where relevant. |  |
+
+### Validation and Testing Plan
+
+| Check | Done? |
+|---|---|
+| Required field validation is planned. |  |
+| Range checks are planned where relevant. |  |
+| Format checks are planned where relevant. |  |
+| Invalid input responses are planned. |  |
+| Each success criterion has at least one possible test idea. |  |
+
+---
+
+## 9. Development Checklist
+
+### Development Evidence
+
+| Check | Done? |
+|---|---|
+| Development is organized by feature or milestone. |  |
+| Each major feature links to a success criterion. |  |
+| Important code snippets are included. |  |
+| Code snippets are explained in the student's own words. |  |
+| Full code is not pasted unnecessarily in the main text. |  |
+| Screenshots or output evidence are labelled. |  |
+| Development evidence shows the product actually works. |  |
+
+### Technical Explanation
+
+| Check | Done? |
+|---|---|
+| Algorithms are explained. |  |
+| Data structures are explained. |  |
+| File/database/storage handling is explained if used. |  |
+| Validation and error handling are explained. |  |
+| Search/filter/sort/calculation logic is explained if used. |  |
+| The explanation includes input, processing, and output where relevant. |  |
+
+### Problem Solving and Iteration
+
+| Check | Done? |
+|---|---|
+| At least some development problems or bugs are discussed. |  |
+| Fixes are explained. |  |
+| Design changes are justified. |  |
+| Prototype or client feedback influenced improvements if available. |  |
+| The development process does not look like only a final screenshot collection. |  |
+
+---
+
+## 10. Testing Checklist
+
+### Test Table Quality
+
+| Check | Done? |
+|---|---|
+| Test cases are numbered. |  |
+| Each test names the feature being tested. |  |
+| Each test links to a success criterion where possible. |  |
+| Exact test data is written. |  |
+| Expected result is written before or clearly stated. |  |
+| Actual result is recorded. |  |
+| Pass/fail is shown. |  |
+| Evidence is referenced. |  |
+| Failed tests include fixes or retests where relevant. |  |
+
+### Test Coverage
+
+| Check | Done? |
+|---|---|
+| Every success criterion is tested or evaluated. |  |
+| Normal data is tested. |  |
+| Invalid data is tested. |  |
+| Boundary data is tested where relevant. |  |
+| Validation is tested. |  |
+| Storage/loading is tested if used. |  |
+| Search/filter/sort/report features are tested if used. |  |
+| User acceptance testing is included if possible. |  |
+| Retesting is included after important fixes. |  |
+
+### Evidence and Privacy
+
+| Check | Done? |
+|---|---|
+| Screenshots match the test cases. |  |
+| Evidence is labelled clearly. |  |
+| Private data is not exposed. |  |
+| Sample/anonymized data is used where appropriate. |  |
+| Evidence supports actual results. |  |
+
+---
+
+## 11. Evaluation Checklist
+
+### Evaluation Against Criteria
+
+| Check | Done? |
+|---|---|
+| Every success criterion is evaluated. |  |
+| Each criterion has evidence from testing. |  |
+| Judgement is clear: achieved, partly achieved, or not achieved. |  |
+| The explanation says why the judgement was made. |  |
+| The evaluation does not simply repeat the testing table. |  |
+| The evaluation connects back to the original problem. |  |
+
+### Client/User Feedback
+
+| Check | Done? |
+|---|---|
+| Client/user feedback is included if possible. |  |
+| Feedback is specific, not only “they liked it”. |  |
+| Feedback is used to support evaluation. |  |
+| Feedback also identifies possible improvements if available. |  |
+
+### Limitations and Improvements
+
+| Check | Done? |
+|---|---|
+| Specific limitations are identified. |  |
+| Limitations are honest and realistic. |  |
+| Future improvements link to limitations or feedback. |  |
+| Improvements are realistic, not vague. |  |
+| The final judgement explains whether the product solved the problem. |  |
+
+---
+
+## 12. Academic Integrity Checklist
+
+| Check | Done? |
+|---|---|
+| The product is the student's own work. |  |
+| External code/libraries/resources are acknowledged. |  |
+| The student understands all submitted code. |  |
+| Tutorial code is not submitted as original work. |  |
+| AI or online assistance is used only according to school rules. |  |
+| Client feedback and test evidence are real, not fabricated. |  |
+| Images/screenshots do not expose private data without permission. |  |
+| Full code or appendix material matches the product described. |  |
+
+::: warning Academic Integrity Reminder
+Students should follow official school and IB guidance. If unsure, ask the teacher before using external code, AI tools, libraries, or templates.
+:::
+
+---
+
+## 13. Formatting and Presentation Checklist
+
+| Check | Done? |
+|---|---|
+| Section headings are clear. |  |
+| Figures and screenshots are labelled. |  |
+| Tables are readable. |  |
+| Code snippets are formatted clearly. |  |
+| The document is not overloaded with unnecessary screenshots. |  |
+| The writing explains evidence instead of only showing it. |  |
+| Terminology is used consistently. |  |
+| File names, figure references, and appendix references are correct. |  |
+| The final product version matches the version being evaluated. |  |
+| Spelling and grammar are checked. |  |
+
+---
+
+## 14. Evidence Checklist
+
+A strong IA should include useful evidence.
+
+| Evidence Type | Included? |
+|---|---|
+| Client/user interview or requirement evidence |  |
+| Current system evidence |  |
+| Success criteria table |  |
+| Wireframes or interface design |  |
+| Data structure / table design |  |
+| Algorithm pseudocode or flowchart |  |
+| Validation plan |  |
+| Code snippets |  |
+| Development screenshots |  |
+| Test table |  |
+| Test result screenshots |  |
+| Failed/fixed test evidence if available |  |
+| Client/user feedback |  |
+| Evaluation table |  |
+| Limitations and improvements table |  |
+| Appendix / full code if required |  |
+
+---
+
+## 15. Success Criteria Traceability Matrix
+
+This matrix checks whether each criterion appears throughout the IA.
+
+| SC No. | Success Criterion | Requirement Source | Design Evidence | Development Evidence | Test Evidence | Evaluation Judgement |
+|---:|---|---|---|---|---|---|
+| SC1 |  |  |  |  |  |  |
+| SC2 |  |  |  |  |  |  |
+| SC3 |  |  |  |  |  |  |
+| SC4 |  |  |  |  |  |  |
+| SC5 |  |  |  |  |  |  |
+| SC6 |  |  |  |  |  |  |
+| SC7 |  |  |  |  |  |  |
+| SC8 |  |  |  |  |  |  |
+
+### How to Use
+
+If a row has blanks, the IA may have a broken evidence chain.
+
+For example:
+
+```text
+SC3 has no test evidence
+```
+
+This means evaluation for SC3 will be weak.
+
+---
+
+## 16. Mini Marking Self-review
+
+Use this as a student-friendly self-review, not an official mark scheme.
+
+| Area | Strong Evidence | Needs Fix? |
+|---|---|---|
+| Problem analysis | clear client, current system, evidence, requirements |  |
+| Success criteria | measurable and linked to needs |  |
+| Design | UI, data, algorithm, validation, criteria mapping |  |
+| Development | code explanation, evidence, problem solving |  |
+| Testing | normal/boundary/invalid, expected/actual, evidence |  |
+| Evaluation | criteria-based, evidence-based, feedback, limitations |  |
+| Reflection | specific development decisions and improvements |  |
+| Presentation | clear, organized, labelled evidence |  |
+
+---
+
+## 17. Last 24-hour Checklist
+
+Before final submission:
+
+```text
+open the final product and check it runs
+check screenshots match final product
+check success criteria numbering is consistent
+check test numbers and figure numbers
+check all links/references work
+check private data is removed
+check appendix/code is included if required
+check file name and format match instructions
+export final PDF/document if required
+keep backup copy
+```
+
+### Do Not Do This at the Last Minute
+
+```text
+rewrite success criteria completely
+add many new features without testing
+change code without retesting
+delete evidence
+insert screenshots without explanation
+claim untested features are complete
+```
+
+---
+
+## 18. Common Final Submission Mistakes
+
+| Mistake | Why It Hurts | Fix |
+|---|---|---|
+| final product changed after testing | tests may no longer prove final version | retest changed features |
+| success criteria renumbered badly | references become confusing | update all references |
+| screenshots not labelled | evidence hard to follow | label figures clearly |
+| testing table has no actual results | incomplete testing | add actual result and pass/fail |
+| evaluation has no evidence | unsupported claims | cite test/user evidence |
+| final code not included | product evidence incomplete | attach appendix/code as required |
+| client names/data exposed | privacy issue | anonymize sensitive data |
+| too many screenshots, little explanation | weak analysis | explain what each evidence shows |
+| improvements are vague | weak reflection | make them specific |
+| no backup | submission risk | keep local/cloud backup |
+
+---
+
+## 19. Strong IA Final Paragraph Pattern
+
+A final judgement can use this pattern:
+
+```text
+Overall, the product [fully/mostly/partly] solves the client's original problem because [main achieved features]. This is supported by [test evidence] and [client/user feedback]. The main limitation is [specific limitation], which affects [impact]. A realistic future improvement would be [specific improvement].
+```
+
+### Example
+
+```text
+Overall, the product mostly solves the teacher's original homework tracking problem because it allows records to be added, searched, saved, and summarized. This is supported by Tests 1-8 and the client's feedback that searching records is faster than using the paper notebook. The main limitation is that search requires exact spelling, which may make some records harder to find. A realistic future improvement would be to add partial and case-insensitive search.
+```
+
+---
+
+## 20. Section-by-section Submission Checklist
+
+### Problem Analysis
+
+```text
+client/user identified
+current system explained
+specific problems explained
+evidence included
+requirements listed
+constraints/scope explained
+computer solution justified
+```
+
+### Success Criteria and Design
+
+```text
+criteria measurable
+criteria linked to requirements
+UI/navigation planned
+data structure planned
+algorithms planned
+validation planned
+criteria mapped to design/test ideas
+```
+
+### Development
+
+```text
+major features explained
+selected code snippets included
+code explained clearly
+data/algorithm/validation shown
+screenshots labelled
+problems/fixes described
+criteria links included
+```
+
+### Testing
+
+```text
+normal data
+boundary data where relevant
+invalid data
+expected/actual results
+pass/fail
+evidence
+failed tests and retests
+user acceptance testing if possible
+```
+
+### Evaluation
+
+```text
+each criterion evaluated
+testing evidence used
+client/user feedback included
+limitations specific
+improvements realistic
+overall judgement written
+```
+
+---
+
+## 21. Scenario Answer Bank
+
+### If Asked: “What should be checked before submitting the IA?”
+
+```text
+Students should check that the client problem, success criteria, design, development, testing, and evaluation are clearly connected and supported by evidence.
+```
+
+### If Asked: “Why is a traceability matrix useful?”
+
+```text
+It helps confirm that each success criterion appears in the requirements, design, development, testing, and evaluation.
+```
+
+### If Asked: “Why is final retesting important?”
+
+```text
+Final retesting ensures that changes made near the end did not break existing features and that the evidence matches the final product.
+```
+
+### If Asked: “Why should private data be removed?”
+
+```text
+Private data should be removed to protect users and avoid exposing sensitive information in screenshots, tests, or appendices.
+```
+
+### If Asked: “What makes a final evaluation strong?”
+
+```text
+A strong final evaluation judges each success criterion using testing evidence and user/client feedback, then explains limitations and realistic improvements.
+```
+
+---
+
+## 22. Guided Practice
+
+### Practice 1
+
+A student's success criterion says:
+
+```text
+The system can search records by student name.
+```
+
+But there is no search test.
+
+What is the problem?
+
+<details>
+<summary>Suggested Answer</summary>
+
+The evidence chain is broken. The criterion cannot be strongly evaluated because there is no test evidence showing that search works.
+
+</details>
+
+---
+
+### Practice 2
+
+A student writes:
+
+```text
+The client said it was good.
+```
+
+What should be improved?
+
+<details>
+<summary>Suggested Answer</summary>
+
+The feedback should be more specific, such as which feature the client found useful, what task it helped with, and what improvement they suggested.
+
+</details>
+
+---
+
+### Practice 3
+
+A student changes validation code after final testing but does not retest.
+
+Why is this risky?
+
+<details>
+<summary>Suggested Answer</summary>
+
+The final product may behave differently from the tested version, so the testing evidence may no longer prove that the final product works.
+
+</details>
+
+---
+
+### Practice 4
+
+A screenshot shows real student names.
+
+What should the student do?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Replace the screenshot with anonymized/sample data or blur/remove private information.
+
+</details>
+
+---
+
+## 23. Independent Practice
+
+### Question 1
+
+Create a traceability matrix for five success criteria of a homework tracker.
+
+### Question 2
+
+Write a final 24-hour checklist for your own IA project.
+
+### Question 3
+
+Identify five possible privacy risks in IA screenshots or evidence.
+
+### Question 4
+
+Rewrite three vague success criteria into measurable criteria.
+
+### Question 5
+
+Create a testing checklist for a club event sign-up system.
+
+### Question 6
+
+Write a strong final judgement paragraph for an inventory tracker.
+
+### Question 7
+
+List five pieces of evidence that should be included in the appendix or documentation.
+
+### Question 8
+
+Explain why evaluation should not claim everything is perfect.
+
+### Question 9
+
+Explain why success criteria numbering must stay consistent.
+
+### Question 10
+
+Explain why a smaller finished product may be stronger than a large unfinished one.
+
+---
+
+## 24. Practice Activity
+
+### Activity 1: IA Audit Pair Review
+
+Students exchange IA drafts and check:
+
+```text
+one strong connection
+one broken connection
+one vague criterion
+one missing test
+one missing evaluation detail
+one privacy risk
+```
+
+---
+
+### Activity 2: Evidence Chain Challenge
+
+Students choose one success criterion and must find:
+
+```text
+requirement
+design evidence
+development evidence
+test evidence
+evaluation judgement
+```
+
+If one is missing, they write how to fix it.
+
+---
+
+### Activity 3: Final Submission Simulation
+
+Students prepare a final submission pack:
+
+```text
+main IA document
+appendix/code if required
+final product file/link
+test evidence folder
+client feedback evidence
+backup copy
+```
+
+Then they check whether all filenames and references match.
+
+---
+
+## 25. Teacher Notes
+
+### Teaching Emphasis
+
+Students often think the IA is finished when the program works. This checklist reminds them that evidence, testing, and evaluation are equally important.
+
+The most useful teacher intervention is often to ask:
+
+```text
+Where is this success criterion designed?
+Where is it developed?
+Where is it tested?
+Where is it evaluated?
+```
+
+### Suggested Teacher Questions
+
+```text
+Which success criterion is weakest?
+Which test proves this feature?
+Which screenshot is unnecessary?
+Which limitation is most honest and specific?
+Which improvement directly responds to feedback?
+Does the final version match the tested version?
+```
+
+---
+
+## 26. One-page Final IA Checklist
+
+| Area | Final Check |
+|---|---|
+| Client/user | clear and realistic |
+| Problem | specific current-system issue |
+| Evidence | interview/current-system/testing/feedback |
+| Requirements | based on user needs |
+| Success criteria | measurable and testable |
+| Design | UI, data, algorithm, validation |
+| Development | selected code and clear explanation |
+| Testing | expected vs actual, normal/boundary/invalid |
+| Evaluation | each criterion judged with evidence |
+| Feedback | specific client/user comments |
+| Limitations | honest and specific |
+| Improvements | realistic and linked to limitations |
+| Privacy | sensitive data removed |
+| Integrity | own work and sources acknowledged |
+| Consistency | criteria/test/figure references match |
+| Final product | runs and matches documentation |
+| Backup | saved before submission |
+| Best phrase | The final IA should prove a clear chain from the original problem to the final evaluation. |
+
+
+

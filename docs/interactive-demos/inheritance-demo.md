@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import InheritanceDemo from '../.vitepress/components/demos/InheritanceDemo.vue'
 </script>
 
@@ -88,3 +88,4 @@ What does method overriding mean?
 Method overriding means a subclass provides its own version of a method that it inherited from the superclass.
 
 </details>
+

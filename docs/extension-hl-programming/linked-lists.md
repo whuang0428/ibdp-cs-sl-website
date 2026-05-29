@@ -1,4 +1,4 @@
-# Linked Lists
+﻿# Linked Lists
 
 ## 1. Lesson Goals
 
@@ -1209,7 +1209,7 @@ Compare linked lists and arrays.
 
 ---
 
-## 36. Classroom Activity
+## 36. Practice Activity
 
 ### Activity 1: Human Linked List
 
@@ -1341,6 +1341,3 @@ Linked lists always use less memory than arrays.
 | Linked list limitation | slower access by position and extra references |
 | Exam phrase | linked lists store nodes connected by references rather than contiguous indexed elements |
 
-::: tip Next Step
-After this page, the next page should be **Searching and Sorting Extension**, using the real file name `searching-sorting-extension.md`.
-:::

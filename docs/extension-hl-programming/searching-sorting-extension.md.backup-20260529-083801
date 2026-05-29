@@ -1,0 +1,1379 @@
+﻿# Searching and Sorting Extension
+
+## 1. Lesson Goals
+
+By the end of this lesson, students should be able to:
+
+- define searching and sorting
+- explain why searching and sorting are important in programs
+- describe linear search
+- trace a linear search algorithm
+- explain when linear search is suitable
+- describe binary search
+- trace a binary search algorithm
+- explain why binary search requires sorted data
+- compare linear search and binary search
+- describe bubble sort, selection sort, and insertion sort
+- trace sorting algorithms step by step
+- identify common errors in searching and sorting algorithms
+- choose a suitable search or sort method for a scenario
+- write pseudocode for common searching and sorting tasks
+- answer exam-style questions using mark scheme vocabulary
+
+---
+
+## 2. Syllabus / Extension Mapping
+
+| Item | Detail |
+|---|---|
+| Section | HL Programming Extension |
+| Topic | Searching and Sorting Extension |
+| Main skill | Finding and ordering data efficiently |
+| Connected topics | Arrays, ArrayList, loops, trace tables, recursion, 2D arrays |
+| Practical focus | Linear search, binary search, bubble sort, selection sort, insertion sort |
+| Exam relevance | Algorithm tracing, comparison, scenario choice, pseudocode writing |
+
+::: tip Learning Focus
+Searching finds a target value. Sorting puts values into a chosen order.  
+Binary search is faster than linear search for large sorted lists, but it only works correctly if the data is already sorted.
+:::
+
+---
+
+## 3. Key Terms
+
+| Term | 中文解释 | Exam-style meaning |
+|---|---|---|
+| Search | 搜索 | Find whether a target value exists in a collection |
+| Target | 目标值 | Value being searched for |
+| Linear search | 线性搜索 | Checks items one by one from start to end |
+| Binary search | 二分搜索 | Repeatedly checks the middle of a sorted list and halves the search space |
+| Sorted data | 已排序数据 | Data arranged in a defined order |
+| Ascending order | 升序 | Smallest to largest / A to Z |
+| Descending order | 降序 | Largest to smallest / Z to A |
+| Sort | 排序 | Arrange data into a chosen order |
+| Bubble sort | 冒泡排序 | Repeatedly compares adjacent items and swaps if needed |
+| Selection sort | 选择排序 | Repeatedly selects the smallest/largest remaining item |
+| Insertion sort | 插入排序 | Inserts each item into the correct place in the sorted part |
+| Comparison | 比较 | Checking two values to decide order or equality |
+| Swap | 交换 | Exchange positions of two values |
+| Pass | 一轮遍历 | One full traversal through part of the list |
+| Index | 索引 | Position of an element in an array/list |
+| Boundary | 边界 | Start/end condition of loop or search range |
+| Early stop | 提前停止 | Stop searching/sorting once result is known |
+| Efficiency | 效率 | How much time or memory an algorithm uses |
+| Best case | 最好情况 | Situation where algorithm does least work |
+| Worst case | 最坏情况 | Situation where algorithm does most work |
+
+---
+
+## 4. Concept Explanation
+
+<LangBlock>
+<template #cn>
+
+### 中文讲解
+
+Searching 和 sorting 是数组、列表里面最常见的两个算法类型。
+
+**Searching（搜索）** 是找一个 target value。
+
+比如：
+
+```text
+names = ["Ali", "Maya", "Chen"]
+target = "Maya"
+```
+
+程序要判断 `"Maya"` 是否在 list 里面。
+
+最简单的是 linear search：
+
+```text
+从第一个元素开始，一个一个检查
+找到就停止
+全部检查完还没找到，就说明不存在
+```
+
+Binary search 更快，但是有一个重要前提：
+
+```text
+data must already be sorted
+```
+
+比如：
+
+```text
+[3, 7, 10, 15, 21]
+```
+
+binary search 每次看中间值，然后丢掉一半范围。
+
+**Sorting（排序）** 是把数据按顺序排列。
+
+比如：
+
+```text
+[5, 2, 4, 1]
+```
+
+排序后：
+
+```text
+[1, 2, 4, 5]
+```
+
+常见排序包括：
+
+```text
+bubble sort
+selection sort
+insertion sort
+```
+
+考试中最重要的是：
+
+```text
+能解释算法怎么工作
+能 trace 每一步
+能比较算法适用场景
+能写出清楚 pseudocode
+```
+
+</template>
+
+<template #en>
+
+### English Explanation
+
+Searching and sorting are two of the most common algorithm types for arrays and lists.
+
+**Searching** means finding a target value.
+
+Example:
+
+```text
+names = ["Ali", "Maya", "Chen"]
+target = "Maya"
+```
+
+The program needs to check whether `"Maya"` is in the list.
+
+The simplest method is linear search:
+
+```text
+start at the first element
+check items one by one
+stop when found
+if the end is reached, the target is not present
+```
+
+Binary search is faster, but it has an important condition:
+
+```text
+data must already be sorted
+```
+
+Example:
+
+```text
+[3, 7, 10, 15, 21]
+```
+
+Binary search checks the middle value each time and discards half of the search range.
+
+**Sorting** means arranging data into order.
+
+Example:
+
+```text
+[5, 2, 4, 1]
+```
+
+After sorting:
+
+```text
+[1, 2, 4, 5]
+```
+
+Common sorts include:
+
+```text
+bubble sort
+selection sort
+insertion sort
+```
+
+For exams, the most important skills are:
+
+```text
+explain how the algorithm works
+trace each step
+compare suitable scenarios
+write clear pseudocode
+```
+
+</template>
+</LangBlock>
+
+---
+
+## 5. Why Searching Matters
+
+Searching is used whenever a program needs to find data.
+
+### Examples
+
+```text
+find a student by ID
+check whether a username exists
+find a product in stock
+search for a word in a list
+find a high score
+check whether an email is already registered
+```
+
+### Mark Scheme Phrase
+
+```text
+Searching is used to locate a target value in a collection of data.
+```
+
+---
+
+## 6. Linear Search
+
+Linear search checks each item one by one.
+
+### Simple Definition
+
+```text
+Linear search checks each element in sequence until the target is found or the list ends.
+```
+
+### Works On
+
+```text
+unsorted data
+sorted data
+arrays
+ArrayLists
+linked lists
+```
+
+### Pseudocode
+
+```text
+found ← false
+index ← 0
+
+WHILE index < length(items) AND found = false
+    IF items[index] = target THEN
+        found ← true
+    ELSE
+        index ← index + 1
+    ENDIF
+ENDWHILE
+
+OUTPUT found
+```
+
+### Mark Scheme Phrase
+
+```text
+Linear search can be used on unsorted data because it checks each item one at a time.
+```
+
+---
+
+## 7. Trace Linear Search
+
+### Data
+
+```text
+items = [4, 9, 2, 7]
+target = 2
+```
+
+### Trace
+
+| Iteration | index | items[index] | target | found |
+|---:|---:|---:|---:|---|
+| Start | 0 |  | 2 | false |
+| 1 | 0 | 4 | 2 | false |
+| 2 | 1 | 9 | 2 | false |
+| 3 | 2 | 2 | 2 | true |
+
+### Result
+
+```text
+found = true
+```
+
+The search can stop when the target is found.
+
+---
+
+## 8. Linear Search: Target Not Found
+
+### Data
+
+```text
+items = [4, 9, 2, 7]
+target = 5
+```
+
+### Trace
+
+| Iteration | index | items[index] | target | found |
+|---:|---:|---:|---:|---|
+| Start | 0 |  | 5 | false |
+| 1 | 0 | 4 | 5 | false |
+| 2 | 1 | 9 | 5 | false |
+| 3 | 2 | 2 | 5 | false |
+| 4 | 3 | 7 | 5 | false |
+| End | 4 |  | 5 | false |
+
+### Result
+
+```text
+found = false
+```
+
+The algorithm checks every item.
+
+---
+
+## 9. Linear Search: Strengths and Limitations
+
+### Strengths
+
+```text
+simple to understand
+works on unsorted data
+works on many structures
+easy to implement
+```
+
+### Limitations
+
+```text
+may need to check every item
+can be slow for large lists
+does not use sorted order
+```
+
+### Suitable Scenario
+
+Linear search is suitable when:
+
+```text
+data is small
+data is unsorted
+search is not done often
+simplicity is more important than speed
+```
+
+---
+
+## 10. Binary Search
+
+Binary search works on sorted data.
+
+### Simple Definition
+
+```text
+Binary search repeatedly compares the target with the middle item of a sorted list and discards half of the remaining search space.
+```
+
+### Requirements
+
+```text
+data must be sorted
+random/index access is usually needed
+```
+
+### Pseudocode
+
+```text
+low ← 0
+high ← length(items) - 1
+found ← false
+
+WHILE low <= high AND found = false
+    mid ← (low + high) DIV 2
+
+    IF items[mid] = target THEN
+        found ← true
+    ELSE IF target < items[mid] THEN
+        high ← mid - 1
+    ELSE
+        low ← mid + 1
+    ENDIF
+ENDWHILE
+
+OUTPUT found
+```
+
+### Mark Scheme Phrase
+
+```text
+Binary search is more efficient for large sorted lists because it halves the search space after each comparison.
+```
+
+---
+
+## 11. Trace Binary Search: Found
+
+### Data
+
+```text
+items = [3, 7, 10, 15, 21, 28, 36]
+target = 21
+```
+
+### Trace
+
+| Step | low | high | mid | items[mid] | Action |
+|---:|---:|---:|---:|---:|---|
+| 1 | 0 | 6 | 3 | 15 | target > 15, set low = 4 |
+| 2 | 4 | 6 | 5 | 28 | target < 28, set high = 4 |
+| 3 | 4 | 4 | 4 | 21 | found |
+
+### Result
+
+```text
+found = true
+```
+
+---
+
+## 12. Trace Binary Search: Not Found
+
+### Data
+
+```text
+items = [3, 7, 10, 15, 21, 28, 36]
+target = 8
+```
+
+### Trace
+
+| Step | low | high | mid | items[mid] | Action |
+|---:|---:|---:|---:|---:|---|
+| 1 | 0 | 6 | 3 | 15 | target < 15, high = 2 |
+| 2 | 0 | 2 | 1 | 7 | target > 7, low = 2 |
+| 3 | 2 | 2 | 2 | 10 | target < 10, high = 1 |
+| End | 2 | 1 |  |  | low > high, stop |
+
+### Result
+
+```text
+found = false
+```
+
+---
+
+## 13. Why Binary Search Needs Sorted Data
+
+Binary search decides which half of the list to discard by comparing the target with the middle value.
+
+If the data is not sorted, this decision is invalid.
+
+### Example
+
+```text
+[10, 3, 21, 7, 15]
+```
+
+If middle is `21` and target is `15`, binary search might discard the wrong half because the order is not meaningful.
+
+### Exam Phrase
+
+```text
+Binary search requires sorted data because it uses the ordering to decide whether the target must be in the lower or upper half.
+```
+
+---
+
+## 14. Linear Search vs Binary Search
+
+| Feature | Linear Search | Binary Search |
+|---|---|---|
+| Data requirement | can be unsorted | must be sorted |
+| Method | check one by one | check middle and halve range |
+| Simple to write | yes | more complex |
+| Good for small data | yes | also works, but sorting may not be worth it |
+| Good for large sorted data | less efficient | more efficient |
+| Works on linked list easily | yes | not usually ideal |
+| Best case | first item found | middle item found |
+| Worst case | checks all items | repeatedly halves until range empty |
+
+### Mark Scheme Phrase
+
+```text
+Linear search is simpler and works on unsorted data, while binary search is faster for large sorted lists but requires sorted data.
+```
+
+---
+
+## 15. Why Sorting Matters
+
+Sorting arranges data into order.
+
+### Examples
+
+```text
+student names alphabetically
+scores highest to lowest
+products cheapest to most expensive
+dates earliest to latest
+search results by relevance
+leaderboard scores
+```
+
+### Benefits
+
+```text
+easier for users to read
+supports binary search
+helps find minimum/maximum quickly
+groups related data
+supports reports and rankings
+```
+
+### Mark Scheme Phrase
+
+```text
+Sorting arranges data into a defined order, making it easier to search, compare, or present.
+```
+
+---
+
+## 16. Bubble Sort
+
+Bubble sort repeatedly compares adjacent items and swaps them if they are in the wrong order.
+
+### Simple Definition
+
+```text
+Bubble sort compares adjacent values and swaps them if they are out of order, repeating passes until the list is sorted.
+```
+
+### Pseudocode
+
+```text
+FOR pass ← 0 TO length(items) - 2
+    FOR index ← 0 TO length(items) - 2 - pass
+        IF items[index] > items[index + 1] THEN
+            temp ← items[index]
+            items[index] ← items[index + 1]
+            items[index + 1] ← temp
+        ENDIF
+    ENDFOR
+ENDFOR
+```
+
+### Key Idea
+
+After each pass, the largest remaining item moves to its correct position at the end.
+
+---
+
+## 17. Trace Bubble Sort: First Pass
+
+### Data
+
+```text
+[5, 2, 4, 1]
+```
+
+Sort ascending.
+
+| Comparison | Action | List |
+|---|---|---|
+| 5 and 2 | swap | [2, 5, 4, 1] |
+| 5 and 4 | swap | [2, 4, 5, 1] |
+| 5 and 1 | swap | [2, 4, 1, 5] |
+
+After first pass:
+
+```text
+[2, 4, 1, 5]
+```
+
+The largest item `5` is at the end.
+
+---
+
+## 18. Trace Bubble Sort: Full Sort
+
+### Start
+
+```text
+[5, 2, 4, 1]
+```
+
+### Pass 1
+
+```text
+[2, 4, 1, 5]
+```
+
+### Pass 2
+
+Compare within first three items:
+
+```text
+[2, 4, 1, 5]
+[2, 1, 4, 5]
+```
+
+### Pass 3
+
+Compare within first two items:
+
+```text
+[1, 2, 4, 5]
+```
+
+### Final
+
+```text
+[1, 2, 4, 5]
+```
+
+---
+
+## 19. Optimized Bubble Sort
+
+Bubble sort can stop early if no swaps occur in a pass.
+
+### Pseudocode
+
+```text
+swapped ← true
+
+WHILE swapped = true
+    swapped ← false
+
+    FOR index ← 0 TO length(items) - 2
+        IF items[index] > items[index + 1] THEN
+            temp ← items[index]
+            items[index] ← items[index + 1]
+            items[index + 1] ← temp
+            swapped ← true
+        ENDIF
+    ENDFOR
+ENDWHILE
+```
+
+### Why Useful?
+
+If no swaps happen, the list is already sorted.
+
+---
+
+## 20. Selection Sort
+
+Selection sort repeatedly selects the smallest remaining item and places it in the next correct position.
+
+### Simple Definition
+
+```text
+Selection sort finds the smallest unsorted item and swaps it into the next position.
+```
+
+### Pseudocode
+
+```text
+FOR start ← 0 TO length(items) - 2
+    minIndex ← start
+
+    FOR index ← start + 1 TO length(items) - 1
+        IF items[index] < items[minIndex] THEN
+            minIndex ← index
+        ENDIF
+    ENDFOR
+
+    temp ← items[start]
+    items[start] ← items[minIndex]
+    items[minIndex] ← temp
+ENDFOR
+```
+
+### Key Idea
+
+The sorted section grows from the left.
+
+---
+
+## 21. Trace Selection Sort
+
+### Data
+
+```text
+[5, 2, 4, 1]
+```
+
+### Pass 1
+
+Smallest from indexes 0-3 is `1`.
+
+Swap with index 0:
+
+```text
+[1, 2, 4, 5]
+```
+
+### Pass 2
+
+Smallest from indexes 1-3 is `2`.
+
+Already in position:
+
+```text
+[1, 2, 4, 5]
+```
+
+### Pass 3
+
+Smallest from indexes 2-3 is `4`.
+
+Already in position:
+
+```text
+[1, 2, 4, 5]
+```
+
+### Final
+
+```text
+[1, 2, 4, 5]
+```
+
+---
+
+## 22. Insertion Sort
+
+Insertion sort builds a sorted section one item at a time.
+
+### Simple Definition
+
+```text
+Insertion sort takes each item and inserts it into the correct position within the already sorted part of the list.
+```
+
+### Pseudocode
+
+```text
+FOR index ← 1 TO length(items) - 1
+    current ← items[index]
+    position ← index - 1
+
+    WHILE position >= 0 AND items[position] > current
+        items[position + 1] ← items[position]
+        position ← position - 1
+    ENDWHILE
+
+    items[position + 1] ← current
+ENDFOR
+```
+
+### Key Idea
+
+The left part of the list is kept sorted.
+
+---
+
+## 23. Trace Insertion Sort
+
+### Data
+
+```text
+[5, 2, 4, 1]
+```
+
+### Insert 2
+
+```text
+[2, 5, 4, 1]
+```
+
+### Insert 4
+
+Move 5 right, insert 4:
+
+```text
+[2, 4, 5, 1]
+```
+
+### Insert 1
+
+Move 5, 4, 2 right, insert 1:
+
+```text
+[1, 2, 4, 5]
+```
+
+### Final
+
+```text
+[1, 2, 4, 5]
+```
+
+---
+
+## 24. Sorting Algorithm Comparison
+
+| Feature | Bubble Sort | Selection Sort | Insertion Sort |
+|---|---|---|---|
+| Main idea | swap adjacent items | select smallest remaining | insert into sorted part |
+| Simple to trace | yes | yes | medium |
+| Good for nearly sorted data | optimized version can be good | not especially | often good |
+| Number of swaps | can be many | usually fewer | shifts elements |
+| Common exam focus | adjacent comparisons and swaps | min index and swap | shifting and insertion |
+
+### Exam Phrase
+
+```text
+Bubble sort repeatedly swaps adjacent out-of-order values, selection sort repeatedly selects the smallest remaining value, and insertion sort inserts each value into its correct position in a sorted section.
+```
+
+---
+
+## 25. Choosing a Search or Sort
+
+| Scenario | Suitable Choice | Reason |
+|---|---|---|
+| unsorted small list | linear search | simple and no sorting needed |
+| large sorted list | binary search | halves search space |
+| list changes often and is unsorted | linear search | sorting repeatedly may not be worth it |
+| user wants names alphabetically | sorting | improves readability |
+| leaderboard high to low | sorting descending | ranks players |
+| nearly sorted list | insertion sort | often efficient on nearly sorted data |
+| simple classroom trace | bubble sort | easy to see swaps |
+| few swaps desired | selection sort | swaps once per pass |
+
+---
+
+## 26. Common Search Errors
+
+| Error | Why It Happens | Fix |
+|---|---|---|
+| binary search on unsorted data | halves may not contain target | sort data first or use linear search |
+| loop never updates index | infinite loop | increment/decrement properly |
+| binary search mid not recalculated | wrong range checked | recalculate mid each loop |
+| using `<` instead of `<=` | may miss last remaining item | use `low <= high` |
+| not stopping after found | extra work or wrong updates | use found flag / return |
+| high/low update reversed | discards wrong half | compare target with middle carefully |
+| not handling empty list | index errors | check length first |
+| string comparison mistake in Java | `==` checks reference | use `.equals()` |
+| starting index wrong | misses first element | start at 0 for zero-based lists |
+| final not-found not output | incomplete answer | output false/not found after loop |
+
+---
+
+## 27. Common Sorting Errors
+
+| Error | Why It Happens | Fix |
+|---|---|---|
+| comparing wrong pair | index confusion | compare adjacent items for bubble sort |
+| loop goes one step too far | index + 1 out of range | stop at length - 2 |
+| swap missing temporary variable | one value overwritten | use temp |
+| selection sort minIndex not reset | wrong minimum chosen | set minIndex = start each pass |
+| insertion sort loses current value | overwritten during shifting | store current first |
+| sorting ascending vs descending confused | comparison sign wrong | use `>` for ascending bubble swap |
+| output after each comparison when not asked | noisy output | output final list unless trace asked |
+| sorting strings as numbers | wrong comparison | compare according to data type |
+| assumes one pass fully sorts | usually false | repeat passes |
+| ignores already sorted optimization | less efficient | use swapped flag if required |
+
+---
+
+## 28. Worked Example: Binary Search Pseudocode Explanation
+
+### Question
+
+Explain this section:
+
+```text
+IF target < items[mid] THEN
+    high ← mid - 1
+ELSE
+    low ← mid + 1
+ENDIF
+```
+
+### Answer
+
+If the target is smaller than the middle value, it cannot be in the upper half of a sorted ascending list, so the high boundary moves to the item before the middle. If the target is larger, the low boundary moves to the item after the middle. This halves the remaining search space.
+
+---
+
+## 29. Worked Example: Swap
+
+### Problem
+
+Swap `items[index]` and `items[index + 1]`.
+
+### Correct Swap
+
+```text
+temp ← items[index]
+items[index] ← items[index + 1]
+items[index + 1] ← temp
+```
+
+### Why Temp Is Needed
+
+Without `temp`, one of the values may be overwritten before it is copied.
+
+---
+
+## 30. Scenario Answer Bank
+
+### If Asked: “Define linear search”
+
+```text
+Linear search checks each item in sequence until the target is found or the end of the list is reached.
+```
+
+### If Asked: “Define binary search”
+
+```text
+Binary search repeatedly compares the target with the middle item of a sorted list and halves the search space.
+```
+
+### If Asked: “Why must binary search use sorted data?”
+
+```text
+Binary search uses the order of the data to decide which half to discard, so it only works correctly if the data is sorted.
+```
+
+### If Asked: “Compare linear and binary search”
+
+```text
+Linear search works on unsorted data but may check every item. Binary search is more efficient for large sorted lists because it halves the search space each step.
+```
+
+### If Asked: “Describe bubble sort”
+
+```text
+Bubble sort repeatedly compares adjacent items and swaps them if they are in the wrong order until the list is sorted.
+```
+
+### If Asked: “Why sort data?”
+
+```text
+Sorting arranges data into a defined order, making it easier to read, compare, search, or rank.
+```
+
+---
+
+## 31. Exam-style Questions
+
+### Question 1 [2 marks]
+
+Define linear search.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Linear search checks each item in sequence until the target is found or the end of the list is reached.
+
+</details>
+
+---
+
+### Question 2 [3 marks]
+
+Explain why binary search requires sorted data.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Binary search compares the target with the middle item and uses the sorted order to decide whether to search the lower or upper half. If the data is not sorted, the algorithm may discard the half that actually contains the target.
+
+</details>
+
+---
+
+### Question 3 [4 marks]
+
+Compare linear search and binary search.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Linear search checks each item one by one and can be used on unsorted data. Binary search repeatedly checks the middle item and halves the search space, but it requires sorted data. Binary search is usually more efficient for large sorted lists, while linear search is simpler and works without sorting.
+
+</details>
+
+---
+
+### Question 4 [5 marks]
+
+Trace binary search for target `15`.
+
+```text
+items = [2, 5, 9, 15, 21, 30, 42]
+```
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Initial values:
+
+```text
+low = 0
+high = 6
+mid = 3
+items[3] = 15
+```
+
+Since `items[mid] = target`, the target is found on the first comparison.
+
+</details>
+
+---
+
+### Question 5 [5 marks]
+
+Show the first pass of bubble sort on:
+
+```text
+[6, 2, 5, 1]
+```
+
+Sort ascending.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Compare 6 and 2, swap:
+
+```text
+[2, 6, 5, 1]
+```
+
+Compare 6 and 5, swap:
+
+```text
+[2, 5, 6, 1]
+```
+
+Compare 6 and 1, swap:
+
+```text
+[2, 5, 1, 6]
+```
+
+After the first pass:
+
+```text
+[2, 5, 1, 6]
+```
+
+</details>
+
+---
+
+### Question 6 [6 marks]
+
+Write pseudocode for linear search in an array `items` for `target`.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+```text
+found ← false
+index ← 0
+
+WHILE index < length(items) AND found = false
+    IF items[index] = target THEN
+        found ← true
+    ELSE
+        index ← index + 1
+    ENDIF
+ENDWHILE
+
+IF found = true THEN
+    OUTPUT "Found"
+ELSE
+    OUTPUT "Not found"
+ENDIF
+```
+
+</details>
+
+---
+
+### Question 7 [6 marks]
+
+Describe how insertion sort works.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Insertion sort builds a sorted section at the start of the list. It takes the next unsorted item, compares it with items in the sorted section, shifts larger items to the right, and inserts the current item into its correct position. This repeats until all items have been inserted into the sorted section.
+
+</details>
+
+---
+
+## 32. Guided Practice
+
+### Practice 1
+
+Can linear search work on unsorted data?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Yes. Linear search checks each item one by one, so sorting is not required.
+
+</details>
+
+---
+
+### Practice 2
+
+Can binary search work correctly on unsorted data?
+
+<details>
+<summary>Suggested Answer</summary>
+
+No. Binary search requires sorted data because it discards half the search space based on order.
+
+</details>
+
+---
+
+### Practice 3
+
+What is the first middle index for a list of length 7 using indexes 0 to 6?
+
+<details>
+<summary>Suggested Answer</summary>
+
+```text
+(0 + 6) DIV 2 = 3
+```
+
+</details>
+
+---
+
+### Practice 4
+
+What does bubble sort compare?
+
+<details>
+<summary>Suggested Answer</summary>
+
+Adjacent items.
+
+</details>
+
+---
+
+### Practice 5
+
+What does selection sort select each pass?
+
+<details>
+<summary>Suggested Answer</summary>
+
+The smallest or largest remaining item, depending on sort order.
+
+</details>
+
+---
+
+## 33. Independent Practice
+
+### Question 1
+
+Define linear search.
+
+### Question 2
+
+Define binary search.
+
+### Question 3
+
+Explain why binary search is usually faster for large sorted lists.
+
+### Question 4
+
+Trace linear search for target `8` in:
+
+```text
+[3, 8, 2, 9]
+```
+
+### Question 5
+
+Trace binary search for target `30` in:
+
+```text
+[4, 9, 12, 18, 30, 45, 60]
+```
+
+### Question 6
+
+Show the first pass of bubble sort on:
+
+```text
+[9, 4, 7, 2]
+```
+
+### Question 7
+
+Show selection sort passes for:
+
+```text
+[3, 1, 4, 2]
+```
+
+### Question 8
+
+Explain insertion sort using your own example.
+
+### Question 9
+
+Choose linear or binary search for an unsorted small list and justify your choice.
+
+### Question 10
+
+Explain one common boundary error in binary search.
+
+---
+
+## 34. Practice Activity
+
+### Activity 1: Human Linear Search
+
+Students hold number cards in random order.  
+One student is the target.  
+The class checks cards one by one until found.
+
+Discussion:
+
+```text
+How many checks were needed?
+What if target was last?
+What if target was missing?
+```
+
+---
+
+### Activity 2: Human Binary Search
+
+Students stand in sorted order holding number cards.
+
+The class:
+
+```text
+checks middle student
+chooses lower or upper half
+repeats until found
+```
+
+Discussion:
+
+```text
+Why must students be sorted?
+How many checks were needed?
+```
+
+---
+
+### Activity 3: Bubble Sort Line
+
+Students stand in a line with number cards.
+
+They compare adjacent pairs and swap positions if out of order.  
+After each pass, students identify which value is in its final place.
+
+---
+
+## 35. Homework
+
+### Homework Part A
+
+Explain linear search and binary search in 8-10 sentences, including one scenario for each.
+
+### Homework Part B
+
+Trace:
+
+```text
+1. linear search where target is found
+2. linear search where target is not found
+3. binary search where target is found
+4. binary search where target is not found
+```
+
+### Homework Part C
+
+Sort these using bubble sort and show each pass:
+
+```text
+[8, 3, 6, 1]
+```
+
+### Homework Part D
+
+Explain:
+
+```text
+1. why binary search needs sorted data
+2. why sorting can help searching
+3. one advantage and one limitation of bubble sort
+4. one common error in binary search
+5. why a temporary variable is used for swapping
+```
+
+### Homework Part E
+
+Correct these misconceptions:
+
+```text
+Binary search works on any list.
+Linear search always checks every item.
+One pass of bubble sort always fully sorts the list.
+Selection sort swaps adjacent items only.
+Insertion sort never shifts elements.
+Sorting is only useful for numbers.
+```
+
+---
+
+## 36. One-page Revision Summary
+
+| Point | Summary |
+|---|---|
+| Searching | finding a target value |
+| Linear search | checks items one by one |
+| Linear search data | sorted or unsorted |
+| Binary search | checks middle and halves search range |
+| Binary search data | must be sorted |
+| low/high | search boundaries |
+| mid | middle index |
+| Sorting | arranging data into order |
+| Ascending | smallest to largest / A to Z |
+| Descending | largest to smallest / Z to A |
+| Bubble sort | compare adjacent and swap |
+| Selection sort | select smallest/largest remaining |
+| Insertion sort | insert item into sorted section |
+| Swap | use temporary variable |
+| Early stop | stop when found or no swaps |
+| Common error | wrong loop boundary or unsorted binary search |
+| Exam phrase | binary search is more efficient for large sorted lists because it halves the search space each step |
+
+::: tip Next Step
+After this page, the next page should be **Inheritance and Polymorphism**, using the real file name `inheritance-polymorphism.md`.
+:::
+

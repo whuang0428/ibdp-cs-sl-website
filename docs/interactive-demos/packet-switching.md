@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import PacketSwitchingDemo from '../.vitepress/components/demos/PacketSwitchingDemo.vue'
 </script>
 
@@ -90,3 +90,4 @@ Explain one advantage of packet switching.
 Packet switching allows packets to travel through different routes, so network traffic can be shared more efficiently and packets can still be routed around busy or failed parts of the network.
 
 </details>
+

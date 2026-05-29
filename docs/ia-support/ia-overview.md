@@ -1,4 +1,4 @@
-# IA Overview
+﻿# IA Overview
 
 ## 1. Lesson Goals
 
@@ -933,7 +933,7 @@ Create a mini IA workflow for a homework tracking system.
 
 ---
 
-## 26. Classroom Activity
+## 26. Practice Activity
 
 ### Activity 1: IA Idea Clinic
 
@@ -985,35 +985,6 @@ requirement → success criterion → design → development → test → evalua
 
 ---
 
-## 27. Teacher Notes
-
-### Teaching Emphasis
-
-Students usually need the most support with:
-
-```text
-narrowing project scope
-finding a real client/user
-writing measurable success criteria
-linking testing to criteria
-writing evaluation with evidence
-```
-
-A project should not be judged only by how impressive the idea sounds. A smaller project with clear requirements, reliable development, and strong testing can be very successful.
-
-### Suggested Teacher Questions
-
-```text
-Who exactly will use this?
-What does the user currently do?
-What is inconvenient or inefficient now?
-Which feature proves this is a computer science solution?
-How will you test this success criterion?
-What evidence will you collect?
-```
-
----
-
 ## 28. One-page IA Overview Sheet
 
 | Area | Key Reminder |
@@ -1033,6 +1004,3 @@ What evidence will you collect?
 | Academic integrity | own work, cite resources, understand code |
 | Best habit | keep problem, criteria, testing, and evaluation connected |
 
-::: tip Next Step
-After this page, the next page should be **Problem Analysis**, using the real file name `problem-analysis.md`.
-:::

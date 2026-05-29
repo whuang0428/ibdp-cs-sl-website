@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import NormalizationDemo from '../.vitepress/components/demos/NormalizationDemo.vue'
 </script>
 
@@ -91,3 +91,4 @@ Explain how normalization reduces redundancy.
 Normalization moves repeated data into separate related tables. Each fact is stored once where possible, and other tables refer to it using keys instead of repeating the same data many times.
 
 </details>
+

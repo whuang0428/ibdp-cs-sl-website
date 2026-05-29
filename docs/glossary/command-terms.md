@@ -1,4 +1,4 @@
-# Command Terms
+﻿# Command Terms
 
 ## 1. Lesson Goals
 
@@ -1272,7 +1272,7 @@ Machine learning is smart.
 
 ---
 
-## 34. Classroom Activity
+## 34. Practice Activity
 
 ### Activity 1: Command Term Sorting
 
@@ -1375,33 +1375,6 @@ Answer:
 
 ---
 
-## 36. Teacher Notes
-
-### Teaching Emphasis
-
-Students should practise command terms with the same content. This makes it clear that command terms change answer depth.
-
-A good classroom routine is:
-
-```text
-state → describe → explain → evaluate
-```
-
-using the same concept.
-
-### Suggested Teacher Questions
-
-```text
-What command term is used?
-How many marks are available?
-Does this answer explain why?
-Does this answer make a judgement?
-Does this answer compare both sides?
-What scenario words should be included?
-```
-
----
-
 ## 37. One-page Command Terms Sheet
 
 | Command Term | Quick Meaning |
@@ -1427,6 +1400,3 @@ What scenario words should be included?
 | Best habit | command term + marks + scenario = answer depth |
 | Best phrase | Command terms show how much detail and what style of answer is required. |
 
-::: tip Next Step
-After this page, the next page should be **Core Vocabulary CN-EN**, using the real file name `core-vocabulary-cn-en.md`.
-:::

@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import ConfusionMatrixVisualizer from '../.vitepress/components/demos/ConfusionMatrixVisualizer.vue'
 </script>
 
@@ -89,3 +89,4 @@ Precision = 0.8 = 80%
 ```
 
 </details>
+

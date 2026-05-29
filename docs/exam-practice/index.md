@@ -1,4 +1,4 @@
-# Exam Practice
+﻿# Exam Practice
 
 ## 1. Section Overview
 
@@ -655,41 +655,6 @@ Rewrite weak answers using mark scheme language.
 
 ---
 
-## 18. Teacher Marking Routine
-
-When marking student answers, check:
-
-```text
-1. Is the answer factually correct?
-2. Does it match the command term?
-3. Is there enough detail for the marks?
-4. Is there scenario context?
-5. Are points separate or repeated?
-6. Is technical vocabulary used correctly?
-7. Does the answer contain contradictions?
-8. Is the conclusion supported if the question asks discuss/evaluate?
-```
-
-### Feedback Format
-
-Use:
-
-```text
-WWW = what went well
-EBI = even better if
-MS phrase = mark scheme phrase to add
-```
-
-Example:
-
-```text
-WWW: You identified encryption as a security method.
-EBI: Explain that encryption makes intercepted data unreadable without the key.
-MS phrase: "protects data during transmission".
-```
-
----
-
 ## 19. Common Exam Practice Mistakes
 
 | Mistake | Example | Fix |
@@ -881,6 +846,3 @@ Students should be able to:
 | Self-mark | check missing keywords and expansions |
 | Rewrite | improve weak answers using mark scheme wording |
 
-::: tip Next Step
-After this overview page, the next Exam Practice page should be **Paper 1 Overview**, using the real file name `paper-1-overview.md`.
-:::

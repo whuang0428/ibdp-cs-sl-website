@@ -1,4 +1,4 @@
-# Command Terms
+﻿# Command Terms
 
 ## 1. Page Purpose
 
@@ -1626,6 +1626,3 @@ Before moving on, students should be able to answer these:
 | Calculate | work out | numerical answer |
 | Sketch/Draw | diagram | labelled drawing |
 
-::: tip Next Step
-After this page, the next Exam Practice page should be **Mark Scheme Skills**, using the real file name `mark-scheme-skills.md`.
-:::

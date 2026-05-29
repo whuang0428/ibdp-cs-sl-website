@@ -1,4 +1,4 @@
-# B3 Object-Oriented Programming
+﻿# B3 Object-Oriented Programming
 
 ## 1. Module Overview
 
@@ -407,46 +407,6 @@ Student
 
 ---
 
-## 12. Suggested Teaching Pacing
-
-Actual speed depends on student background and confidence.
-
-| Topic | Suggested Lessons | Notes |
-|---|---:|---|
-| Classes and Objects | 2-3 | Spend time on blueprint vs instance |
-| Attributes and Methods | 2-3 | Focus on state and behaviour |
-| Constructors | 2-3 | Include object creation trace |
-| Encapsulation | 2 | Strong written explanation topic |
-| Accessors and Mutators | 2-3 | Practise getter/setter code |
-| UML Class Diagrams | 2-3 | Practise both directions |
-| HL Multiple Classes | 3-5 | Use as enrichment/practical extension |
-
----
-
-## 13. Recommended Classroom Routine
-
-For each B3 lesson, use this pattern:
-
-```text
-1. Start with a real-world object example
-2. Identify possible attributes and methods
-3. Show the Java class
-4. Show the object creation code
-5. Trace object state
-6. Discuss encapsulation or design decision
-7. Convert the design to UML
-8. Practise one short code-writing task
-9. Practise one exam-style explanation
-```
-
-This keeps the lesson connected across:
-
-```text
-concept → code → trace → design → exam answer
-```
-
----
-
 ## 14. Student Revision Routine
 
 Students should revise B3 using this method:
@@ -760,3 +720,4 @@ Before moving to A3 Databases, students should be able to:
 ::: tip Next Module
 After B3, the teaching sequence moves to **A3 Databases**. Students will shift from program objects to structured data storage and querying.
 :::
+

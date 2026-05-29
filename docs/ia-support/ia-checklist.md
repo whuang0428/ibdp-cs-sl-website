@@ -804,7 +804,7 @@ Explain why a smaller finished product may be stronger than a large unfinished o
 
 ---
 
-## 24. Classroom Activity
+## 24. Practice Activity
 
 ### Activity 1: IA Audit Pair Review
 
@@ -854,34 +854,6 @@ Then they check whether all filenames and references match.
 
 ---
 
-## 25. Teacher Notes
-
-### Teaching Emphasis
-
-Students often think the IA is finished when the program works. This checklist reminds them that evidence, testing, and evaluation are equally important.
-
-The most useful teacher intervention is often to ask:
-
-```text
-Where is this success criterion designed?
-Where is it developed?
-Where is it tested?
-Where is it evaluated?
-```
-
-### Suggested Teacher Questions
-
-```text
-Which success criterion is weakest?
-Which test proves this feature?
-Which screenshot is unnecessary?
-Which limitation is most honest and specific?
-Which improvement directly responds to feedback?
-Does the final version match the tested version?
-```
-
----
-
 ## 26. One-page Final IA Checklist
 
 | Area | Final Check |
@@ -904,5 +876,4 @@ Does the final version match the tested version?
 | Final product | runs and matches documentation |
 | Backup | saved before submission |
 | Best phrase | The final IA should prove a clear chain from the original problem to the final evaluation. |
-
 

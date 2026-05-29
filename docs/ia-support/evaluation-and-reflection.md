@@ -1,4 +1,4 @@
-# Evaluation and Reflection
+﻿# Evaluation and Reflection
 
 ## 1. Lesson Goals
 
@@ -933,7 +933,7 @@ Explain the difference between testing and evaluation.
 
 ---
 
-## 31. Classroom Activity
+## 31. Practice Activity
 
 ### Activity 1: Evidence or Opinion?
 
@@ -1039,28 +1039,6 @@ The testing proves the app is perfect.
 
 ---
 
-## 33. Teacher Notes
-
-### Teaching Emphasis
-
-Students often confuse testing and evaluation. Testing is evidence. Evaluation is the judgement based on that evidence.
-
-Encourage students to avoid overclaiming. A balanced evaluation that honestly explains limitations is usually stronger than pretending the product is perfect.
-
-### Suggested Teacher Questions
-
-```text
-Which success criterion are you evaluating?
-Which test proves your claim?
-What did the client/user say?
-Is the criterion fully or partly achieved?
-What limitation remains?
-What improvement directly responds to that limitation?
-How does this connect to the original problem?
-```
-
----
-
 ## 34. One-page Evaluation and Reflection Sheet
 
 | Area | Key Reminder |
@@ -1080,6 +1058,3 @@ How does this connect to the original problem?
 | Common risk | vague claims such as “it works well” |
 | Best phrase | The product was evaluated against the success criteria using testing evidence and client/user feedback, with limitations and future improvements identified. |
 
-::: tip Next Step
-After this page, the next page should be **IA Checklist**, using the real file name `ia-checklist.md`.
-:::

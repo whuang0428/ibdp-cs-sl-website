@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import SQLSelectVisualizer from '../.vitepress/components/demos/SQLSelectVisualizer.vue'
 </script>
 
@@ -102,3 +102,4 @@ ORDER BY Score DESC;
 The query displays the `Name` and `Score` fields from the `Students` table. It only includes records where `YearGroup` is 12. The results are sorted by `Score` from highest to lowest.
 
 </details>
+

@@ -1,4 +1,4 @@
-# Software Engineering
+﻿# Software Engineering
 
 ## What This Section Covers
 
@@ -69,3 +69,4 @@ improve software after release
 ::: tip Student Reminder
 Software engineering is not just about making a program run. It is about building software that is correct, understandable, testable, and maintainable.
 :::
+

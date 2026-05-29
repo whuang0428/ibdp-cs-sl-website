@@ -1,0 +1,1556 @@
+﻿# Inheritance and Polymorphism
+
+## 1. Lesson Goals
+
+By the end of this lesson, students should be able to:
+
+- define inheritance
+- define superclass and subclass
+- explain how inheritance supports code reuse
+- identify an `is-a` relationship
+- distinguish inheritance and composition
+- explain method overriding
+- define polymorphism
+- explain how the same method call can behave differently for different object types
+- interpret simple class hierarchy diagrams
+- write simple Java-style examples using inheritance
+- explain advantages and limitations of inheritance
+- identify common OOP design mistakes
+- answer exam-style questions about inheritance and polymorphism using mark scheme vocabulary
+
+---
+
+## 2. Syllabus / Extension Mapping
+
+| Item | Detail |
+|---|---|
+| Section | HL Programming Extension |
+| Topic | Inheritance and Polymorphism |
+| Main skill | Designing related classes and reusable object-oriented structures |
+| Connected topics | Classes, objects, encapsulation, methods, UML, Java, robust programs |
+| Practical focus | Superclass, subclass, overriding, polymorphic method calls |
+| Exam relevance | Definitions, class hierarchy interpretation, scenario design, comparison questions |
+
+::: tip Learning Focus
+Inheritance models an **is-a** relationship.  
+Polymorphism allows the **same method call** to behave differently depending on the object type.
+:::
+
+---
+
+## 3. Key Terms
+
+| Term | 中文解释 | Exam-style meaning |
+|---|---|---|
+| Inheritance | 继承 | A subclass receives attributes and methods from a superclass |
+| Superclass | 父类 / 超类 | General class that provides shared attributes and methods |
+| Subclass | 子类 | More specific class that inherits from a superclass |
+| Parent class | 父类 | Another name for superclass |
+| Child class | 子类 | Another name for subclass |
+| `extends` | Java 继承关键词 | Java keyword used to make one class inherit from another |
+| `is-a` relationship | 是一种关系 | Relationship showing subclass is a type of superclass |
+| Composition | 组合 | `has-a` relationship where one object contains another |
+| Method overriding | 方法重写 | Subclass provides its own version of an inherited method |
+| Polymorphism | 多态 | Same method call can behave differently for different object types |
+| Dynamic dispatch | 动态分派 | Runtime decides which overridden method to call |
+| Abstract class | 抽象类 | Class that may define shared structure but is not directly instantiated |
+| Interface | 接口 | Defines methods that implementing classes must provide |
+| Reuse | 复用 | Using existing class code in subclasses |
+| Specialization | 特化 | Subclass adds or changes details of a general class |
+| Generalization | 泛化 | Finding shared features and placing them in a superclass |
+| UML inheritance arrow | UML 继承箭头 | Arrow from subclass to superclass |
+| Constructor chaining | 构造器链 | Subclass constructor calling superclass constructor |
+| `super` | Java 父类引用 | Refers to superclass constructor or method |
+| Overloading | 重载 | Same method name with different parameter lists |
+| Overriding vs overloading | 重写 vs 重载 | Overriding changes inherited method; overloading changes parameters |
+
+---
+
+## 4. Concept Explanation
+
+<LangBlock>
+<template #cn>
+
+### 中文讲解
+
+Inheritance（继承）用来表达一种 **is-a relationship**。
+
+比如：
+
+```text
+Dog is an Animal
+Cat is an Animal
+Car is a Vehicle
+Teacher is a Person
+```
+
+所以可以设计：
+
+```text
+Animal = superclass
+Dog = subclass
+Cat = subclass
+```
+
+Superclass 存放共同内容：
+
+```text
+name
+age
+eat()
+sleep()
+```
+
+Subclass 可以继承这些内容，然后添加自己的内容：
+
+```text
+Dog: bark()
+Cat: meow()
+```
+
+Polymorphism（多态）的核心是：
+
+```text
+same method call, different behaviour
+```
+
+例如：
+
+```text
+animal.makeSound()
+```
+
+如果 animal 实际上是 Dog object：
+
+```text
+bark
+```
+
+如果 animal 实际上是 Cat object：
+
+```text
+meow
+```
+
+所以：
+
+```text
+inheritance = class relationship and code reuse
+polymorphism = same method call, different subclass behaviour
+```
+
+不要把 inheritance 和 composition 混淆：
+
+```text
+Dog is an Animal → inheritance
+Car has an Engine → composition
+```
+
+</template>
+
+<template #en>
+
+### English Explanation
+
+Inheritance represents an **is-a relationship**.
+
+Examples:
+
+```text
+Dog is an Animal
+Cat is an Animal
+Car is a Vehicle
+Teacher is a Person
+```
+
+So we can design:
+
+```text
+Animal = superclass
+Dog = subclass
+Cat = subclass
+```
+
+The superclass stores shared features:
+
+```text
+name
+age
+eat()
+sleep()
+```
+
+Subclasses inherit these features and can add their own:
+
+```text
+Dog: bark()
+Cat: meow()
+```
+
+Polymorphism means:
+
+```text
+same method call, different behaviour
+```
+
+Example:
+
+```text
+animal.makeSound()
+```
+
+If `animal` is actually a Dog object:
+
+```text
+bark
+```
+
+If `animal` is actually a Cat object:
+
+```text
+meow
+```
+
+So:
+
+```text
+inheritance = class relationship and code reuse
+polymorphism = same method call, different subclass behaviour
+```
+
+Do not confuse inheritance and composition:
+
+```text
+Dog is an Animal → inheritance
+Car has an Engine → composition
+```
+
+</template>
+</LangBlock>
+
+---
+
+## 5. What Is Inheritance?
+
+Inheritance is an object-oriented programming feature where one class receives attributes and methods from another class.
+
+### Simple Definition
+
+```text
+Inheritance allows a subclass to reuse and extend the attributes and methods of a superclass.
+```
+
+### Example
+
+```text
+Superclass: Animal
+Subclasses: Dog, Cat
+```
+
+Shared attributes:
+
+```text
+name
+age
+```
+
+Shared methods:
+
+```text
+eat()
+sleep()
+```
+
+Subclass-specific methods:
+
+```text
+Dog: bark()
+Cat: meow()
+```
+
+### Mark Scheme Phrase
+
+```text
+Inheritance allows a subclass to inherit attributes and methods from a superclass, supporting code reuse and specialization.
+```
+
+---
+
+## 6. Superclass and Subclass
+
+### Superclass
+
+A superclass is the general class.
+
+```text
+Animal
+Vehicle
+Person
+Account
+Shape
+```
+
+### Subclass
+
+A subclass is a more specific class.
+
+```text
+Dog extends Animal
+Car extends Vehicle
+Student extends Person
+SavingsAccount extends Account
+Circle extends Shape
+```
+
+### Relationship
+
+```text
+subclass is a type of superclass
+```
+
+Example:
+
+```text
+A Dog is an Animal.
+A Circle is a Shape.
+```
+
+---
+
+## 7. Is-a Relationship
+
+Inheritance should be used when there is an **is-a** relationship.
+
+### Good Examples
+
+```text
+Dog is an Animal
+Car is a Vehicle
+Student is a Person
+Circle is a Shape
+SavingsAccount is an Account
+```
+
+### Bad Examples
+
+```text
+Car is an Engine
+Student is a Course
+Library is a Book
+```
+
+These are not inheritance relationships.
+
+They are more likely composition:
+
+```text
+Car has an Engine
+Student takes a Course
+Library has Books
+```
+
+### Exam Phrase
+
+```text
+Inheritance is appropriate when the subclass is a more specific type of the superclass.
+```
+
+---
+
+## 8. Inheritance Diagram
+
+Simple class hierarchy:
+
+```text
+        Animal
+       /      \
+     Dog      Cat
+```
+
+Meaning:
+
+```text
+Dog extends Animal
+Cat extends Animal
+```
+
+A `Dog` object has:
+
+```text
+Animal features
+Dog-specific features
+```
+
+A `Cat` object has:
+
+```text
+Animal features
+Cat-specific features
+```
+
+---
+
+## 9. Java-style Inheritance Example
+
+### Superclass
+
+```java
+public class Animal {
+    protected String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void eat() {
+        System.out.println(name + " is eating");
+    }
+
+    public void makeSound() {
+        System.out.println("Some sound");
+    }
+}
+```
+
+### Subclass
+
+```java
+public class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+
+    public void bark() {
+        System.out.println(name + " barks");
+    }
+}
+```
+
+### Key Points
+
+```text
+Dog extends Animal
+Dog inherits name, eat(), and makeSound()
+Dog adds bark()
+super(name) calls the Animal constructor
+```
+
+---
+
+## 10. Code Reuse
+
+Inheritance avoids repeated code.
+
+### Without Inheritance
+
+```text
+Dog class has name, age, eat(), sleep()
+Cat class has name, age, eat(), sleep()
+Horse class has name, age, eat(), sleep()
+```
+
+Same code repeated in many classes.
+
+### With Inheritance
+
+```text
+Animal class has name, age, eat(), sleep()
+Dog, Cat, Horse inherit from Animal
+```
+
+### Benefit
+
+```text
+shared code is written once
+changes can be made in one place
+subclasses can focus on their specific behaviour
+```
+
+---
+
+## 11. Specialization
+
+A subclass can specialize the superclass by:
+
+```text
+adding new attributes
+adding new methods
+overriding inherited methods
+```
+
+### Example
+
+Superclass:
+
+```text
+Vehicle
+```
+
+Subclasses:
+
+```text
+Car
+Bike
+Bus
+```
+
+Shared:
+
+```text
+speed
+move()
+stop()
+```
+
+Specific:
+
+```text
+Car: numberOfDoors
+Bike: hasBell
+Bus: passengerCapacity
+```
+
+---
+
+## 12. Method Overriding
+
+Method overriding occurs when a subclass provides its own version of a method inherited from the superclass.
+
+### Superclass
+
+```java
+public void makeSound() {
+    System.out.println("Some sound");
+}
+```
+
+### Dog Subclass
+
+```java
+@Override
+public void makeSound() {
+    System.out.println("Bark");
+}
+```
+
+### Cat Subclass
+
+```java
+@Override
+public void makeSound() {
+    System.out.println("Meow");
+}
+```
+
+### Mark Scheme Phrase
+
+```text
+Method overriding allows a subclass to replace an inherited method with its own implementation.
+```
+
+---
+
+## 13. Overriding vs Overloading
+
+These two terms are often confused.
+
+| Feature | Overriding | Overloading |
+|---|---|---|
+| Meaning | subclass redefines inherited method | same method name with different parameters |
+| Inheritance needed? | yes | not necessarily |
+| Parameter list | usually same | different |
+| Runtime behaviour | supports polymorphism | chosen by parameter match |
+| Example | `Dog.makeSound()` replaces `Animal.makeSound()` | `print(String)` and `print(int)` |
+
+### Exam Phrase
+
+```text
+Overriding changes an inherited method in a subclass, while overloading uses the same method name with different parameter lists.
+```
+
+---
+
+## 14. What Is Polymorphism?
+
+Polymorphism means the same method call can produce different behaviour depending on the actual object type.
+
+### Simple Definition
+
+```text
+Polymorphism allows objects of different subclasses to be treated as superclass objects while still using their own overridden methods.
+```
+
+### Example
+
+```java
+Animal a1 = new Dog("Rex");
+Animal a2 = new Cat("Mimi");
+
+a1.makeSound();  // Bark
+a2.makeSound();  // Meow
+```
+
+The method call is the same:
+
+```text
+makeSound()
+```
+
+But the behaviour depends on the object type.
+
+### Mark Scheme Phrase
+
+```text
+Polymorphism allows the same method call to execute different overridden methods depending on the actual object type at runtime.
+```
+
+---
+
+## 15. Dynamic Dispatch
+
+Dynamic dispatch means the program chooses the correct overridden method at runtime.
+
+### Example
+
+```java
+Animal animal = new Dog("Rex");
+animal.makeSound();
+```
+
+Even though the variable type is:
+
+```text
+Animal
+```
+
+the actual object is:
+
+```text
+Dog
+```
+
+So Java calls:
+
+```text
+Dog.makeSound()
+```
+
+### Key Idea
+
+The object type, not only the variable type, determines the overridden method used.
+
+---
+
+## 16. Polymorphism with Arrays / Lists
+
+Polymorphism is useful when storing different subclass objects in one collection.
+
+### Example
+
+```java
+ArrayList<Animal> animals = new ArrayList<Animal>();
+
+animals.add(new Dog("Rex"));
+animals.add(new Cat("Mimi"));
+animals.add(new Dog("Luna"));
+
+for (Animal animal : animals) {
+    animal.makeSound();
+}
+```
+
+Output:
+
+```text
+Bark
+Meow
+Bark
+```
+
+### Why Useful?
+
+The loop does not need to know whether each object is a dog or cat.  
+It simply calls the shared method.
+
+---
+
+## 17. UML Inheritance
+
+In UML, inheritance is usually shown with a line and hollow triangle pointing to the superclass.
+
+Text version:
+
+```text
+Dog ─────▷ Animal
+Cat ─────▷ Animal
+```
+
+Or:
+
+```text
+        Animal
+       /      \
+     Dog      Cat
+```
+
+### Class Diagram Example
+
+```text
+Animal
+-------------------
+name
+age
+-------------------
+eat()
+makeSound()
+
+Dog extends Animal
+-------------------
+breed
+-------------------
+makeSound()
+fetch()
+```
+
+### Interpretation
+
+```text
+Dog inherits name, age, eat()
+Dog overrides makeSound()
+Dog adds breed and fetch()
+```
+
+---
+
+## 18. Constructors and `super`
+
+A subclass constructor often calls the superclass constructor.
+
+### Example
+
+```java
+public class Animal {
+    protected String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+}
+```
+
+```java
+public class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+}
+```
+
+### Meaning
+
+```text
+super(name)
+```
+
+calls the constructor of `Animal`.
+
+### Exam Phrase
+
+```text
+The subclass constructor can call the superclass constructor using `super` to initialize inherited attributes.
+```
+
+---
+
+## 19. Access Modifiers and Inheritance
+
+Common Java access modifiers:
+
+| Modifier | Access |
+|---|---|
+| private | only inside same class |
+| protected | same class, subclasses, same package |
+| public | accessible from other classes |
+| default | package access if no modifier is written |
+
+### Inheritance Note
+
+Subclasses inherit private attributes, but they cannot directly access them by name.  
+They usually use superclass methods such as getters/setters.
+
+### Safer Design
+
+```text
+private attributes
+public/protected methods
+controlled access
+```
+
+---
+
+## 20. Inheritance and Encapsulation
+
+Inheritance should still respect encapsulation.
+
+### Poor Design
+
+```java
+public int balance;
+```
+
+This allows uncontrolled changes.
+
+### Better Design
+
+```java
+private int balance;
+
+public void deposit(int amount) {
+    if (amount > 0) {
+        balance = balance + amount;
+    }
+}
+```
+
+### Why?
+
+The superclass protects data and provides controlled methods for subclasses or other objects.
+
+---
+
+## 21. Abstract Classes
+
+An abstract class can define shared features but may not be directly instantiated.
+
+### Example
+
+```java
+public abstract class Shape {
+    public abstract double area();
+}
+```
+
+Subclasses:
+
+```java
+Circle extends Shape
+Rectangle extends Shape
+```
+
+Each subclass provides its own `area()` method.
+
+### Why Useful?
+
+```text
+shared type
+common structure
+force subclasses to implement required methods
+supports polymorphism
+```
+
+### Exam Note
+
+Only use this depth if your course includes abstract classes.
+
+---
+
+## 22. Interfaces
+
+An interface defines methods that implementing classes must provide.
+
+### Example
+
+```java
+public interface Drawable {
+    void draw();
+}
+```
+
+Classes:
+
+```java
+Circle implements Drawable
+Button implements Drawable
+```
+
+### Difference from Inheritance
+
+```text
+extends = class inherits from class
+implements = class promises to provide interface methods
+```
+
+### Exam Note
+
+Interfaces may be beyond basic SL/OOP, but useful for extension understanding.
+
+---
+
+## 23. Composition vs Inheritance
+
+Composition means a class contains another object.
+
+### Inheritance
+
+```text
+Dog is an Animal
+```
+
+### Composition
+
+```text
+Car has an Engine
+```
+
+### Example
+
+```java
+public class Car {
+    private Engine engine;
+}
+```
+
+### Comparison
+
+| Inheritance | Composition |
+|---|---|
+| is-a relationship | has-a relationship |
+| subclass extends superclass | class contains another object |
+| code reuse through parent class | code reuse through object fields |
+| can create tight coupling | often more flexible |
+
+### Exam Phrase
+
+```text
+Inheritance should model an is-a relationship, while composition should model a has-a relationship.
+```
+
+---
+
+## 24. Advantages of Inheritance
+
+| Advantage | Explanation |
+|---|---|
+| Code reuse | shared attributes/methods written once |
+| Easier maintenance | common changes made in superclass |
+| Clear hierarchy | models real-world relationships |
+| Specialization | subclasses add or override behaviour |
+| Polymorphism | same method call works across subclasses |
+| Less duplication | repeated class code reduced |
+
+### Strong Answer Pattern
+
+```text
+Inheritance improves code reuse because common attributes and methods can be placed in a superclass and inherited by subclasses.
+```
+
+---
+
+## 25. Limitations of Inheritance
+
+| Limitation | Explanation |
+|---|---|
+| Wrong hierarchy | inheritance can be misused when no is-a relationship exists |
+| Tight coupling | subclass depends on superclass design |
+| Fragile superclass | superclass changes can affect subclasses |
+| Over-complexity | deep hierarchies are hard to understand |
+| Less flexible than composition | not all relationships are is-a |
+| Overriding errors | subclass method may behave unexpectedly |
+
+### Exam Phrase
+
+```text
+Inheritance should be used carefully because inappropriate class hierarchies can make a program harder to maintain.
+```
+
+---
+
+## 26. Worked Example: School People
+
+### Scenario
+
+A school system stores teachers and students.
+
+Common data:
+
+```text
+name
+email
+dateOfBirth
+```
+
+Student-specific data:
+
+```text
+gradeLevel
+studentID
+```
+
+Teacher-specific data:
+
+```text
+subject
+staffID
+```
+
+### Possible Design
+
+```text
+Person
+├── Student
+└── Teacher
+```
+
+### Explanation
+
+`Student` is a `Person`.  
+`Teacher` is a `Person`.
+
+So inheritance is suitable.
+
+---
+
+## 27. Worked Example: Shape Polymorphism
+
+### Superclass
+
+```text
+Shape
+method: area()
+```
+
+Subclasses:
+
+```text
+Circle
+Rectangle
+Triangle
+```
+
+Each shape calculates area differently.
+
+### Polymorphic Code Idea
+
+```text
+FOR each shape IN shapes
+    OUTPUT shape.area()
+ENDFOR
+```
+
+The same call:
+
+```text
+area()
+```
+
+runs different code depending on the actual shape.
+
+### Exam Phrase
+
+```text
+Polymorphism allows a list of Shape objects to contain Circle and Rectangle objects, and calling area() uses the correct overridden method for each object.
+```
+
+---
+
+## 28. Worked Example: Game Characters
+
+### Scenario
+
+A game has different character types.
+
+Superclass:
+
+```text
+Character
+```
+
+Subclasses:
+
+```text
+Warrior
+Mage
+Archer
+```
+
+Shared:
+
+```text
+name
+health
+move()
+takeDamage()
+```
+
+Different:
+
+```text
+attack()
+```
+
+### Polymorphism
+
+```text
+character.attack()
+```
+
+could perform:
+
+```text
+Warrior: sword attack
+Mage: spell attack
+Archer: arrow attack
+```
+
+### Why Useful?
+
+The game loop can call `attack()` without writing separate code for every character type.
+
+---
+
+## 29. Common Design Mistakes
+
+| Mistake | Why It Is Wrong | Better Design |
+|---|---|---|
+| using inheritance for has-a | wrong relationship | use composition |
+| deep inheritance chain | hard to maintain | keep hierarchy simple |
+| duplicated subclass code | misses superclass reuse | move shared code to superclass |
+| overriding without same method signature | not true override | match method name/parameters |
+| confusing overloading and overriding | wrong concept | overriding uses inherited method |
+| making all attributes public | breaks encapsulation | use private/protected with methods |
+| subclass depends too much on superclass internals | tight coupling | use clear superclass methods |
+| no common method for polymorphism | cannot call shared method | define method in superclass/interface |
+| using superclass when subclass-specific method needed | method may not be available | check variable type or design |
+| assuming polymorphism means many classes only | incomplete | same method call, different behaviour |
+
+---
+
+## 30. Scenario Answer Bank
+
+### If Asked: “Define inheritance”
+
+```text
+Inheritance allows a subclass to inherit attributes and methods from a superclass.
+```
+
+### If Asked: “Define polymorphism”
+
+```text
+Polymorphism allows the same method call to execute different overridden methods depending on the actual object type.
+```
+
+### If Asked: “Why use inheritance?”
+
+```text
+Inheritance reduces code duplication because shared attributes and methods can be written once in a superclass and reused by subclasses.
+```
+
+### If Asked: “What is method overriding?”
+
+```text
+Method overriding occurs when a subclass provides its own implementation of a method inherited from the superclass.
+```
+
+### If Asked: “Inheritance vs composition”
+
+```text
+Inheritance models an is-a relationship, while composition models a has-a relationship.
+```
+
+### If Asked: “Why is polymorphism useful?”
+
+```text
+Polymorphism allows different subclass objects to be processed through the same superclass method call, making the program more flexible and easier to extend.
+```
+
+---
+
+## 31. Exam-style Questions
+
+### Question 1 [2 marks]
+
+Define inheritance.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Inheritance is an object-oriented feature where a subclass inherits attributes and methods from a superclass.
+
+</details>
+
+---
+
+### Question 2 [2 marks]
+
+Define polymorphism.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Polymorphism allows the same method call to behave differently depending on the actual object type, usually through overridden methods.
+
+</details>
+
+---
+
+### Question 3 [4 marks]
+
+Distinguish between superclass and subclass.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A superclass is a general class that contains shared attributes and methods. A subclass is a more specific class that inherits from the superclass and may add or override features. For example, `Animal` can be a superclass and `Dog` can be a subclass.
+
+</details>
+
+---
+
+### Question 4 [4 marks]
+
+Explain one advantage of inheritance.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Inheritance supports code reuse because shared attributes and methods can be written once in a superclass and inherited by multiple subclasses. This reduces repeated code and makes common changes easier to maintain.
+
+</details>
+
+---
+
+### Question 5 [4 marks]
+
+Explain method overriding using an example.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Method overriding occurs when a subclass provides its own version of an inherited method. For example, an `Animal` superclass may define `makeSound()`, while `Dog` overrides it to output `"Bark"` and `Cat` overrides it to output `"Meow"`.
+
+</details>
+
+---
+
+### Question 6 [5 marks]
+
+Explain how polymorphism could be used in a game with `Warrior`, `Mage`, and `Archer` classes.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+`Warrior`, `Mage`, and `Archer` could all inherit from a `Character` superclass with an `attack()` method. Each subclass overrides `attack()` with its own behaviour. The game can store them as `Character` objects and call `attack()` on each one, with the correct subclass version running at runtime.
+
+</details>
+
+---
+
+### Question 7 [5 marks]
+
+Distinguish between inheritance and composition.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Inheritance models an is-a relationship, where a subclass is a type of superclass, such as `Dog` is an `Animal`. Composition models a has-a relationship, where one class contains another object, such as `Car` has an `Engine`. Inheritance reuses code through a parent class, while composition reuses code through contained objects.
+
+</details>
+
+---
+
+### Question 8 [6 marks]
+
+A school system has `Person`, `Student`, and `Teacher` classes. Explain why inheritance is suitable.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Inheritance is suitable because both `Student` and `Teacher` are types of `Person`. Shared attributes such as name, email, and date of birth can be stored in the `Person` superclass. `Student` can add student-specific data such as student ID and grade level, while `Teacher` can add staff ID and subject. This reduces duplicated code and creates a clear class hierarchy.
+
+</details>
+
+---
+
+## 32. Guided Practice
+
+### Practice 1
+
+Which relationship fits inheritance?
+
+```text
+A. Car has an Engine
+B. Dog is an Animal
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+B. `Dog is an Animal` fits inheritance.
+
+</details>
+
+---
+
+### Practice 2
+
+What is the superclass?
+
+```text
+Vehicle
+├── Car
+└── Bike
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+`Vehicle`
+
+</details>
+
+---
+
+### Practice 3
+
+What is the subclass?
+
+```text
+Animal
+├── Dog
+└── Cat
+```
+
+<details>
+<summary>Suggested Answer</summary>
+
+`Dog` and `Cat`
+
+</details>
+
+---
+
+### Practice 4
+
+What is method overriding?
+
+<details>
+<summary>Suggested Answer</summary>
+
+A subclass provides its own version of a method inherited from the superclass.
+
+</details>
+
+---
+
+### Practice 5
+
+Why is polymorphism useful?
+
+<details>
+<summary>Suggested Answer</summary>
+
+It allows the same method call to work with different subclass objects, making code more flexible and easier to extend.
+
+</details>
+
+---
+
+## 33. Independent Practice
+
+### Question 1
+
+Define inheritance.
+
+### Question 2
+
+Define polymorphism.
+
+### Question 3
+
+Give three examples of is-a relationships.
+
+### Question 4
+
+Give three examples of has-a relationships.
+
+### Question 5
+
+Design a class hierarchy for a library system with different types of users.
+
+### Question 6
+
+Design a class hierarchy for a game with different enemy types.
+
+### Question 7
+
+Explain how method overriding supports polymorphism.
+
+### Question 8
+
+Compare inheritance and composition.
+
+### Question 9
+
+Explain one advantage and one limitation of inheritance.
+
+### Question 10
+
+Write a Java-style example with a superclass and one subclass.
+
+---
+
+## 34. Practice Activity
+
+### Activity 1: Is-a or Has-a?
+
+Students sort cards into:
+
+```text
+inheritance
+composition
+not enough information
+```
+
+Cards:
+
+```text
+Dog / Animal
+Car / Engine
+Student / Person
+Library / Book
+Circle / Shape
+Computer / Keyboard
+Teacher / Employee
+Order / Product
+```
+
+---
+
+### Activity 2: Class Hierarchy Design
+
+Students design class hierarchies for:
+
+```text
+school people
+vehicles
+game characters
+bank accounts
+shapes
+```
+
+They identify:
+
+```text
+superclass
+subclasses
+shared attributes
+shared methods
+overridden methods
+```
+
+---
+
+### Activity 3: Polymorphism Role-play
+
+Students act as objects:
+
+```text
+Dog
+Cat
+Bird
+```
+
+Teacher calls:
+
+```text
+makeSound()
+```
+
+Each student responds differently.
+
+Class explains why this is polymorphism.
+
+---
+
+## 35. Homework
+
+### Homework Part A
+
+Explain inheritance and polymorphism in 8-10 sentences using your own example.
+
+### Homework Part B
+
+Create a class hierarchy for one of these:
+
+```text
+game characters
+vehicles
+school users
+bank accounts
+media files
+```
+
+Include:
+
+```text
+superclass
+at least two subclasses
+three shared attributes
+two shared methods
+one overridden method
+```
+
+### Homework Part C
+
+Answer:
+
+```text
+1. Why does inheritance reduce code duplication?
+2. Why should inheritance model an is-a relationship?
+3. What is method overriding?
+4. How does polymorphism make code more flexible?
+5. Why can deep inheritance hierarchies be hard to maintain?
+```
+
+### Homework Part D
+
+Correct these misconceptions:
+
+```text
+Inheritance means copying an object.
+A subclass cannot add new methods.
+Polymorphism means only having many classes.
+Overriding and overloading are the same.
+Inheritance should be used for every relationship.
+Car is an Engine is a good inheritance relationship.
+```
+
+---
+
+## 36. One-page Revision Summary
+
+| Point | Summary |
+|---|---|
+| Inheritance | subclass inherits from superclass |
+| Superclass | general parent class |
+| Subclass | specific child class |
+| Is-a | inheritance relationship |
+| Composition | has-a relationship |
+| Code reuse | shared code placed in superclass |
+| Specialization | subclass adds/changes features |
+| Overriding | subclass replaces inherited method |
+| Overloading | same method name, different parameters |
+| Polymorphism | same method call, different behaviour |
+| Dynamic dispatch | runtime selects overridden method |
+| `extends` | Java keyword for inheritance |
+| `super` | calls superclass constructor/method |
+| Abstract class | shared type not directly instantiated |
+| Interface | required method contract |
+| Main advantage | reduces duplicated code and supports flexible design |
+| Main warning | wrong hierarchy makes code harder to maintain |
+| Exam phrase | inheritance supports code reuse, while polymorphism allows different subclass objects to respond differently to the same method call |
+
+::: tip Next Step
+After this page, the next page should be **Exception Handling and Robust Programs**, using the real file name `exception-handling-robust-programs.md`.
+:::
+

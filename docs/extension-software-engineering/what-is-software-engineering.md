@@ -1,4 +1,4 @@
-# What Is Software Engineering?
+﻿# What Is Software Engineering?
 
 ## Basic Definition
 
@@ -153,3 +153,4 @@ Why is software maintenance important?
 Maintenance is important because software often needs to be fixed, updated, improved, or adapted to new user needs after it has been released.
 
 </details>
+

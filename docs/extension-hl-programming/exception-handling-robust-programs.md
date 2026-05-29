@@ -1249,7 +1249,7 @@ Explain how exception handling can support database transaction recovery.
 
 ---
 
-## 34. Classroom Activity
+## 34. Practice Activity
 
 ### Activity 1: Error Sorting
 
@@ -1381,8 +1381,4 @@ Finally only runs when an error happens.
 | Array safety | check index before access |
 | Testing | include normal, boundary, invalid data |
 | Exam phrase | exception handling improves robustness by allowing a program to catch runtime errors and respond safely instead of terminating unexpectedly |
-
-::: tip Next Step
-HL Programming Extension content pages are now complete. The next main section to refine should be **Software Engineering**, starting with its `index.md`.
-:::
 

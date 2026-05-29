@@ -1,4 +1,4 @@
-# Paper 1 Overview
+﻿# Paper 1 Overview
 
 ## 1. Page Purpose
 
@@ -1230,6 +1230,3 @@ Overall, institutions can significantly reduce risk and improve resilience, but 
 | Time rule | about 1.5 minutes per mark |
 | Best habit | point → expansion → scenario link |
 
-::: tip Next Step
-After this page, the next Exam Practice page should be **Command Terms**, using the real file name `command-terms.md`.
-:::

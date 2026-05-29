@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import TraceTableSimulator from '../.vitepress/components/demos/TraceTableSimulator.vue'
 </script>
 
@@ -82,3 +82,4 @@ What does an accumulator usually do?
 An accumulator stores a running total. It is updated repeatedly, often inside a loop.
 
 </details>
+

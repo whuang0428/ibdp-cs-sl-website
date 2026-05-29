@@ -1,4 +1,4 @@
-# Stacks and Queues
+﻿# Stacks and Queues
 
 ## 1. Lesson Goals
 
@@ -1411,7 +1411,7 @@ function call tracking
 
 ---
 
-## 38. Classroom Activity
+## 38. Practice Activity
 
 ### Activity 1: Human Stack
 
@@ -1557,6 +1557,3 @@ Underflow means adding too many items.
 | Priority queue | removes by priority |
 | Exam phrase | stack = most recent first; queue = earliest first |
 
-::: tip Next Step
-After this page, the next page should be **Linked Lists**, using the real file name `linked-lists.md`.
-:::

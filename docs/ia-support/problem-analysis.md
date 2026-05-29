@@ -1,4 +1,4 @@
-# Problem Analysis
+﻿# Problem Analysis
 
 ## 1. Lesson Goals
 
@@ -972,7 +972,7 @@ Create two problem → requirement → success criterion chains.
 
 ---
 
-## 28. Classroom Activity
+## 28. Practice Activity
 
 ### Activity 1: Problem or Feature?
 
@@ -1087,38 +1087,6 @@ A computer is better because computers are fast.
 
 ---
 
-## 30. Teacher Notes
-
-### Teaching Emphasis
-
-Students often need help moving from:
-
-```text
-I want to make...
-```
-
-to:
-
-```text
-My client currently has this specific problem...
-```
-
-Encourage students to explain the current system in concrete detail. Strong problem analysis usually makes the rest of the IA easier.
-
-### Suggested Teacher Questions
-
-```text
-Who exactly has this problem?
-What do they do now?
-Can you show evidence of the current method?
-What is slow, difficult, inaccurate, or inconvenient?
-Which parts can software improve?
-Which features are unnecessary?
-What will you not include?
-```
-
----
-
 ## 31. One-page Problem Analysis Sheet
 
 | Area | Key Reminder |
@@ -1137,6 +1105,3 @@ What will you not include?
 | Common risk | writing about the app before explaining the problem |
 | Best phrase | The client currently uses [method], which causes [specific problem]. A computer-based solution is suitable because it can [specific benefit]. |
 
-::: tip Next Step
-After this page, the next page should be **Design and Success Criteria**, using the real file name `design-and-success-criteria.md`.
-:::

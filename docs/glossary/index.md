@@ -1,4 +1,4 @@
-# Glossary
+﻿# Glossary
 
 ## 1. Section Overview
 
@@ -652,7 +652,7 @@ Choose five command terms and explain what each one requires.
 
 ---
 
-## 18. Classroom Activity
+## 18. Practice Activity
 
 ### Activity 1: Term → Definition → Example
 
@@ -703,34 +703,6 @@ Better: Encryption converts plaintext into ciphertext using a key, so unauthoriz
 
 ---
 
-## 19. Teacher Notes
-
-### Teaching Emphasis
-
-Students may memorize vocabulary but still fail to use it in answers. Encourage them to practise:
-
-```text
-definition
-scenario link
-impact
-comparison
-limitations
-```
-
-The strongest glossary practice is not passive reading. It is rewriting weak answers into mark scheme-style sentences.
-
-### Suggested Teacher Questions
-
-```text
-Can you define this in one sentence?
-Can you give a scenario example?
-What term is commonly confused with this one?
-What would the mark scheme likely expect?
-Can you avoid saying "thing" or "stuff"?
-```
-
----
-
 ## 20. One-page Glossary Revision Sheet
 
 | Area | Key Reminder |
@@ -750,6 +722,3 @@ Can you avoid saying "thing" or "stuff"?
 | Common risk | knowing concept in Chinese but writing vague English |
 | Best phrase | Accurate computer science vocabulary helps turn understanding into marks. |
 
-::: tip Next Step
-After this overview page, the next page should be **Command Terms**, using the real file name `command-terms.md`.
-:::

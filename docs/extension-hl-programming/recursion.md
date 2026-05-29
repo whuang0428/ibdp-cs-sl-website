@@ -1,4 +1,4 @@
-# Recursion
+﻿# Recursion
 
 ## 1. Lesson Goals
 
@@ -1365,7 +1365,7 @@ Give two examples of problems where recursion is suitable.
 
 ---
 
-## 32. Classroom Activity
+## 32. Practice Activity
 
 ### Activity 1: Human Call Stack
 
@@ -1481,6 +1481,3 @@ Recursion always uses less memory than iteration.
 | Suitable problems | trees, folders, divide-and-conquer |
 | Exam phrase | recursive algorithm needs a base case and a recursive case that moves toward the base case |
 
-::: tip Next Step
-After this page, the next page should be **Stacks and Queues**, using the real file name `stacks-queues.md`.
-:::
