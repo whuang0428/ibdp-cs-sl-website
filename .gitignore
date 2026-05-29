@@ -1,5 +1,7 @@
 node_modules
 docs/.vitepress/cache
 docs/.vitepress/dist
-.DS_Store*.backup-*
+.DS_Store
+*.backup-*
 student-facing-cleanup-audit.*
+_backups/
