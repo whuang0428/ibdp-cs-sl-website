@@ -13,14 +13,57 @@ The goal is to identify improvement areas before editing student-facing pages, s
 - Public website content should be original explanations, original examples, and original practice questions.
 - Keep the website student-facing and focused on learning.
 
+## IA Support Official-file Priority Rule
+
+For IA Support, official IB materials must have the highest priority. The IA Support section should be treated differently from general learning pages.
+
+Use this source hierarchy for IA-related pages:
+
+1. Official IB Computer Science IA guide / new syllabus IA guidance
+2. Official IB Teacher Support Material
+3. Official IB-style IA introduction slides provided by the school or teacher
+4. Course textbook or teacher-created explanation
+5. Our own student-friendly examples and templates
+
+- IA page structure should follow the official computational solution process and the five assessment criteria.
+- The five criteria should be clearly represented:
+  - Criterion A: Problem specification
+  - Criterion B: Planning
+  - Criterion C: System overview
+  - Criterion D: Development
+  - Criterion E: Evaluation
+- Student-facing IA pages may use simplified explanations, but the underlying structure must not drift away from official criteria.
+- The website should avoid inventing alternative IA structures that compete with the official one.
+- Old pages based on generic "analysis/design/development/evaluation" wording should be rewritten or clearly mapped to the official A-E criteria.
+- IA pages should be practical and student-friendly, but official requirements have priority over convenience or style.
+- Public pages must not reproduce official IB text directly. Use original wording and paraphrased guidance.
+
+## IA Alignment Must-cover Points
+
+- [ ] IA is a computational solution.
+- [ ] Students choose a topic within computer science.
+- [ ] Students specify a problem of their own choosing.
+- [ ] The solution should demonstrate computational thinking.
+- [ ] The report is up to 2000 words.
+- [ ] The video is up to 5 minutes and should show product functionality and examples of testing strategy.
+- [ ] The documentation should cover Criteria A-E.
+- [ ] Full source code should be included in an appendix.
+- [ ] Success criteria should be measurable, clear, achievable, and testable.
+- [ ] Success criteria should be linked to the identified problem and essential software functionality.
+- [ ] Success criteria should not be vague or subjective.
+- [ ] Project choice should have sufficient complexity.
+- [ ] Weak projects include simple calculators, template websites, unfinished products, and systems limited to basic add/search/edit/delete only in RAM.
+- [ ] Students should acknowledge external sources, libraries, and AI use where applicable.
+- [ ] The submitted work must be the student's own.
+
 ## High Priority Changes
 
 | Priority | Website Area | Current Issue | Suggested Change | Evidence / Reason | Status |
 |---|---|---|---|---|---|
-| High | IA Support | IA pages need stronger alignment with the new computational solution structure. | Reorganise IA Support around Criterion A Problem Specification, Criterion B Planning, Criterion C System Overview, Criterion D Development, and Criterion E Evaluation. | The IA requires a computational solution, a report of up to 2000 words, and a video of up to 5 minutes showing functionality and testing strategy. | Planned |
-| High | IA Project Choice | Students may choose projects that are too simple, too broad, or not computational enough. | Add a Choosing a Suitable Problem page with suitable vs weak project examples. | Students should specify a problem and create a computational solution that demonstrates computational thinking and programming skill. | Planned |
-| High | IA Ethics and Academic Integrity | Ethics and academic integrity need a clearer student-facing page. | Add an Ethics and Academic Integrity page covering consent, data privacy, mock data, ethical purpose, external libraries, citations, AI use, and originality. | IA work must be the student's own work, and data / consent / external sources must be handled responsibly. | Planned |
-| High | Exam Practice | The site may mix 2025 practice papers and 2027 specimen structure without enough explanation. | Separate 2027 syllabus exam overview from legacy / practice paper material. | Students need to understand current assessment expectations and avoid confusion between different paper structures. | Planned |
+| Priority 1 | IA Support | IA pages need stronger alignment with the new computational solution structure. | Reorganise IA Support around Criterion A Problem Specification, Criterion B Planning, Criterion C System Overview, Criterion D Development, and Criterion E Evaluation. | The IA requires a computational solution, a report of up to 2000 words, and a video of up to 5 minutes showing functionality and testing strategy. | Planned |
+| Priority 2 | IA Project Choice | Students may choose projects that are too simple, too broad, or not computational enough. | Add a Choosing a Suitable Problem page with suitable vs weak project examples. | Students should specify a problem and create a computational solution that demonstrates computational thinking and programming skill. | Planned |
+| Priority 3 | IA Ethics and Academic Integrity | Ethics and academic integrity need a clearer student-facing page. | Add an Ethics and Academic Integrity page covering consent, data privacy, mock data, ethical purpose, external libraries, citations, AI use, and originality. | IA work must be the student's own work, and data / consent / external sources must be handled responsibly. | Planned |
+| Priority 4 | Exam Practice | The site may mix 2025 practice papers and 2027 specimen structure without enough explanation. | Separate 2027 syllabus exam overview from legacy / practice paper material. | Students need to understand current assessment expectations and avoid confusion between different paper structures. | Planned |
 | High | Case Study / Scenario Answering | Students need more support linking answers to scenarios. | Add a Case Study Answering Skills page under Exam Practice. | The new assessment style places importance on reading a scenario and applying technical knowledge to context. | Planned |
 | High | Roadmap / Homepage | The site's recommended learning order may not clearly show the official Theme A / Theme B structure. | Add an official structure section showing Theme A Concepts of Computer Science and Theme B Computational Thinking and Problem-solving, then separately show the website's suggested learning route. | The course is organised into Theme A and Theme B. | Planned |
 | High | HL / SL Boundary | Some extension material may look like SL core content. | Add clear warning blocks to HL-only or extension pages. | The website is mainly for SL students, so HL and extension content should be clearly labelled. | Planned |
