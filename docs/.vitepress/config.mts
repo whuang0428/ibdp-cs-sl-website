@@ -266,12 +266,15 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Overview', link: '/ia-support/' },
-          { text: 'IA Overview', link: '/ia-support/ia-overview' },
-          { text: 'Problem Analysis', link: '/ia-support/problem-analysis' },
-          { text: 'Design and Success Criteria', link: '/ia-support/design-and-success-criteria' },
-          { text: 'Development and Testing', link: '/ia-support/development-and-testing' },
-          { text: 'Evaluation and Reflection', link: '/ia-support/evaluation-and-reflection' },
-          { text: 'IA Checklist', link: '/ia-support/ia-checklist' }
+          { text: 'Computational Solution Overview', link: '/ia-support/computational-solution-overview' },
+          { text: 'Choosing a Suitable Problem', link: '/ia-support/choosing-a-suitable-problem' },
+          { text: 'Criterion A: Problem Specification', link: '/ia-support/criterion-a-problem-specification' },
+          { text: 'Criterion B: Planning', link: '/ia-support/criterion-b-planning' },
+          { text: 'Criterion C: System Overview', link: '/ia-support/criterion-c-system-overview' },
+          { text: 'Criterion D: Development', link: '/ia-support/criterion-d-development' },
+          { text: 'Criterion E: Evaluation', link: '/ia-support/criterion-e-evaluation' },
+          { text: 'Ethics and Academic Integrity', link: '/ia-support/ethics-and-academic-integrity' },
+          { text: 'Submission Checklist', link: '/ia-support/submission-checklist' }
         ]
       },
 
