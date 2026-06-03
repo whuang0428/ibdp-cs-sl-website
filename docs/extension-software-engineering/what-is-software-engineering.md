@@ -1,5 +1,9 @@
 ﻿# What Is Software Engineering?
 
+::: tip Extension / enrichment content
+This page supports practical project habits beyond the main SL core. Use it to understand how larger software projects are planned, tested, documented, and maintained.
+:::
+
 ## Basic Definition
 
 Software engineering is the structured process of designing, developing, testing, documenting, and maintaining software.

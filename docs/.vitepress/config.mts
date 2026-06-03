@@ -235,6 +235,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Overview', link: '/extension-software-engineering/' },
+          { text: 'What is Software Engineering?', link: '/extension-software-engineering/what-is-software-engineering' },
           { text: 'Requirements and Features', link: '/extension-software-engineering/requirements-and-features' },
           { text: 'Project Structure', link: '/extension-software-engineering/project-structure' },
           { text: 'Modular Design', link: '/extension-software-engineering/modular-design' },

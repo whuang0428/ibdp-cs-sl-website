@@ -1,5 +1,9 @@
 ﻿# Software Engineering
 
+::: tip Extension / enrichment content
+This section supports practical project habits beyond the main SL core. Use it to strengthen IA-style planning, development, testing, and documentation skills.
+:::
+
 Software engineering is about building software in a planned, structured, testable, and maintainable way.
 
 In this section, you will learn how to think beyond a single program that runs once. The focus is on practical habits that help you plan, build, test, improve, and explain software projects.
@@ -38,15 +42,16 @@ By the end of this section, you should be able to:
 
 | Page | What You Will Practise |
 |---|---|
-| Requirements and Features | Decide what the software should do and what problem it solves |
-| Project Structure | Organise files and folders so the project is easy to navigate |
-| Modular Design | Split a program into smaller parts such as functions, classes, and files |
-| Data Storage | Choose how the software stores and loads data |
-| Validation and Error Handling | Deal with invalid input, missing files, and unexpected situations |
-| Testing Workflow | Test features carefully and record what has been checked |
-| Version Control | Track changes and avoid losing working code |
-| Documentation and Maintainability | Explain how the project works and make future changes easier |
-| Mini IA Case Study | Follow a small project from idea to tested solution |
+| [What is Software Engineering?](./what-is-software-engineering) | Understand the basic idea, main stages, testing, documentation, and maintenance |
+| [Requirements and Features](./requirements-and-features) | Decide what the software should do and what problem it solves |
+| [Project Structure](./project-structure) | Organise files and folders so the project is easy to navigate |
+| [Modular Design](./modular-design) | Split a program into smaller parts such as functions, classes, and files |
+| [Data Storage](./data-storage) | Choose how the software stores and loads data |
+| [Validation and Error Handling](./validation-and-error-handling) | Deal with invalid input, missing files, and unexpected situations |
+| [Testing Workflow](./testing-workflow) | Test features carefully and record what has been checked |
+| [Version Control](./version-control) | Track changes and avoid losing working code |
+| [Documentation and Maintainability](./documentation-and-maintainability) | Explain how the project works and make future changes easier |
+| [Mini IA Case Study](./mini-ia-case-study) | Follow a small project from idea to tested solution |
 
 ## Common Student Project Problems
 
@@ -62,15 +67,16 @@ By the end of this section, you should be able to:
 
 ## Suggested Study Order
 
-1. Start with requirements and features so you know what the software should do.
-2. Plan the project structure before the code grows too large.
-3. Use modular design to keep each part of the program focused.
-4. Decide how data will be stored and loaded.
-5. Add validation and error handling before testing.
-6. Test the software systematically and keep a record of results.
-7. Use simple version control to track progress.
-8. Write documentation that would help another student understand the project.
-9. Finish by studying the mini case study as a complete example.
+1. Start with [What is Software Engineering?](./what-is-software-engineering) to understand the basic idea.
+2. Study requirements and features so you know what the software should do.
+3. Plan the project structure before the code grows too large.
+4. Use modular design to keep each part of the program focused.
+5. Decide how data will be stored and loaded.
+6. Add validation and error handling before testing.
+7. Test the software systematically and keep a record of results.
+8. Use simple version control to track progress.
+9. Write documentation that would help another student understand the project.
+10. Finish by studying the mini case study as a complete example.
 
 ## Quick Check Questions
 
