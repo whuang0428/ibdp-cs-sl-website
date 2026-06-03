@@ -16,6 +16,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Course Overview', link: '/course-overview/' },
       { text: 'Interactive Demos', link: '/interactive-demos/' },
       { text: 'Roadmap', link: '/roadmap' },
       {
@@ -60,6 +61,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Start Here', link: '/' },
+          { text: 'Course Overview', link: '/course-overview/' },
           { text: 'Course Roadmap', link: '/roadmap' }
         ]
       },
