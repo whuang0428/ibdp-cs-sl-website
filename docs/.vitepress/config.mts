@@ -47,6 +47,7 @@ export default defineConfig({
         items: [
           { text: 'Assessment Overview', link: '/assessment/' },
           { text: 'Exam Practice', link: '/exam-practice/' },
+          { text: 'Paper 2 Overview', link: '/exam-practice/paper-2-overview' },
           { text: 'IA Support', link: '/ia-support/' },
           { text: 'Glossary', link: '/glossary/' }
         ]
@@ -252,6 +253,7 @@ export default defineConfig({
         items: [
           { text: 'Overview', link: '/exam-practice/' },
           { text: 'Paper 1 Overview', link: '/exam-practice/paper-1-overview' },
+          { text: 'Paper 2 Overview', link: '/exam-practice/paper-2-overview' },
           { text: 'Command Terms', link: '/exam-practice/command-terms' },
           { text: 'Mark Scheme Skills', link: '/exam-practice/mark-scheme-skills' },
           { text: 'B1 Practice', link: '/exam-practice/b1-practice' },

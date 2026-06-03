@@ -29,6 +29,7 @@ Exam practice is divided into separate pages so students can focus on one skill 
 By the end of this Exam Practice section, students should be able to:
 
 - explain the structure and purpose of Paper 1
+- explain the purpose of Paper 2 as an option-based applied paper
 - identify common command terms
 - understand how mark schemes award marks
 - distinguish short-answer, explain, compare, discuss, and algorithm-style questions
@@ -52,6 +53,7 @@ Recommended order:
 ```text
 Overview
 → Paper 1 Overview
+→ Paper 2 Overview
 → Command Terms
 → Mark Scheme Skills
 → B1 Practice
@@ -76,17 +78,18 @@ Finally, they attempt mini mock exams to combine multiple skills.
 |---:|---|---|---|
 | 1 | Overview | exam practice roadmap and answer strategy | [Open](./) |
 | 2 | Paper 1 Overview | Paper 1 structure, question types, timing, strategy | [Open](./paper-1-overview) |
-| 3 | Command Terms | state, identify, outline, describe, explain, discuss, compare, evaluate | [Open](./command-terms) |
-| 4 | Mark Scheme Skills | how marks are awarded and how to write mark-worthy answers | [Open](./mark-scheme-skills) |
-| 5 | B1 Practice | computational thinking, algorithms, flowcharts, trace tables | [Open](./b1-practice) |
-| 6 | B2 and B3 Practice | programming, arrays, searching/sorting, testing, file processing, OOP | [Open](./b2-b3-practice) |
-| 7 | A1 and A2 Practice | hardware, CPU, memory, storage, data representation, networks, security | [Open](./a1-a2-practice) |
-| 8 | A3 and A4 Practice | databases, SQL, normalization, ML concepts, evaluation, ethics | [Open](./a3-a4-practice) |
-| 9 | Mini Mock Exam Bank | mixed-topic timed practice sets | [Open](./mini-mock-exam-bank) |
+| 3 | Paper 2 Overview | option-based paper, selected option preparation, applied responses | [Open](./paper-2-overview) |
+| 4 | Command Terms | state, identify, outline, describe, explain, discuss, compare, evaluate | [Open](./command-terms) |
+| 5 | Mark Scheme Skills | how marks are awarded and how to write mark-worthy answers | [Open](./mark-scheme-skills) |
+| 6 | B1 Practice | computational thinking, algorithms, flowcharts, trace tables | [Open](./b1-practice) |
+| 7 | B2 and B3 Practice | programming, arrays, searching/sorting, testing, file processing, OOP | [Open](./b2-b3-practice) |
+| 8 | A1 and A2 Practice | hardware, CPU, memory, storage, data representation, networks, security | [Open](./a1-a2-practice) |
+| 9 | A3 and A4 Practice | databases, SQL, normalization, ML concepts, evaluation, ethics | [Open](./a3-a4-practice) |
+| 10 | Mini Mock Exam Bank | mixed-topic timed practice sets | [Open](./mini-mock-exam-bank) |
 
 ::: warning File Name Note
 This overview uses your current stable Exam Practice file names:
-`paper-1-overview.md`, `command-terms.md`, `mark-scheme-skills.md`, `b1-practice.md`, `b2-b3-practice.md`, `a1-a2-practice.md`, `a3-a4-practice.md`, and `mini-mock-exam-bank.md`.
+`paper-1-overview.md`, `paper-2-overview.md`, `command-terms.md`, `mark-scheme-skills.md`, `b1-practice.md`, `b2-b3-practice.md`, `a1-a2-practice.md`, `a3-a4-practice.md`, and `mini-mock-exam-bank.md`.
 :::
 
 ---
@@ -97,6 +100,7 @@ This overview uses your current stable Exam Practice file names:
 Exam Practice
 ├── Exam Understanding
 │   ├── Paper 1 overview
+│   ├── Paper 2 overview
 │   ├── question types
 │   ├── timing
 │   ├── marks available
@@ -538,6 +542,18 @@ question types
 timing
 how scenario questions work
 how to plan longer answers
+```
+
+### Paper 2 Overview
+
+Use this page to understand:
+
+```text
+option-based exam preparation
+how Paper 2 differs from Paper 1
+why the selected option matters
+how to prepare applied scenario answers
+which current website pages can support option revision
 ```
 
 ### Command Terms
