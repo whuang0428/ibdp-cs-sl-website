@@ -24,6 +24,7 @@
 
 - `docs/index.md`：首页
 - `docs/roadmap.md`：学习路线
+- `docs/assessment/`：Assessment Overview
 - `docs/a1-computer-fundamentals/`：A1 Computer Fundamentals
 - `docs/a2-networks/`：A2 Networks
 - `docs/a3-databases/`：A3 Databases
@@ -159,6 +160,24 @@ _backups/
 - 适量 VitePress admonitions，例如 `::: tip`、`::: warning`
 
 不要复制官方 IB 试卷、题目、markscheme、截图或大段官方文字。可以用官方材料判断考纲方向、评估结构、技能重点和主题强调，但公开页面必须使用原创解释、原创例子和原创练习。
+
+## Assessment 规则
+
+Assessment 内容应帮助学生清楚区分 Paper 1、Paper 2 和 IA。
+
+- `docs/assessment/` 用作 Assessment Overview。
+- `docs/exam-practice/` 用作考试练习入口，当前重点是 Paper 1 技能和练习。
+- Paper 2 应被说明为 option-based / applied paper，需要单独准备；不要把 Paper 2 混同为 Paper 1 练习。
+- IA 应链接到 `docs/ia-support/`，不要在 Assessment 页面中重复 IA Support 的完整内部内容。
+
+更新 Assessment navbar 时，至少保留：
+
+- Assessment Overview
+- Exam Practice
+- IA Support
+- Glossary
+
+不要创建指向不存在 Paper 2 页面或未完成页面的死链接。
 
 ## IA Support 规则
 
