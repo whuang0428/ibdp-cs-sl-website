@@ -19,7 +19,7 @@ export default defineConfig({
       { text: 'Interactive Demos', link: '/interactive-demos/' },
       { text: 'Roadmap', link: '/roadmap' },
       {
-        text: 'B Theme',
+        text: 'Theme B',
         items: [
           { text: 'B1 Computational Thinking', link: '/b1-computational-thinking/' },
           { text: 'B2 Programming', link: '/b2-programming/' },
@@ -27,11 +27,11 @@ export default defineConfig({
         ]
       },
       {
-        text: 'A Theme',
+        text: 'Theme A',
         items: [
-          { text: 'A3 Databases', link: '/a3-databases/' },
           { text: 'A1 Computer Fundamentals', link: '/a1-computer-fundamentals/' },
           { text: 'A2 Networks', link: '/a2-networks/' },
+          { text: 'A3 Databases', link: '/a3-databases/' },
           { text: 'A4 Machine Learning', link: '/a4-machine-learning/' }
         ]
       },

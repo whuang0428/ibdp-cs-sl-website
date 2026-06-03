@@ -1,5 +1,15 @@
 ﻿# A4 Machine Learning
 
+::: info Syllabus area
+Theme A: Concepts of computer science. A4 Machine learning helps you understand how data can be used to train, evaluate, and question predictive systems.
+:::
+
+## Assessment connection
+
+- Paper 1: tests ML concepts, data, model evaluation, overfitting, bias, ethics, privacy, and scenario judgement.
+- Paper 2: may support applied option questions where data-driven systems or model limitations are relevant.
+- IA: helps you discuss data quality, evaluation, bias, privacy, and whether ML is suitable for a proposed solution.
+
 ## 1. Module Overview
 
 A4 Machine Learning introduces how computer systems can use data to learn patterns, make predictions, group data, evaluate performance, and support decision-making.

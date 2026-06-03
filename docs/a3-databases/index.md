@@ -1,5 +1,15 @@
 ﻿# A3 Databases
 
+::: info Syllabus area
+Theme A: Concepts of computer science. A3 Databases helps you understand how structured data is stored, linked, queried, protected, and recovered.
+:::
+
+## Assessment connection
+
+- Paper 1: tests database concepts, relationships, keys, SQL, normalization, security, and recovery.
+- Paper 2: may be especially useful if your selected option includes databases or applied data systems.
+- IA: helps you design persistent data storage, justify table structures, and explain data handling choices.
+
 ## 1. Module Overview
 
 A3 Databases introduces how data is stored, organized, linked, queried, protected, and recovered in database systems.

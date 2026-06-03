@@ -1,5 +1,15 @@
 ﻿# A2 Networks
 
+::: info Syllabus area
+Theme A: Concepts of computer science. A2 Networks helps you understand how devices communicate, how data moves across networks, and how communication can be protected.
+:::
+
+## Assessment connection
+
+- Paper 1: tests networking concepts, protocols, transmission, security, and scenario-based explanations.
+- Paper 2: may support option questions where network design, web access, or security affects a system.
+- IA: helps you justify network, security, access, and deployment choices in a computational solution.
+
 ## 1. Module Overview
 
 A2 Networks introduces how computer systems communicate with each other.

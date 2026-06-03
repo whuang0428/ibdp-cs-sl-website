@@ -1,5 +1,15 @@
 ﻿# B3 Object-Oriented Programming
 
+::: info Syllabus area
+Theme B: Computational thinking and problem-solving. B3 Object-oriented programming helps you organize data and behaviour into classes and objects.
+:::
+
+## Assessment connection
+
+- Paper 1: tests OOP vocabulary, class design, encapsulation, UML, and object behaviour.
+- Paper 2: may support option questions involving object-oriented design or applied programming.
+- IA: helps you structure larger programs using classes, methods, validation, and maintainable design.
+
 ## 1. Module Overview
 
 B3 Object-Oriented Programming introduces a new way to design and organize programs.

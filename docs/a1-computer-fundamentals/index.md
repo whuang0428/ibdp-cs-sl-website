@@ -1,5 +1,15 @@
 ﻿# A1 Computer Fundamentals
 
+::: info Syllabus area
+Theme A: Concepts of computer science. A1 Computer fundamentals helps you understand how computer systems work, including hardware, data representation, operating systems, control systems, and related core concepts.
+:::
+
+## Assessment connection
+
+- Paper 1: explains core system concepts used in short-answer and scenario questions.
+- Paper 2: may support option questions where computer systems, storage, or technical constraints affect a solution.
+- IA: helps you explain hardware, software, storage, and system choices in a computational solution.
+
 ## 1. Module Overview
 
 A1 Computer Fundamentals introduces the basic ideas behind computer systems.

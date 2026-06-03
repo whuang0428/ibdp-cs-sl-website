@@ -1,5 +1,15 @@
 ﻿# B2 Programming
 
+::: info Syllabus area
+Theme B: Computational thinking and problem-solving. B2 Programming helps you turn algorithms into working programs, trace code, test solutions, and explain programming logic.
+:::
+
+## Assessment connection
+
+- Paper 1: tests programming constructs, arrays, searching, sorting, tracing, testing, debugging, and algorithm writing.
+- Paper 2: supports applied option responses that require programming logic or code interpretation.
+- IA: helps you build, test, debug, and explain the main computational solution.
+
 ## 1. Module Overview
 
 B2 Programming is the main practical programming unit of the course.

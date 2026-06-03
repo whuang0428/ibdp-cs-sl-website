@@ -1,5 +1,15 @@
 ﻿# B1 Computational Thinking
 
+::: info Syllabus area
+Theme B: Computational thinking and problem-solving. B1 Computational thinking helps you analyse problems, design algorithms, represent logic, and trace solutions.
+:::
+
+## Assessment connection
+
+- Paper 1: tests algorithmic thinking, decomposition, abstraction, flowcharts, trace tables, and explanation of logic.
+- Paper 2: supports applied problem-solving in the selected option area.
+- IA: helps you break a problem into parts, define algorithms, and explain how your solution works.
+
 ## 1. Module Overview
 
 B1 Computational Thinking introduces the thinking skills used to analyse problems and design algorithmic solutions.
