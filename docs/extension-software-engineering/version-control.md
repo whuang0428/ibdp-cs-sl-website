@@ -1,5 +1,9 @@
 # Version Control
 
+::: tip Extension / enrichment content
+This page helps you go beyond the SL core syllabus. It is not a required SL core topic unless your teacher tells you to study it. Use it after you are confident with the required SL topics or when it supports your IA-style project work.
+:::
+
 ## Learning Goals
 
 By the end of this page, you should be able to:

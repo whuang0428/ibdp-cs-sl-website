@@ -140,8 +140,8 @@ Assessment preparation includes Paper 1, Paper 2, and the IA computational solut
 <a href="./exam-practice/">Exam Practice</a>
 <a href="./glossary/">Glossary</a>
 <a href="./ia-support/">IA Support</a>
-<a href="./extension-hl-programming/">HL Programming Extension</a>
-<a href="./extension-software-engineering/">Software Engineering Extension</a>
+<a href="./extension-hl-programming/">Optional HL Extension</a>
+<a href="./extension-software-engineering/">Optional Software Engineering</a>
 
 </div>
 

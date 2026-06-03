@@ -42,7 +42,7 @@ By the end of B3 Object-Oriented Programming, students should be able to:
 - interpret UML class diagrams
 - convert simple UML diagrams into Java class skeletons
 - convert Java class structures into UML-style diagrams
-- understand basic multi-class programs as an enrichment topic
+- recognize that multi-class programs are optional extension / enrichment content
 - answer exam-style OOP questions using correct terminology
 
 ---
@@ -58,7 +58,7 @@ Classes and Objects
 → Encapsulation
 → Accessors and Mutators
 → UML Class Diagrams
-→ HL Multiple Classes
+→ Optional extension: HL Multiple Classes
 ```
 
 This order is intentional.
@@ -82,7 +82,7 @@ Accessors and Mutators
         ↓
 UML Class Diagrams
         ↓
-HL Multiple Classes
+Optional extension: HL Multiple Classes
 ```
 
 ::: tip How to study this page
@@ -101,7 +101,7 @@ Do not treat OOP as vocabulary only. Check how each idea appears in Java code, o
 | 4 | Encapsulation | private attributes, public methods, controlled access, validation | [Open](./encapsulation) |
 | 5 | Accessors and Mutators | getters, setters, read-only attributes, setter validation | [Open](./accessors-mutators) |
 | 6 | UML Class Diagrams | UML notation, visibility, Java-to-UML, UML-to-Java | [Open](./uml-class-diagrams) |
-| 7 | HL Multiple Classes | object collaboration, arrays of objects, composition, responsibilities | [Open](./hl-multiple-classes) |
+| 7 | HL Multiple Classes (Extension) | optional enrichment: object collaboration, arrays of objects, composition, responsibilities | [Open](./hl-multiple-classes) |
 
 ---
 
@@ -451,8 +451,8 @@ How would it look in UML?
 | `mark = mark;` in setter | Accessors/Mutators | Use `this.mark = mark;` |
 | UML uses Java order | UML | Use `name : type` |
 | Constructor shown with return type in UML | UML | Constructors normally have no return type |
-| Array of objects assumed to create objects | HL Multiple Classes | Object array stores references, initially null |
-| Calling method on null | HL Multiple Classes | Check object exists first |
+| Array of objects assumed to create objects | HL Multiple Classes (extension) | Object array stores references, initially null |
+| Calling method on null | HL Multiple Classes (extension) | Check object exists first |
 
 ---
 
@@ -712,7 +712,7 @@ Before moving to A3 Databases, students should be able to:
 | Encapsulation | Protect object data with controlled access |
 | Accessors and Mutators | Getters read data; setters update data |
 | UML Class Diagrams | Visual representation of class design |
-| HL Multiple Classes | Objects from different classes collaborate |
+| HL Multiple Classes (extension) | Objects from different classes collaborate |
 | Object State | Current attribute values of an object |
 | `this` | Refers to the current object |
 | Visibility | `private` protects data; `public` exposes safe methods |

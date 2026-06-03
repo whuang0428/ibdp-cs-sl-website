@@ -1,5 +1,9 @@
 ﻿# Searching and Sorting Extension
 
+::: warning Extension / enrichment content
+This page is for extension learning or HL-related enrichment. It is not a required SL core topic unless your teacher tells you to study it.
+:::
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:

@@ -23,8 +23,8 @@ This website keeps the official IBDP Computer Science SL areas visible while usi
 | 5 | A1 Computer Fundamentals | Explain hardware, CPU, memory, storage, OS, and control systems | `/a1-computer-fundamentals/` |
 | 6 | A2 Networks | Explain network communication, protocols, security, and web access | `/a2-networks/` |
 | 7 | A4 Machine Learning | Introduce ML workflow, evaluation, ethics, and limitations | `/a4-machine-learning/` |
-| 8 | HL Programming Extension | Strengthen programming beyond SL | `/extension-hl-programming/` |
-| 9 | Software Engineering | Understand structured software development and maintenance | `/extension-software-engineering/` |
+| 8 | HL Programming Extension | Optional extension after SL core topics | `/extension-hl-programming/` |
+| 9 | Software Engineering | Optional extension after SL core topics | `/extension-software-engineering/` |
 | 10 | Exam / IA / Glossary | Support assessment and revision | `/exam-practice/`, `/ia-support/`, `/glossary/` |
 
 ---
@@ -46,10 +46,10 @@ A2 Networks
         ↓
 A4 Machine Learning
         ↓
-Extension + Revision + IA Support
+Optional extension after SL core topics + Revision + IA Support
 ```
 
-This order is designed to let students first build algorithmic thinking and programming confidence, then move into systems, networks, databases, and machine learning.
+This order is designed to let students first build algorithmic thinking and programming confidence, then move into systems, networks, databases, and machine learning. Extension pages should be used after the SL core topics or when your teacher asks you to study them.
 
 ---
 

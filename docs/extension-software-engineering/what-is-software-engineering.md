@@ -1,7 +1,7 @@
 ﻿# What Is Software Engineering?
 
 ::: tip Extension / enrichment content
-This page supports practical project habits beyond the main SL core. Use it to understand how larger software projects are planned, tested, documented, and maintained.
+This page supports practical project habits beyond the main SL core. It is not a required SL core topic unless your teacher tells you to study it. Use it to understand how larger software projects are planned, tested, documented, and maintained.
 :::
 
 ## Basic Definition

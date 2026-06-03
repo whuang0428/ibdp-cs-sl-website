@@ -1,5 +1,9 @@
 # Mini IA Case Study
 
+::: tip Extension / enrichment content
+This page helps you go beyond the SL core syllabus. It is not a required SL core topic unless your teacher tells you to study it. Use it after you are confident with the required SL topics or when it supports your IA-style project work.
+:::
+
 This case study shows how a small software project can be planned and improved using software engineering ideas.
 
 The example is a simple Library Borrowing System. It is small enough for a beginner project, but it still connects requirements, structure, modules, storage, validation, testing, version control, and documentation.

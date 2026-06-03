@@ -1,7 +1,7 @@
 ﻿# Software Engineering
 
 ::: tip Extension / enrichment content
-This section supports practical project habits beyond the main SL core. Use it to strengthen IA-style planning, development, testing, and documentation skills.
+This section supports practical project habits beyond the main SL core. It is not a required SL core topic unless your teacher tells you to study it. Use it to strengthen IA-style planning, development, testing, and documentation skills.
 :::
 
 Software engineering is about building software in a planned, structured, testable, and maintainable way.

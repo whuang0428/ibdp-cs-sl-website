@@ -36,10 +36,10 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Extensions',
+        text: 'Enrichment',
         items: [
-          { text: 'HL Programming', link: '/extension-hl-programming/' },
-          { text: 'Software Engineering', link: '/extension-software-engineering/' }
+          { text: 'HL Extension', link: '/extension-hl-programming/' },
+          { text: 'Extension: Software Engineering', link: '/extension-software-engineering/' }
         ]
       },
       {
@@ -138,7 +138,7 @@ export default defineConfig({
           { text: 'Encapsulation', link: '/b3-oop/encapsulation' },
           { text: 'Accessors and Mutators', link: '/b3-oop/accessors-mutators' },
           { text: 'UML Class Diagrams', link: '/b3-oop/uml-class-diagrams' },
-          { text: 'HL Multiple Classes', link: '/b3-oop/hl-multiple-classes' }
+          { text: 'HL Multiple Classes (Extension)', link: '/b3-oop/hl-multiple-classes' }
         ]
       },
 
@@ -215,7 +215,7 @@ export default defineConfig({
       },
 
       {
-        text: 'HL Programming Extension',
+        text: 'Extension: HL Programming',
         collapsed: true,
         items: [
           { text: 'Overview', link: '/extension-hl-programming/' },
@@ -231,7 +231,7 @@ export default defineConfig({
       },
 
       {
-        text: 'Software Engineering',
+        text: 'Extension: Software Engineering',
         collapsed: true,
         items: [
           { text: 'Overview', link: '/extension-software-engineering/' },
