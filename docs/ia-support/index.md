@@ -41,9 +41,9 @@ Keep these official criterion names visible in your own planning. Older words su
 
 ## 4. Recommended IA Support Learning Path
 
-New detailed pages will be created later. For now, use this table as the intended learning path.
+Use these IA Support pages as a learning path while you plan, build, document, and evaluate your computational solution.
 
-| Step | Page to study later | Purpose |
+| Step | Page to study | Purpose |
 |---|---|---|
 | 1 | Computational Solution Overview | Understand the whole IA task |
 | 2 | Choosing a Suitable Problem | Choose a problem with enough complexity |

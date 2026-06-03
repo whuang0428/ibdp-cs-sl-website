@@ -101,8 +101,8 @@ Testing and Debugging
 File Processing
 ```
 
-::: tip Teacher Strategy
-Do not rush Loops and Arrays. These two pages are the foundation for Searching, Sorting, and many exam-style algorithm questions.
+::: tip Learning tip
+Do not rush loops and arrays. These two topics are the foundation for searching, sorting, and many exam-style algorithm questions.
 :::
 
 ---
