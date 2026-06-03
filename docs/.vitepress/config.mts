@@ -45,6 +45,7 @@ export default defineConfig({
       {
         text: 'Assessment',
         items: [
+          { text: 'Assessment Overview', link: '/assessment/' },
           { text: 'Exam Practice', link: '/exam-practice/' },
           { text: 'IA Support', link: '/ia-support/' },
           { text: 'Glossary', link: '/glossary/' }
