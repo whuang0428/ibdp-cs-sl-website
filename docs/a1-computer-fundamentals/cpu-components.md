@@ -1045,8 +1045,7 @@ Clock speed affects how many cycles a CPU can perform per second, but performanc
 
 ---
 
-## 30. Practice Activity
-
+## 30. Practice task
 ### Activity 1: CPU Role Cards
 
 Students receive cards:
@@ -1100,15 +1099,14 @@ They must justify using CPU, RAM, cache, and storage ideas.
 
 ---
 
-## 31. Homework
-
-### Homework Part A: Concept Explanation
+## 31. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the role of the CPU and name its main components.
 
 ---
 
-### Homework Part B: Register Table
+### Independent practice part B: Register Table
 
 Create a table explaining:
 
@@ -1129,7 +1127,7 @@ when it is used
 
 ---
 
-### Homework Part C: Misconception Correction
+### Independent practice part C: Misconception Correction
 
 Correct these statements:
 
@@ -1143,7 +1141,7 @@ Cache is the same as secondary storage.
 
 ---
 
-### Homework Part D: Performance Answer
+### Independent practice part D: Performance Answer
 
 Explain why CPU performance depends on more than clock speed.
 

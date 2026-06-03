@@ -980,8 +980,7 @@ A temperature sensor is input hardware because it detects the room temperature. 
 
 ---
 
-## 26. Practice Activity
-
+## 26. Practice task
 ### Activity 1: Hardware Sorting Cards
 
 Give students cards:
@@ -1048,15 +1047,14 @@ They correct each statement.
 
 ---
 
-## 27. Homework
-
-### Homework Part A: Concept Explanation
+## 27. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what hardware is and why a computer system needs different hardware categories.
 
 ---
 
-### Homework Part B: Classification Table
+### Independent practice part B: Classification Table
 
 Create a table of 15 hardware components and classify each as:
 
@@ -1073,7 +1071,7 @@ Some devices can belong to more than one category.
 
 ---
 
-### Homework Part C: Scenario Choice
+### Independent practice part C: Scenario Choice
 
 Choose one scenario:
 
@@ -1089,7 +1087,7 @@ List at least six hardware components and explain each role.
 
 ---
 
-### Homework Part D: Written Answer
+### Independent practice part D: Written Answer
 
 Explain why hardware alone is not enough for a useful computer system.
 

@@ -1600,8 +1600,7 @@ Data minimization should be considered, meaning the shop should only collect dat
 
 ---
 
-## 44. Practice Activity
-
+## 44. Practice task
 ### Activity 1: Threat and Control Match
 
 Match threats to controls:
@@ -1670,15 +1669,14 @@ reason
 
 ---
 
-## 45. Homework
-
-### Homework Part A: Concept Explanation
+## 45. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain why database security and privacy are important.
 
 ---
 
-### Homework Part B: Threat Table
+### Independent practice part B: Threat Table
 
 Create a table for:
 
@@ -1701,7 +1699,7 @@ one protection method
 
 ---
 
-### Homework Part C: Scenario Recommendation
+### Independent practice part C: Scenario Recommendation
 
 A hospital stores patient records in a database.
 
@@ -1709,7 +1707,7 @@ Recommend five protection measures and explain why each is needed.
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

@@ -1383,8 +1383,7 @@ A regression model predicts numerical values, so its performance is evaluated by
 
 ---
 
-## 40. Practice Activity
-
+## 40. Practice task
 ### Activity 1: Confusion Matrix Cards
 
 Students receive prediction cards for a spam filter.
@@ -1439,15 +1438,14 @@ They explain why some mistakes are more serious than others.
 
 ---
 
-## 41. Homework
-
-### Homework Part A: Concept Explanation
+## 41. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain why model evaluation is needed and why unseen testing data matters.
 
 ---
 
-### Homework Part B: Confusion Matrix Practice
+### Independent practice part B: Confusion Matrix Practice
 
 For each scenario, identify whether it is false positive or false negative:
 
@@ -1462,7 +1460,7 @@ For each scenario, identify whether it is false positive or false negative:
 
 ---
 
-### Homework Part C: Accuracy Limitation
+### Independent practice part C: Accuracy Limitation
 
 Explain why high accuracy may not be enough for:
 
@@ -1474,7 +1472,7 @@ student risk prediction
 
 ---
 
-### Homework Part D: Regression Evaluation
+### Independent practice part D: Regression Evaluation
 
 Create three examples with:
 

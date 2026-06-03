@@ -977,8 +977,7 @@ A full traversal linear search checks every element in the array even if the tar
 
 ---
 
-## 19. Practice Activity
-
+## 19. Practice task
 ### Activity 1: Human Linear Search
 
 Students stand in a line holding value cards.
@@ -1025,9 +1024,8 @@ Give students broken search programs. They identify:
 
 ---
 
-## 20. Homework
-
-### Homework Part A: Trace
+## 20. Independent practice
+### Independent practice part A: Trace
 
 Trace this code:
 
@@ -1053,7 +1051,7 @@ i, values[i], condition, position
 
 ---
 
-### Homework Part B: Write Code
+### Independent practice part B: Write Code
 
 Write a Java program that:
 
@@ -1064,7 +1062,7 @@ Write a Java program that:
 
 ---
 
-### Homework Part C: Parallel Arrays
+### Independent practice part C: Parallel Arrays
 
 Create two arrays:
 
@@ -1077,7 +1075,7 @@ Search for a name and output the matching email address.
 
 ---
 
-### Homework Part D: Explain
+### Independent practice part D: Explain
 
 In 4-5 sentences, explain why printing `"Not found"` inside the loop is usually wrong.
 

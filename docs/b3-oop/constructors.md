@@ -919,8 +919,7 @@ Assume the constructor sets invalid marks to 0 if the mark is not between 0 and 
 
 ---
 
-## 20. Practice Activity
-
+## 20. Practice task
 ### Activity 1: Constructor Role-play
 
 Students act as objects being created.
@@ -979,15 +978,14 @@ this.name = name;
 
 ---
 
-## 21. Homework
-
-### Homework Part A: Concept Explanation
+## 21. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what a constructor is and how it is different from a normal method.
 
 ---
 
-### Homework Part B: Java Code
+### Independent practice part B: Java Code
 
 Create a `Laptop` class with:
 
@@ -1005,7 +1003,7 @@ Write:
 
 ---
 
-### Homework Part C: Validation
+### Independent practice part C: Validation
 
 Create a `GameCharacter` constructor that accepts:
 
@@ -1019,7 +1017,7 @@ If health is above 100, set health to 100.
 
 ---
 
-### Homework Part D: Trace
+### Independent practice part D: Trace
 
 Trace the object states:
 

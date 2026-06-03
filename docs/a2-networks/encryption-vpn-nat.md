@@ -1169,8 +1169,7 @@ Encryption protects the content of data by converting plaintext into ciphertext 
 
 ---
 
-## 43. Practice Activity
-
+## 43. Practice task
 ### Activity 1: Concept Sort
 
 Students classify each statement as encryption, VPN, or NAT:
@@ -1223,15 +1222,14 @@ device updates
 
 ---
 
-## 44. Homework
-
-### Homework Part A: Concept Explanation
+## 44. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain the difference between encryption, VPN and NAT.
 
 ---
 
-### Homework Part B: Comparison Table
+### Independent practice part B: Comparison Table
 
 Create a table for:
 
@@ -1253,13 +1251,13 @@ one limitation
 
 ---
 
-### Homework Part C: Scenario
+### Independent practice part C: Scenario
 
 A family has five devices connected to one home router. Explain how NAT allows them to access websites using one public IP address.
 
 ---
 
-### Homework Part D: Security Answer
+### Independent practice part D: Security Answer
 
 Explain why using a VPN on public Wi-Fi is helpful, but does not make the user completely safe.
 

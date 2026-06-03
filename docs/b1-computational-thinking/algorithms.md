@@ -1529,8 +1529,7 @@ The algorithm has a logic error because it divides the total by 9 even though th
 
 ---
 
-## 41. Practice Activity
-
+## 41. Practice task
 ### Activity 1: Structure Sort
 
 Students classify each example as sequence, selection, or iteration.
@@ -1577,15 +1576,14 @@ largest number
 
 ---
 
-## 42. Homework
-
-### Homework Part A: Concept Explanation
+## 42. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what an algorithm is and why sequence, selection, and iteration are important.
 
 ---
 
-### Homework Part B: Algorithm Writing
+### Independent practice part B: Algorithm Writing
 
 Write algorithms for:
 
@@ -1598,7 +1596,7 @@ Write algorithms for:
 
 ---
 
-### Homework Part C: Dry Run
+### Independent practice part C: Dry Run
 
 Dry-run this algorithm with inputs `4`, `7`, `2`:
 
@@ -1615,7 +1613,7 @@ OUTPUT total
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

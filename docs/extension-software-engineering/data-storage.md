@@ -106,7 +106,7 @@ Persistent data is saved so it can be used again after the program closes.
 
 Examples:
 
-- saved homework tasks
+- saved study tasks
 - library book records
 - quiz scores
 - user settings
@@ -257,7 +257,7 @@ For each app idea, choose a suitable storage option and explain why.
 | App Idea | Storage Choice | Reason |
 |---|---|---|
 | A quiz app that saves each user's score |  |  |
-| A homework tracker with tasks, due dates, and completion status |  |  |
+| A study task tracker with tasks, due dates, and completion status |  |  |
 | A library system with books, borrowers, and loan history |  |  |
 
 Try to choose the simplest storage method that still meets the needs of the project.

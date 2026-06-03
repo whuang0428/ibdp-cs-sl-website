@@ -1022,8 +1022,7 @@ Attributes are useful because they store the data or state of an object. Each ob
 
 ---
 
-## 24. Practice Activity
-
+## 24. Practice task
 ### Activity 1: Object State Cards
 
 Students receive object cards with attributes.
@@ -1082,15 +1081,14 @@ object state changes
 
 ---
 
-## 25. Homework
-
-### Homework Part A: Concept Explanation
+## 25. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between attributes and methods using one example class.
 
 ---
 
-### Homework Part B: Design Task
+### Independent practice part B: Design Task
 
 Design a `Laptop` class.
 
@@ -1104,7 +1102,7 @@ identify which methods return values and which are void
 
 ---
 
-### Homework Part C: Java Code
+### Independent practice part C: Java Code
 
 Write a `Player` class with:
 
@@ -1120,7 +1118,7 @@ hasWon()
 
 ---
 
-### Homework Part D: Trace
+### Independent practice part D: Trace
 
 Given:
 

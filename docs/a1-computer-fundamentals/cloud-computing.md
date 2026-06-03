@@ -1131,8 +1131,7 @@ Cloud computing can improve scalability because resources such as storage or ser
 
 ---
 
-## 33. Practice Activity
-
+## 33. Practice task
 ### Activity 1: Cloud or Local Sort
 
 Students classify examples:
@@ -1184,15 +1183,14 @@ collaboration
 
 ---
 
-## 34. Homework
-
-### Homework Part A: Concept Explanation
+## 34. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what cloud computing is and how it is different from local computing.
 
 ---
 
-### Homework Part B: Comparison Table
+### Independent practice part B: Comparison Table
 
 Create a comparison table for:
 
@@ -1214,7 +1212,7 @@ best use
 
 ---
 
-### Homework Part C: Scenario Analysis
+### Independent practice part C: Scenario Analysis
 
 A small game company wants to host online multiplayer servers.
 
@@ -1228,7 +1226,7 @@ what security concerns should be considered
 
 ---
 
-### Homework Part D: Written Answer
+### Independent practice part D: Written Answer
 
 Explain why cloud computing is useful for collaboration but can create privacy concerns.
 

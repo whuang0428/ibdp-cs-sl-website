@@ -93,13 +93,6 @@ Finally, they represent and test algorithms using flowcharts and trace tables.
 | 5 | Flowcharts | visual representation of algorithms using standard symbols | [Open](./flowcharts) |
 | 6 | Trace Tables | dry-running algorithms and tracking variable values | [Open](./trace-tables) |
 
-::: warning File Name Note
-This overview uses your current stable B1 file names:
-`decomposition.md`, `abstraction.md`, `algorithms.md`, `flowcharts.md`, and `trace-tables.md`.
-:::
-
----
-
 ## 5. Concept Map
 
 ```text

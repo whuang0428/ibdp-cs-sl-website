@@ -102,13 +102,6 @@ Finally, they compare transmission media and study network security.
 | 10 | Network Security | threats, malware, phishing, firewalls, authentication, backups | [Open](./network-security) |
 | 11 | Encryption, VPN and NAT | encryption, HTTPS, VPN tunnels, private/public IP, NAT | [Open](./encryption-vpn-nat) |
 
-::: warning File Name Note
-This overview uses your current stable A2 file names:
-`network-fundamentals.md`, `lan-wan.md`, `network-devices.md`, `client-server-peer-to-peer.md`, `tcp-ip-model.md`, `packet-switching.md`, `dns-web-access.md`, `wired-wireless-transmission.md`, `network-security.md`, and `encryption-vpn-nat.md`.
-:::
-
----
-
 ## 5. Concept Map
 
 ```text

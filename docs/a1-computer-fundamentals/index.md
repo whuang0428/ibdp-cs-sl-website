@@ -103,13 +103,6 @@ Finally, they connect computer systems to operating systems, control systems, an
 | 10 | Control Systems | sensors, actuators, feedback, open-loop, closed-loop | [Open](./control-systems) |
 | 11 | Cloud Computing | remote servers, SaaS/PaaS/IaaS, benefits and risks | [Open](./cloud-computing) |
 
-::: warning File Name Note
-This overview uses your current stable A1 file names:
-`computer-hardware.md`, `cpu-components.md`, `fetch-decode-execute.md`, `primary-memory.md`, `secondary-storage.md`, `data-representation.md`, `logic-gates.md`, `operating-systems.md`, `control-systems.md`, and `cloud-computing.md`.
-:::
-
----
-
 ## 5. Concept Map
 
 ```text

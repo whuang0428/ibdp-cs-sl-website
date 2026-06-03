@@ -1395,8 +1395,7 @@ A hospital database stores sensitive and important data such as patient records,
 
 ---
 
-## 36. Practice Activity
-
+## 36. Practice task
 ### Activity 1: Data or Information Sort
 
 Students sort cards into data or information.
@@ -1461,15 +1460,14 @@ why a database helps
 
 ---
 
-## 37. Homework
-
-### Homework Part A: Concept Explanation
+## 37. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what a database is, what a DBMS does, and why databases are useful.
 
 ---
 
-### Homework Part B: Scenario Table
+### Independent practice part B: Scenario Table
 
 Choose one scenario:
 
@@ -1493,7 +1491,7 @@ one security concern
 
 ---
 
-### Homework Part C: File-based Problems
+### Independent practice part C: File-based Problems
 
 Explain these problems with examples:
 
@@ -1505,7 +1503,7 @@ data isolation
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

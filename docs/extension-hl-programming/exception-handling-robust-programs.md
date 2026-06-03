@@ -1249,8 +1249,7 @@ Explain how exception handling can support database transaction recovery.
 
 ---
 
-## 34. Practice Activity
-
+## 34. Practice task
 ### Activity 1: Error Sorting
 
 Students classify cards as:
@@ -1313,13 +1312,12 @@ into user-friendly and safe messages.
 
 ---
 
-## 35. Homework
-
-### Homework Part A
+## 35. Independent practice
+### Independent practice part A
 
 Explain exception handling and robustness in 8-10 sentences using one realistic example.
 
-### Homework Part B
+### Independent practice part B
 
 Write pseudocode for:
 
@@ -1331,7 +1329,7 @@ Write pseudocode for:
 5. retry until valid integer input
 ```
 
-### Homework Part C
+### Independent practice part C
 
 Create test data for a program that accepts ages 12 to 18 inclusive.
 
@@ -1345,7 +1343,7 @@ invalid type
 empty input
 ```
 
-### Homework Part D
+### Independent practice part D
 
 Correct these misconceptions:
 

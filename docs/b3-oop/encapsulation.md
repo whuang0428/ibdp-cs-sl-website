@@ -982,8 +982,7 @@ mark = 75
 
 ---
 
-## 22. Practice Activity
-
+## 22. Practice task
 ### Activity 1: Safe Box Analogy
 
 Students imagine object attributes inside a locked box.
@@ -1026,15 +1025,14 @@ Students discuss why some attributes should be read-only or controlled carefully
 
 ---
 
-## 23. Homework
-
-### Homework Part A: Concept Explanation
+## 23. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain encapsulation using a bank account or student mark example.
 
 ---
 
-### Homework Part B: Java Code
+### Independent practice part B: Java Code
 
 Create a `BankAccount` class with:
 
@@ -1052,7 +1050,7 @@ Make sure invalid withdrawals are rejected.
 
 ---
 
-### Homework Part C: Design Task
+### Independent practice part C: Design Task
 
 Choose one class:
 
@@ -1073,7 +1071,7 @@ which methods should validate input
 
 ---
 
-### Homework Part D: Trace
+### Independent practice part D: Trace
 
 Trace this account state:
 

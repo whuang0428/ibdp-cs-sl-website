@@ -1091,8 +1091,7 @@ One advantage is automation, because the machine can run a washing program witho
 
 ---
 
-## 29. Practice Activity
-
+## 29. Practice task
 ### Activity 1: Sensor and Actuator Sort
 
 Students sort cards into:
@@ -1164,15 +1163,14 @@ They must justify their answers.
 
 ---
 
-## 30. Homework
-
-### Homework Part A: Concept Explanation
+## 30. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain how a control system uses sensors, a controller, and actuators.
 
 ---
 
-### Homework Part B: Scenario Analysis
+### Independent practice part B: Scenario Analysis
 
 Choose one system:
 
@@ -1197,7 +1195,7 @@ whether it is open-loop or closed-loop
 
 ---
 
-### Homework Part C: Pseudocode
+### Independent practice part C: Pseudocode
 
 Write pseudocode for one of these systems:
 
@@ -1209,7 +1207,7 @@ pump turns on if soil moisture is below threshold
 
 ---
 
-### Homework Part D: Written Answer
+### Independent practice part D: Written Answer
 
 Explain why feedback can make a control system more accurate, but also more complex.
 

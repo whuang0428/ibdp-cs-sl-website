@@ -881,8 +881,7 @@ This is incorrect because a class is a blueprint or template, not a specific obj
 
 ---
 
-## 20. Practice Activity
-
+## 20. Practice task
 ### Activity 1: Blueprint vs Object Cards
 
 Give students cards such as:
@@ -945,15 +944,14 @@ two example objects
 
 ---
 
-## 21. Homework
-
-### Homework Part A: Concept Explanation
+## 21. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between a class and an object using your own example.
 
 ---
 
-### Homework Part B: Design Task
+### Independent practice part B: Design Task
 
 Design a `GameCharacter` class.
 
@@ -967,7 +965,7 @@ at least 3 possible objects
 
 ---
 
-### Homework Part C: Java Code
+### Independent practice part C: Java Code
 
 Write a simple Java class called `Book` with:
 
@@ -982,7 +980,7 @@ Then create two Book objects in a separate main class.
 
 ---
 
-### Homework Part D: Trace
+### Independent practice part D: Trace
 
 Given this code:
 

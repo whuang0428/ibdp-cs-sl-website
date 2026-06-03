@@ -781,8 +781,7 @@ B2 Programming
 
 ---
 
-## 29. Practice Activity
-
+## 29. Practice task
 ### Activity 1: CN to EN Fast Recall
 
 Students translate terms quickly:
@@ -825,9 +824,8 @@ one example for each
 
 ---
 
-## 30. Homework
-
-### Homework Part A
+## 30. Independent practice
+### Independent practice part A
 
 Create a personal vocabulary table with:
 
@@ -841,11 +839,11 @@ exam sentence
 
 Use at least 30 terms.
 
-### Homework Part B
+### Independent practice part B
 
 Choose 10 confusing pairs and write the difference in one sentence each.
 
-### Homework Part C
+### Independent practice part C
 
 Rewrite these vague answers:
 
@@ -857,7 +855,7 @@ A model learns from data.
 A firewall stops hackers.
 ```
 
-### Homework Part D
+### Independent practice part D
 
 Answer:
 

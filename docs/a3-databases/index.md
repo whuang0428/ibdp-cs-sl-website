@@ -98,12 +98,6 @@ Finally, they learn design quality, reliability, recovery, security, privacy, an
 | 9 | Database Security and Privacy | access control, authentication, encryption, privacy principles | [Open](./database-security-privacy) |
 | 10 | ERD Basics | entities, attributes, relationships, cardinality, ERD to tables | [Open](./erd-basics) |
 
-::: warning File Name Note
-This overview uses your current stable A3 file names, including `sql-select.md` and `sql-conditions-sorting.md`.
-:::
-
----
-
 ## 5. Concept Map
 
 ```text
@@ -128,8 +122,8 @@ Security / Privacy
 ERD Design
 ```
 
-::: tip Teaching Strategy
-Do not teach SQL before students understand tables, fields, keys, and relationships. Otherwise students may write queries mechanically without understanding where the data comes from.
+::: tip How to study this page
+Learn tables, fields, keys, and relationships before SQL. This makes it easier to understand where query results come from instead of writing SQL mechanically.
 :::
 
 ---

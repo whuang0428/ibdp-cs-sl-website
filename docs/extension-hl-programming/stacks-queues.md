@@ -1411,13 +1411,12 @@ function call tracking
 
 ---
 
-## 38. Practice Activity
-
+## 38. Practice task
 ### Activity 1: Human Stack
 
 Students hold cards and stand as a stack.
 
-Teacher calls:
+Use these stack operations:
 
 ```text
 push A
@@ -1435,7 +1434,7 @@ Students physically add/remove from the top.
 
 Students stand in a line.
 
-Teacher calls:
+Use these queue operations:
 
 ```text
 enqueue A
@@ -1474,13 +1473,12 @@ Then explain why.
 
 ---
 
-## 39. Homework
-
-### Homework Part A
+## 39. Independent practice
+### Independent practice part A
 
 Explain stacks and queues in 8-10 sentences using your own examples.
 
-### Homework Part B
+### Independent practice part B
 
 Trace these stack operations:
 
@@ -1494,7 +1492,7 @@ peek()
 pop()
 ```
 
-### Homework Part C
+### Independent practice part C
 
 Trace these queue operations:
 
@@ -1508,7 +1506,7 @@ front()
 dequeue()
 ```
 
-### Homework Part D
+### Independent practice part D
 
 Write short answers:
 
@@ -1520,7 +1518,7 @@ Write short answers:
 5. How is recursion connected to stacks?
 ```
 
-### Homework Part E
+### Independent practice part E
 
 Correct these misconceptions:
 

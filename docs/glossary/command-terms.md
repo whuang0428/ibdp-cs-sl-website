@@ -1272,8 +1272,7 @@ Machine learning is smart.
 
 ---
 
-## 34. Practice Activity
-
+## 34. Practice task
 ### Activity 1: Command Term Sorting
 
 Students sort command terms into:
@@ -1319,9 +1318,8 @@ Better: A backup is a copy of data that can be restored if the original data is 
 
 ---
 
-## 35. Homework
-
-### Homework Part A
+## 35. Independent practice
+### Independent practice part A
 
 Create a command term revision table with:
 
@@ -1335,7 +1333,7 @@ model answer
 
 Use at least 10 command terms.
 
-### Homework Part B
+### Independent practice part B
 
 For one topic, such as databases or networks, write:
 
@@ -1349,7 +1347,7 @@ For one topic, such as databases or networks, write:
 
 Then answer each one.
 
-### Homework Part C
+### Independent practice part C
 
 Rewrite these answers:
 
@@ -1361,7 +1359,7 @@ A trace table checks code.
 A foreign key is another key.
 ```
 
-### Homework Part D
+### Independent practice part D
 
 Answer:
 

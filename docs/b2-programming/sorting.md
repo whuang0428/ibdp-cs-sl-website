@@ -953,8 +953,7 @@ Bubble sort and linear search are different algorithms. Linear search looks thro
 
 ---
 
-## 20. Practice Activity
-
+## 20. Practice task
 ### Activity 1: Human Bubble Sort
 
 Students stand in a line holding number cards.
@@ -990,9 +989,8 @@ Groups sort card arrays using bubble sort rules only. They must record each pass
 
 ---
 
-## 21. Homework
-
-### Homework Part A: Trace
+## 21. Independent practice
+### Independent practice part A: Trace
 
 Trace full bubble sort for:
 
@@ -1004,7 +1002,7 @@ Show each comparison and array state.
 
 ---
 
-### Homework Part B: Write Code
+### Independent practice part B: Write Code
 
 Write Java code that sorts this array in ascending order using bubble sort:
 
@@ -1016,13 +1014,13 @@ Then output the sorted array.
 
 ---
 
-### Homework Part C: Descending Order
+### Independent practice part C: Descending Order
 
 Modify your code from Part B to sort in descending order.
 
 ---
 
-### Homework Part D: Explain
+### Independent practice part D: Explain
 
 In 4-5 sentences, explain why nested loops are often used in sorting algorithms.
 

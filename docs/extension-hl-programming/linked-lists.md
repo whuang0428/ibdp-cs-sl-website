@@ -1209,8 +1209,7 @@ Compare linked lists and arrays.
 
 ---
 
-## 36. Practice Activity
-
+## 36. Practice task
 ### Activity 1: Human Linked List
 
 Students each hold:
@@ -1275,13 +1274,12 @@ They must justify the choice using mark scheme language.
 
 ---
 
-## 37. Homework
-
-### Homework Part A
+## 37. Independent practice
+### Independent practice part A
 
 Explain linked lists in 8-10 sentences using a playlist as an example.
 
-### Homework Part B
+### Independent practice part B
 
 Draw diagrams for:
 
@@ -1293,7 +1291,7 @@ Draw diagrams for:
 5. delete middle node
 ```
 
-### Homework Part C
+### Independent practice part C
 
 Write pseudocode for:
 
@@ -1305,7 +1303,7 @@ Write pseudocode for:
 5. insert at head
 ```
 
-### Homework Part D
+### Independent practice part D
 
 Correct these misconceptions:
 

@@ -1074,8 +1074,7 @@ One risk is unauthorized access to student or staff data if permissions are weak
 
 ---
 
-## 29. Practice Activity
-
+## 29. Practice task
 ### Activity 1: Network Map
 
 Students draw a simple home or school network with:
@@ -1136,15 +1135,14 @@ response
 
 ---
 
-## 30. Homework
-
-### Homework Part A: Concept Explanation
+## 30. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what a computer network is and why networks are useful.
 
 ---
 
-### Homework Part B: Scenario Analysis
+### Independent practice part B: Scenario Analysis
 
 A school wants to connect 30 classroom computers, 3 printers, a file server, and internet access.
 
@@ -1159,7 +1157,7 @@ Explain:
 
 ---
 
-### Homework Part C: Vocabulary Table
+### Independent practice part C: Vocabulary Table
 
 Create a table for:
 
@@ -1184,7 +1182,7 @@ one example
 
 ---
 
-### Homework Part D: Written Answer
+### Independent practice part D: Written Answer
 
 Explain why high bandwidth does not always mean a network will feel fast for online gaming.
 

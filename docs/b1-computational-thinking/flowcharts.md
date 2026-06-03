@@ -1247,8 +1247,7 @@ This is a problem because it is unclear which branch should be followed when the
 
 ---
 
-## 37. Practice Activity
-
+## 37. Practice task
 ### Activity 1: Symbol Match
 
 Students match symbols to meanings:
@@ -1306,15 +1305,14 @@ Students identify and fix the issue.
 
 ---
 
-## 38. Homework
-
-### Homework Part A: Concept Explanation
+## 38. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what a flowchart is and how it can show sequence, selection, and iteration.
 
 ---
 
-### Homework Part B: Flowchart Design
+### Independent practice part B: Flowchart Design
 
 Draw or describe flowcharts for:
 
@@ -1327,7 +1325,7 @@ Draw or describe flowcharts for:
 
 ---
 
-### Homework Part C: Conversion
+### Independent practice part C: Conversion
 
 Convert this pseudocode into a flowchart description:
 
@@ -1346,7 +1344,7 @@ OUTPUT finalPrice
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

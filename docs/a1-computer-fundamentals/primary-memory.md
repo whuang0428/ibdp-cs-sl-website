@@ -898,8 +898,7 @@ More RAM can improve performance when the system does not have enough memory for
 
 ---
 
-## 27. Practice Activity
-
+## 27. Practice task
 ### Activity 1: Memory Hierarchy Cards
 
 Students arrange cards from fastest/smallest to slowest/largest:
@@ -950,15 +949,14 @@ They simulate opening and running an application.
 
 ---
 
-## 28. Homework
-
-### Homework Part A: Concept Explanation
+## 28. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between RAM, ROM, and cache.
 
 ---
 
-### Homework Part B: Comparison Table
+### Independent practice part B: Comparison Table
 
 Create a comparison table for:
 
@@ -981,7 +979,7 @@ volatile or non-volatile
 
 ---
 
-### Homework Part C: Scenario Explanation
+### Independent practice part C: Scenario Explanation
 
 A student's computer slows down when many browser tabs, an IDE, and a video call are open.
 
@@ -996,7 +994,7 @@ why adding RAM may not solve every performance problem
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

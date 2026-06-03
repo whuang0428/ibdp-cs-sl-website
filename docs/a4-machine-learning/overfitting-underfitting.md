@@ -1309,8 +1309,7 @@ Testing on unseen data is important because a model may perform well on the data
 
 ---
 
-## 42. Practice Activity
-
+## 42. Practice task
 ### Activity 1: Diagnose the Model
 
 Students classify each result:
@@ -1363,15 +1362,14 @@ Students recommend fixes.
 
 ---
 
-## 43. Homework
-
-### Homework Part A: Concept Explanation
+## 43. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain the difference between overfitting and underfitting.
 
 ---
 
-### Homework Part B: Result Interpretation
+### Independent practice part B: Result Interpretation
 
 For each result, identify the likely problem:
 
@@ -1385,7 +1383,7 @@ For each result, identify the likely problem:
 
 ---
 
-### Homework Part C: Scenario Fixes
+### Independent practice part C: Scenario Fixes
 
 For each scenario, suggest one fix:
 
@@ -1399,7 +1397,7 @@ For each scenario, suggest one fix:
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

@@ -1393,8 +1393,7 @@ Data minimization should be used so only necessary data is collected. Consent or
 
 ---
 
-## 43. Practice Activity
-
+## 43. Practice task
 ### Activity 1: Bias Detective
 
 Students review scenarios:
@@ -1452,15 +1451,14 @@ They debate whether an ML system should be used and what safeguards are required
 
 ---
 
-## 44. Homework
-
-### Homework Part A: Concept Explanation
+## 44. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain why bias, ethics, and privacy matter in machine learning.
 
 ---
 
-### Homework Part B: Scenario Analysis
+### Independent practice part B: Scenario Analysis
 
 Choose one ML system:
 
@@ -1486,7 +1484,7 @@ Write:
 
 ---
 
-### Homework Part C: Misconception Correction
+### Independent practice part C: Misconception Correction
 
 Correct these statements:
 
@@ -1500,7 +1498,7 @@ Human oversight is not needed if the model is accurate.
 
 ---
 
-### Homework Part D: Short Exam Answer
+### Independent practice part D: Short Exam Answer
 
 Answer in exam style:
 

@@ -1392,8 +1392,7 @@ Identify two foreign keys and explain their purpose.
 
 ---
 
-## 36. Practice Activity
-
+## 36. Practice task
 ### Activity 1: Key Labeling
 
 Give students several table schemas and ask them to label:
@@ -1452,15 +1451,14 @@ possible integrity problems
 
 ---
 
-## 37. Homework
-
-### Homework Part A: Concept Explanation
+## 37. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain the difference between primary keys and foreign keys using a school database example.
 
 ---
 
-### Homework Part B: Key Identification
+### Independent practice part B: Key Identification
 
 For this schema, identify primary and foreign keys:
 
@@ -1474,7 +1472,7 @@ Explain each key.
 
 ---
 
-### Homework Part C: Scenario Design
+### Independent practice part C: Scenario Design
 
 Design a simple library database with:
 
@@ -1494,7 +1492,7 @@ one explanation of how the tables are linked
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

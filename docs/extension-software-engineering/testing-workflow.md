@@ -26,7 +26,7 @@ A test is stronger when it has clear test data, a predicted expected result, an 
 | Invalid test | Uses data that should be rejected | Enter letters where a number is required |
 | Extreme test | Uses unusually large or small data | Add a very long task description |
 | Regression test | Rechecks old features after a change | Test borrowing again after changing return logic |
-| User testing | Lets a real user try the software | Ask a classmate to use the homework tracker and report confusion |
+| User testing | Lets a real user try the software | Ask a classmate to use the study task tracker and report confusion |
 
 Different test types find different problems. A good testing plan uses more than one type.
 

@@ -1244,8 +1244,7 @@ Decomposition means breaking a problem into smaller sub-problems, while abstract
 
 ---
 
-## 34. Practice Activity
-
+## 34. Practice task
 ### Activity 1: System Breakdown
 
 Groups choose one system:
@@ -1299,15 +1298,14 @@ shopping cart: add item, remove item, update quantity, calculate total
 
 ---
 
-## 35. Homework
-
-### Homework Part A: Concept Explanation
+## 35. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what decomposition is and why it is useful.
 
 ---
 
-### Homework Part B: Scenario Decomposition
+### Independent practice part B: Scenario Decomposition
 
 Choose one system and decompose it into at least six sub-problems:
 
@@ -1324,14 +1322,14 @@ For each sub-problem, write one sentence explaining what it does.
 
 ---
 
-### Homework Part C: Testing Link
+### Independent practice part C: Testing Link
 
 Choose three sub-problems from your system.  
 For each one, describe how it could be tested separately.
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

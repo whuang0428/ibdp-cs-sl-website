@@ -1053,8 +1053,7 @@ This is a logic error because the program runs but does not produce the expected
 
 ---
 
-## 24. Practice Activity
-
+## 24. Practice task
 ### Activity 1: Human Program
 
 Students act as program statements. Each student holds one instruction. The class executes the instructions in order and records the output.
@@ -1102,9 +1101,8 @@ Then they explain their choice.
 
 ---
 
-## 25. Homework
-
-### Homework Part A: Write a Simple Program
+## 25. Independent practice
+### Independent practice part A: Write a Simple Program
 
 Write a Java program that:
 
@@ -1120,7 +1118,7 @@ My name is Alice and I am 16 years old.
 
 ---
 
-### Homework Part B: Pseudocode to Java
+### Independent practice part B: Pseudocode to Java
 
 Convert this pseudocode to Java:
 
@@ -1133,7 +1131,7 @@ OUTPUT area
 
 ---
 
-### Homework Part C: Trace
+### Independent practice part C: Trace
 
 Trace this code:
 
@@ -1151,7 +1149,7 @@ System.out.println(y);
 
 ---
 
-### Homework Part D: Explain
+### Independent practice part D: Explain
 
 In 4-5 sentences, explain why beginners should write and test small pieces of code rather than writing a full program all at once.
 

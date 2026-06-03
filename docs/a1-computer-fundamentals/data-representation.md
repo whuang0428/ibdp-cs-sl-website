@@ -1165,8 +1165,7 @@ Answer:
 
 ---
 
-## 31. Practice Activity
-
+## 31. Practice task
 ### Activity 1: Binary Human Place Values
 
 Eight students hold place value cards:
@@ -1209,9 +1208,8 @@ quality
 
 ---
 
-## 32. Homework
-
-### Homework Part A: Binary Practice
+## 32. Independent practice
+### Independent practice part A: Binary Practice
 
 Convert:
 
@@ -1235,13 +1233,13 @@ to 8-bit binary.
 
 ---
 
-### Homework Part B: Character Sets
+### Independent practice part B: Character Sets
 
 In 5-6 sentences, explain why Unicode is needed even though ASCII exists.
 
 ---
 
-### Homework Part C: Image Calculation
+### Independent practice part C: Image Calculation
 
 An image is:
 
@@ -1266,7 +1264,7 @@ Use:
 
 ---
 
-### Homework Part D: Sound Calculation
+### Independent practice part D: Sound Calculation
 
 A mono audio file is:
 

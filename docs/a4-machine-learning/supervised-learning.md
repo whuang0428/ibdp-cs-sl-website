@@ -231,7 +231,7 @@ The model learns a relationship between the features and the label.
 
 A model predicts whether a student will pass.
 
-| AttendanceRate | PreviousScore | HomeworkRate | Label |
+| AttendanceRate | PreviousScore | StudyTaskRate | Label |
 |---:|---:|---:|---|
 | 95 | 82 | 90 | Pass |
 | 60 | 45 | 40 | Fail |
@@ -242,7 +242,7 @@ Features:
 ```text
 AttendanceRate
 PreviousScore
-HomeworkRate
+StudyTaskRate
 ```
 
 Label:
@@ -1140,7 +1140,7 @@ Predict whether a student will pass.
 ```text
 attendance rate
 previous scores
-homework completion
+study task completion
 LMS activity
 late submissions
 ```
@@ -1463,8 +1463,7 @@ One limitation is that supervised learning requires labelled data, which may be 
 
 ---
 
-## 45. Practice Activity
-
+## 45. Practice task
 ### Activity 1: Scenario Sorting
 
 Students classify scenarios as classification or regression:
@@ -1522,15 +1521,14 @@ how this affects real users
 
 ---
 
-## 46. Homework
-
-### Homework Part A: Concept Explanation
+## 46. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain how supervised learning works and why labelled data is important.
 
 ---
 
-### Homework Part B: Scenario Table
+### Independent practice part B: Scenario Table
 
 Complete a table for five supervised learning scenarios:
 
@@ -1544,7 +1542,7 @@ possible limitation
 
 ---
 
-### Homework Part C: Classification or Regression
+### Independent practice part C: Classification or Regression
 
 For each task, state whether it is classification or regression and explain why:
 
@@ -1558,7 +1556,7 @@ For each task, state whether it is classification or regression and explain why:
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

@@ -1435,8 +1435,7 @@ One limitation is that the model depends on training data. If the data is biased
 
 ---
 
-## 40. Practice Activity
-
+## 40. Practice task
 ### Activity 1: Is It ML?
 
 Students classify examples as traditional programming or machine learning:
@@ -1495,15 +1494,14 @@ why human oversight matters
 
 ---
 
-## 41. Homework
-
-### Homework Part A: Concept Explanation
+## 41. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what machine learning is and how it differs from traditional programming.
 
 ---
 
-### Homework Part B: Scenario Table
+### Independent practice part B: Scenario Table
 
 Choose three ML applications.
 
@@ -1520,7 +1518,7 @@ possible limitation or risk
 
 ---
 
-### Homework Part C: Classification or Regression
+### Independent practice part C: Classification or Regression
 
 Classify each as classification or regression and explain why:
 
@@ -1534,7 +1532,7 @@ Classify each as classification or regression and explain why:
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

@@ -1013,8 +1013,7 @@ Cloud storage is useful because files can be accessed from different devices, sh
 
 ---
 
-## 29. Practice Activity
-
+## 29. Practice task
 ### Activity 1: Storage Ranking
 
 Students rank storage options by:
@@ -1079,15 +1078,14 @@ how restore is tested
 
 ---
 
-## 30. Homework
-
-### Homework Part A: Concept Explanation
+## 30. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what secondary storage is and why it is needed.
 
 ---
 
-### Homework Part B: Comparison Table
+### Independent practice part B: Comparison Table
 
 Create a comparison table for:
 
@@ -1111,7 +1109,7 @@ best use
 
 ---
 
-### Homework Part C: Scenario Recommendation
+### Independent practice part C: Scenario Recommendation
 
 Recommend suitable storage for each:
 
@@ -1127,7 +1125,7 @@ Explain each choice.
 
 ---
 
-### Homework Part D: Written Answer
+### Independent practice part D: Written Answer
 
 Explain why backup and storage security are important when storing personal data.
 

@@ -1218,8 +1218,7 @@ The heating turns on only when `A` is 1, meaning the temperature is low, and `B`
 
 ---
 
-## 31. Practice Activity
-
+## 31. Practice task
 ### Activity 1: Human Logic Gates
 
 Students hold cards:
@@ -1269,9 +1268,8 @@ Students identify inputs, output, and Boolean expression.
 
 ---
 
-## 32. Homework
-
-### Homework Part A: Truth Tables
+## 32. Independent practice
+### Independent practice part A: Truth Tables
 
 Construct truth tables for:
 
@@ -1284,7 +1282,7 @@ A OR (NOT B)
 
 ---
 
-### Homework Part B: Scenario Expressions
+### Independent practice part B: Scenario Expressions
 
 Write Boolean expressions for:
 
@@ -1295,13 +1293,13 @@ Write Boolean expressions for:
 
 ---
 
-### Homework Part C: Written Explanation
+### Independent practice part C: Written Explanation
 
 In 5-6 sentences, explain how logic gates are related to binary and digital circuits.
 
 ---
 
-### Homework Part D: Mistake Correction
+### Independent practice part D: Mistake Correction
 
 Correct these statements:
 

@@ -1595,8 +1595,7 @@ One threat is unauthorized access, where a student or attacker may try to view o
 
 ---
 
-## 42. Practice Activity
-
+## 42. Practice task
 ### Activity 1: Threat and Control Matching
 
 Students match threats to controls:
@@ -1659,15 +1658,14 @@ fake login page
 
 ---
 
-## 43. Homework
-
-### Homework Part A: Concept Explanation
+## 43. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain why network security is important for a school.
 
 ---
 
-### Homework Part B: Threat Table
+### Independent practice part B: Threat Table
 
 Create a table for:
 
@@ -1690,7 +1688,7 @@ one protection method
 
 ---
 
-### Homework Part C: Scenario Recommendation
+### Independent practice part C: Scenario Recommendation
 
 A small business stores customer data and uses cloud storage.
 
@@ -1698,7 +1696,7 @@ Recommend five security measures and explain why each is useful.
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

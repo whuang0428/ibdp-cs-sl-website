@@ -1037,8 +1037,7 @@ This is incorrect because packet switching allows packets to be routed independe
 
 ---
 
-## 32. Practice Activity
-
+## 32. Practice task
 ### Activity 1: Human Packet Switching
 
 Students act as:
@@ -1102,15 +1101,14 @@ reassembly
 
 ---
 
-## 33. Homework
-
-### Homework Part A: Concept Explanation
+## 33. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain packet switching using the example of sending a photo.
 
 ---
 
-### Homework Part B: Packet Table
+### Independent practice part B: Packet Table
 
 Create a table explaining:
 
@@ -1132,7 +1130,7 @@ why it is needed
 
 ---
 
-### Homework Part C: Scenario Question
+### Independent practice part C: Scenario Question
 
 A video call is experiencing delay and occasional frozen frames.
 
@@ -1140,7 +1138,7 @@ Explain how packet loss, latency, and retransmission choices may affect the call
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

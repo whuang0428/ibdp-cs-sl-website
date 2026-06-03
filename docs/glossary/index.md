@@ -29,12 +29,6 @@ Computer Science answers often lose marks because students understand the idea b
 | 3 | Core Vocabulary CN-EN | important computer science words in Chinese and English | [Open](./core-vocabulary-cn-en) |
 | 4 | Pseudocode and Java Cheatsheet | pseudocode logic and Java-style reference | [Open](./pseudocode-java-cheatsheet) |
 
-::: warning Folder Name Note
-The real folder name is `docs/glossary`, matching the sidebar link `/glossary/`.
-:::
-
----
-
 ## 3. Learning Goals
 
 By the end of this section, students should be able to:
@@ -652,8 +646,7 @@ Choose five command terms and explain what each one requires.
 
 ---
 
-## 18. Practice Activity
-
+## 18. Practice task
 ### Activity 1: Term → Definition → Example
 
 Students choose a term and complete:

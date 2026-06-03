@@ -1591,7 +1591,7 @@ regression
 Possible features:
 
 ```text
-attendance, homework completion, previous test scores, study time
+attendance, study task completion, previous test scores, study time
 ```
 
 Label:

@@ -943,8 +943,7 @@ A `FOR` loop is usually used when the number of repetitions is known in advance.
 
 ---
 
-## 18. Practice Activity
-
+## 18. Practice task
 ### Activity 1: Human Loop Trace
 
 Students act as loop variables.
@@ -980,9 +979,8 @@ Students must predict output before using the computer. This builds tracing skil
 
 ---
 
-## 19. Homework
-
-### Homework Part A: Trace
+## 19. Independent practice
+### Independent practice part A: Trace
 
 Trace this code:
 
@@ -1002,7 +1000,7 @@ Create a trace table with columns:
 iteration, i, total
 ```
 
-### Homework Part B: Write Code
+### Independent practice part B: Write Code
 
 Write a Java program that:
 
@@ -1012,7 +1010,7 @@ Write a Java program that:
 4. outputs the average
 5. outputs `"Pass average"` if the average is at least 50
 
-### Homework Part C: Debug
+### Independent practice part C: Debug
 
 Find and correct the loop error:
 
@@ -1025,7 +1023,7 @@ while (i < 10) {
 }
 ```
 
-### Homework Part D: Explain
+### Independent practice part D: Explain
 
 In 4-5 sentences, explain why tracing loops is important when debugging programs.
 

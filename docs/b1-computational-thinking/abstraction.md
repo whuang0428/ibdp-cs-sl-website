@@ -1277,8 +1277,7 @@ A risk of poor abstraction is that important details may be removed. For example
 
 ---
 
-## 34. Practice Activity
-
+## 34. Practice task
 ### Activity 1: Keep or Ignore
 
 Give students a scenario:
@@ -1341,15 +1340,14 @@ one risk if an important detail is removed
 
 ---
 
-## 35. Homework
-
-### Homework Part A: Concept Explanation
+## 35. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what abstraction is and why it is useful in computational thinking.
 
 ---
 
-### Homework Part B: Scenario Table
+### Independent practice part B: Scenario Table
 
 Choose three systems and complete:
 
@@ -1375,13 +1373,13 @@ attendance system
 
 ---
 
-### Homework Part C: Compare
+### Independent practice part C: Compare
 
 Explain the difference between decomposition and abstraction using your own example.
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

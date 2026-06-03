@@ -961,8 +961,7 @@ A trace table records the values of variables step by step as a program or algor
 
 ---
 
-## 20. Practice Activity
-
+## 20. Practice task
 ### Activity 1: Error Sorting
 
 Students receive code cards. They classify each error as:
@@ -1004,9 +1003,8 @@ Groups receive short Java programs with hidden errors. They must:
 
 ---
 
-## 21. Homework
-
-### Homework Part A: Test Table
+## 21. Independent practice
+### Independent practice part A: Test Table
 
 Create a test table for a program that accepts a password length from 8 to 20 characters inclusive.
 
@@ -1021,7 +1019,7 @@ Include:
 
 ---
 
-### Homework Part B: Debug Code
+### Independent practice part B: Debug Code
 
 Find and fix all errors:
 
@@ -1042,13 +1040,13 @@ Assume 50 is a pass mark.
 
 ---
 
-### Homework Part C: Explanation
+### Independent practice part C: Explanation
 
 In 4-5 sentences, explain the difference between syntax, runtime, and logic errors.
 
 ---
 
-### Homework Part D: Trace
+### Independent practice part D: Trace
 
 Trace this code:
 

@@ -982,8 +982,7 @@ A UML class diagram can show encapsulation using visibility symbols. Private att
 
 ---
 
-## 21. Practice Activity
-
+## 21. Practice task
 ### Activity 1: UML Card Sorting
 
 Give students cards containing:
@@ -1027,9 +1026,8 @@ Groups receive a UML class diagram. They write the Java class skeleton with attr
 
 ---
 
-## 22. Homework
-
-### Homework Part A: UML Design
+## 22. Independent practice
+### Independent practice part A: UML Design
 
 Create a UML class diagram for a `Laptop` class.
 
@@ -1048,7 +1046,7 @@ upgradeRam()
 
 ---
 
-### Homework Part B: Java to UML
+### Independent practice part B: Java to UML
 
 Convert this Java class to UML:
 
@@ -1072,7 +1070,7 @@ public class Course {
 
 ---
 
-### Homework Part C: UML to Java
+### Independent practice part C: UML to Java
 
 Convert this UML to a Java class skeleton:
 
@@ -1092,7 +1090,7 @@ GameCharacter
 
 ---
 
-### Homework Part D: Explanation
+### Independent practice part D: Explanation
 
 In 4-5 sentences, explain how UML helps programmers plan before writing code.
 

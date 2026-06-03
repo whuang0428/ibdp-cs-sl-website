@@ -1014,8 +1014,7 @@ The operating system receives the print request from the application software an
 
 ---
 
-## 29. Practice Activity
-
+## 29. Practice task
 ### Activity 1: OS Function Matching
 
 Match tasks to OS functions:
@@ -1078,15 +1077,14 @@ They role-play opening, editing, saving, and printing a document.
 
 ---
 
-## 30. Homework
-
-### Homework Part A: Concept Explanation
+## 30. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what an operating system is and why it is needed.
 
 ---
 
-### Homework Part B: Function Table
+### Independent practice part B: Function Table
 
 Create a table for these OS functions:
 
@@ -1108,7 +1106,7 @@ one example
 
 ---
 
-### Homework Part C: Scenario Explanation
+### Independent practice part C: Scenario Explanation
 
 A student opens a browser, joins a video call, downloads a file, and saves a screenshot.
 
@@ -1116,7 +1114,7 @@ Explain at least four OS functions involved.
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

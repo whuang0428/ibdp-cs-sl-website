@@ -927,7 +927,7 @@ This pattern is useful for:
 
 ```text
 attendance totals
-missing homework counts
+missing assignment counts
 inventory low-stock counts
 quiz correct answer counts
 ```
@@ -1416,7 +1416,7 @@ This algorithm takes [input]. It processes the data by [main steps]. It uses [lo
 ### Example
 
 ```text
-This algorithm takes a student name as input. It loops through the list of homework records and compares each record's student name with the input. Matching records are added to a results list. The output is a table of all matching records. This supports the success criterion that the teacher can search homework history by student name.
+This algorithm takes a student name as input. It loops through the list of assignment records and compares each record's student name with the input. Matching records are added to a results list. The output is a table of all matching records. This supports the success criterion that a user can search assignment history by student name.
 ```
 
 ---
@@ -1537,7 +1537,7 @@ output
 
 ---
 
-## 44. Mini Example: Count Missing Homework
+## 44. Mini Example: Count Missing Assignments
 
 ### Pseudocode
 
@@ -1812,8 +1812,7 @@ if (name == "Anna") {
 
 ---
 
-## 48. Practice Activity
-
+## 48. Practice task
 ### Activity 1: Pseudocode to Java Relay
 
 Students convert small pseudocode fragments into Java:
@@ -1858,9 +1857,8 @@ wrong logical operator
 
 ---
 
-## 49. Homework
-
-### Homework Part A
+## 49. Independent practice
+### Independent practice part A
 
 Create a two-column table:
 
@@ -1871,7 +1869,7 @@ Java
 
 Include at least 12 structures.
 
-### Homework Part B
+### Independent practice part B
 
 Write Java code for:
 
@@ -1883,11 +1881,11 @@ Write Java code for:
 5. validate a mark from 0 to 100
 ```
 
-### Homework Part C
+### Independent practice part C
 
 Create trace tables for three short algorithms.
 
-### Homework Part D
+### Independent practice part D
 
 Answer:
 

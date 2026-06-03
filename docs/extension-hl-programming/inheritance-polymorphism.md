@@ -1399,8 +1399,7 @@ Write a Java-style example with a superclass and one subclass.
 
 ---
 
-## 34. Practice Activity
-
+## 34. Practice task
 ### Activity 1: Is-a or Has-a?
 
 Students sort cards into:
@@ -1460,7 +1459,7 @@ Cat
 Bird
 ```
 
-Teacher calls:
+Use this method call:
 
 ```text
 makeSound()
@@ -1468,17 +1467,16 @@ makeSound()
 
 Each student responds differently.
 
-Class explains why this is polymorphism.
+Explain why this is polymorphism.
 
 ---
 
-## 35. Homework
-
-### Homework Part A
+## 35. Independent practice
+### Independent practice part A
 
 Explain inheritance and polymorphism in 8-10 sentences using your own example.
 
-### Homework Part B
+### Independent practice part B
 
 Create a class hierarchy for one of these:
 
@@ -1500,7 +1498,7 @@ two shared methods
 one overridden method
 ```
 
-### Homework Part C
+### Independent practice part C
 
 Answer:
 
@@ -1512,7 +1510,7 @@ Answer:
 5. Why can deep inheritance hierarchies be hard to maintain?
 ```
 
-### Homework Part D
+### Independent practice part D
 
 Correct these misconceptions:
 

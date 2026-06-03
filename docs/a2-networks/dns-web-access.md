@@ -1192,8 +1192,7 @@ A 404 error means that the server was reached but the requested resource or path
 
 ---
 
-## 34. Practice Activity
-
+## 34. Practice task
 ### Activity 1: Web Access Role-play
 
 Students act as:
@@ -1248,15 +1247,14 @@ Students identify likely causes.
 
 ---
 
-## 35. Homework
-
-### Homework Part A: Process Explanation
+## 35. Independent practice
+### Independent practice part A: Process Explanation
 
 In 8-10 sentences, explain what happens when a browser opens an HTTPS website.
 
 ---
 
-### Homework Part B: Vocabulary Table
+### Independent practice part B: Vocabulary Table
 
 Create a table for:
 
@@ -1282,7 +1280,7 @@ example
 
 ---
 
-### Homework Part C: Scenario
+### Independent practice part C: Scenario
 
 A student says:
 
@@ -1294,7 +1292,7 @@ Explain why this is wrong and correct the statement.
 
 ---
 
-### Homework Part D: Security Answer
+### Independent practice part D: Security Answer
 
 Explain why HTTPS is important when logging into an online learning platform.
 

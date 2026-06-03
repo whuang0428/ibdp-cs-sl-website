@@ -857,7 +857,7 @@ Choose suitable Java data types for:
 student name
 student age
 student average mark
-whether homework is submitted
+whether an assignment is submitted
 student grade letter
 ```
 
@@ -1005,8 +1005,7 @@ A student ID is an identifier rather than a number used for calculation. If it i
 
 ---
 
-## 25. Practice Activity
-
+## 25. Practice task
 ### Activity 1: Data Type Sorting Cards
 
 Students receive cards with values such as:
@@ -1061,9 +1060,8 @@ Then they explain why the results are different.
 
 ---
 
-## 26. Homework
-
-### Homework Part A: Choose Types
+## 26. Independent practice
+### Independent practice part A: Choose Types
 
 For each data item, choose a Java type and explain why:
 
@@ -1078,7 +1076,7 @@ grade letter
 
 ---
 
-### Homework Part B: Debug
+### Independent practice part B: Debug
 
 Fix this Java code:
 
@@ -1091,7 +1089,7 @@ char grade = "B";
 
 ---
 
-### Homework Part C: Average
+### Independent practice part C: Average
 
 Write Java code that:
 
@@ -1102,7 +1100,7 @@ Write Java code that:
 
 ---
 
-### Homework Part D: Explanation
+### Independent practice part D: Explanation
 
 In 4-5 sentences, explain why `5 / 2` and `5 / 2.0` produce different results in Java.
 

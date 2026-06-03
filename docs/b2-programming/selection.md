@@ -1070,8 +1070,7 @@ Selection can be used to compare the input username and password with the stored
 
 ---
 
-## 23. Practice Activity
-
+## 23. Practice task
 ### Activity 1: Condition Cards
 
 Give students cards with conditions such as:
@@ -1115,9 +1114,8 @@ Give students incorrect selection code. They must identify:
 
 ---
 
-## 24. Homework
-
-### Homework Part A: Trace
+## 24. Independent practice
+### Independent practice part A: Trace
 
 Trace this code:
 
@@ -1139,7 +1137,7 @@ Explain why the output is produced.
 
 ---
 
-### Homework Part B: Write Code
+### Independent practice part B: Write Code
 
 Write Java code for this rule:
 
@@ -1151,7 +1149,7 @@ If temperature is above 25, output "Hot".
 
 ---
 
-### Homework Part C: Validation
+### Independent practice part C: Validation
 
 Write Java code that checks whether a username has a length of at least 5 characters.
 
@@ -1163,7 +1161,7 @@ username.length()
 
 ---
 
-### Homework Part D: Explanation
+### Independent practice part D: Explanation
 
 In 4-5 sentences, explain why the order of conditions matters in an `ELSE IF` chain.
 

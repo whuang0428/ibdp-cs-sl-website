@@ -1021,8 +1021,7 @@ A switch can connect wired classroom computers and printers within the LAN. Wire
 
 ---
 
-## 31. Practice Activity
-
+## 31. Practice task
 ### Activity 1: Device Matching
 
 Students match devices to roles:
@@ -1073,15 +1072,14 @@ Students identify possible device-related causes.
 
 ---
 
-## 32. Homework
-
-### Homework Part A: Concept Explanation
+## 32. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between switch, router, modem, and wireless access point.
 
 ---
 
-### Homework Part B: Device Table
+### Independent practice part B: Device Table
 
 Create a table for:
 
@@ -1104,7 +1102,7 @@ one example
 
 ---
 
-### Homework Part C: Network Diagram
+### Independent practice part C: Network Diagram
 
 Draw a simple home or school network and label:
 
@@ -1121,7 +1119,7 @@ server or printer
 
 ---
 
-### Homework Part D: Written Answer
+### Independent practice part D: Written Answer
 
 Explain why a firewall is useful but is not enough by itself to fully secure a network.
 

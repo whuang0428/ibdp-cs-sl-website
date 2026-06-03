@@ -1006,8 +1006,7 @@ Book(
 
 ---
 
-## 24. Practice Activity
-
+## 24. Practice task
 ### Activity 1: Human Table
 
 Students stand in rows to represent records.
@@ -1068,15 +1067,14 @@ Give students a table with repeated data. Groups must:
 
 ---
 
-## 25. Homework
-
-### Homework Part A: Concept Explanation
+## 25. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain table, record, field, and value using your own example.
 
 ---
 
-### Homework Part B: Table Reading
+### Independent practice part B: Table Reading
 
 Using this table:
 
@@ -1096,7 +1094,7 @@ Answer:
 
 ---
 
-### Homework Part C: Design Task
+### Independent practice part C: Design Task
 
 Design a `GamePlayer` table.
 
@@ -1110,7 +1108,7 @@ one field that could identify each player
 
 ---
 
-### Homework Part D: Bad Design Explanation
+### Independent practice part D: Bad Design Explanation
 
 Explain why this table design may cause problems:
 

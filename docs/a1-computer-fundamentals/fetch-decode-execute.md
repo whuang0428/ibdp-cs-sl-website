@@ -943,8 +943,7 @@ This is incorrect because a program contains many instructions. The CPU uses the
 
 ---
 
-## 27. Practice Activity
-
+## 27. Practice task
 ### Activity 1: Human Fetch-Decode-Execute
 
 Students act as:
@@ -1001,15 +1000,14 @@ for each instruction fetch.
 
 ---
 
-## 28. Homework
-
-### Homework Part A: Process Explanation
+## 28. Independent practice
+### Independent practice part A: Process Explanation
 
 In 6-8 sentences, explain the fetch-decode-execute cycle.
 
 ---
 
-### Homework Part B: Register Table
+### Independent practice part B: Register Table
 
 Complete a table for:
 
@@ -1030,7 +1028,7 @@ how it is used during the cycle
 
 ---
 
-### Homework Part C: Misconception Correction
+### Independent practice part C: Misconception Correction
 
 Correct these statements:
 
@@ -1044,7 +1042,7 @@ The cycle runs only once per program.
 
 ---
 
-### Homework Part D: Trace Task
+### Independent practice part D: Trace Task
 
 Given:
 

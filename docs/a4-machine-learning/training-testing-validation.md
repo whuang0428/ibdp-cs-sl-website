@@ -1265,8 +1265,7 @@ The test data may not be representative of current real-world conditions, for ex
 
 ---
 
-## 39. Practice Activity
-
+## 39. Practice task
 ### Activity 1: Human Data Split
 
 Give students 30 labelled example cards.
@@ -1311,15 +1310,14 @@ predict fraud using investigation result available only later
 
 ---
 
-## 40. Homework
-
-### Homework Part A: Concept Explanation
+## 40. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain why training, validation, and testing data are separated.
 
 ---
 
-### Homework Part B: Scenario
+### Independent practice part B: Scenario
 
 Choose one ML task:
 
@@ -1345,7 +1343,7 @@ one possible data leakage risk
 
 ---
 
-### Homework Part C: Result Interpretation
+### Independent practice part C: Result Interpretation
 
 Explain what each result suggests:
 
@@ -1358,7 +1356,7 @@ Explain what each result suggests:
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

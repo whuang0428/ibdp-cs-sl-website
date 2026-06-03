@@ -58,12 +58,6 @@ By the end of this extension section, students should be able to:
 | 8 | Inheritance and Polymorphism | superclass, subclass, overriding, dynamic behaviour | [Open](./inheritance-polymorphism) |
 | 9 | Exception Handling and Robust Programs | try/catch, validation, defensive programming | [Open](./exception-handling-robust-programs) |
 
-::: warning Folder Name Note
-The real folder name is `docs/extension-hl-programming`, matching the sidebar link `/extension-hl-programming/`.
-:::
-
----
-
 ## 4. Concept Map
 
 ```text

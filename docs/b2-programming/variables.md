@@ -869,7 +869,7 @@ Choose suitable data types and variable names for:
 student full name
 number of lessons
 average mark
-whether homework is submitted
+whether an assignment is submitted
 ```
 
 ### Question 7
@@ -1010,8 +1010,7 @@ The variable `total` is acting as an accumulator. It starts at 0 and is updated 
 
 ---
 
-## 22. Practice Activity
-
+## 22. Practice task
 ### Activity 1: Variable Boxes
 
 Students use paper boxes or cards.
@@ -1046,9 +1045,8 @@ Two students hold number cards. A third student acts as the `temp` variable. The
 
 ---
 
-## 23. Homework
-
-### Homework Part A: Trace
+## 23. Independent practice
+### Independent practice part A: Trace
 
 Trace this code:
 
@@ -1072,7 +1070,7 @@ line, x, y
 
 ---
 
-### Homework Part B: Write Code
+### Independent practice part B: Write Code
 
 Write a Java program that:
 
@@ -1083,13 +1081,13 @@ Write a Java program that:
 
 ---
 
-### Homework Part C: Swap
+### Independent practice part C: Swap
 
 Write pseudocode and Java code to swap two variables.
 
 ---
 
-### Homework Part D: Explain
+### Independent practice part D: Explain
 
 In 4-5 sentences, explain why variables are important in programming.
 

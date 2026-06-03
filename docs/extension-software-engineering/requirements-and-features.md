@@ -36,9 +36,9 @@ For example:
 
 | Type | Example |
 |---|---|
-| User need | A student wants to remember homework deadlines |
-| Requirement | The system must store homework tasks with due dates |
-| Feature | Add homework task form |
+| User need | A student wants to remember study task deadlines |
+| Requirement | The system must store study tasks with due dates |
+| Feature | Add study task form |
 
 Good features should connect back to real requirements. If a feature does not help the user, it may not belong in the project.
 
@@ -65,11 +65,11 @@ A school library wants to track which books are available and which books have b
 - Return a selected book
 - Show an error message if the book is already borrowed
 
-## Example 2: Study Planner or Homework Tracker
+## Example 2: Study Planner or Study Task Tracker
 
 ### User Need
 
-A student wants to organise homework, study tasks, and deadlines in one place.
+A student wants to organise study tasks, revision tasks, and deadlines in one place.
 
 ### Requirements
 
@@ -81,7 +81,7 @@ A student wants to organise homework, study tasks, and deadlines in one place.
 
 ### Features
 
-- Add a homework task
+- Add a study task
 - View all incomplete tasks
 - Mark a task as complete
 - Sort tasks by due date
@@ -94,7 +94,7 @@ Not every idea should be included in the first version of a project. Start with 
 
 | Type | Meaning | Example |
 |---|---|---|
-| Must-have | Needed for the main purpose of the system | Add and view homework tasks |
+| Must-have | Needed for the main purpose of the system | Add and view study tasks |
 | Nice-to-have | Useful, but the system can work without it | Colour themes or custom icons |
 
 For a beginner project, a smaller working system is usually better than a large unfinished system.
@@ -105,7 +105,7 @@ A clear requirement can be turned into a plan for code.
 
 | Requirement | Input Needed | Processing Needed | Output Needed | Possible Function Name |
 |---|---|---|---|---|
-| The system must add a homework task | Subject, task description, due date | Validate the input and store the task | Updated task list | `addTask()` |
+| The system must add a study task | Subject, task description, due date | Validate the input and store the task | Updated task list | `addTask()` |
 | The system must show incomplete tasks | Stored task list | Filter tasks where complete is false | List of incomplete tasks | `getIncompleteTasks()` |
 | The system must mark a task as complete | Task ID | Find the task and update its status | Confirmation message | `markTaskComplete()` |
 | The system must show books that are available | Stored book list | Filter books where borrowed is false | List of available books | `getAvailableBooks()` |
@@ -132,7 +132,7 @@ A requirement says what the system must do. A feature is a visible function that
 
 </details>
 
-### 2. A user says, "I keep forgetting when my homework is due." Is this a user need, requirement, or feature?
+### 2. A user says, "I keep forgetting when my study tasks are due." Is this a user need, requirement, or feature?
 
 <details>
 <summary>Answer</summary>

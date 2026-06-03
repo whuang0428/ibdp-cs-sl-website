@@ -1251,8 +1251,7 @@ Explain one common boundary error in binary search.
 
 ---
 
-## 34. Practice Activity
-
+## 34. Practice task
 ### Activity 1: Human Linear Search
 
 Students hold number cards in random order.  
@@ -1299,13 +1298,12 @@ After each pass, students identify which value is in its final place.
 
 ---
 
-## 35. Homework
-
-### Homework Part A
+## 35. Independent practice
+### Independent practice part A
 
 Explain linear search and binary search in 8-10 sentences, including one scenario for each.
 
-### Homework Part B
+### Independent practice part B
 
 Trace:
 
@@ -1316,7 +1314,7 @@ Trace:
 4. binary search where target is not found
 ```
 
-### Homework Part C
+### Independent practice part C
 
 Sort these using bubble sort and show each pass:
 
@@ -1324,7 +1322,7 @@ Sort these using bubble sort and show each pass:
 [8, 3, 6, 1]
 ```
 
-### Homework Part D
+### Independent practice part D
 
 Explain:
 
@@ -1336,7 +1334,7 @@ Explain:
 5. why a temporary variable is used for swapping
 ```
 
-### Homework Part E
+### Independent practice part E
 
 Correct these misconceptions:
 

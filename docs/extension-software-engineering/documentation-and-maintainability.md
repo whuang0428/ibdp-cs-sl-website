@@ -187,7 +187,7 @@ A useful comment explains something that is not obvious from the code, especiall
 
 ## Small Task
 
-Write a README outline for a small project, such as a quiz app, homework tracker, library system, or booking system.
+Write a README outline for a small project, such as a quiz app, study task tracker, library system, or booking system.
 
 Include:
 

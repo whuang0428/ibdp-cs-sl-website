@@ -200,7 +200,7 @@ It avoids repeating the same checks in many places and makes it easier to update
 
 ## Small Task
 
-A student is building a messy homework tracker. The current plan is to put the menu, task list, due date checks, file saving, and input validation all inside one large `main.py` file.
+A student is building a messy study task tracker. The current plan is to put the menu, task list, due date checks, file saving, and input validation all inside one large `main.py` file.
 
 Propose a better file structure.
 
@@ -209,4 +209,4 @@ Include:
 - the file names
 - the purpose of each file
 - which file should start the program
-- which file should save and load homework tasks
+- which file should save and load study tasks

@@ -1289,13 +1289,12 @@ Give three scenarios where a dynamic list is more suitable than an array.
 
 ---
 
-## 36. Practice Activity
-
+## 36. Practice task
 ### Activity 1: Human Dynamic List
 
 Students stand in a row as list elements.
 
-The teacher performs operations:
+Use these list operations:
 
 ```text
 add at end
@@ -1341,13 +1340,12 @@ Students explain why items may be skipped and rewrite using a backwards loop.
 
 ---
 
-## 37. Homework
-
-### Homework Part A
+## 37. Independent practice
+### Independent practice part A
 
 Explain dynamic lists and ArrayLists in 8-10 sentences using one real scenario.
 
-### Homework Part B
+### Independent practice part B
 
 Write pseudocode for:
 
@@ -1359,7 +1357,7 @@ Write pseudocode for:
 5. remove all items below a threshold
 ```
 
-### Homework Part C
+### Independent practice part C
 
 Compare arrays and dynamic lists using:
 
@@ -1371,7 +1369,7 @@ memory/overhead
 suitable scenarios
 ```
 
-### Homework Part D
+### Independent practice part D
 
 Correct these misconceptions:
 

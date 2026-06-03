@@ -1440,8 +1440,7 @@ Classification predicts categories, so evaluation compares predicted classes wit
 
 ---
 
-## 41. Practice Activity
-
+## 41. Practice task
 ### Activity 1: Task Sorting
 
 Students sort scenarios into classification or regression:
@@ -1492,15 +1491,14 @@ Then discuss why the metrics differ.
 
 ---
 
-## 42. Homework
-
-### Homework Part A: Concept Explanation
+## 42. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain the difference between classification and regression using two examples.
 
 ---
 
-### Homework Part B: Scenario Table
+### Independent practice part B: Scenario Table
 
 Complete a table with:
 
@@ -1517,7 +1515,7 @@ Use at least five scenarios.
 
 ---
 
-### Homework Part C: Same Scenario Comparison
+### Independent practice part C: Same Scenario Comparison
 
 For each scenario, create one classification task and one regression task:
 
@@ -1531,7 +1529,7 @@ online shop
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

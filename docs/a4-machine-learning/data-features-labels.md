@@ -285,7 +285,7 @@ Features are input variables used by a model.
 |---|---|
 | spam detection | sender, links, subject words, message length |
 | house price prediction | size, location, bedrooms, age |
-| student pass/fail prediction | attendance, previous score, homework completion |
+| student pass/fail prediction | attendance, previous score, study task completion |
 | fraud detection | transaction amount, location, time, device |
 | game matchmaking | rank, win rate, latency, role preference |
 | product recommendation | past purchases, views, ratings, category interest |
@@ -1461,8 +1461,7 @@ One concern is collecting more personal data than necessary, which violates data
 
 ---
 
-## 40. Practice Activity
-
+## 40. Practice task
 ### Activity 1: Feature or Label Sort
 
 Students sort cards into features and labels for scenarios:
@@ -1512,15 +1511,14 @@ what privacy controls are needed
 
 ---
 
-## 41. Homework
-
-### Homework Part A: Concept Explanation
+## 41. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what features and labels are and why they matter in supervised learning.
 
 ---
 
-### Homework Part B: Scenario Table
+### Independent practice part B: Scenario Table
 
 Choose three ML scenarios and complete:
 
@@ -1535,7 +1533,7 @@ one privacy/ethical issue
 
 ---
 
-### Homework Part C: Data Quality
+### Independent practice part C: Data Quality
 
 Explain these data quality problems with examples:
 
@@ -1550,7 +1548,7 @@ biased data
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

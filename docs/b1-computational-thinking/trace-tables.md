@@ -1641,8 +1641,7 @@ If `count` is never updated inside the loop, its value may remain the same each 
 
 ---
 
-## 41. Practice Activity
-
+## 41. Practice task
 ### Activity 1: Human Trace Table
 
 Students act as variables.
@@ -1708,15 +1707,14 @@ They explain the error and fix it.
 
 ---
 
-## 42. Homework
-
-### Homework Part A: Concept Explanation
+## 42. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what a trace table is and how it helps test algorithms.
 
 ---
 
-### Homework Part B: Trace Practice
+### Independent practice part B: Trace Practice
 
 Complete trace tables for:
 
@@ -1730,7 +1728,7 @@ Complete trace tables for:
 
 ---
 
-### Homework Part C: Debugging
+### Independent practice part C: Debugging
 
 For each error, explain what is wrong and how to fix it:
 
@@ -1744,7 +1742,7 @@ For each error, explain what is wrong and how to fix it:
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

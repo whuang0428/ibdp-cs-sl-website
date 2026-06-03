@@ -1298,8 +1298,7 @@ Unsupervised anomaly detection identifies transactions that are unusual compared
 
 ---
 
-## 39. Practice Activity
-
+## 39. Practice task
 ### Activity 1: Supervised or Unsupervised Sort
 
 Students classify scenarios:
@@ -1353,15 +1352,14 @@ what extra information is needed
 
 ---
 
-## 40. Homework
-
-### Homework Part A: Concept Explanation
+## 40. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what unsupervised learning is and how it differs from supervised learning.
 
 ---
 
-### Homework Part B: Scenario Table
+### Independent practice part B: Scenario Table
 
 Complete a table for four unsupervised learning scenarios:
 
@@ -1375,7 +1373,7 @@ one limitation or risk
 
 ---
 
-### Homework Part C: Clustering vs Classification
+### Independent practice part C: Clustering vs Classification
 
 Explain why each example is clustering or classification:
 
@@ -1388,7 +1386,7 @@ Explain why each example is clustering or classification:
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

@@ -1160,8 +1160,7 @@ One advantage is that the company can share data and services between distant of
 
 ---
 
-## 33. Practice Activity
-
+## 33. Practice task
 ### Activity 1: LAN or WAN Sorting
 
 Students classify scenarios:
@@ -1216,15 +1215,14 @@ maintenance
 
 ---
 
-## 34. Homework
-
-### Homework Part A: Concept Explanation
+## 34. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between LAN and WAN using a school example.
 
 ---
 
-### Homework Part B: Comparison Table
+### Independent practice part B: Comparison Table
 
 Create a table comparing LAN and WAN using:
 
@@ -1240,7 +1238,7 @@ examples
 
 ---
 
-### Homework Part C: Scenario Analysis
+### Independent practice part C: Scenario Analysis
 
 A company has one office in Melbourne, one in Tokyo, and one in London.
 
@@ -1255,7 +1253,7 @@ Explain:
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

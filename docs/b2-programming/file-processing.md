@@ -935,8 +935,7 @@ One possible error is that the file cannot be found because the filename or fold
 
 ---
 
-## 24. Practice Activity
-
+## 24. Practice task
 ### Activity 1: Human File Reader
 
 Students represent lines in a file. One student is the program reader.
@@ -989,9 +988,8 @@ They identify the problem and suggest a defensive fix.
 
 ---
 
-## 25. Homework
-
-### Homework Part A: Pseudocode
+## 25. Independent practice
+### Independent practice part A: Pseudocode
 
 Write IB pseudocode to:
 
@@ -1004,7 +1002,7 @@ Write IB pseudocode to:
 
 ---
 
-### Homework Part B: Java Reading
+### Independent practice part B: Java Reading
 
 Write Java code that reads all lines from `items.txt` and outputs each line with a line number.
 
@@ -1018,13 +1016,13 @@ Example:
 
 ---
 
-### Homework Part C: Java Writing
+### Independent practice part C: Java Writing
 
 Write Java code that writes three student names to `names.txt`.
 
 ---
 
-### Homework Part D: Explanation
+### Independent practice part D: Explanation
 
 In 4-5 sentences, explain why file processing often needs loops.
 

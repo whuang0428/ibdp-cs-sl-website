@@ -1162,8 +1162,7 @@ Compare arrays and dynamic lists.
 
 ---
 
-## 30. Practice Activity
-
+## 30. Practice task
 ### Activity 1: Human Array
 
 Students stand in a line holding values.
@@ -1214,13 +1213,12 @@ FOR index ← 0 TO length(scores) - 1
 
 ---
 
-## 31. Homework
-
-### Homework Part A
+## 31. Independent practice
+### Independent practice part A
 
 Explain arrays and 2D arrays in 8-10 sentences using your own example.
 
-### Homework Part B
+### Independent practice part B
 
 Write pseudocode for:
 
@@ -1232,7 +1230,7 @@ Write pseudocode for:
 5. search for a target value
 ```
 
-### Homework Part C
+### Independent practice part C
 
 A school stores marks in:
 
@@ -1248,7 +1246,7 @@ Write pseudocode to:
 3. calculate average for every student
 ```
 
-### Homework Part D
+### Independent practice part D
 
 Correct these misconceptions:
 

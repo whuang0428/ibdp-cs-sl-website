@@ -22,7 +22,7 @@ Each mini mock is shorter than a full paper, so it can be used for:
 weekly revision
 end-of-topic review
 10-20 minute class quizzes
-homework practice
+independent practice
 pre-exam warm-up
 targeted intervention
 mock exam preparation
@@ -1340,7 +1340,7 @@ Possible features:
 attendance
 previous grades
 assignment completion
-homework submission
+assignment submission
 learning platform activity
 ```
 
@@ -1450,7 +1450,7 @@ After completing a mini mock, students should fill in this reflection.
 | Security | threat, control, mechanism, impact |
 | After mock | self-mark, rewrite, record weak topics |
 
-::: tip Completion Note
-This page completes the main Exam Practice sidebar set. A future upgrade could add printable PDF mock papers or separate student/teacher versions.
+::: tip Revision note
+Use these mini mocks to identify weak topics, rewrite vague answers, and practise under light time pressure.
 :::
 

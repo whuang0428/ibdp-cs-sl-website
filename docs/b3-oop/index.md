@@ -85,8 +85,8 @@ UML Class Diagrams
 HL Multiple Classes
 ```
 
-::: tip Teaching Strategy
-Do not treat OOP as vocabulary only. Students need to see how the same idea appears in real Java code, object state tables, and UML diagrams.
+::: tip How to study this page
+Do not treat OOP as vocabulary only. Check how each idea appears in Java code, object state tables, and UML diagrams.
 :::
 
 ---

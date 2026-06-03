@@ -983,8 +983,7 @@ Explain why calling a method on `null` can cause a runtime error.
 
 ---
 
-## 23. Practice Activity
-
+## 23. Practice task
 ### Activity 1: Class Responsibility Sorting
 
 Give students method cards such as:
@@ -1038,15 +1037,14 @@ one test scenario
 
 ---
 
-## 24. Homework
-
-### Homework Part A: Concept Explanation
+## 24. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain how objects from different classes can work together.
 
 ---
 
-### Homework Part B: Java Code
+### Independent practice part B: Java Code
 
 Create a `Book` class and a `Library` class.
 
@@ -1061,7 +1059,7 @@ count how many books have more than 300 pages
 
 ---
 
-### Homework Part C: UML
+### Independent practice part C: UML
 
 Draw text-based UML for:
 
@@ -1074,7 +1072,7 @@ Show attributes, constructors, and methods.
 
 ---
 
-### Homework Part D: Trace
+### Independent practice part D: Trace
 
 Given:
 

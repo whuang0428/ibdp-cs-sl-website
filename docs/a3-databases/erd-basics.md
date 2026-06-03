@@ -1494,8 +1494,7 @@ This design uses repeating attributes `Course1`, `Course2`, and `Course3`, which
 
 ---
 
-## 35. Practice Activity
-
+## 35. Practice task
 ### Activity 1: Entity Hunt
 
 Give students a scenario paragraph.  
@@ -1544,15 +1543,14 @@ They must add linking tables and explain why.
 
 ---
 
-## 36. Homework
-
-### Homework Part A: Concept Explanation
+## 36. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what an ERD is and how it helps database design.
 
 ---
 
-### Homework Part B: Scenario ERD
+### Independent practice part B: Scenario ERD
 
 For a library system, identify:
 
@@ -1574,7 +1572,7 @@ Loan
 
 ---
 
-### Homework Part C: Relationship Analysis
+### Independent practice part C: Relationship Analysis
 
 For each scenario, identify the cardinality and whether a linking table is needed:
 
@@ -1588,7 +1586,7 @@ For each scenario, identify the cardinality and whether a linking table is neede
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

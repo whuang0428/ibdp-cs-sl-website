@@ -1173,8 +1173,7 @@ Possible marks:
 
 ---
 
-## 27. Practice Activity
-
+## 27. Practice task
 ### Activity 1: Input-Process-Output Cards
 
 Students receive cards labeled:
@@ -1216,9 +1215,8 @@ Students receive code where `nextLine()` is skipped after `nextInt()`. They expl
 
 ---
 
-## 28. Homework
-
-### Homework Part A: Write Code
+## 28. Independent practice
+### Independent practice part A: Write Code
 
 Write a Java program that:
 
@@ -1231,7 +1229,7 @@ Be careful if mixing `nextLine()` and `nextInt()`.
 
 ---
 
-### Homework Part B: Pseudocode
+### Independent practice part B: Pseudocode
 
 Write IB pseudocode for a program that:
 
@@ -1242,7 +1240,7 @@ Write IB pseudocode for a program that:
 
 ---
 
-### Homework Part C: Debug
+### Independent practice part C: Debug
 
 Fix this code:
 
@@ -1266,7 +1264,7 @@ public class Test {
 
 ---
 
-### Homework Part D: Explain
+### Independent practice part D: Explain
 
 In 4-5 sentences, explain why clear prompts are important in programs that use user input.
 

@@ -1061,8 +1061,7 @@ mark = 88
 
 ---
 
-## 24. Practice Activity
-
+## 24. Practice task
 ### Activity 1: Getter and Setter Cards
 
 Students receive private attribute cards:
@@ -1101,15 +1100,14 @@ Give students a class with a setter and a list of method calls. They trace which
 
 ---
 
-## 25. Homework
-
-### Homework Part A: Concept Explanation
+## 25. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain why getters and setters are used instead of public attributes.
 
 ---
 
-### Homework Part B: Java Code
+### Independent practice part B: Java Code
 
 Create a `Book` class with private attributes:
 
@@ -1134,7 +1132,7 @@ displayInfo()
 
 ---
 
-### Homework Part C: Design Task
+### Independent practice part C: Design Task
 
 Design a `Player` class with:
 
@@ -1148,7 +1146,7 @@ Decide which attributes should have getters, which should have setters, and what
 
 ---
 
-### Homework Part D: Trace
+### Independent practice part D: Trace
 
 Trace the final state:
 

@@ -1170,8 +1170,7 @@ An array can store many related values under one name, so the program does not n
 
 ---
 
-## 22. Practice Activity
-
+## 22. Practice task
 ### Activity 1: Human Array
 
 Students stand in a line. Each student holds a value card.
@@ -1226,9 +1225,8 @@ Students identify the bug, explain it, and fix it.
 
 ---
 
-## 23. Homework
-
-### Homework Part A: Trace
+## 23. Independent practice
+### Independent practice part A: Trace
 
 Trace this code:
 
@@ -1253,7 +1251,7 @@ i, values[i], condition, total
 
 ---
 
-### Homework Part B: Write Code
+### Independent practice part B: Write Code
 
 Write a Java program that:
 
@@ -1265,13 +1263,13 @@ Write a Java program that:
 
 ---
 
-### Homework Part C: Pseudocode
+### Independent practice part C: Pseudocode
 
 Write IB pseudocode to find the smallest value in an array.
 
 ---
 
-### Homework Part D: Explain
+### Independent practice part D: Explain
 
 In 4-5 sentences, explain why `i < array.length` is usually used when traversing a Java array.
 

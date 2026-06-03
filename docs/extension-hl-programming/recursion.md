@@ -1365,8 +1365,7 @@ Give two examples of problems where recursion is suitable.
 
 ---
 
-## 32. Practice Activity
-
+## 32. Practice task
 ### Activity 1: Human Call Stack
 
 Students hold cards:
@@ -1419,13 +1418,12 @@ Students identify the problem and correct it.
 
 ---
 
-## 33. Homework
-
-### Homework Part A
+## 33. Independent practice
+### Independent practice part A
 
 Explain recursion in 8-10 sentences using factorial or countdown as the example.
 
-### Homework Part B
+### Independent practice part B
 
 Trace the following:
 
@@ -1436,7 +1434,7 @@ show(4) where output happens before recursive call
 show(4) where output happens after recursive call
 ```
 
-### Homework Part C
+### Independent practice part C
 
 Write recursive pseudocode for:
 
@@ -1447,7 +1445,7 @@ Write recursive pseudocode for:
 4. search an array recursively
 ```
 
-### Homework Part D
+### Independent practice part D
 
 Correct these misconceptions:
 

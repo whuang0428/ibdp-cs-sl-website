@@ -1344,8 +1344,7 @@ Relationships allow data about different entities to be stored in separate table
 
 ---
 
-## 36. Practice Activity
-
+## 36. Practice task
 ### Activity 1: Relationship Sorting
 
 Students classify scenarios as one-to-one, one-to-many, or many-to-many:
@@ -1390,15 +1389,14 @@ They explain the relationship problem and propose better related tables.
 
 ---
 
-## 37. Homework
-
-### Homework Part A: Concept Explanation
+## 37. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain how primary keys and foreign keys create relationships between tables.
 
 ---
 
-### Homework Part B: Relationship Identification
+### Independent practice part B: Relationship Identification
 
 Identify the relationship type for each:
 
@@ -1414,7 +1412,7 @@ Explain each answer.
 
 ---
 
-### Homework Part C: Table Design
+### Independent practice part C: Table Design
 
 Design related tables for a hospital appointment system with:
 
@@ -1428,7 +1426,7 @@ Include primary keys, foreign keys, and relationship types.
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

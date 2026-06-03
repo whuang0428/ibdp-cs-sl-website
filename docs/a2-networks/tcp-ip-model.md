@@ -937,8 +937,7 @@ Encapsulation is the process where each layer adds its own control information, 
 
 ---
 
-## 31. Practice Activity
-
+## 31. Practice task
 ### Activity 1: Layer Card Sort
 
 Students sort these into TCP/IP layers:
@@ -994,15 +993,14 @@ response
 
 ---
 
-## 32. Homework
-
-### Homework Part A: Concept Explanation
+## 32. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain why the TCP/IP model uses layers.
 
 ---
 
-### Homework Part B: Layer Table
+### Independent practice part B: Layer Table
 
 Create a table for the four TCP/IP layers.
 
@@ -1016,7 +1014,7 @@ one example from web access
 
 ---
 
-### Homework Part C: Scenario Explanation
+### Independent practice part C: Scenario Explanation
 
 A student opens an HTTPS website on school Wi-Fi.
 
@@ -1031,7 +1029,7 @@ network access layer
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

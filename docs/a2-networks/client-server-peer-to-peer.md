@@ -1108,8 +1108,7 @@ Peer-to-peer could be suitable because the network is small and files can be sha
 
 ---
 
-## 30. Practice Activity
-
+## 30. Practice task
 ### Activity 1: Role Cards
 
 Students receive role cards:
@@ -1167,15 +1166,14 @@ performance
 
 ---
 
-## 31. Homework
-
-### Homework Part A: Concept Explanation
+## 31. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between client-server and peer-to-peer networks.
 
 ---
 
-### Homework Part B: Comparison Table
+### Independent practice part B: Comparison Table
 
 Create a table comparing client-server and peer-to-peer using:
 
@@ -1192,7 +1190,7 @@ examples
 
 ---
 
-### Homework Part C: Scenario Analysis
+### Independent practice part C: Scenario Analysis
 
 For each scenario, choose client-server or peer-to-peer and justify:
 
@@ -1206,7 +1204,7 @@ For each scenario, choose client-server or peer-to-peer and justify:
 
 ---
 
-### Homework Part D: Written Answer
+### Independent practice part D: Written Answer
 
 Explain why peer-to-peer can be cheaper for a small network but harder to manage as the network grows.
 

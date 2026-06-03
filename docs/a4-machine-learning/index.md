@@ -112,13 +112,6 @@ Finally, they connect ML to real-world applications, bias, ethics, privacy, and 
 | 10 | Bias, Ethics and Privacy | bias, fairness, explainability, accountability, data protection | [Open](./bias-ethics-privacy) |
 | 11 | ML Applications and Limitations | real-world uses, benefits, limitations, safeguards | [Open](./ml-applications-limitations) |
 
-::: warning File Name Note
-This overview uses your current stable A4 file names:
-`ml-fundamentals.md`, `data-features-labels.md`, `supervised-learning.md`, `unsupervised-learning.md`, `training-testing-validation.md`, `classification-regression.md`, `model-evaluation.md`, `overfitting-underfitting.md`, `bias-ethics-privacy.md`, and `ml-applications-limitations.md`.
-:::
-
----
-
 ## 5. Concept Map
 
 ```text

@@ -87,13 +87,6 @@ Finally, they attempt mini mock exams to combine multiple skills.
 | 9 | A3 and A4 Practice | databases, SQL, normalization, ML concepts, evaluation, ethics | [Open](./a3-a4-practice) |
 | 10 | Mini Mock Exam Bank | mixed-topic timed practice sets | [Open](./mini-mock-exam-bank) |
 
-::: warning File Name Note
-This overview uses your current stable Exam Practice file names:
-`paper-1-overview.md`, `paper-2-overview.md`, `command-terms.md`, `mark-scheme-skills.md`, `b1-practice.md`, `b2-b3-practice.md`, `a1-a2-practice.md`, `a3-a4-practice.md`, and `mini-mock-exam-bank.md`.
-:::
-
----
-
 ## 5. Exam Practice Concept Map
 
 ```text

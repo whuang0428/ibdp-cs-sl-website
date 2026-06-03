@@ -1120,8 +1120,7 @@ Regular backups can be used to restore the database to a previous saved version.
 
 ---
 
-## 36. Practice Activity
-
+## 36. Practice task
 ### Activity 1: Transaction Role-play
 
 Students act as:
@@ -1171,13 +1170,12 @@ They include backup frequency, backup location, who can restore, how restore is 
 
 ---
 
-## 37. Homework
-
-### Homework Part A: Concept Explanation
+## 37. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what a transaction is and why commit and rollback are needed.
 
-### Homework Part B: Scenario
+### Independent practice part B: Scenario
 
 Choose one scenario:
 
@@ -1191,11 +1189,11 @@ game item purchase
 
 Write the transaction steps and explain what should happen if one step fails.
 
-### Homework Part C: Recovery
+### Independent practice part C: Recovery
 
 Explain how backups and transaction logs help recover a database after failure.
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

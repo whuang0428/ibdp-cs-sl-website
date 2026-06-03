@@ -1500,8 +1500,7 @@ FROM Student;
 
 ---
 
-## 41. Practice Activity
-
+## 41. Practice task
 ### Activity 1: Query Matching
 
 Students match prompts to SQL queries.
@@ -1558,15 +1557,14 @@ SELECT Student.Email FROM Product;
 
 ---
 
-## 42. Homework
-
-### Homework Part A: Concept Explanation
+## 42. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what SQL SELECT is and how `SELECT` and `FROM` work together.
 
 ---
 
-### Homework Part B: Write Queries
+### Independent practice part B: Write Queries
 
 Using this table:
 
@@ -1586,7 +1584,7 @@ Write SQL queries to:
 
 ---
 
-### Homework Part C: Interpret Queries
+### Independent practice part C: Interpret Queries
 
 Explain what each query returns:
 
@@ -1607,7 +1605,7 @@ FROM Book;
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

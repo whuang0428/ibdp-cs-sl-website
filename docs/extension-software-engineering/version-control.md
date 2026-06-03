@@ -89,7 +89,7 @@ Good commit messages are short and specific:
 - Add book search feature
 - Fix empty input validation
 - Update testing table
-- Save homework tasks to JSON file
+- Save study tasks to JSON file
 - Add return book confirmation
 
 These messages explain the main change.

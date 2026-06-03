@@ -1551,8 +1551,7 @@ ORDER BY Price DESC;
 
 ---
 
-## 46. Practice Activity
-
+## 46. Practice task
 ### Activity 1: Human WHERE Filter
 
 Give students record cards from a Student table.
@@ -1611,15 +1610,14 @@ FROM Book;
 
 ---
 
-## 47. Homework
-
-### Homework Part A: Concept Explanation
+## 47. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain how `SELECT`, `FROM`, `WHERE`, and `ORDER BY` work together.
 
 ---
 
-### Homework Part B: Write Queries
+### Independent practice part B: Write Queries
 
 Using this table:
 
@@ -1639,7 +1637,7 @@ Write queries to:
 
 ---
 
-### Homework Part C: Interpret Queries
+### Independent practice part C: Interpret Queries
 
 Explain what each query returns:
 
@@ -1664,7 +1662,7 @@ WHERE GradeLevel = 10 AND Score >= 90;
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

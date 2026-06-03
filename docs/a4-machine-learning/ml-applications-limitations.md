@@ -1573,8 +1573,7 @@ A machine learning system may need monitoring because real-world data can change
 
 ---
 
-## 42. Practice Activity
-
+## 42. Practice task
 ### Activity 1: Application Match
 
 Students match applications to ML task types:
@@ -1642,15 +1641,14 @@ They must justify their decision.
 
 ---
 
-## 43. Homework
-
-### Homework Part A: Concept Explanation
+## 43. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain when machine learning is useful and when it may not be suitable.
 
 ---
 
-### Homework Part B: Application Table
+### Independent practice part B: Application Table
 
 Complete a table for five ML applications:
 
@@ -1665,7 +1663,7 @@ safeguard
 
 ---
 
-### Homework Part C: Limitation Explanation
+### Independent practice part C: Limitation Explanation
 
 Explain these limitations with examples:
 
@@ -1681,7 +1679,7 @@ over-reliance
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

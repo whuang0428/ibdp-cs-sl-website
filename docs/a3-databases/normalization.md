@@ -1346,8 +1346,7 @@ The table should be split into related tables such as `Customer(CustomerID, Cust
 
 ---
 
-## 37. Practice Activity
-
+## 37. Practice task
 ### Activity 1: Find the Redundancy
 
 Give students a large messy table.  
@@ -1394,15 +1393,14 @@ Class identifies the anomaly.
 
 ---
 
-## 38. Homework
-
-### Homework Part A: Concept Explanation
+## 38. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what normalization is and why it is useful.
 
 ---
 
-### Homework Part B: Anomaly Examples
+### Independent practice part B: Anomaly Examples
 
 For each anomaly, write one example using a school, library, or online shop database:
 
@@ -1414,7 +1412,7 @@ deletion anomaly
 
 ---
 
-### Homework Part C: Normalize a Table
+### Independent practice part C: Normalize a Table
 
 Normalize this poor table:
 
@@ -1426,7 +1424,7 @@ Suggest suitable tables, primary keys, and foreign keys.
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 

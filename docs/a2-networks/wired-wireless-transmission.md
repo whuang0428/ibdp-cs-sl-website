@@ -1264,8 +1264,7 @@ This is incorrect because Wi-Fi is a wireless technology used to connect a devic
 
 ---
 
-## 35. Practice Activity
-
+## 35. Practice task
 ### Activity 1: Transmission Choice Sort
 
 Students choose the best transmission method for:
@@ -1321,15 +1320,14 @@ Students identify possible causes such as interference, distance, too many users
 
 ---
 
-## 36. Homework
-
-### Homework Part A: Concept Explanation
+## 36. Independent practice
+### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between wired and wireless transmission.
 
 ---
 
-### Homework Part B: Comparison Table
+### Independent practice part B: Comparison Table
 
 Create a table comparing:
 
@@ -1354,7 +1352,7 @@ main limitation
 
 ---
 
-### Homework Part C: Scenario Recommendation
+### Independent practice part C: Scenario Recommendation
 
 Recommend a transmission method for each:
 
@@ -1370,7 +1368,7 @@ Explain each choice.
 
 ---
 
-### Homework Part D: Misconception Correction
+### Independent practice part D: Misconception Correction
 
 Correct these statements:
 
