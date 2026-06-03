@@ -67,6 +67,17 @@ features:
 
 </div>
 
+## Official Course Structure
+
+This site follows the official IBDP Computer Science SL syllabus structure. Some learning routes may use a teaching order that is easier for students, but the official syllabus is organized by Theme A and Theme B.
+
+Assessment preparation includes Paper 1, Paper 2, and the IA computational solution.
+
+| Official theme | Syllabus areas |
+|---|---|
+| Theme A: Concepts of computer science | A1 Computer fundamentals<br>A2 Networks<br>A3 Databases<br>A4 Machine learning |
+| Theme B: Computational thinking and problem-solving | B1 Computational thinking<br>B2 Programming<br>B3 Object-oriented programming |
+
 ## Core SL Topics
 
 <div class="module-grid">

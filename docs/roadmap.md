@@ -1,8 +1,18 @@
 ﻿# Course Roadmap
 
+The roadmap is a recommended learning route. It may start with programming and computational thinking because these topics help students understand later theory and IA work.
+
+The official syllabus structure is still Theme A and Theme B. Students should use the roadmap together with the official course structure.
+
+| Official syllabus area | Suggested learning use |
+|---|---|
+| Theme A | Understand computer systems, networks, databases, and machine learning |
+| Theme B | Build problem-solving and programming skills |
+| Assessment | Practise Paper 1, Paper 2, and IA skills throughout the course |
+
 ## 1. Course Structure
 
-This website follows the school's IBDP Computer Science SL teaching order.
+This website keeps the official IBDP Computer Science SL areas visible while using a teaching order designed for student learning.
 
 | Order | Module | Main Role in Course | Website Path |
 |---:|---|---|---|
