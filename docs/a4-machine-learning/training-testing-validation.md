@@ -39,6 +39,95 @@ Training data is used to teach the model. Validation data is used to tune or cho
 
 ---
 
+## Start here: why split the data?
+
+A machine learning model should not be judged only on the data it learned from.
+
+Training data is used to teach the model. Validation data can help tune settings or choose between possible models. Test data is used to judge the final model on examples it has not seen before.
+
+The main goal is to check whether the model can generalise to new examples, not just repeat patterns from the training set.
+
+---
+
+## Dataset split workflow
+
+1. Collect the dataset.
+   Gather examples that match the problem the model is meant to solve.
+2. Clean and prepare the data.
+   Fix missing, incorrect, or inconsistent values before modelling.
+3. Split the data into training, validation, and test sets if needed.
+   Keep separate parts for learning, tuning, and final evaluation.
+4. Train the model using the training set.
+   The model learns patterns from the training examples.
+5. Tune or compare models using the validation set.
+   Use validation results to choose settings, features, or model versions.
+6. Evaluate the final model using the test set.
+   Use the test set only after the model choice is finished.
+7. Check whether the model performs well on unseen data.
+   Decide whether the result is likely to generalise to real use.
+
+---
+
+## Training vs validation vs testing
+
+| Dataset part | Main purpose | When it is used | Simple warning |
+|---|---|---|---|
+| Training set | teaches the model patterns | during model training | do not use it alone to judge final performance |
+| Validation set | helps tune or choose the model | during model development | do not overuse it until it becomes part of the training process |
+| Test set | checks final performance on unseen data | after model choice is finished | keep it separate until final evaluation |
+
+### Quick memory
+
+```text
+training = learn
+validation = tune or choose
+testing = final check
+```
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain why data is split before model evaluation
+- distinguish training data from validation data
+- distinguish validation data from test data
+- explain why unseen data is important
+- explain what generalisation means
+- explain the risk of data leakage
+- explain why representative data matters
+- describe how poor splitting can make results misleading
+
+---
+
+## Exam answer pattern
+
+When answering a dataset split or training/testing question, use this order:
+
+1. State that the model is trained on training data.
+2. Explain that separate data is needed to check performance.
+3. Mention validation data if the question involves tuning or choosing a model.
+4. Mention test data for final evaluation.
+5. Explain that unseen data checks generalisation.
+6. Warn about data leakage or biased / unrepresentative data if relevant.
+7. Link the answer back to the scenario.
+
+---
+
+## Common mistakes
+
+- saying the model should be tested on the same data used for training
+- confusing validation data with test data
+- forgetting that test data should be unseen
+- ignoring data leakage
+- assuming a high training score means the model is good
+- forgetting that split data should still represent the real problem
+- describing evaluation without mentioning generalisation
+- using terms like training and testing without explaining their roles
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -240,7 +329,7 @@ and labels
 
 in supervised learning.
 
-### Example: House Price Prediction
+### Training set example: House Price Prediction
 
 Training data contains houses with known prices.
 
@@ -274,7 +363,7 @@ how complex the model should be
 when to stop training
 ```
 
-### Example
+### Validation set example
 
 A teacher trains three spam detection models.
 
@@ -412,7 +501,7 @@ real-world usefulness
 overfitting risk
 ```
 
-### Example
+### Generalization example
 
 If a student memorizes answers to practice questions, they may do well on the same questions but poorly on a new test.
 
@@ -518,11 +607,9 @@ The model cannot capture the real pattern.
 | low training score, low testing score | underfitting |
 | low training score, high testing score | unusual; check data split or metrics |
 
-### Student Use
+### Common exam trap: high training score
 
 If exam question gives training and testing accuracy, compare them.
-
-Example:
 
 ```text
 training accuracy = 99%
@@ -541,7 +628,7 @@ model is overfitting
 
 Data leakage happens when information from testing data, validation data, or future data accidentally affects training.
 
-### Example
+### Data leakage example
 
 Task:
 
@@ -557,7 +644,7 @@ FinalExamScore
 
 This would not be available before prediction and directly reveals the answer.
 
-### Another Example
+### Another data leakage example
 
 Scaling the whole dataset before splitting may sometimes leak information from the test set into training.
 
