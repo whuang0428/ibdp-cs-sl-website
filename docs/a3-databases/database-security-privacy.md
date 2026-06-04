@@ -37,6 +37,77 @@ Database security protects data from unauthorized access, damage, loss, and misu
 
 ---
 
+## Start here: security vs privacy
+
+Start this page by separating two ideas.
+
+**Database security** focuses on protecting the database from unauthorized access, damage, loss, or attack.
+
+**Data privacy** focuses on how personal data is collected, used, shared, and protected fairly.
+
+Security is often about protection methods. Privacy is often about responsibility, consent, access, and appropriate use of data.
+
+| Idea | Main question | Example |
+|---|---|---|
+| Security | How do we stop unauthorized access or damage? | passwords, roles, encryption, backups |
+| Privacy | How do we use personal data responsibly? | consent, data minimization, access rights |
+
+::: tip Database context
+For A3, keep your answer focused on tables, records, user roles, permissions, SQL injection, backups, and personal data stored in a database. A2 network security is related, but this page is mainly about protecting and using stored database data.
+:::
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- distinguish database security from data privacy
+- explain why access control is needed in a database
+- explain the purpose of user roles and permissions
+- describe how SQL injection can affect a database
+- choose suitable protection methods for a given database scenario
+- explain privacy responsibilities when storing personal data
+
+---
+
+## Core exam focus
+
+For most SL exam answers, focus on these core points first:
+
+- **security risk:** unauthorized users may view, change, delete, or steal records
+- **database control:** authentication, authorization, roles, permissions, least privilege, backups, encryption, audit logs, input validation, or parameterized queries
+- **privacy responsibility:** collect only needed personal data, use it for the stated purpose, limit access, and avoid keeping it longer than needed
+- **scenario justification:** link each control to the database in the question, such as student grades, patient records, customer orders, or account details
+
+---
+
+## Scenario answer pattern
+
+Use this structure when a question gives you a database scenario:
+
+1. Identify whether the issue is mainly security, privacy, or both.
+2. Explain the risk in the given database scenario.
+3. Choose a suitable control or policy.
+4. Justify why it protects data or supports responsible data use.
+
+Short example:
+
+```text
+A hospital database stores patient records.
+This is both a security and privacy issue because medical records are sensitive personal data.
+Doctors need access for treatment, but reception staff should not see full medical notes.
+Role-based access control and audit logs are suitable because they limit access by job role and record who viewed or changed patient records.
+```
+
+---
+
+## Useful extra examples
+
+The school, hospital, online shop, and cloud examples later in this page are useful for practice. You do not need to memorize every detail. Use them to practise choosing controls and explaining why they fit the database scenario.
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
