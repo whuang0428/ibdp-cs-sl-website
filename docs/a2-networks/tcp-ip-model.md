@@ -20,6 +20,85 @@ By the end of this lesson, students should be able to:
 
 ---
 
+## Start here: TCP/IP is a layered model
+
+TCP/IP is used to describe how data is prepared, addressed, sent, routed, and received across networks.
+
+Each layer has a different role. Students should learn what each layer does before memorising every protocol.
+
+In exam answers, the key skill is explaining the role of a layer in a network scenario.
+
+---
+
+## TCP/IP layer role table
+
+| Layer | Main role | Simple example |
+|---|---|---|
+| Application layer | provides network services for applications | HTTP/HTTPS, DNS, email protocols |
+| Transport layer | manages end-to-end communication between devices | TCP, UDP, ports |
+| Internet layer | handles addressing and routing between networks | IP address, routing |
+| Network access layer | handles transmission over the physical/local network | Ethernet, Wi-Fi |
+
+---
+
+## Encapsulation route
+
+When data is sent, think of it moving down the layers:
+
+1. Application data is created.
+   The application prepares the data, such as a web request or email message.
+2. Transport layer adds information such as port numbers.
+   This helps deliver data to the correct application or service.
+3. Internet layer adds IP addressing information.
+   This helps route data between networks.
+4. Network access layer prepares frames for physical transmission.
+   This prepares the data for Ethernet, Wi-Fi, or another local link.
+5. At the receiving device, the process is reversed.
+   Each layer reads and removes the information added by the matching layer.
+
+---
+
+## TCP vs UDP
+
+| Feature | TCP | UDP |
+|---|---|---|
+| Connection | connection-based | connectionless |
+| Reliability | checks delivery and can retransmit lost data | does not guarantee delivery |
+| Ordering | keeps data in order | packets may arrive out of order |
+| Speed | usually slower because of reliability checks | usually faster because there is less checking |
+| Common use | web pages, email, file transfer | streaming, gaming, voice/video calls |
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- name the main TCP/IP layers
+- explain the role of each layer
+- identify which layer is involved in a simple scenario
+- explain why layering helps network communication
+- describe encapsulation at a simple level
+- distinguish TCP from UDP
+- choose TCP or UDP for a given scenario
+- avoid confusing IP addresses, ports, and protocols
+
+---
+
+## Exam answer pattern
+
+Use this order when answering TCP/IP or layer questions:
+
+1. Identify the network task in the scenario.
+2. Decide which layer is most relevant.
+3. Name the layer.
+4. Explain what that layer does.
+5. Link the layer role back to the scenario.
+6. If TCP/UDP is involved, justify which one is more suitable.
+7. Keep layer order clear if explaining data movement.
+
+---
+
 ## 2. Syllabus Mapping
 
 | Item | Detail |
@@ -240,6 +319,8 @@ Network access = local transmission
 The application layer provides network services to applications.  
 It is closest to the user and the application software.
 
+### Application layer example
+
 ### What It Does
 
 The application layer handles:
@@ -270,6 +351,8 @@ cloud services
 ## 8. Transport Layer
 
 The transport layer manages communication between applications on different devices.
+
+### Transport layer example
 
 ### What It Does
 
@@ -387,6 +470,8 @@ where speed and low delay may be more important than perfect retransmission.
 
 The internet layer handles logical addressing and routing.
 
+### Internet layer example
+
 ### Main Protocol
 
 ```text
@@ -435,6 +520,8 @@ This allows routers to forward data toward the correct destination and allows re
 
 The network access layer handles communication on the local network link.
 
+### Network interface example
+
 It deals with:
 
 ```text
@@ -474,6 +561,8 @@ detecting local transmission errors
 Encapsulation means each layer adds its own control information to the data.
 
 This extra information is often called a header.
+
+### Encapsulation example
 
 ### Sending Data
 
@@ -617,6 +706,8 @@ Email should arrive correctly and completely, so reliable delivery is important.
 
 An online game may use UDP for real-time movement updates.
 
+### TCP vs UDP scenario
+
 | Layer | Example |
 |---|---|
 | Application | game protocol sends player movement/action data |
@@ -739,6 +830,25 @@ Layering helps troubleshooting.
 ### Example
 
 If an IP address works but the domain name does not, DNS may be the problem.
+
+---
+
+## Common exam traps
+
+Watch for these mistakes in TCP/IP layer questions:
+
+- saying every protocol belongs to the same layer
+- confusing IP address with port number
+- confusing TCP with IP
+- saying UDP is always worse because it is less reliable
+- saying TCP is always better without considering speed
+- forgetting that DNS is application layer
+- describing packet switching without explaining the TCP/IP layer involved
+- mixing up routing with local physical transmission
+
+### Common exam trap
+
+IP addresses are used for routing at the internet layer. Port numbers are used at the transport layer to identify applications or services.
 
 ---
 
