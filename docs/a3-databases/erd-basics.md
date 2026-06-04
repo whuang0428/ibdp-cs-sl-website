@@ -36,6 +36,71 @@ An ERD is a planning diagram for a database. It shows entities, their attributes
 
 ---
 
+## Start here: from scenario to ERD
+
+When an ERD question gives you a written scenario, turn the words into a database design step by step:
+
+1. Read the scenario carefully.
+2. Underline important nouns.
+3. Choose the main entities.
+4. Add key attributes for each entity.
+5. Identify relationships between entities.
+6. Decide the cardinality, such as one-to-one, one-to-many, or many-to-many.
+7. Check whether the ERD matches the original scenario.
+
+Keep the focus on database structure: tables, fields, keys, and relationships. An ERD is not a flowchart and not a UML class diagram.
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- identify entities from a scenario
+- identify attributes that describe each entity
+- choose a suitable primary key
+- identify relationships between entities
+- decide basic cardinality
+- recognize when a link table may be needed
+- explain why an ERD helps database design
+
+---
+
+## ERD answer pattern
+
+When you meet an ERD question, use this order:
+
+1. Identify the main things being stored.
+2. Turn those things into entities.
+3. Add useful attributes.
+4. Mark primary keys.
+5. Connect related entities.
+6. Add cardinality.
+7. Check for many-to-many relationships.
+
+Short example:
+
+```text
+Scenario:
+A school stores data about students and the courses they take.
+
+Entities:
+Student, Course
+
+Attributes:
+StudentID, StudentName
+CourseID, CourseName
+
+Relationship:
+Student takes Course
+
+Cardinality:
+Many-to-many, because one student can take many courses and one course can have many students.
+A link table such as Enrollment may be needed.
+```
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -269,7 +334,7 @@ Before creating a school database, an ERD can help decide whether `Course1`, `Co
 
 ---
 
-## 7. Entity
+## 7. Basic entity example: entity
 
 An entity is a real-world object, person, place, event, or concept that data is stored about.
 
@@ -314,7 +379,7 @@ Entity instance = Amy Chen
 
 ---
 
-## 8. Attribute
+## 8. Attribute example: attribute
 
 An attribute is a property or detail of an entity.
 
@@ -377,7 +442,7 @@ These probably belong in related tables.
 
 ---
 
-## 9. Relationship
+## 9. Relationship example: relationship
 
 A relationship is a connection between entities.
 
@@ -502,7 +567,7 @@ ERD symbols may vary. Focus on understanding entities, attributes, keys, and car
 
 ---
 
-## 12. Cardinality
+## 12. Cardinality example: cardinality
 
 Cardinality describes how many instances of one entity can relate to instances of another entity.
 
@@ -672,7 +737,7 @@ erDiagram
 
 ---
 
-## 16. Linking Table in ERD
+## 16. Link table example: linking table in ERD
 
 A linking table resolves a many-to-many relationship.
 
