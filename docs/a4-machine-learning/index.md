@@ -80,7 +80,7 @@ By the end of A4 Machine Learning, students should be able to:
 
 ## 3. A4 Learning Path
 
-Recommended teaching order:
+Recommended learning order:
 
 ```text
 Overview

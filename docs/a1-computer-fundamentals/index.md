@@ -72,7 +72,7 @@ By the end of A1 Computer Fundamentals, students should be able to:
 
 ## 3. A1 Learning Path
 
-Recommended teaching order:
+Recommended learning order:
 
 ```text
 Overview

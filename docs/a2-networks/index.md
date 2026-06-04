@@ -71,7 +71,7 @@ By the end of A2 Networks, students should be able to:
 
 ## 3. A2 Learning Path
 
-Recommended teaching order:
+Recommended learning order:
 
 ```text
 Overview

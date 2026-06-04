@@ -71,7 +71,7 @@ By the end of B1 Computational Thinking, students should be able to:
 
 ## 3. B1 Learning Path
 
-Recommended teaching order:
+Recommended learning order:
 
 ```text
 Overview
