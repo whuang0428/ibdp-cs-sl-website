@@ -21,6 +21,75 @@ By the end of this lesson, students should be able to:
 
 ---
 
+## Start here: identify key roles
+
+A primary key uniquely identifies each record in a table.
+
+A foreign key links one table to another table.
+
+Students should first identify what each table stores, then decide which field uniquely identifies each record, and which field creates the relationship. Key questions often connect to ERDs, relationships, and database integrity.
+
+---
+
+## Primary key vs foreign key
+
+| Key type | Main role | Simple question | Example |
+|---|---|---|---|
+| Primary key | uniquely identifies a record in its own table | Which field makes each record unique? | StudentID in STUDENT |
+| Foreign key | links to a primary key in another table | Which field shows the relationship to another table? | StudentID in Enrollment |
+| Candidate key | a possible field that could be chosen as primary key | Could this field uniquely identify records? | SchoolEmail, StudentID |
+| Composite key | a key made from more than one field | Do we need two fields together to identify a record? | StudentID + CourseID |
+
+---
+
+## Key choice workflow
+
+1. Identify each table.
+   List the tables before choosing any keys.
+2. Decide what one record in the table represents.
+   Check whether one row means one student, one grade, one loan, or one order item.
+3. Find a field that uniquely identifies each record.
+   Prefer stable ID fields when names or descriptions may repeat.
+4. Mark that field as the primary key.
+   The primary key gives the record its identity in its own table.
+5. Look for fields that refer to records in another table.
+   These fields usually store another table's ID.
+6. Mark those fields as foreign keys.
+   A foreign key creates a relationship between tables.
+7. Check whether a many-to-many relationship needs a link table or composite key.
+   Link tables often store two foreign keys together.
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain the purpose of a primary key
+- explain the purpose of a foreign key
+- distinguish primary keys from foreign keys
+- identify candidate keys
+- explain when a composite key may be used
+- explain how foreign keys support relationships between tables
+- explain referential integrity in simple terms
+- choose suitable keys from a database scenario
+
+---
+
+## Scenario answer pattern
+
+Use this order when answering key or relationship questions:
+
+1. Identify the tables in the scenario.
+2. Decide what each table stores.
+3. Choose a primary key for each table.
+4. Identify fields that connect tables.
+5. Mark those fields as foreign keys.
+6. Check whether the relationship is one-to-many or many-to-many.
+7. Explain how the keys help keep records linked correctly.
+
+---
+
 ## 2. Syllabus Mapping
 
 | Item | Detail |
@@ -250,6 +319,8 @@ simple
 clear
 ```
 
+### Primary key example
+
 ### Example
 
 | StudentID | FirstName | LastName |
@@ -360,6 +431,8 @@ A candidate key is a field or combination of fields that could uniquely identify
 
 In a Student table:
 
+### Candidate key example
+
 ```text
 StudentID
 SchoolEmail
@@ -428,6 +501,8 @@ You usually only need primary key and foreign key, but knowing this helps explai
 
 A composite key uses more than one field to uniquely identify a record.
 
+### Composite key example
+
 ### Example: Enrollment Table
 
 | StudentID | CourseID | EnrollDate |
@@ -463,6 +538,8 @@ and still store `StudentID` and `CourseID` as foreign keys.
 ## 12. Foreign Key
 
 A foreign key is a field in one table that refers to the primary key in another table.
+
+### Foreign key example
 
 ### Example
 
@@ -580,6 +657,8 @@ Ben is enrolled in CS
 ## 15. Referential Integrity
 
 Referential integrity means foreign key values must refer to existing primary key values.
+
+### Referential integrity example
 
 ### Example
 
@@ -1157,6 +1236,25 @@ Use this structure:
 ```text
 Referential integrity means every foreign key value must match an existing primary key value in the related table. This prevents records from referring to non-existing records.
 ```
+
+---
+
+## Common mistakes
+
+Watch for these mistakes in key and relationship questions:
+
+- choosing a field as primary key even though it is not unique
+- confusing a foreign key with a primary key
+- forgetting that a foreign key references another table
+- using a person's name as a key when names may repeat
+- missing the need for a link table in a many-to-many relationship
+- not explaining referential integrity
+- thinking every table can only have one possible candidate key
+- forgetting that a composite key uses more than one field
+
+### Common exam trap
+
+Do not label a field as a key only because it has `ID` in the name. Explain whether it uniquely identifies records in its own table or links to another table.
 
 ---
 
