@@ -16,6 +16,48 @@ By the end of this lesson, students should be able to:
 
 ---
 
+## Start here: sorting is repeated comparison and movement
+
+Sorting means arranging values into an order, such as ascending or descending.
+
+In exam questions, students usually need to trace comparisons, swaps, and passes. Before tracing a full sorting algorithm, make sure you understand one comparison and one swap.
+
+---
+
+## Recommended learning route
+
+1. Understand ascending and descending order.
+   Check whether values should go smallest to largest or largest to smallest.
+2. Trace one comparison between two values.
+   Decide which value should come first for the required order.
+3. Trace one swap.
+   Use a temporary variable so neither value is lost.
+4. Trace one full pass through an array.
+   Move from left to right and record each comparison.
+5. Trace repeated passes until the array is sorted.
+   Do not stop after one pass unless the algorithm says it is finished.
+6. Compare bubble sort and insertion sort at a simple level.
+   Bubble sort swaps adjacent values; insertion sort inserts a key into a sorted section.
+7. Check the final order carefully.
+   Read the whole array from left to right before giving your final answer.
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain what sorting means
+- distinguish ascending order from descending order
+- trace a comparison between two array values
+- trace a swap correctly
+- explain what one pass means
+- trace how array values change after each pass
+- recognize when a sorting algorithm has finished
+- avoid confusing index positions with stored values
+
+---
+
 ## 2. Syllabus Mapping
 
 | Item | Detail |
@@ -198,6 +240,18 @@ Changing ascending to descending usually means changing the comparison operator.
 
 Sorting often needs to exchange two values.
 
+## Core swap pattern
+
+```text
+temp = array[index]
+array[index] = array[index + 1]
+array[index + 1] = temp
+```
+
+`temp` is needed so one value is not overwritten. After a swap, both array positions must be updated. In trace questions, record the changed array immediately after the swap.
+
+### Basic swap example
+
 ### 7.1 Wrong Swap
 
 ```java
@@ -263,6 +317,21 @@ This swaps adjacent elements in an array.
 
 ---
 
+## Exam trace pattern
+
+Use this pattern when answering sorting trace questions:
+
+1. Write the initial array.
+2. Identify the current pass.
+3. Compare the required pair of values.
+4. Decide whether a swap is needed.
+5. Update the array immediately after the swap.
+6. Continue until the pass is finished.
+7. Start the next pass if the algorithm requires it.
+8. Check the final order.
+
+---
+
 ## 8. Bubble Sort
 
 ## 8.1 Core Idea
@@ -283,6 +352,8 @@ Large values slowly “bubble” toward the end of the array.
 
 ## 8.2 Bubble Sort One Pass Example
 
+### One pass example
+
 Start:
 
 ```text
@@ -302,6 +373,8 @@ After one pass, the largest value `8` is at the end.
 ---
 
 ## 8.3 Full Bubble Sort Trace
+
+### Bubble sort trace example
 
 Start:
 
@@ -509,6 +582,8 @@ Insert 1:
 
 ## 13.2 Insertion Sort Trace
 
+### Insertion sort trace example
+
 Start:
 
 ```text
@@ -616,6 +691,21 @@ if names[i] comes after names[i + 1] alphabetically, swap
 ::: warning Note
 For this course page, integer sorting is the main focus. String sorting is an extension example.
 :::
+
+---
+
+## Common exam traps
+
+Watch for these mistakes in sorting questions:
+
+- swapping values without using a temporary variable
+- forgetting to record the array after each swap
+- comparing the wrong pair of values
+- confusing ascending and descending conditions
+- stopping after one pass when more passes are needed
+- thinking the index is the value
+- overwriting one value during a swap
+- not checking whether the final array is fully sorted
 
 ---
 
