@@ -35,6 +35,91 @@ Machine learning can be useful when patterns are hard to write as rules and enou
 
 ---
 
+## Start here: how to answer ML scenario questions
+
+Machine learning questions often give a real-world scenario. Students should not only name an application.
+
+A strong answer should explain:
+
+1. what the ML system is trying to predict or classify
+2. what data it might use
+3. what benefit it gives
+4. what limitation or risk exists
+5. what safeguard or human check may be needed
+
+Do not memorise every example equally. Focus on how to analyse a scenario using data, task, benefit, limitation, and safeguard.
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- describe common machine learning applications
+- explain what input data a system may use
+- identify what the system is trying to predict, classify, or recommend
+- explain benefits of using ML in a scenario
+- explain limitations such as bias, poor-quality data, over-reliance, lack of transparency, or privacy concerns
+- suggest suitable safeguards such as human review, testing, monitoring, or data quality checks
+
+---
+
+## Core limitations to remember
+
+These are the limitations you should be ready to explain in scenario answers:
+
+| Limitation | Student-friendly meaning |
+|---|---|
+| Biased training data | the model may learn unfair patterns from past data |
+| Poor-quality or incomplete data | wrong, missing, outdated, or unrepresentative data can lead to poor predictions |
+| Overfitting or poor generalisation | the model may work well on training data but fail on new real-world cases |
+| Lack of transparency / explainability | users may not know why the model gave a prediction |
+| Privacy concerns | ML systems may collect, process, or expose personal data |
+| Over-reliance on automated decisions | humans may trust the model too much and miss context or errors |
+
+For exams, connect the limitation to the scenario. For example, biased student data could unfairly label some students as "at risk".
+
+---
+
+## Scenario answer pattern
+
+Use this structure when a question asks you to discuss or evaluate an ML application:
+
+1. Identify the ML task.
+2. Explain what data/features may be used.
+3. Explain the benefit in the scenario.
+4. Identify one limitation or risk.
+5. Suggest one safeguard or human check.
+
+Short example:
+
+```text
+A school uses ML to predict students who may need extra support.
+The task is prediction or classification because the system identifies students at risk.
+It may use attendance, quiz scores, assignment history, and learning platform activity.
+The benefit is early support for students before they fall further behind.
+One risk is biased or incomplete data leading to unfair labels.
+A safeguard is teacher review, so predictions are used to support students rather than punish them.
+```
+
+---
+
+## Core examples and useful extra examples
+
+Core examples to practise first:
+
+```text
+recommendation systems
+fraud detection
+medical diagnosis support
+student risk prediction
+spam detection
+```
+
+Useful extra examples later in this page include transport, security, media, games, business, and scientific research. Use them to practise the same scenario answer pattern, not as a list to memorize.
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
