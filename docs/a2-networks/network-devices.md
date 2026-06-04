@@ -36,6 +36,83 @@ Students often mix up routers, switches, modems, and wireless access points. The
 
 ---
 
+## Start here: each device has a network job
+
+Network devices move, direct, connect, or protect data in a network.
+
+Students should learn what problem each device solves. In exam answers, the key skill is matching the device role to the scenario.
+
+Do not just name a device; explain why it is needed.
+
+---
+
+## Network device role table
+
+| Device | Main role | Simple exam wording |
+|---|---|---|
+| Switch | connects devices within a LAN and forwards data to the correct device | sends data to the correct device on a local network |
+| Router | connects different networks and forwards packets between them | sends data between networks, such as LAN and internet |
+| Modem | converts signals so a network can connect to an ISP / internet connection | helps connect a local network to an internet service |
+| Wireless access point | allows wireless devices to connect to a wired network | provides Wi-Fi access to a network |
+| Firewall | filters traffic based on rules | helps block unauthorized or unsafe network traffic |
+
+---
+
+## Troubleshooting workflow
+
+When solving a network device scenario, use this order:
+
+1. Identify what the network needs to do.
+2. Decide whether devices are communicating inside one LAN or between networks.
+3. Check whether the issue is wired connection, wireless access, internet connection, or security.
+4. Match the issue to a likely device.
+5. Explain the role of that device in the scenario.
+6. If asked to recommend a device, justify the choice using the scenario details.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain the purpose of a switch
+- explain the purpose of a router
+- explain the purpose of a modem
+- explain the purpose of a wireless access point
+- explain the purpose of a firewall
+- distinguish LAN communication from communication between networks
+- choose a suitable device for a scenario
+- explain why a device is needed rather than only naming it
+
+---
+
+## Scenario answer pattern
+
+When answering a network device question, use this order:
+
+1. Identify the problem or network need in the scenario.
+2. Name the most suitable device.
+3. State the device's main role.
+4. Explain how that role solves the scenario problem.
+5. If comparing devices, explain why one device is more suitable than another.
+6. Use precise terms such as LAN, network, packet, traffic, wireless access, firewall rules, and internet connection when relevant.
+
+---
+
+## Common mistakes
+
+- confusing a switch with a router
+- saying a switch connects a LAN directly to the internet
+- saying a router only sends data inside one LAN
+- confusing a modem with a router
+- saying a WAP is the same as the internet
+- saying a firewall removes all threats
+- naming a device without explaining its role
+- giving a security answer when the scenario is mainly about connectivity
+- giving a connectivity answer when the scenario is mainly about traffic filtering
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -301,7 +378,7 @@ reduces unnecessary traffic compared with a hub
 helps build a LAN
 ```
 
-### Example
+### Switch example
 
 In a school computer lab:
 
@@ -370,7 +447,7 @@ may perform NAT in home networks
 may include firewall functions
 ```
 
-### Example
+### Router example
 
 A home router connects:
 
@@ -428,7 +505,7 @@ communicates with wireless clients
 passes traffic to wired network
 ```
 
-### Example
+### Wireless access point example
 
 In a school:
 
@@ -482,7 +559,7 @@ converts signals where needed
 allows local router/network to access ISP service
 ```
 
-### Home Example
+### Modem example: Home Example
 
 ```text
 laptop → router → modem → ISP → internet
@@ -543,7 +620,7 @@ protect internal network
 log suspicious activity
 ```
 
-### Example
+### Firewall example
 
 A school firewall may block:
 
@@ -578,7 +655,7 @@ A firewall monitors and filters incoming and outgoing network traffic based on s
 | often used in schools/companies | common on laptops/desktops |
 | managed by IT/network admin | managed by user or OS |
 
-### Example
+### Firewall example
 
 A school may use a hardware firewall at the network boundary.  
 A student laptop may also have a software firewall in the operating system.
@@ -662,7 +739,7 @@ firewall
 sometimes modem
 ```
 
-### Example Path
+### Troubleshooting example: Example Path
 
 When a phone opens a website:
 
@@ -811,7 +888,7 @@ If a school leaves a router with default password, attackers may change settings
 
 ---
 
-## 26. Troubleshooting Using Device Roles
+## 26. Troubleshooting example: Using Device Roles
 
 Understanding device roles helps identify problems.
 
