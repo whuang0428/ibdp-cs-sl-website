@@ -34,6 +34,114 @@ Searching combines three core skills: **array traversal**, **loops**, and **sele
 
 ---
 
+## Start here: searching means checking values one by one
+
+Searching is used to find whether a value exists in a list or array.
+
+In SL exam questions, **linear search** is the main pattern students must understand. A search algorithm usually checks elements one by one until the target is found or the end is reached.
+
+Students should track:
+
+```text
+index = which position is being checked
+current value = array[index]
+found = whether the target has been found
+```
+
+---
+
+## Search workflow
+
+1. Identify the target value.
+2. Start at the first index.
+3. Compare the current array value with the target.
+4. If it matches, set `found` to true or store the position.
+5. If it does not match, move to the next index.
+6. Stop when the value is found or the array ends.
+7. Output whether the value was found, or output its position if required.
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain what linear search does
+- trace a search through an array
+- compare each element with a target value
+- use a found flag correctly
+- store the position or index of a found item
+- stop a search when the item is found if early stopping is used
+- explain what happens when the target is not found
+- avoid confusing the index with the value stored at that index
+
+---
+
+## Core linear search pattern
+
+```text
+index = 0
+found = false
+
+WHILE index < LENGTH(array) AND found = false DO
+    IF array[index] = target THEN
+        found = true
+    ELSE
+        index = index + 1
+    END IF
+END WHILE
+```
+
+`index` tells us which element is being checked.
+
+`found` records whether the target has been found.
+
+Early stopping avoids checking the rest of the array after the target is found.
+
+---
+
+## Found-flag answer pattern
+
+When explaining or writing a found flag search:
+
+1. Set `found` to false before the search starts.
+2. Compare the current array value with the target.
+3. If the values match, set `found` to true.
+4. Use `found` in the loop condition if early stopping is needed.
+5. After the loop, use `found` to decide the output message.
+
+---
+
+## Common exam mistakes
+
+Watch for these searching mistakes:
+
+- confusing the array index with the value
+- starting from the wrong index
+- stopping before checking the last element
+- forgetting to update the index
+- setting `found` to true too early
+- forgetting what to output when the item is not found
+- using the final index as the position without checking whether the item was actually found
+- not tracing the found flag after it changes
+
+---
+
+## Exam answer pattern
+
+When tracing or writing a searching algorithm, use this order:
+
+1. Write the target value.
+2. Write the initial index and found value.
+3. Check the current array element.
+4. Compare it with the target.
+5. Update `found` or position if needed.
+6. Move to the next index if not found.
+7. Stop only when the loop condition becomes false.
+8. Write the final output.
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -182,7 +290,7 @@ found = true
 
 ---
 
-## 7. Linear Search with Boolean Found Flag
+## 7. Found flag example: linear search with Boolean found flag
 
 ## 7.1 IB Pseudocode
 
@@ -254,7 +362,7 @@ Once `found` becomes true, it should not be changed back to false later in the s
 
 ---
 
-## 8. Target Not Found Case
+## 8. Not found example: target not found case
 
 ### 8.1 Java Code
 
@@ -298,7 +406,7 @@ The target `10` is not equal to any element in the array. Therefore, `found` rem
 
 ---
 
-## 9. Search and Return Position
+## 9. Position tracking example: search and return position
 
 Sometimes it is not enough to know whether the target exists. We may need to know **where** it is.
 
@@ -364,7 +472,7 @@ Final output:
 
 ---
 
-## 10. Early Stopping
+## 10. Early stopping example
 
 ### 10.1 Why Stop Early?
 
@@ -586,7 +694,7 @@ If the task is “how many matches are there?”, use a counter.
 
 ---
 
-## 15. Common Mistakes
+## 15. Common exam trap: common mistakes
 
 | Mistake | Why it is a problem | Better habit |
 |---|---|---|
