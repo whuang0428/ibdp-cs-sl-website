@@ -34,6 +34,105 @@ The fetch-decode-execute cycle is the repeated process the CPU uses to run progr
 
 ---
 
+## Start here: the CPU instruction cycle
+
+The fetch-decode-execute cycle is the repeated process the CPU uses to run program instructions.
+
+Fetch gets the next instruction from memory. Decode works out what the instruction means. Execute carries out the instruction.
+
+Students should learn the order of the cycle and the role of the key registers.
+
+---
+
+## Fetch-decode-execute workflow
+
+1. The program counter stores the address of the next instruction.
+   This tells the CPU where to fetch from next.
+2. That address is copied to the memory address register.
+   The MAR holds the address currently being accessed.
+3. The address bus sends the address to memory.
+   Memory uses this address to find the correct location.
+4. The instruction is fetched from memory and placed in the memory data register.
+   The MDR holds the instruction or data moving between memory and the CPU.
+5. The instruction is copied to the current instruction register.
+   This page uses `CIR`; some courses call this the instruction register, or `IR`.
+6. The program counter is updated to point to the next instruction.
+   This prepares the CPU for the next fetch.
+7. The control unit decodes the instruction.
+   It works out what operation is needed.
+8. The CPU executes the instruction, using the ALU, registers, or memory if needed.
+   The exact components used depend on the instruction.
+
+---
+
+## Key registers in the cycle
+
+| Register | Role in the cycle | Simple exam wording |
+|---|---|---|
+| PC | stores the address of the next instruction | points to the next instruction |
+| MAR | stores the memory address currently being accessed | holds the address sent to memory |
+| MDR | stores data or instruction moving to/from memory | holds the fetched instruction or data |
+| IR / CIR | stores the current instruction being decoded/executed | holds the instruction currently being processed |
+| ACC | stores intermediate results | holds results from ALU operations |
+
+This page mainly uses `CIR` for the current instruction register. `IR` and `CIR` are often used for the same basic student-level role.
+
+---
+
+## Bus roles in the cycle
+
+| Bus | Role |
+|---|---|
+| Address bus | carries the address from the CPU to memory |
+| Data bus | carries the instruction or data between CPU and memory |
+| Control bus | carries control signals such as read/write commands |
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- state the order fetch, decode, execute
+- explain what happens during fetch
+- explain what happens during decode
+- explain what happens during execute
+- describe the role of PC, MAR, MDR, and IR/CIR
+- explain how buses support memory access
+- connect the control unit and ALU to the cycle
+- write the cycle steps in a logical order
+
+---
+
+## Exam answer pattern
+
+When answering a fetch-decode-execute question, use this order:
+
+1. Start with the PC holding the address of the next instruction.
+2. Explain how the address is sent to memory.
+3. Explain how the instruction is fetched into the CPU.
+4. Mention the IR/CIR holding the current instruction.
+5. Explain that the control unit decodes the instruction.
+6. Explain that the instruction is executed.
+7. Mention the ALU, registers, or memory only if relevant to the instruction.
+8. Keep the order clear and avoid jumping straight to execution.
+
+---
+
+## Common mistakes
+
+- describing execute before fetch
+- forgetting the program counter
+- confusing MAR and MDR
+- saying the MAR stores the instruction itself
+- saying the MDR stores the address
+- forgetting that the control unit decodes instructions
+- saying every instruction must use the ALU
+- mixing up RAM, cache, and registers
+- writing vague answers such as "the CPU gets and runs the instruction" without register detail
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -282,7 +381,7 @@ The fetch step gets the next instruction from memory.
 7. PC is updated to point to the next instruction.
 ```
 
-### Example
+### Fetch step example
 
 If:
 
@@ -320,7 +419,7 @@ whether the ALU is needed
 whether memory needs to be read or written
 ```
 
-### Example
+### Decode step example
 
 Instruction:
 
@@ -372,7 +471,7 @@ sending data to output
 | Jump | PC is changed to another address |
 | Output | data is sent to output device/buffer |
 
-### Example
+### Execute step example
 
 Instruction:
 
@@ -448,7 +547,7 @@ Buses carry information between CPU, memory, and other components.
 | Data bus | data/instructions | memory sends instruction to CPU |
 | Control bus | control signals | CPU sends read or write signal |
 
-### During Fetch
+### Bus role example: During Fetch
 
 ```text
 address bus carries address from MAR to memory
@@ -462,7 +561,7 @@ You usually do not need to describe every electrical detail. Focus on the role o
 
 ---
 
-## 15. Example Trace 1: Simple Fetch
+## 15. Register role example: Simple Fetch Trace
 
 Assume:
 
@@ -489,7 +588,7 @@ LOAD 50
 
 ---
 
-## 16. Example Trace 2: Add Instruction
+## 16. Execute step example: Add Instruction
 
 Assume the instruction in CIR is:
 
@@ -528,7 +627,7 @@ The result may be stored in a register or memory depending on the instruction.
 
 ---
 
-## 17. Example Trace 3: Jump Instruction
+## 17. Common exam trap: Jump Instruction
 
 Some instructions change the normal order of execution.
 
