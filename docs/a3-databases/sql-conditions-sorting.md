@@ -36,6 +36,103 @@ By the end of this lesson, students should be able to:
 
 ---
 
+## Start here: SQL pattern first
+
+SQL questions often reward correct structure more than long explanations.
+
+Students should first master the basic `SELECT` + `WHERE` + `ORDER BY` pattern. The goal is to write clear queries that match the field names, table names, and conditions in the question.
+
+---
+
+## Core SQL patterns
+
+Basic filter:
+
+```sql
+SELECT field1, field2
+FROM tableName
+WHERE condition;
+```
+
+Two conditions that must both be true:
+
+```sql
+SELECT field1, field2
+FROM tableName
+WHERE condition1 AND condition2;
+```
+
+Two conditions where either can be true:
+
+```sql
+SELECT field1, field2
+FROM tableName
+WHERE condition1 OR condition2;
+```
+
+Filter and sort ascending:
+
+```sql
+SELECT field1, field2
+FROM tableName
+WHERE condition
+ORDER BY fieldName ASC;
+```
+
+Filter and sort descending:
+
+```sql
+SELECT field1, field2
+FROM tableName
+WHERE condition
+ORDER BY fieldName DESC;
+```
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- write a `SELECT` query using specific fields
+- use `WHERE` to filter records
+- use comparison operators such as `=`, `<`, `>`, `<=`, `>=`, `<>`
+- combine conditions using `AND` and `OR`
+- use brackets when logic may be ambiguous
+- sort results using `ORDER BY ASC` or `DESC`
+- match field names and table names exactly from the question
+
+---
+
+## Common mistakes
+
+Check for these before you finish a SQL answer:
+
+- using the wrong field name
+- forgetting quotation marks around text values
+- using `AND` when `OR` is needed
+- using `OR` when `AND` is needed
+- forgetting `ORDER BY`
+- sorting in the wrong direction
+- selecting too many fields
+- missing `DISTINCT` when the question asks for each result only once
+- writing conditions that do not match the scenario
+
+---
+
+## Exam answer pattern
+
+When writing a SQL query from a question, use this order:
+
+1. Identify the table name.
+2. Identify the fields to display.
+3. Identify the condition or conditions.
+4. Decide whether `AND` or `OR` is needed.
+5. Decide whether sorting is needed.
+6. Write the query using the exact field names from the question.
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -976,7 +1073,7 @@ ORDER BY Price DESC;
 
 ---
 
-## 30. Worked Example: Grade 10 Students
+## 30. Basic WHERE example: grade 10 students
 
 ### Prompt
 
@@ -1000,7 +1097,7 @@ WHERE filters to GradeLevel 10 only.
 
 ---
 
-## 31. Worked Example: High Scores
+## 31. ORDER BY example: high scores
 
 ### Prompt
 
@@ -1097,7 +1194,7 @@ ORDER BY PublicationYear ASC;
 
 ---
 
-## 35. Worked Example: AND Condition
+## 35. AND example: AND condition
 
 ### Prompt
 
@@ -1120,7 +1217,7 @@ WHERE GradeLevel = 10 AND Score > 80;
 
 ---
 
-## 36. Worked Example: OR Condition
+## 36. OR example: OR condition
 
 ### Prompt
 
@@ -1145,7 +1242,7 @@ WHERE Category = 'Accessory' OR Category = 'Display';
 
 ---
 
-## 37. Worked Example: Correct the Query
+## 37. Common exam trap: correct the query
 
 ### Incorrect Query
 
