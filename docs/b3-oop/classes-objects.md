@@ -34,6 +34,88 @@ If students confuse **class** and **object**, every later OOP topic becomes diff
 
 ---
 
+## Start here: class is the blueprint, object is the thing
+
+A class describes what objects of that type should have and do.
+
+An object is an actual instance created from a class. Students should first separate the idea of a class from the idea of an object.
+
+In exam or code-reading questions, the key skill is identifying the class, the object, the attributes, and how dot notation is used.
+
+---
+
+## Class vs object
+
+| Idea | Simple meaning | Example |
+|---|---|---|
+| Class | a blueprint or template | Student |
+| Object | one actual item created from a class | student1 |
+| Attribute / state | data stored inside an object | name, age, score |
+| Method / behaviour | action an object can perform | setName(), getScore() |
+| Dot notation | way to access an object's attributes or methods | student1.name or student1.getScore() |
+
+---
+
+## Object creation workflow
+
+1. Define a class.
+   Write the blueprint for this type of object.
+2. Decide what attributes the class needs.
+   Choose the data each object should store.
+3. Create an object from the class.
+   Use the class to make one actual instance.
+4. Store values inside the object.
+   Give the object's attributes specific values.
+5. Use dot notation or methods to access the object.
+   Read or change the object through its reference name.
+6. Trace how the object's state changes when methods are called.
+   Update the current attribute values step by step.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain what a class is
+- explain what an object is
+- distinguish a class from an object
+- identify attributes / state in a simple class
+- identify methods / behaviour in a simple class
+- explain what instantiation means at a simple level
+- read simple dot notation
+- trace basic changes to an object's state
+
+---
+
+## Code-reading pattern
+
+When reading OOP code, use this order:
+
+1. Find the class name.
+2. Identify the attributes.
+3. Identify the methods.
+4. Find where an object is created.
+5. Track the object's current attribute values.
+6. Read method calls in order.
+7. Update the object's state after each method call.
+8. Use dot notation carefully.
+
+---
+
+## Common mistakes
+
+- confusing the class with an object
+- saying the class stores the data for one specific object
+- forgetting that many objects can be created from one class
+- confusing an attribute with a method
+- forgetting that object state can change
+- reading dot notation in the wrong direction
+- describing code generally instead of identifying the actual object
+- mixing up object name and class name
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -210,7 +292,7 @@ The blueprint does not live in the house. It describes how houses should be buil
 | Written once | Can be created many times |
 | Example: `Student` | Example: Alice as a Student object |
 
-### Simple Example
+### Class example
 
 ```text
 Class: Student
@@ -255,7 +337,7 @@ At this stage, the attributes are not private yet. Encapsulation will be improve
 
 ---
 
-## 8. Creating Objects from a Class
+## 8. Object example: Creating Objects from a Class
 
 A class alone is only the blueprint. To create an object, Java uses `new`.
 
@@ -292,7 +374,7 @@ Alice scored 85
 
 ---
 
-## 9. Object State Table
+## 9. State change example: Object State Table
 
 The **state** of an object means the current values of its attributes.
 
@@ -329,7 +411,7 @@ In OOP, students should trace object state, not only local variable values.
 
 ---
 
-## 10. Creating Multiple Objects
+## 10. Object example: Creating Multiple Objects
 
 One class can create many objects.
 
@@ -379,7 +461,7 @@ A class usually contains:
 attributes + methods
 ```
 
-### Attributes
+### Attribute example
 
 Attributes store data about an object.
 
@@ -392,7 +474,7 @@ int mark;
 
 These describe the student's state.
 
-### Methods
+### Method example
 
 Methods describe what an object can do.
 
@@ -468,7 +550,7 @@ s1.displayInfo();
 | `s1.mark` | Access the `mark` attribute of object `s1` |
 | `s1.displayInfo()` | Call the `displayInfo` method of object `s1` |
 
-### Important
+### Dot notation example
 
 ```java
 s1.displayInfo();
@@ -490,7 +572,7 @@ uses the state of `s2`, not `s1`.
 
 ---
 
-## 14. Method Uses Object State
+## 14. State change example: Method Uses Object State
 
 ### Code
 
