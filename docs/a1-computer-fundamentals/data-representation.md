@@ -18,6 +18,92 @@ By the end of this lesson, students should be able to:
 
 ---
 
+## Start here: data is stored as binary
+
+Computers store and process data using binary.
+
+Different types of data, such as text, images, and sound, are represented using binary patterns. Students should first understand binary basics, then learn how different data types are encoded.
+
+Exam questions may ask for explanations, conversions, comparisons, or file size calculations.
+
+---
+
+## Core exam focus
+
+Focus first on these exam skills:
+
+- binary and denary conversion
+- hexadecimal basics if your course sequence includes them
+- character encoding
+- bitmap image representation
+- sound sampling
+- file size calculations
+- lossy and lossless compression
+- choosing suitable representation or compression in a scenario
+
+---
+
+## Recommended learning route
+
+1. Start with binary and place value.
+   Learn how powers of 2 give each bit its value.
+2. Practise binary / denary conversion.
+   Convert in both directions until the place values feel familiar.
+3. Learn how text is represented using character codes.
+   Understand that characters are mapped to numeric codes.
+4. Learn how images are represented using pixels and colour depth.
+   Connect resolution and colour depth to file size.
+5. Learn how sound is represented using samples and sample resolution (bit depth).
+   Connect sampling rate, bit depth, duration, and channels.
+6. Practise file size calculations.
+   Keep units clear and convert bits to bytes when required.
+7. Compare lossy and lossless compression.
+   Choose the method that fits the type of file and scenario.
+
+---
+
+## Formula checklist
+
+Use these formulas carefully in calculation questions:
+
+| Purpose | Formula or rule |
+|---|---|
+| Image file size | `width × height × colour depth` |
+| Sound file size | `sample rate × sample resolution (bit depth) × duration × channels` |
+| Bits to bytes | divide by 8 |
+| Bytes to KB | use `1 KB ≈ 1000 bytes` for simple estimation on this page |
+| Bytes to MB | use `1 MB ≈ 1,000,000 bytes` for simple estimation on this page |
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain why computers use binary
+- convert simple values between binary and denary
+- explain how text is represented
+- explain how bitmap images are represented
+- explain how sound is sampled and stored
+- calculate simple file sizes
+- distinguish lossy and lossless compression
+- choose a suitable compression method for a scenario
+
+---
+
+## Exam answer pattern
+
+Use this order when answering data representation questions:
+
+1. Identify the type of data: number, text, image, or sound.
+2. Identify whether the question asks for explanation, conversion, calculation, or comparison.
+3. Write the correct formula if calculation is needed.
+4. Substitute values carefully with correct units.
+5. Convert bits and bytes if required.
+6. Explain the result in the context of the question.
+
+---
+
 ## 2. Syllabus Mapping
 
 | Item | Detail |
@@ -284,6 +370,8 @@ The denary value is:
 3. Add the place values where the bit is 1.
 ```
 
+### Binary conversion example
+
 ### Example 1
 
 Convert:
@@ -435,6 +523,8 @@ a
 
 A **character set** maps each character to a number.  
 That number is then stored in binary.
+
+### Text representation example
 
 ### Simple Example
 
@@ -766,6 +856,8 @@ Stereo has 2 channels, so file size doubles compared with mono if other settings
 
 Compression reduces file size.
 
+### Compression example
+
 It can be:
 
 ```text
@@ -829,6 +921,8 @@ The computer stores the message as binary patterns.
 
 ## 25. Worked Example: Image Size
 
+### Image file size example
+
 A small image has:
 
 ```text
@@ -861,6 +955,8 @@ using 1 KB ≈ 1000 bytes for simple estimation.
 
 ## 26. Worked Example: Sound Size
 
+### Sound file size example
+
 A sound file has:
 
 ```text
@@ -889,6 +985,25 @@ This is about:
 ```
 
 before compression.
+
+---
+
+## Common mistakes
+
+Watch for these mistakes in data representation questions:
+
+- forgetting that 1 byte = 8 bits
+- mixing up bits and bytes
+- using the wrong colour depth
+- forgetting duration or channels in sound file size calculations
+- confusing sample rate with sample resolution
+- saying compression always improves quality
+- confusing lossy and lossless compression
+- giving a formula without matching it to the scenario
+
+### Common exam trap
+
+A correct formula is only useful if the values and units match the scenario. Check whether the answer should be in bits, bytes, KB, or MB.
 
 ---
 
