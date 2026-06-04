@@ -161,6 +161,35 @@ _backups/
 
 不要复制官方 IB 试卷、题目、markscheme、截图或大段官方文字。可以用官方材料判断考纲方向、评估结构、技能重点和主题强调，但公开页面必须使用原创解释、原创例子和原创练习。
 
+## Topic 页面规则
+
+核心 topic landing pages 应保持学生视角，并清楚对应官方 syllabus 结构：
+
+- Theme A: A1 Computer fundamentals, A2 Networks, A3 Databases, A4 Machine learning
+- Theme B: B1 Computational thinking, B2 Programming, B3 Object-oriented programming
+
+A1/A2/A3/A4/B1/B2/B3 的 `index.md` 应尽量包含：
+
+- 清楚的 Theme A / Theme B 标注
+- `What you will learn` 简短学习摘要
+- `Assessment connection`，说明 Paper 1 / Paper 2 / IA 关系
+- `Recommended learning order` 或类似学生视角学习路线
+
+不要在学生页面使用 `teaching order`、`teaching flow`、`Teacher Strategy` 等教师视角表达。需要保留学习建议时，改成 `Learning tip`、`How to study this page` 或 `Recommended learning order`。
+
+核心 topic 子页面通常应包含：
+
+- Lesson Goals
+- Syllabus Mapping
+- Key Terms
+- Concept Explanation
+- 原创例子和 worked examples
+- Guided Practice / Independent Practice
+- Exam-style Questions
+- One-page Revision Summary 或 Quick Self-test
+
+如果页面很长，不要优先删除内容。优先在页面顶部加入 `Start here`、`core exam focus`、`Core checklist`、`Must know for SL`、`Useful extra examples` 或 `Scenario answer pattern`，帮助学生先抓住核心。
+
 ## Assessment 规则
 
 Assessment 内容应帮助学生清楚区分 Paper 1、Paper 2 和 IA。
