@@ -334,7 +334,7 @@ Use this pattern when answering sorting trace questions:
 
 ## 8. Bubble Sort
 
-## 8.1 Core Idea
+### 8.1 Core Idea
 
 **Bubble sort** repeatedly compares adjacent elements.
 
@@ -350,7 +350,7 @@ Large values slowly “bubble” toward the end of the array.
 
 ---
 
-## 8.2 Bubble Sort One Pass Example
+### 8.2 Bubble Sort One Pass Example
 
 ### One pass example
 
@@ -372,7 +372,7 @@ After one pass, the largest value `8` is at the end.
 
 ---
 
-## 8.3 Full Bubble Sort Trace
+### 8.3 Full Bubble Sort Trace
 
 ### Bubble sort trace example
 
@@ -541,7 +541,7 @@ public class OptimizedBubbleSort {
 
 ## 13. Insertion Sort
 
-## 13.1 Core Idea
+### 13.1 Core Idea
 
 **Insertion sort** builds a sorted section from left to right.
 
@@ -580,7 +580,7 @@ Insert 1:
 
 ---
 
-## 13.2 Insertion Sort Trace
+### 13.2 Insertion Sort Trace
 
 ### Insertion sort trace example
 
@@ -598,7 +598,7 @@ Start:
 
 ---
 
-## 13.3 Insertion Sort Java Code
+### 13.3 Insertion Sort Java Code
 
 ```java
 import java.util.Arrays;
@@ -632,7 +632,7 @@ Output:
 
 ---
 
-## 13.4 Insertion Sort Code Explanation
+### 13.4 Insertion Sort Code Explanation
 
 | Code | Explanation |
 |---|---|
@@ -657,7 +657,7 @@ Output:
 | Common difficulty | Nested loop bounds | Understanding shifting |
 
 ::: tip Course Strategy
-For basic teaching, bubble sort is usually easier to trace first. Insertion sort can be used as an extension or comparison.
+For beginner learning, bubble sort is usually easier to trace first. Insertion sort can be used as an extension or comparison.
 :::
 
 ---

@@ -33,7 +33,6 @@ Exam questions may ask for explanations, conversions, comparisons, or file size 
 Focus first on these exam skills:
 
 - binary and denary conversion
-- hexadecimal basics if your course sequence includes them
 - character encoding
 - bitmap image representation
 - sound sampling
