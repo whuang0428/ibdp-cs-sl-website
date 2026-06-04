@@ -19,6 +19,98 @@ By the end of this lesson, students should be able to:
 
 ---
 
+## Start here: packet switching is a journey
+
+Packet switching breaks data into smaller packets before transmission.
+
+Each packet can travel across the network independently. Packets contain header information so they can be routed and reassembled.
+
+Students should learn packet switching as a step-by-step journey, not only as a definition.
+
+---
+
+## Packet journey workflow
+
+1. The original data is split into packets.
+   Large data is divided into smaller units for transmission.
+2. Each packet is given header information.
+   The header helps with delivery, ordering, and checking.
+3. Packets are sent across the network.
+   They travel from the sender toward the destination.
+4. Different packets may take different routes.
+   Routing can change depending on network conditions.
+5. Routers forward packets towards the destination.
+   Each router uses addressing information to choose the next hop.
+6. Packets may arrive out of order.
+   Different routes and delays can change arrival order.
+7. Sequence numbers help put packets back into the correct order.
+   The destination uses them during reassembly.
+8. Missing or damaged packets may be requested again.
+   Retransmission may be used when reliable delivery is needed.
+9. The destination reassembles the original data.
+   The payloads are combined to recreate the file, message, or webpage.
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain what packet switching is
+- explain why data is split into packets
+- describe what packet headers are used for
+- explain that packets may take different routes
+- explain the role of routers in forwarding packets
+- explain why packets may arrive out of order
+- explain how sequence numbers help reassembly
+- explain what may happen if a packet is lost or damaged
+- give advantages and disadvantages of packet switching
+
+---
+
+## Packet header: key information
+
+| Header information | Why it is needed |
+|---|---|
+| Source address | identifies where the packet came from |
+| Destination address | identifies where the packet should go |
+| Sequence number | helps reassemble packets in the correct order |
+| Error checking data | helps detect whether a packet was damaged |
+
+---
+
+## Scenario answer pattern
+
+Use this order when answering packet switching process questions:
+
+1. State that data is split into packets.
+2. Explain that each packet has header information.
+3. Explain that packets are routed independently.
+4. Mention that packets may take different routes.
+5. Explain that packets may arrive out of order.
+6. Explain that sequence numbers help reassembly.
+7. Mention retransmission if packets are lost or damaged.
+8. Link the explanation back to the given scenario.
+
+---
+
+## Advantages and disadvantages focus
+
+Advantages may include:
+
+- efficient use of network routes
+- packets can take alternative routes if part of the network is busy or unavailable
+- large messages do not block the whole network
+
+Disadvantages may include:
+
+- packets may arrive out of order
+- packets may be lost or delayed
+- reassembly and error checking are needed
+- extra header data adds overhead
+
+---
+
 ## 2. Syllabus Mapping
 
 | Item | Detail |
@@ -176,6 +268,8 @@ large data → split into packets → route packets → receive packets → reas
 
 Packet switching is a method of transmitting data across a network by splitting it into packets.
 
+### Packet journey example
+
 ### Basic Process
 
 ```text
@@ -262,6 +356,8 @@ For exam-style understanding, focus on the idea that a packet contains data plus
 ## 8. Packet Header
 
 The packet header contains information needed for delivery and management.
+
+### Header example
 
 It may include:
 
@@ -364,6 +460,8 @@ Routing means choosing paths for packets across networks.
 
 Routers use destination addresses and routing information to forward packets.
 
+### Routing example
+
 ### Simplified Process
 
 ```text
@@ -434,6 +532,8 @@ The destination and protocols must handle this.
 
 Reassembly means putting packets back together to recreate the original data.
 
+### Reassembly example
+
 At the destination:
 
 ```text
@@ -499,6 +599,8 @@ TCP can detect missing data and request retransmission, helping reliable deliver
 ## 15. Packet Loss and Retransmission
 
 Packet loss means a packet does not reach the destination.
+
+### Packet loss example
 
 ### Causes
 
@@ -839,6 +941,25 @@ late packets may be useless
 ```
 
 This is why some real-time applications prefer lower delay over perfect retransmission.
+
+---
+
+## Common exam mistakes
+
+Watch for these mistakes in packet switching questions:
+
+- saying all packets must take the same route
+- forgetting packet headers
+- confusing routing with reassembly
+- saying packets are reassembled by routers instead of the destination device
+- forgetting sequence numbers
+- forgetting that packets can arrive out of order
+- saying packet loss means the whole message must always be resent
+- giving advantages without explaining why they matter
+
+### Common exam trap
+
+Routers forward packets. The destination device reorders and reassembles packets.
 
 ---
 
