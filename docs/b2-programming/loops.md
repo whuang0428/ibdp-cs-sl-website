@@ -31,6 +31,92 @@ Loops are one of the most important programming topics. If students cannot trace
 
 ---
 
+## Start here: loops repeat steps
+
+A loop is used when a program needs to repeat instructions.
+
+Students should first understand what changes each time the loop repeats. Most loop questions involve a counter, a total / accumulator, or a condition that eventually becomes false.
+
+In exams, students often need to trace loops carefully and avoid off-by-one errors.
+
+---
+
+## Recommended learning route
+
+1. Understand why repetition is needed.
+   Notice where a program would otherwise repeat similar instructions.
+2. Trace a simple counter loop.
+   Follow how the counter starts, changes, and stops.
+3. Trace a loop with a total or accumulator.
+   Record how the running total changes each iteration.
+4. Compare FOR, WHILE, and DO WHILE.
+   Choose the loop type based on how repetition is controlled.
+5. Check the stopping condition.
+   Decide exactly when the loop should stop.
+6. Watch for off-by-one errors.
+   Check whether the loop runs one time too many or too few.
+7. Identify infinite loops.
+   Look for conditions that never become false.
+8. Practise loop trace tables.
+   Write down every changed variable step by step.
+
+---
+
+## Loop choice table
+
+| Loop type | Best used when... | Simple example |
+|---|---|---|
+| FOR loop | the number of repetitions is known | repeat 10 times |
+| WHILE loop | the loop may run zero or more times depending on a condition | keep reading until input is valid |
+| DO WHILE loop | the loop must run at least once | ask for input, then validate it |
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain why loops are used
+- distinguish FOR, WHILE, and DO WHILE loops
+- identify the loop condition
+- trace loop variables correctly
+- use a counter
+- use an accumulator or running total
+- recognize when a loop stops
+- identify possible infinite loops
+- avoid off-by-one errors
+
+---
+
+## Loop trace pattern
+
+When tracing a loop, use this order:
+
+1. Write the initial values.
+2. Check the loop condition before entering the loop if required.
+3. Execute statements inside the loop in order.
+4. Update the counter or condition variable.
+5. Record every changed variable.
+6. Check the loop condition again.
+7. Stop only when the condition becomes false.
+8. Write the final output if required.
+
+---
+
+## Common exam traps
+
+- stopping the loop one step too early
+- stopping the loop one step too late
+- forgetting to update the counter
+- confusing counter and accumulator
+- using the wrong comparison operator
+- assuming a WHILE loop always runs at least once
+- forgetting that a DO WHILE loop runs at least once
+- creating an infinite loop because the condition never changes
+- recording output before the correct update
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -124,7 +210,7 @@ The key to learning loops is not only memorizing syntax. Students must understan
 
 ## 5. Real-life Example
 
-### Example: Repeating a login attempt
+### WHILE loop example: Repeating a login attempt
 
 A system may allow a user to enter a password up to three times.
 
@@ -191,7 +277,7 @@ public class ForLoopExample {
 | `i++` | After each iteration, `i` increases by 1 |
 | `System.out.println(i);` | Outputs the current value of `i` |
 
-### 7.4 Trace Table
+### 7.4 Counter loop example: Trace Table
 
 | Iteration | i before output | Condition `i <= 5` | Output | i after `i++` |
 |---:|---:|---|---:|---:|
@@ -262,7 +348,7 @@ public class WhileLoopExample {
 | `total = total + number;` | Adds input to the total |
 | `System.out.println(...)` | Outputs final total after loop stops |
 
-### 8.4 Trace Example
+### 8.4 Accumulator example: Trace Example
 
 Assume the user enters:
 
@@ -334,7 +420,7 @@ public class DoWhileExample {
 | `while (choice != 1 && choice != 2);` | Loop repeats while choice is invalid |
 | `&&` | Both conditions must be true for loop to continue |
 
-### 9.4 Trace Example
+### 9.4 DO WHILE example: Trace Example
 
 Input values:
 
@@ -358,7 +444,7 @@ You selected: 2
 
 ## 10. Accumulator and Counter Patterns
 
-### 10.1 Accumulator: Calculating a Total
+### 10.1 Accumulator example: Calculating a Total
 
 An **accumulator** stores a running total.
 
@@ -398,7 +484,7 @@ public class TotalMarks {
 }
 ```
 
-### 10.2 Counter: Counting Matching Values
+### 10.2 Counter loop example: Counting Matching Values
 
 A **counter** counts how many times something happens.
 
@@ -445,7 +531,7 @@ Pass count: 3
 
 An **infinite loop** is a loop that never stops because its condition never becomes false.
 
-### 11.2 Example of Wrong Code
+### 11.2 Infinite loop example: Wrong Code
 
 ```java
 int i = 1;
@@ -488,7 +574,7 @@ An infinite loop occurs because the loop control variable is not updated, so the
 
 An **off-by-one error** happens when a loop runs one too many or one too few times.
 
-### 12.2 Example
+### 12.2 Off-by-one example
 
 ```java
 for (int i = 1; i < 5; i++) {
@@ -525,7 +611,7 @@ Output:
 5
 ```
 
-### 12.4 Array Loop Warning
+### 12.4 Common exam trap: Array Loop Warning
 
 For arrays, this is correct:
 
