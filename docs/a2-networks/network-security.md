@@ -19,6 +19,60 @@ By the end of this lesson, students should be able to:
 
 ---
 
+## Start here: core exam focus
+
+This page belongs to **A2 Networks**. In Paper 1, network security often appears as a **scenario question**: a school, business, hospital, website, or cloud system has a risk, and you must explain how to reduce it.
+
+Do not try to memorize every security term first. Start with this exam pattern:
+
+1. identify the threat
+2. explain the risk
+3. choose a suitable control
+4. justify why it fits the scenario
+
+::: tip Exam focus
+Strong answers connect a threat to a specific scenario. For example, do not only write "use a firewall"; explain what traffic or access the firewall helps control in that network.
+:::
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- identify common network threats
+- explain how each threat affects confidentiality, integrity, or availability
+- choose suitable protection methods
+- explain why a control is suitable for a specific scenario
+- distinguish prevention, detection, and recovery
+
+## Must know for SL
+
+Focus on these first:
+
+| Threats / weaknesses | Protection methods |
+|---|---|
+| malware | firewall |
+| phishing / social engineering | encryption |
+| unauthorized access | access control |
+| denial of service | authentication |
+| weak passwords | backup / recovery |
+
+## Scenario answer pattern
+
+A good network security answer often follows this pattern:
+
+1. Name the threat or weakness.
+2. Explain what could happen in the given scenario.
+3. Choose a suitable security measure.
+4. Explain why that measure reduces the risk.
+
+Example:
+
+```text
+Phishing could trick school staff into revealing login details, allowing attackers to access student records. Multi-factor authentication reduces this risk because a stolen password alone is not enough to log in.
+```
+
+---
+
 ## 2. Syllabus Mapping
 
 | Item | Detail |
@@ -275,6 +329,8 @@ limitation
 ---
 
 ## 8. Common Network Threats Overview
+
+The threats below are useful examples. For SL exam preparation, focus first on the must-know threats in the table near the top of this page, then use the extra examples to build stronger scenario answers.
 
 | Threat | What It Does |
 |---|---|
@@ -732,6 +788,8 @@ If attackers can physically access network equipment, technical security can be 
 
 ## 20. Security Controls Overview
 
+Start with the must-know controls: authentication, access control, firewalls, encryption, and backup / recovery. Other controls in this section are useful extra examples when a scenario needs more detail.
+
 Security controls can be grouped into:
 
 ```text
@@ -1026,6 +1084,12 @@ keep multiple versions
 ### Important
 
 A backup is only useful if it can be restored.
+
+---
+
+## Useful extra examples
+
+The remaining controls and scenarios are useful for deeper answers, but students should not treat every item as equal priority. Use these examples when they fit the question context.
 
 ---
 
