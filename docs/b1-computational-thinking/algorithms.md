@@ -38,6 +38,64 @@ An algorithm is a finite sequence of clear, ordered instructions used to solve a
 
 ---
 
+## Start here: algorithm problem-solving flow
+
+When you write an algorithm, do not start by guessing code. Use this flow:
+
+1. Read the problem carefully.
+2. Identify inputs, processing, and outputs.
+3. Break the solution into steps.
+4. Write pseudocode.
+5. Trace the algorithm with sample data.
+6. Check whether the output matches the question.
+
+This flow is useful because B1 algorithm design leads directly into B2 programming. Clear thinking first makes the code easier later.
+
+---
+
+## IPO thinking
+
+IPO means **Input, Processing, Output**.
+
+- **Input** = data the algorithm receives
+- **Processing** = steps, calculations, decisions, or loops
+- **Output** = final result shown or returned
+
+| Part | Question to ask | Example |
+|---|---|---|
+| Input | What data is given? | marks, names, prices |
+| Processing | What needs to happen? | calculate total, compare values |
+| Output | What should be produced? | highest value, message, result |
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain what an algorithm is
+- identify inputs, processing, and outputs
+- break a problem into ordered steps
+- use sequence, selection, and iteration
+- write simple pseudocode
+- trace an algorithm using sample data
+- identify simple logic errors
+
+---
+
+## Exam answer pattern
+
+When you meet an algorithm or pseudocode question, use this order:
+
+1. Underline the required output.
+2. List the needed input variables.
+3. Decide whether selection or iteration is needed.
+4. Write the steps in order.
+5. Check the algorithm with one small test case.
+6. Make sure the final output matches the question.
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -838,7 +896,7 @@ Both are acceptable ways to describe logic, but pseudocode is usually more preci
 
 ---
 
-## 24. Worked Example: Pass or Fail
+## 24. IPO example: pass or fail
 
 ### Problem
 
@@ -873,7 +931,7 @@ selection = IF score >= 50
 
 ---
 
-## 25. Worked Example: Calculate Average
+## 25. Loop example: calculate average
 
 ### Problem
 
@@ -1065,7 +1123,7 @@ ENDWHILE
 
 ---
 
-## 30. Worked Example: Shopping Discount
+## 30. Selection example: shopping discount
 
 ### Problem
 
@@ -1127,7 +1185,7 @@ ENDIF
 
 ---
 
-## 32. Dry Running an Algorithm
+## 32. Trace check example: dry running an algorithm
 
 A dry run means manually following an algorithm step by step.
 
