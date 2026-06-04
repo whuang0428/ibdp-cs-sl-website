@@ -37,6 +37,77 @@ Supervised learning uses labelled examples. The model learns the relationship be
 
 ---
 
+## Start here: supervised learning workflow
+
+Supervised learning uses labelled training data.
+
+The model learns from examples where the correct answer is already known. After training, the model uses new input features to make a prediction.
+
+The key idea is learning the pattern between features and labels.
+
+---
+
+## Core workflow
+
+1. Collect labelled data: gather examples that include input features and correct labels.
+2. Choose useful features: select input data that may help the prediction.
+3. Train the model using examples: let the model learn patterns from features and labels.
+4. Test the model with unseen data: check whether it works on examples not used for training.
+5. Use the model to make predictions: give the trained model new features and receive an output.
+6. Evaluate whether predictions are accurate enough: decide whether the model is suitable for the scenario.
+
+---
+
+## Classification vs regression
+
+| Type | What it predicts | Output type | Example |
+|---|---|---|---|
+| Classification | A category or class | discrete label | spam / not spam, disease / no disease |
+| Regression | A number | continuous value | house price, temperature, sales amount |
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain what supervised learning means
+- explain why labelled data is needed
+- distinguish features from labels
+- describe the training and prediction process
+- distinguish classification from regression
+- give one example of classification
+- give one example of regression
+- explain why testing with unseen data is important
+
+---
+
+## Scenario answer pattern
+
+When a question gives a supervised learning scenario, use this order:
+
+1. Identify what the model is trying to predict.
+2. Decide whether it is classification or regression.
+3. Name possible features.
+4. Name the label or target output.
+5. Explain how labelled data is used for training.
+6. Explain how the model is tested or evaluated.
+
+---
+
+## Common mistakes
+
+Avoid these supervised learning mistakes:
+
+- saying supervised learning does not need labels
+- confusing features with labels
+- confusing classification with regression
+- describing training but not prediction
+- forgetting to mention testing with unseen data
+- using an example without explaining what is being predicted
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -382,7 +453,7 @@ flowchart LR
 
 ---
 
-## 10. Training Stage
+## 10. Training example: training stage
 
 During training, the model learns patterns from labelled examples.
 
@@ -410,7 +481,7 @@ The trained model can then be used on new examples.
 
 ---
 
-## 11. Prediction / Inference Stage
+## 11. Prediction example: prediction / inference stage
 
 Prediction, also called inference, happens after the model is trained.
 
@@ -1059,7 +1130,7 @@ In important decisions, supervised learning should often support humans rather t
 
 ---
 
-## 35. Worked Example: Spam Detection
+## 35. Classification example: spam detection
 
 ### Task
 
@@ -1094,7 +1165,7 @@ A normal school email may be incorrectly classified as spam.
 
 ---
 
-## 36. Worked Example: House Price Prediction
+## 36. Regression example: house price prediction
 
 ### Task
 
