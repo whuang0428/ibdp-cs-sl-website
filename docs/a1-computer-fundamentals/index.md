@@ -4,6 +4,13 @@
 Theme A: Concepts of computer science. A1 Computer fundamentals helps you understand how computer systems work, including hardware, data representation, operating systems, control systems, and related core concepts.
 :::
 
+## What you will learn
+
+- how hardware, software, data, and users work together in a computer system
+- how the CPU, memory, and storage support program execution
+- how data is represented using binary, logic gates, and file formats
+- how operating systems, control systems, and cloud services support real-world computing
+
 ## Assessment connection
 
 - Paper 1: explains core system concepts used in short-answer and scenario questions.

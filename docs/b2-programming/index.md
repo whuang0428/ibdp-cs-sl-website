@@ -4,6 +4,13 @@
 Theme B: Computational thinking and problem-solving. B2 Programming helps you turn algorithms into working programs, trace code, test solutions, and explain programming logic.
 :::
 
+## What you will learn
+
+- how to write simple programs using variables, data types, input, and output
+- how selection and loops control program behaviour
+- how arrays, searching, and sorting process multiple values
+- how testing, debugging, file processing, and tracing support reliable programs
+
 ## Assessment connection
 
 - Paper 1: tests programming constructs, arrays, searching, sorting, tracing, testing, debugging, and algorithm writing.
@@ -57,7 +64,7 @@ By the end of B2 Programming, students should be able to:
 
 ## 3. B2 Learning Path
 
-The recommended order is:
+Recommended learning order:
 
 ```text
 Programming Basics

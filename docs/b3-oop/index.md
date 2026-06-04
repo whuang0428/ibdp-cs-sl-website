@@ -8,6 +8,14 @@ The main SL focus is understanding basic OOP concepts and how a class is used: c
 
 Extension activities can help with deeper programming confidence, but students should master the core single-class OOP ideas first.
 
+## What you will learn
+
+- how classes and objects organize data and behaviour
+- how attributes, methods, constructors, and object state work
+- how encapsulation, accessors, mutators, and validation support safer class design
+- how simple UML class diagrams represent class structure
+- which multi-class activities are optional extension / enrichment content
+
 ## Assessment connection
 
 - Paper 1: tests OOP vocabulary, class design, encapsulation, UML, and object behaviour.
@@ -63,7 +71,7 @@ By the end of B3 Object-Oriented Programming, students should be able to:
 
 ## 3. B3 Learning Path
 
-The recommended order is:
+Recommended learning order:
 
 ```text
 Classes and Objects

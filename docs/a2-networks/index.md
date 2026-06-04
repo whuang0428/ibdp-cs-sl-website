@@ -4,6 +4,13 @@
 Theme A: Concepts of computer science. A2 Networks helps you understand how devices communicate, how data moves across networks, and how communication can be protected.
 :::
 
+## What you will learn
+
+- how devices connect, communicate, and share resources on networks
+- how LANs, WANs, network devices, and network models are used
+- how protocols, packet switching, DNS, and web access work together
+- how transmission choices and security controls affect network reliability and safety
+
 ## Assessment connection
 
 - Paper 1: tests networking concepts, protocols, transmission, security, and scenario-based explanations.

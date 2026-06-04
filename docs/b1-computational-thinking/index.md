@@ -4,6 +4,13 @@
 Theme B: Computational thinking and problem-solving. B1 Computational thinking helps you analyse problems, design algorithms, represent logic, and trace solutions.
 :::
 
+## What you will learn
+
+- how to break problems into smaller parts using decomposition
+- how abstraction helps focus on the important details
+- how algorithms use sequence, selection, and iteration
+- how to use flowcharts and trace tables to represent and check logic
+
 ## Assessment connection
 
 - Paper 1: tests algorithmic thinking, decomposition, abstraction, flowcharts, trace tables, and explanation of logic.

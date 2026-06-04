@@ -4,6 +4,13 @@
 Theme A: Concepts of computer science. A3 Databases helps you understand how structured data is stored, linked, queried, protected, and recovered.
 :::
 
+## What you will learn
+
+- how relational databases organize data using tables, records, fields, and keys
+- how relationships connect tables and support meaningful data retrieval
+- how to write and read simple SQL `SELECT` queries
+- how normalization, transactions, security, privacy, and ERDs support database quality
+
 ## Assessment connection
 
 - Paper 1: tests database concepts, relationships, keys, SQL, normalization, security, and recovery.
@@ -69,7 +76,7 @@ By the end of A3 Databases, students should be able to:
 
 ## 3. A3 Learning Path
 
-The recommended order is:
+Recommended learning order:
 
 ```text
 Database Fundamentals

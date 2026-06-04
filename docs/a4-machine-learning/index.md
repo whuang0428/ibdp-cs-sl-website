@@ -4,6 +4,13 @@
 Theme A: Concepts of computer science. A4 Machine learning helps you understand how data can be used to train, evaluate, and question predictive systems.
 :::
 
+## What you will learn
+
+- how machine learning uses data, features, labels, algorithms, and models
+- how supervised and unsupervised learning differ
+- how classification, regression, training, validation, and testing are used
+- how to evaluate ML systems and discuss bias, ethics, privacy, and limitations
+
 ## Assessment connection
 
 - Paper 1: tests ML concepts, data, model evaluation, overfitting, bias, ethics, privacy, and scenario judgement.
