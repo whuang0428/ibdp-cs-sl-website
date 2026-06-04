@@ -19,6 +19,58 @@ By the end of this lesson, students should be able to:
 
 ---
 
+## Start here: choose by scenario
+
+Transmission method questions often ask students to choose the most suitable option for a situation.
+
+Students should not only name a method. A strong answer should match the method to the scenario using factors such as speed, distance, reliability, mobility, cost, interference, and security.
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- distinguish wired and wireless transmission
+- compare Ethernet, fibre optic, Wi-Fi, and Bluetooth at a simple level
+- explain when wired transmission may be more reliable
+- explain when wireless transmission may be more flexible
+- discuss factors such as speed, distance, mobility, interference, cost, and security
+- choose a suitable transmission method for a given scenario
+- justify the choice using scenario details
+
+---
+
+## Wired vs wireless decision table
+
+| Scenario factor | Wired may be better when... | Wireless may be better when... |
+|---|---|---|
+| Speed | high and stable speed is needed | moderate speed is acceptable |
+| Mobility | devices stay in one place | users need to move around |
+| Reliability | connection must be stable | occasional interference is acceptable |
+| Installation | cables can be installed easily | cabling is difficult or expensive |
+| Security | physical connection is preferred | encryption and authentication are used |
+| Range | long fixed links are needed, especially with fibre | short to medium flexible access is needed |
+
+---
+
+## Scenario answer pattern
+
+Use this order when answering transmission scenario questions:
+
+1. Identify the setting and user needs.
+2. Decide whether mobility is important.
+3. Consider speed, distance, reliability, interference, cost, and security.
+4. Choose a suitable transmission method.
+5. Justify the choice using details from the scenario.
+6. Mention one limitation if the question asks for evaluation.
+
+### Scenario choice example
+
+For a school computer lab with fixed desktop PCs, wired Ethernet is suitable because the devices do not need mobility and the lab needs stable, low-latency connections. A limitation is that cables must be installed and maintained.
+
+---
+
 ## 2. Syllabus Mapping
 
 | Item | Detail |
@@ -291,6 +343,8 @@ high throughput is needed
 wireless signal is unreliable
 ```
 
+### Ethernet example
+
 ### Example
 
 A school computer lab may connect desktop computers to a switch using Ethernet cables.
@@ -365,6 +419,8 @@ high-speed ISP links
 long-distance WAN connections
 school or campus backbone
 ```
+
+### Fibre optic example
 
 ::: tip Exam Phrase
 Fibre optic cable uses pulses of light to transmit data and is suitable for high-speed, long-distance communication.
@@ -464,6 +520,8 @@ radio signal coverage
 security settings such as WPA2/WPA3
 ```
 
+### Wi-Fi example
+
 ### Example
 
 ```text
@@ -526,6 +584,8 @@ possible interference
 security risks if pairing is weak
 not suitable for large high-speed networks
 ```
+
+### Bluetooth example
 
 ### Example
 
@@ -853,6 +913,8 @@ phones/tablets/laptops are used
 public or flexible spaces are involved
 ```
 
+### Scenario choice example
+
 ### Scenario Table
 
 | Scenario | Better Choice | Reason |
@@ -1066,6 +1128,25 @@ access control
 network monitoring
 guest networks
 ```
+
+---
+
+## Common mistakes
+
+Watch for these mistakes in scenario answers:
+
+- saying wireless is always better because it is convenient
+- saying wired is always better without considering mobility
+- forgetting interference for wireless
+- forgetting installation cost for wired networks
+- confusing Wi-Fi with the internet
+- confusing Bluetooth with Wi-Fi
+- choosing fibre optic without explaining distance or speed needs
+- giving a method without linking it to the scenario
+
+### Common exam trap
+
+A method name alone is not enough. Link the choice to the scenario, such as fixed devices, required mobility, distance, reliability, interference, cost, or security.
 
 ---
 
