@@ -4,6 +4,10 @@
 Theme B: Computational thinking and problem-solving. B3 Object-oriented programming helps you organize data and behaviour into classes and objects.
 :::
 
+The main SL focus is understanding basic OOP concepts and how a class is used: classes, objects, attributes, methods, constructors, encapsulation, accessors, mutators, and simple UML class diagrams.
+
+Extension activities can help with deeper programming confidence, but students should master the core single-class OOP ideas first.
+
 ## Assessment connection
 
 - Paper 1: tests OOP vocabulary, class design, encapsulation, UML, and object behaviour.
@@ -74,6 +78,10 @@ Classes and Objects
 This order is intentional.
 
 Students first learn the foundation of OOP, then gradually move toward better class design and controlled access. UML then helps students represent class design visually.
+
+::: tip Optional extension
+HL Multiple Classes is useful for going beyond the SL core. Focus on the basic single-class OOP ideas first, then use the multi-class page for extra practice or larger projects.
+:::
 
 ---
 
@@ -484,7 +492,7 @@ B3 questions may ask students to:
 - convert Java to UML
 - convert UML to Java skeleton
 - trace object state after method calls
-- explain how multiple objects or classes interact
+- recognize that multiple-object and multi-class interaction is optional extension / enrichment content
 
 ---
 
@@ -617,11 +625,15 @@ After finishing B3, students should complete:
 | 5 getter/setter tasks | Practise encapsulation |
 | 3 UML-to-Java tasks | Connect design to code |
 | 3 Java-to-UML tasks | Extract class structure |
-| 1 mini multi-class project | Combine full OOP workflow |
+| Optional mini multi-class project | Combine full OOP workflow after the SL core basics are secure |
 
 ---
 
 ## 20. Suggested Mini Project
+
+::: warning Extension / enrichment content
+This mini project uses multiple classes and arrays of objects. It is not the first priority for SL exam preparation. Use it after you are confident with the required B3 OOP basics.
+:::
 
 ### Student Course Manager
 
@@ -708,7 +720,7 @@ Before moving to A3 Databases, students should be able to:
 - [ ] interpret UML class diagrams
 - [ ] convert simple Java to UML
 - [ ] convert simple UML to Java skeleton
-- [ ] explain object collaboration at a basic level
+- [ ] recognize object collaboration as optional extension / enrichment content
 
 ---
 
