@@ -20,6 +20,81 @@ By the end of this lesson, students should be able to:
 
 ---
 
+## Start here: from URL to web page
+
+When a user enters a URL, the browser must find the server and request the web page.
+
+DNS helps translate a domain name into an IP address. HTTP or HTTPS is then used to request and receive web page data.
+
+Students should learn this as a step-by-step process, not as separate disconnected terms.
+
+---
+
+## Web access workflow
+
+1. The user enters a URL into the browser.
+   The browser reads the protocol, domain name, and path.
+2. The browser checks whether the address or page data is already cached.
+   Cached data can reduce repeated network requests.
+3. If needed, DNS is used to find the IP address for the domain name.
+   DNS returns the address needed to contact the server.
+4. The browser connects to the web server.
+   The browser acts as the client in a client-server model.
+5. The browser sends an HTTP or HTTPS request.
+   The request asks the server for a page or resource.
+6. The web server sends back the requested page data.
+   The response may include HTML, CSS, JavaScript, images, or status codes.
+7. The browser receives the data and displays the web page.
+   The browser renders the resources for the user.
+8. Data may travel in packets across the network.
+   Large requests and responses can be split and reassembled.
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain the purpose of DNS
+- distinguish a URL, domain name, and IP address
+- describe the role of a browser
+- describe the role of a web server
+- explain why HTTP or HTTPS is used
+- outline the steps used to access a web page
+- explain how caching can reduce repeated requests
+- explain that data may be split into packets during transmission
+
+---
+
+## Key terms: do not mix these up
+
+| Term | What it means | Simple example |
+|---|---|---|
+| URL | the full web address entered by the user | `https://example.com/page` |
+| Domain name | the human-readable name of a website | `example.com` |
+| IP address | the numerical address of a device/server | `203.0.113.10` |
+| DNS | system that finds the IP address for a domain name | `example.com → IP address` |
+| HTTP/HTTPS | protocol used to request and transfer web pages | browser request to server |
+| Browser | client software used to access web pages | Chrome, Edge, Safari |
+| Web server | computer/service that stores and sends web pages | server hosting a website |
+
+---
+
+## Exam answer pattern
+
+Use this order when answering web access process questions:
+
+1. Start with the user entering the URL.
+2. Mention DNS if the domain name needs to be resolved.
+3. Explain that DNS returns the IP address.
+4. Explain that the browser contacts the web server.
+5. Mention HTTP or HTTPS request.
+6. Explain that the server sends the web page data back.
+7. Mention packets or caching if the question context requires it.
+8. Keep the steps in the correct order.
+
+---
+
 ## 2. Syllabus Mapping
 
 | Item | Detail |
@@ -423,6 +498,8 @@ or search the typed text using a search engine if it is not a clear URL.
 
 The browser may check whether it already has some information stored.
 
+### Cache example
+
 Cache may include:
 
 ```text
@@ -455,6 +532,8 @@ The browser may still need to contact the server to check if content has changed
 ## 13. Step 3: DNS Lookup
 
 If the browser does not already know the IP address, it needs DNS.
+
+### DNS lookup example
 
 ### DNS Lookup Goal
 
@@ -557,6 +636,8 @@ data is not encrypted by default
 
 The browser sends a request.
 
+### HTTP request example
+
 Example request idea:
 
 ```text
@@ -624,6 +705,8 @@ server may return 404 Not Found
 ## 18. Step 7: Packet Transfer
 
 Requests and responses are sent as packets across the network.
+
+### Packet transfer example
 
 This involves:
 
@@ -708,6 +791,8 @@ payment information
 session cookies
 page content from tampering
 ```
+
+### HTTPS security example
 
 ::: tip Exam Phrase
 HTTPS is more secure than HTTP because it encrypts data between the browser and server, helping protect confidentiality and integrity.
@@ -988,6 +1073,26 @@ internet is slow
 ```
 
 A stronger answer identifies specific possible causes.
+
+---
+
+## Common exam traps
+
+Watch for these mistakes in web access process questions:
+
+- saying DNS gives the URL instead of the IP address
+- confusing a URL with an IP address
+- forgetting the browser is the client
+- saying HTTP finds the IP address
+- forgetting that HTTPS adds security through encryption
+- mixing up cache and DNS
+- writing steps in the wrong order
+- describing packet switching without connecting it to web access
+- saying the internet stores the web page instead of the web server
+
+### Common exam trap
+
+DNS finds the IP address. HTTP or HTTPS requests the web page. The web server sends the page data back.
 
 ---
 
