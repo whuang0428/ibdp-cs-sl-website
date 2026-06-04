@@ -37,6 +37,101 @@ This page focuses on basic `SELECT` and `FROM`. Conditions such as `WHERE`, sort
 
 ---
 
+## Start here: the basic SELECT pattern
+
+Most SQL exam questions start with the same basic structure.
+
+Students should first identify:
+
+1. the table
+2. the fields to display
+3. whether all records or filtered records are needed
+
+Before learning complex queries, be confident with a simple `SELECT` query.
+
+---
+
+## Minimum SQL pattern
+
+```sql
+SELECT field1, field2
+FROM tableName;
+```
+
+- `SELECT` tells the database which fields to show.
+- `FROM` tells the database which table to use.
+- Field names and table names should match the question exactly.
+
+### Example 1: select all fields
+
+```sql
+SELECT *
+FROM Student;
+```
+
+`*` means all fields in the table.
+
+### Example 2: select specific fields
+
+```sql
+SELECT FirstName, GradeLevel
+FROM Student;
+```
+
+This only displays the fields needed. Do not select extra fields if the question asks for specific fields.
+
+### Example 3: select unique values if needed
+
+```sql
+SELECT DISTINCT GradeLevel
+FROM Student;
+```
+
+Use `DISTINCT` when the question asks for each value only once or no duplicates.
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain the purpose of `SELECT`
+- explain the purpose of `FROM`
+- use `*` to select all fields
+- select specific fields from a table
+- use `DISTINCT` when duplicate values should not be repeated
+- match table names and field names exactly from the question
+- avoid selecting fields that the question does not ask for
+
+---
+
+## Common mistakes
+
+Check for these common SELECT errors:
+
+- selecting all fields when the question asks for specific fields
+- using the wrong table name
+- using the wrong field name
+- forgetting commas between field names
+- using `DISTINCT` when it is not needed
+- forgetting `DISTINCT` when the question asks for unique values
+- adding conditions when the question only asks for a simple `SELECT`
+
+---
+
+## Exam answer pattern
+
+When writing a basic `SELECT` query, use this order:
+
+1. Identify the table.
+2. Identify the fields that need to be displayed.
+3. Decide whether all fields or specific fields are needed.
+4. Decide whether `DISTINCT` is needed.
+5. Write `SELECT` first, then `FROM`.
+6. Check spelling of table names and field names.
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -50,6 +145,7 @@ This page focuses on basic `SELECT` and `FROM`. Conditions such as `WHERE`, sort
 | Table | 表 | Structure storing records about one entity |
 | Result set | 结果集 | Data returned by a query |
 | `*` | 所有字段 | Wildcard meaning all fields |
+| DISTINCT | 唯一值 | Removes duplicate values from the result |
 | Alias | 别名 | Alternative name for a field or output column |
 | Clause | 子句 | Part of an SQL statement, such as SELECT or FROM |
 | Statement | 语句 | Complete SQL instruction |
@@ -319,7 +415,7 @@ These examples will be used to explain basic SELECT syntax.
 
 ---
 
-## 8. SELECT All Fields
+## 8. Basic SELECT example: SELECT all fields
 
 To retrieve all fields from a table, use:
 
@@ -358,7 +454,7 @@ In real systems, selecting all fields may be inefficient or may reveal unnecessa
 
 ---
 
-## 9. SELECT Specific Fields
+## 9. Specific fields example: SELECT specific fields
 
 To retrieve only certain fields, list the field names after `SELECT`.
 
@@ -575,7 +671,31 @@ Filtering records with `WHERE` is covered in the next page.
 
 ---
 
-## 15. Field Order in SELECT
+## 15. DISTINCT example: select unique values
+
+`DISTINCT` removes duplicate values from the result.
+
+### Example
+
+```sql
+SELECT DISTINCT GradeLevel
+FROM Student;
+```
+
+### Result
+
+| GradeLevel |
+|---:|
+| 10 |
+| 11 |
+
+### Key Idea
+
+Use `DISTINCT` only when the question asks for unique values, each value once, or no duplicates.
+
+---
+
+## 16. Field Order in SELECT
 
 The order of fields in the `SELECT` clause controls the order of columns in the result.
 
@@ -611,7 +731,7 @@ The same fields can be shown in different order.
 
 ---
 
-## 16. Selecting Fields from Product Table
+## 17. Selecting Fields from Product Table
 
 ### Query
 
@@ -645,7 +765,7 @@ Product
 
 ---
 
-## 17. Selecting Fields from Course Table
+## 18. Selecting Fields from Course Table
 
 ### Query
 
@@ -668,7 +788,7 @@ This query does not show `TeacherName` because it was not listed after `SELECT`.
 
 ---
 
-## 18. Column Aliases
+## 19. Column Aliases
 
 An alias gives a field a different name in the query result.
 
@@ -706,7 +826,7 @@ original field name AS output name
 
 ---
 
-## 19. Aliases Without AS
+## 20. Aliases Without AS
 
 Some SQL systems allow aliases without `AS`.
 
@@ -728,7 +848,7 @@ Use `AS` when writing aliases because it shows your intention clearly.
 
 ---
 
-## 20. Selecting Calculated Values Preview
+## 21. Selecting Calculated Values Preview
 
 SQL can sometimes calculate values in a SELECT query.
 
@@ -762,7 +882,7 @@ Most basic SELECT questions only require selecting fields from a table.
 
 ---
 
-## 21. SELECT Does Not Mean “Choose Records” Only
+## 22. SELECT Does Not Mean “Choose Records” Only
 
 Students sometimes think `SELECT` means selecting rows.
 
@@ -797,7 +917,7 @@ WHERE GradeLevel = 10;
 
 ---
 
-## 22. Reading a SELECT Query
+## 23. Reading a SELECT Query
 
 When reading SQL, use this process:
 
@@ -828,7 +948,7 @@ Output order = LastName first, FirstName second
 
 ---
 
-## 23. Writing a SELECT Query
+## 24. Writing a SELECT Query
 
 When writing SQL from a question:
 
@@ -868,7 +988,7 @@ FROM Product;
 
 ---
 
-## 24. Common SELECT Patterns
+## 25. Common SELECT Patterns
 
 ### Pattern 1: All Fields
 
@@ -900,7 +1020,7 @@ FROM TableName;
 
 ---
 
-## 25. SELECT and Database Design
+## 26. SELECT and Database Design
 
 Good database design makes SELECT queries easier.
 
@@ -942,7 +1062,7 @@ good normalization
 
 ---
 
-## 26. SELECT and Keys
+## 27. SELECT and Keys
 
 Keys can be selected like normal fields.
 
@@ -972,7 +1092,7 @@ When output needs to identify a specific record, include the primary key.
 
 ---
 
-## 27. SELECT and Sensitive Data
+## 28. SELECT and Sensitive Data
 
 A query should only retrieve data that is needed.
 
@@ -1007,7 +1127,7 @@ reduced accidental exposure
 
 ---
 
-## 28. Worked Example: Student Names
+## 29. Worked Example: Student Names
 
 ### Prompt
 
@@ -1030,7 +1150,7 @@ No WHERE means all student records are included.
 
 ---
 
-## 29. Worked Example: Course List
+## 30. Worked Example: Course List
 
 ### Prompt
 
@@ -1057,7 +1177,7 @@ This shows two selected fields from the Course table.
 
 ---
 
-## 30. Worked Example: Product Prices
+## 31. Worked Example: Product Prices
 
 ### Prompt
 
@@ -1080,7 +1200,7 @@ FROM Product;
 
 ---
 
-## 31. Worked Example: All Product Fields
+## 32. Worked Example: All Product Fields
 
 ### Prompt
 
@@ -1099,7 +1219,7 @@ FROM Product;
 
 ---
 
-## 32. Worked Example: Alias
+## 33. Worked Example: Alias
 
 ### Prompt
 
@@ -1127,7 +1247,7 @@ It does not rename the actual database field permanently.
 
 ---
 
-## 33. Worked Example: Identify the Output
+## 34. Worked Example: Identify the Output
 
 ### Query
 
@@ -1155,7 +1275,7 @@ for all records in Student
 
 ---
 
-## 34. Worked Example: Correct the Query
+## 35. Common exam trap: correct the query
 
 ### Incorrect Query
 
@@ -1177,7 +1297,7 @@ FROM Student;
 
 ---
 
-## 35. Worked Example: Correct Missing FROM
+## 36. Common exam trap: correct missing FROM
 
 ### Incorrect Query
 
@@ -1198,7 +1318,7 @@ FROM Product;
 
 ---
 
-## 36. Scenario Answer Bank
+## 37. Scenario Answer Bank
 
 ### If Asked: “Write a query to show all fields”
 
@@ -1241,7 +1361,7 @@ using a field not in the table
 
 ---
 
-## 37. Common Mistakes
+## 38. Common Mistakes
 
 | Mistake | Why it is wrong | Correct idea |
 |---|---|---|
@@ -1258,7 +1378,7 @@ using a field not in the table
 
 ---
 
-## 38. Guided Practice
+## 39. Guided Practice
 
 ### Practice 1: Select All
 
@@ -1347,7 +1467,7 @@ FROM Product;
 
 ---
 
-## 39. Independent Practice
+## 40. Independent Practice
 
 ### Question 1
 
@@ -1401,7 +1521,7 @@ Why might `SELECT *` be a poor choice in a real system?
 
 ---
 
-## 40. Exam-style Questions
+## 41. Exam-style Questions
 
 ### Question 1 [4 marks]
 
@@ -1500,7 +1620,7 @@ FROM Student;
 
 ---
 
-## 41. Practice task
+## 42. Practice task
 ### Activity 1: Query Matching
 
 Students match prompts to SQL queries.
@@ -1557,7 +1677,7 @@ SELECT Student.Email FROM Product;
 
 ---
 
-## 42. Independent practice
+## 43. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what SQL SELECT is and how `SELECT` and `FROM` work together.
@@ -1619,7 +1739,7 @@ Aliases permanently rename database fields.
 
 ---
 
-## 43. One-page Revision Summary
+## 44. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1642,7 +1762,7 @@ Aliases permanently rename database fields.
 
 ---
 
-## 44. Quick Self-test
+## 45. Quick Self-test
 
 Before moving on, students should be able to answer these:
 
