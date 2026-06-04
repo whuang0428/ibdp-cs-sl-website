@@ -37,6 +37,73 @@ A trace table records the values of variables as an algorithm runs. It helps stu
 
 ---
 
+## Start here: how to learn trace tables
+
+Trace tables are not just about copying variable values. They are a way to follow an algorithm step by step.
+
+The goal is to:
+
+```text
+predict outputs
+find logic errors
+understand loops and conditions
+```
+
+When you trace, act like the computer: run one instruction at a time, update only the variables that change, and write output only when an `OUTPUT` statement runs.
+
+---
+
+## Recommended learning route
+
+1. Start with straight-line algorithms: practise assignments and outputs without any branches or loops.
+2. Trace simple if statements: decide which branch runs and ignore the branch that does not run.
+3. Trace loops with counters: check the loop condition and update the counter carefully.
+4. Trace loops with totals / accumulators: keep a running total across each loop iteration.
+5. Trace Boolean flags: track when a flag changes from `false` to `true`.
+6. Use trace tables to find errors: compare the actual trace with what the algorithm was supposed to do.
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- set up a trace table with relevant variables
+- update variables in the correct order
+- trace selection statements
+- trace loops until the stopping condition is false
+- track counters, totals, and flags
+- identify the final output of an algorithm
+- use a trace table to find logic errors
+
+---
+
+## Common mistakes
+
+Watch for these common trace table errors:
+
+- updating variables in the wrong order
+- stopping the loop one step too early or too late
+- forgetting to record output
+- not updating the condition variable
+- confusing assignment with comparison
+- missing changes inside nested if statements
+
+---
+
+## Exam answer pattern
+
+When completing a trace table question, use this order:
+
+1. Write the initial values.
+2. Check the loop or condition.
+3. Execute one statement at a time.
+4. Record every changed variable.
+5. Repeat until the loop condition becomes false.
+6. Write the final output if required.
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -274,7 +341,7 @@ Use columns for variables and conditions that change or matter.
 
 ---
 
-## 9. Tracing Assignment
+## 9. Beginner example: tracing assignment
 
 Assignment changes a variable value.
 
@@ -510,7 +577,7 @@ For `AND`, both conditions must be true.
 
 ---
 
-## 16. Tracing FOR Loops
+## 16. Loop example: tracing FOR loops
 
 A FOR loop repeats a known number of times.
 
@@ -743,7 +810,7 @@ After one branch is chosen, later ELSE IF branches are not checked.
 
 ---
 
-## 22. Tracing Flags
+## 22. Flag example: tracing flags
 
 A flag is a Boolean variable that remembers whether something has happened.
 
@@ -1226,7 +1293,7 @@ Given inputs:
 
 ---
 
-## 35. Worked Example: Output Position Error
+## 35. Error-tracing example: output position error
 
 ### Wrong Algorithm
 
