@@ -34,6 +34,99 @@ Arrays connect directly to loops. Most array algorithms use a loop to visit each
 
 ---
 
+## Start here: arrays before searching and sorting
+
+Arrays store multiple values under one variable name. Each item is accessed using an index.
+
+Students should first understand indexing and traversal before moving to searching and sorting. Arrays often appear in trace-style and pseudocode questions, so the main skill is following the index carefully.
+
+---
+
+## Recommended learning path
+
+1. Understand what an array stores: one array can hold many related values.
+2. Learn how indexes work: Java arrays start at index `0`.
+3. Access one array element: use `array[index]` to read a value.
+4. Update one array element: assign a new value to a specific index.
+5. Traverse the array with a loop: visit each element in order.
+6. Use traversal to count, total, search, or compare values.
+7. Trace array changes carefully in exam questions.
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain what an array is
+- identify an array index
+- access an element using its index
+- update an array element
+- trace changes to array values
+- use a loop to traverse an array
+- avoid off-by-one errors
+- explain why arrays are useful for repeated data
+
+---
+
+## Core traversal pattern
+
+Traversal means visiting each element in order. The loop variable is used as the index, and the stopping condition must match the array length.
+
+IB-style pseudocode:
+
+```text
+FOR i = 0 TO LENGTH(array) - 1 DO
+    // use array[i]
+END FOR
+```
+
+Java pattern:
+
+```java
+for (int i = 0; i < array.length; i++) {
+    // use array[i]
+}
+```
+
+The key idea is:
+
+```text
+first valid index = 0
+last valid index = length - 1
+stop before index = length
+```
+
+---
+
+## Common exam mistakes
+
+Watch for these array mistakes:
+
+- starting from the wrong index
+- stopping one element too early or too late
+- confusing index with value
+- updating the wrong element
+- forgetting to increment the loop variable
+- using `<=` when `<` is needed, or the reverse
+- not tracing changed array values after assignment
+
+---
+
+## Exam answer pattern
+
+When tracing or writing array pseudocode, use this order:
+
+1. Write the initial array values.
+2. Identify the index variable.
+3. Check the loop condition.
+4. Update the correct array element.
+5. Record changed values immediately.
+6. Move to the next index.
+7. Stop only when the loop condition becomes false.
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -253,7 +346,7 @@ Different teachers and resources may write pseudocode slightly differently. The 
 
 ---
 
-## 7. Zero-based Indexing
+## 7. Indexing example: zero-based indexing
 
 Java arrays start from index `0`.
 
@@ -295,7 +388,7 @@ For an array with length `n`, valid Java indexes are from `0` to `n - 1`.
 
 ---
 
-## 8. Accessing and Updating Elements
+## 8. Updating example: accessing and updating elements
 
 ### 8.1 Access an Element
 
@@ -325,7 +418,7 @@ Now the array becomes:
 [80, 88, 90]
 ```
 
-### 8.3 Trace
+### 8.3 Trace example
 
 | Step | Code | Array |
 |---|---|---|
@@ -380,7 +473,7 @@ because index 5 does not exist.
 
 ---
 
-## 10. Worked Example 1: Output All Elements
+## 10. Traversal example: output all elements
 
 ### Java Code
 
@@ -679,7 +772,7 @@ public class FindMin {
 
 ---
 
-## 16. Worked Example 7: Simple Linear Search Preview
+## 16. Common exam bridge: simple linear search preview
 
 Searching will be covered in more detail in the next page, but arrays are the foundation.
 
@@ -781,7 +874,7 @@ Parallel arrays can become hard to manage if data becomes complex. Later, OOP ca
 
 ---
 
-## 18. Common Mistakes
+## 18. Common exam trap: common mistakes
 
 | Mistake | Why it is a problem | Better habit |
 |---|---|---|
