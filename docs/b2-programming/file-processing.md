@@ -17,6 +17,60 @@ By the end of this lesson, students should be able to:
 
 ---
 
+## Start here: file input and file output
+
+File input means reading data from a file into a program.
+
+File output means writing data from a program into a file.
+
+A program usually opens a file, processes the data, then closes the file. Students should first understand the direction of data movement before learning detailed syntax.
+
+---
+
+## File I/O workflow
+
+1. Identify whether the program needs to read, write, or append.
+   Decide the direction of data movement before writing code.
+2. Open the correct file.
+   Use the file name and mode that match the task.
+3. Read data from the file or prepare data to write.
+   Read existing records or create the output text.
+4. Process the data if needed.
+   Convert, calculate, split, count, or check the data.
+5. Write or append output if required.
+   Save the result to the correct file.
+6. Close the file.
+   Closing helps finish reading or saving correctly.
+7. Check that the file content matches the task.
+   Confirm the program saved or loaded the expected data.
+
+---
+
+## Read vs write vs append
+
+| Operation | Direction | What it does | Common use |
+|---|---|---|---|
+| Read | file → program | gets existing data from a file | loading names, scores, records |
+| Write | program → file | creates or replaces file content | saving new results |
+| Append | program → end of file | adds new data without removing old data | adding a new log entry |
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain the difference between reading and writing a file
+- explain what append means
+- describe why a file should be opened before use
+- describe why a file should be closed after use
+- read lines or records from a file
+- write output to a file
+- explain how file data may need to be converted before calculations
+- avoid confusing file input with keyboard input
+
+---
+
 ## 2. Syllabus Mapping
 
 | Item | Detail |
@@ -197,6 +251,20 @@ writing = program → file
 
 ---
 
+## Exam answer pattern
+
+Use this order when answering file processing pseudocode or explanation questions:
+
+1. Identify the file operation: read, write, or append.
+2. Identify the file name or file variable.
+3. Open the file using the correct mode.
+4. Read or write one record at a time if needed.
+5. Process or convert the data if required.
+6. Close the file.
+7. Check whether the output should be displayed or saved.
+
+---
+
 ## 8. Text Files
 
 A text file stores characters that humans can read.
@@ -277,6 +345,8 @@ Writing to a file may overwrite existing content depending on the mode used.
 
 ## 11. Java File Reading: Basic Pattern
 
+### Reading example
+
 Java has several ways to read files. For beginner teaching, one clear method is using `File` and `Scanner`.
 
 ### Example File: `marks.txt`
@@ -354,6 +424,8 @@ The output is:
 
 ## 13. Reading Numbers from a File
 
+### Number conversion example
+
 If the file stores numbers, each line can be converted from `String` to `int`.
 
 ### Java Code
@@ -430,6 +502,8 @@ average = 307 / 4 = 76.75
 
 ## 15. Reading CSV-style Lines
 
+### CSV-style record example
+
 A line may contain multiple values separated by commas.
 
 File: `students.txt`
@@ -484,6 +558,8 @@ public class ReadStudents {
 
 ## 16. Java File Writing: Basic Pattern
 
+### Writing example
+
 To write to a file, Java can use `PrintWriter`.
 
 ### Java Code
@@ -525,6 +601,8 @@ Highest mark: 90
 ---
 
 ## 17. Appending to a File
+
+### Appending example
 
 Appending means adding new content to the end of the file.
 
@@ -637,6 +715,21 @@ if (count > 0) {
     System.out.println("No marks found.");
 }
 ```
+
+---
+
+## Common mistakes
+
+Watch for these mistakes in file processing questions:
+
+- reading from a file when the task asks to write to a file
+- using write when append is needed
+- forgetting to close the file
+- treating text from a file as a number without conversion
+- overwriting existing data by mistake
+- confusing a file name with a variable name
+- reading only one line when all records should be processed
+- displaying output on screen instead of saving it to a file
 
 ---
 
