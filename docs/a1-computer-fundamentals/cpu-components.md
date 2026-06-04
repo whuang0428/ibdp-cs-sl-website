@@ -36,6 +36,73 @@ Students should understand the CPU as a processor that repeatedly fetches, decod
 
 ---
 
+## Start here: what the CPU does
+
+The CPU executes instructions.
+
+Different CPU components work together to fetch, decode, and execute instructions. Students should first learn the role of each component before memorising every detail.
+
+In exam answers, the key skill is explaining what a component does and how it supports instruction processing.
+
+---
+
+## CPU component role table
+
+| Component | Main role | Simple exam wording |
+|---|---|---|
+| Control unit | coordinates CPU operations and controls the fetch-decode-execute cycle | directs other parts of the CPU |
+| ALU | performs arithmetic and logical operations | carries out calculations and comparisons |
+| Registers | small, fast storage locations inside the CPU | hold data, instructions, or addresses currently being used |
+| Cache | fast memory close to or inside the CPU | stores frequently used data or instructions |
+| Buses | transfer data, addresses, and control signals | allow communication between components |
+
+Specific registers such as the PC, MAR, MDR, and CIR are explained later on this page.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain the purpose of the CPU
+- describe the role of the control unit
+- describe the role of the ALU
+- explain why registers are needed
+- distinguish registers from RAM
+- explain the role of cache
+- describe the purpose of data, address, and control buses
+- connect CPU components to the fetch-decode-execute cycle
+- avoid confusing the CPU with the whole computer system
+
+---
+
+## Exam answer pattern
+
+When answering a CPU component question, use this order:
+
+1. Identify the component named in the question.
+2. State its main role.
+3. Explain what data, instruction, address, or signal it handles.
+4. Link the component to instruction processing if relevant.
+5. Use precise terms such as control unit, ALU, register, cache, bus, address, data, and instruction.
+6. Avoid giving a general answer about the whole computer when the question asks about the CPU.
+
+---
+
+## Common mistakes
+
+- saying the CPU stores all programs permanently
+- confusing RAM with registers
+- confusing cache with secondary storage
+- saying the ALU controls the whole CPU
+- saying the control unit performs calculations
+- forgetting that buses transfer data, addresses, or control signals
+- mixing up address bus and data bus
+- describing the whole computer instead of the CPU
+- using vague words like "makes the computer work" without explaining the component role
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -176,7 +243,7 @@ controlling data movement
 coordinating other components
 ```
 
-### Example: Running a Simple Calculation
+### ALU example: Running a Simple Calculation
 
 If a program needs to calculate:
 
@@ -302,7 +369,7 @@ when to do it
 where data should move
 ```
 
-### Example
+### Control unit example
 
 If an instruction says:
 
@@ -342,7 +409,7 @@ check if two values are equal
 perform AND / OR / NOT operations
 ```
 
-### Example
+### ALU example
 
 For this condition:
 
@@ -430,7 +497,7 @@ The **Program Counter**, or **PC**, stores the address of the next instruction t
 PC tells the CPU where the next instruction is in memory.
 ```
 
-### Example
+### Register example
 
 If the next instruction is stored at memory address:
 
@@ -462,7 +529,7 @@ The **Memory Address Register**, or **MAR**, holds the address in memory that th
 MAR stores the memory address currently being read from or written to.
 ```
 
-### Example
+### Register example
 
 If the CPU wants to read data from memory address:
 
@@ -494,7 +561,7 @@ The **Memory Data Register**, or **MDR**, holds data being transferred to or fro
 MDR stores the actual data or instruction moving between CPU and memory.
 ```
 
-### Example
+### Register example
 
 If memory address 2048 contains:
 
@@ -531,7 +598,7 @@ The **Current Instruction Register**, or **CIR**, holds the instruction currentl
 CIR stores the current instruction while the CPU decodes or executes it.
 ```
 
-### Example
+### Register example
 
 If the CPU has fetched:
 
@@ -595,7 +662,7 @@ If the CPU can find needed data in cache, it can reduce waiting time.
 | Cost | expensive per unit |
 | Purpose | speed up repeated access to data/instructions |
 
-### Simple Example
+### Cache example
 
 If a loop uses the same instruction many times, the CPU may access it from cache instead of repeatedly fetching from RAM.
 
@@ -682,7 +749,7 @@ control bus
 | Data bus | carries data |
 | Control bus | carries control signals |
 
-### Example
+### Bus example
 
 During a memory read:
 
