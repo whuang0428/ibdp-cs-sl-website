@@ -37,6 +37,82 @@ Features are the input variables used by the model. Labels are the correct outpu
 
 ---
 
+## Start here: feature = input, label = answer
+
+A **feature** is an input used by the machine learning model.
+
+A **label** is the correct answer or target value used during supervised learning.
+
+During training, the model learns patterns between features and labels. During prediction, the model receives features and tries to predict the label.
+
+| Term | Simple meaning | Example |
+|---|---|---|
+| Data | Raw information used by the system | patient records, product views, student marks |
+| Feature | Input used to make a prediction | age, temperature, number of clicks |
+| Label | Correct answer / target value | has disease, final grade, will buy product |
+
+After you understand features and labels, then think about data quality and privacy.
+
+---
+
+## Quick examples
+
+### Example 1: Email spam detection
+
+- Features: sender address, keywords, number of links
+- Label: spam or not spam
+
+### Example 2: House price prediction
+
+- Features: size, location, number of bedrooms
+- Label: house price
+
+### Example 3: Student performance prediction
+
+- Features: attendance, homework completion, quiz scores
+- Label: predicted final result
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain what data means in machine learning
+- distinguish features from labels
+- identify features in a scenario
+- identify the label or target output in a scenario
+- explain why data quality affects model performance
+- explain why privacy matters when personal data is used
+- describe how poor or biased data can affect predictions
+
+---
+
+## Scenario answer pattern
+
+When a question asks about features and labels, use this order:
+
+1. Identify what the model is trying to predict.
+2. Name the label or target output.
+3. List the input data that could be used as features.
+4. Explain why those features may help prediction.
+5. Mention one data quality or privacy concern if relevant.
+
+---
+
+## Common mistakes
+
+Avoid these feature and label mistakes:
+
+- calling the label a feature
+- listing the output as an input
+- giving raw data without explaining how it helps prediction
+- forgetting that labels are usually needed for supervised learning
+- ignoring data quality
+- ignoring privacy when personal data is used
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
