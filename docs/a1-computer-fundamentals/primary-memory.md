@@ -36,6 +36,70 @@ Students often confuse memory and storage. Primary memory is used directly by th
 
 ---
 
+## Start here: memory is temporary working space
+
+Primary memory is directly accessible by the CPU.
+
+RAM stores data and instructions currently in use. ROM stores permanent startup instructions. Cache and registers are faster storage close to or inside the CPU.
+
+Students should compare memory types by purpose, speed, capacity, and volatility.
+
+---
+
+## Memory comparison table
+
+| Memory type | Main role | Volatile? | Simple exam wording |
+|---|---|---|---|
+| RAM | stores programs and data currently in use | yes | temporary working memory |
+| ROM | stores startup instructions / firmware | no | permanent startup memory |
+| Cache | stores frequently used data or instructions | yes | speeds up CPU access |
+| Registers | hold data, instructions, or addresses currently being processed | yes | fastest small storage inside CPU |
+| Virtual memory | uses secondary storage as extra memory when RAM is full | depends on storage | slower backup when RAM is not enough |
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain what primary memory is
+- distinguish RAM from ROM
+- explain why RAM is volatile
+- explain why ROM is non-volatile
+- explain the purpose of cache
+- explain the purpose of registers
+- distinguish registers from RAM
+- explain virtual memory at a simple level
+- compare memory types by speed, capacity, purpose, and volatility
+
+---
+
+## Scenario answer pattern
+
+When answering a memory scenario question, use this order:
+
+1. Identify which memory type the question is asking about.
+2. State whether it is temporary or permanent.
+3. State whether it is volatile or non-volatile.
+4. Explain what it stores.
+5. Explain why it is suitable in the scenario.
+6. If comparing memory types, compare purpose, speed, capacity, and volatility.
+
+---
+
+## Common mistakes
+
+- saying RAM keeps data after power is turned off
+- saying ROM is used to store open applications
+- confusing cache with secondary storage
+- confusing registers with RAM
+- saying virtual memory is as fast as RAM
+- describing storage capacity without explaining purpose
+- calling all memory "storage" without distinguishing memory and secondary storage
+- forgetting that cache and registers are used to speed up CPU access
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -215,7 +279,7 @@ Primary memory is generally faster than secondary storage, but it is usually sma
 | Examples | RAM, ROM, cache | SSD, HDD, USB drive |
 | Use case | running programs | saved files and installed apps |
 
-### Example
+### RAM example
 
 When a Java project is saved:
 
@@ -252,7 +316,7 @@ data waiting to be processed
 instructions used by the CPU
 ```
 
-### Example
+### RAM example
 
 If you are using:
 
@@ -282,7 +346,7 @@ This means:
 data in RAM is lost when power is turned off
 ```
 
-### Example
+### RAM example
 
 If you type an essay but do not save it:
 
@@ -355,7 +419,7 @@ ROM is usually non-volatile memory.
 
 It stores important instructions that should remain even when power is turned off.
 
-### Common Use
+### ROM example: Common Use
 
 ROM or firmware may store startup instructions needed when the computer first turns on.
 
@@ -418,7 +482,7 @@ Accessing RAM can still be slower than the CPU needs.
 
 Cache reduces waiting time by keeping useful data close to the CPU.
 
-### Example
+### Cache example
 
 If a loop repeatedly uses the same instruction or data:
 
@@ -446,7 +510,7 @@ It is temporary, fast memory used to improve CPU performance.
 
 ---
 
-## 14. Registers vs Cache vs RAM
+## 14. Register example: Registers vs Cache vs RAM
 
 | Feature | Registers | Cache | RAM |
 |---|---|---|---|
@@ -521,7 +585,7 @@ flowchart LR
 
 ---
 
-## 17. Virtual Memory Preview
+## 17. Virtual memory example: Virtual Memory Preview
 
 Virtual memory is used when RAM is not enough.
 
@@ -670,7 +734,7 @@ software optimization
 
 ---
 
-## 22. Volatile and Non-volatile Memory
+## 22. Common exam trap: Volatile and Non-volatile Memory
 
 | Type | Meaning | Example |
 |---|---|---|
