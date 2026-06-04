@@ -1,5 +1,67 @@
 ﻿# Exam Practice
 
+## What this section is for
+
+This section helps you move from **learning content** to **answering exam-style questions**.
+
+Use Exam Practice to train:
+
+- Paper 1 structure, timing, and scenario answers
+- Paper 2 option-based preparation
+- command terms and answer depth
+- mark scheme language
+- topic-based practice for Theme A and Theme B
+- mini mock questions under time pressure
+
+The goal is not only to do more questions. The goal is to learn how to read the question, choose the right knowledge, and write answers that match what mark schemes reward.
+
+## Start here
+
+1. Read [Paper 1 Overview](./paper-1-overview) to understand the main exam structure and answer strategy.
+2. Review [Command Terms](./command-terms) so you know what each question is asking you to do.
+3. Practise [Mark Scheme Skills](./mark-scheme-skills) to write clearer points, expansions, and scenario links.
+4. Use [Paper 2 Overview](./paper-2-overview) for option-based preparation.
+5. Return to topic pages when a concept is weak, then come back to exam practice.
+
+::: tip Study routine
+For each practice answer, check the command term, mark value, technical vocabulary, and scenario link before looking at the suggested answer.
+:::
+
+## Practice areas
+
+| Area | Use this for | Link |
+|---|---|---|
+| Paper 1 Overview | Paper 1 structure, timing, question types, and strategy | [Open](./paper-1-overview) |
+| Paper 2 Overview | option-based applied preparation | [Open](./paper-2-overview) |
+| Command Terms | answer depth for state, outline, describe, explain, discuss, evaluate, and other terms | [Open](./command-terms) |
+| Mark Scheme Skills | point + expansion, scenario links, self-marking, and answer improvement | [Open](./mark-scheme-skills) |
+| B1 Practice | computational thinking, algorithms, flowcharts, and trace tables | [Open](./b1-practice) |
+| B2 and B3 Practice | programming, arrays, searching, sorting, testing, file processing, and OOP | [Open](./b2-b3-practice) |
+| A1 and A2 Practice | computer fundamentals, hardware, data representation, networks, and security | [Open](./a1-a2-practice) |
+| A3 and A4 Practice | databases, SQL, normalization, machine learning, evaluation, and ethics | [Open](./a3-a4-practice) |
+| Mini Mock Exam Bank | mixed-topic timed practice sets | [Open](./mini-mock-exam-bank) |
+
+## Quick exam answer pattern
+
+Most written answers improve when you use:
+
+```text
+Point -> Expansion -> Scenario Link
+```
+
+Before writing, ask:
+
+```text
+What is the command term?
+How many marks are available?
+Which syllabus topic is being tested?
+Does the answer need a scenario link?
+What technical vocabulary should I use?
+```
+
+<details>
+<summary>Detailed exam practice reference</summary>
+
 ## 1. Section Overview
 
 This section helps students move from **learning content** to **answering exam-style questions**.
@@ -855,3 +917,4 @@ Students should be able to:
 | Self-mark | check missing keywords and expansions |
 | Rewrite | improve weak answers using mark scheme wording |
 
+</details>

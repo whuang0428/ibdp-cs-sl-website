@@ -20,6 +20,15 @@ how to self-mark and improve answers
 Paper 1 is not only a memory test.  
 It checks whether students can apply computer science ideas to realistic systems and scenarios.
 
+## How to use this page
+
+This page is long because it combines Paper 1 overview, exam strategy, common traps, and practice sets. Use it in stages:
+
+1. Read the overview sections first to understand what Paper 1 tests.
+2. Review [Command Terms](./command-terms) before writing longer answers.
+3. Use [Mark Scheme Skills](./mark-scheme-skills) to improve point, expansion, and scenario-link wording.
+4. Return to this page for timing strategy, topic traps, and Paper 1 practice sets.
+
 ---
 
 ## 2. Important Format Note
