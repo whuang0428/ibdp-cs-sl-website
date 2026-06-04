@@ -41,6 +41,8 @@
 
 根目录的 `ib-official-alignment-audit.md`、`ia-support-official-refactor-plan.md`、`ia-support-old-pages-cleanup-plan.md` 是内部规划文件，不要移动到 `docs/`，也不要作为学生页面发布。
 
+临时用于保存表格、阶段计划或审计摘要的 `.md` 文件只作为临时工作材料；除非用户明确要求保留，不要长期加入项目规则，也不要移动到 `docs/`。
+
 ## 常用命令
 
 在 PowerShell 中优先使用 `npm.cmd`。直接运行 `npm` 可能受本机执行策略影响。
@@ -189,6 +191,23 @@ A1/A2/A3/A4/B1/B2/B3 的 `index.md` 应尽量包含：
 - One-page Revision Summary 或 Quick Self-test
 
 如果页面很长，不要优先删除内容。优先在页面顶部加入 `Start here`、`core exam focus`、`Core checklist`、`Must know for SL`、`Useful extra examples` 或 `Scenario answer pattern`，帮助学生先抓住核心。
+
+近期 core subpage 优化采用统一学生复习结构：
+
+- 靠前加入 `Start here`，用 2-4 句话说明本页最重要的学习主线。
+- 加入 `Core checklist`，列出学生学完后必须能做的事情。
+- 对技能型页面加入 `Recommended learning path`、`Core pattern`、`Exam answer pattern` 或 `Scenario answer pattern`。
+- 对易错页面加入 `Common mistakes` 或 `Common exam mistakes`。
+- 对长页面保留有价值例子，但可用 `Basic example`、`Traversal example`、`Scenario example`、`Common exam trap` 等标签帮助学生区分学习顺序。
+- 不要把学生页面写成教师教学计划或内部审计说明。
+
+近期第三批优化中的 A2/A4 core 页面还应保持这些学生复习结构：
+
+- A2 process pages such as `dns-web-access.md`, `tcp-ip-model.md`, and `packet-switching.md` should keep a clear workflow or route near the top, such as web access workflow, encapsulation route, or packet journey workflow.
+- A2 scenario-heavy pages should include concise comparison tables where useful, for example URL/domain/IP/DNS/HTTP roles, TCP vs UDP, or packet header information.
+- A2 networking pages should make answer order explicit with `Exam answer pattern` or `Scenario answer pattern`, especially when students must explain steps in sequence.
+- A4 model evaluation pages should emphasize scenario-based metric choice, including accuracy limitations, false positives, false negatives, precision, recall, and when human review is needed.
+- Do not expand these pages into university-level networking or machine learning theory; keep explanations suitable for IBDP CS SL revision.
 
 ## Assessment 规则
 
