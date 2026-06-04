@@ -22,6 +22,73 @@ By the end of this lesson, students should be able to:
 
 ---
 
+## Start here: accuracy is not always enough
+
+Model evaluation checks how well a machine learning model performs.
+
+Accuracy can be useful, but it does not always show the full picture. In some scenarios, false positives or false negatives may be more important than overall accuracy.
+
+Students should choose evaluation measures based on the scenario, not just memorise metric names.
+
+---
+
+## Metric choice table
+
+| Measure | What it helps judge | Useful when... |
+|---|---|---|
+| Accuracy | overall proportion of correct predictions | classes are balanced and all errors have similar cost |
+| Precision | how many positive predictions were actually correct | false positives are costly |
+| Recall | how many actual positives were found | false negatives are costly |
+| F1 score | balance between precision and recall | both false positives and false negatives matter |
+| Confusion matrix | shows types of correct and incorrect predictions | you need to see TP, FP, TN, FN separately |
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain why model evaluation is needed
+- explain what accuracy measures
+- interpret a confusion matrix at a simple level
+- distinguish false positives from false negatives
+- explain why accuracy may be misleading
+- choose a suitable metric for a scenario
+- explain why precision or recall may matter in high-risk decisions
+- describe how evaluation helps improve or judge a model
+
+---
+
+## Scenario answer pattern
+
+Use this order when answering model evaluation scenario questions:
+
+1. Identify what the model is predicting or classifying.
+2. Identify what kind of error would be most serious.
+3. Decide whether accuracy alone is enough.
+4. Choose a suitable evaluation measure.
+5. Explain what that measure shows.
+6. Link the measure back to the scenario risk.
+7. Mention human review or further testing if the scenario is high-risk.
+
+---
+
+## False positive vs false negative
+
+A **false positive** means the model predicts something is positive, but it is actually negative.
+
+A **false negative** means the model predicts something is negative, but it is actually positive.
+
+| Scenario | False positive | False negative |
+|---|---|---|
+| Medical test | healthy patient flagged as possible disease | disease case missed |
+| Spam filter | normal email marked as spam | spam email allowed into inbox |
+| Fraud detection | normal transaction flagged as fraud | fraud transaction missed |
+
+The more serious error depends on the scenario. In medical screening, a false negative may delay treatment. In fraud detection, both missed fraud and wrongly blocked customers can matter.
+
+---
+
 ## 2. Syllabus Mapping
 
 | Item | Detail |
@@ -328,6 +395,8 @@ accuracy = 90 / 100 = 90%
 
 Accuracy is the proportion of predictions that are correct.
 
+### Accuracy example
+
 ### Formula
 
 ```text
@@ -401,6 +470,8 @@ Accuracy can be misleading for imbalanced datasets because a model can achieve h
 ## 10. Confusion Matrix
 
 A confusion matrix shows correct and incorrect classification predictions.
+
+### Confusion matrix example
 
 ### Binary Classification Example
 
@@ -523,6 +594,8 @@ In some contexts, false negatives are more serious than false positives.
 
 Precision asks:
 
+### Precision example
+
 ```text
 Of the cases predicted positive, how many were actually positive?
 ```
@@ -557,6 +630,8 @@ High precision means fewer false alarms among positive predictions.
 ## 15. Recall
 
 Recall asks:
+
+### Recall example
 
 ```text
 Of all actual positive cases, how many did the model find?
@@ -620,6 +695,8 @@ Sometimes increasing precision misses more positives.
 ## 17. F1 Score Preview
 
 F1 score combines precision and recall into one measure.
+
+### F1 score example
 
 ### Why Useful?
 
@@ -1185,6 +1262,25 @@ Precision measures how many predicted positives are actually positive. Recall me
 ```text
 Regression models are evaluated by measuring how close predicted numerical values are to actual values, for example using mean absolute error.
 ```
+
+---
+
+## Common mistakes
+
+Watch for these mistakes in model evaluation questions:
+
+- saying high accuracy always means the model is good
+- ignoring imbalanced data
+- confusing false positives with false negatives
+- choosing precision when recall is more important
+- choosing recall when precision is more important
+- describing a metric without linking it to the scenario
+- forgetting that high-risk decisions may need human review
+- treating evaluation as the same as training
+
+### Common exam trap
+
+A metric name alone is not enough. Explain why that metric fits the cost of errors in the scenario.
 
 ---
 
