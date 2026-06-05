@@ -36,6 +36,448 @@ Logic gates are the building blocks of digital circuits. Students should connect
 
 ---
 
+## Start here: gates process binary inputs
+
+Logic gates matter because computer systems process binary values. A **logic gate** takes one or more binary **inputs** such as `0` or `1`, applies a Boolean rule, and produces one binary **output**.
+
+The core route for this page is:
+
+```text
+Boolean logic -> logic gates -> truth tables -> logic circuits
+```
+
+Core keywords: **Boolean logic**, **logic gate**, **input**, **output**, **truth table**, **logic circuit**, **AND**, **OR**, **NOT**, **NAND**, **NOR**, and **XOR**.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- identify common logic gate symbols
+- complete truth tables
+- evaluate Boolean expressions
+- construct logic circuits from expressions
+- write Boolean expressions from circuits
+- compare the behaviour of **AND**, **OR**, **NOT**, **NAND**, **NOR**, and **XOR**
+- answer Paper 1 style circuit questions step by step
+
+---
+
+## Main logic gates exam guide
+
+### AND gate
+
+| Item | Detail |
+|---|---|
+| 中文解释 | 只有所有输入都是 `1`，输出才是 `1` |
+| English definition | Outputs `1` only when all inputs are `1` |
+| Boolean expression | `A AND B` |
+| Common exam phrase | "An AND gate outputs 1 only when all inputs are 1." |
+
+| A | B | A AND B |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+### OR gate
+
+| Item | Detail |
+|---|---|
+| 中文解释 | 只要至少一个输入是 `1`，输出就是 `1` |
+| English definition | Outputs `1` when at least one input is `1` |
+| Boolean expression | `A OR B` |
+| Common exam phrase | "An OR gate outputs 1 when at least one input is 1." |
+
+| A | B | A OR B |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+### NOT gate
+
+| Item | Detail |
+|---|---|
+| 中文解释 | 把输入反转：`0` 变 `1`，`1` 变 `0` |
+| English definition | Inverts the input |
+| Boolean expression | `NOT A` |
+| Common exam phrase | "A NOT gate inverts the input." |
+
+| A | NOT A |
+|---:|---:|
+| 0 | 1 |
+| 1 | 0 |
+
+### NAND gate
+
+| Item | Detail |
+|---|---|
+| 中文解释 | AND 的相反结果 |
+| English definition | Outputs the inverse of AND |
+| Boolean expression | `NOT (A AND B)` |
+| Common exam phrase | "A NAND gate outputs the inverse of AND." |
+
+| A | B | A NAND B |
+|---:|---:|---:|
+| 0 | 0 | 1 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+### NOR gate
+
+| Item | Detail |
+|---|---|
+| 中文解释 | OR 的相反结果 |
+| English definition | Outputs the inverse of OR |
+| Boolean expression | `NOT (A OR B)` |
+| Common exam phrase | "A NOR gate outputs the inverse of OR." |
+
+| A | B | A NOR B |
+|---:|---:|---:|
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 0 |
+
+### XOR gate
+
+| Item | Detail |
+|---|---|
+| 中文解释 | 两个输入不同才输出 `1` |
+| English definition | Outputs `1` when the inputs are different |
+| Boolean expression | `A XOR B` |
+| Common exam phrase | "An XOR gate outputs 1 when the inputs are different." |
+
+| A | B | A XOR B |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+---
+
+## Gate comparison table
+
+| Gate | Symbol / expression | Output is `1` when... | Common mistake | Exam hint |
+|---|---|---|---|---|
+| AND | `A AND B` | all inputs are `1` | saying "both" without saying output condition | Write "only when all inputs are 1" |
+| OR | `A OR B` | at least one input is `1` | confusing OR with XOR | Remember `1 OR 1 = 1` |
+| NOT | `NOT A` | input is `0` | applying NOT to the wrong input | Mark exactly what is being inverted |
+| NAND | `NOT (A AND B)` | not all inputs are `1` | treating it like AND | Work out AND first, then invert |
+| NOR | `NOT (A OR B)` | no inputs are `1` | treating it like OR | Work out OR first, then invert |
+| XOR | `A XOR B` | inputs are different | thinking it means normal OR | XOR excludes the case `1, 1` |
+
+---
+
+## How to complete truth tables
+
+Use a clear step-by-step method.
+
+1. List all input combinations.
+2. Check the number of rows using `2^n`, where `n` is the number of inputs.
+3. Calculate `NOT` values first because they change individual inputs.
+4. Calculate intermediate gate outputs in separate working columns.
+5. Calculate the final output last.
+6. Check that every row has exactly one final output.
+
+Example row count:
+
+| Inputs | Rows needed |
+|---:|---:|
+| 1 | 2 |
+| 2 | 4 |
+| 3 | 8 |
+| 4 | 16 |
+
+For multi-gate expressions, never try to guess the final output in one step. Add intermediate columns such as `NOT B`, `A OR B`, or `(A OR B) AND C`.
+
+---
+
+## How to read logic circuits
+
+When reading a logic circuit:
+
+1. Label intermediate outputs, such as `P`, `Q`, or `R`.
+2. Work from left to right, following the wires.
+3. Handle `NOT` gates carefully and mark exactly which input or intermediate output is inverted.
+4. Do not jump directly to the final output.
+5. Use a working column for each intermediate result in the truth table.
+
+Example:
+
+```text
+A ----\
+       AND ---- P ----\
+B ----/               OR ---- X
+C -------------------/
+```
+
+Intermediate output:
+
+```text
+P = A AND B
+```
+
+Final output:
+
+```text
+X = P OR C
+X = (A AND B) OR C
+```
+
+---
+
+## Constructing circuits from Boolean expressions
+
+Build the circuit by splitting the expression into smaller parts.
+
+### Example 1: `X = A AND NOT B`
+
+```text
+1. Send B through a NOT gate.
+2. Send A and NOT B into an AND gate.
+3. The AND output is X.
+```
+
+Text circuit:
+
+```text
+B ---- NOT ----\
+                AND ---- X
+A -------------/
+```
+
+### Example 2: `X = (A OR B) AND NOT C`
+
+```text
+1. Send A and B into an OR gate.
+2. Send C through a NOT gate.
+3. Send both intermediate outputs into an AND gate.
+4. The AND output is X.
+```
+
+Text circuit:
+
+```text
+A ----\
+       OR -----\
+B ----/         AND ---- X
+C ---- NOT ----/
+```
+
+### Example 3: `X = A XOR B`
+
+```text
+1. Send A and B into an XOR gate.
+2. The XOR output is X.
+```
+
+Text circuit:
+
+```text
+A ----\
+       XOR ---- X
+B ----/
+```
+
+---
+
+## Logic problem workflow
+
+```mermaid
+flowchart LR
+    Expr["Boolean expression"]
+    Parts["Split into smaller parts"]
+    Inter["Create intermediate outputs"]
+    Table["Complete truth table"]
+    Final["Final output"]
+
+    Expr --> Parts
+    Parts --> Inter
+    Inter --> Table
+    Table --> Final
+```
+
+This workflow also works in reverse: from a circuit, label intermediate outputs first, then write the Boolean expression and truth table.
+
+---
+
+## Exam focus
+
+| Command term | What to write or draw |
+|---|---|
+| State | Give the gate name, output condition, or definition. |
+| Identify | Name the gate, input, output, or intermediate signal from a diagram. |
+| Complete | Fill in missing truth table values accurately. |
+| Construct | Draw or describe the gate circuit from an expression. |
+| Describe | Explain the behaviour of a gate or circuit step by step. |
+| Explain | Link input combinations, intermediate outputs, and final output. |
+
+For mark levels:
+
+- **1 mark:** name one correct gate or output value.
+- **2 marks:** give a gate definition or complete a simple two-input output.
+- **3 marks:** include the correct rule plus a small truth table or example.
+- **4 marks:** show intermediate working for a multi-gate expression.
+- **6 marks:** complete all rows, include intermediate columns, and explain the final output condition.
+
+Avoid vague answers such as:
+
+```text
+AND means both
+OR means one
+```
+
+Better answers specify the output condition: "AND outputs 1 only when all inputs are 1" and "OR outputs 1 when at least one input is 1."
+
+---
+
+## Reusable mark-scheme style phrases
+
+- "An AND gate outputs 1 only when all inputs are 1."
+- "An OR gate outputs 1 when at least one input is 1."
+- "A NOT gate inverts the input."
+- "A NAND gate outputs the inverse of AND."
+- "A NOR gate outputs the inverse of OR."
+- "An XOR gate outputs 1 when the inputs are different."
+- "A truth table shows every possible input combination and the corresponding output."
+- "Intermediate columns should be used for multi-gate circuits."
+- "The final output should be calculated after all intermediate outputs are known."
+
+---
+
+## Common mistakes table
+
+| Mistake | Why it is wrong | Better approach |
+|---|---|---|
+| Confusing OR and XOR | OR outputs `1` for `1,1`; XOR outputs `0` for `1,1` | Check whether "at least one" or "different" is needed |
+| Forgetting that NAND is NOT AND | NAND is the inverse of AND | Calculate AND first, then invert |
+| Forgetting that NOR is NOT OR | NOR is the inverse of OR | Calculate OR first, then invert |
+| Applying NOT to the wrong input | `NOT (A OR B)` is different from `(NOT A) OR B` | Use brackets and label the inverted value |
+| Missing intermediate columns | Multi-gate expressions become hard to trace | Add a column for each intermediate output |
+| Using the wrong number of rows | Truth tables must include every input combination | Use `2^n` rows |
+| Reading the circuit from right to left | Inputs normally feed through gates toward the final output | Follow wires from inputs to output |
+| Not showing working for multi-gate circuits | Final answers alone may lose method marks | Show intermediate outputs and final output |
+
+---
+
+## Quick-check questions with short answers
+
+1. What does a logic gate do?  
+   **Answer:** It processes binary inputs and produces a binary output.
+
+2. When does AND output `1`?  
+   **Answer:** Only when all inputs are `1`.
+
+3. When does OR output `1`?  
+   **Answer:** When at least one input is `1`.
+
+4. What does NOT do?  
+   **Answer:** It inverts the input.
+
+5. What is NAND?  
+   **Answer:** The inverse of AND.
+
+6. What is NOR?  
+   **Answer:** The inverse of OR.
+
+7. When does XOR output `1`?  
+   **Answer:** When the inputs are different.
+
+8. How many rows are needed for 3 inputs?  
+   **Answer:** `2^3 = 8` rows.
+
+9. Why use intermediate columns?  
+   **Answer:** They show working for each gate before the final output.
+
+10. What is a truth table?  
+    **Answer:** A table showing every possible input combination and the corresponding output.
+
+---
+
+## Exam-style practice: logic gates
+
+### Question A [6 marks]
+
+Complete the truth table for:
+
+```text
+X = (A OR B) AND (NOT C)
+```
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+| A | B | C | A OR B | NOT C | X |
+|---:|---:|---:|---:|---:|---:|
+| 0 | 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 1 |
+| 1 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 1 | 1 | 0 | 0 |
+
+</details>
+
+---
+
+### Question B [4 marks]
+
+A circuit first sends `A` and `B` into an AND gate. The result is then ORed with `C` to produce output `X`. Write the Boolean expression.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Intermediate output:
+
+```text
+P = A AND B
+```
+
+Final expression:
+
+```text
+X = P OR C
+X = (A AND B) OR C
+```
+
+</details>
+
+---
+
+### Question C [6 marks]
+
+Construct or describe a circuit for:
+
+```text
+X = A AND (NOT B)
+```
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+First, send input `B` through a NOT gate to produce `NOT B`. Then send input `A` and the intermediate output `NOT B` into an AND gate. The output of the AND gate is `X`.
+
+Text circuit:
+
+```text
+B ---- NOT ----\
+                AND ---- X
+A -------------/
+```
+
+</details>
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
