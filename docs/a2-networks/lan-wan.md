@@ -325,7 +325,19 @@ school building
 office floor
 computer lab
 small company building
+hospital department
+campus
 library
+```
+
+Common LAN characteristics:
+
+```text
+short geographical area
+often high data transfer rate
+often low latency
+can share files, printers, software, and internet access
+can be wired, wireless, or mixed
 ```
 
 ### LAN Devices
@@ -412,6 +424,15 @@ a bank network connecting branches across a country
 a company network connecting offices in different cities
 a school group network connecting multiple campuses
 the internet
+```
+
+Common WAN characteristics:
+
+```text
+covers large geographical areas such as cities, countries, or continents
+connects smaller networks such as LANs
+usually has lower data transfer rate and higher latency than a LAN
+often relies on provider or public network infrastructure
 ```
 
 WANs may use:
