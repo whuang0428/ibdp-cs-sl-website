@@ -1,5 +1,266 @@
 ﻿# Flowcharts
 
+## Start here
+
+A **flowchart** is a diagram that visually represents the steps and decisions in an **algorithm**. It uses standard symbols to show **sequence**, **selection**, **iteration**, input/output, processing, decisions, and the direction of control flow.
+
+本页重点是：能读懂 flowchart 的符号和箭头，按顺序 trace 每一步，并能在 pseudocode 和 flowchart 之间转换。
+
+Core keywords for this page:
+
+```text
+flowchart, algorithm, sequence, selection, iteration, process, decision, input/output, terminator, flowline
+```
+
+::: tip Core idea
+Do not guess the next step from the position of a symbol. Always follow the flowline/arrow and evaluate decisions as true or false.
+:::
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- identify common flowchart symbols
+- trace a flowchart step by step
+- convert simple pseudocode into a flowchart
+- convert a flowchart into pseudocode
+- recognise sequence, selection, and iteration in a flowchart
+- explain what a decision symbol does
+- answer Paper 1 style flowchart tracing questions
+
+---
+
+## Common flowchart symbols at SL
+
+| Symbol name | Simple Chinese explanation | English mark-scheme style phrase | Small example |
+|---|---|---|---|
+| Terminator / Start-End | 终止符；表示算法开始或结束。 | A terminator symbol shows where the algorithm starts or ends. | `Start`, `End` |
+| Process | 处理框；表示计算、赋值或更新变量。 | A process symbol represents a calculation or assignment. | `total = total + score` |
+| Input/Output | 输入/输出框；表示数据进入或离开算法。 | Input/output symbols show data entering or leaving the algorithm. | `Input mark`, `Output "Pass"` |
+| Decision | 判断框；表示一个 true/false 或 yes/no 条件。 | A decision symbol represents a condition with different branches. | `mark >= 50?` |
+| Flowline / Arrow | 流程线；表示步骤执行方向。 | Flowlines show the order in which steps are followed. | Arrow from input to decision |
+| Connector | 连接符；在较大流程图中连接分开的部分。 | A connector joins separated parts of a flowchart. | Link to another section of a large diagram |
+
+---
+
+## Flowchart symbol comparison
+
+| Symbol name | Purpose | Typical text inside | Example | Common exam mistake |
+|---|---|---|---|---|
+| Terminator | Shows start or end | `Start`, `End` | Start of algorithm | Forgetting Start or End |
+| Process | Shows calculation, assignment, or update | `count = count + 1` | Update a loop counter | Putting input text in a process box |
+| Input/Output | Shows input or displayed output | `Input score`, `Output total` | User enters a mark | Confusing output with a calculation |
+| Decision | Shows a condition and branches | `score >= 50?` | Pass/fail branch | Putting assignment such as `score = 50` in a diamond |
+| Flowline / Arrow | Shows control flow direction | Usually no text, except branch labels | `Yes`, `No` branches | Drawing unclear arrow direction |
+| Connector | Connects separated chart parts | label or letter | `A` | Using connectors when arrows would be clearer |
+
+---
+
+## Sequence, selection, and iteration
+
+| Structure | What it means | How it appears in a flowchart | Simple example |
+|---|---|---|---|
+| Sequence | Steps happen in order. | Arrows move from one step to the next. | Input length, input width, calculate area, output area. |
+| Selection | A decision chooses one branch. | A diamond has true/false or yes/no branches. | If `mark >= 50`, output `Pass`; otherwise output `Retry`. |
+| Iteration | Steps repeat while or until a condition changes. | An arrow returns to an earlier decision or step. | Repeat input until a valid password is entered. |
+
+In exams, say **iteration is shown when arrows return to an earlier step**, not just "there is a loop".
+
+---
+
+## Step-by-step tracing method
+
+Use this method for Paper 1 flowchart tracing questions:
+
+1. Start at the terminator.
+2. Follow arrows in order.
+3. Use the given input values when an input symbol is reached.
+4. Update variable values after each process symbol.
+5. Evaluate each decision as true or false.
+6. Follow the correct branch only.
+7. Repeat loop steps until the condition changes.
+8. Record output exactly, including labels, spaces, and order.
+
+::: warning Trace carefully
+Do not trace both branches of a decision at the same time. Only the branch matching the condition is followed.
+:::
+
+---
+
+## Worked example: pass or retry flowchart
+
+This small flowchart includes input, a decision, output, and an end point.
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input number/]
+    B --> C{number >= 50?}
+    C -- Yes --> D[/Output "Pass"/]
+    C -- No --> E[/Output "Retry"/]
+    D --> F([End])
+    E --> F
+```
+
+Trace example:
+
+| Given input | Decision `number >= 50?` | Branch followed | Output |
+|---:|---|---|---|
+| `72` | true | Yes | `Pass` |
+| `35` | false | No | `Retry` |
+
+Short explanation: start at `Start`, input the number, test the condition in the decision diamond, follow only the correct branch, output the message, then reach `End`.
+
+---
+
+## Exam focus
+
+Command terms you may see:
+
+| Command term | What to write or draw |
+|---|---|
+| State | Give a short definition or symbol purpose. |
+| Identify | Name a symbol, structure, branch, input, output, or decision. |
+| Outline | Give the purpose of a symbol or structure with a brief example. |
+| Describe | Explain how a flowchart represents an algorithm step by step. |
+| Explain | Link symbols, arrows, decisions, branches, loops, and output to algorithm behaviour. |
+| Trace | Follow the flowchart using given inputs and record exact outputs. |
+| Construct | Draw or describe a valid flowchart using correct symbols and flowlines. |
+
+How much detail is usually needed:
+
+| Marks | What a strong answer includes |
+|---:|---|
+| 1 mark | Correct symbol name or purpose, such as "diamond = decision". |
+| 2 marks | Symbol name plus technical purpose, such as condition with true/false branches. |
+| 3 marks | Short explanation of sequence, selection, or iteration in a given chart. |
+| 4 marks | Correct trace or conversion with key variables and output. |
+| 6 marks | Complete flowchart or explanation with correct symbols, branch labels, loop arrows, and exact output. |
+
+Avoid vague answers such as:
+
+- "diamond means question"
+- "arrow shows direction"
+
+Better answers use technical wording: a decision symbol contains a condition with branches, and flowlines show the order in which algorithm steps are followed.
+
+---
+
+## Common exam mistakes
+
+| Mistake | Why it loses marks | Better answer habit |
+|---|---|---|
+| Confusing process and input/output symbols | Calculations and displayed output have different meanings. | Use process for assignments; input/output for entering or displaying data. |
+| Forgetting Start/End | The algorithm boundary is unclear. | Include terminator symbols. |
+| Drawing arrows in unclear directions | The control flow cannot be followed. | Use clear arrowheads and avoid unnecessary crossing. |
+| Putting assignment statements inside decision diamonds | A decision should contain a condition. | Put assignments in process rectangles. |
+| Not labelling true/false branches | The reader cannot tell which path matches the condition. | Label branches `Yes/No` or `True/False`. |
+| Tracing both branches of a decision at the same time | Only one branch is followed for one set of input values. | Evaluate the condition, then choose one branch. |
+| Forgetting to update variables in loops | The trace or loop condition becomes wrong. | Update counters/accumulators after each process. |
+| Missing exact output text | Trace answers may lose marks for wrong labels or order. | Copy output messages exactly. |
+
+---
+
+## Reusable mark-scheme style phrases
+
+- **A flowchart is a diagram that represents the steps of an algorithm.**
+- **A process symbol represents a calculation or assignment.**
+- **A decision symbol represents a condition with different branches.**
+- **Input/output symbols show data entering or leaving the algorithm.**
+- **Flowlines show the order in which steps are followed.**
+- **Iteration is shown when arrows return to an earlier step.**
+- **A selection structure is shown using a decision symbol with labelled branches.**
+- **When tracing a flowchart, variables must be updated after each process step.**
+
+---
+
+## Quick-check questions
+
+1. What is a flowchart?
+2. Which symbol shows Start or End?
+3. Which symbol shows a process?
+4. Which symbol shows input or output?
+5. Which symbol shows a decision?
+6. What does a flowline show?
+7. How is selection shown in a flowchart?
+8. How is iteration shown in a flowchart?
+9. Why should true/false branches be labelled?
+10. Why must output be recorded exactly in trace questions?
+
+<details>
+<summary>Short answers</summary>
+
+1. A diagram that represents the steps of an algorithm.
+2. Terminator / oval.
+3. Process / rectangle.
+4. Input/output / parallelogram.
+5. Decision / diamond.
+6. The order or direction of control flow.
+7. Using a decision symbol with branches.
+8. With an arrow returning to an earlier step or decision.
+9. So the correct path can be followed after evaluating the condition.
+10. Because labels, spaces, and order may affect the expected answer.
+
+</details>
+
+---
+
+## Exam-style practice: flowcharts
+
+### Question A [5 marks]
+
+Identify the purpose of these flowchart symbols: terminator, process, input/output, decision, and flowline.
+
+<details>
+<summary>Mark scheme</summary>
+
+- Terminator: shows Start or End
+- Process: shows a calculation, assignment, or variable update
+- Input/output: shows data entering or leaving the algorithm
+- Decision: shows a condition with different branches
+- Flowline: shows the order in which steps are followed
+
+</details>
+
+### Question B [6 marks]
+
+Trace the flowchart from the worked example when the input number is `48`.
+
+<details>
+<summary>Mark scheme</summary>
+
+The algorithm starts, inputs `number = 48`, then checks `number >= 50?`. The condition is false, so the No branch is followed. The output is:
+
+```text
+Retry
+```
+
+The algorithm then reaches End. The `Pass` branch is not followed for this input.
+
+</details>
+
+### Question C [6 marks]
+
+Explain how this pseudocode could be represented as a flowchart.
+
+```text
+count = 1
+WHILE count <= 3
+    OUTPUT count
+    count = count + 1
+ENDWHILE
+```
+
+<details>
+<summary>Mark scheme</summary>
+
+The flowchart should start with a terminator, then use a process symbol for `count = 1`. A decision symbol should check `count <= 3?`. The Yes branch should go to an input/output symbol that outputs `count`, then a process symbol updates `count = count + 1`, then a flowline returns to the decision. The No branch should go to End. This loop is iteration because the arrow returns to an earlier decision while the condition remains true.
+
+</details>
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1250,7 +1511,7 @@ This is a problem because it is unclear which branch should be followed when the
 ## 37. Practice task
 ### Activity 1: Symbol Match
 
-Students match symbols to meanings:
+Match symbols to meanings:
 
 ```text
 oval
@@ -1276,7 +1537,7 @@ connect parts
 
 ### Activity 2: Algorithm to Flowchart
 
-Students convert these algorithms into flowchart descriptions:
+Convert these algorithms into flowchart descriptions:
 
 ```text
 rectangle area
@@ -1290,7 +1551,7 @@ add five scores
 
 ### Activity 3: Flowchart Debugging
 
-Give students faulty flowcharts with:
+Check faulty flowcharts with:
 
 ```text
 missing End
@@ -1301,7 +1562,7 @@ output in wrong place
 arrow pointing the wrong way
 ```
 
-Students identify and fix the issue.
+Identify and fix the issue.
 
 ---
 
