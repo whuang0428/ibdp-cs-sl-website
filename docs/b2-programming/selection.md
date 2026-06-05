@@ -32,6 +32,90 @@ Selection is the foundation of decision-making in programs. Searching, validatio
 
 ---
 
+## Start here: selection means choosing a path
+
+Selection allows a program to choose different actions depending on a condition.
+
+Understand simple `IF` statements first. Then move to `ELSE IF`, `ELSE`, Boolean operators, and nested `IF`.
+
+In exam questions, the key skill is checking the condition carefully and following the correct branch.
+
+---
+
+## Selection workflow
+
+Use this route when tracing selection code:
+
+| Step | What to do | Why it matters |
+|---:|---|---|
+| 1 | Identify the condition being tested. | The condition decides which path is possible. |
+| 2 | Decide whether the condition is true or false. | Selection depends on a Boolean result. |
+| 3 | Follow only the branch that should run. | The other branch is skipped. |
+| 4 | If there are `ELSE IF` conditions, check them in order. | Later conditions only matter if earlier ones are false. |
+| 5 | Use `ELSE` only when no previous condition is true. | `ELSE` is the fallback path. |
+| 6 | For nested `IF` statements, trace the outer condition first, then the inner condition. | Inner conditions run only if their outer path is reached. |
+| 7 | Check the final output or variable changes. | Exam answers must show the final result. |
+
+---
+
+## Condition order table
+
+| Structure | How it works | Common use |
+|---|---|---|
+| `IF` | runs code only when one condition is true | simple decision |
+| `IF / ELSE` | chooses between two paths | pass/fail, valid/invalid |
+| `IF / ELSE IF / ELSE` | checks several conditions in order | grade boundaries |
+| Nested `IF` | checks one condition inside another | multi-step decisions |
+| Boolean condition | combines conditions using AND, OR, NOT | range checks or complex rules |
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain what selection is
+- trace a simple `IF` statement
+- distinguish `IF`, `ELSE IF`, and `ELSE`
+- explain why condition order matters
+- use comparison operators correctly
+- use AND, OR, and NOT in simple conditions
+- trace nested `IF` statements
+- identify boundary cases in selection questions
+- explain why a branch runs or does not run
+
+---
+
+## Selection trace pattern
+
+When you meet a selection trace or debug question, use this order:
+
+1. Write the initial values.
+2. Read the first condition carefully.
+3. Decide whether the condition is true or false.
+4. Follow the correct branch only.
+5. If there is `ELSE IF`, check conditions in order.
+6. Record any changed variables or output.
+7. For nested `IF`, trace from outside to inside.
+8. Check boundary values such as equal to, less than, and greater than.
+
+---
+
+## Common exam traps
+
+- using `>` when `>=` is needed
+- forgetting equality cases at boundaries
+- checking `ELSE IF` conditions in the wrong order
+- thinking `ELSE` always runs
+- using AND when OR is needed
+- using OR when AND is needed
+- tracing both `IF` and `ELSE` branches even though only one should run
+- losing track inside nested `IF` statements
+- confusing assignment with comparison
+- not recording output after the correct branch runs
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -144,6 +228,8 @@ Selection is used heavily later in:
 
 ### Example: School Grade Decision
 
+Boundary case example: `50` matters because the condition uses `>=`.
+
 A school system receives a mark and outputs a result.
 
 | Mark | Condition | Output |
@@ -183,6 +269,8 @@ score == 50;  // comparison
 ---
 
 ## 7. Basic IF Statement
+
+Simple IF example: this branch runs only when the condition is true.
 
 ## 7.1 IB Pseudocode Pattern
 
@@ -228,6 +316,8 @@ A simple `IF` statement may do nothing if the condition is false.
 
 ## 8. IF ELSE Statement
 
+IF / ELSE example: this structure chooses exactly one of two paths.
+
 An `IF ELSE` statement gives two possible branches.
 
 ## 8.1 IB Pseudocode
@@ -271,6 +361,8 @@ An `IF ELSE` statement runs one branch if the condition is true and another bran
 ---
 
 ## 9. ELSE IF: Multiple Conditions
+
+ELSE IF example: conditions are checked in order until the first true condition is found.
 
 Use `ELSE IF` when there are more than two possible outcomes.
 
@@ -347,6 +439,8 @@ In an `ELSE IF` chain, once one condition is true, the later conditions are skip
 
 ## 10. Order of Conditions Matters
 
+Common exam trap: a broad condition placed too early can stop a later, more specific condition from running.
+
 ### 10.1 Wrong Order
 
 ```java
@@ -411,6 +505,8 @@ Boolean operators combine or modify conditions.
 
 ### 12.1 Example: Valid Mark
 
+Boolean condition example: both parts must be true for the whole condition to be true.
+
 A mark is valid if it is between 0 and 100 inclusive.
 
 ```java
@@ -432,6 +528,8 @@ Both conditions must be true.
 ## 13. OR Operator `||`
 
 ### 13.1 Example: Weekend
+
+Boolean condition example: only one part needs to be true for the whole condition to be true.
 
 ```java
 if (day.equals("Saturday") || day.equals("Sunday")) {
@@ -492,6 +590,8 @@ If `loggedIn` is false, `!loggedIn` is true.
 
 ## 15. Range Checking and Validation
 
+Boundary case example: values exactly on the valid edges should be accepted.
+
 Selection is often used to validate input.
 
 ### 15.1 Problem
@@ -550,6 +650,8 @@ For validation questions, always test boundary values such as 0 and 100.
 ---
 
 ## 16. Nested IF
+
+Nested IF example: trace the outer condition before checking the inner condition.
 
 A nested IF is an IF statement inside another IF statement.
 
@@ -649,13 +751,13 @@ switch (option) {
 | `break` | Stops the switch after a matched case |
 | `default` | Runs if no case matches |
 
-::: info Teaching Note
+::: info Level Control
 This page focuses mainly on IF structures. Switch can be used for exact menu-style choices, but IF is more flexible for ranges and complex conditions.
 :::
 
 ---
 
-## 19. Common Mistakes
+## 19. Detailed common mistakes table
 
 | Mistake | Why it is a problem | Better habit |
 |---|---|---|
