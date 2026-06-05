@@ -37,6 +37,82 @@ Machine learning systems are not neutral just because they use data. If the data
 
 ---
 
+## Start here: risk, impact, safeguard
+
+Machine learning systems can create ethical risks if data, design, or use is unfair or unsafe.
+
+A strong answer should identify the risk, explain the impact on people, and suggest a suitable safeguard.
+
+Avoid vague answers such as "AI is biased" or "privacy is important". Link each ethical issue to the given scenario and explain how it could affect real users or groups.
+
+---
+
+## Risk-response table
+
+| Issue | What can go wrong | Possible safeguard |
+|---|---|---|
+| Bias | predictions may unfairly favour or disadvantage a group | use representative data and test for bias |
+| Privacy | personal data may be collected or shared without proper control | anonymise data and limit access |
+| Lack of transparency | users may not understand how a decision was made | provide explanations or clear decision criteria |
+| Over-reliance | humans may trust the model even when it is wrong | keep human review for important decisions |
+| Poor data quality | inaccurate data can lead to poor predictions | clean, validate, and monitor the data |
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain what bias means in machine learning
+- explain how biased training data can affect predictions
+- explain why privacy matters when personal data is used
+- describe why transparency and explainability are important
+- explain why human oversight may be needed
+- identify ethical risks in a scenario
+- suggest suitable safeguards for bias, privacy, or misuse
+- link ethical concerns to real impact on users or groups
+
+---
+
+## Scenario answer pattern
+
+When you meet an ML ethics, bias, or privacy question, use this order:
+
+1. Identify the ML system and its purpose.
+2. Identify the ethical issue or risk.
+3. Explain who may be affected.
+4. Explain the possible impact.
+5. Suggest a suitable safeguard or policy.
+6. Explain how the safeguard reduces the risk.
+7. Mention human oversight if the decision is high-risk.
+
+---
+
+## Human oversight pattern
+
+Human oversight means a person checks, reviews, or can override an automated decision.
+
+It is especially important in high-risk areas such as healthcare, education, employment, finance, and policing.
+
+Human oversight does not mean ignoring the model. It means using the model as support, not as the only decision-maker.
+
+Example: a hospital model may suggest a diagnosis, but a doctor should review the result before treatment decisions are made.
+
+---
+
+## Common mistakes
+
+- saying "the model is biased" without explaining why
+- saying "privacy is important" without linking it to personal data
+- forgetting to explain who is affected
+- giving a safeguard that does not match the risk
+- ignoring human oversight in high-risk decisions
+- treating accuracy as the only ethical concern
+- assuming more data always makes the system fairer
+- writing a general moral opinion instead of a scenario-based answer
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -967,6 +1043,8 @@ Privacy risk can be reduced through data minimization, consent, access control, 
 
 ## 32. Worked Example: Hiring Model
 
+Bias example: this scenario shows how historical data and proxy variables can create unfair decisions.
+
 ### Scenario
 
 A company trains a model using past hiring decisions.
@@ -1000,6 +1078,8 @@ Past decisions should not automatically be treated as fair labels.
 ---
 
 ## 33. Worked Example: Student Risk Prediction
+
+Human oversight example: this scenario shows why predictions should support students, not automatically label or punish them.
 
 ### Scenario
 
@@ -1045,6 +1125,8 @@ appeal/correction process
 
 ## 34. Worked Example: Medical Screening
 
+Human oversight example: this scenario shows why high-risk ML outputs should be reviewed by qualified professionals.
+
 ### Scenario
 
 A model helps identify possible disease signs in images.
@@ -1078,6 +1160,8 @@ The model should support qualified professionals, not replace them without revie
 
 ## 35. Worked Example: Facial Recognition
 
+Privacy example: this scenario shows how identification systems can affect consent, surveillance, and unequal accuracy.
+
 ### Scenario
 
 A system identifies people from images.
@@ -1108,6 +1192,8 @@ clear policies and transparency
 
 ## 36. Worked Example: Recommendation System
 
+Transparency example: this scenario shows how recommendation systems can shape user behaviour and collect personal data.
+
 ### Scenario
 
 A platform recommends videos or products.
@@ -1137,6 +1223,8 @@ limit sensitive targeting
 ---
 
 ## 37. Worked Example: Fraud Detection
+
+Safeguard example: this scenario shows how false positives, false negatives, privacy, and review processes connect.
 
 ### Scenario
 
@@ -1198,7 +1286,7 @@ Human oversight is important because ML predictions can be wrong, biased, hard t
 
 ---
 
-## 39. Common Misconceptions
+## 39. Detailed misconception table
 
 | Mistake | Why it is wrong | Better understanding |
 |---|---|---|
