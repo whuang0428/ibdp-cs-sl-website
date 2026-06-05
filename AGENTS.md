@@ -209,6 +209,14 @@ A1/A2/A3/A4/B1/B2/B3 的 `index.md` 应尽量包含：
 - A4 model evaluation pages should emphasize scenario-based metric choice, including accuracy limitations, false positives, false negatives, precision, recall, and when human review is needed.
 - Do not expand these pages into university-level networking or machine learning theory; keep explanations suitable for IBDP CS SL revision.
 
+近期第四批优化中的 A1/A2 core 页面还应保持这些学生复习结构：
+
+- A1 instruction-processing pages such as `fetch-decode-execute.md` should connect CPU components, registers, buses, and instruction flow in a clear sequence. Keep fetch, decode, and execute in order, and make register roles such as PC, MAR, MDR, CIR/IR, and ACC explicit where relevant.
+- A1 memory pages such as `primary-memory.md` should clearly distinguish RAM, ROM, cache, registers, virtual memory, and secondary storage by purpose, speed, capacity, and volatility.
+- A2 device and model-choice pages such as `network-devices.md` and `client-server-peer-to-peer.md` should include scenario-focused comparison tables and answer patterns. Students should learn to justify why a device or network model fits a scenario, not only name it.
+- A2 troubleshooting or model-choice pages should include a concise workflow near the top, for example device role matching, connectivity vs security diagnosis, or client-server vs peer-to-peer choice.
+- Keep networking explanations at IBDP CS SL level. Do not expand into university-level routing, protocol engineering, or distributed systems theory unless the user explicitly asks.
+
 ## Assessment 规则
 
 Assessment 内容应帮助学生清楚区分 Paper 1、Paper 2 和 IA。
