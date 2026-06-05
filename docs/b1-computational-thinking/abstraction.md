@@ -1,5 +1,301 @@
 ﻿# Abstraction
 
+## Start here
+
+**Abstraction** means focusing on the details that matter for a specific purpose and ignoring details that are unnecessary for that purpose. It helps you create a simpler **model**, **representation**, algorithm, or interface without trying to include every real-world detail.
+
+本页重点是：能判断哪些是 relevant detail，哪些是 irrelevant detail，并解释为什么保留或忽略这些细节能让 problem-solving 更简单、更清楚。
+
+Core keywords for this page:
+
+```text
+abstraction, relevant detail, irrelevant detail, model, simplification, representation, problem-solving
+```
+
+::: tip Core idea
+Abstraction is purpose-dependent. A detail may be relevant in one system and irrelevant in another, depending on what the solution is trying to do.
+:::
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- define **abstraction**
+- identify relevant and irrelevant details in a scenario
+- explain why abstraction makes a problem easier to solve
+- create a simple abstract model of a real system
+- link abstraction to algorithms, data representation, simulations, and user interfaces
+- distinguish abstraction from decomposition
+
+---
+
+## Key terms for abstraction
+
+| Term | Simple Chinese explanation | English mark-scheme style phrase | Small example |
+|---|---|---|---|
+| Abstraction | 抽象；只关注解决问题需要的细节，忽略无关细节。 | Abstraction focuses on relevant details and hides or removes unnecessary details. | A route app keeps roads and distance, but ignores building colour. |
+| Relevant detail | 相关细节；会影响结果、判断或模型的细节。 | A relevant detail is needed because it affects the solution. | Traffic is relevant when choosing the fastest route. |
+| Irrelevant detail | 无关细节；不会影响当前目的的细节。 | Irrelevant details are ignored because they do not affect the solution. | Tree shape is usually irrelevant to route calculation. |
+| Model | 模型；真实系统的简化表示。 | An abstract model represents the important features of a real system. | A timetable model stores lessons, teachers, rooms, and times. |
+| Simplification | 简化；减少不必要复杂度。 | Simplification reduces the amount of detail considered. | Store `age` instead of every life event of a person. |
+| Representation | 表示；用数据、图表、变量或结构描述信息。 | A representation shows selected information in a useful form. | A map represents roads using lines. |
+| Interface | 接口；让用户或系统用简单方式操作复杂系统。 | An interface hides complex internal processing behind simpler actions. | A "Save" button hides file-writing steps. |
+| Data model | 数据模型；表示需要保存的数据和关系。 | A data model keeps the important data fields and relationships. | Student table: student ID, name, class. |
+| Algorithmic abstraction | 算法抽象；算法只使用解决问题需要的数据和步骤。 | Algorithmic abstraction removes details that do not affect the algorithm. | A grade algorithm uses mark and boundary, not paper colour. |
+| Simulation | 仿真；相关概念，用简化模型模拟真实系统。 | A simulation uses an abstract model to represent selected real-world behaviour. | A traffic simulation may model cars, roads, and speed, but not every driver's mood. |
+
+---
+
+## Step-by-step abstraction method
+
+Use this method when an exam question gives you a real-world scenario:
+
+1. Understand the real-world problem.
+2. Decide the purpose of the solution.
+3. Keep details needed for that purpose.
+4. Remove details that do not affect the solution.
+5. Represent the remaining details using variables, data structures, diagrams, or algorithms.
+6. Check that the simplified model is still useful.
+
+| Step | Question to ask | Example: route-planning app |
+|---|---|---|
+| Understand problem | What real-world situation is being simplified? | A user needs to travel from one place to another. |
+| Decide purpose | What must the solution achieve? | Find a suitable route. |
+| Keep relevant details | What affects the route? | Start, destination, roads, distance, traffic, road closures. |
+| Remove irrelevant details | What does not affect this purpose? | Building colour, shop window design, tree shape. |
+| Represent details | How can the useful details be shown? | Locations as nodes, roads as connections, distance as weights. |
+| Check usefulness | Can the model still solve the problem? | Yes, if it can compare possible routes. |
+
+---
+
+## Scenario example: school timetable system
+
+Real-world situation:
+
+```text
+A school needs a system to show students when and where their lessons happen.
+```
+
+Relevant details:
+
+| Relevant detail | Why it matters |
+|---|---|
+| student ID or class | Determines which timetable to show. |
+| subject | Shows what lesson is scheduled. |
+| teacher | Shows who teaches the lesson. |
+| room | Shows where to go. |
+| day and time | Shows when the lesson happens. |
+| week or term | Helps handle timetable changes. |
+
+Irrelevant details for a basic timetable:
+
+| Irrelevant detail | Why it can be ignored |
+|---|---|
+| classroom wall colour | Does not affect lesson time or room. |
+| student's favourite food | Does not affect timetable display. |
+| teacher's shoe colour | Does not affect lesson scheduling. |
+| exact desk layout | Usually not needed to show a normal timetable. |
+
+Abstract model / simplified representation:
+
+| Field | Example |
+|---|---|
+| `studentID` | `"S1024"` |
+| `subject` | `"Computer Science"` |
+| `teacher` | `"Ms Lee"` |
+| `room` | `"B12"` |
+| `day` | `"Monday"` |
+| `startTime` | `"09:00"` |
+| `endTime` | `"10:00"` |
+
+This helps because the system only stores and processes information needed to display a timetable. It avoids extra real-world details that would make the design more complex without improving the solution.
+
+---
+
+## Decomposition vs abstraction
+
+| Feature | Decomposition | Abstraction |
+|---|---|---|
+| Main idea | Break a problem into smaller sub-problems. | Keep relevant details and ignore irrelevant details. |
+| What it does to the problem | Splits the problem into parts. | Simplifies the detail level of the problem. |
+| Example question | What tasks make up an online shop? | Which details are needed to calculate delivery cost? |
+| Programming link | Sub-problems may become functions, procedures, or modules. | Variables, models, functions, and interfaces hide or represent detail. |
+| Common exam phrase | Decomposition breaks a complex problem into smaller sub-problems. | Abstraction focuses on relevant details and hides or removes unnecessary details. |
+| Common mistake | Listing vague parts such as "make app". | Saying "ignore details" without saying which details or why. |
+
+---
+
+## Real system vs abstract model
+
+| Feature | Real system | Abstract model |
+|---|---|---|
+| Amount of detail | Contains many real-world details. | Contains selected details needed for the purpose. |
+| Purpose | Exists in the real world with full complexity. | Helps solve, represent, simulate, or explain the system. |
+| Example | A real school with students, rooms, teachers, furniture, sounds, and movement. | A timetable table with student, subject, room, teacher, day, and time. |
+| Advantage | Complete and realistic. | Easier to understand, process, store, or use in an algorithm. |
+| Limitation | Too complex to handle directly. | May be inaccurate if important details are removed. |
+
+---
+
+## Abstraction and programming
+
+Programming uses abstraction in many simple ways:
+
+- **Variables** abstract real-world values, such as storing a student's mark as `mark`.
+- **Functions** hide implementation details, such as calling `calculateAverage(scores)` without reading every internal step.
+- **Classes and objects** can represent real-world entities, such as a `Student` object with `studentID`, `name`, and `classGroup`.
+- **User interfaces** hide complex internal processing from users, such as a "Submit" button that validates and saves form data.
+- **Data models** represent only the fields needed by a program, not every detail of the real object.
+
+Abstraction helps reduce complexity because programmers and users can work with simpler representations. It can also improve maintainability because internal details can often change without changing how the simpler interface is used.
+
+---
+
+## Abstraction workflow
+
+```mermaid
+flowchart TD
+    A["Real-world problem"] --> B["Identify purpose"]
+    B --> C["List possible details"]
+    C --> D["Remove irrelevant details"]
+    C --> E["Keep relevant details"]
+    D --> F["Create abstract model"]
+    E --> F
+    F --> G["Design algorithm / solution"]
+```
+
+---
+
+## Exam focus
+
+Command terms you may see:
+
+| Command term | What to write |
+|---|---|
+| State | Give a short definition of abstraction. |
+| Identify | Pick relevant or irrelevant details from a scenario. |
+| Outline | Give the main idea and one brief example. |
+| Describe | Explain how a simplified model represents a real system. |
+| Explain | Link relevant/irrelevant details to purpose, complexity, and problem-solving. |
+| Apply | Use abstraction on a new scenario and justify what is kept or ignored. |
+
+How much detail is usually needed:
+
+| Marks | What a strong answer includes |
+|---:|---|
+| 1 mark | A correct definition, such as focusing on relevant details. |
+| 2 marks | Definition plus one benefit or example. |
+| 3 marks | Relevant and irrelevant details identified from a scenario. |
+| 4 marks | Explanation of why the kept details matter and ignored details do not. |
+| 6 marks | Scenario-based answer with purpose, relevant details, irrelevant details, abstract model, and benefit. |
+
+Avoid vague answers such as:
+
+- "abstraction means simplifying"
+- "ignore details"
+
+Better answers say which details are relevant, which are irrelevant, and why those choices fit the purpose of the solution.
+
+---
+
+## Common exam mistakes
+
+| Mistake | Why it loses marks | Better answer habit |
+|---|---|---|
+| Confusing abstraction with decomposition | They reduce complexity in different ways. | Say decomposition splits parts; abstraction filters details. |
+| Saying abstraction removes all detail | Important details must be kept. | Explain that only irrelevant details are removed or hidden. |
+| Not linking abstraction to the scenario | The answer becomes generic. | Name specific details from the scenario. |
+| Keeping irrelevant details in the model | The model stays unnecessarily complex. | Check whether each detail affects the purpose. |
+| Removing details that are actually needed | The solution may become incorrect. | Keep details that affect output, decisions, or stored data. |
+| Giving only a definition without an example | Application marks may be missed. | Add one relevant and one irrelevant detail. |
+| Thinking abstraction only applies to programming code | It also applies to maps, models, databases, simulations, and interfaces. | Use a broad CT example when useful. |
+| Forgetting that abstraction is purpose-dependent | The same detail may matter in another system. | State the purpose before deciding what to keep. |
+
+---
+
+## Reusable mark-scheme style phrases
+
+- **Abstraction focuses on relevant details and hides or removes unnecessary details.**
+- **Irrelevant details are ignored because they do not affect the solution.**
+- **An abstract model represents the important features of a real system.**
+- **Abstraction reduces complexity, making the problem easier to understand and solve.**
+- **The details kept depend on the purpose of the system being designed.**
+- **Abstraction can hide implementation details behind a simpler interface.**
+- **A poor abstraction may remove important details and lead to an incorrect solution.**
+- **Abstraction helps algorithms focus only on data and steps needed for the required output.**
+
+---
+
+## Quick-check questions
+
+1. What is abstraction?
+2. What is a relevant detail?
+3. What is an irrelevant detail?
+4. Why is abstraction purpose-dependent?
+5. How does abstraction reduce complexity?
+6. What is an abstract model?
+7. How is abstraction different from decomposition?
+8. Give one programming example of abstraction.
+9. What is one risk of removing too much detail?
+10. Why is a user interface an example of abstraction?
+
+<details>
+<summary>Short answers</summary>
+
+1. Focusing on relevant details and ignoring unnecessary details.
+2. A detail needed because it affects the solution.
+3. A detail not needed because it does not affect the solution.
+4. The purpose decides which details matter.
+5. It reduces the number of details that must be considered.
+6. A simplified representation of important features of a real system.
+7. Decomposition splits a problem into parts; abstraction filters details.
+8. A variable storing a real-world value, or a function hiding internal steps.
+9. The model or algorithm may become incorrect.
+10. It hides complex internal processing behind simpler user actions.
+
+</details>
+
+---
+
+## Exam-style practice: abstraction
+
+### Question A [4 marks]
+
+Define abstraction and explain why it is useful in computational thinking.
+
+<details>
+<summary>Mark scheme</summary>
+
+Abstraction focuses on relevant details and hides or removes unnecessary details. It is useful because it reduces complexity, so the problem is easier to understand and solve. It helps an algorithm or model focus only on details that affect the required solution.
+
+</details>
+
+### Question B [6 marks]
+
+A route-planning app suggests a route from a student's home to school. Identify relevant and irrelevant details for the app and explain your choices.
+
+<details>
+<summary>Mark scheme</summary>
+
+Relevant details may include start location, destination, roads, distance, traffic, road closures, and travel mode because these affect route choice or travel time. Irrelevant details may include building colour, shop window design, tree shape, or billboard text because they do not normally affect the route calculation. A strong answer links each detail to the purpose of finding a suitable route.
+
+</details>
+
+### Question C [6 marks]
+
+Compare abstraction and decomposition using an online shop example.
+
+<details>
+<summary>Mark scheme</summary>
+
+Decomposition breaks the online shop into smaller sub-problems, such as login, product search, shopping cart, payment, and delivery tracking. Abstraction focuses on the important details needed for a particular part, such as keeping product name, price, quantity, and delivery address for checkout, while ignoring page background colour or button animation. Decomposition splits the problem into parts, while abstraction decides which details are relevant for the solution.
+
+</details>
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1280,13 +1576,13 @@ A risk of poor abstraction is that important details may be removed. For example
 ## 34. Practice task
 ### Activity 1: Keep or Ignore
 
-Give students a scenario:
+Use this scenario:
 
 ```text
 Design a school attendance system.
 ```
 
-Students sort details into relevant and irrelevant:
+Sort these details into relevant and irrelevant:
 
 ```text
 student ID
@@ -1304,7 +1600,7 @@ class
 
 ### Activity 2: Abstraction vs Decomposition Sort
 
-Students classify each statement:
+Classify each statement:
 
 ```text
 split game into scoring and movement
@@ -1319,7 +1615,7 @@ ignore book cover colour when searching by ISBN
 
 ### Activity 3: Model the System
 
-Students choose one system:
+Choose one system:
 
 ```text
 map app
@@ -1329,7 +1625,7 @@ shopping discount calculator
 game collision system
 ```
 
-They list:
+List:
 
 ```text
 important details
