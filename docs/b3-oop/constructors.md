@@ -35,6 +35,87 @@ A constructor prepares a new object by giving its attributes initial values. Stu
 
 ---
 
+## Start here: constructors set up new objects
+
+A constructor is a special method used when an object is created.
+
+It usually gives initial values to the object's attributes.
+
+Constructor parameters allow different objects to start with different values. Connect constructors to object creation and object state: after the constructor runs, the new object has its starting attribute values.
+
+---
+
+## Constructor vs method
+
+| Idea | Constructor | Normal method |
+|---|---|---|
+| Main purpose | sets up a new object | performs an action after the object exists |
+| When it runs | when an object is created | when the method is called |
+| Name | often matches the class name, depending on language | has its own method name |
+| Return value | usually no explicit return value | may or may not return a value |
+| Common use | initialize attributes | update, calculate, display, or return data |
+
+---
+
+## Object creation workflow
+
+Use this route when reading constructor code:
+
+| Step | What to do | Why it matters |
+|---:|---|---|
+| 1 | Define the class. | The class describes the type of object. |
+| 2 | Decide which attributes each object needs. | Attributes store the object's state. |
+| 3 | Write a constructor with parameters if starting values are needed. | Parameters allow different starting values. |
+| 4 | Create a new object. | In Java, this uses `new`. |
+| 5 | Pass values into the constructor. | These values become constructor arguments. |
+| 6 | Store those values in the object's attributes. | This initializes the object state. |
+| 7 | Use methods to read or change the object state later. | Constructors set up the object; methods use it afterwards. |
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain what a constructor is
+- explain when a constructor runs
+- explain how constructors initialize attributes
+- distinguish a constructor from a normal method
+- identify constructor parameters
+- trace values passed into a constructor
+- explain how object state is set when an object is created
+- read simple constructor code
+
+---
+
+## Constructor code-reading pattern
+
+When reading constructor code, use this order:
+
+1. Find the class name.
+2. Find the attributes.
+3. Find the constructor.
+4. Identify the constructor parameters.
+5. Match each parameter to the attribute it initializes.
+6. Find where the object is created.
+7. Track the values passed into the constructor.
+8. Write the initial object state after creation.
+
+---
+
+## Common mistakes
+
+- thinking a constructor is called repeatedly like a normal method
+- forgetting that constructors run when objects are created
+- confusing constructor parameters with attributes
+- not tracking the values passed into the constructor
+- thinking all objects created from the same class must have the same state
+- confusing the class name with the object name
+- ignoring `this` or `self` when it is used to refer to the current object
+- saying the constructor creates the class instead of creating an object from the class
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -157,6 +238,8 @@ Important features of constructors:
 
 ### Example: Creating a Student Record
 
+Object creation example: each constructor call creates a separate `Student` object with its own starting state.
+
 When a school creates a new student record, it should immediately store the student's basic information.
 
 ```text
@@ -181,6 +264,8 @@ A constructor is like filling in a form when creating a new record. The object s
 ---
 
 ## 6. Constructor Syntax
+
+Constructor example: the constructor name matches the class name and has no return type.
 
 A constructor looks similar to a method, but it is different.
 
@@ -214,6 +299,8 @@ public Student(String studentName, int studentMark) {
 ---
 
 ## 7. Default Constructor
+
+Initial state example: a default constructor can give every new object the same safe starting values.
 
 A **default constructor** has no parameters.
 
@@ -265,6 +352,8 @@ Unknown scored 0
 ---
 
 ## 8. Parameterized Constructor
+
+Parameter example: constructor arguments are copied into parameters and then stored in attributes.
 
 A **parameterized constructor** receives values from outside.
 
@@ -318,6 +407,8 @@ Ben scored 42
 
 ## 9. Object State Trace with Constructor
 
+Initial state example: trace constructor calls by writing the attribute values created for each object.
+
 ### Code
 
 ```java
@@ -344,6 +435,8 @@ The same constructor runs twice, but each object receives different values.
 ---
 
 ## 10. Constructor vs Normal Method
+
+Common exam trap: `public void Student(...)` is a normal method, not a constructor.
 
 Constructors look similar to methods, but they are not the same.
 
@@ -379,6 +472,8 @@ If you write `public void Student(...)`, it is not a constructor. It is a normal
 ---
 
 ## 11. The `this` Keyword
+
+this / self example: `this` identifies the current object's attribute when a parameter has the same name.
 
 Sometimes constructor parameters have the same names as attributes.
 
@@ -417,6 +512,8 @@ current object's name attribute = name parameter
 ---
 
 ## 12. Constructor with Validation
+
+Constructor example: a constructor can check starting values before storing them in attributes.
 
 Constructors can also check whether starting values are valid.
 
@@ -469,6 +566,8 @@ This connects constructors to selection and validation from B2.
 ---
 
 ## 13. Multiple Constructors: Constructor Overloading
+
+Object creation example: Java chooses the constructor that matches the arguments in the `new` call.
 
 A class can have more than one constructor if the parameter lists are different.
 
@@ -624,7 +723,7 @@ The attributes are now `private`. This prepares students for the next topics: en
 
 ---
 
-## 16. Common Mistakes
+## 16. Detailed common mistakes table
 
 | Mistake | Why it is a problem | Better habit |
 |---|---|---|
