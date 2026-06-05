@@ -36,6 +36,292 @@ A database is not just a table. A database is an organized collection of related
 
 ---
 
+## Start here: databases organise related data
+
+A **database** is an organised collection of related data. Students should first understand how data is stored in **tables**, where each **record** is a row and each **field** is a column.
+
+Databases are used instead of simple flat files or paper records because they make it easier to search data, update data, reduce unnecessary duplication, keep data consistent, and control access. The core English keywords for this page are **database**, **table**, **record**, **field**, **primary key**, **foreign key**, **query**, and **DBMS**.
+
+For exam answers, do not only say "a database stores data". Explain how the data is organised, how tables are linked, and why this helps a real system such as a school, hospital, shop, library, or booking system.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- define **database**, **table**, **field**, and **record**
+- explain the role of a **DBMS**
+- identify **primary keys** and **foreign keys**
+- explain simple relationships between tables
+- explain why **data integrity** matters
+- explain basic advantages and limitations of databases
+- answer scenario questions about schools, hospitals, shops, libraries, and booking systems
+
+---
+
+## Key terms exam table
+
+| Term | 简单中文解释 | English mark-scheme phrase | Simple example |
+|---|---|---|---|
+| Database | 有组织的相关数据集合 | An organised collection of related data | A school database storing students, classes, and grades |
+| DBMS | 管理数据库的软件 | Software used to create, store, query, update, and control a database | MySQL, Microsoft Access, PostgreSQL |
+| Table / relation | 存储一种实体数据的表 | A structure that stores data about one entity type | `Student` table |
+| Record / row / tuple | 表中的一整行数据 | One complete set of data about one item, person, or event | One student's details |
+| Field / attribute / column | 表中的一列数据类型 | One type of data stored for each record | `StudentID`, `Name`, `DateOfBirth` |
+| Primary key | 唯一识别每条记录的字段 | A field that uniquely identifies each record | `StudentID` |
+| Foreign key | 引用另一张表主键的字段 | A field that links to a primary key in another table | `StudentID` in a `Loan` table |
+| Query | 向数据库请求数据 | A request used to retrieve or process data | Find all overdue books |
+| Form | 输入或编辑数据的界面 | An interface for entering or editing database data | Library loan entry form |
+| Report | 整理后的数据库输出 | Formatted output generated from database data | Monthly overdue book report |
+| Data type | 字段允许的数据类型 | The type of value a field can store | `Date`, `Integer`, `Text` |
+| Data validation | 检查输入是否符合规则 | Checking data against rules before it is accepted | Score must be 0 to 100 |
+| Data integrity | 数据准确、一致、可靠 | Accuracy, consistency, and reliability of data | A loan cannot reference a missing student |
+| Redundancy | 不必要的重复数据 | Unnecessary duplication of data | Student phone number repeated in many files |
+| Consistency | 相同数据保持一致 | Data values do not conflict across the system | One correct phone number for a student |
+
+---
+
+## Simple database structure example: school library
+
+A school library system can store related data in separate tables instead of repeating all details in one long file.
+
+### STUDENT table
+
+| Field | Role | Example value |
+|---|---|---|
+| StudentID | Primary key | `S104` |
+| Name | Field | `Amy Chen` |
+| TutorGroup | Field | `10A` |
+
+Example record:
+
+```text
+S104, Amy Chen, 10A
+```
+
+### BOOK table
+
+| Field | Role | Example value |
+|---|---|---|
+| BookID | Primary key | `B221` |
+| Title | Field | `Computer Science Basics` |
+| Author | Field | `N. Patel` |
+
+Example record:
+
+```text
+B221, Computer Science Basics, N. Patel
+```
+
+### LOAN table
+
+| Field | Role | Example value |
+|---|---|---|
+| LoanID | Primary key | `L9001` |
+| StudentID | Foreign key to STUDENT.StudentID | `S104` |
+| BookID | Foreign key to BOOK.BookID | `B221` |
+| LoanDate | Field | `2026-06-01` |
+| ReturnDate | Field | `2026-06-15` |
+
+Example record:
+
+```text
+L9001, S104, B221, 2026-06-01, 2026-06-15
+```
+
+This design stores student details once, book details once, and uses foreign keys in `LOAN` to show which student borrowed which book.
+
+---
+
+## Flat file vs relational database
+
+| Comparison point | Flat file | Relational database |
+|---|---|---|
+| Structure | Usually one file or separate simple files | Multiple related tables |
+| Redundancy | Same data may be repeated often | Repetition can be reduced by linking tables |
+| Consistency | Updates may be missed in some files | DBMS rules and keys help keep data consistent |
+| Relationships | Harder to represent cleanly | Tables can be linked using primary and foreign keys |
+| Ease of searching | Searching may be manual or limited | Queries can retrieve specific data efficiently |
+| Data integrity | Fewer built-in controls | Data types, validation, keys, and constraints can protect accuracy |
+| Suitable example | Small personal list | School library, hospital appointment, shop order system |
+
+---
+
+## Relationship basics
+
+Relationships describe how records in tables are connected.
+
+| Relationship | Simple meaning | Example |
+|---|---|---|
+| One-to-one | One record in Table A matches one record in Table B | One student has one locker |
+| One-to-many | One record in Table A can match many records in Table B | One student can have many loans |
+| Many-to-many | Many records in Table A can match many records in Table B | Many students can borrow many books over time |
+
+A **many-to-many** relationship usually needs a **link table / junction table**. In the library example, `LOAN` acts as a link table between `STUDENT` and `BOOK`, because one student can borrow many books and one book can be borrowed by many students over time.
+
+---
+
+## Relational database diagram
+
+```mermaid
+flowchart LR
+    STUDENT["STUDENT table<br/>StudentID PK<br/>Name<br/>TutorGroup"]
+    BOOK["BOOK table<br/>BookID PK<br/>Title<br/>Author"]
+    LOAN["LOAN table<br/>LoanID PK<br/>StudentID FK<br/>BookID FK<br/>LoanDate<br/>ReturnDate"]
+
+    STUDENT -->|"StudentID is referenced by LOAN.StudentID"| LOAN
+    BOOK -->|"BookID is referenced by LOAN.BookID"| LOAN
+```
+
+---
+
+## Exam focus
+
+| Command term | What to write |
+|---|---|
+| State | Give the correct term or a short definition. |
+| Identify | Pick out the correct field, record, table, primary key, or foreign key from the data. |
+| Outline | Give the main idea plus one relevant detail. |
+| Describe | Explain what the concept does, using correct database vocabulary. |
+| Explain | Link the concept to the scenario and say why it matters. |
+| Compare | Give clear similarities and differences, usually in paired points. |
+
+For mark levels:
+
+- **1 mark:** give one correct term or one accurate definition.
+- **2 marks:** give two clear points, or one point with a short example.
+- **3 marks:** define the idea and connect it to the given system.
+- **4 marks:** give two developed points with scenario detail.
+- **6 marks:** write several linked points, such as structure, keys, integrity, redundancy, searching, and scenario benefit.
+
+Avoid vague answers such as:
+
+```text
+database stores data
+primary key is important
+foreign key connects tables
+```
+
+Better answers say **how** data is organised, **why** the key is unique, and **which** primary key the foreign key refers to.
+
+---
+
+## Reusable mark-scheme style phrases
+
+- "A database is an organised collection of related data."
+- "A table stores data about one entity."
+- "A record is one complete set of data about one item, person, or event."
+- "A field stores one type of data for each record."
+- "A primary key uniquely identifies each record."
+- "A foreign key links a record to a primary key in another table."
+- "A DBMS allows users to create, store, query, update, and control access to data."
+- "Data integrity means the data is accurate, consistent, and reliable."
+- "A relational database can reduce redundancy by storing related data in separate linked tables."
+
+---
+
+## Common mistakes
+
+| Mistake | Why it loses marks | Better exam wording |
+|---|---|---|
+| Confusing field and record | A field is a column; a record is a row | "A field stores one type of data; a record stores one complete item." |
+| Confusing primary key and foreign key | They have different roles | "A primary key uniquely identifies a record; a foreign key refers to a primary key in another table." |
+| Saying a primary key can be duplicated | A primary key must be unique | "Each primary key value must identify only one record." |
+| Forgetting what a foreign key refers to | "Connects tables" is too vague | "The foreign key stores a value matching a primary key in another table." |
+| Confusing validation with verification | Validation checks rules; verification checks correctness against the intended/original value | "Validation checks whether data is acceptable." |
+| Saying relational database means all data is in one table | Relational databases use related tables | "Data is split into tables that can be linked by keys." |
+| Ignoring the scenario in explain questions | Generic answers miss application marks | Use the given school, hospital, shop, library, or booking system details. |
+
+---
+
+## Quick-check questions with short answers
+
+1. What is a database?  
+   **Answer:** An organised collection of related data.
+
+2. What does a DBMS do?  
+   **Answer:** It creates, stores, queries, updates, protects, and manages database data.
+
+3. What is a table?  
+   **Answer:** A structure that stores data about one entity type.
+
+4. What is a record?  
+   **Answer:** One complete row of data about one item, person, or event.
+
+5. What is a field?  
+   **Answer:** One column storing one type of data for each record.
+
+6. What is a primary key?  
+   **Answer:** A field that uniquely identifies each record in a table.
+
+7. What is a foreign key?  
+   **Answer:** A field that refers to a primary key in another table.
+
+8. Why can redundancy be a problem?  
+   **Answer:** Repeated data can become inconsistent if one copy is updated and another is not.
+
+9. What does data integrity mean?  
+   **Answer:** Data is accurate, consistent, and reliable.
+
+10. Why is a relational database useful for a library?  
+    **Answer:** It can link students, books, and loans without repeating all details in one file.
+
+---
+
+## Exam-style practice: database fundamentals
+
+### Question A [6 marks]
+
+A school library uses these tables:
+
+```text
+STUDENT(StudentID, Name, TutorGroup)
+BOOK(BookID, Title, Author)
+LOAN(LoanID, StudentID, BookID, LoanDate)
+```
+
+Identify one field, one record, one primary key, and two foreign keys that could be used in this database.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+- A field could be `Name`, `Title`, or `LoanDate`.
+- A record is one complete row, such as one student record or one loan record.
+- A primary key could be `StudentID` in `STUDENT`, `BookID` in `BOOK`, or `LoanID` in `LOAN`.
+- `StudentID` in `LOAN` is a foreign key referring to `STUDENT.StudentID`.
+- `BookID` in `LOAN` is a foreign key referring to `BOOK.BookID`.
+
+</details>
+
+---
+
+### Question B [6 marks]
+
+A hospital currently stores patient details, appointments, and doctor details in separate flat files. Explain why a relational database would be better.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A relational database can store patients, doctors, and appointments in separate related tables. This reduces redundancy because patient and doctor details do not need to be repeated in every appointment record. It improves consistency because updates can be made in one place. Primary keys can uniquely identify patients, doctors, and appointments, while foreign keys can link appointments to the correct patient and doctor. Queries can retrieve useful information quickly, such as all appointments for one patient. A DBMS can also support validation, access control, backups, and data integrity rules.
+
+</details>
+
+---
+
+### Question C [6 marks]
+
+An online shop stores the same customer address in many order records. Sometimes one order has an old address and another order has a new address. Explain the problems shown in this scenario.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+The shop has data redundancy because the same customer address is repeated in many order records. This can cause data inconsistency if one copy is updated but other copies still contain the old address. It also affects data integrity because the system may not have accurate and reliable customer data. A better relational design would store customer details once in a `CUSTOMER` table and link orders to the customer using a foreign key. This makes updates easier and reduces the chance of conflicting address values.
+
+</details>
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
