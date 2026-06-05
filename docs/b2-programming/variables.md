@@ -35,6 +35,352 @@ Variables are the memory of a program. Most programming mistakes happen because 
 
 ---
 
+## Start here: variables store changing values
+
+A **variable** is a named place in memory that stores a value while a program runs. Variables let a program remember input, store calculated results, update totals, count events, and produce output.
+
+The most important exam skill is tracing how a variable's value changes after each **assignment**. Read code in order and remember that assignment replaces the old value with a new value.
+
+Core keywords for this page: **variable**, **value**, **identifier**, **assignment**, **initialization**, **update**, **constant**, **data type**, and **trace table**.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- define **variable**, **value**, **identifier**, and **constant**
+- explain **assignment**, **initialization**, and **update**
+- explain why `x = x + 1` is an update, not a maths equation
+- distinguish variables from constants
+- choose meaningful variable names
+- match variables with suitable data types
+- trace variable values using a trace table
+- explain how constants and clear identifiers improve maintainability
+
+---
+
+## Key terms exam table
+
+| Term | 简单中文解释 | English mark-scheme phrase | Simple example |
+|---|---|---|---|
+| Variable | 存储可变化数据的命名位置 | A named storage location for a value | `score = 80` |
+| Value | 变量中当前保存的数据 | The data currently stored in a variable | `80` in `score = 80` |
+| Identifier | 变量、方法或类的名字 | The name used to identify a variable, method, or class | `studentAge` |
+| Assignment | 把值存入变量 | Storing a value in a variable | `score = 90` |
+| Initialization | 第一次给变量设置初始值 | Giving a variable its first value | `int count = 0;` |
+| Update | 用新值替换旧值 | Changing a variable by assigning a new value | `count = count + 1` |
+| Constant | 程序运行时不应改变的值 | A named value that should not change during execution | `final int PASS_MARK = 50;` |
+| Data type | 变量可存储的数据种类 | The type of value a variable can store | `int`, `double`, `boolean`, `String` |
+| Trace table | 逐步记录变量值的表格 | A table used to follow variable values step by step | Columns for `x`, `y`, `total` |
+
+---
+
+## Assignment rule: right side first
+
+Assignment does not work like a maths equation. In programming, the computer:
+
+1. evaluates the **right side** first
+2. stores the result in the variable on the **left side**
+3. replaces the old value with the new value
+
+Example:
+
+```java
+int x = 5;
+x = x + 1;
+```
+
+Read the update as:
+
+```text
+new x = old x + 1
+new x = 5 + 1
+new x = 6
+```
+
+After the assignment, the old value `5` is replaced. The variable `x` now stores `6`.
+
+::: warning Common Exam Trap
+`x = x + 1` is an update operation. It is not an algebra equation asking whether `x` equals `x + 1`.
+:::
+
+---
+
+## Variable vs constant
+
+| Point | Variable | Constant |
+|---|---|---|
+| Meaning | Named storage whose value may change | Named value that should not change |
+| Typical use | Score, total, count, user input | Tax rate, maximum mark, conversion factor |
+| Java example | `int score = 0;` | `final int MAX_MARK = 100;` |
+| Can be updated? | Yes, using assignment | No, should remain fixed |
+| Maintainability benefit | Stores changing program state | Avoids repeated "magic numbers" |
+| Common exam phrase | "A variable stores a value that can change during program execution." | "A constant stores a named value that should not change during program execution." |
+
+Constants make code easier to maintain because a fixed value can be changed in one place.
+
+```java
+final int PASS_MARK = 50;
+
+if (mark >= PASS_MARK) {
+    System.out.println("Pass");
+}
+```
+
+---
+
+## Good variable names
+
+Good identifiers make code easier to read, trace, test, and maintain.
+
+Use names that describe the value's purpose:
+
+| Weak name | Better name | Why better |
+|---|---|---|
+| `x` | `studentAge` | explains what the number represents |
+| `t` | `totalMarks` | describes the stored value |
+| `n` | `numberOfStudents` | avoids guessing |
+| `p` | `productPrice` | gives scenario meaning |
+
+Java variable names usually use **camelCase**:
+
+```java
+studentName
+totalScore
+passCount
+averageMark
+```
+
+Avoid names that are too vague, misleading, or inconsistent. In exam answers, a meaningful name can help show that you understand the scenario.
+
+---
+
+## Data types and variables
+
+A variable's **data type** controls what kind of value it can store.
+
+| Data type | Suitable value | Example variable |
+|---|---|---|
+| `int` | whole number | `int numberOfStudents = 24;` |
+| `double` | decimal number | `double averageMark = 76.5;` |
+| `boolean` | true/false value | `boolean hasPassed = true;` |
+| `char` | single character | `char grade = 'A';` |
+| `String` | text | `String studentName = "Alice";` |
+
+Choose the type that matches the data. For example, an average mark may need `double` because it can include decimals, while a pass/fail result may use `boolean`.
+
+---
+
+## Variable trace pattern
+
+When tracing variables:
+
+1. Read statements from top to bottom.
+2. Create one column for each variable.
+3. When an assignment occurs, evaluate the right side first.
+4. Replace the old value in the left-side variable.
+5. Record output only when an output statement runs.
+6. Do not use old values after they have been replaced.
+
+Example:
+
+```java
+int x = 3;
+int y = 2;
+x = x + y;
+y = x * 2;
+System.out.println(y);
+```
+
+Trace:
+
+| Step | Statement | x | y | Output |
+|---:|---|---:|---:|---|
+| 1 | `int x = 3;` | 3 | - | - |
+| 2 | `int y = 2;` | 3 | 2 | - |
+| 3 | `x = x + y;` | 5 | 2 | - |
+| 4 | `y = x * 2;` | 5 | 10 | - |
+| 5 | `System.out.println(y);` | 5 | 10 | `10` |
+
+Answer:
+
+```text
+10
+```
+
+---
+
+## Variable flow diagram
+
+```mermaid
+flowchart LR
+    Input["Input / starting value"]
+    Assign["Assignment<br/>store value in variable"]
+    Update["Update<br/>evaluate right side first"]
+    Replace["Old value replaced"]
+    Output["Output / use current value"]
+
+    Input --> Assign
+    Assign --> Update
+    Update --> Replace
+    Replace --> Output
+```
+
+Use this process when reading code: identify the starting value, apply each assignment in order, update the trace table, then read the final output.
+
+---
+
+## Exam focus
+
+| Command term | What to write |
+|---|---|
+| State | Give a short definition, such as variable or constant. |
+| Identify | Pick out the variable, value, identifier, assignment, or data type from code. |
+| Outline | Give the main idea plus one example. |
+| Describe | Explain how assignment or update changes a variable value. |
+| Explain | Link variables, constants, names, or trace tables to readability and maintainability. |
+| Trace | Follow each statement in order and record variable values. |
+
+For mark levels:
+
+- **1 mark:** define one term or identify one variable/value.
+- **2 marks:** explain assignment or distinguish variable and constant.
+- **3 marks:** trace a short code fragment with one or two variables.
+- **4 marks:** trace updates and state final output clearly.
+- **6 marks:** include a trace table, explain updates, and discuss naming/constants or maintainability in a scenario.
+
+---
+
+## Reusable mark-scheme style phrases
+
+- "A variable is a named storage location for a value."
+- "A value is the data currently stored in a variable."
+- "An identifier is the name used for a variable, method, or class."
+- "Assignment stores the result of an expression in a variable."
+- "In assignment, the right side is evaluated first and the result is stored on the left."
+- "Initialization gives a variable its first value."
+- "An update replaces the old value of a variable with a new value."
+- "A constant is a named value that should not change during program execution."
+- "A trace table records variable values step by step as a program executes."
+
+---
+
+## Common mistakes table
+
+| Mistake | Why it is wrong | Better approach |
+|---|---|---|
+| Treating `x = x + 1` as algebra | Assignment updates the value | Read it as "new x becomes old x plus 1" |
+| Evaluating the left side first | The left side is where the result is stored | Evaluate the right side first |
+| Forgetting old value is replaced | Variables store the current value only | Update the trace table each time |
+| Confusing `=` and `==` | `=` assigns; `==` compares in Java | Use `=` for assignment and `==` in conditions |
+| Using a variable before initialization | The variable may not have a valid value | Give a starting value before use |
+| Choosing vague identifiers | Code becomes harder to understand | Use meaningful names such as `totalMarks` |
+| Using the wrong data type | Values may not fit or decimals may be lost | Match the type to the data |
+| Changing a constant | Constants should stay fixed | Use `final` in Java for fixed values |
+| Missing a row in a trace table | Final values may be wrong | Add one row per important statement |
+| Recording output too early | Output occurs only at output statements | Trace until the print/output line |
+
+---
+
+## Quick-check questions with short answers
+
+1. What is a variable?  
+   **Answer:** A named storage location for a value.
+
+2. What is a value?  
+   **Answer:** The data currently stored in a variable.
+
+3. What is an identifier?  
+   **Answer:** The name used for a variable, method, or class.
+
+4. What is assignment?  
+   **Answer:** Storing a value in a variable.
+
+5. What is initialization?  
+   **Answer:** Giving a variable its first value.
+
+6. What is an update?  
+   **Answer:** Assigning a new value to replace the old value.
+
+7. What does `x = x + 1` mean?  
+   **Answer:** Add 1 to the old value of `x` and store the result back in `x`.
+
+8. What is a constant?  
+   **Answer:** A named value that should not change while the program runs.
+
+9. Why are good variable names useful?  
+   **Answer:** They make code easier to read, trace, test, and maintain.
+
+10. What is a trace table?  
+    **Answer:** A table that records variable values step by step.
+
+---
+
+## Exam-style practice: variables
+
+### Question A [6 marks]
+
+Explain the difference between a variable, a constant, and assignment. Use one example of each.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A variable is a named storage location whose value may change while the program runs, such as `int score = 0;`. A constant is a named value that should not change during program execution, such as `final int MAX_MARK = 100;`. Assignment stores the result of an expression in a variable, such as `score = score + 10;`. In assignment, the right side is evaluated first, and the result replaces the old value stored in the variable on the left.
+
+</details>
+
+---
+
+### Question B [6 marks]
+
+Trace the code and state the output.
+
+```java
+int x = 4;
+int y = 3;
+x = x + y;
+y = x + 2;
+x = y - 1;
+System.out.println(x);
+System.out.println(y);
+```
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+| Step | Statement | x | y |
+|---:|---|---:|---:|
+| 1 | `int x = 4;` | 4 | - |
+| 2 | `int y = 3;` | 4 | 3 |
+| 3 | `x = x + y;` | 7 | 3 |
+| 4 | `y = x + 2;` | 7 | 9 |
+| 5 | `x = y - 1;` | 8 | 9 |
+
+Output:
+
+```text
+8
+9
+```
+
+</details>
+
+---
+
+### Question C [6 marks]
+
+A program calculates whether students pass a test. The programmer writes the pass mark `50` many times and uses variable names such as `x`, `y`, and `z`. Explain how better names and constants could improve maintainability.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Meaningful variable names such as `studentMark`, `passMark`, and `passCount` make the code easier to understand because the purpose of each value is clear. A constant such as `final int PASS_MARK = 50;` avoids repeating the number 50 throughout the program. If the pass mark changes later, the programmer only needs to update the constant in one place. This improves maintainability and reduces the chance of inconsistent updates. Clear names also make tracing and debugging easier because each variable's role is easier to follow.
+
+</details>
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
