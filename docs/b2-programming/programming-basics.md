@@ -34,6 +34,351 @@ This page is the bridge between computational thinking and real code. Students s
 
 ---
 
+## Start here: programming basics help you read and trace code
+
+Programming basics are the foundation for **reading**, **tracing**, and **writing** code. Before writing long programs, you need to understand how statements run in order, how values are stored, how decisions and loops work, and how larger programs can be split into smaller reusable parts.
+
+Core keywords for this page: **variable**, **assignment**, **input**, **output**, **sequence**, **selection**, **iteration**, **subprogram**, **procedure**, **function**, **parameter**, **argument**, and **return value**.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- identify **variables** and **assignments**
+- follow the **sequence** of execution
+- understand **input** and **output**
+- distinguish **selection** and **iteration** at a basic level
+- define **subprogram**, **procedure**, and **function**
+- identify **parameters** and **arguments**
+- explain **return values**
+- explain why **modular programming** improves readability, testing, reuse, and maintenance
+
+---
+
+## Programming fundamentals exam table
+
+| Term | 简单中文解释 | English mark-scheme phrase | Simple example |
+|---|---|---|---|
+| Variable | 存储数据的命名位置 | A named storage location for a value | `score = 80` |
+| Assignment | 给变量赋值或更新值 | Storing a value in a variable | `total = price1 + price2` |
+| Input | 程序接收的数据 | Data received by the program | User enters a mark |
+| Output | 程序显示或发送的结果 | Data produced by the program | `OUTPUT average` |
+| Sequence | 语句按顺序执行 | Instructions executed in order | Line 1, then line 2, then line 3 |
+| Selection | 根据条件选择分支 | Choosing a path based on a condition | `IF mark >= 50 THEN` |
+| Iteration | 重复执行代码 | Repeating code using a loop | `FOR i = 1 TO 10` |
+| Subprogram | 有名字的代码块，完成特定任务 | A named block of code that performs a specific task | `calculateAverage()` |
+| Procedure | 执行动作但通常不返回值 | Performs an action but does not usually return a value | `printReport()` |
+| Function | 执行任务并返回一个值 | Returns a value to the calling code | `getAverage()` returns a number |
+| Parameter | 定义中的占位变量 | Placeholder used in a subprogram definition | `mark` in `isPass(mark)` |
+| Argument | 调用时传入的实际值 | Actual value passed into a subprogram call | `75` in `isPass(75)` |
+| Return value | 函数返回给调用处的数据 | Value sent back by a function | `return average` |
+| Local variable | 只在某个子程序内部存在的变量 | Variable accessible only inside its subprogram | `total` inside `calculateTotal()` |
+| Scope | 变量可被访问的范围 | Part of a program where a variable can be used | Local scope inside a method |
+| Modular programming | 把程序拆成小模块 | Splitting a program into smaller reusable parts | Separate input, calculation, and output subprograms |
+
+---
+
+## Procedure vs function
+
+| Point | Procedure | Function |
+|---|---|---|
+| Purpose | Performs an action | Calculates or produces a value |
+| Returns a value? | Does not usually return a value | Returns a value |
+| How it is called | Called as a statement | Often used in assignment, output, or another expression |
+| Suitable example | `printMenu()` displays options | `calculateTotal(price, tax)` returns total |
+| Common exam phrase | "A procedure performs an action but does not usually return a value." | "A function returns a value to the part of the program that called it." |
+| Common mistake | Thinking every subprogram must return data | Calling a function but ignoring the returned value |
+
+---
+
+## Parameters vs arguments
+
+A **parameter** is the placeholder name in the subprogram definition. An **argument** is the actual value passed into the subprogram call.
+
+Do not use these words interchangeably in exam answers.
+
+```java
+public static int addTen(int number) {  // number is a parameter
+    return number + 10;
+}
+
+int result = addTen(5);                 // 5 is an argument
+```
+
+When the function is called:
+
+```text
+argument 5 is passed into parameter number
+number becomes 5 inside the function
+function returns 15
+```
+
+---
+
+## Return values
+
+Functions usually **return a value**. The returned value can be:
+
+- stored in a variable
+- printed as output
+- used in another expression
+
+Procedures may perform actions without returning a value, such as printing a message or updating a display.
+
+```java
+public static int square(int n) {
+    return n * n;
+}
+
+int answer = square(4);                 // stores returned value 16
+System.out.println(square(5));          // prints returned value 25
+int total = square(3) + square(2);      // uses returned values in expression
+```
+
+If a function returns a value, check where that value goes. If it is not stored, printed, or used, the result may be lost.
+
+---
+
+## Local variables and scope
+
+A **local variable** exists only inside the subprogram where it is declared. Its **scope** is limited to that subprogram.
+
+```java
+public static int calculateTotal(int a, int b) {
+    int total = a + b;   // local variable
+    return total;
+}
+```
+
+The variable `total` can be used inside `calculateTotal()`, but not everywhere in the program.
+
+A **global variable** can be accessed more widely, but overusing global variables can make code harder to debug because many parts of the program may change the same value. Local variables reduce unwanted side effects because each subprogram keeps its temporary data separate.
+
+---
+
+## Code-reading pattern for subprogram calls
+
+When tracing code with subprograms:
+
+1. Start from the **main program**.
+2. Identify each **subprogram call**.
+3. Match **arguments** in the call to **parameters** in the definition.
+4. Execute the subprogram body using those parameter values.
+5. Record any **returned value**.
+6. Continue after the call in the main program.
+
+### Small trace example
+
+```java
+public static int doubleValue(int x) {
+    return x * 2;
+}
+
+public static void main(String[] args) {
+    int a = 3;
+    int b = doubleValue(a + 1);
+    System.out.println(b);
+}
+```
+
+Trace:
+
+| Step | Action | Value |
+|---:|---|---|
+| 1 | `a = 3` | `a` is 3 |
+| 2 | call `doubleValue(a + 1)` | argument is 4 |
+| 3 | parameter `x` receives 4 | `x` is 4 inside function |
+| 4 | function returns `x * 2` | returns 8 |
+| 5 | `b = 8` | returned value stored in `b` |
+| 6 | print `b` | output is 8 |
+
+Answer:
+
+```text
+8
+```
+
+---
+
+## Subprogram call workflow
+
+```mermaid
+flowchart LR
+    Main["Main program"]
+    Call["Call subprogram"]
+    Args["Pass arguments"]
+    Params["Parameters receive values"]
+    Body["Subprogram processes data"]
+    Return["Optional return value"]
+    Continue["Main program continues"]
+
+    Main --> Call
+    Call --> Args
+    Args --> Params
+    Params --> Body
+    Body --> Return
+    Return --> Continue
+```
+
+For a procedure, the return-value step may be absent. The main program still continues after the procedure call finishes.
+
+---
+
+## Exam focus
+
+| Command term | What to write |
+|---|---|
+| State | Give a short definition or term. |
+| Identify | Pick out variables, assignments, parameters, arguments, calls, or return values from code. |
+| Outline | Give the main idea plus one relevant detail. |
+| Describe | Explain what a code section or subprogram does step by step. |
+| Explain | Link the concept to readability, testing, reuse, maintenance, or tracing. |
+| Write | Produce a short code or pseudocode fragment. |
+| Trace | Follow execution in order and record changing values. |
+
+For mark levels:
+
+- **1 mark:** name or define one concept, such as parameter or function.
+- **2 marks:** identify two code parts, or define one term with an example.
+- **3 marks:** explain a simple call by matching arguments to parameters.
+- **4 marks:** trace a short function call and record the return value.
+- **6 marks:** explain modular design using readability, reuse, testing, maintenance, parameters, and return values.
+
+Avoid vague answers such as:
+
+```text
+function does something
+procedure is code
+parameter is input
+```
+
+Better answers mention whether a value is returned, which argument is passed, and how the subprogram fits the scenario.
+
+---
+
+## Reusable mark-scheme style phrases
+
+- "A subprogram is a named block of code that performs a specific task."
+- "A procedure performs an action but does not usually return a value."
+- "A function returns a value to the part of the program that called it."
+- "A parameter is a placeholder used in the subprogram definition."
+- "An argument is the actual value passed into the subprogram call."
+- "Local variables are only accessible within the subprogram where they are declared."
+- "Modular programming improves readability, reuse, testing, and maintenance."
+- "A returned value may be stored, printed, or used in another expression."
+
+---
+
+## Common mistakes table
+
+| Mistake | Why it is wrong | Better approach |
+|---|---|---|
+| Confusing procedure and function | A function returns a value; a procedure usually performs an action | Check whether the call produces a value |
+| Confusing parameter and argument | Parameter is in the definition; argument is in the call | Match call values to definition names |
+| Forgetting to return a value from a function | The calling code expects a result | Use `return` for the calculated value |
+| Using a returned value but not storing it | The result may be lost | Store, print, or use the returned value |
+| Assuming local variables can be used everywhere | Local variables only exist inside their subprogram | Check scope before using a variable |
+| Overusing global variables | Many parts of the program may change the same value | Prefer parameters and local variables where suitable |
+| Tracing the subprogram before knowing the arguments | Parameter values are unknown until the call | Start from main and pass arguments first |
+| Not returning to the main program after a function call | Execution continues after the call | Record return value, then continue in main |
+| Mixing up assignment and comparison | `=` stores a value; `==` compares values in Java | Read assignment and condition statements carefully |
+
+---
+
+## Quick-check questions with short answers
+
+1. What is a variable?  
+   **Answer:** A named storage location for a value.
+
+2. What is assignment?  
+   **Answer:** Storing a value in a variable.
+
+3. What is sequence?  
+   **Answer:** Executing statements in order.
+
+4. What is selection?  
+   **Answer:** Choosing a path based on a condition.
+
+5. What is iteration?  
+   **Answer:** Repeating code using a loop.
+
+6. What is a subprogram?  
+   **Answer:** A named block of code that performs a specific task.
+
+7. What is the main difference between a procedure and a function?  
+   **Answer:** A function returns a value; a procedure usually does not.
+
+8. What is a parameter?  
+   **Answer:** A placeholder used in a subprogram definition.
+
+9. What is an argument?  
+   **Answer:** The actual value passed into a subprogram call.
+
+10. Why is modular programming useful?  
+    **Answer:** It improves readability, reuse, testing, and maintenance.
+
+---
+
+## Exam-style practice: programming basics and subprograms
+
+### Question A [6 marks]
+
+Compare procedures and functions.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A procedure is a named block of code that performs an action but does not usually return a value. For example, a procedure may display a menu or print a report. A function is a named block of code that returns a value to the part of the program that called it. For example, a function may calculate an average and return it. A function call is often used in an assignment, output statement, or expression, while a procedure call is often used as a statement.
+
+</details>
+
+---
+
+### Question B [6 marks]
+
+Trace the code and state the output.
+
+```java
+public static int addBonus(int score, int bonus) {
+    int total = score + bonus;
+    return total;
+}
+
+public static void main(String[] args) {
+    int mark = 70;
+    int result = addBonus(mark, 5);
+    System.out.println(result);
+}
+```
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+The main program starts with `mark = 70`. The function call is `addBonus(mark, 5)`, so the arguments are `70` and `5`. These are passed to the parameters `score` and `bonus`. Inside the function, `total = score + bonus`, so `total = 75`. The function returns `75`, which is stored in `result`. The output is:
+
+```text
+75
+```
+
+</details>
+
+---
+
+### Question C [6 marks]
+
+A school attendance program has one long block of code for input, validation, calculation, and printing reports. Explain why using subprograms could improve maintainability and testing.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Using subprograms would split the long program into smaller named parts, such as input attendance, validate data, calculate absence totals, and print reports. This improves readability because each subprogram has a clear purpose. It improves testing because each part can be tested separately with known inputs and expected outputs. It improves reuse because the same validation or report procedure can be called in different places. It improves maintenance because changes can be made to one subprogram instead of searching through one large block of code.
+
+</details>
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
