@@ -1,5 +1,385 @@
 ﻿# Input and Output
 
+## Start here
+
+**Input** brings data into a program. **Output** sends information, messages, or results out of a program. A useful program often follows this pattern: ask the user for data, store the **user input** in a **variable**, process it, then **display** or **print** the result.
+
+本页重点是：读懂程序如何接收输入、把输入赋值给变量、按顺序处理变量，并输出准确的信息。考试中要特别注意 prompt、input value、variable、assignment 和 exact output text 的区别。
+
+Core keywords for this page:
+
+```text
+input, output, prompt, user input, variable, assignment, display, print, validation, error message
+```
+
+::: tip Core idea
+A prompt is not the user's input. A prompt is the message asking for input. The input value is what the user enters and the program stores.
+:::
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- define **input** and **output**
+- identify input and output statements in code or pseudocode
+- explain why prompts are useful
+- store user input in variables
+- distinguish input data from an output result
+- trace programs involving input, assignment, processing, and output
+- explain basic validation and error message ideas without writing a full validation system
+
+---
+
+## Key terms for input and output
+
+| Term | Simple Chinese explanation | English mark-scheme style phrase | Small example |
+|---|---|---|---|
+| Input | 输入；进入程序的数据，可以来自用户、文件或传感器。 | Input allows data to be entered into a program. | User enters `16` for age. |
+| Output | 输出；程序显示给用户的信息或结果。 | Output displays information or results to the user. | Program displays `"Average: 77.5"`. |
+| Prompt | 提示语；告诉用户应该输入什么。 | A prompt tells the user what data should be entered. | `"Enter age as a whole number:"` |
+| User input | 用户实际输入的值。 | User input is the value entered by the user during program execution. | The user types `80`. |
+| Display / print | 显示/打印；把文字或变量值输出到屏幕。 | Display or print sends information from the program to the user. | `OUTPUT total` or `System.out.println(total)` |
+| Assignment from input | 把输入值赋给变量，之后程序才能使用它。 | User input is stored in a variable so it can be processed later. | `INPUT mark` stores the value in `mark`. |
+| Validation | 验证；检查输入是否合理或符合规则。 | Validation checks whether input meets defined rules before it is accepted. | Check that a mark is between `0` and `100`. |
+| Error message | 错误信息；告诉用户输入为什么不被接受。 | An error message explains why the input was not accepted and helps the user correct it. | `"Mark must be between 0 and 100."` |
+| Input data type | 输入数据类型；程序期望输入是整数、小数、字符串等。 | The input data type should match how the value will be stored and processed. | Age uses integer; full name uses string. |
+| Output formatting | 输出格式；让结果带有清楚标签、空格和单位。 | Output formatting makes displayed results clear and readable. | `"Total price: $12.50"` |
+
+---
+
+## Input, process, output pattern
+
+Many short programming questions follow the **input-process-output** pattern.
+
+| Stage | Purpose | Example: total price |
+|---|---|---|
+| Input | Collect values needed by the program. | Input `quantity` and `price`. |
+| Process | Perform calculation or decision. | `total = quantity * price` |
+| Output | Display the result or message. | Output `"Total price: " + total` |
+
+IB pseudocode example:
+
+```text
+OUTPUT "Enter quantity"
+INPUT quantity
+
+OUTPUT "Enter price"
+INPUT price
+
+total = quantity * price
+
+OUTPUT "Total price: ", total
+```
+
+The input values are not the final answer. They are the data used to calculate the output result.
+
+---
+
+## Input vs output
+
+| Feature | Input | Output |
+|---|---|---|
+| Direction of data flow | From user/source into the program | From program to user/screen |
+| Purpose | Collect data for processing | Show messages, results, or feedback |
+| Common statement | `INPUT age`, `input.nextInt()` | `OUTPUT age`, `System.out.println(age)` |
+| Example | User enters `15` | Program displays `"Child ticket"` |
+| Common exam phrase | Input allows data to be entered into a program. | Output displays information or results to the user. |
+| Common mistake | Confusing the prompt with the value entered | Forgetting exact labels, spaces, or message text |
+
+---
+
+## Prompts
+
+A **prompt** tells the user what to enter. Clear prompts reduce input mistakes because the user knows the expected value, format, or range.
+
+| Poor prompt | Improved prompt | Why it is better |
+|---|---|---|
+| `Enter:` | `Enter your age as a whole number:` | Says what value and type are expected. |
+| `Input mark:` | `Enter a mark from 0 to 100:` | Includes the valid range. |
+| `Name:` | `Enter your full name:` | Makes clear that spaces may be included. |
+| `Number:` | `Enter the number of tickets:` | Gives the meaning of the number. |
+
+In a trace question, prompt text is output. The user's typed value is input.
+
+---
+
+## Storing input in variables
+
+Input must usually be assigned to a variable before the program can use it later. The variable name should make the purpose of the input clear.
+
+```text
+OUTPUT "Enter score"
+INPUT score
+bonusScore = score + 5
+OUTPUT bonusScore
+```
+
+In Java, input may need the correct Scanner method or conversion before arithmetic:
+
+```java
+System.out.print("Enter score: ");
+int score = input.nextInt();
+
+int bonusScore = score + 5;
+System.out.println("Bonus score: " + bonusScore);
+```
+
+If input arrives as text, it may need conversion before calculation. This connects to choosing suitable data types: text input such as `"82"` is not the same as the integer `82`.
+
+---
+
+## Validation and error messages
+
+**Validation** checks whether input is reasonable or allowed before it is accepted. An **error message** helps the user correct invalid input.
+
+Example:
+
+```text
+IF mark < 0 OR mark > 100 THEN
+    OUTPUT "Error: mark must be between 0 and 100"
+END IF
+```
+
+Keep the idea simple for this page:
+
+- validation checks a rule
+- an error message explains the problem
+- the program should not silently accept unreasonable input
+
+For more detail, connect this idea to [Testing and Debugging](./testing-debugging), where test data and expected results are used to check program behaviour.
+
+---
+
+## Code-reading pattern for input and output
+
+When tracing input/output code:
+
+1. Write down the given input values first.
+2. Store each input into the correct variable.
+3. Process statements in order.
+4. Update variables after assignments.
+5. Record exact output messages, including labels and spaces.
+
+Trace example:
+
+```text
+Given input values:
+name = "Lina"
+score = 72
+```
+
+```text
+OUTPUT "Enter name"
+INPUT name
+OUTPUT "Enter score"
+INPUT score
+newScore = score + 5
+OUTPUT name, " new score is ", newScore
+```
+
+Trace:
+
+| Step | Action | Variable state / output |
+|---|---|---|
+| 1 | Output prompt | `Enter name` |
+| 2 | Input name | `name = "Lina"` |
+| 3 | Output prompt | `Enter score` |
+| 4 | Input score | `score = 72` |
+| 5 | Assignment | `newScore = 77` |
+| 6 | Output result | `Lina new score is 77` |
+
+Answer output:
+
+```text
+Enter name
+Enter score
+Lina new score is 77
+```
+
+---
+
+## Input-output workflow
+
+```mermaid
+flowchart TD
+    A["User"] --> B["Prompt asks what to enter"]
+    B --> C["Input value"]
+    C --> D["Store in variable"]
+    D --> E["Processing / calculation / decision"]
+    E --> F["Output message or result"]
+    F --> A
+```
+
+---
+
+## Exam focus
+
+Command terms you may see:
+
+| Command term | What to write |
+|---|---|
+| State | Give a short definition or statement, such as what input means. |
+| Identify | Pick out input, processing, or output statements from code. |
+| Outline | Give the main purpose and one brief example. |
+| Describe | Explain how input/output works in a short program. |
+| Explain | Link data flow, variables, prompts, validation, and program behaviour. |
+| Trace | Follow the program using given input values and record exact output. |
+| Write | Produce pseudocode or code with prompts, input, processing, and output. |
+
+How much detail is usually needed:
+
+| Marks | What a strong answer includes |
+|---:|---|
+| 1 mark | Correct term or statement, such as `INPUT score`. |
+| 2 marks | Term plus purpose, such as input stores a user value in a variable. |
+| 3 marks | Input, processing, and output identified with a short reason. |
+| 4 marks | Clear explanation using variables, prompts, and displayed results. |
+| 6 marks | Full scenario answer covering prompts, input storage, processing, validation or error messages, and exact output. |
+
+Avoid vague answers such as:
+
+- "input is typing"
+- "output is answer"
+- "print means save"
+
+Better answers explain data flow and program behaviour: input enters the program, output is displayed to the user, and print/display does not store a value by itself.
+
+---
+
+## Common exam mistakes
+
+| Mistake | Why it is a problem | Better answer habit |
+|---|---|---|
+| Forgetting to store input in a variable | The program cannot use the value later. | Show `INPUT variableName` or an assignment from input. |
+| Confusing prompt text with input value | The prompt is output; the user's typed value is input. | Label prompts and input values separately in traces. |
+| Confusing output with returned value | Displaying a value is not the same as returning it from a function. | Say output is shown to the user. |
+| Treating all input as numeric without conversion | Text input cannot always be used directly in arithmetic. | Match input method or conversion to the data type. |
+| Not showing exact output text in trace questions | Marks may depend on exact labels, spaces, and line breaks. | Copy output messages carefully. |
+| Ignoring spaces or labels in output | Output becomes ambiguous or differs from the program. | Include labels such as `"Average: "`. |
+| Forgetting validation or error messages in user-input scenarios | Invalid data may be accepted silently. | Add a rule check and a helpful error message. |
+| Printing before calculating | The result shown may be missing or outdated. | Follow input, process, then output order. |
+
+---
+
+## Reusable mark-scheme style phrases
+
+- **Input allows data to be entered into a program.**
+- **Output displays information or results to the user.**
+- **A prompt tells the user what data should be entered.**
+- **User input is stored in a variable so it can be processed later.**
+- **Validation checks whether input meets defined rules before it is accepted.**
+- **An error message explains why the input was not accepted and helps the user correct it.**
+- **Output should include clear labels so the user understands the result.**
+- **In a trace question, the exact output text should be recorded in order.**
+
+---
+
+## Quick-check questions
+
+1. What is input?
+2. What is output?
+3. What is a prompt?
+4. Why should input usually be stored in a variable?
+5. In `OUTPUT "Enter age"`, is `"Enter age"` input or output?
+6. Why might text input need conversion before arithmetic?
+7. What does validation check?
+8. What should a useful error message do?
+9. Why is exact output important in trace questions?
+10. In input-process-output, what happens during the process stage?
+
+<details>
+<summary>Short answers</summary>
+
+1. Data entered into a program.
+2. Information or results displayed by a program.
+3. A message telling the user what to enter.
+4. So the program can use the value later.
+5. Output, because it is displayed to the user.
+6. Arithmetic needs numeric data, not text.
+7. Whether input meets defined rules.
+8. Explain why input was rejected and help the user correct it.
+9. Marks may depend on labels, spaces, line breaks, and order.
+10. The program calculates, compares, or changes stored values.
+
+</details>
+
+---
+
+## Exam-style practice: input and output
+
+### Question A [5 marks]
+
+Identify the input, processing, and output in this program.
+
+```text
+OUTPUT "Enter number of tickets"
+INPUT tickets
+cost = tickets * 8
+OUTPUT "Total cost: ", cost
+```
+
+<details>
+<summary>Mark scheme</summary>
+
+- Prompt/output: `"Enter number of tickets"`
+- Input: `tickets`
+- Processing: `cost = tickets * 8`
+- Output/result: `"Total cost: ", cost`
+- Explanation: the input value is stored in `tickets`, processed by multiplication, and the result is displayed.
+
+</details>
+
+### Question B [6 marks]
+
+Trace the program when the user enters `3` and then `12.50`.
+
+```text
+OUTPUT "Enter quantity"
+INPUT quantity
+OUTPUT "Enter price"
+INPUT price
+total = quantity * price
+OUTPUT "Total: ", total
+```
+
+<details>
+<summary>Mark scheme</summary>
+
+Variable trace:
+
+| Variable | Value |
+|---|---:|
+| `quantity` | `3` |
+| `price` | `12.50` |
+| `total` | `37.50` |
+
+Exact output:
+
+```text
+Enter quantity
+Enter price
+Total: 37.5
+```
+
+Accept `37.50` if the answer explains two-decimal formatting.
+
+</details>
+
+### Question C [6 marks]
+
+A school program asks students to enter an exam mark. Explain why clear prompts and validation improve the usability and reliability of the program.
+
+<details>
+<summary>Mark scheme</summary>
+
+A clear prompt tells the student what to enter, such as a mark from `0` to `100`, so the user is less likely to enter the wrong type or range of data. Validation checks that the entered mark follows the defined rule before it is accepted. This improves reliability because invalid values such as `-5` or `120` are not processed as normal marks. An error message helps the user understand the problem and correct the input.
+
+</details>
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -294,7 +674,7 @@ Hello
 World
 ```
 
-::: tip Teaching Point
+::: tip Learning tip
 Use `print` when you want the user's input to appear on the same line as the prompt.
 :::
 
