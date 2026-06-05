@@ -217,6 +217,20 @@ A1/A2/A3/A4/B1/B2/B3 的 `index.md` 应尽量包含：
 - A2 troubleshooting or model-choice pages should include a concise workflow near the top, for example device role matching, connectivity vs security diagnosis, or client-server vs peer-to-peer choice.
 - Keep networking explanations at IBDP CS SL level. Do not expand into university-level routing, protocol engineering, or distributed systems theory unless the user explicitly asks.
 
+近期第五批与后续 B2/B3/A1/A2/A3/A4 core 页面优化还应保持这些学生复习结构：
+
+- A1 system and fundamentals pages such as `operating-systems.md`, `control-systems.md`, `cloud-computing.md`, and `logic-gates.md` should keep a clear `Start here`, `Core checklist`, comparison tables, step-by-step workflows, common mistakes, reusable mark-scheme style phrases, quick-check questions, and exam-style questions near the top before the longer existing content.
+- A1 operating system pages should explain the OS as system software and an interface between users, application software, hardware, and resources. Keep functions such as memory management, processor scheduling, file management, device management, user/security management, and error handling at SL level.
+- A1 control system pages should make the sensor-controller-actuator pattern explicit, distinguish monitoring from control, distinguish open-loop from closed-loop, and explain feedback using concrete scenarios such as heating, greenhouse control, traffic lights, automatic doors, washing machines, and hospital monitoring.
+- A1 cloud computing pages should distinguish local computing from cloud computing, explain cloud storage as only one part of cloud computing, compare SaaS/PaaS/IaaS, and include both benefits and risks such as internet dependency, provider availability, privacy, subscription cost, and vendor lock-in.
+- A1 logic gate pages should prioritize truth-table method, gate behaviour, intermediate outputs, circuit-to-expression reading, expression-to-circuit construction, and common traps such as OR vs XOR, NAND/NOR inversion, wrong row counts, and missing intermediate columns. Do not expand into transistor-level digital electronics.
+- A2 security and access pages such as `encryption-vpn-nat.md` should clearly separate encryption, VPN, and NAT: encryption protects data content, VPN creates an encrypted tunnel and requires authentication, and NAT translates private/public IP addresses. Do not imply NAT is encryption or a complete security solution.
+- A3 database fundamentals pages should clarify table/record/field, DBMS role, primary and foreign keys, simple relationships, flat file vs relational database, redundancy, consistency, and data integrity. Do not duplicate too much from ERD, SQL, normalization, or dedicated key pages.
+- A4 machine learning fundamentals pages should explain ML as learning patterns from data, not explicit rules for every case. Keep dataset, feature, label, model, training/testing/validation data, classification, regression, bias, overfitting, and underfitting at SL level without unnecessary maths.
+- B2 programming fundamentals pages such as `programming-basics.md` and `variables.md` should help students trace code in order, distinguish assignment from comparison, track variable updates, identify parameters and arguments, explain return values, and justify modular programming for readability, reuse, testing, and maintenance.
+- B3 OOP pages such as `encapsulation.md` should keep Java-style examples simple and show private attributes, public methods, getters/setters, validation, object state protection, and maintainability. Do not turn B3 core pages into university OOP or HL multi-class extension content.
+- Mermaid diagrams are allowed in student pages when they clarify workflows or relationships. Keep Mermaid syntax simple and VitePress-friendly, use quoted node labels when labels include punctuation, slashes, or line breaks, and do not add local image dependencies for these diagrams.
+
 ## Assessment 规则
 
 Assessment 内容应帮助学生清楚区分 Paper 1、Paper 2 和 IA。
