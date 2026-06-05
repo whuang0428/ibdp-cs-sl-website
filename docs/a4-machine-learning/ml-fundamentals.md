@@ -37,6 +37,148 @@ Machine learning is about systems learning patterns from data. A model is traine
 
 ---
 
+## Start here: machine learning learns patterns from data
+
+**Machine learning** is a way for a computer system to learn patterns from data and use those patterns to make a prediction.
+
+In traditional programming, a programmer writes the rules directly. In machine learning, the system uses **training data** to train a **model**. The model then uses learned **patterns** to make a **prediction**, such as a **classification** category or a **regression** number.
+
+Key idea:
+
+```text
+machine learning = data + training process -> model -> prediction
+```
+
+中文提示：Machine learning 不是 computer 像人一样思考，而是 model 从 data 中学习 pattern，然后对 new data 做 prediction。
+
+---
+
+## Big picture workflow
+
+| Step | What happens | Student-friendly meaning |
+|---:|---|---|
+| 1 | Collect data. | Gather examples related to the problem. |
+| 2 | Clean / preprocess data. | Fix missing, incorrect, duplicate, or unsuitable data. |
+| 3 | Choose features and labels. | Choose inputs and, for supervised learning, the target answer. |
+| 4 | Train the model. | Use training data so the model learns patterns. |
+| 5 | Test / evaluate the model. | Check performance using data not used for training. |
+| 6 | Use the model to make predictions. | Give new input data and receive an output. |
+| 7 | Monitor whether the model remains useful. | Check if data, users, or real-world conditions change. |
+
+---
+
+## ML workflow diagram
+
+```mermaid
+flowchart LR
+    A["Raw data"] --> B["Preprocessing"]
+    B --> C["Features / labels"]
+    C --> D["Training"]
+    D --> E["Model"]
+    E --> F["Testing / evaluation"]
+    F --> G["Prediction"]
+    G --> H["Monitor performance"]
+```
+
+---
+
+## Key terms exam table
+
+| Term | Simple Chinese explanation | Short English mark-scheme phrase | Simple example |
+|---|---|---|---|
+| Dataset | 一组用于机器学习的数据例子 | Collection of data examples used for training, testing, or prediction | A table of student attendance, study hours, and pass/fail result |
+| Training data | 用来训练 model 的数据 | Data used to adjust or build the model | Labelled past emails used to train a spam filter |
+| Testing data | 用来测试 trained model 的 unseen data | Data used to evaluate performance on unseen examples | Emails kept separate to test the spam model |
+| Validation data | 用来选择或调整 model 设置的数据 | Data used to tune or choose a model | A separate set used to choose the best model settings |
+| Feature | 输入变量，model 用它来预测 | Input variable used by the model | Number of bedrooms in house price prediction |
+| Label | 正确答案 / 目标输出 | Target output the model is trained to predict | House sale price or spam/not spam |
+| Model | 训练后用于预测的系统 | Trained system that uses learned patterns to make predictions | A trained spam classifier |
+| Algorithm | 训练或使用 model 的方法 | Method used to train or use a model | Decision tree or regression algorithm |
+| Prediction | model 对新数据给出的输出 | Output produced by a trained model for new data | "Spam" for a new email |
+| Classification | 预测类别 | Predicts a category or class | Cat/dog, spam/not spam, pass/fail |
+| Regression | 预测数值 | Predicts a numerical value | House price or delivery time |
+| Accuracy | 正确预测的比例 | Measure of how often predictions are correct | 90 correct predictions out of 100 |
+| Bias | 数据或 model 中的系统性不公平 / 偏差 | Systematic error or unfairness in data, model, or output | A model works worse for one group |
+| Overfitting | model 太贴合 training data，新数据表现差 | Model learns training data too specifically and performs poorly on new data | Perfect on training emails but poor on new emails |
+| Underfitting | model 太简单，没有学到有用 pattern | Model is too simple to learn useful patterns | Poor results on both training and testing data |
+
+---
+
+## Traditional programming vs machine learning
+
+| Comparison point | Traditional programming | Machine learning |
+|---|---|---|
+| How rules are created | Human programmer writes explicit rules | Model learns patterns from data |
+| Role of data | Data is processed by fixed rules | Data is used to train and evaluate the model |
+| Typical output | Output follows programmed logic | Output is a prediction, classification, recommendation, or decision |
+| Advantage | Clear and predictable when rules are simple | Useful when patterns are complex or hard to write manually |
+| Limitation | Difficult when rules are hidden or too complex | Depends on data quality and may be biased or wrong |
+| Student-friendly example | `if mark >= 50 then Pass` | Spam filter trained on many labelled emails |
+
+---
+
+## Classification vs regression
+
+| Point | Classification | Regression |
+|---|---|---|
+| Expected output type | Category/class | Numerical value |
+| Example input | Email text, sender, links | House size, location, number of rooms |
+| Example output | Spam or not spam | Predicted house price |
+| Common exam wording | "predicts a category" / "classifies into a group" | "predicts a numerical value" / "estimates a number" |
+
+---
+
+## Exam focus
+
+| Command term | What to write | Mark strategy |
+|---|---|---|
+| State | Give a brief correct term or definition | For 2 marks, name the concept and one precise role |
+| Outline | Give the main idea with one example | For 3 marks, add a short scenario link |
+| Describe | Give several key features | For 4 marks, include data, model, training, and prediction where relevant |
+| Explain | Link process and reason | For 5-6 marks, show how data is used to train/evaluate a model and why this matters |
+| Compare | Give clear similarities and differences | Compare traditional programming vs ML, or classification vs regression |
+
+Avoid vague answers such as:
+
+```text
+AI thinks like humans.
+The computer learns by itself.
+More data always means a better model.
+```
+
+Better exam wording:
+
+```text
+Machine learning uses training data to train a model to identify patterns and make predictions on new data. Model quality depends on data quality, not just data quantity.
+```
+
+---
+
+## Reusable mark-scheme phrases
+
+- "Machine learning uses data to train a model to identify patterns and make predictions on new data."
+- "A feature is an input variable used by the model."
+- "A label is the target output the model is trained to predict."
+- "Training data is used to adjust the model."
+- "Testing data is used to evaluate how well the model performs on unseen data."
+- "Classification predicts a category, while regression predicts a numerical value."
+
+---
+
+## Common mistakes
+
+| Mistake | Why it is wrong | Better understanding |
+|---|---|---|
+| Confusing AI and ML | ML is part of AI, not exactly the same thing | AI is broader; ML is one approach using data |
+| Confusing feature and label | Feature is input; label is target output | In house price prediction, size is a feature and price is a label |
+| Confusing training and testing data | Training builds the model; testing evaluates it | Keep testing data separate from training data |
+| Saying testing data is used to train the model | This gives a misleading evaluation | Testing data checks performance on unseen examples |
+| Forgetting that models can be biased | Models can learn bias from data or design | Check data quality and performance across groups |
+| Saying accuracy is the only evaluation measure | Accuracy can hide false positives, false negatives, or unfair performance | Choose metrics based on the scenario |
+| Over-explaining neural networks | Many ML fundamentals questions do not need advanced algorithms | Focus on data, features, labels, model, training, testing, and prediction |
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -1234,7 +1376,7 @@ A limitation is that the model depends on training data. If the data is biased, 
 
 ---
 
-## 36. Common Misconceptions
+## 36. Detailed misconception table
 
 | Mistake | Why it is wrong | Better understanding |
 |---|---|---|
@@ -1321,6 +1463,23 @@ Why can biased training data be a problem?
 The model may learn biased patterns from the data and make unfair or inaccurate predictions for some groups.
 
 </details>
+
+---
+
+## Quick-check questions with short answers
+
+| Question | Short answer |
+|---|---|
+| What is machine learning? | A method where a model learns patterns from data to make predictions |
+| What is a model? | A trained system that uses learned patterns |
+| What is training data used for? | To train or adjust the model |
+| What is testing data used for? | To evaluate the trained model on unseen examples |
+| What is a feature? | An input variable used by the model |
+| What is a label? | The target output the model is trained to predict |
+| What does classification predict? | A category or class |
+| What does regression predict? | A numerical value |
+| What is overfitting? | The model learns training data too specifically and performs poorly on new data |
+| Why can biased data be a problem? | The model may learn biased patterns and make unfair predictions |
 
 ---
 
@@ -1430,6 +1589,45 @@ Explain two limitations or risks of using machine learning in decision-making.
 <summary>Mark Scheme Style Answer</summary>
 
 One limitation is that the model depends on training data. If the data is biased, incomplete, outdated, or unrepresentative, the model may make inaccurate or unfair predictions. Another risk is that some models are difficult to explain, so users may not understand why a decision was made. ML predictions can also be wrong, so high-risk decisions may need human oversight, monitoring, and ethical review.
+
+</details>
+
+---
+
+### Question 6 [6 marks]
+
+Explain the basic machine learning workflow for a spam email classifier.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Relevant email data is collected, such as past email text, senders, links, and attachments. The data is cleaned or preprocessed to remove errors or unsuitable examples. Features such as keywords, sender address, number of links, and attachment presence are selected, and labels such as spam or not spam are used for supervised learning. Training data is used to train a model to identify patterns. Testing data is used to evaluate how well the model performs on unseen emails. The trained model can then predict whether a new email is spam, and performance should be monitored over time.
+
+</details>
+
+---
+
+### Question 7 [6 marks]
+
+Compare traditional programming and machine learning using a student pass/fail example.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+In traditional programming, a programmer writes explicit rules, such as `if mark >= 50 then pass`. The program follows those rules directly. In machine learning, a model is trained using data, such as past student attendance, study hours, previous scores, and pass/fail labels. The model learns patterns from the examples and uses those patterns to predict the result for a new student. Traditional programming is clearer when the rule is simple, but machine learning can be useful when the pattern is complex. Machine learning depends on data quality and may make incorrect or biased predictions.
+
+</details>
+
+---
+
+### Question 8 [6 marks]
+
+A model predicts whether a student is at risk of failing using attendance, missing assignments, previous test scores, and past final result. Identify the features, label, training data, and testing data.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+The features are the input variables used by the model, such as attendance, missing assignments, and previous test scores. The label is the target output, such as whether the student failed or did not fail in the past data. Training data is the set of past student examples used to train or adjust the model. Testing data is a separate set of past student examples not used for training, used to evaluate how well the model performs on unseen data. The testing data should not be used to train the model, because that would make the evaluation misleading.
 
 </details>
 
