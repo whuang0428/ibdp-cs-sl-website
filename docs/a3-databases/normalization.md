@@ -36,6 +36,97 @@ Normalization is a design process. It helps split data into well-structured rela
 
 ---
 
+## Start here: normalization reduces repeated data
+
+Normalization is used to organize data into well-structured tables.
+
+The goal is to reduce duplicated data and avoid update, insert, and delete problems.
+
+Learn normalization as a step-by-step design process, not only as definitions of 1NF, 2NF, and 3NF. In exam answers, explain both what changes in the table design and why the change improves the database.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain why normalization is used
+- identify repeated data
+- explain data redundancy
+- describe update, insert, and delete anomalies
+- explain the purpose of 1NF, 2NF, and 3NF at a simple level
+- identify when a table should be split
+- use primary keys and foreign keys to link normalized tables
+- explain how normalization improves database design
+
+---
+
+## Normalization workflow
+
+Use this route when you are given a messy database table:
+
+| Step | What to do | Why it matters |
+|---:|---|---|
+| 1 | Start with the unnormalized table. | Look at the data before deciding what to split. |
+| 2 | Check whether each field contains only one value. | Fields with several values are harder to search and update. |
+| 3 | Remove repeating groups to reach 1NF. | Avoid fields such as `Course1`, `Course2`, and `Course3`. |
+| 4 | Check whether non-key fields depend on the whole primary key. | This is important when the key is made from more than one field. |
+| 5 | Remove partial dependencies to reach 2NF. | Move data that depends on only part of a composite key. |
+| 6 | Check whether non-key fields depend on other non-key fields. | This helps find transitive dependencies. |
+| 7 | Remove transitive dependencies to reach 3NF. | Store the dependent data in its own table. |
+| 8 | Add primary keys and foreign keys to keep tables linked. | Splitting tables must not lose the relationships. |
+| 9 | Check that the new tables reduce redundancy and anomalies. | The design should be better, not just more complicated. |
+
+---
+
+## Normal forms quick table
+
+| Normal form | Main idea | What to check |
+|---|---|---|
+| 1NF | each field should hold one value | no repeating groups or multiple values in one field |
+| 2NF | non-key fields depend on the whole key | no partial dependency on part of a composite key |
+| 3NF | non-key fields depend only on the key | no transitive dependency between non-key fields |
+
+---
+
+## Common anomalies
+
+| Anomaly | What can go wrong | Simple example |
+|---|---|---|
+| Update anomaly | the same data must be changed in many places | changing a teacher's phone number in many records |
+| Insert anomaly | data cannot be added unless unrelated data is also known | cannot add a new course until a student enrols |
+| Delete anomaly | deleting one record accidentally removes useful data | deleting the last student in a course removes course details |
+
+---
+
+## Exam answer pattern
+
+When you meet a normalization or database design question, use this order:
+
+1. Identify repeated or duplicated data.
+2. Identify the problem caused by the design.
+3. Decide which fields belong together.
+4. Split the data into separate tables.
+5. Choose primary keys for the new tables.
+6. Add foreign keys to keep relationships.
+7. Explain how the new design reduces redundancy or anomalies.
+8. Check that the scenario can still be represented.
+
+---
+
+## Common mistakes
+
+- only defining 1NF, 2NF, or 3NF without applying them
+- splitting tables but forgetting primary keys
+- splitting tables but forgetting foreign keys
+- removing duplicated data but losing the relationship between tables
+- confusing a repeating group with repeated records
+- treating all repeated values as wrong without checking the scenario
+- not explaining why the new design is better
+- making too many tiny tables without a clear reason
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -495,6 +586,8 @@ each record can be uniquely identified
 
 ### Atomic Value
 
+Core example: a field that stores several course names in one cell is not atomic.
+
 An atomic value is one single value.
 
 Poor:
@@ -527,7 +620,7 @@ Enrollment(StudentID, CourseID)
 
 Repeating groups are repeated similar fields in the same table.
 
-### Poor Example
+### Core example: repeated course fields
 
 | StudentID | StudentName | Course1 | Course2 | Course3 |
 |---:|---|---|---|---|
@@ -562,7 +655,7 @@ Enrollment(StudentID, CourseID)
 
 A non-atomic field stores multiple pieces of data in one field.
 
-### Poor Example
+### Useful extra example: splitting stored details
 
 | StudentID | FullName | Address |
 |---:|---|---|
@@ -594,7 +687,7 @@ and every non-key field depends on the whole primary key
 
 2NF mainly matters when a table has a composite key.
 
-### Example Poor Table
+### Core example: composite key
 
 | StudentID | CourseID | StudentName | CourseName | FinalGrade |
 |---:|---|---|---|---|
@@ -682,7 +775,7 @@ it is already in 2NF
 and non-key fields do not depend on other non-key fields
 ```
 
-### Example Poor Table
+### Core example: tutor details
 
 | StudentID | StudentName | TutorID | TutorName | TutorEmail |
 |---:|---|---:|---|---|
@@ -781,6 +874,8 @@ avoid repeating groups and duplicated data
 
 ## 22. Worked Example: Student Course Table
 
+Core example: use this first when revising how to split student, course, and teacher data.
+
 ### Poor Table
 
 | StudentID | StudentName | CourseID | CourseName | TeacherName |
@@ -821,6 +916,8 @@ Course.TeacherID → Teacher.TeacherID
 
 ## 23. Worked Example: Library Loan Table
 
+Core example: this is a clear anomaly example for repeated member and book details.
+
 ### Poor Table
 
 | LoanID | MemberName | MemberEmail | BookTitle | Author | LoanDate |
@@ -857,6 +954,8 @@ Loan.BookID → Book.BookID
 
 ## 24. Worked Example: Online Shop
 
+Useful extra example: this shows how a linking table can store quantities in an order.
+
 ### Poor Table
 
 | OrderID | CustomerName | CustomerEmail | ProductName | ProductPrice | Quantity |
@@ -892,6 +991,8 @@ OrderItem(OrderID, ProductID, Quantity)
 
 ## 25. Worked Example: Hospital Appointment Table
 
+Useful extra example: this shows why repeated staff or department details can cause update problems.
+
 ### Poor Table
 
 | AppointmentID | PatientName | PatientDOB | DoctorName | DoctorDepartment | AppointmentDate |
@@ -921,6 +1022,8 @@ Appointment(AppointmentID, PatientID, DoctorID, AppointmentDate, AppointmentTime
 ---
 
 ## 26. Worked Example: Game Match Table
+
+Useful extra example: this shows how normalization can avoid fixed fields such as Player1 and Player2.
 
 ### Poor Table
 
@@ -1128,7 +1231,7 @@ This is a [update/insertion/deletion] anomaly because [explain what operation ca
 
 ---
 
-## 33. Common Mistakes
+## 33. Detailed misconception table
 
 | Mistake | Why it is wrong | Better understanding |
 |---|---|---|
