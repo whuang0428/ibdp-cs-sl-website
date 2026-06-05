@@ -36,6 +36,251 @@ A control system is not just a program. It connects the digital computer system 
 
 ---
 
+## Start here: sensors input, controller decides, actuator acts
+
+A **control system** is a computer-based system that uses input data to control something in the physical world. It usually takes data from **sensors**, processes the data using a **processor/controller**, and controls output through **actuators**.
+
+The core pattern is:
+
+```text
+sensor input -> controller processing -> actuator output/action
+```
+
+If the system uses **feedback**, it checks the current result and adjusts again. Core keywords for this page are **control system**, **sensor**, **actuator**, **input**, **output**, **processor/controller**, **feedback**, **monitoring**, and **embedded system**.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- define a **control system**
+- identify sensors, processors/controllers, and actuators in a scenario
+- distinguish **monitoring** from **control**
+- explain **open-loop** and **closed-loop** systems at a simple level
+- explain **feedback**
+- apply control systems to heating, traffic lights, automatic doors, greenhouse systems, washing machines, and hospital monitoring
+
+---
+
+## Key terms exam table
+
+| Term | 简单中文解释 | English mark-scheme phrase | Simple example |
+|---|---|---|---|
+| Control system | 根据输入自动控制物理过程的系统 | A system that automatically changes output based on input data | Thermostat controls heating |
+| Sensor | 检测环境数据的输入设备 | An input device that collects data from the environment | Temperature sensor reads room temperature |
+| Actuator | 执行物理动作的输出设备 | An output device that carries out a physical action | Motor opens an automatic door |
+| Input | 系统接收的数据 | Data received by the system | Light level from a light sensor |
+| Output | 系统产生的信号或动作 | Signal or action produced by the system | Heater turns on |
+| Processor / controller | 处理输入并作决定的部件 | Processes sensor data and decides the output | Microcontroller compares temperature with target |
+| Feedback | 输出结果或当前状态返回系统 | Information about current state used to adjust output | New temperature reading after heating |
+| Open-loop system | 不使用反馈的控制系统 | Control system that does not use feedback | Timed sprinkler runs for 10 minutes |
+| Closed-loop system | 使用反馈调整输出的控制系统 | Control system that uses feedback to adjust output | Heating turns off when target temperature is reached |
+| Monitoring system | 只记录或显示数据，不自动控制 | Records or displays data without automatically controlling the process | Hospital monitor displays heart rate |
+| Embedded system | 嵌入在设备中的专用计算机系统 | A computer system built into a larger device for a specific purpose | Washing machine controller |
+
+---
+
+## Monitoring system vs control system
+
+| Point | Monitoring system | Control system |
+|---|---|---|
+| Purpose | Observe, record, or display data | Automatically change or control a process |
+| Input | Sensor readings or data | Sensor readings or data |
+| Processing | Checks, stores, displays, or alerts | Compares data with rules, targets, or thresholds |
+| Output/action | Usually display, log, report, or alarm | Sends signal to actuator for physical action |
+| Human involvement | Human often decides what to do next | System can act automatically |
+| Example | Hospital heart-rate monitor alerts nurse | Greenhouse turns fan on when too hot |
+| Common exam phrase | "A monitoring system records or displays data but does not automatically control the process." | "A control system automatically changes output based on input data." |
+
+---
+
+## Open-loop vs closed-loop system
+
+| Point | Open-loop system | Closed-loop system |
+|---|---|---|
+| Feedback used? | No feedback | Uses feedback |
+| Accuracy | Less accurate if conditions change | More accurate because it checks current state |
+| Complexity | Simpler | More complex |
+| Cost | Usually cheaper | Usually more expensive because sensors/feedback are needed |
+| Example | Timed traffic light or timed sprinkler | Thermostat or greenhouse temperature control |
+| Common exam phrase | "An open-loop system follows preset instructions and does not check the result." | "A closed-loop system uses feedback to adjust its output." |
+
+---
+
+## Step-by-step scenario: greenhouse temperature control
+
+A greenhouse needs to keep temperature near a target value, such as `25°C`.
+
+1. The **temperature sensor** detects the current greenhouse temperature.
+2. The **controller** compares the sensor value with the target temperature.
+3. If the temperature is too high, the controller sends a signal to an **actuator**, such as a fan or vent motor.
+4. The actuator performs a physical action, such as turning the fan on or opening the vent.
+5. The sensor keeps measuring the temperature.
+6. The new sensor reading is **feedback**, so the controller can adjust again.
+
+This is a **closed-loop control system** because the system uses feedback to decide whether the output should change.
+
+---
+
+## Control system feedback diagram
+
+```mermaid
+flowchart LR
+    Env["Environment / system being controlled<br/>greenhouse temperature"]
+    Sensor["Sensor<br/>measures temperature"]
+    Controller["Controller / processor<br/>compares with target"]
+    Decision{"Temperature<br/>too high?"}
+    Actuator["Actuator<br/>fan or vent motor"]
+    Action["Output action<br/>cool greenhouse"]
+
+    Env --> Sensor
+    Sensor --> Controller
+    Controller --> Decision
+    Decision -->|"yes"| Actuator
+    Actuator --> Action
+    Action --> Env
+    Decision -->|"no"| Env
+```
+
+The arrow back to the environment shows the feedback loop: the system measures the result again and can adjust its next output.
+
+---
+
+## Exam focus
+
+| Command term | What to write |
+|---|---|
+| State | Give the correct term or a short definition. |
+| Identify | Pick out the sensor, controller, actuator, input, or output from a scenario. |
+| Outline | Give the main idea plus one relevant detail. |
+| Describe | Explain the role of each component in the system. |
+| Explain | Link sensor input, controller decision, actuator output, and feedback to the scenario. |
+| Compare | Give paired differences, such as monitoring vs control or open-loop vs closed-loop. |
+
+For mark levels:
+
+- **1 mark:** name one correct component or definition.
+- **2 marks:** identify two components or give a definition plus example.
+- **3 marks:** describe sensor, controller, and actuator roles.
+- **4 marks:** explain a sequence using input, processing, and output.
+- **6 marks:** include scenario-specific sensor data, controller comparison, actuator action, feedback, and whether the system is open-loop or closed-loop.
+
+Avoid vague answers such as:
+
+```text
+the sensor controls it
+the computer checks it
+feedback means user feedback
+```
+
+Better answers explain each component's role: the sensor collects data, the controller processes data and decides, and the actuator performs the physical action.
+
+---
+
+## Reusable mark-scheme style phrases
+
+- "A sensor collects data from the environment."
+- "A controller processes the sensor data and makes a decision."
+- "An actuator carries out a physical action based on the controller's output."
+- "A control system automatically changes the output of a system based on input data."
+- "A monitoring system records or displays data but does not automatically control the process."
+- "A closed-loop system uses feedback to adjust its output."
+- "An open-loop system follows preset instructions and does not use feedback."
+- "Feedback allows the controller to compare the current state with the target and adjust again."
+
+---
+
+## Common mistakes table
+
+| Mistake | Why it is wrong | Better understanding |
+|---|---|---|
+| Confusing sensor and actuator | Sensor is input; actuator is output/action | Temperature sensor reads data; heater changes temperature |
+| Saying sensors output physical actions | Sensors collect data | Actuators perform physical actions |
+| Saying actuators collect data | Actuators receive control signals | Sensors collect data from the environment |
+| Confusing monitoring with control | Monitoring may only display or record data | Control automatically changes output |
+| Forgetting the processor/controller | The system needs a component to make decisions | Sensor data must be processed before output |
+| Forgetting feedback in closed-loop systems | Closed-loop depends on checking the current state again | Feedback is sensor data about the result/current state |
+| Treating all control systems as AI | Many use simple rules and thresholds | A thermostat can use basic comparison logic |
+| Not linking the answer to the scenario | Generic answers lose application marks | Name the exact sensor, actuator, and action in the scenario |
+
+---
+
+## Quick-check questions with short answers
+
+1. What is a control system?  
+   **Answer:** A system that uses input data to automatically control a physical process or device.
+
+2. What does a sensor do?  
+   **Answer:** It collects data from the environment.
+
+3. What does an actuator do?  
+   **Answer:** It carries out a physical action.
+
+4. What does the controller do?  
+   **Answer:** It processes sensor data and decides the output.
+
+5. What is feedback?  
+   **Answer:** Information about the current state or result sent back into the system.
+
+6. What is an open-loop system?  
+   **Answer:** A system that does not use feedback.
+
+7. What is a closed-loop system?  
+   **Answer:** A system that uses feedback to adjust output.
+
+8. What is the difference between monitoring and control?  
+   **Answer:** Monitoring records or displays data; control automatically changes output.
+
+9. Give one actuator in an automatic door.  
+   **Answer:** A motor that opens or closes the door.
+
+10. Give one sensor in a greenhouse system.  
+    **Answer:** Temperature sensor, humidity sensor, light sensor, or soil moisture sensor.
+
+---
+
+## Exam-style practice: control systems
+
+### Question A [6 marks]
+
+An automatic door opens when a person approaches. Identify a suitable sensor, controller, actuator, input, and output in this system.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A suitable sensor is a motion or proximity sensor. The input is data showing that a person is near the door. The controller or microprocessor receives the sensor data and decides whether the door should open. The actuator is a motor connected to the door mechanism. The output is the physical action of opening the door. The system may also use feedback to check whether the door is fully open or whether someone is still in the doorway.
+
+</details>
+
+---
+
+### Question B [6 marks]
+
+Compare a monitoring system and a control system using a hospital example.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A monitoring system records or displays data but does not automatically control the process. For example, a hospital monitor may display a patient's heart rate and sound an alarm if it is too high or too low, so a nurse or doctor decides what to do. A control system automatically changes output based on input data. For example, an automatic infusion system could use sensor data and a controller to adjust a pump. Both systems use input data, but a control system sends output to an actuator to perform an action automatically.
+
+</details>
+
+---
+
+### Question C [6 marks]
+
+Explain how a closed-loop greenhouse temperature control system uses feedback.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A temperature sensor measures the current greenhouse temperature and sends the value to the controller. The controller compares the reading with a target or threshold, such as 25°C. If the temperature is too high, the controller sends a signal to an actuator, such as a fan or vent motor. The actuator performs the physical action to cool the greenhouse. The sensor continues measuring the temperature after the action, and this new reading is feedback. The controller uses the feedback to decide whether to keep the fan on, turn it off, or adjust again.
+
+</details>
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
