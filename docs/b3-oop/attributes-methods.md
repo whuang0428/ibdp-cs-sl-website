@@ -34,6 +34,90 @@ A class usually contains **attributes** and **methods**. Attributes describe wha
 
 ---
 
+## Start here: attributes store data, methods do actions
+
+An attribute stores data about an object.
+
+A method is an action or behaviour that an object can perform.
+
+Parameters give extra information to a method. A return value is data sent back from a method.
+
+Learn how method calls can read or change an object's state. This means tracking the current values stored in the object's attributes before and after each method call.
+
+---
+
+## Attribute vs method
+
+| Idea | Simple meaning | Example |
+|---|---|---|
+| Attribute | data stored inside an object | `name`, `score`, `balance` |
+| Method | action an object can perform | `setScore()`, `getBalance()`, `printDetails()` |
+| Parameter | value passed into a method | `newScore` in `setScore(newScore)` |
+| Return value | value sent back by a method | `getScore()` returns the score |
+| State change | change to an object's stored data | `score` changes from 70 to 85 |
+
+---
+
+## Method-call workflow
+
+Use this route when reading a method call:
+
+| Step | What to do | Why it matters |
+|---:|---|---|
+| 1 | Identify the object. | The object owns the attributes being used. |
+| 2 | Identify the method being called. | The method tells you what action runs. |
+| 3 | Check whether the method has parameters. | Parameters provide extra input values. |
+| 4 | Follow the statements inside the method. | Read the code in order. |
+| 5 | Decide whether an attribute is read or updated. | This tells you whether object state changes. |
+| 6 | Check whether the method returns a value. | Returned values may be stored, printed, or used in a condition. |
+| 7 | Update the object's state if needed. | Keep the current attribute values accurate. |
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain what an attribute is
+- explain what a method is
+- distinguish attributes from methods
+- identify parameters in a method call
+- explain what a return value is
+- trace how a method changes an object's state
+- read simple dot notation
+- explain why methods help control access to object data
+
+---
+
+## Code-reading pattern
+
+When reading attributes and methods code, use this order:
+
+1. Find the class name.
+2. List the attributes.
+3. List the methods.
+4. Find where an object is created.
+5. Track the current values of the object's attributes.
+6. Read method calls in order.
+7. Check parameter values passed into each method.
+8. Update object state after each method call.
+9. Record any returned value if the method returns data.
+
+---
+
+## Common mistakes
+
+- confusing an attribute with a method
+- thinking every method must return a value
+- forgetting that some methods only update object state
+- ignoring parameters passed into a method
+- reading method calls in the wrong order
+- forgetting that one object's state can change while another object's state does not
+- using vague wording like "the method does something" without explaining the action
+- confusing the class definition with one object's actual values
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -168,6 +252,8 @@ When learning attributes and methods, students should understand:
 
 ## 5. Real-life Example: Student Object
 
+Attribute example and method example: this table separates what the object stores from what it can do.
+
 A student object may store data:
 
 ```text
@@ -202,6 +288,8 @@ Attributes and methods keep related data and behaviour together inside the same 
 
 ## 6.1 What is an Attribute?
 
+Attribute example: `name` and `mark` are stored data for each `Student` object.
+
 An attribute is a variable that belongs to an object.
 
 Example:
@@ -223,6 +311,8 @@ Each Student object has its own copy of these attributes.
 ---
 
 ## 6.2 Object State
+
+State change example: two objects can have different current values even when they come from the same class.
 
 If we create two objects:
 
@@ -252,6 +342,8 @@ Although both objects are created from the same class, their attribute values ar
 
 ## 7.1 What is a Method?
 
+Method example: `displayInfo()` uses object attributes to perform an action.
+
 A method is a block of code that performs an action or returns a value.
 
 Example:
@@ -267,6 +359,8 @@ This method uses the object's attributes `name` and `mark`.
 ---
 
 ## 7.2 Method Call
+
+Code-reading example: dot notation shows which object is asked to run which method.
 
 To run a method, call it using dot notation:
 
@@ -289,6 +383,8 @@ Alice scored 85
 ---
 
 ## 8. Complete Basic Class Example
+
+Code-reading example: read the attributes first, then follow the method calls in `main`.
 
 ### Student.java
 
@@ -359,6 +455,8 @@ Alice scored 90
 
 ## 10. Object State Trace
 
+State change example: this trace shows how repeated method calls update `s1.mark`.
+
 ### Code
 
 ```java
@@ -389,6 +487,8 @@ For object attributes, Java may give default values such as `0` for `int` and `n
 
 ## 11. `void` Methods
 
+Common exam trap: a `void` method can do an action, but it does not send a value back.
+
 A `void` method performs an action but does not return a value.
 
 Example:
@@ -418,6 +518,8 @@ because `displayInfo()` does not return an integer.
 ---
 
 ## 12. Methods with Return Values
+
+Return value example: `hasPassed()` sends a Boolean value back to the calling code.
 
 A method can return a value.
 
@@ -469,6 +571,8 @@ true
 
 ## 13. Parameters and Arguments
 
+Parameter example: `amount` receives the argument value used by `increaseMark`.
+
 A **parameter** is a variable listed in a method definition.
 
 ```java
@@ -495,6 +599,8 @@ Here, `5` is the argument.
 ---
 
 ## 14. Method with Parameter Trace
+
+State change example: the parameter value is used to update the object's `mark` attribute.
 
 ### Code
 
@@ -595,6 +701,8 @@ Fail
 
 ## 17. Method that Changes Object State
 
+State change example: this method directly changes the stored value of `mark`.
+
 Some methods change attribute values.
 
 ```java
@@ -626,6 +734,8 @@ Some methods only return or output information. Other methods change the object'
 ---
 
 ## 18. Method that Does Not Change Object State
+
+Return value example: this method reads `mark` and returns a result without changing the object.
 
 ```java
 public boolean hasPassed() {
@@ -691,7 +801,7 @@ public class Student {
 
 ---
 
-## 20. Common Mistakes
+## 20. Detailed common mistakes table
 
 | Mistake | Why it is a problem | Better habit |
 |---|---|---|
