@@ -48,13 +48,31 @@ Do not just name a device; explain why it is needed.
 
 ## Network device role table
 
-| Device | Main role | Simple exam wording |
-|---|---|---|
-| Switch | connects devices within a LAN and forwards data to the correct device | sends data to the correct device on a local network |
-| Router | connects different networks and forwards packets between them | sends data between networks, such as LAN and internet |
-| Modem | converts signals so a network can connect to an ISP / internet connection | helps connect a local network to an internet service |
-| Wireless access point | allows wireless devices to connect to a wired network | provides Wi-Fi access to a network |
-| Firewall | filters traffic based on rules | helps block unauthorized or unsafe network traffic |
+| Device | Main role | Address used, if relevant | Works mainly | Common exam phrase |
+|---|---|---|---|---|
+| Switch | connects devices within a LAN and forwards data to the correct device | MAC address | inside a LAN | A switch forwards data within a LAN using MAC addresses. |
+| Router | connects different networks and forwards packets between them | IP address and routing table | between networks | A router connects different networks and forwards packets using IP addresses. |
+| Wireless access point / WAP | allows wireless devices to connect to a wired LAN | MAC address for local wireless clients | inside a LAN / WLAN | A WAP provides wireless access to a LAN. |
+| Modem | connects a local network to an ISP service line | not usually the key exam address point | between home/school network and ISP service | A modem connects a local network to an internet service line. |
+| NIC | allows an end device to connect to a network | MAC address | inside the device | A NIC allows a device to send and receive network data. |
+| Firewall | filters traffic based on security rules | IP address, port, protocol, or application rules | at network boundary or on a device | A firewall monitors and filters network traffic according to rules. |
+| Server | provides services or resources to clients | IP address / service name | inside LAN or on the internet | A server provides services such as files, web pages, DNS, DHCP, or authentication. |
+| Hub | older device that broadcasts data to all ports | no intelligent MAC forwarding | inside older LANs | A hub is less efficient than a switch because it broadcasts data to all connected devices. |
+
+---
+
+## Device detail table
+
+| Device | Simple Chinese explanation | English keyword definition | What it connects | How it forwards or controls data | School / hospital / office example | Common exam wording |
+|---|---|---|---|---|---|---|
+| Router | 连接不同网络，例如 LAN 和 internet | Connects different networks and routes packets | LAN to WAN/internet, branch networks, cloud networks | Uses IP addresses and routing tables to choose where packets go next | A school router connects the school LAN to the internet | Router connects different networks and forwards packets using IP addresses |
+| Switch | 连接同一个 LAN 内的设备 | Connects devices inside a LAN | PCs, printers, servers, WAPs inside one LAN | Uses MAC addresses to forward frames to the correct port | A computer lab switch connects 30 PCs and a printer | Switch forwards data within a LAN using MAC addresses |
+| Wireless access point / WAP | 让无线设备接入 LAN | Provides wireless access to a LAN | Laptops, tablets, phones, wireless NICs to the wired LAN | Receives wireless traffic and passes it to the LAN; sends LAN traffic back wirelessly | Hospital tablets connect to the hospital LAN through WAPs | WAP allows wireless devices to connect to a LAN |
+| Modem | 连接 ISP 线路 | Connects to an ISP service line | Local router/network to DSL, cable, fibre terminal, or mobile broadband service | Converts or handles signals needed for the ISP connection | An office modem connects the office router to the ISP service | Modem links the local network to an internet service provider line |
+| NIC | 让设备能够加入网络 | Network interface hardware in a device | Computer/phone/server to wired Ethernet or Wi-Fi | Sends and receives signals and has a MAC address | A desktop PC uses an Ethernet NIC to join the office LAN | NIC allows a device to connect to a network |
+| Firewall | 按规则过滤网络流量 | Filters incoming and outgoing traffic according to rules | Internal LAN and external network, or software on one device | Allows or blocks traffic by rules such as IP address, port, protocol, or application | A school firewall blocks unauthorized access from the internet | Firewall monitors and filters traffic according to rules |
+| Server | 向客户端提供服务或资源 | Provides network services to client devices | Client devices to shared files, web pages, DNS, DHCP, or login services | Responds to client requests and provides the requested service | A school file server stores shared class folders | Server provides services or resources to client devices |
+| Hub | 旧式设备，效率低于 switch | Older basic LAN device that broadcasts traffic | Wired devices in a simple LAN | Sends incoming data to every connected port instead of the correct one | Rare in modern schools; replaced by switches | Hub broadcasts to all devices and is less efficient than a switch |
 
 ---
 
@@ -99,17 +117,54 @@ When answering a network device question, use this order:
 
 ---
 
-## Common mistakes
+## Exam focus
 
-- confusing a switch with a router
-- saying a switch connects a LAN directly to the internet
-- saying a router only sends data inside one LAN
-- confusing a modem with a router
-- saying a WAP is the same as the internet
-- saying a firewall removes all threats
-- naming a device without explaining its role
-- giving a security answer when the scenario is mainly about connectivity
-- giving a connectivity answer when the scenario is mainly about traffic filtering
+| Command term | What to write | Mark strategy |
+|---|---|---|
+| State | Name the device or role briefly | For 2 marks, give the device and one precise role |
+| Outline | Give the main role plus one detail | For 3 marks, add where it works, such as inside LAN or between networks |
+| Describe | Give several connected details | For 4 marks, mention role, address used if relevant, and scenario link |
+| Explain | Link the device to why it solves a problem | For 6 marks, give device role, data/address detail, scenario benefit, and one limitation/security point if relevant |
+| Compare | Give clear differences and similarities | Compare role, address used, location in network, and example |
+
+Avoid vague answers such as:
+
+```text
+router gives internet
+```
+
+Improve it:
+
+```text
+A router connects different networks, such as a school LAN and the internet, and forwards packets using IP addresses and routing tables.
+```
+
+---
+
+## Reusable mark-scheme phrases
+
+- "A switch forwards data within a LAN using MAC addresses."
+- "A router connects different networks and forwards packets using IP addresses."
+- "A firewall monitors and filters network traffic according to rules."
+- "NAT translates private IP addresses to a public IP address."
+- "A DNS server resolves domain names into IP addresses."
+- "A WAP provides wireless access to a LAN."
+- "A NIC allows a device to connect to a network and has a MAC address."
+
+---
+
+## Common mistakes table
+
+| Mistake | Why it is wrong | Better answer |
+|---|---|---|
+| Confusing router and switch | A switch works mainly inside a LAN; a router connects different networks | Switch = LAN/MAC; router = between networks/IP |
+| Saying switch uses IP address instead of MAC address | Switches mainly use MAC addresses to forward frames inside a LAN | Mention MAC address and correct switch port |
+| Saying router only provides Wi-Fi | A home router box may include Wi-Fi, but routing means connecting networks | Router forwards packets between networks using IP addresses |
+| Saying firewall removes viruses | A firewall filters traffic; it does not remove all malware from files/devices | Say it blocks or allows traffic based on rules |
+| Confusing WAP with router | A WAP provides wireless access; a router connects networks | In home devices these roles may be combined |
+| Forgetting server is a role, not only a physical box | A server can be dedicated hardware, a virtual machine, or software/service | Explain what service it provides |
+| Naming a device without explaining its role | Marks often require function and scenario link | State what it connects and how it handles data |
+| Treating hub as modern best choice | Hubs broadcast to all ports and are less efficient | A switch is normally preferred in modern LANs |
 
 ---
 
@@ -124,10 +179,14 @@ When answering a network device question, use this order:
 | Wireless access point | 无线接入点 | Device that allows wireless devices to connect to a wired network |
 | Modem | 调制解调器 | Device that connects a local network to an ISP service |
 | Firewall | 防火墙 | Hardware/software that filters network traffic based on rules |
+| Server | 服务器 | Computer or service that provides resources to client devices |
 | Hub | 集线器 | Basic device that broadcasts data to all connected devices |
 | Repeater | 中继器 | Device that regenerates or extends signals |
 | Bridge | 网桥 | Device that connects network segments |
 | Gateway | 网关 | Device that connects different networks or protocol environments |
+| NAT | 网络地址转换 | Translates private internal IP addresses to a public IP address |
+| DNS server | DNS 服务器 | Server that resolves domain names into IP addresses |
+| DHCP server | DHCP 服务器 | Server that automatically gives IP configuration to devices |
 | Packet | 数据包 | Small unit of data sent across a network |
 | Frame | 帧 | Data unit used on local network links |
 | MAC address | MAC 地址 | Hardware address used for local network delivery |
@@ -291,6 +350,28 @@ flowchart LR
     R --> ISP[Internet]
     FS[File Server] --> SW1
 ```
+
+### Exam network diagram
+
+```mermaid
+flowchart LR
+    subgraph LAN["School LAN"]
+        PC1["Client PC 1"] --- SW["Switch"]
+        PC2["Client PC 2"] --- SW
+        PR["Network printer"] --- SW
+        S["LAN server"] --- SW
+        WAP["Wireless access point"] --- SW
+        L1["Laptop / tablet"] -. "Wi-Fi" .- WAP
+        PH["Phone"] -. "Wi-Fi" .- WAP
+    end
+
+    SW --- FW["Firewall"]
+    FW --- R["Router"]
+    R --- NET["Internet / WAN"]
+    NET --- WEB["External web server"]
+```
+
+In this diagram, client devices and the server are inside the LAN. The WAP lets wireless devices join the LAN. The switch connects LAN devices. The firewall filters traffic between the LAN and the internet. The router connects the LAN to the internet/WAN.
 
 ---
 
@@ -613,11 +694,21 @@ or both
 A firewall can:
 
 ```text
+monitor incoming and outgoing traffic
 block unauthorized traffic
 allow permitted traffic
 filter by IP address, port, protocol, or application
 protect internal network
 log suspicious activity
+```
+
+It applies rules to decide whether traffic should be allowed or blocked. It can be linked to:
+
+```text
+NAT
+access control
+network security
+traffic logging
 ```
 
 ### Firewall example
@@ -662,7 +753,53 @@ A student laptop may also have a software firewall in the operating system.
 
 ---
 
-## 17. Repeater
+## 17. NAT: Network Address Translation
+
+NAT translates private internal IP addresses to a public IP address.
+
+In many home or school networks, many devices use private addresses inside the LAN, such as:
+
+```text
+192.168.x.x
+10.x.x.x
+```
+
+When these devices access the internet, NAT allows them to share one public IP address.
+
+### Why NAT Is Used
+
+```text
+allows many LAN devices to share one public IP address
+helps hide internal private addresses from external networks
+is often performed by a router or firewall
+supports normal internet access from private networks
+```
+
+::: tip Exam Phrase
+NAT translates private IP addresses used inside a LAN to a public IP address used on the internet.
+:::
+
+---
+
+## 18. Servers in a Network
+
+A server provides a service or resource to client devices.
+
+| Server type | Role |
+|---|---|
+| File server | Stores and shares files for users on the network |
+| Web server | Hosts web pages or web applications |
+| DNS server | Resolves domain names into IP addresses |
+| DHCP server | Automatically assigns IP addresses and network settings to devices |
+| Authentication server | Checks user login details and controls access to network resources |
+
+::: tip Exam Phrase
+A server is a role: it provides a service to client devices. It may be a physical computer, a virtual machine, or a software service.
+:::
+
+---
+
+## 19. Repeater
 
 A repeater regenerates or boosts a signal so it can travel further.
 
@@ -686,7 +823,7 @@ Repeaters can extend range, but they do not necessarily improve bandwidth or red
 
 ---
 
-## 18. Bridge
+## 20. Bridge
 
 A bridge connects two network segments.
 
@@ -702,7 +839,7 @@ In modern networks, switches have largely replaced many traditional bridge funct
 
 ---
 
-## 19. Gateway
+## 21. Gateway
 
 A gateway connects networks or systems that may use different protocols or environments.
 
@@ -725,7 +862,7 @@ Gateway can mean different things depending on context. In many home networks, t
 
 ---
 
-## 20. Network Devices in a Home Network
+## 22. Network Devices in a Home Network
 
 A home network may use one physical box that combines many roles.
 
@@ -759,7 +896,7 @@ Because the box is often called "the router", but it may perform several functio
 
 ---
 
-## 21. Network Devices in a School Network
+## 23. Network Devices in a School Network
 
 A school network usually separates roles more clearly.
 
@@ -798,7 +935,7 @@ student PC
 
 ---
 
-## 22. Network Devices in Cloud Access
+## 24. Network Devices in Cloud Access
 
 When a user accesses cloud storage:
 
@@ -825,7 +962,7 @@ security systems
 
 ---
 
-## 23. Choosing Network Devices
+## 25. Choosing Network Devices
 
 ### Scenario Table
 
@@ -841,7 +978,7 @@ security systems
 
 ---
 
-## 24. Performance Considerations
+## 26. Performance Considerations
 
 Network device choice can affect performance.
 
@@ -865,7 +1002,7 @@ A slow switch or overloaded access point can reduce network performance even if 
 
 ---
 
-## 25. Security Considerations
+## 27. Security Considerations
 
 Network devices can improve or weaken security.
 
@@ -888,7 +1025,7 @@ If a school leaves a router with default password, attackers may change settings
 
 ---
 
-## 26. Troubleshooting example: Using Device Roles
+## 28. Troubleshooting example: Using Device Roles
 
 Understanding device roles helps identify problems.
 
@@ -903,7 +1040,7 @@ Understanding device roles helps identify problems.
 
 ---
 
-## 27. Common Mistakes
+## 29. Detailed common mistakes table
 
 | Mistake | Why it is wrong | Better understanding |
 |---|---|---|
@@ -920,7 +1057,7 @@ Understanding device roles helps identify problems.
 
 ---
 
-## 28. Guided Practice
+## 30. Guided Practice
 
 ### Practice 1: Device Role
 
@@ -987,7 +1124,24 @@ Because it may combine several functions, such as router, switch, wireless acces
 
 ---
 
-## 29. Independent Practice
+## 31. Quick-check questions with short answers
+
+| Question | Short answer |
+|---|---|
+| What address does a switch mainly use inside a LAN? | MAC address |
+| What address does a router mainly use to forward packets? | IP address |
+| Which device connects different networks? | Router |
+| Which device connects devices inside a LAN? | Switch |
+| Why is a hub less efficient than a switch? | A hub broadcasts to all ports; a switch forwards to the correct port where possible |
+| What does a WAP do? | Provides wireless access to a LAN |
+| What does a NIC do? | Allows a device to connect to a network |
+| What does a firewall do? | Monitors and filters traffic according to rules |
+| What does NAT do? | Translates private internal IP addresses to a public IP address |
+| What does a DNS server do? | Resolves domain names into IP addresses |
+
+---
+
+## 32. Independent Practice
 
 ### Question 1
 
@@ -1031,7 +1185,7 @@ Describe the path data may take when a student laptop accesses a website from sc
 
 ---
 
-## 30. Exam-style Questions
+## 33. Exam-style Questions
 
 ### Question 1 [4 marks]
 
@@ -1072,14 +1226,14 @@ A switch connects devices within the same LAN and mainly forwards data using MAC
 
 ---
 
-### Question 4 [5 marks]
+### Question 4 [6 marks]
 
-Explain the role of a firewall in a school network.
+Explain how a firewall and NAT may be used in a school network connected to the internet.
 
 <details>
 <summary>Mark Scheme Style Answer</summary>
 
-A firewall monitors and filters incoming and outgoing network traffic based on security rules. In a school network, it can block unauthorized external access, restrict access to harmful or inappropriate websites, allow approved traffic, and help protect student and staff data from attacks.
+A firewall monitors and filters incoming and outgoing network traffic based on security rules. In a school network, it can block unauthorized external access, restrict access to harmful or inappropriate websites, and allow approved traffic. NAT translates private internal IP addresses used by school devices into a public IP address for internet communication. This allows many devices in the LAN to share one public IP address and helps hide internal addresses from external networks.
 
 </details>
 
@@ -1098,7 +1252,7 @@ A switch can connect wired classroom computers and printers within the LAN. Wire
 
 ---
 
-## 31. Practice task
+## 34. Practice task
 ### Activity 1: Device Matching
 
 Students match devices to roles:
@@ -1149,7 +1303,7 @@ Students identify possible device-related causes.
 
 ---
 
-## 32. Independent practice
+## 35. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between switch, router, modem, and wireless access point.
@@ -1202,7 +1356,7 @@ Explain why a firewall is useful but is not enough by itself to fully secure a n
 
 ---
 
-## 33. One-page Revision Summary
+## 36. One-page Revision Summary
 
 | Device | Main Role |
 |---|---|
@@ -1212,17 +1366,21 @@ Explain why a firewall is useful but is not enough by itself to fully secure a n
 | Wireless access point | allows wireless devices to join LAN |
 | Modem | connects to ISP service line |
 | Firewall | filters traffic based on rules |
+| Server | provides services or resources to clients |
+| DNS server | resolves domain names into IP addresses |
+| DHCP server | assigns IP addresses and network settings automatically |
+| NAT | translates private IP addresses to a public IP address |
 | Hub | broadcasts to all connected devices |
 | Repeater | regenerates/extends signal |
 | Bridge | connects network segments |
 | Gateway | connects different networks/systems |
 | MAC address | local hardware address |
 | IP address | logical address used for routing |
-| Exam phrase | Switches connect LAN devices, routers connect networks, access points provide Wi-Fi, modems connect to ISP service, and firewalls filter traffic |
+| Exam phrase | Switches connect LAN devices using MAC addresses, routers connect networks using IP addresses, access points provide Wi-Fi, modems connect to ISP service, and firewalls filter traffic |
 
 ---
 
-## 34. Quick Self-test
+## 37. Quick Self-test
 
 Before moving on, students should be able to answer these:
 
