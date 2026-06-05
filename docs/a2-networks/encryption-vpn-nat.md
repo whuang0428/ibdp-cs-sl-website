@@ -36,6 +36,281 @@ Encryption protects the content of data. A VPN creates an encrypted tunnel throu
 
 ---
 
+## Start here: protect data, connect securely, translate addresses
+
+This page focuses on two common network needs: protecting data during communication and managing internal/private addresses.
+
+Keep these three ideas separate:
+
+- **Encryption** protects the **content** of data by turning readable plaintext into unreadable ciphertext.
+- A **VPN** creates a secure private connection over a public network, often using an encrypted tunnel and authentication.
+- **NAT** translates private IP addresses inside a LAN to a public IP address used on the internet.
+
+In exams, do not mix them up. Encryption changes the data content, VPN protects a communication path, and NAT changes address information.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- define **encryption**
+- explain why encryption is used during data transmission
+- distinguish **plaintext** and **ciphertext**
+- outline **symmetric** and **asymmetric** encryption at a simple SL level
+- explain how a **VPN** protects remote access
+- explain what **NAT** does in a router/firewall
+- apply encryption, VPN, and NAT to school, hospital, business, and home network scenarios
+
+---
+
+## Key terms exam table
+
+| Term | 简单中文解释 | English mark-scheme phrase | Small example |
+|---|---|---|---|
+| Plaintext | 加密前可读的数据 | Original readable data before encryption | `Password123` before sending |
+| Ciphertext | 加密后不可直接读懂的数据 | Unreadable encrypted data | `A9x!7pQ...` after encryption |
+| Key | 用来加密或解密的值 | A value used to encrypt or decrypt data | A shared secret key |
+| Encryption | 把明文变成密文 | Converts plaintext into ciphertext using a key | HTTPS encrypts login details |
+| Decryption | 把密文变回明文 | Converts ciphertext back into readable plaintext | Server decrypts a login request |
+| Confidentiality | 保护数据不被未授权读取 | Only authorised users can read the data | Medical records are not readable if intercepted |
+| Data in transit | 正在网络中传输的数据 | Data moving across a network | Login data sent to a website |
+| Data at rest | 存储在设备或服务器上的数据 | Data stored on a device or server | Encrypted laptop hard drive |
+| Interception risk | 数据传输中被截获的风险 | Risk that data is captured while travelling | Attacker monitors public Wi-Fi |
+| Unauthorized access | 未授权访问数据或系统 | Access by a user who is not allowed | Stolen account used to read files |
+
+---
+
+## Symmetric vs asymmetric encryption
+
+| Feature | Symmetric encryption | Asymmetric encryption |
+|---|---|---|
+| Number/type of keys | One shared secret key | Public key and private key pair |
+| Speed | Usually faster | Usually slower |
+| Typical use | Encrypting large amounts of data after a secure session is set up | Secure key exchange and authentication |
+| Advantage | Efficient for data transfer | Public key can be shared openly |
+| Limitation | Shared key must be exchanged securely | More complex and slower |
+| Student-friendly example | Two people use the same secret code book | Anyone can use a public key to send a message, but only the private key holder can read it |
+
+Keep this SL-friendly: you need the idea of key use, not advanced cryptography maths.
+
+---
+
+## VPN: secure remote access
+
+A **VPN** means **Virtual Private Network**. It allows a remote user to connect securely to a private LAN or internal resources through the **public internet**.
+
+A VPN usually involves:
+
+- **encrypted tunnel:** data is protected between the user and the VPN endpoint
+- **authentication:** the user must prove they are allowed to connect
+- **private LAN/internal resources:** files, intranet pages, databases, or school/hospital systems that are not open to everyone on the internet
+
+Examples:
+
+- A teacher accesses school staff files from home.
+- A doctor accesses the hospital appointment system remotely.
+- An employee accesses a company intranet while travelling.
+
+---
+
+## NAT: address translation, not encryption
+
+**NAT** means **Network Address Translation**. It is commonly performed by a router or firewall at the edge of a LAN.
+
+NAT:
+
+- translates **private IP addresses** used inside a LAN into a **public IP address** used on the internet
+- allows multiple LAN devices to share one public IP address
+- helps hide internal private addresses from external networks
+- does not encrypt the data content
+- is not a complete security solution by itself
+
+Example:
+
+```text
+Laptop private IP: 192.168.1.20
+Phone private IP: 192.168.1.21
+Router public IP: 203.0.113.50
+```
+
+External websites usually see the router's public IP, not each device's private IP.
+
+---
+
+## Encryption vs VPN vs NAT
+
+| Concept | Main purpose | What it protects or manages | Where it is used | Common device/software involved | Common exam scenario | Common mistake |
+|---|---|---|---|---|---|---|
+| Encryption | Protect data content | Plaintext, ciphertext, keys, confidentiality | HTTPS, messaging, stored files, VPN tunnels | Browser, server, encryption software | Protecting login details during transmission | Saying encryption stops every attack |
+| VPN | Provide secure private connection over a public network | Remote access path and transmitted data inside the tunnel | Public internet, public Wi-Fi, remote work | VPN client, VPN server, firewall/router | Teacher accesses school files from home | Saying VPN is the same as Wi-Fi or full anonymity |
+| NAT | Translate addresses | Private and public IP addresses | Home, school, office LAN edge | Router or firewall | Many LAN devices share one public IP | Saying NAT encrypts data |
+
+---
+
+## VPN and NAT network diagram
+
+```mermaid
+flowchart LR
+    Remote["Remote user<br/>laptop at home"]
+    Internet["Public internet"]
+    Tunnel["Encrypted VPN tunnel"]
+    Edge["Router / firewall<br/>NAT enabled<br/>Public IP: 203.0.113.50"]
+
+    subgraph LAN["Private LAN"]
+        Server["Internal server<br/>files / intranet"]
+        PC1["Device A<br/>Private IP: 192.168.1.10"]
+        PC2["Device B<br/>Private IP: 192.168.1.11"]
+        Printer["Printer<br/>Private IP: 192.168.1.30"]
+    end
+
+    Remote --> Internet
+    Internet --> Tunnel
+    Tunnel --> Edge
+    Edge --> Server
+    Edge --> PC1
+    Edge --> PC2
+    Edge --> Printer
+```
+
+The VPN tunnel protects remote access across the public internet. NAT on the router/firewall translates private LAN addresses to the public IP address when internal devices access the internet.
+
+---
+
+## Exam focus
+
+| Command term | What to write |
+|---|---|
+| State | Give the correct term or one short definition. |
+| Outline | Give the main idea plus one relevant detail. |
+| Describe | Explain how the concept works using correct keywords. |
+| Explain | Link the concept to the scenario and say why it is useful or limited. |
+| Compare | Give clear paired differences, such as encryption vs NAT or VPN vs HTTPS. |
+
+For mark levels:
+
+- **2 marks:** define the term and give one purpose or example.
+- **3 marks:** describe the process using key words such as plaintext, key, tunnel, authentication, private IP, or public IP.
+- **4 marks:** give two developed points linked to the scenario.
+- **6 marks:** include purpose, process, device/software involved, benefit, limitation, and scenario detail.
+
+Avoid vague answers such as:
+
+```text
+VPN makes internet safe
+NAT encrypts data
+encryption stops hackers
+private IP means no one can attack it
+```
+
+Better answers explain the exact mechanism: encryption changes plaintext into ciphertext, a VPN creates an encrypted tunnel with authentication, and NAT translates addresses rather than protecting data content.
+
+---
+
+## Reusable mark-scheme style phrases
+
+- "Encryption converts plaintext into ciphertext using a key."
+- "Decryption converts ciphertext back into readable plaintext."
+- "A VPN creates an encrypted tunnel over a public network."
+- "Authentication checks that the remote user is allowed to access the private network."
+- "NAT translates private IP addresses inside a LAN to a public IP address."
+- "NAT allows multiple devices to share one public IP address."
+- "NAT is not the same as encryption because it translates addresses rather than changing the data content."
+- "Encryption helps protect confidentiality if data is intercepted during transmission."
+- "A VPN can allow remote users to access internal resources without exposing those resources directly to the public internet."
+
+---
+
+## Common mistakes table
+
+| Mistake | Why it is wrong | Better wording |
+|---|---|---|
+| Confusing encryption with hashing | Hashing is usually one-way; encryption is reversible with the correct key | "Encryption can be decrypted with the correct key." |
+| Saying NAT encrypts data | NAT translates addresses only | "NAT changes private/public IP address information." |
+| Saying VPN is the same as Wi-Fi | Wi-Fi is wireless network access; VPN is a secure tunnel | "A VPN can run over Wi-Fi, but it is not Wi-Fi." |
+| Saying VPN is always anonymous | Accounts, cookies, websites, and VPN providers can still identify activity | "VPN improves privacy in some contexts but does not guarantee anonymity." |
+| Forgetting authentication in VPN | Remote access needs identity checking | "A VPN should authenticate the user before access is granted." |
+| Forgetting keys in encryption | Keys are needed to encrypt or decrypt data | "Encryption uses a key to convert plaintext into ciphertext." |
+| Saying NAT alone is enough for security | NAT is not a firewall or encryption method | "NAT should be combined with firewall rules and access control." |
+| Confusing private IP and public IP | Private IP is used inside LAN; public IP is internet-facing | "The router translates between private and public addresses." |
+
+---
+
+## Quick-check questions with short answers
+
+1. What is encryption?  
+   **Answer:** Converting readable plaintext into unreadable ciphertext using a key.
+
+2. What is plaintext?  
+   **Answer:** Original readable data before encryption.
+
+3. What is ciphertext?  
+   **Answer:** Encrypted data that should not be readable without the correct key.
+
+4. What is decryption?  
+   **Answer:** Converting ciphertext back into readable plaintext.
+
+5. What is the main difference between symmetric and asymmetric encryption?  
+   **Answer:** Symmetric uses one shared secret key; asymmetric uses a public/private key pair.
+
+6. What does a VPN create?  
+   **Answer:** An encrypted tunnel over a public network.
+
+7. Why does a VPN need authentication?  
+   **Answer:** To check the remote user is allowed to access the private network.
+
+8. What does NAT translate?  
+   **Answer:** Private IP addresses inside a LAN to a public IP address, and replies back to the correct device.
+
+9. Why is NAT not encryption?  
+   **Answer:** NAT changes address information; it does not change readable data into ciphertext.
+
+10. Give one home network use of NAT.  
+    **Answer:** A phone, laptop, and tablet can share one router public IP address when accessing the internet.
+
+---
+
+## Exam-style practice: encryption, VPN and NAT
+
+### Question A [6 marks]
+
+A hospital sends patient appointment details between a browser and a web server. Explain how encryption protects the data during transmission.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Encryption converts readable plaintext, such as patient appointment details, into ciphertext using a key. The ciphertext is sent across the network, so if the data is intercepted it is not easily readable by an unauthorised person. The web server or browser can decrypt the ciphertext back into plaintext using the correct key/session information. This helps protect confidentiality of sensitive medical data during transmission. It does not stop every attack, so authentication, access control, and secure devices are still needed.
+
+</details>
+
+---
+
+### Question B [6 marks]
+
+A teacher works from home and needs to access files stored on the school LAN. Explain how a VPN can help.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A VPN can create an encrypted tunnel from the teacher's device over the public internet to the school network. The teacher should authenticate, for example with a username, password, or multi-factor authentication, before access is allowed. Data sent through the tunnel is encrypted, reducing the risk that it can be read if intercepted. The VPN can allow access to internal school resources, such as staff files, without making those files directly public on the internet. The school must still control permissions and protect VPN credentials.
+
+</details>
+
+---
+
+### Question C [6 marks]
+
+A home router connects a laptop, phone, and tablet to the internet. The devices use private IP addresses inside the LAN. Explain how NAT is used by the router/firewall.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+The laptop, phone, and tablet use private IP addresses inside the LAN. When a device sends a request to the internet, the router/firewall uses NAT to replace the private source IP address with the router's public IP address. The router records the translation, often using port numbers, so it knows which internal device made each request. When a reply returns to the public IP address, the NAT table is used to forward it to the correct private IP device. NAT allows multiple LAN devices to share one public IP address, but it does not encrypt the data and is not a complete security solution by itself.
+
+</details>
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
