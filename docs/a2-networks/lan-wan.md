@@ -35,17 +35,151 @@ LAN and WAN are mainly distinguished by scale and coverage. A LAN covers a small
 
 ---
 
+## Start here: choose the network type by scenario
+
+For exams, do not only say "LAN is small and WAN is big". Use technical details from the scenario.
+
+- **LAN (Local Area Network)** connects devices in a limited geographical area, such as a home, school, office, hospital, or campus.
+- **WAN (Wide Area Network)** connects networks over a large geographical area, such as cities, countries, or continents.
+- **WLAN (Wireless Local Area Network)** is a wireless form of LAN that uses wireless access points and wireless-enabled devices.
+- A strong answer should mention coverage, ownership/control, speed, latency, cost, devices, and a scenario example.
+
+中文提示：先判断 **coverage（覆盖范围）**。同一个学校、办公室、医院或家里通常是 **LAN**；跨城市、国家或多个分校通常是 **WAN**；如果本地 LAN 用 Wi-Fi 接入，就是 **WLAN**。
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- define LAN, WAN, and WLAN
+- explain that a LAN covers a limited local area
+- explain that a WAN covers a large geographical area and often connects LANs
+- compare LAN and WAN using coverage, ownership, speed, latency, cost, and devices
+- explain how WLAN provides wireless access to a LAN
+- identify common WLAN advantages and security risks
+- explain how VPN can support secure remote access to a private LAN
+- choose LAN, WAN, or WLAN for a scenario and justify the choice
+
+---
+
+## LAN vs WAN comparison table
+
+| Comparison point | LAN | WAN |
+|---|---|---|
+| Coverage area | Limited geographical area such as a room, building, school, office, hospital, home, or campus | Large geographical area such as a city, country, continent, or global network |
+| Ownership/control | Often owned and managed by one person or organization | Often uses ISP, telecom, cloud, or other external infrastructure |
+| Speed/latency | Usually high data transfer rate and low latency | Usually lower data transfer rate and higher latency than LAN, depending on links |
+| Cost | Lower for a local site, but still needs devices and maintenance | Higher because long-distance links and provider services are needed |
+| Typical hardware/devices | Switches, wireless access points, wireless routers, NICs, local servers, network printers | Routers, modems, leased lines, fibre-optic links, satellite links, VPN gateways, ISP infrastructure |
+| Example | School computers sharing printers and files on one campus | A company connecting branch LANs in different countries |
+| Common exam phrasing | "A LAN connects devices within a limited geographical area..." | "A WAN connects networks over a large geographical area..." |
+
+---
+
+## Scenario answer pattern
+
+When answering a LAN/WAN/WLAN question, use this order:
+
+1. Identify the area covered by the network.
+2. State whether it is LAN, WAN, or WLAN.
+3. Mention the typical devices or links involved.
+4. Compare speed, latency, ownership, or cost if asked.
+5. Link the answer to the scenario, not only to a definition.
+6. Mention security if wireless access, remote access, or public networks are involved.
+
+---
+
+## School network diagram
+
+```mermaid
+flowchart LR
+    subgraph SchoolLAN["School LAN"]
+        PC1["Student PCs"] --- SW["Switch"]
+        PR["Network printer"] --- SW
+        FS["File server"] --- SW
+        WAP["Wireless access point"] --- SW
+        LAP["Student laptops / tablets"] -. "Wi-Fi / WLAN" .- WAP
+        SW --- R1["Router / firewall"]
+    end
+
+    R1 --- NET["Internet / WAN / cloud"]
+    NET --- CLOUD["Cloud services"]
+
+    subgraph BranchLAN["Another branch LAN"]
+        R2["Branch router"] --- SW2["Branch switch"]
+        SW2 --- PC2["Branch PCs"]
+        SW2 --- WAP2["Branch WAP"]
+    end
+
+    NET --- R2
+```
+
+The switch and wireless access point are inside the school LAN. The router connects the LAN to the internet/WAN. The internet/WAN can connect the school LAN to cloud services or another branch LAN.
+
+---
+
+## Exam focus
+
+| Command term | What to do | What gains marks |
+|---|---|---|
+| State | Give a brief correct answer | Name LAN, WAN, WLAN, or a relevant device/link |
+| Outline | Give the main idea with one detail | Mention coverage or purpose with a short example |
+| Describe | Give key characteristics | Include area covered, devices, ownership/control, or speed/latency |
+| Explain | Link cause and effect | Explain why LAN/WAN/WLAN fits the scenario |
+| Compare and contrast | Give similarities and differences | Compare coverage, ownership, latency, speed, cost, and examples |
+
+Avoid vague answers such as:
+
+```text
+LAN is small and WAN is big.
+```
+
+Improve it with technical detail:
+
+```text
+A LAN connects devices within a limited geographical area, such as a school campus, and usually has high data transfer rate and low latency because devices are close together and under local control.
+```
+
+---
+
+## Reusable mark-scheme phrases
+
+- "A LAN connects devices within a limited geographical area, such as a school, office, hospital, home, or campus."
+- "A WAN connects networks over a large geographical area, such as cities, countries, or continents."
+- "A WLAN provides wireless access to a LAN using access points and wireless-enabled devices."
+- "A VPN creates an encrypted tunnel over a public network, allowing authenticated remote users to access private network resources."
+
+---
+
+## Common mistakes table
+
+| Mistake | Why it is wrong | Better answer |
+|---|---|---|
+| Confusing LAN with WLAN | WLAN is a wireless form of LAN, not a separate wide-area network | Explain WLAN as wireless access inside a local network |
+| Saying WAN is always wireless | WAN means wide area, not wireless | WANs may use fibre, leased lines, satellite, public internet, or VPN |
+| Saying the internet and WAN are exactly the same thing | The internet is a public global WAN, but private WANs also exist | Say the internet is an example of a WAN / network of networks |
+| Forgetting latency and speed | LAN/WAN comparison is not only about size | Mention LAN often has higher speed and lower latency |
+| Forgetting WLAN security risks | Wireless signals can be intercepted or accessed by unauthorized users | Mention encryption, authentication, and access control |
+| Treating VPN as a full network type here | VPN is a secure remote access method, not the main focus of LAN/WAN classification | Explain VPN as a related way to access a private LAN over the internet |
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
 |---|---|---|
 | LAN | 局域网 | Local Area Network; network covering a small geographical area |
 | WAN | 广域网 | Wide Area Network; network covering a large geographical area |
+| WLAN | 无线局域网 | Wireless Local Area Network; wireless access to a LAN |
 | Local area | 本地区域 | Small area such as home, classroom, office, or school building |
 | Wide area | 广域区域 | Large area such as city, country, or global network |
 | Network | 网络 | Connected devices that can communicate |
 | Router | 路由器 | Device that forwards data between networks |
 | Switch | 交换机 | Device that connects devices inside a LAN |
+| Wireless access point | 无线接入点 | Device that lets wireless devices connect to a LAN |
+| Wireless NIC / adaptor | 无线网卡 / 适配器 | Hardware that allows a device to connect to a WLAN |
+| VPN | 虚拟专用网络 | Secure encrypted tunnel over a public network |
 | ISP | Internet Service Provider | Organization that provides internet access |
 | Internet | 互联网 | Global network of connected networks |
 | Intranet | 内联网 | Private internal network used by an organization |
@@ -227,6 +361,46 @@ A LAN is a network that connects devices within a small geographical area such a
 
 ---
 
+## WLAN: Wireless Local Area Network
+
+A **WLAN**, or **Wireless Local Area Network**, is a wireless form of LAN.
+
+It still covers a limited local area, but devices connect using wireless communication instead of only cables.
+
+### WLAN Components
+
+| Component | Role |
+|---|---|
+| Wireless access point (WAP) | Allows wireless devices to connect to the LAN |
+| Wireless router | Often combines routing, Wi-Fi access, and internet connection in a home/small office |
+| Wireless NIC / adaptor | Allows a computer or device to connect wirelessly |
+| Wireless-enabled devices | Laptops, phones, tablets, printers, sensors, and other devices using Wi-Fi |
+
+### WLAN Advantages
+
+```text
+mobility for users and devices
+easier installation where cables are difficult
+flexible connection for laptops, phones, and tablets
+useful for classrooms, offices, hospitals, homes, and campuses
+```
+
+### WLAN Limitations and Security Risks
+
+```text
+wireless signals can be intercepted
+unauthorized users may try to connect
+signal range is limited
+walls and interference can reduce performance
+shared wireless bandwidth can slow connections
+```
+
+::: tip Exam Phrase
+A WLAN provides wireless access to a LAN using wireless access points and wireless-enabled devices.
+:::
+
+---
+
 ## 6. What Is a WAN?
 
 A **WAN**, or **Wide Area Network**, connects devices or networks over a large geographical area.
@@ -239,6 +413,19 @@ a company network connecting offices in different cities
 a school group network connecting multiple campuses
 the internet
 ```
+
+WANs may use:
+
+```text
+leased lines
+fibre-optic links
+satellite links
+public internet connections
+VPN connections
+telecommunication provider infrastructure
+```
+
+A WAN usually has lower data transfer rate and higher latency than a LAN because data often travels over longer distances and through more networks.
 
 ### WAN Often Connects LANs
 
@@ -450,6 +637,25 @@ monitoring
 
 LAN is not automatically secure.  
 Weak passwords, poor permissions, or infected devices can still create risk.
+
+---
+
+## VPN as a Related Idea
+
+A **VPN (Virtual Private Network)** can allow remote users to access a private LAN securely over the internet.
+
+It is related to LAN/WAN questions because the user may be outside the local site but still needs access to internal resources.
+
+| VPN idea | Simple meaning |
+|---|---|
+| Tunnelling | data is sent through a protected path over a public network |
+| Encryption | data is scrambled so outsiders cannot easily read it |
+| Authentication | the user must prove they are allowed to connect |
+| Internal resource access | the user may access private files, systems, or services as if connected to the organization network |
+
+::: warning Scope Control
+VPN is linked to LAN/WAN remote access, but this page is not a full network security page. Focus on how VPN supports secure access to private network resources over the internet.
+:::
 
 ---
 
@@ -965,7 +1171,7 @@ higher management complexity
 
 ---
 
-## 29. Common Mistakes
+## 29. Detailed common mistakes table
 
 | Mistake | Why it is wrong | Better understanding |
 |---|---|---|
@@ -1046,6 +1252,23 @@ A student says, “WAN means wireless area network.” Correct this.
 WAN means Wide Area Network. It describes a network covering a large geographical area. It does not mean wireless.
 
 </details>
+
+---
+
+## Quick-check questions with short answers
+
+| Question | Short answer |
+|---|---|
+| What does LAN stand for? | Local Area Network |
+| What does WAN stand for? | Wide Area Network |
+| What does WLAN stand for? | Wireless Local Area Network |
+| What is the main coverage difference between LAN and WAN? | LAN covers a limited local area; WAN covers a large geographical area |
+| Is WLAN a type of WAN? | No, it is a wireless form of LAN |
+| Name one device commonly used inside a LAN. | Switch, wireless access point, router, printer, or server |
+| What device usually connects a LAN to the internet/WAN? | Router |
+| Why may a WAN have higher latency than a LAN? | Data travels longer distances and through more networks |
+| Give one WLAN security risk. | Interception, unauthorized access, or weak authentication |
+| What does a VPN help remote users do? | Access private network resources securely over the internet |
 
 ---
 
@@ -1155,6 +1378,45 @@ Explain two advantages and one disadvantage of using a WAN for a company with of
 <summary>Mark Scheme Style Answer</summary>
 
 One advantage is that the company can share data and services between distant offices, such as central databases or file systems. Another advantage is improved communication and remote access for staff. A disadvantage is that WANs can be expensive and complex to maintain, and data may travel across external networks, creating security and reliability concerns.
+
+</details>
+
+---
+
+### Question 6 [6 marks]
+
+Compare and contrast a LAN and a WAN for a school with one main campus and another branch campus in a different city.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A LAN connects devices within a limited geographical area, so computers, printers, servers, switches, and wireless access points inside the main campus can form a LAN. A WAN connects networks over a large geographical area, so the link between the main campus LAN and the branch campus LAN would be a WAN. A LAN is usually under local school control and often has high data transfer rate and low latency. A WAN may use ISP infrastructure, fibre links, public internet, leased lines, or VPN, and may have higher latency, greater cost, and more security concerns.
+
+</details>
+
+---
+
+### Question 7 [6 marks]
+
+A school wants students to connect laptops and tablets to the school network without using cables. Explain two advantages and two security risks of using a WLAN.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A WLAN provides wireless access to a LAN using wireless access points and wireless-enabled devices. One advantage is mobility, because students can move around classrooms while staying connected. Another advantage is easier installation, because fewer cables are needed. One security risk is interception, because wireless signals can be detected outside the room or building. Another risk is unauthorized access if authentication, passwords, or encryption are weak. Suitable safeguards include strong authentication, encryption, access control, and monitoring.
+
+</details>
+
+---
+
+### Question 8 [6 marks]
+
+A teacher is working from home and needs access to files stored on the school's private LAN. Explain how a VPN could support this remote access.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+A VPN can allow the teacher to access private school network resources over the internet. It creates an encrypted tunnel over the public network, helping protect data as it travels between the teacher's device and the school network. Authentication checks that the teacher is allowed to connect. Once connected, the teacher may access internal resources such as file servers or school systems. The school should still manage permissions and security because the connection is reaching private LAN resources remotely.
 
 </details>
 
