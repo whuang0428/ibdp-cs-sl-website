@@ -32,6 +32,98 @@ Testing is not just “running the program once”. Good testing uses carefully 
 
 ---
 
+## Start here: testing finds problems, debugging fixes them
+
+Testing checks whether a program works as expected.
+
+Debugging is the process of finding and fixing errors.
+
+First understand what kind of test data to use, then learn how to explain errors and fixes. In exam questions, the key skill is linking a test case or error to the program behaviour.
+
+---
+
+## Testing workflow
+
+Use this route when checking or debugging a program:
+
+| Step | What to do | Why it matters |
+|---:|---|---|
+| 1 | Understand what the program should do. | You need the correct behaviour before choosing tests. |
+| 2 | Choose suitable test data. | Test data should check important cases, not random values. |
+| 3 | Include normal, boundary, and invalid data where relevant. | These reveal different kinds of mistakes. |
+| 4 | Run or trace the program using the test data. | Follow what the program actually does. |
+| 5 | Compare the actual output with the expected output. | A mismatch shows a possible error. |
+| 6 | Identify any error. | Decide whether the problem is syntax, runtime, or logic. |
+| 7 | Explain the cause of the error. | Exam answers need the reason, not only the correction. |
+| 8 | Suggest a suitable correction. | The fix should match the cause of the bug. |
+| 9 | Retest the program after fixing the error. | Retesting checks that the fix works and did not create a new problem. |
+
+---
+
+## Error type table
+
+| Error type | What it means | Simple example |
+|---|---|---|
+| Syntax error | code breaks the grammar/rules of the language | missing bracket or keyword |
+| Logic error | code runs but gives the wrong result | using `>` instead of `<` |
+| Runtime error | program fails while running | division by zero, file not found |
+
+---
+
+## Test data table
+
+| Test data type | Purpose | Example |
+|---|---|---|
+| Normal data | checks typical valid input | age = 15 when valid range is 1-120 |
+| Boundary data | checks values at the edge of valid ranges | age = 1, age = 120 |
+| Invalid data | checks how the program handles unacceptable input | age = -5 or age = "abc" |
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain why testing is needed
+- distinguish testing from debugging
+- distinguish syntax, logic, and runtime errors
+- choose normal, boundary, and invalid test data
+- explain expected output and actual output
+- use a trace table to help find logic errors
+- identify the cause of a simple bug
+- suggest a suitable correction
+- explain why retesting is needed after a fix
+
+---
+
+## Debugging trace pattern
+
+When you meet a debugging or trace question, use this order:
+
+1. Identify the expected output.
+2. Run or trace the program step by step.
+3. Record variable values after each important statement.
+4. Find where the actual result first becomes wrong.
+5. Identify the likely cause of the error.
+6. Suggest a correction.
+7. Retest using the same case and at least one extra case.
+
+---
+
+## Common exam traps
+
+- describing testing and debugging as the same thing
+- giving only normal test data
+- forgetting boundary values
+- calling every error a syntax error
+- saying a logic error stops the program from running
+- giving test data without expected output
+- fixing code without explaining the cause
+- not retesting after a correction
+- using a trace table but not recording changed variables in order
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -132,6 +224,8 @@ Therefore, we use different types of test data:
 
 ### Example: Testing a Mark Validation Program
 
+Boundary test data example: this shows why edge values such as 0 and 100 must be tested.
+
 A program accepts marks from 0 to 100 inclusive.
 
 Valid range:
@@ -183,7 +277,7 @@ Write code
 
 A syntax error happens when the program breaks the grammar rules of the language.
 
-### Example
+### Syntax error example
 
 ```java
 System.out.println("Hello")
@@ -215,7 +309,7 @@ System.out.println("Hello");
 
 A runtime error happens while the program is running.
 
-### Example: Divide by zero
+### Runtime error example: divide by zero
 
 ```java
 int result = 10 / 0;
@@ -223,7 +317,7 @@ int result = 10 / 0;
 
 The program compiles, but crashes when this line runs.
 
-### Example: Array index out of bounds
+### Runtime error example: array index out of bounds
 
 ```java
 int[] values = {2, 4, 6};
@@ -244,7 +338,7 @@ Index `3` does not exist.
 
 A logic error happens when the program runs but gives the wrong result.
 
-### Example
+### Logic error example
 
 ```java
 int mark = 50;
@@ -296,6 +390,8 @@ Logic errors may not crash the program. The program looks like it works, but the
 
 Normal test data is valid and typical.
 
+Normal test data example:
+
 Example for mark 0-100:
 
 ```text
@@ -314,6 +410,8 @@ Accepted
 
 Boundary data tests the edges of valid ranges.
 
+Boundary test data example:
+
 For mark 0-100:
 
 | Boundary Type | Test Data |
@@ -330,6 +428,8 @@ Boundary tests are useful because many errors happen at edges.
 ## 9.3 Invalid Test Data
 
 Invalid test data should be rejected.
+
+Invalid test data example:
 
 Examples:
 
@@ -391,6 +491,8 @@ If actual result is different from expected result:
 
 ## 11. Worked Example 1: Debug Mark Validation
 
+Boundary test data example: this bug appears because the boundary values are incorrectly excluded.
+
 ### Problem Code
 
 ```java
@@ -445,6 +547,8 @@ if (mark >= 0 && mark <= 100) {
 
 ## 12. Worked Example 2: Debug an Array Loop
 
+Runtime error example: this bug happens when the loop tries to access an array index that does not exist.
+
 ### Problem Code
 
 ```java
@@ -488,6 +592,8 @@ for (int i = 0; i < values.length; i++) {
 ---
 
 ## 13. Worked Example 3: Debug a Logic Error Using Trace Table
+
+Debugging trace example: this trace table shows where the total first follows the wrong condition.
 
 ### Problem Code
 
