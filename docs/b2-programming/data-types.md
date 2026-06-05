@@ -1,5 +1,325 @@
 ﻿# Data Types
 
+## Start here
+
+A **data type** tells a program what kind of **value** a **variable** can store and what operations are valid for that value. In simple terms, it helps the program decide whether a value should be treated as a number, text, true/false flag, single symbol, or collection.
+
+本页重点是：看到一个场景中的数据时，能选择合适的 **data type**，并解释为什么这个选择能避免 **type error**。
+
+Core keywords for this page:
+
+```text
+data type, integer, real, Boolean, character, string, array, value, variable, type error
+```
+
+::: tip Core idea
+A value that looks like a number is not always numeric data. Use a numeric type when arithmetic is needed. Use a string when formatting, leading zeros, or identifier meaning must be preserved.
+:::
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- define **data type**
+- distinguish **integer**, **real/float**, **Boolean**, **character**, and **string**
+- choose suitable data types for fields in a school, hospital, or shop scenario
+- explain why choosing the correct data type matters
+- identify **type errors** in simple code
+- distinguish numeric data from text data
+- explain why some number-like values, such as phone numbers, postcodes, and IDs, should be stored as strings
+
+---
+
+## Common data types at SL
+
+| Data type | What it stores | Example value | Suitable scenario | Common operation | Common mistake |
+|---|---|---|---|---|---|
+| `INTEGER` / `int` | Whole numbers without decimal places | `16`, `0`, `125` | Number of students in a class | Counting, adding, comparing | Using it for a decimal price or average |
+| `REAL` / `double` / `float` | Numbers that may contain decimal places | `12.50`, `78.5` | Shop price or average exam mark | Decimal arithmetic | Using it when a whole-number count is enough |
+| `BOOLEAN` / `boolean` | One of two values: `true` or `false` | `true` | Whether a patient record is valid | Conditions and flags | Storing `"true"` as text instead of `true` |
+| `CHARACTER` / `char` | One symbol or letter | `'A'`, `'Y'` | One-letter grade | Comparing a single symbol | Confusing `'A'` with `"A"` |
+| `STRING` / `String` | A sequence of characters | `"Alice"`, `"001245"` | Student name or ID number | Joining, searching, comparing text | Using it for values that need arithmetic |
+| `ARRAY` | A collection of values, usually of the same type | `[75, 82, 91]` | A list of exam marks | Accessing items by position | Treating the whole array as one simple value |
+
+For arrays, this page only uses the basic idea that an array stores a collection. See [Arrays](./arrays) for indexing, traversal, and array algorithms.
+
+---
+
+## Key data type cards
+
+| Type | Simple Chinese explanation | English mark-scheme style phrase | Valid examples | Invalid or confusing examples | Scenario use |
+|---|---|---|---|---|---|
+| Integer | 整数；没有小数部分，适合数量和计数。 | An integer stores whole numbers without decimal places. | `0`, `16`, `250` | `12.5`, `"16"`, phone number `0123456789` | School: store `numberOfStudents = 24` because it is a count. |
+| Real / float | 实数/小数；适合可能有小数的测量值、价格、平均分。 | A real/float stores numbers that may contain decimal places. | `49.99`, `36.6`, `82.5` | `"49.99"`, `true`, using `int` for `82.5` | Hospital: store `temperature = 37.4` because it may have a decimal. |
+| Boolean | 布尔值；只能表示 `true` 或 `false`。 | A Boolean stores one of two values, true or false. | `true`, `false`, `mark >= 50` | `"true"`, `"false"`, `"yes"` | Shop: store `hasPaid = true` after payment succeeds. |
+| Character | 字符；只存一个字母、数字符号或标点。 | A character stores a single symbol or letter. | `'A'`, `'Y'`, `'7'` | `"A"`, `'AB'`, `65` if it means a grade | School: store `grade = 'A'` for a one-letter grade. |
+| String | 字符串；一串字符，可以是名字、消息、编号或代码。 | A string stores a sequence of characters. | `"Alice Chen"`, `"001245"`, `"A12B"` | using `"82"` when arithmetic is needed, using `int` for `"001245"` | School: store `studentID = "001245"` to preserve leading zeros. |
+| Array | 数组；一组相关值的集合，例如多个分数。 | An array stores a collection of values that can be accessed by position. | `[80, 75, 91]`, `["Ana", "Ben"]` | one mark stored as an array, mixed meanings in one array | School: store all quiz marks for one student in an array. |
+
+---
+
+## Choosing the right data type
+
+When choosing a data type, ask two questions:
+
+1. What kind of value is stored?
+2. What will the program do with it?
+
+| Scenario field | Suitable data type | Why this type fits |
+|---|---|---|
+| Age | `INTEGER` / `int` | Age is usually stored as a whole-number count of years. |
+| Price | `REAL` / `double` | A price may include cents, so decimal values must be allowed. |
+| Student name | `STRING` / `String` | A name is text and may contain several characters or spaces. |
+| Exam score | `INTEGER` or `REAL` | Use integer for whole-number marks; use real if averages or decimals are possible. |
+| Pass/fail flag | `BOOLEAN` / `boolean` | The value is one of two states, such as passed or not passed. |
+| Phone number | `STRING` / `String` | It is an identifier/contact detail, not a value for arithmetic; formatting and leading zeros may matter. |
+| Student ID | `STRING` / `String` | IDs may contain leading zeros, letters, or fixed formatting. |
+| One-letter grade | `CHARACTER` / `char` | A single grade such as `A` can be stored as one character. |
+| Appointment date/time | `STRING` at SL pseudocode level, or a date/time type in real systems | At SL level, it can be stored as formatted text; in real programs, a date/time type supports ordering and validation. |
+
+::: warning Exam habit
+Do not only write "integer is number" or "string is words". Link the type to valid values, operations, and the scenario.
+:::
+
+---
+
+## Numeric data vs text data
+
+A value that **looks like a number** is not always numeric data.
+
+| Value | Better type | Reason |
+|---|---|---|
+| `82` as an exam mark | `INTEGER` / `int` | The program may compare it, add it, or calculate an average. |
+| `49.99` as a price | `REAL` / `double` | The program may calculate totals or discounts. |
+| `"0123456789"` as a phone number | `STRING` / `String` | It should not be added or averaged, and the leading zero must remain. |
+| `"001245"` as a student ID | `STRING` / `String` | It identifies a person; losing zeros changes the ID. |
+| `"SW1A 1AA"` as a postcode | `STRING` / `String` | It may contain letters, spaces, and leading characters. |
+
+Use numeric types when arithmetic is needed. Use string types when preserving formatting matters.
+
+Mark-scheme phrase: **A value should be stored as a string when arithmetic is not needed and formatting must be preserved.**
+
+---
+
+## Boolean values and flags
+
+A **Boolean** stores exactly one of two values:
+
+```text
+true
+false
+```
+
+Booleans are useful for flags and conditions:
+
+| Boolean variable | Meaning |
+|---|---|
+| `isLoggedIn` | whether the user has logged in |
+| `hasPaid` | whether payment has been completed |
+| `found` | whether a search has found the target |
+| `isValid` | whether input passes validation |
+
+Common mistake:
+
+```java
+boolean isValid = "true"; // wrong: this is text
+boolean isValid = true;   // correct: this is Boolean
+```
+
+---
+
+## Type conversion and casting
+
+Input often arrives as text. If the program needs arithmetic, the text may need to be converted before calculation.
+
+Example idea:
+
+```text
+"16" as input text -> convert to integer 16 -> add or compare
+```
+
+If conversion is invalid, the program may produce an error:
+
+```text
+"sixteen" cannot be converted safely into the integer 16
+```
+
+At SL level, remember the purpose: convert only when the intended use requires it, such as calculating with a number entered by the user.
+
+---
+
+## Data type choice workflow
+
+```mermaid
+flowchart TD
+    A["Raw value / input"] --> B["Decide intended use"]
+    B --> C{"Is arithmetic needed?"}
+    C -->|Yes| D["Choose numeric data type"]
+    C -->|No| E["Choose text, Boolean, character, or array type"]
+    D --> F["Store in variable"]
+    E --> F
+    F --> G["Perform valid operation"]
+    G --> H["Avoid type error"]
+```
+
+---
+
+## Exam focus
+
+Command terms you may see:
+
+| Command term | What to write |
+|---|---|
+| State | Give the data type name only. |
+| Identify | Pick the correct type from a scenario or code fragment. |
+| Outline | Give the type and one brief reason. |
+| Describe | Explain what the type stores and how it is used. |
+| Explain | Link the type choice to valid values, valid operations, and avoiding errors. |
+| Choose / select | Select a type and justify it using the scenario. |
+
+How much detail is usually needed:
+
+| Marks | What a strong answer includes |
+|---:|---|
+| 1 mark | Correct type name, such as `INTEGER` or `STRING`. |
+| 2 marks | Type name plus a short reason linked to the value. |
+| 3 marks | Type name, valid example, and why another type would be weaker. |
+| 4 marks | Several fields matched to suitable types with clear reasons. |
+| 6 marks | Scenario-based explanation covering type choice, operations, possible type errors, and formatting issues. |
+
+Avoid vague answers such as:
+
+- "integer is number"
+- "string is words"
+- "Boolean is yes/no"
+
+Better answers mention whole numbers, decimal places, true/false values, sequences of characters, arithmetic, formatting, or scenario use.
+
+---
+
+## Common exam mistakes
+
+| Mistake | Why it loses marks | Better answer habit |
+|---|---|---|
+| Storing phone numbers as integers | Leading zeros and formatting may be lost; arithmetic is not needed. | Use `STRING` and explain it is contact information. |
+| Confusing character and string | `'A'` and `"A"` are different in Java. | Use `CHARACTER` for one symbol; use `STRING` for text. |
+| Using real when integer is enough | It suggests decimals are needed when the value is only a count. | Use `INTEGER` for counts such as number of students. |
+| Using string for values that need arithmetic | Text cannot be directly added, averaged, or compared numerically. | Use numeric types for marks, totals, prices, and measurements. |
+| Confusing Boolean `true`/`false` with text `"true"`/`"false"` | Text strings are not Boolean values. | Use unquoted `true` or `false` for Boolean flags. |
+| Forgetting decimals require real/float | Integer types cannot store decimal parts accurately. | Use `REAL`, `double`, or `float` for decimal values. |
+| Ignoring leading zeros in IDs or postcodes | Numeric storage may remove important formatting. | Use `STRING` for identifiers and codes. |
+| Choosing a data type without explaining the scenario | The answer may be too generic for exam marks. | Say what the value represents and what operations are needed. |
+
+---
+
+## Reusable mark-scheme style phrases
+
+- **A data type defines the kind of value a variable can store and the operations that can be performed on it.**
+- **An integer stores whole numbers without decimal places.**
+- **A real/float stores numbers that may contain decimal places.**
+- **A Boolean stores one of two values, true or false.**
+- **A character stores a single symbol or letter.**
+- **A string stores a sequence of characters.**
+- **A value should be stored as a string when arithmetic is not needed and formatting must be preserved.**
+- **Choosing the correct data type helps prevent type errors and makes the purpose of the variable clear.**
+- **A type error can occur when a value is used in an operation that is not valid for its data type.**
+
+---
+
+## Quick-check questions
+
+1. What does a data type define?
+2. Which type is suitable for a whole-number count?
+3. Which type is suitable for a decimal average?
+4. Which type stores `true` or `false`?
+5. Why is `"true"` not the same as `true` in Java?
+6. Why might a phone number be stored as a string?
+7. What is the difference between a character and a string?
+8. Why is `12.5` not suitable for an integer variable?
+9. When might input text need conversion?
+10. What is a type error?
+
+<details>
+<summary>Short answers</summary>
+
+1. It defines the kind of value a variable can store and the operations that are valid.
+2. `INTEGER` / `int`.
+3. `REAL` / `double` / `float`.
+4. `BOOLEAN` / `boolean`.
+5. `"true"` is a string; `true` is a Boolean value.
+6. It may have leading zeros or formatting, and arithmetic is not needed.
+7. A character stores one symbol; a string stores a sequence of characters.
+8. It contains a decimal part, so a real/float type is needed.
+9. When the program must calculate with a value entered as text.
+10. An error caused by using a value with an unsuitable data type or invalid operation.
+
+</details>
+
+---
+
+## Exam-style practice: data type choice
+
+### Question A [6 marks]
+
+A school system stores these fields:
+
+| Field | Example |
+|---|---|
+| student name | `"Maya Singh"` |
+| student ID | `"007518"` |
+| age | `16` |
+| average score | `83.5` |
+| passed course | `true` |
+| grade letter | `'B'` |
+
+Choose a suitable data type for each field.
+
+<details>
+<summary>Mark scheme</summary>
+
+- student name: `STRING` / `String`, because it is text and may contain spaces
+- student ID: `STRING` / `String`, because it is an identifier and leading zeros must be preserved
+- age: `INTEGER` / `int`, because it is a whole-number count of years
+- average score: `REAL` / `double`, because it may contain a decimal
+- passed course: `BOOLEAN` / `boolean`, because it is true or false
+- grade letter: `CHARACTER` / `char`, because it is one letter
+
+</details>
+
+### Question B [4 marks]
+
+Explain why a phone number or student ID should often be stored as a `String` rather than an `INTEGER`.
+
+<details>
+<summary>Mark scheme</summary>
+
+A phone number or student ID is used as an identifier, not as a number for arithmetic. Storing it as an integer may remove leading zeros or change formatting. A string preserves the exact sequence of characters. This is useful when the value may contain spaces, symbols, or letters.
+
+</details>
+
+### Question C [5 marks]
+
+Read the code:
+
+```java
+String markText = "82";
+int bonus = 5;
+int finalMark = markText + bonus;
+```
+
+Identify the problem and explain how it could be fixed.
+
+<details>
+<summary>Mark scheme</summary>
+
+`markText` is a `String`, so it is text, not numeric data. The program is trying to perform arithmetic using text, which can cause a type error or incorrect behaviour depending on the language. The input should be converted to an integer before arithmetic, for example by converting `"82"` to `82`. Then `finalMark` can store `82 + 5`.
+
+</details>
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
