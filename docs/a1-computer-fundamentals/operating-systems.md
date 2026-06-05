@@ -36,6 +36,288 @@ An operating system is not just the desktop screen. It is system software that m
 
 ---
 
+## Start here: the OS manages the computer system
+
+An **operating system** is **system software** that manages the computer's hardware and software resources. It acts as an interface between the **user**, **application software**, **hardware**, and system resources.
+
+When a student opens a browser, saves a file, prints a document, or logs in to a school computer, the OS is coordinating many parts of the system in the background.
+
+Core keywords for this page: **operating system**, **user interface**, **resource management**, **memory management**, **processor scheduling**, **file management**, **device management**, and **security**.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- define **operating system**
+- describe the main functions of an OS
+- explain why a computer needs an OS
+- distinguish **system software** from **application software**
+- explain how the OS manages memory, CPU time, files, devices, and users
+- apply OS functions to school, hospital, business, and personal computer scenarios
+
+---
+
+## Main OS functions exam table
+
+| Function | 简单中文解释 | English mark-scheme phrase | Simple example |
+|---|---|---|---|
+| User interface | 让用户和电脑交互 | Provides a way for the user to interact with the computer | GUI desktop or CLI terminal |
+| Memory management | 分配和回收主存/RAM | Allocates and frees main memory for running programs | Browser and IDE each receive RAM |
+| Processor / CPU scheduling | 分配 CPU 时间给进程 | Decides which process receives CPU time | Video call and browser take turns using CPU time |
+| File management | 管理文件和文件夹 | Organizes files, folders, metadata, and permissions | Saving a document in a folder |
+| Device / peripheral management | 管理输入输出设备 | Uses drivers to communicate with hardware devices | Sending a print job to a printer |
+| Security and access control | 控制谁能访问资源 | Controls user access to protected files, settings, and resources | Student cannot delete system files |
+| User management | 管理用户账户和权限 | Manages user accounts, roles, and permissions | Admin account can install software |
+| Error handling | 检测并处理错误 | Detects errors and responds to system or program problems | Warning when a printer is unavailable |
+| Utility support | 支持维护和系统工具 | Supports utilities for maintenance, backup, updates, and monitoring | Task Manager shows CPU and memory use |
+
+---
+
+## System software vs application software
+
+| Comparison point | System software | Application software |
+|---|---|---|
+| Purpose | Manages or supports the computer system | Helps users perform specific tasks |
+| Examples | Operating system, device drivers, utilities, firmware | Browser, word processor, spreadsheet, game, IDE |
+| Relationship with hardware | Works close to hardware and system resources | Uses hardware through the OS |
+| Relationship with user tasks | Provides the platform for tasks | Performs the task the user wants |
+| Common exam phrase | "System software manages hardware and supports application software." | "Application software allows users to perform specific tasks." |
+
+The OS is system software. A browser or word processor is application software because it runs on top of the OS to do a user task.
+
+---
+
+## Multitasking and CPU scheduling
+
+Several programs may appear to run at the same time, such as a browser, video call, music app, and IDE.
+
+The OS manages this by:
+
+- allocating **CPU time** to running processes
+- using **scheduling** to decide which process runs next
+- switching quickly between processes so the system feels responsive
+- managing memory so programs do not interfere with each other
+
+On a single-core CPU, programs are not literally all executing at exactly the same instant. The OS switches CPU time between them very quickly. On multi-core CPUs, some processes can run in parallel, but the OS still manages scheduling.
+
+---
+
+## Memory management
+
+Programs and data must be loaded into **main memory (RAM)** before the CPU can execute them.
+
+The OS manages memory by:
+
+- tracking which memory locations are in use
+- allocating memory to programs when they start
+- freeing memory when programs close
+- protecting memory so one process does not change another process's data
+- using virtual memory if RAM is low
+
+Example: if a student opens a browser and an IDE, the OS allocates RAM to both and keeps their data separate.
+
+---
+
+## File and device management
+
+### File management
+
+The OS file system organizes files and folders. It stores metadata such as:
+
+```text
+file name
+file size
+file type
+file location
+permissions
+created/modified date
+```
+
+This lets users save, open, rename, move, delete, search, and protect files.
+
+### Device management
+
+The OS communicates with hardware devices using **device drivers**. A driver is software that translates OS requests into instructions the device can understand.
+
+Student-friendly examples:
+
+- a keyboard sends input to the OS
+- a mouse moves the pointer
+- a storage device saves files
+- a printer uses a driver and print queue
+- a webcam and microphone are controlled for a video call
+
+---
+
+## Operating system interface diagram
+
+```mermaid
+flowchart TD
+    User["User"]
+    App["Application software<br/>browser / IDE / word processor"]
+    OS["Operating system<br/>resource management"]
+
+    subgraph Hardware["Hardware resources"]
+        CPU["CPU"]
+        Memory["Memory / RAM"]
+        Storage["Storage"]
+        IO["Input / output devices"]
+    end
+
+    User --> App
+    App --> OS
+    OS --> CPU
+    OS --> Memory
+    OS --> Storage
+    OS --> IO
+    CPU --> OS
+    Memory --> OS
+    Storage --> OS
+    IO --> OS
+    OS --> App
+    App --> User
+```
+
+The user normally works through application software. The application asks the OS for access to hardware resources such as CPU time, memory, storage, and input/output devices.
+
+---
+
+## Exam focus
+
+| Command term | What to write |
+|---|---|
+| State | Give the term or one short definition. |
+| Identify | Pick the correct OS function from a scenario. |
+| Outline | Give the main idea plus one relevant detail. |
+| Describe | Explain what the OS function does using correct keywords. |
+| Explain | Link the OS function to why it is needed in the scenario. |
+| Compare | Give paired differences, such as system software vs application software. |
+
+For mark levels:
+
+- **1 mark:** give one correct term or function.
+- **2 marks:** define a term and give one example.
+- **3 marks:** describe a function using a correct OS keyword.
+- **4 marks:** explain two functions or one function with clear scenario detail.
+- **6 marks:** combine definition, multiple OS functions, resource examples, and scenario-specific explanation.
+
+Avoid vague answers such as:
+
+```text
+the OS runs the computer
+the OS stores files
+the OS makes the computer faster
+```
+
+Better answers name the exact function, such as file management, memory management, processor scheduling, device management, or access control, then explain what it does.
+
+---
+
+## Reusable mark-scheme style phrases
+
+- "An operating system is system software that manages hardware and software resources."
+- "The OS provides an interface between the user and the computer system."
+- "Memory management allocates and frees main memory for running programs."
+- "Processor scheduling decides which process receives CPU time."
+- "File management organizes files and controls access permissions."
+- "Device drivers allow the OS to communicate with peripheral devices."
+- "Access control helps prevent unauthorized users from using protected resources."
+- "The OS allows application software to use hardware resources without controlling the hardware directly."
+
+---
+
+## Common mistakes table
+
+| Mistake | Why it is wrong | Better understanding |
+|---|---|---|
+| Confusing operating system with application software | The OS supports and manages the system; apps perform user tasks | Windows is an OS; Word is an application |
+| Saying the OS is the same as the CPU | The CPU is hardware; the OS is software that manages CPU time | The OS schedules processes for the CPU |
+| Saying memory management means secondary storage only | Memory management mainly refers to RAM/main memory | Storage management and memory management are different |
+| Forgetting device drivers | Drivers are needed for OS-device communication | A printer driver helps the OS control the printer |
+| Saying multitasking means a single-core CPU runs all programs at exactly the same instant | On one core, the OS switches CPU time rapidly | Scheduling makes tasks appear to run together |
+| Confusing file management with database management | File management organizes files/folders; databases organize related data in tables | Saving a file is not the same as querying a database |
+| Forgetting security/access control as an OS function | The OS manages users, permissions, and protected resources | Login and file permissions are OS functions |
+| Writing examples without explaining the function | Examples alone may not earn full marks | Name the function and explain what it manages |
+
+---
+
+## Quick-check questions with short answers
+
+1. What is an operating system?  
+   **Answer:** System software that manages hardware and software resources.
+
+2. Why does a computer need an OS?  
+   **Answer:** To provide a controlled way for users and applications to use hardware resources.
+
+3. Is a browser system software or application software?  
+   **Answer:** Application software.
+
+4. What is memory management?  
+   **Answer:** Allocating, tracking, protecting, and freeing main memory for running programs.
+
+5. What is processor scheduling?  
+   **Answer:** Deciding which process receives CPU time.
+
+6. What does file management do?  
+   **Answer:** Organizes files/folders and manages metadata and permissions.
+
+7. What is a device driver?  
+   **Answer:** Software that allows the OS to communicate with a hardware device.
+
+8. What is access control?  
+   **Answer:** Controlling which users can access protected files, settings, or resources.
+
+9. What is multitasking?  
+   **Answer:** Allowing multiple tasks to run or appear to run by sharing CPU time.
+
+10. Give one OS function used when printing.  
+    **Answer:** Device management, because the OS uses a driver and print queue to communicate with the printer.
+
+---
+
+## Exam-style practice: operating systems
+
+### Question A [6 marks]
+
+Describe three main functions of an operating system.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+An operating system manages memory by allocating RAM to running programs and freeing it when programs close. It manages processor scheduling by deciding which process receives CPU time, allowing several programs to appear to run at the same time. It also manages files by organizing files and folders, storing metadata, and controlling permissions. Other valid functions include device management, user interface, security/access control, user management, and error handling.
+
+</details>
+
+---
+
+### Question B [6 marks]
+
+Compare system software and application software.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+System software manages or supports the computer system and works close to hardware resources. Examples include an operating system, device drivers, and utility software. Application software helps users perform specific tasks, such as browsing the web, writing documents, or editing images. Application software usually runs on top of system software and uses hardware through the OS. The OS is needed to manage resources, while applications are chosen for user tasks.
+
+</details>
+
+---
+
+### Question C [6 marks]
+
+A student has a browser, video call, music player, and IDE open at the same time. Explain how the operating system manages resources in this situation.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+The OS manages processor scheduling by allocating CPU time to each running process and switching between them quickly. It manages memory by allocating RAM to the browser, video call, music player, and IDE while keeping their memory areas separate. It manages devices such as the microphone, camera, speakers, keyboard, mouse, and screen, using drivers where needed. It also manages files and network access if the student downloads files or uses the video call. This allows the programs to run safely without each program controlling the hardware directly.
+
+</details>
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
