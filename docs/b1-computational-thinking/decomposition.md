@@ -1,5 +1,299 @@
 ﻿# Decomposition
 
+## Start here
+
+**Decomposition** means breaking a complex problem into smaller, manageable **sub-problems**. Instead of trying to solve the whole problem at once, you identify the main **tasks**, solve each part, and then combine the parts into a full solution.
+
+本页重点是：看到一个场景时，能说清楚这个大问题可以拆成哪些 sub-problems，以及这样做为什么有助于 algorithm design、testing、debugging、modular design 和 maintainability。
+
+Core keywords for this page:
+
+```text
+decomposition, sub-problem, module, task, algorithm, computational thinking, modular design
+```
+
+::: tip Core idea
+Do not only write "split the problem". A strong answer explains what the sub-problems are and why solving or testing them separately helps.
+:::
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- define **decomposition**
+- identify sensible **sub-problems** in a scenario
+- explain why decomposition makes a complex problem easier to solve
+- apply decomposition to programming and non-programming scenarios
+- link decomposition to modular programming, subprograms, testing, debugging, and maintainability
+- avoid vague answers such as "split the problem" without explaining how or why
+
+---
+
+## Key terms for decomposition
+
+| Term | Simple Chinese explanation | English mark-scheme style phrase | Small example |
+|---|---|---|---|
+| Decomposition | 分解；把复杂问题拆成更小、更容易处理的部分。 | Decomposition breaks a complex problem into smaller sub-problems. | Split a quiz app into loading questions, checking answers, and updating score. |
+| Complex problem | 复杂问题；一次性解决会太大或太难的问题。 | A complex problem has several parts, tasks, or decisions that must work together. | A school library system has books, students, loans, returns, and fines. |
+| Sub-problem | 子问题；主问题中的一个较小任务。 | A sub-problem is a smaller part of the overall problem that can be solved separately. | Calculate overdue fine. |
+| Module | 模块；系统或程序中相对独立的一部分。 | A module is a separate part of a system that performs a specific role. | A login module checks username and password. |
+| Task | 任务；需要完成的具体工作。 | A task is a specific action needed to solve part of the problem. | Validate a book ID before recording a loan. |
+| Modular design | 模块化设计；把系统设计成清楚的模块。 | Modular design organizes a solution into separate modules that can be developed and maintained more easily. | Separate modules for search, loan, return, and reports. |
+| Top-down design | 自顶向下设计；先看整体，再逐层拆分。 | Top-down design starts with the whole problem and breaks it into smaller levels of detail. | Start with "library system", then split into book records, loans, returns, and reports. |
+| Abstraction | 抽象；相关概念，只关注重要信息，忽略无关细节。 | Abstraction focuses on essential details and ignores unnecessary details. | In a route app, use road distance but ignore building colour. |
+| Algorithm | 算法；相关概念，用步骤解决问题。 | An algorithm is a step-by-step method for solving a problem or sub-problem. | Steps for checking whether a book is available. |
+
+---
+
+## Step-by-step decomposition method
+
+Use this method when an exam question gives you a scenario:
+
+1. Understand the overall problem.
+2. Identify the main tasks.
+3. Split each task into smaller sub-tasks.
+4. Decide the inputs and outputs for each part.
+5. Solve or test each part separately.
+6. Combine the parts into the full solution.
+
+| Step | Question to ask | Example for a library system |
+|---|---|---|
+| Understand problem | What must the system achieve? | Manage book loans and returns. |
+| Main tasks | What major jobs are needed? | Search books, record loans, record returns. |
+| Smaller sub-tasks | Can a task be split further? | For returns: check due date, calculate fine, update book status. |
+| Inputs/outputs | What data enters and leaves this part? | Input: book ID, student ID. Output: loan confirmation. |
+| Test separately | Can this part be checked alone? | Test fine calculation with different overdue days. |
+| Combine | How do parts form the full solution? | Search, loan, return, and report modules work together. |
+
+---
+
+## Scenario example: school library system
+
+Original problem:
+
+```text
+Create a system that allows students to borrow and return books in a school library.
+```
+
+Decomposed sub-problems:
+
+| Sub-problem | Possible inputs | Possible outputs | Why this helps |
+|---|---|---|---|
+| Store book records | book ID, title, author, availability | updated book list | Book data can be checked separately from loans. |
+| Store student records | student ID, name, year group | student profile | Student details can be validated before borrowing. |
+| Search for a book | title, author, book ID | matching books, availability | Search can be tested with existing and missing books. |
+| Record a loan | student ID, book ID, loan date | loan confirmation, updated availability | Loan logic can be tested without testing the whole system. |
+| Record a return | book ID, return date | return confirmation, updated availability | Return handling is a separate task. |
+| Calculate overdue fine | due date, return date | fine amount | Fine calculation can be tested using boundary cases. |
+| Generate report | date range, class/year group | list of loans or overdue books | Reports can be built after core data is working. |
+
+This helps implementation because each sub-problem can become a separate module or procedure. It helps testing because errors can be located in one smaller part, such as fine calculation or book search, instead of searching through the whole system.
+
+---
+
+## Without decomposition vs with decomposition
+
+| Aspect | Without decomposition | With decomposition |
+|---|---|---|
+| Complexity | One large problem is hard to understand. | Smaller sub-problems are easier to manage. |
+| Readability | Design or code may become long and confusing. | Each part has a clearer purpose. |
+| Testing | The whole system may need to be tested at once. | Each module or sub-problem can be tested separately. |
+| Debugging | Errors are harder to locate. | Bugs can be narrowed down to one part. |
+| Teamwork | People may duplicate work or interfere with each other. | Different team members can work on different parts. |
+| Maintenance | Changing one feature may affect many parts. | A module can often be changed with less impact on other parts. |
+| Common exam phrase | The problem is harder to solve because all tasks are mixed together. | Decomposition reduces complexity by allowing sub-problems to be solved, tested, and maintained separately. |
+
+---
+
+## Decomposition and programming
+
+In programming, sub-problems often become **subprograms**, **functions**, **procedures**, or **modules**.
+
+Example:
+
+```text
+Quiz app
+├─ loadQuestions()
+├─ displayQuestion()
+├─ getUserAnswer()
+├─ checkAnswer()
+├─ updateScore()
+└─ showResult()
+```
+
+This supports modular programming because:
+
+- each module has a clear purpose
+- each module can be tested separately
+- changes to one module may be easier to manage
+- useful modules can be reused
+- the full program is easier to read and maintain
+
+Keep the explanation SL-friendly: decomposition is not about advanced software engineering. It is about making a complex problem easier to design, code, test, debug, and maintain.
+
+---
+
+## Decomposition workflow
+
+```mermaid
+flowchart TD
+    A["Complex problem"] --> B["Main sub-problem 1"]
+    A --> C["Main sub-problem 2"]
+    A --> D["Main sub-problem 3"]
+    B --> E["Smaller task 1A"]
+    B --> F["Smaller task 1B"]
+    C --> G["Smaller task 2A"]
+    D --> H["Smaller task 3A"]
+    E --> I["Individual solution"]
+    F --> I
+    G --> J["Individual solution"]
+    H --> K["Individual solution"]
+    I --> L["Combined final solution"]
+    J --> L
+    K --> L
+```
+
+---
+
+## Exam focus
+
+Command terms you may see:
+
+| Command term | What to write |
+|---|---|
+| State | Give a short definition of decomposition. |
+| Identify | Name suitable sub-problems in a scenario. |
+| Outline | Give sub-problems and one brief reason why they help. |
+| Describe | Explain how a problem can be broken into smaller tasks. |
+| Explain | Link decomposition to solving, testing, debugging, maintainability, or teamwork. |
+| Apply | Use decomposition on a new scenario and justify your sub-problems. |
+
+How much detail is usually needed:
+
+| Marks | What a strong answer includes |
+|---:|---|
+| 1 mark | A correct definition, such as breaking a complex problem into sub-problems. |
+| 2 marks | Definition plus one benefit, such as easier testing. |
+| 3 marks | Several sensible sub-problems from a scenario. |
+| 4 marks | Sub-problems plus explanation of how they can be solved or tested separately. |
+| 6 marks | Scenario-based decomposition with links to modules, testing, debugging, teamwork, or maintenance. |
+
+Avoid vague answers such as:
+
+- "decomposition means splitting"
+- "it makes coding easier"
+
+Better answers mention smaller sub-problems, separate solutions, separate testing, easier debugging, modular programming, or maintainability.
+
+---
+
+## Common exam mistakes
+
+| Mistake | Why it loses marks | Better answer habit |
+|---|---|---|
+| Giving only the definition with no scenario link | It does not show application. | Name sub-problems from the given scenario. |
+| Confusing decomposition with abstraction | They are related but different CT ideas. | Decomposition splits; abstraction ignores unnecessary detail. |
+| Listing random features instead of sub-problems | The parts may not help solve the problem. | Choose tasks that can be designed or tested. |
+| Not explaining how sub-problems are solved separately | The benefit is unclear. | Say each part can be developed, tested, or debugged separately. |
+| Forgetting testing/debugging benefits | Many exam answers need a practical benefit. | Link decomposition to locating errors in smaller parts. |
+| Saying decomposition always reduces the total amount of work | The work still exists; it is organized better. | Say it reduces complexity, not necessarily total work. |
+| Not linking decomposition to modular programming | Programming benefits may be missed. | Explain that sub-problems can become functions/procedures/modules. |
+| Using examples that are too broad | "Make app" is not a useful sub-problem. | Use specific tasks such as input details, validate data, calculate total, output result. |
+
+---
+
+## Reusable mark-scheme style phrases
+
+- **Decomposition breaks a complex problem into smaller sub-problems.**
+- **Each sub-problem can be solved, tested, or debugged separately.**
+- **Decomposition can make the solution easier to understand and maintain.**
+- **Sub-problems can be implemented as separate modules, procedures, or functions.**
+- **This helps teams divide work because different parts can be developed independently.**
+- **Decomposition reduces complexity because the programmer can focus on one manageable part at a time.**
+- **A good sub-problem should be clear, specific, manageable, and testable.**
+
+---
+
+## Quick-check questions
+
+1. What is decomposition?
+2. What is a sub-problem?
+3. Why does decomposition help with complex problems?
+4. How can decomposition help testing?
+5. How can decomposition help debugging?
+6. How is decomposition linked to modular programming?
+7. What is the difference between decomposition and abstraction?
+8. Why is "make the app" a poor sub-problem?
+9. Give two sub-problems for a quiz app.
+10. Why does decomposition help maintainability?
+
+<details>
+<summary>Short answers</summary>
+
+1. Breaking a complex problem into smaller, manageable sub-problems.
+2. A smaller part of the main problem that can be solved separately.
+3. It reduces complexity and lets you focus on one part at a time.
+4. Each part can be tested separately.
+5. Errors can be located in a smaller part of the solution.
+6. Sub-problems can become modules, procedures, or functions.
+7. Decomposition splits a problem into parts; abstraction ignores unnecessary details.
+8. It is too broad and cannot be designed or tested clearly.
+9. Examples: load questions, check answers, update score, show result.
+10. A change can often be made to one module without rewriting the whole solution.
+
+</details>
+
+---
+
+## Exam-style practice: decomposition
+
+### Question A [4 marks]
+
+Define decomposition and explain why it is useful when designing a solution.
+
+<details>
+<summary>Mark scheme</summary>
+
+Decomposition is breaking a complex problem into smaller, manageable sub-problems. It is useful because each sub-problem can be understood, solved, tested, and debugged separately. This reduces complexity and can make the final solution easier to maintain.
+
+</details>
+
+### Question B [6 marks]
+
+A hospital appointment system allows patients to book, cancel, and view appointments. Decompose this system into suitable sub-problems.
+
+<details>
+<summary>Mark scheme</summary>
+
+Possible sub-problems include:
+
+- store patient records
+- store doctor availability
+- search for available appointment times
+- book an appointment
+- cancel an appointment
+- send confirmation or error message
+- display upcoming appointments
+
+Award credit for sensible scenario-specific sub-problems. Strong answers explain that these parts can be designed and tested separately, for example testing appointment search without testing cancellation.
+
+</details>
+
+### Question C [6 marks]
+
+Explain how decomposition improves testing, debugging, and maintenance in a software project.
+
+<details>
+<summary>Mark scheme</summary>
+
+Decomposition divides the project into smaller modules or sub-problems. Each part can be tested separately, so the programmer can check whether one module works before combining it with the rest of the system. Debugging is easier because an error can be narrowed down to a smaller section of code. Maintenance is easier because changes can often be made to one module without rewriting the whole program.
+
+</details>
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1247,7 +1541,7 @@ Decomposition means breaking a problem into smaller sub-problems, while abstract
 ## 34. Practice task
 ### Activity 1: System Breakdown
 
-Groups choose one system:
+Choose one system:
 
 ```text
 library system
@@ -1258,7 +1552,7 @@ game score tracker
 ATM menu
 ```
 
-They produce:
+Produce:
 
 ```text
 main problem
@@ -1270,7 +1564,7 @@ one reason why decomposition helps
 
 ### Activity 2: Decomposition vs Abstraction Sort
 
-Students sort cards into decomposition or abstraction.
+Sort each example into decomposition or abstraction.
 
 Examples:
 
@@ -1287,8 +1581,8 @@ ignore font style in algorithm logic
 
 ### Activity 3: Test Each Part
 
-Give a system with sub-problems.  
-Students write one test idea for each part.
+Choose a system with sub-problems.
+Write one test idea for each part.
 
 Example:
 
