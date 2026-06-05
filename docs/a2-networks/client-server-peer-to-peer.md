@@ -37,6 +37,85 @@ Client-server and peer-to-peer describe how roles are organized in a network. In
 
 ---
 
+## Start here: choose the network model by scenario
+
+Network model questions often ask students to compare how devices share resources and responsibilities.
+
+Client-server uses dedicated servers to provide services to clients. Peer-to-peer allows devices to share resources more directly with each other.
+
+Students should choose a model by considering control, cost, scalability, security, reliability, and ease of management.
+
+---
+
+## Client-server vs peer-to-peer
+
+| Feature | Client-server | Peer-to-peer |
+|---|---|---|
+| Main idea | clients request services from a central server | devices can act as both clients and servers |
+| Management | easier to manage centrally | harder to manage consistently |
+| Cost | may need dedicated server hardware and maintenance | lower setup cost for small networks |
+| Security | central control can improve security | security may be weaker or less consistent |
+| Reliability | server failure can affect many clients | no single central server, but peers may be unreliable |
+| Scalability | better for larger organizations | better for small/simple sharing situations |
+
+---
+
+## Model choice workflow
+
+When solving a network model scenario, use this order:
+
+1. Identify who needs to share data or services.
+2. Decide whether central control is important.
+3. Consider the size of the network.
+4. Consider security and user management needs.
+5. Consider cost and maintenance.
+6. Choose client-server or peer-to-peer.
+7. Justify the choice using details from the scenario.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain what a client is
+- explain what a server is
+- describe the client-server model
+- describe the peer-to-peer model
+- compare centralized and decentralized control
+- give advantages and disadvantages of client-server
+- give advantages and disadvantages of peer-to-peer
+- choose a suitable model for a scenario and justify the choice
+
+---
+
+## Scenario answer pattern
+
+When answering a client-server / peer-to-peer question, use this order:
+
+1. Identify the network situation.
+2. State the model that is more suitable.
+3. Explain how the model works.
+4. Give one advantage linked to the scenario.
+5. Give one disadvantage or limitation if the question asks for evaluation.
+6. Compare with the other model if required.
+7. Use precise terms such as client, server, peer, centralized control, resource sharing, authentication, and management.
+
+---
+
+## Common mistakes
+
+- saying peer-to-peer means there is no network
+- saying client-server means only one client can connect
+- confusing a server with the internet
+- saying peer-to-peer is always insecure without explanation
+- saying client-server is always better without considering cost or server failure
+- forgetting that a peer can both request and provide resources
+- giving an advantage without linking it to the scenario
+- mixing up centralized control with physical location
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -297,7 +376,7 @@ a browser tab
 
 Client-server communication often uses a request-response pattern.
 
-### Example: Website
+### Client-server example: Website
 
 ```text
 1. User enters URL in browser.
@@ -317,7 +396,7 @@ sequenceDiagram
     S->>C: Response with webpage data
 ```
 
-### Example: School File Server
+### Client-server example: School File Server
 
 ```text
 1. Student logs in.
@@ -360,7 +439,7 @@ A server is defined by the service it provides, not only by the physical machine
 | Consistency | all clients can access same central data |
 | Easier maintenance | updates can be applied to server-side services |
 
-### Example
+### Centralized control example
 
 A school file server allows student files to be stored centrally, backed up, and protected by permissions.
 
@@ -455,7 +534,7 @@ provide processing or data
 communicate directly with peers
 ```
 
-### Example
+### Decentralized sharing example
 
 Computer A shares a folder.  
 Computer B requests a file from that folder.
@@ -579,7 +658,7 @@ availability depends on peers
 
 ---
 
-## 17. Worked Example: Opening a Website
+## 17. Client-server example: Opening a Website
 
 This is a client-server example.
 
@@ -613,7 +692,7 @@ network security
 
 ---
 
-## 18. Worked Example: School File Server
+## 18. Centralized control example: School File Server
 
 A school stores student work on a file server.
 
@@ -692,7 +771,7 @@ server outage or high latency can affect gameplay
 
 ---
 
-## 20. Worked Example: Direct File Sharing
+## 20. Peer-to-peer example: Direct File Sharing
 
 Two computers share files directly.
 
@@ -725,7 +804,7 @@ harder to manage permissions centrally
 
 ---
 
-## 21. Worked Example: P2P File Distribution
+## 21. Peer-to-peer example: P2P File Distribution
 
 Some P2P systems distribute a file by allowing many peers to share pieces of it.
 
@@ -793,7 +872,7 @@ cost
 
 ---
 
-## 23. Choosing the Right Model
+## 23. Model choice example: Choosing the Right Model
 
 ### Use Client-Server When
 
