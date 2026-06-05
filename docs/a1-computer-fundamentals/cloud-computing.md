@@ -36,6 +36,301 @@ Cloud computing does not mean data is stored “in the air”. It means computin
 
 ---
 
+## Start here: cloud means remote resources over the internet
+
+**Cloud computing** means using computing resources over the internet instead of relying only on local hardware. These resources may include **storage**, **software applications**, **development platforms**, **virtual servers**, databases, or processing power.
+
+The key idea is:
+
+```text
+user device -> internet access -> remote server / cloud provider
+```
+
+Core keywords for this page: **cloud computing**, **cloud service**, **remote server**, **internet access**, **storage**, **processing**, **scalability**, and **availability**.
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- define **cloud computing**
+- explain why organizations use cloud services
+- distinguish **local computing** from **cloud computing**
+- explain **SaaS**, **PaaS**, and **IaaS** at SL level
+- give examples of cloud storage, online applications, and cloud development platforms
+- explain advantages and disadvantages of cloud computing
+- apply cloud ideas to school, hospital, business, software development, and home user scenarios
+
+---
+
+## Key terms exam table
+
+| Term | 简单中文解释 | English mark-scheme phrase | Simple example |
+|---|---|---|---|
+| Cloud computing | 通过互联网使用远程计算资源 | Provides computing resources over the internet | Using cloud servers to store and process data |
+| Cloud storage | 把文件存储在远程服务器上 | Stores data on remote servers managed by a provider | OneDrive or Google Drive |
+| Remote server | 用户不直接拥有、通过网络访问的服务器 | A server accessed over a network rather than locally | School LMS server |
+| Data centre | 放置大量服务器和网络设备的设施 | Facility containing servers, storage, networking, power, and cooling | Cloud provider data centre |
+| SaaS | 直接通过网络使用完整软件 | Complete software application accessed over the internet | Google Docs, Microsoft 365 online |
+| PaaS | 用于开发和部署应用的平台 | Platform and tools for developing and deploying applications | Cloud app hosting platform |
+| IaaS | 虚拟化服务器、存储和网络资源 | Virtualized computing resources such as servers and storage | Renting a virtual server |
+| Scalability | 按需求增减资源的能力 | Ability to increase or reduce resources on demand | Add server capacity during a sale |
+| Availability | 服务在需要时可访问 | Whether a service is accessible when needed | Cloud storage available from home and school |
+| Subscription model | 按月/按年/按使用量付费 | Regular or usage-based payment for access | Monthly cloud storage plan |
+| Internet dependency | 依赖可靠网络连接 | Cloud service depends on network access | Cannot open cloud file during outage |
+| Vendor lock-in | 难以离开某个供应商 | Difficulty moving away from one provider | App depends on one provider's platform |
+| Data privacy | 个人或敏感数据如何被保护和访问 | Concern about who can access stored data | Student records stored with provider |
+
+---
+
+## Local computing vs cloud computing
+
+| Comparison point | Local computing | Cloud computing |
+|---|---|---|
+| Where data/applications are stored | On the user's device or local server | On remote servers/data centres managed by a provider |
+| Hardware responsibility | User or organization buys and maintains hardware | Provider manages much of the infrastructure |
+| Internet requirement | Not always required for local work | Usually requires reliable internet access |
+| Scalability | Limited by owned hardware | Resources can often increase or decrease on demand |
+| Cost model | Higher upfront hardware cost and maintenance | Subscription or pay-as-you-go cost |
+| Control | More direct control over hardware and location | Less direct control; depends on provider |
+| Suitable example | A small offline file stored on a laptop SSD | Shared school documents accessed from home and school |
+| Common exam phrase | "Local computing uses resources on the user's own device or local network." | "Cloud computing uses remote resources accessed over the internet." |
+
+---
+
+## SaaS vs PaaS vs IaaS
+
+| Model | What the user receives | What the provider manages | What the user manages | Typical users | Student-friendly examples | Common exam wording |
+|---|---|---|---|---|---|---|
+| SaaS | Ready-to-use software application | Application, platform, servers, updates | Account, data, settings, permissions | General users, schools, businesses | Google Docs, online email, Canva | "SaaS provides complete software applications accessed over the internet." |
+| PaaS | Development/deployment platform | Runtime, platform tools, hosting environment, much infrastructure | Application code, data, configuration | Developers and software teams | Web app hosting platform, cloud database platform | "PaaS provides a platform and tools for developing and deploying applications." |
+| IaaS | Virtual infrastructure | Physical data centre hardware and virtualization | Virtual machines, operating systems, installed software, security settings | IT teams, developers, organizations | Virtual server, cloud storage, cloud networking | "IaaS provides virtualized computing resources such as servers and storage." |
+
+Quick memory:
+
+```text
+SaaS = use the finished app
+PaaS = build and deploy your app on a platform
+IaaS = rent virtual infrastructure
+```
+
+---
+
+## Why PaaS is useful for software development
+
+**PaaS** is useful when a team wants to build, test, and deploy an application without managing all server hardware themselves.
+
+PaaS can provide:
+
+- development tools and runtime environments
+- managed databases or app hosting
+- easier collaboration between developers
+- easier deployment to users
+- easier scaling when more users access the app
+
+Example: a student team building a booking app can focus on writing application code and testing features, while the PaaS provider manages much of the server environment.
+
+---
+
+## Advantages of cloud computing
+
+| Advantage | Explanation |
+|---|---|
+| Access from different locations/devices | Users can access files or services from school, home, or mobile devices |
+| Easier sharing and collaboration | Multiple users can work on shared documents or systems |
+| Scalable storage/processing | Resources can increase or decrease as demand changes |
+| Reduced need for local servers | Organizations may buy and maintain fewer physical servers |
+| Automatic updates/backups may be provided | Provider may manage updates, backups, or version history |
+| Disaster recovery and availability benefits | Data may be stored in data centres with redundancy and recovery systems |
+
+Do not say cloud is always better. Explain which advantage fits the scenario.
+
+---
+
+## Limitations and risks
+
+| Limitation / risk | Explanation |
+|---|---|
+| Reliable internet required | Users may lose access if the network connection fails |
+| Ongoing subscription cost | Costs may continue or increase as usage grows |
+| Less direct control | Organization may not control the exact infrastructure or location |
+| Data privacy/security concerns | Sensitive data is stored with a provider and must be protected |
+| Service outage risk | Provider problems can make the service unavailable |
+| Vendor lock-in | Moving to another provider may be difficult or expensive |
+| Data transfer/compliance issues | Data location, legal rules, and transfer limits may matter |
+
+Cloud computing can be useful, but exam answers should include both benefits and risks when the question asks for evaluation.
+
+---
+
+## Cloud service model diagram
+
+```mermaid
+flowchart LR
+    Users["User devices<br/>laptop / tablet / phone"]
+    Internet["Internet access"]
+
+    subgraph Cloud["Cloud provider"]
+        Storage["Cloud storage<br/>files and backups"]
+        SaaS["Cloud application / SaaS<br/>online document editor"]
+        PaaS["Development platform / PaaS<br/>runtime and deployment tools"]
+        IaaS["Virtual server / IaaS<br/>VMs, storage, networking"]
+    end
+
+    Users --> Internet
+    Internet --> Cloud
+    Cloud --> Storage
+    Cloud --> SaaS
+    Cloud --> PaaS
+    Cloud --> IaaS
+```
+
+The user accesses cloud services through the internet. The provider runs real servers in data centres, even though the user does not manage that physical hardware directly.
+
+---
+
+## Exam focus
+
+| Command term | What to write |
+|---|---|
+| State | Give the correct term or one short definition. |
+| Identify | Pick the correct service model or cloud feature from a scenario. |
+| Outline | Give the main idea plus one relevant detail. |
+| Describe | Explain what the cloud service provides and who manages it. |
+| Explain | Link the advantage or risk to the scenario. |
+| Compare | Give paired differences, such as local vs cloud or SaaS vs PaaS vs IaaS. |
+
+For mark levels:
+
+- **1 mark:** define one term, such as SaaS or cloud computing.
+- **2 marks:** give a definition and one example.
+- **3 marks:** describe a model using provider/user responsibility.
+- **4 marks:** explain two benefits or risks with scenario detail.
+- **6 marks:** compare options using access, cost, scalability, control, privacy, internet dependency, and the scenario.
+
+Avoid vague answers such as:
+
+```text
+cloud means online
+cloud is always cheaper
+cloud is always secure
+PaaS means any software on the internet
+```
+
+Better answers name the service model and explain what the provider gives, what the user manages, and why it fits or does not fit the scenario.
+
+---
+
+## Reusable mark-scheme style phrases
+
+- "Cloud computing provides computing resources over the internet."
+- "Cloud storage stores data on remote servers managed by a provider."
+- "SaaS provides complete software applications accessed over the internet."
+- "PaaS provides a platform and tools for developing and deploying applications."
+- "IaaS provides virtualized computing resources such as servers and storage."
+- "Cloud computing can improve scalability because resources can be increased or reduced on demand."
+- "A limitation is that users depend on reliable internet access and the cloud provider's availability."
+- "Cloud computing still uses physical servers in data centres, but the user usually does not manage them directly."
+
+---
+
+## Common mistakes table
+
+| Mistake | Why it is wrong | Better understanding |
+|---|---|---|
+| Confusing cloud storage with cloud computing as a whole | Cloud storage is only one cloud service | Cloud computing can include software, platforms, infrastructure, databases, and processing |
+| Confusing SaaS, PaaS, and IaaS | They provide different levels of service | SaaS is finished software; PaaS is a development platform; IaaS is virtual infrastructure |
+| Saying cloud means data is not stored on physical servers | Cloud services still use real servers | Data centres contain physical hardware |
+| Saying cloud always removes security risks | Misconfigured accounts, permissions, and attacks are still possible | Cloud security is shared between provider and user |
+| Forgetting internet dependency | Many cloud services need reliable network access | Outages can stop access |
+| Forgetting provider/user responsibility split | Provider does not manage every user decision | Users still manage accounts, data, access, and configuration |
+| Saying PaaS is only for end users | PaaS is mainly for developers and software teams | PaaS supports building and deploying applications |
+| Giving examples without explaining the model | Example names alone may not earn marks | Explain why the example is SaaS, PaaS, IaaS, storage, or local computing |
+
+---
+
+## Quick-check questions with short answers
+
+1. What is cloud computing?  
+   **Answer:** Using computing resources over the internet from remote servers.
+
+2. What is cloud storage?  
+   **Answer:** Storing data on remote servers managed by a provider.
+
+3. What is a remote server?  
+   **Answer:** A server accessed over a network rather than directly owned or used locally.
+
+4. What does SaaS provide?  
+   **Answer:** Complete software applications accessed over the internet.
+
+5. What does PaaS provide?  
+   **Answer:** A platform and tools for developing and deploying applications.
+
+6. What does IaaS provide?  
+   **Answer:** Virtualized computing resources such as servers, storage, and networking.
+
+7. What is scalability?  
+   **Answer:** The ability to increase or reduce resources on demand.
+
+8. Give one cloud advantage for a school.  
+   **Answer:** Students can access shared files from home and school.
+
+9. Give one cloud risk.  
+   **Answer:** Dependence on reliable internet or provider availability.
+
+10. Why is vendor lock-in a problem?  
+    **Answer:** It can make moving to another provider difficult or expensive.
+
+---
+
+## Exam-style practice: cloud computing
+
+### Question A [6 marks]
+
+A school is deciding whether to store student work on local servers or cloud storage. Compare local computing and cloud computing for this scenario.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Local computing stores data on the school's own devices or local servers, giving the school more direct control over hardware and possibly allowing access on the local network without relying fully on the internet. However, the school must buy, maintain, secure, and back up its own servers. Cloud computing stores data on remote servers managed by a provider and accessed over the internet. This can improve access from home and school, sharing, collaboration, and scalability. Risks include internet dependence, provider outages, subscription cost, privacy concerns, and less direct control over infrastructure.
+
+</details>
+
+---
+
+### Question B [6 marks]
+
+Identify whether each scenario is most likely SaaS, PaaS, or IaaS, and explain why.
+
+```text
+1. A student edits a shared document in an online word processor.
+2. A developer team deploys a web app using a cloud platform with runtime tools.
+3. A company rents virtual servers and installs its own operating system and software.
+```
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+Scenario 1 is SaaS because the student is using a complete software application accessed over the internet. Scenario 2 is PaaS because the developers receive a platform and tools for building, testing, and deploying an application without managing all server hardware. Scenario 3 is IaaS because the company receives virtualized infrastructure such as virtual servers and storage, while it manages the operating system and software.
+
+</details>
+
+---
+
+### Question C [6 marks]
+
+A small team is developing a booking application for a school event. Explain why PaaS may be suitable.
+
+<details>
+<summary>Mark Scheme Style Answer</summary>
+
+PaaS may be suitable because it provides a platform and tools for developing, testing, and deploying the booking application. The team can focus on application code and features instead of managing all physical server hardware. The platform may provide runtime environments, hosting, databases, deployment tools, and monitoring. It can make collaboration easier because developers can work on the same cloud-based platform. It can also make scaling and deployment easier if more users access the booking system during the event. A limitation is that the team depends on the provider's availability, pricing, platform features, and internet access.
+
+</details>
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
