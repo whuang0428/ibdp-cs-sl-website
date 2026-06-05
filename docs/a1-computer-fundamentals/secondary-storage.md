@@ -35,6 +35,88 @@ Secondary storage stores data and programs long term. It is usually non-volatile
 
 ---
 
+## Start here: storage keeps data long term
+
+Secondary storage keeps data even when the power is off.
+
+It is different from primary memory, which is mainly used while programs are running.
+
+Compare storage methods by capacity, speed, cost, portability, durability, and access needs. In exam questions, the key skill is choosing a suitable storage method for a scenario and justifying the choice.
+
+---
+
+## Storage choice workflow
+
+Use this route when choosing storage for a scenario:
+
+| Step | What to do | Why it matters |
+|---:|---|---|
+| 1 | Identify what data needs to be stored. | The data type affects capacity, speed, and security needs. |
+| 2 | Decide whether the data must be accessed often or only kept long term. | Frequent access usually needs faster storage. |
+| 3 | Consider how much capacity is needed. | Large files and backups need more space. |
+| 4 | Consider speed and performance. | Operating systems, apps, and games benefit from faster storage. |
+| 5 | Consider cost and portability. | Some scenarios need low cost or easy movement between devices. |
+| 6 | Consider reliability, durability, and backup needs. | Important data needs protection and recovery planning. |
+| 7 | Choose the most suitable storage method. | The choice should match the scenario, not just a definition. |
+| 8 | Justify the choice using scenario details. | Explain why the storage method fits the user's needs. |
+
+---
+
+## Storage comparison table
+
+| Storage type | Strengths | Limitations | Suitable scenario |
+|---|---|---|---|
+| HDD | large capacity, lower cost per GB | slower, moving parts | large local storage or backups |
+| SSD | fast, durable, no moving parts | more expensive per GB | operating system, frequently used files |
+| Optical storage | cheap, removable, useful for distribution/archive | lower capacity, slower | distributing files or long-term archive |
+| USB / flash storage | portable and easy to use | can be lost or damaged | transferring files |
+| Cloud storage | accessible from many devices, supports sharing | needs internet, privacy/security concerns | shared files, remote backup |
+
+---
+
+## Core checklist
+
+By the end of this page, you should be able to:
+
+- explain what secondary storage is
+- distinguish secondary storage from primary memory
+- compare HDD and SSD
+- explain when cloud storage may be useful
+- explain when removable storage may be useful
+- describe the purpose of backup
+- describe the purpose of archive
+- choose suitable storage for a scenario
+- justify the choice using capacity, speed, cost, portability, durability, or access needs
+
+---
+
+## Scenario answer pattern
+
+When you meet a storage choice question, use this order:
+
+1. Identify the user or organization's storage need.
+2. Decide whether speed, capacity, portability, cost, or access is most important.
+3. Choose a suitable storage method.
+4. Give one clear advantage linked to the scenario.
+5. Give one limitation or risk if the question asks for evaluation.
+6. Mention backup or security if the data is important.
+7. Avoid giving only a definition without scenario justification.
+
+---
+
+## Common mistakes
+
+- confusing RAM with secondary storage
+- saying secondary storage loses data when power is off
+- choosing SSD only because it is "better" without linking to the scenario
+- choosing cloud storage without mentioning internet access or privacy/security
+- confusing backup with archive
+- saying backup means deleting old files
+- focusing only on capacity and ignoring speed, cost, or portability
+- naming a device without explaining why it fits the scenario
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -205,6 +287,8 @@ backups could not be stored
 
 ### Example
 
+Scenario choice example: saved code files need secondary storage so they remain after power is off.
+
 A student writes code in an IDE.
 
 | Stage | Where Data Is |
@@ -271,6 +355,8 @@ cloud storage
 
 ## 9. Solid-State Drive: SSD
 
+SSD example: use this when fast startup, fast loading, and shock resistance matter.
+
 An SSD uses flash memory and has no moving mechanical parts.
 
 ### Advantages
@@ -317,6 +403,8 @@ games load faster
 ---
 
 ## 10. Hard Disk Drive: HDD
+
+HDD example: use this when large capacity and low cost per GB matter more than speed.
 
 An HDD uses spinning magnetic disks and a read/write head.
 
@@ -434,6 +522,8 @@ single-board computers
 
 ## 13. Optical Storage
 
+Archive example: optical storage can be useful for cheap offline distribution or long-term storage.
+
 Optical storage uses lasers to read or write data.
 
 Examples:
@@ -508,6 +598,8 @@ Students usually only need basic awareness that magnetic tape is useful for larg
 ---
 
 ## 15. Cloud Storage
+
+Cloud storage example: cloud storage is useful when files must be accessed or shared from different devices.
 
 Cloud storage stores data on remote servers accessed through a network.
 
@@ -601,6 +693,8 @@ physical size
 
 ## 18. Choosing Suitable Storage
 
+Scenario choice example: choose storage by matching device strengths to the user's situation.
+
 ### Scenario Table
 
 | Scenario | Suitable Storage | Reason |
@@ -633,6 +727,8 @@ SSD is suitable because it has fast read/write speed, which helps the operating 
 ---
 
 ## 19. Backup and Storage
+
+Backup example: a backup is a recovery copy, not the original working file.
 
 A backup is a copy of data used for recovery.
 
@@ -670,6 +766,8 @@ cloud/off-site backup for disaster recovery
 ---
 
 ## 20. Archive Storage
+
+Archive example: archive storage keeps rarely used data for long-term retention.
 
 Archiving means storing data long term because it is rarely used but may still be needed.
 
@@ -749,6 +847,8 @@ A lost USB drive with student records can cause a data breach if it is not encry
 
 ## 23. Worked Example: Student Laptop
 
+Scenario choice example: a student laptop may combine fast local storage, cloud sync, and separate backup.
+
 A student laptop may use:
 
 ```text
@@ -785,6 +885,8 @@ protects against laptop failure or accidental deletion
 
 ## 24. Worked Example: School Server
 
+Scenario choice example: a school server needs capacity, speed, security, reliability, and backup planning.
+
 A school server stores:
 
 ```text
@@ -817,7 +919,7 @@ cost
 
 ---
 
-## 25. Common Mistakes
+## 25. Detailed common mistakes table
 
 | Mistake | Why it is wrong | Better understanding |
 |---|---|---|
