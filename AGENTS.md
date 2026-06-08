@@ -6,7 +6,8 @@
 
 这是一个 VitePress 静态学习网站，主题是 IBDP Computer Science SL。
 
-- 项目根目录：`D:\ibdp-cs-sl-website`
+- 当前本机项目根目录：`/Users/kw/Projects/ibdp-cs-sl-website`
+- 历史 Windows 路径可能写作：`D:\ibdp-cs-sl-website`
 - 学生可见内容根目录：`docs/`
 - VitePress 配置：`docs/.vitepress/config.mts`
 - 主题入口：`docs/.vitepress/theme/index.ts`
@@ -42,6 +43,25 @@
 根目录的 `ib-official-alignment-audit.md`、`ia-support-official-refactor-plan.md`、`ia-support-old-pages-cleanup-plan.md` 是内部规划文件，不要移动到 `docs/`，也不要作为学生页面发布。
 
 临时用于保存表格、阶段计划或审计摘要的 `.md` 文件只作为临时工作材料；除非用户明确要求保留，不要长期加入项目规则，也不要移动到 `docs/`。
+
+## 当前成熟度和客观维护重点
+
+本仓库目前可以作为 IBDP Computer Science SL 学生使用的学习网站。它已经覆盖 Theme A、Theme B、Exam Practice、IA Support、Glossary 和 Interactive Demos，并且页面结构已经从教师/内部审计视角调整为 student-facing 学习路线。
+
+客观定位：
+
+- 成熟度：高，适合作为 SL 学生的主学习入口和复习导航。
+- 课程覆盖：Theme A / Theme B / IA / Paper 1 / Paper 2 支持已经具备主框架。
+- 最大优势：页面数量充足、互动 demo 多、IA 支持结构清楚、考试技能和 topic 页面有明显连接。
+- 主要剩余风险：官方 IB Computer Science 新课程仍处于 2025 起教学、2027 首考前后的稳定化阶段；公开页面不得声称替代教师的最新官方文件。
+
+后续维护优先级：
+
+1. 每次大改后运行 `npm run docs:build`，必要时运行链接检查脚本。
+2. 定期对照最新 IB 指导文件检查 Paper 2、IA 和命令术语表述，避免旧 paper 或旧 IA 结构回流。
+3. 继续加深 Paper 2 Theme B 的长情境题、trace、pseudocode / Java / Python 转换和 OOP 应用题。
+4. 给 IA Support 增加更多原创示例 evidence snippets，但不要复制官方 exemplar 或 markscheme。
+5. 互动 demo 如果改动，要同时验证桌面和移动端是否能正常渲染。
 
 ## 常用命令
 
