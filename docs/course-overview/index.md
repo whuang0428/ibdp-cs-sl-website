@@ -40,20 +40,20 @@ The official SL syllabus is organized into two themes.
 | [Roadmap](../roadmap) | Follow the recommended learning order. |
 | Topic pages | Study specific Theme A and Theme B syllabus areas. |
 | [Assessment](../assessment/) | Understand Paper 1, Paper 2, and the IA at a high level. |
-| [Exam Practice](../exam-practice/) | Practise Paper 1 skills, Paper 2 preparation, command terms, and mark scheme language. |
+| [Exam Practice](../exam-practice/) | Practise written exam skills, Theme A / Theme B application, command terms, and mark scheme language. |
 | [IA Support](../ia-support/) | Use this when starting or improving the IA computational solution. |
 
 ## Assessment connection
 
-- Paper 1: core syllabus understanding and problem-solving across Theme A and Theme B.
-- Paper 2: option-based applied paper that needs separate option preparation.
+- Paper 1: mainly Theme A concepts of computer science, with scenario-based written explanations.
+- Paper 2: mainly Theme B computational thinking and problem-solving, with programming / pseudocode application.
 - IA: computational solution project where you plan, develop, test, document, and evaluate your own solution.
 
 Useful assessment pages:
 
 - [Assessment Overview](../assessment/)
 - [Paper 1 Overview](../exam-practice/paper-1-overview)
-- [Paper 2 Overview](../exam-practice/paper-2-overview)
+- [Paper 2 Theme B Skills](../exam-practice/paper-2-theme-b-skills)
 - [IA Support](../ia-support/)
 
 ## Recommended way to use this website
@@ -61,7 +61,7 @@ Useful assessment pages:
 1. Read Course Overview first.
 2. Follow the [Roadmap](../roadmap).
 3. Study topic pages by Theme A and Theme B.
-4. Use [Exam Practice](../exam-practice/) for Paper 1 and Paper 2 preparation.
+4. Use [Exam Practice](../exam-practice/) for written exam preparation and scenario-based answers.
 5. Use [IA Support](../ia-support/) when starting the computational solution.
 
 ## Topic landing pages
@@ -75,4 +75,3 @@ Useful assessment pages:
 | Theme B | B1 Computational thinking | [Open](../b1-computational-thinking/) |
 | Theme B | B2 Programming | [Open](../b2-programming/) |
 | Theme B | B3 Object-oriented programming | [Open](../b3-oop/) |
-

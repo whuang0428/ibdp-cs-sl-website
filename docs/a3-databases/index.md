@@ -14,7 +14,7 @@ Theme A: Concepts of computer science. A3 Databases helps you understand how str
 ## Assessment connection
 
 - Paper 1: tests database concepts, relationships, keys, SQL, normalization, security, and recovery.
-- Paper 2: may be especially useful if your selected option includes databases or applied data systems.
+- Paper 2: may support applied problem-solving when database logic or data handling appears in a scenario.
 - IA: helps you design persistent data storage, justify table structures, and explain data handling choices.
 
 ## 1. Module Overview
@@ -980,4 +980,3 @@ Before moving to A1 Computer Fundamentals, students should be able to:
 ::: tip Next Module
 After A3, the teaching sequence moves to **A1 Computer Fundamentals**. Students will shift from database systems to hardware, software, operating systems, and fundamental computer architecture ideas.
 :::
-

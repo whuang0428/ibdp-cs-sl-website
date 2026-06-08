@@ -237,7 +237,8 @@ Assessment 内容应帮助学生清楚区分 Paper 1、Paper 2 和 IA。
 
 - `docs/assessment/` 用作 Assessment Overview。
 - `docs/exam-practice/` 用作考试练习入口，当前重点是 Paper 1 技能和练习。
-- Paper 2 应被说明为 option-based / applied paper，需要单独准备；不要把 Paper 2 混同为 Paper 1 练习。
+- 不要重新创建旧的 `docs/exam-practice/paper-2-overview.md`，也不要再把 Paper 2 描述成旧 syllabus 的 option-based paper。
+- 当前正确的 Paper 2 学习路线页是 `docs/exam-practice/paper-2-theme-b-skills.md`。它必须保持 Theme B computational thinking and problem-solving 定位，并提醒学生遵循最新 school guidance。
 - IA 应链接到 `docs/ia-support/`，不要在 Assessment 页面中重复 IA Support 的完整内部内容。
 
 更新 Assessment navbar 时，至少保留：
@@ -248,6 +249,16 @@ Assessment 内容应帮助学生清楚区分 Paper 1、Paper 2 和 IA。
 - Glossary
 
 不要创建指向不存在 Paper 2 页面或未完成页面的死链接。
+
+## 成熟度评估和优化优先级
+
+当前网站已经适合 IB CS SL 学生作为学习和复习辅助使用，但还不应被当作唯一主教材。后续维护优先级如下：
+
+1. 优先校准 Assessment / Exam Practice：所有 Paper 1、Paper 2、IA 说明必须匹配最新 IB 课程和学校实际要求，避免保留旧 option-paper 说法。
+2. 增强 IA Support：为 Criteria A-E 添加更具体的好/坏示例、success criteria 样例、testing evidence 样例、视频展示建议和引用 / AI 使用说明。
+3. 标清 SL / HL / extension 边界：`extension-hl-programming` 和 `extension-software-engineering` 页面要用清晰 warning 或 tip 说明不是 SL 核心必学内容。
+4. 给超长 topic 页面做学生导航：保留内容深度，但在顶部加入 `Start here`、`Core checklist`、`Must know for SL`、`Exam answer pattern`、`Optional extension` 等分层。
+5. 每次发布前安装依赖并运行 `npm run docs:build`；如果修改大量链接或导航，还要运行链接检查脚本。
 
 ## IA Support 规则
 

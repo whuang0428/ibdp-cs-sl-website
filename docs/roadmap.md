@@ -10,6 +10,10 @@ The official syllabus structure is still Theme A and Theme B. Students should us
 | Theme B | Build problem-solving and programming skills |
 | Assessment | Practise Paper 1, Paper 2, and IA skills throughout the course |
 
+::: tip Core first
+For SL exam preparation, complete Theme A and Theme B before spending major time on optional extension pages. Extension pages can support stronger programming and IA-style project habits, but they should not replace the SL core route.
+:::
+
 ## 1. Course Structure
 
 This website keeps the official IBDP Computer Science SL areas visible while using a teaching order designed for student learning.
@@ -23,8 +27,8 @@ This website keeps the official IBDP Computer Science SL areas visible while usi
 | 5 | A1 Computer Fundamentals | Explain hardware, CPU, memory, storage, OS, and control systems | `/a1-computer-fundamentals/` |
 | 6 | A2 Networks | Explain network communication, protocols, security, and web access | `/a2-networks/` |
 | 7 | A4 Machine Learning | Introduce ML workflow, evaluation, ethics, and limitations | `/a4-machine-learning/` |
-| 8 | HL Programming Extension | Optional extension after SL core topics | `/extension-hl-programming/` |
-| 9 | Software Engineering | Optional extension after SL core topics | `/extension-software-engineering/` |
+| 8 | HL Programming Extension | Optional enrichment after SL core topics | `/extension-hl-programming/` |
+| 9 | Software Engineering | Optional project-skills enrichment after SL core topics | `/extension-software-engineering/` |
 | 10 | Exam / IA / Glossary | Support assessment and revision | `/exam-practice/`, `/ia-support/`, `/glossary/` |
 
 ---
@@ -194,4 +198,3 @@ Students can explain the ML workflow and evaluate whether ML is suitable in a sc
 ```
 
 ---
-

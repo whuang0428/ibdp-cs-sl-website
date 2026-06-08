@@ -118,7 +118,29 @@ The video should support the documentation by showing the product working and sh
 
 The video should not be only a tour of screens. It should demonstrate functionality and testing examples.
 
-## 10. Appendix Checklist
+## 10. Video Storyboard Planner
+
+Plan the video before recording. A clear video is usually short, direct, and linked to success criteria.
+
+| Time | What to show | Evidence purpose |
+|---|---|---|
+| 0:00-0:20 | Product opens and main user goal is clear | Shows the solution is running and fits the problem |
+| 0:20-1:30 | Main feature 1 and main feature 2 | Shows core success criteria working |
+| 1:30-2:30 | Data processing, search, save/load, calculation, or algorithmic logic | Shows computational thinking, not only screen navigation |
+| 2:30-3:30 | Valid and invalid test examples | Shows testing strategy and error handling |
+| 3:30-4:30 | Evidence of persistence, output, report, or final result | Shows the product produces useful results |
+| 4:30-5:00 | Brief final check or limitation if appropriate | Shows honest understanding without turning the video into a speech |
+
+Before recording, prepare:
+
+- [ ] mock or safe sample data
+- [ ] exact test inputs to type
+- [ ] expected outputs to show
+- [ ] features linked to success criteria
+- [ ] no private data visible on screen
+- [ ] a clean desktop/browser/app window
+
+## 11. Appendix Checklist
 
 The appendix should support the IA but should not replace clear explanation in the main documentation.
 
@@ -133,7 +155,7 @@ The appendix should support the IA but should not replace clear explanation in t
 - [ ] Any required screenshots, extended tables, or supporting materials are included only if allowed by teacher/school guidance.
 - [ ] The appendix is organised so a reader can find evidence easily.
 
-## 11. Source Acknowledgement Checklist
+## 12. Source Acknowledgement Checklist
 
 - [ ] I acknowledged external libraries.
 - [ ] I acknowledged tutorials used to learn techniques.
@@ -145,7 +167,7 @@ The appendix should support the IA but should not replace clear explanation in t
 - [ ] I did not hide important external help.
 - [ ] I used citations or references in the format required by my teacher or school.
 
-## 12. Data and Ethics Checklist
+## 13. Data and Ethics Checklist
 
 - [ ] I considered whether consent was needed.
 - [ ] I avoided collecting unnecessary personal data.
@@ -156,7 +178,7 @@ The appendix should support the IA but should not replace clear explanation in t
 - [ ] The product does not spy on, deceive, harm, or unfairly target users.
 - [ ] I have considered privacy, fairness, and possible misuse where relevant.
 
-## 13. Final Quality Check
+## 14. Final Quality Check
 
 | Check | Question |
 |---|---|
@@ -169,7 +191,7 @@ The appendix should support the IA but should not replace clear explanation in t
 | Formatting | Are headings, tables, screenshots, and references clear? |
 | Privacy | Is all displayed data safe to share? |
 
-## 14. Last 24-hour Checklist
+## 15. Last 24-hour Checklist
 
 - [ ] Open every file needed for submission.
 - [ ] Run the product from the submitted files.

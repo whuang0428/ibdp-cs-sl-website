@@ -39,7 +39,58 @@ Always follow the latest instructions from your teacher and school for final sub
 
 Keep these official criterion names visible in your own planning. Older words such as analysis, design, testing, and reflection can still be useful, but they should be clearly connected to Criteria A-E.
 
-## 4. Recommended IA Support Learning Path
+## 4. Evidence Chain Across A-E
+
+A strong IA does not treat the five criteria as separate essays. Each criterion should pass evidence to the next one.
+
+| Stage | What you create | How it should connect |
+|---|---|---|
+| Criterion A | Problem, user/context, requirements, success criteria | Success criteria become the targets for planning, testing, and evaluation |
+| Criterion B | Development plan, resources, risks, timeline | The plan should show how the success criteria will be built and checked |
+| Criterion C | System model, algorithms, data/UI design, testing strategy | The design should explain how the product will meet the planned requirements |
+| Criterion D | Development explanation, code excerpts, test evidence, video evidence | The evidence should show important features working, not just describe them |
+| Criterion E | Judgement against success criteria, strengths, limitations, improvements | The evaluation should use evidence from testing and the video, not personal opinion |
+
+Use this simple check:
+
+```text
+Problem -> Success criteria -> Design -> Development evidence -> Evaluation judgement
+```
+
+If a feature appears in Criterion D but was never planned in A-C, explain why it was added. If a success criterion appears in Criterion A but is never tested or evaluated, the evidence chain is broken.
+
+## 5. Mini Evidence Example
+
+This example shows how one small project idea can connect across Criteria A-E.
+
+### Project idea
+
+A small school library currently records book loans on paper. The librarian needs a simple system to store book records, search books, mark loans, return books, and save the data.
+
+### Evidence chain
+
+| Criterion | Example evidence |
+|---|---|
+| A: Problem specification | Problem: paper records are slow to search and easy to lose. Success criterion: the user can search books by title and see all matching records. |
+| B: Planning | Task: implement search feature after the book-record structure is finished. Risk: search may fail if title case differs. Response: plan case-insensitive matching. |
+| C: System overview | Design: `Book` records include ID, title, author, and status. Search algorithm compares the typed title with stored titles. Test plan includes exact, partial, and no-match cases. |
+| D: Development | Code excerpt: search function loops through book records and returns matching titles. Test evidence: T4 exact search passes, T5 partial search passes, T6 no-match message appears. |
+| E: Evaluation | Success criterion mostly met: title search works for exact and partial text, but spelling mistakes are not handled. Improvement: add fuzzy matching or suggestions for similar titles. |
+
+This chain is strong because the same feature appears in the problem, plan, system design, development evidence, testing evidence, and final evaluation.
+
+### Weak chain to avoid
+
+| Problem | Why it is weak |
+|---|---|
+| Criterion A says the system should be "easy to use" | Too subjective and hard to test |
+| Criterion C does not show how search works | Design evidence is missing |
+| Criterion D only shows screenshots of menus | Development evidence does not prove the algorithm works |
+| Criterion E says "the search is good" | Evaluation is opinion, not evidence |
+
+Use the stronger chain above as a model: every important claim should connect to a feature, test, screenshot, video timestamp, data record, or user feedback.
+
+## 6. Recommended IA Support Learning Path
 
 Use these IA Support pages as a learning path while you plan, build, document, and evaluate your computational solution.
 
@@ -55,7 +106,7 @@ Use these IA Support pages as a learning path while you plan, build, document, a
 | 8 | Ethics and Academic Integrity | Handle consent, data, AI, libraries, and citations responsibly |
 | 9 | Submission Checklist | Check documentation, video, appendix, and source code |
 
-## 5. What Makes a Suitable IA Project
+## 7. What Makes a Suitable IA Project
 
 A good IA project usually:
 
@@ -78,7 +129,7 @@ A good IA project usually:
 
 This does not mean every project must be large. A focused project with clear logic, persistent data, meaningful validation, and strong testing is usually better than an ambitious idea that is unfinished.
 
-## 6. Success Criteria Reminder
+## 8. Success Criteria Reminder
 
 Success criteria are not just a checklist of features. They should be measurable, clear, achievable, and testable. They should connect directly to the problem and the essential functionality of the software.
 
@@ -98,7 +149,7 @@ Better:
 
 > The system saves new records to persistent storage and loads them again when the program restarts.
 
-## 7. Academic Integrity Reminder
+## 9. Academic Integrity Reminder
 
 - The submitted work must be your own.
 - External code, libraries, tutorials, images, data, and AI assistance should be acknowledged where applicable.
@@ -106,7 +157,7 @@ Better:
 - If you use an external source to learn a technique, cite it.
 - If you use AI to help refine code or wording, follow your school's guidance and acknowledge it where required.
 
-## 8. How to Use This IA Support Section
+## 10. How to Use This IA Support Section
 
 Use this section as a guide while developing your IA. Start with the overview, then work through the criteria in order. Keep checking whether your project is still linked to the problem and success criteria.
 
@@ -118,7 +169,7 @@ As you work, ask yourself:
 - Can I explain the important parts of my code and design decisions?
 - Can I evaluate the finished product using evidence?
 
-## 9. Quick Check
+## 11. Quick Check
 
 1. What is the IA product supposed to be?
 

@@ -78,6 +78,10 @@ Assessment preparation includes Paper 1, Paper 2, and the IA computational solut
 | Theme A: Concepts of computer science | A1 Computer fundamentals<br>A2 Networks<br>A3 Databases<br>A4 Machine learning |
 | Theme B: Computational thinking and problem-solving | B1 Computational thinking<br>B2 Programming<br>B3 Object-oriented programming |
 
+::: tip Core vs extension
+For normal SL study, focus first on Theme A, Theme B, Assessment, Exam Practice, and IA Support. HL Programming Extension and Software Engineering are optional enrichment unless your teacher tells you to use them.
+:::
+
 ## Core SL Topics
 
 <div class="module-grid">
@@ -140,8 +144,8 @@ Assessment preparation includes Paper 1, Paper 2, and the IA computational solut
 <a href="./exam-practice/">Exam Practice</a>
 <a href="./glossary/">Glossary</a>
 <a href="./ia-support/">IA Support</a>
-<a href="./extension-hl-programming/">Optional HL Extension</a>
-<a href="./extension-software-engineering/">Optional Software Engineering</a>
+<a href="./extension-hl-programming/">Optional HL / Extension</a>
+<a href="./extension-software-engineering/">Optional Project Skills</a>
 
 </div>
 
@@ -284,4 +288,3 @@ Read the topic page first, then use an interactive demo if the topic has a proce
   }
 }
 </style>
-

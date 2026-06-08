@@ -14,7 +14,7 @@ Theme B: Computational thinking and problem-solving. B1 Computational thinking h
 ## Assessment connection
 
 - Paper 1: tests algorithmic thinking, decomposition, abstraction, flowcharts, trace tables, and explanation of logic.
-- Paper 2: supports applied problem-solving in the selected option area.
+- Paper 2: supports Theme B applied problem-solving, algorithm design, tracing, and scenario interpretation.
 - IA: helps you break a problem into parts, define algorithms, and explain how your solution works.
 
 ## 1. Module Overview
@@ -1168,4 +1168,3 @@ Before moving to the next module, students should be able to:
 | Dry run | Manually follow algorithm |
 | Logic error | Algorithm runs but gives wrong result |
 | Exam phrase | Computational thinking helps solve problems by decomposing them, abstracting details, designing algorithms, and testing the solution |
-

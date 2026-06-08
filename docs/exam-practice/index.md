@@ -6,8 +6,8 @@ This section helps you move from **learning content** to **answering exam-style 
 
 Use Exam Practice to train:
 
-- Paper 1 structure, timing, and scenario answers
-- Paper 2 option-based preparation
+- Paper 1 structure, timing, and Theme A scenario answers
+- Paper 2-style Theme B computational thinking and problem-solving
 - command terms and answer depth
 - mark scheme language
 - topic-based practice for Theme A and Theme B
@@ -18,10 +18,11 @@ The goal is not only to do more questions. The goal is to learn how to read the 
 ## Start here
 
 1. Read [Paper 1 Overview](./paper-1-overview) to understand the main exam structure and answer strategy.
-2. Review [Command Terms](./command-terms) so you know what each question is asking you to do.
-3. Practise [Mark Scheme Skills](./mark-scheme-skills) to write clearer points, expansions, and scenario links.
-4. Use [Paper 2 Overview](./paper-2-overview) for option-based preparation.
-5. Return to topic pages when a concept is weak, then come back to exam practice.
+2. Read [Paper 2 Theme B Skills](./paper-2-theme-b-skills) to understand applied computational thinking and programming preparation.
+3. Review [Command Terms](./command-terms) so you know what each question is asking you to do.
+4. Practise [Mark Scheme Skills](./mark-scheme-skills) to write clearer points, expansions, and scenario links.
+5. Use B1, B2, and B3 practice for Paper 2-style computational thinking and programming revision.
+6. Return to topic pages when a concept is weak, then come back to exam practice.
 
 ::: tip Study routine
 For each practice answer, check the command term, mark value, technical vocabulary, and scenario link before looking at the suggested answer.
@@ -32,11 +33,11 @@ For each practice answer, check the command term, mark value, technical vocabula
 | Area | Use this for | Link |
 |---|---|---|
 | Paper 1 Overview | Paper 1 structure, timing, question types, and strategy | [Open](./paper-1-overview) |
-| Paper 2 Overview | option-based applied preparation | [Open](./paper-2-overview) |
+| Paper 2 Theme B Skills | applied computational thinking, tracing, programming, OOP, and scenario problem-solving | [Open](./paper-2-theme-b-skills) |
 | Command Terms | answer depth for state, outline, describe, explain, discuss, evaluate, and other terms | [Open](./command-terms) |
 | Mark Scheme Skills | point + expansion, scenario links, self-marking, and answer improvement | [Open](./mark-scheme-skills) |
-| B1 Practice | computational thinking, algorithms, flowcharts, and trace tables | [Open](./b1-practice) |
-| B2 and B3 Practice | programming, arrays, searching, sorting, testing, file processing, and OOP | [Open](./b2-b3-practice) |
+| B1 Practice | Paper 2-style computational thinking, algorithms, flowcharts, and trace tables | [Open](./b1-practice) |
+| B2 and B3 Practice | Paper 2-style programming, arrays, searching, sorting, testing, file processing, and OOP | [Open](./b2-b3-practice) |
 | A1 and A2 Practice | computer fundamentals, hardware, data representation, networks, and security | [Open](./a1-a2-practice) |
 | A3 and A4 Practice | databases, SQL, normalization, machine learning, evaluation, and ethics | [Open](./a3-a4-practice) |
 | Mini Mock Exam Bank | mixed-topic timed practice sets | [Open](./mini-mock-exam-bank) |
@@ -91,7 +92,8 @@ Exam practice is divided into separate pages so students can focus on one skill 
 By the end of this Exam Practice section, students should be able to:
 
 - explain the structure and purpose of Paper 1
-- explain the purpose of Paper 2 as an option-based applied paper
+- connect Paper 1 preparation to Theme A topic knowledge
+- connect Paper 2 preparation to Theme B computational thinking and problem-solving
 - identify common command terms
 - understand how mark schemes award marks
 - distinguish short-answer, explain, compare, discuss, and algorithm-style questions
@@ -115,7 +117,7 @@ Recommended order:
 ```text
 Overview
 → Paper 1 Overview
-→ Paper 2 Overview
+→ Paper 2 Theme B Skills
 → Command Terms
 → Mark Scheme Skills
 → B1 Practice
@@ -129,7 +131,7 @@ This order is intentional.
 
 Students first understand the exam structure and command terms.  
 Then they learn how mark schemes work.  
-After that, they practise by topic group.  
+After that, they practise Theme B problem-solving and Theme A topic application.  
 Finally, they attempt mini mock exams to combine multiple skills.
 
 ---
@@ -140,7 +142,7 @@ Finally, they attempt mini mock exams to combine multiple skills.
 |---:|---|---|---|
 | 1 | Overview | exam practice roadmap and answer strategy | [Open](./) |
 | 2 | Paper 1 Overview | Paper 1 structure, question types, timing, strategy | [Open](./paper-1-overview) |
-| 3 | Paper 2 Overview | option-based paper, selected option preparation, applied responses | [Open](./paper-2-overview) |
+| 3 | Paper 2 Theme B Skills | computational thinking, tracing, programming, OOP, scenario problem-solving | [Open](./paper-2-theme-b-skills) |
 | 4 | Command Terms | state, identify, outline, describe, explain, discuss, compare, evaluate | [Open](./command-terms) |
 | 5 | Mark Scheme Skills | how marks are awarded and how to write mark-worthy answers | [Open](./mark-scheme-skills) |
 | 6 | B1 Practice | computational thinking, algorithms, flowcharts, trace tables | [Open](./b1-practice) |
@@ -155,7 +157,6 @@ Finally, they attempt mini mock exams to combine multiple skills.
 Exam Practice
 ├── Exam Understanding
 │   ├── Paper 1 overview
-│   ├── Paper 2 overview
 │   ├── question types
 │   ├── timing
 │   ├── marks available
@@ -597,18 +598,6 @@ question types
 timing
 how scenario questions work
 how to plan longer answers
-```
-
-### Paper 2 Overview
-
-Use this page to understand:
-
-```text
-option-based exam preparation
-how Paper 2 differs from Paper 1
-why the selected option matters
-how to prepare applied scenario answers
-which current website pages can support option revision
 ```
 
 ### Command Terms
