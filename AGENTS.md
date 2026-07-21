@@ -6,7 +6,7 @@
 
 这是一个 VitePress 静态学习网站，主题是 IBDP Computer Science SL。
 
-- 当前本机项目根目录：`/Users/kw/Projects/ibdp-cs-sl-website`
+- 当前本机项目根目录：本 `AGENTS.md` 所在的仓库根目录，不依赖固定绝对路径
 - 历史 Windows 路径可能写作：`D:\ibdp-cs-sl-website`
 - 学生可见内容根目录：`docs/`
 - VitePress 配置：`docs/.vitepress/config.mts`
