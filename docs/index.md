@@ -69,9 +69,9 @@ features:
 
 ## Official Course Structure
 
-This site follows the official IBDP Computer Science SL syllabus structure. Some learning routes may use a teaching order that is easier for students, but the official syllabus is organized by Theme A and Theme B.
+This site follows the official IBDP Computer Science SL syllabus structure. The official syllabus is organised by Theme A and Theme B, while the Roadmap provides one student learning path through those topics.
 
-Assessment preparation includes Paper 1, Paper 2, and the IA computational solution.
+Assessment preparation includes Paper 1, Paper 2, and the IA computational solution. The practical programme also includes the collaborative sciences project.
 
 | Official theme | Syllabus areas |
 |---|---|
@@ -125,16 +125,20 @@ For normal SL study, focus first on Theme A, Theme B, Assessment, Exam Practice,
 
 ## Recommended Study Order
 
+This is the same recommended path used by the [Course Roadmap](./roadmap). It is a learning recommendation, not an IB-prescribed topic sequence.
+
 | Stage | What to study | Why it matters |
 |---|---|---|
-| 1 | [A1 Computer Fundamentals](./a1-computer-fundamentals/) | Builds the basic language of computer science. |
-| 2 | [A2 Networks](./a2-networks/) | Helps explain real-world communication and web systems. |
-| 3 | [A3 Databases](./a3-databases/) | Prepares you for SQL, keys, relationships, and data questions. |
-| 4 | [A4 Machine Learning](./a4-machine-learning/) | Develops understanding of modern AI concepts and model evaluation. |
-| 5 | [B1 Computational Thinking](./b1-computational-thinking/) | Strengthens algorithm tracing and problem-solving. |
-| 6 | [B2 Programming](./b2-programming/) | Builds core coding logic and exam algorithm skills. |
-| 7 | [B3 OOP](./b3-oop/) | Helps understand class-based programming and object interaction. |
-| 8 | [Exam Practice](./exam-practice/) | Converts knowledge into marks. |
+| 1 | [B1 Computational Thinking](./b1-computational-thinking/) | Builds decomposition, abstraction, algorithm, flowchart, and tracing skills. |
+| 2 | [B2 Programming](./b2-programming/) | Builds the programming logic needed for Paper 2 and later projects. |
+| 3 | [B3 OOP](./b3-oop/) | Develops class, object, method, state, and encapsulation understanding. |
+| 4 | [A3 Databases](./a3-databases/) | Connects programming to structured data, SQL, and relational design. |
+| 5 | [A1 Computer Fundamentals](./a1-computer-fundamentals/) | Explains how computer systems process, store, and manage data. |
+| 6 | [A2 Networks](./a2-networks/) | Explains communication, protocols, web systems, and network security. |
+| 7 | [A4 Machine Learning](./a4-machine-learning/) | Applies data, modelling, evaluation, and ethical reasoning. |
+| Throughout | [Exam Practice](./exam-practice/) and [IA Support](./ia-support/) | Connects topic learning to Paper 1, Paper 2, the case study, and the computational solution. |
+
+Complete the collaborative sciences project according to your school's timetable and instructions.
 
 ## Quick Access
 

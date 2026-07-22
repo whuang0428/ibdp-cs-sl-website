@@ -34,6 +34,31 @@ Most database mistakes start with weak understanding of table structure. Student
 
 ---
 
+## Start here: table, record, field, value
+
+Use one fixed pattern:
+
+```text
+table = the whole structure for one entity type
+record = one row about one entity instance
+field = one column describing an attribute
+value = one item stored in a cell
+```
+
+For example, in a `Student` table, one student is a record, `dateOfBirth` is a field, and `2009-04-18` is a value.
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- distinguish tables, records, fields, and values
+- connect entities to tables and attributes to fields
+- choose suitable field names and data types
+- read a value from a specified row and column
+- explain why a table should normally represent one entity type
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -1155,4 +1180,3 @@ Before moving on, students should be able to answer these:
 8. What is a table schema?
 9. Why should phone numbers often be stored as text?
 10. Why is it poor design to mix many entities in one table?
-

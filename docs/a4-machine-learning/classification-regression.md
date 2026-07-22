@@ -37,6 +37,40 @@ Classification predicts a category. Regression predicts a numerical value. Both 
 
 ---
 
+## Start here: category or number
+
+Look at the required output:
+
+```text
+category or class -> classification
+numerical value -> regression
+```
+
+Both tasks can use labelled training data. The scenario, features, and required output determine which task is suitable.
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- distinguish classification from regression by the output type
+- identify features and labels in both kinds of scenario
+- distinguish binary and multi-class classification
+- choose a suitable task for a stated problem and justify it
+- explain why classification and regression require different evaluation measures
+
+---
+
+## Common mistakes
+
+| Mistake | Better understanding |
+|---|---|
+| Deciding from the input data type | Decide from the required output: category or number |
+| Calling every numerical code regression | A numerical class code can still represent a category |
+| Confusing a probability score with the final class | A threshold may convert a score into a classification |
+| Using accuracy to evaluate every scenario | Consider false positives, false negatives, precision, recall, or numerical error as appropriate |
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -1581,4 +1615,3 @@ Before moving on, students should be able to answer these:
 8. Is predicting spam/not spam classification or regression?
 9. Why can accuracy be misleading in some classification tasks?
 10. Why do classification and regression use different evaluation methods?
-

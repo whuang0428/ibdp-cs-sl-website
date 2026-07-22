@@ -14,7 +14,6 @@ Theme A: Concepts of computer science. A3 Databases helps you understand how str
 ## Assessment connection
 
 - Paper 1: tests database concepts, relationships, keys, SQL, normalization, security, and recovery.
-- Paper 2: may support applied problem-solving when database logic or data handling appears in a scenario.
 - IA: helps you design persistent data storage, justify table structures, and explain data handling choices.
 
 ## 1. Module Overview

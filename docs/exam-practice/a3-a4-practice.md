@@ -1,5 +1,14 @@
 ﻿# A3 and A4 Practice
 
+## Page map
+
+- [Page purpose](#1-page-purpose)
+- [Practice targets](#2-a3-and-a4-practice-targets)
+- [Quick revision map](#4-quick-revision-map)
+- [Exam technique](#5-exam-technique-for-a3-and-a4)
+
+---
+
 ## 1. Page Purpose
 
 This page provides exam-style practice for **A3 Databases** and **A4 Machine Learning**.
@@ -1729,4 +1738,3 @@ Before an A3/A4 test, students should be able to:
 | Overfitting | high training, low testing |
 | Bias | unfair/systematic distortion |
 | Best exam habit | identify data/tables/features, then explain with scenario link |
-

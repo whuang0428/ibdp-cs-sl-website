@@ -4,11 +4,22 @@
 
 Paper 2 preparation should focus on **Theme B: Computational thinking and problem-solving**. This page helps you prepare for algorithmic thinking, programming logic, pseudocode / code tracing, and scenario-based problem solving.
 
-This page replaces the old option-paper style route. Do not use it as an option overview. Always follow the latest instructions from your teacher and school for exact format, timing, language choice, and specimen-paper practice.
+This page replaces the old option-paper style route. Do not use it as an option overview. Always follow the latest instructions from your teacher and school for session-specific arrangements and specimen-paper practice.
 
 ::: warning New syllabus focus
 The current learning route on this website treats Paper 2 as Theme B applied problem-solving. Do not prepare it as an old option-based paper.
 :::
+
+## Official SL Format
+
+| Item | Detail |
+|---|---|
+| Duration | 1 hour 15 minutes |
+| Weighting | 35% of the final SL grade |
+| Main focus | B1 Computational thinking, B2 Programming, and B3 Object-oriented programming |
+| Programming language | Equivalent Java and Python versions are provided for questions that require programming |
+
+These details were checked on **22 July 2026** against the [IB Computer Science subject brief for first assessment 2027](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/dp_comp_sci_subjectbrief_en.pdf).
 
 ## What Paper 2 Skills Usually Need
 
@@ -31,7 +42,8 @@ Paper 2-style preparation should help you:
 | 2 | B2 Programming | variables, data types, selection, loops, arrays, file processing, testing | [B2 Overview](../b2-programming/) and [B2/B3 Practice](./b2-b3-practice) |
 | 3 | Searching and sorting | trace algorithms, compare methods, justify choices | [Searching](../b2-programming/searching), [Sorting](../b2-programming/sorting) |
 | 4 | B3 OOP | classes, objects, attributes, methods, constructors, encapsulation, UML | [B3 Overview](../b3-oop/) and [B2/B3 Practice](./b2-b3-practice) |
-| 5 | Mixed practice | combine tracing, explanation, testing, and scenario links | [Mini Mock Exam Bank](./mini-mock-exam-bank) |
+| 5 | Integrated scenario | combine tracing, algorithm design, Java/Python logic, OOP, testing, and justification | [Paper 2 Integrated Practice](./paper-2-integrated-practice) |
+| 6 | Mixed practice | combine topics under time pressure | [Mini Mock Exam Bank](./mini-mock-exam-bank) |
 
 ## Core Answer Pattern
 
@@ -101,7 +113,7 @@ When writing or completing an algorithm:
 
 ## Java / Python Reminder
 
-Your class may use Java or Python for programming preparation. This website includes many Java-style examples, but the important Paper 2 skills are broader than syntax:
+The 2027 course allows students to study Java or Python. For Paper 2 questions that require programming, equivalent versions are provided in both languages. This website includes many Java-style examples, but the important Paper 2 skills are broader than syntax:
 
 | Skill | What matters |
 |---|---|
@@ -111,7 +123,7 @@ Your class may use Java or Python for programming preparation. This website incl
 | explanation | Can you justify how the logic solves the problem? |
 | OOP | Can you explain class, object, state, and method behaviour? |
 
-Use the language your teacher requires for class practice and final exam preparation.
+Use the language studied by your class and practise with the matching version of programming questions.
 
 ## Common Mistakes
 
@@ -136,6 +148,8 @@ Use this weekly routine when preparing Paper 2 skills:
 | 3 | Testing | Write normal, boundary, invalid, and edge test data for a program |
 | 4 | B3 OOP | Explain object state changes from a short class example |
 | 5 | Mixed scenario | Answer one longer scenario question using technical vocabulary |
+
+Then complete [Paper 2 Integrated Practice](./paper-2-integrated-practice) without opening its suggested answers. Use the completion checklist to identify whether tracing, algorithm design, language logic, OOP, or testing needs more revision.
 
 ## Quick Self-test
 

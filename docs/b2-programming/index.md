@@ -13,8 +13,7 @@ Theme B: Computational thinking and problem-solving. B2 Programming helps you tu
 
 ## Assessment connection
 
-- Paper 1: tests programming constructs, arrays, searching, sorting, tracing, testing, debugging, and algorithm writing.
-- Paper 2: supports applied option responses that require programming logic or code interpretation.
+- Paper 2: tests Theme B programming knowledge through algorithm design, tracing, testing, debugging, and Java or Python programming questions.
 - IA: helps you build, test, debug, and explain the main computational solution.
 
 ## 1. Module Overview
@@ -33,13 +32,13 @@ to:
 writing, tracing, testing, and explaining programs
 ```
 
-The course uses both:
+The course can be studied using Java or Python. This website uses both:
 
 ```text
-IB pseudocode + Java
+pseudocode + many Java-style examples
 ```
 
-IB pseudocode helps students describe algorithms clearly. Java helps students write real executable programs.
+Pseudocode helps students describe algorithms clearly. Java-style examples provide executable program structures on this website, while students studying Python should apply the same algorithms and problem-solving patterns in Python.
 
 ---
 
@@ -551,4 +550,3 @@ Before moving to B3 Object-Oriented Programming, students should be able to:
 ::: tip Next Module
 After B2, students move to **B3 Object-Oriented Programming**, where programs are organized using classes and objects.
 :::
-

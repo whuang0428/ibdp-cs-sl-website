@@ -1,5 +1,14 @@
 ﻿# Network Security
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1816,4 +1825,3 @@ Before moving on, students should be able to answer these:
 8. What is the difference between authentication and authorization?
 9. Why is encryption useful?
 10. Why are backups important?
-

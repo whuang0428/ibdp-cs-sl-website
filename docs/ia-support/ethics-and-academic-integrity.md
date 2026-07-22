@@ -8,6 +8,10 @@ A project can be technically impressive but still ethically unsuitable. You shou
 
 Academic integrity is also part of the IA process. The final product and documentation must represent your own work, and any external help or sources should be acknowledged where required.
 
+::: tip Worked acknowledgement pattern
+The [PantryTrack sources, libraries, and AI example](./worked-evidence-example#sources-libraries-and-ai-acknowledgement) shows a working source log and an acknowledgement structure. It does not decide what AI use is permitted; follow your school guidance.
+:::
+
 ## 2. Key Ethical Responsibilities
 
 | Responsibility | What it means in an IA project | Example |

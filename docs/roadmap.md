@@ -1,6 +1,6 @@
 ﻿# Course Roadmap
 
-The roadmap is a recommended learning route. It may start with programming and computational thinking because these topics help students understand later theory and IA work.
+The roadmap is the website's recommended learning route. It starts with computational thinking and programming because these topics help students understand later theory and IA work.
 
 The official syllabus structure is still Theme A and Theme B. Students should use the roadmap together with the official course structure.
 
@@ -9,6 +9,7 @@ The official syllabus structure is still Theme A and Theme B. Students should us
 | Theme A | Understand computer systems, networks, databases, and machine learning |
 | Theme B | Build problem-solving and programming skills |
 | Assessment | Practise Paper 1, Paper 2, and IA skills throughout the course |
+| Practical programme | Complete the IA computational solution and collaborative sciences project according to your school's schedule |
 
 ::: tip Core first
 For SL exam preparation, complete Theme A and Theme B before spending major time on optional extension pages. Extension pages can support stronger programming and IA-style project habits, but they should not replace the SL core route.
@@ -16,24 +17,24 @@ For SL exam preparation, complete Theme A and Theme B before spending major time
 
 ## 1. Course Structure
 
-This website keeps the official IBDP Computer Science SL areas visible while using a teaching order designed for student learning.
+This website keeps the official IBDP Computer Science SL areas visible while using a recommended learning sequence designed for students. The sequence is not prescribed by the IB.
 
 | Order | Module | Main Role in Course | Website Path |
 |---:|---|---|---|
 | 1 | B1 Computational Thinking | Build problem-solving foundation | `/b1-computational-thinking/` |
-| 2 | B2 Programming | Build programming fluency using IB pseudocode and Java | `/b2-programming/` |
-| 3 | B3 Object-Oriented Programming | Introduce OOP design and Java class structure | `/b3-oop/` |
-| 4 | A3 Databases | Teach data organization, SQL, and relational design | `/a3-databases/` |
-| 5 | A1 Computer Fundamentals | Explain hardware, CPU, memory, storage, OS, and control systems | `/a1-computer-fundamentals/` |
-| 6 | A2 Networks | Explain network communication, protocols, security, and web access | `/a2-networks/` |
-| 7 | A4 Machine Learning | Introduce ML workflow, evaluation, ethics, and limitations | `/a4-machine-learning/` |
-| 8 | HL Programming Extension | Optional enrichment after SL core topics | `/extension-hl-programming/` |
-| 9 | Software Engineering | Optional project-skills enrichment after SL core topics | `/extension-software-engineering/` |
-| 10 | Exam / IA / Glossary | Support assessment and revision | `/exam-practice/`, `/ia-support/`, `/glossary/` |
+| 2 | B2 Programming | Build programming fluency using algorithmic thinking and Java or Python | `/b2-programming/` |
+| 3 | B3 Object-Oriented Programming | Learn core OOP design and class/object relationships | `/b3-oop/` |
+| 4 | A3 Databases | Learn data organisation, SQL, and relational design | `/a3-databases/` |
+| 5 | A1 Computer Fundamentals | Learn how hardware, CPU, memory, storage, operating systems, and control systems work | `/a1-computer-fundamentals/` |
+| 6 | A2 Networks | Learn how networks communicate and how data can be protected | `/a2-networks/` |
+| 7 | A4 Machine Learning | Learn the ML workflow, evaluation, ethics, and limitations | `/a4-machine-learning/` |
+| Throughout | Exam practice and IA | Connect learning to Paper 1, Paper 2, the case study, and the computational solution | `/exam-practice/`, `/ia-support/` |
+| School schedule | Collaborative sciences project | Complete the 10-hour collaborative practical project | Follow school instructions |
+| After SL core | Optional extensions | Use HL programming and software engineering pages for enrichment | `/extension-hl-programming/`, `/extension-software-engineering/` |
 
 ---
 
-## 2. Recommended Teaching Flow
+## 2. Recommended Learning Path
 
 ```text
 B1 Computational Thinking
@@ -50,10 +51,16 @@ A2 Networks
         ↓
 A4 Machine Learning
         ↓
-Optional extension after SL core topics + Revision + IA Support
+Optional extension after SL core topics
 ```
 
-This order is designed to let students first build algorithmic thinking and programming confidence, then move into systems, networks, databases, and machine learning. Extension pages should be used after the SL core topics or when your teacher asks you to study them.
+Use Exam Practice throughout this path. Begin the IA and complete the collaborative sciences project according to your school's timetable rather than waiting until every topic page is finished.
+
+This order is designed to let you first build algorithmic thinking and programming confidence, then move into databases, systems, networks, and machine learning. Extension pages should be used after the SL core topics or when your teacher asks you to study them.
+
+::: info Official reference
+The course components on this roadmap were checked on **22 July 2026** against the [IB Computer Science subject brief for first assessment 2027](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/dp_comp_sci_subjectbrief_en.pdf). The path above is this website's learning recommendation, not an IB-prescribed order.
+:::
 
 ---
 
@@ -93,7 +100,7 @@ Students should be able to:
 Recommended outcome:
 
 ```text
-Students can write and trace small Java programs and connect them to IB pseudocode.
+Students can write and trace small programs in the language studied by their class and connect the logic to pseudocode.
 ```
 
 ---
@@ -108,12 +115,12 @@ Students should be able to:
 - apply encapsulation
 - use accessors and mutators
 - interpret UML class diagrams
-- understand multiple-class programs
+- distinguish SL core OOP from optional multiple-class extension material
 
 Recommended outcome:
 
 ```text
-Students can design simple class-based Java programs and explain OOP vocabulary.
+Students can design simple class-based programs and explain OOP vocabulary.
 ```
 
 ---

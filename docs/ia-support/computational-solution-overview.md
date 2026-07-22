@@ -6,6 +6,8 @@ A computational solution is a software-based solution created to solve a specifi
 
 For the IA, this means your product should not be a random app, a copied tutorial, a simple programming exercise, or a report about technology. It should be a designed solution to a clearly specified problem.
 
+At SL, the public 2027 subject brief allocates **35 hours** to this computational solution and gives it a weighting of **30%**. Detailed submission packaging must still follow the latest official guidance provided by your school.
+
 A strong computational solution usually has these qualities:
 
 - there is a real or clearly defined problem

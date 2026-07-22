@@ -16,16 +16,22 @@ The documentation should cover the official Criteria A-E:
 
 Your work must be your own. External sources, libraries, tutorials, images, data, and AI assistance should be acknowledged where applicable.
 
+At SL, the public 2027 subject brief allocates **35 hours** to the computational solution and gives it a weighting of **30%**.
+
+::: info Source boundary
+The 35-hour allocation, 30% SL weighting, real-world problem, and computational-thinking focus were checked on **22 July 2026** against the [IB Computer Science subject brief for first assessment 2027](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/dp_comp_sci_subjectbrief_en.pdf). The public brief does not contain every detailed submission instruction. Criteria wording, report/video limits, appendix packaging, permitted tools, and final upload format must therefore be confirmed against the latest official guidance available through your school.
+:::
+
 ## 2. What You Submit
 
 | Submission item | What it should show |
 |---|---|
-| Documentation / report | A written explanation of Criteria A-E, up to 2000 words |
+| Documentation / report | A written explanation of Criteria A-E; this site uses the current 2000-word maximum guidance |
 | Product | The working computational solution |
-| Video | Up to 5 minutes, showing product functionality and examples of testing strategy |
-| Appendix | Full source code and any required supporting material |
+| Video | This site uses the current 5-minute maximum guidance; show product functionality and examples of testing strategy |
+| Appendix | Full source code and any required supporting material under the current guidance |
 
-Always follow the latest instructions from your teacher and school for final submission format.
+Before submission, confirm all three detailed limits and packaging requirements with your teacher or school. If their current official instructions differ from this site, follow the school instructions and report the difference so this page can be reviewed.
 
 ## 3. The Five Criteria
 
@@ -58,6 +64,8 @@ Problem -> Success criteria -> Design -> Development evidence -> Evaluation judg
 ```
 
 If a feature appears in Criterion D but was never planned in A-C, explain why it was added. If a success criterion appears in Criterion A but is never tested or evaluated, the evidence chain is broken.
+
+For a complete original example, use [IA Evidence Chain: Worked Original Example](./worked-evidence-example). It follows one feature from the problem and success criteria through planning, system design, code, failed and passed tests, video evidence, and final evaluation.
 
 ## 5. Mini Evidence Example
 
@@ -103,8 +111,9 @@ Use these IA Support pages as a learning path while you plan, build, document, a
 | 5 | Criterion C: System Overview | Show structure, algorithms, models, and testing strategy |
 | 6 | Criterion D: Development | Explain how the product was built |
 | 7 | Criterion E: Evaluation | Judge the product against success criteria |
-| 8 | Ethics and Academic Integrity | Handle consent, data, AI, libraries, and citations responsibly |
-| 9 | Submission Checklist | Check documentation, video, appendix, and source code |
+| 8 | Worked Evidence Example | Follow one original project evidence chain across A-E |
+| 9 | Ethics and Academic Integrity | Handle consent, data, AI, libraries, and citations responsibly |
+| 10 | Submission Checklist | Check documentation, video, appendix, and source code |
 
 ## 7. What Makes a Suitable IA Project
 

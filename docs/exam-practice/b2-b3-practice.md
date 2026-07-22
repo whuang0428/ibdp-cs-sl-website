@@ -1,5 +1,14 @@
 ﻿# B2 and B3 Practice
 
+## Page map
+
+- [Page purpose](#1-page-purpose)
+- [Practice targets](#2-b2-and-b3-practice-targets)
+- [Quick revision map](#4-quick-revision-map)
+- [Exam technique](#5-exam-technique-for-b2-and-b3)
+
+---
+
 ## 1. Page Purpose
 
 This page provides exam-style practice for **B2 Programming** and **B3 Object-Oriented Programming**.
@@ -1885,4 +1894,3 @@ Before a programming/OOP test, students should be able to:
 | Constructor | initializes object |
 | Encapsulation | restricts direct access to data |
 | UML | class name, attributes, methods |
-

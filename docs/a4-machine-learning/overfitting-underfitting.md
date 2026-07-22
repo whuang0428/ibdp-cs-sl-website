@@ -37,6 +37,41 @@ Overfitting means a model learns the training data too specifically and performs
 
 ---
 
+## Start here: compare training and unseen data
+
+The aim is **generalization**: useful performance on new, unseen data.
+
+```text
+high training performance + much lower testing performance -> possible overfitting
+low training performance + low testing performance -> possible underfitting
+similar strong performance on both -> better evidence of generalization
+```
+
+One score alone is not enough; compare the model across separate data and consider the scenario.
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- define overfitting, underfitting, and generalization
+- identify likely fitting problems from training and testing results
+- explain why memorizing training noise harms unseen performance
+- explain why an overly simple model may miss useful patterns
+- suggest a suitable way to reduce each problem
+
+---
+
+## Common mistakes
+
+| Mistake | Better understanding |
+|---|---|
+| Calling high training performance proof of a good model | Check performance on separate unseen data |
+| Treating every train-test difference as overfitting | A small difference can be normal; consider its size and the scenario |
+| Confusing overfitting with underfitting | Overfitting is too specific; underfitting has not learned enough useful pattern |
+| Solving overfitting by testing repeatedly on the test set | Use validation for model choices and keep the final test set separate |
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -1448,4 +1483,3 @@ Before moving on, students should be able to answer these:
 8. Give two ways to reduce overfitting.
 9. Give two ways to reduce underfitting.
 10. Why is unseen test data important?
-

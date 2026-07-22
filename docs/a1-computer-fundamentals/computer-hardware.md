@@ -33,6 +33,24 @@ Hardware means the physical parts of a computer system. Students should not only
 
 ---
 
+## Start here: match each component to its job
+
+Computer hardware is the physical equipment in a computer system. Learn it by following the data: an **input device** captures data, the **CPU** processes instructions, **primary memory** holds current data and instructions, **secondary storage** keeps data long term, and an **output device** presents the result.
+
+In scenario questions, name the component, state its role, and explain why that role suits the user or system.
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- classify hardware as input, output, processing, memory, storage, or communication equipment
+- distinguish internal hardware, external hardware, and peripherals
+- explain how the CPU, RAM, storage, and input/output devices work together
+- choose suitable hardware for a stated scenario and justify the choice
+- distinguish hardware from software
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -1130,4 +1148,3 @@ Before moving on, students should be able to answer these:
 8. What is secondary storage used for?
 9. Why is a touchscreen both input and output?
 10. Why is a printer driver not hardware?
-

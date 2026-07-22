@@ -12,6 +12,10 @@ Criterion D should connect clearly to:
 - Criterion B: Planning
 - Criterion C: System overview
 
+::: tip Worked evidence chain
+See the [PantryTrack Criterion D example](./worked-evidence-example#criterion-d-development-evidence) for a selected code excerpt, technical explanation, an insufficient-stock failure, the justified fix, and actual before/after test evidence.
+:::
+
 ## 2. What Criterion D Should Include
 
 | Part | What to include | Why it matters |
@@ -188,6 +192,8 @@ The video should not be only a tour of the interface. It should demonstrate func
 ## 12. Full Source Code Appendix
 
 The full source code should be included in the appendix, while Criterion D should use selected excerpts in the main documentation.
+
+Confirm the final appendix structure and upload packaging against the latest official guidance provided by your school. The public subject brief does not specify these detailed packaging rules.
 
 - Full source code belongs in the appendix.
 - Code excerpts in the main report should be selected and explained.

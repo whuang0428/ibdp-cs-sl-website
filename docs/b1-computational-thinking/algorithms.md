@@ -1,5 +1,14 @@
 ﻿# Algorithms
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -93,6 +102,18 @@ When you meet an algorithm or pseudocode question, use this order:
 4. Write the steps in order.
 5. Check the algorithm with one small test case.
 6. Make sure the final output matches the question.
+
+---
+
+## Common mistakes
+
+| Mistake | Better understanding |
+|---|---|
+| Writing code before identifying the required output | Start with input, processing, and output |
+| Using assignment when a comparison is required | Assignment changes a value; comparison tests a condition |
+| Forgetting to update a loop variable | Each iteration must make progress toward termination |
+| Checking only one easy test case | Trace normal, boundary, and invalid cases where relevant |
+| Describing an idea without ordered executable steps | An algorithm needs clear, finite, unambiguous instructions |
 
 ---
 
@@ -1726,4 +1747,3 @@ Before moving on, students should be able to answer these:
 8. What is the difference between a counter and an accumulator?
 9. Why is dry running useful?
 10. What is a logic error?
-

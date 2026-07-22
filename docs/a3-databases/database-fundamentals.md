@@ -1,5 +1,14 @@
 ﻿# Database Fundamentals
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -57,6 +66,21 @@ By the end of this page, you should be able to:
 - explain why **data integrity** matters
 - explain basic advantages and limitations of databases
 - answer scenario questions about schools, hospitals, shops, libraries, and booking systems
+
+---
+
+## Special database contexts preview
+
+Some scenarios need a database design adapted to where data is stored or what the data represents.
+
+| Context | SL-level meaning | Example |
+|---|---|---|
+| Distributed database | One logical database has data stored across more than one networked location | A company keeps data close to offices in several countries while coordinating the records |
+| Spatial database | A database is designed to store and query location, shape, distance, or geographic relationships | A city system finds roads or hospitals within a selected area |
+
+A distributed database may improve local access and resilience, but synchronization, consistency, security, and network failure become harder to manage. A spatial database supports location-based questions, but the stored geographic data must still be accurate, current, and protected.
+
+For SL answers, focus on the scenario and trade-off; you do not need advanced database algorithms.
 
 ---
 
@@ -1843,4 +1867,3 @@ Before moving on, students should be able to answer these:
 8. What is data redundancy?
 9. What is data inconsistency?
 10. Why are databases useful?
-

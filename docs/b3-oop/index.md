@@ -18,8 +18,7 @@ Extension activities can help with deeper programming confidence, but students s
 
 ## Assessment connection
 
-- Paper 1: tests OOP vocabulary, class design, encapsulation, UML, and object behaviour.
-- Paper 2: may support option questions involving object-oriented design or applied programming.
+- Paper 2: tests Theme B OOP knowledge through classes, objects, attributes, methods, constructors, encapsulation, UML, and applied programming.
 - IA: helps you structure larger programs using classes, methods, validation, and maintainable design.
 
 ## 1. Module Overview
@@ -750,4 +749,3 @@ Before moving to A3 Databases, students should be able to:
 ::: tip Next Module
 After B3, the teaching sequence moves to **A3 Databases**. Students will shift from program objects to structured data storage and querying.
 :::
-

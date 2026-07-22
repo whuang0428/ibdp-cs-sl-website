@@ -380,6 +380,15 @@ A clear prompt tells the student what to enter, such as a mark from `0` to `100`
 
 ---
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1685,4 +1694,3 @@ Before moving on, students should be able to answer these:
 8. Which Scanner method reads a full line?
 9. Why can `nextLine()` be skipped after `nextInt()`?
 10. How do you fix the `nextInt()` then `nextLine()` problem?
-

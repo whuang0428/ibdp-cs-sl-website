@@ -1,5 +1,14 @@
 ﻿# Mini Mock Exam Bank
 
+## Page map
+
+- [Page purpose](#1-page-purpose)
+- [How to use this bank](#2-how-to-use-this-bank)
+- [Answer formula](#3-common-exam-answer-formula)
+- [Mini mock index](#4-mini-mock-index)
+
+---
+
 ## 1. Page Purpose
 
 This page provides a bank of short mixed-topic mock exams for IBDP Computer Science SL.
@@ -1453,4 +1462,3 @@ After completing a mini mock, students should fill in this reflection.
 ::: tip Revision note
 Use these mini mocks to identify weak topics, rewrite vague answers, and practise under light time pressure.
 :::
-

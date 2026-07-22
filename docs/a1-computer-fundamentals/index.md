@@ -14,7 +14,6 @@ Theme A: Concepts of computer science. A1 Computer fundamentals helps you unders
 ## Assessment connection
 
 - Paper 1: explains core system concepts used in short-answer and scenario questions.
-- Paper 2: may support option questions where computer systems, storage, or technical constraints affect a solution.
 - IA: helps you explain hardware, software, storage, and system choices in a computational solution.
 
 ## 1. Module Overview
@@ -944,4 +943,3 @@ Before moving to the next module, students should be able to:
 | Operating systems | Manage hardware/software resources |
 | Control systems | Use sensors, controllers, actuators, and feedback |
 | Cloud computing | Uses remote servers over a network |
-

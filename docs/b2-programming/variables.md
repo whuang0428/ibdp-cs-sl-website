@@ -1,5 +1,14 @@
 ﻿# Variables
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1474,4 +1483,3 @@ Before moving on, students should be able to answer these:
 8. Why is a temporary variable needed when swapping?
 9. What makes a variable name good?
 10. Why are trace tables useful for variables?
-

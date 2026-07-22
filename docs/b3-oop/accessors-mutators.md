@@ -34,6 +34,25 @@ Accessors and mutators are the practical Java tools used to support encapsulatio
 
 ---
 
+## Start here: controlled access to private state
+
+An **accessor** or getter returns a private attribute without changing it. A **mutator** or setter requests a change and can validate the new value before updating the object's state.
+
+The point is controlled access: private data is not exposed for unrestricted direct modification.
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- identify getters and setters in Java code
+- write a getter with the correct return type
+- write a setter that receives a parameter and validates it
+- explain how accessors and mutators support encapsulation
+- trace how a valid or invalid setter call affects object state
+- distinguish read-only and read-write attributes
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -1195,4 +1214,3 @@ Before moving on, students should be able to answer these:
 8. Why should setters include validation?
 9. Why might an attribute have a getter but no setter?
 10. What does `this.mark = mark;` mean?
-

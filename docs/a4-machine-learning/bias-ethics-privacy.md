@@ -1,5 +1,14 @@
 ﻿# Bias, Ethics and Privacy
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1636,4 +1645,3 @@ Before moving on, students should be able to answer these:
 8. What does accountability mean?
 9. What is one privacy risk in ML?
 10. Name three ways to reduce bias or privacy risk.
-

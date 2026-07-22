@@ -1,5 +1,14 @@
 ﻿# Trace Tables
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1861,4 +1870,3 @@ Before moving on, students should be able to answer these:
 8. How do you trace an IF statement?
 9. How do you trace a WHILE loop?
 10. What is an off-by-one error?
-

@@ -36,6 +36,31 @@ A network is not just “the internet”. A network is any set of connected devi
 
 ---
 
+## Start here: follow data from one device to another
+
+A network connects devices so they can communicate and share resources. For each scenario, identify the **source**, **destination**, connection method, addressing, protocol, and the resource or service being used.
+
+Network performance is not described by bandwidth alone: **throughput** is the rate actually achieved, while **latency** is the delay before data arrives.
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain why devices are connected in networks
+- distinguish a client, server, host, and node
+- explain the roles of protocols, IP addresses, and packets at a basic level
+- distinguish bandwidth, throughput, and latency
+- compare introductory wired and wireless connections
+- explain a networking benefit and risk in a stated scenario
+
+## Availability preview: failover
+
+**Failover** means switching to a backup device, connection, or service when the main one fails. For example, a school may use a second internet connection so essential online services remain available if the primary connection stops working.
+
+Failover improves **availability**, but it does not prevent every failure. The backup must be configured, tested, and able to handle the required traffic.
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -1224,4 +1249,3 @@ Before moving on, students should be able to answer these:
 8. Give one benefit of networking.
 9. Give one risk of networking.
 10. Why is the internet called a network of networks?
-

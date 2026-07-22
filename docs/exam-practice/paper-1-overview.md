@@ -25,9 +25,10 @@ It checks whether students can apply computer science ideas to realistic systems
 This page is long because it combines Paper 1 overview, exam strategy, common traps, and practice sets. Use it in stages:
 
 1. Read the overview sections first to understand what Paper 1 tests.
-2. Review [Command Terms](./command-terms) before writing longer answers.
-3. Use [Mark Scheme Skills](./mark-scheme-skills) to improve point, expansion, and scenario-link wording.
-4. Return to this page for timing strategy, topic traps, and Paper 1 practice sets.
+2. Use [Paper 1 Case Study Answering Skills](./case-study-answering-skills) for a focused annotation workflow, evidence grid, original worked scenario, and case-linked practice.
+3. Review [Command Terms](./command-terms) before writing longer answers.
+4. Use [Mark Scheme Skills](./mark-scheme-skills) to improve point, expansion, and scenario-link wording.
+5. Return to this page for timing strategy, topic traps, and Paper 1 practice sets.
 
 ---
 
@@ -41,11 +42,14 @@ The 2027 specimen SL Paper 1 shows this structure:
 |---|---|
 | Level | Standard level |
 | Duration | 1 hour 15 minutes |
+| Weighting | 35% of the final SL grade |
 | Maximum mark | 50 marks |
-| Case study | A clean copy of the case study is required |
+| Case study | Paper 1 includes questions connected to the externally provided case study; the 2027 specimen requires a clean copy |
 | Section A | answer all questions |
 | Section B | answer the question |
 | Answer format | answers written in answer boxes |
+
+The duration, weighting, Theme A focus, and inclusion of case-study questions were checked on **22 July 2026** against the [IB Computer Science subject brief for first assessment 2027](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/dp_comp_sci_subjectbrief_en.pdf). Use the latest session instructions from your school for permitted materials and answer-booklet details.
 
 ::: warning Do Not Mix Old and New Formats
 Older 2025 SL Paper 1 papers may have different timing and total marks. Use those older papers for topic-style practice if helpful, but use the new syllabus/specimen format when building this website’s exam strategy.
@@ -416,6 +420,8 @@ Technical point
 → case-study link
 → possible impact
 ```
+
+For a complete worked method, use [Paper 1 Case Study Answering Skills](./case-study-answering-skills). It separates case-study reading, evidence selection, short-response development, extended-response planning, and self-marking.
 
 ---
 
@@ -1238,4 +1244,3 @@ Overall, institutions can significantly reduce risk and improve resilience, but 
 | Security | controls + how they work + scenario impact |
 | Time rule | about 1.5 minutes per mark |
 | Best habit | point → expansion → scenario link |
-

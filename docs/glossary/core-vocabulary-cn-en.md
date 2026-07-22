@@ -1,5 +1,14 @@
 ﻿# Core Vocabulary CN-EN
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [How to use this page](#2-how-to-use-this-page)
+- [Bilingual explanation](#3-bilingual-explanation)
+- [Core answer formula](#4-core-answer-formula)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this page, students should be able to:
@@ -883,4 +892,3 @@ Answer:
 | Security | authentication, authorization, phishing, malware, access control |
 | Best study method | term → definition → example → exam sentence |
 | Best phrase | Precise technical vocabulary helps turn understanding into exam marks. |
-

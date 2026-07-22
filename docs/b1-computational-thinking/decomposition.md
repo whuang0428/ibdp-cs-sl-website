@@ -294,6 +294,15 @@ Decomposition divides the project into smaller modules or sub-problems. Each par
 
 ---
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1673,4 +1682,3 @@ Before moving on, students should be able to answer these:
 8. Give three sub-problems in an online shop.
 9. What makes a sub-problem useful?
 10. How can decomposition lead to functions in code?
-

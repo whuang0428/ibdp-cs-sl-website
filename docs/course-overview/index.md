@@ -13,7 +13,9 @@ In this course, you will study:
 - computational thinking
 - programming
 - object-oriented programming
+- an externally provided case study for Paper 1
 - the internal assessment computational solution
+- the collaborative sciences project
 
 ## Official syllabus structure
 
@@ -32,6 +34,23 @@ The official SL syllabus is organized into two themes.
 - [B2 Programming](../b2-programming/)
 - [B3 Object-oriented programming](../b3-oop/)
 
+The course can be studied using **Java or Python**. Paper 2 programming questions provide equivalent language versions so that students answer using the language they have studied.
+
+## Practical programme
+
+The SL course also includes two practical components.
+
+| Component | Recommended time | Role in the course |
+|---|---:|---|
+| Computational solution | 35 hours | The Internal Assessment, worth 30% of the final SL grade |
+| Collaborative sciences project | 10 hours | Collaborative practical work with students from other science subjects; follow your school's schedule and instructions |
+
+The collaborative sciences project is part of the practical programme, but it is not listed as a separate assessed component in the SL assessment table. Do not confuse it with the individual IA computational solution.
+
+::: info Official reference
+The course structure and assessment figures on this page were checked on **22 July 2026** against the [IB Computer Science subject brief for first assessment 2027](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/dp_comp_sci_subjectbrief_en.pdf) and the [IB Computer Science curriculum update](https://www.ibo.org/university-admission/latest-curriculum-updates/computer-science-updates/). Always use the latest instructions provided by your school for session-specific arrangements.
+:::
+
 ## How the site is organized
 
 | Site area | How to use it |
@@ -45,9 +64,11 @@ The official SL syllabus is organized into two themes.
 
 ## Assessment connection
 
-- Paper 1: mainly Theme A concepts of computer science, with scenario-based written explanations.
-- Paper 2: mainly Theme B computational thinking and problem-solving, with programming / pseudocode application.
-- IA: computational solution project where you plan, develop, test, document, and evaluate your own solution.
+| Component | SL time / weighting | Main focus |
+|---|---|---|
+| Paper 1 | 1 hour 15 minutes / 35% | Theme A concepts plus questions connected to the externally provided case study |
+| Paper 2 | 1 hour 15 minutes / 35% | Theme B computational thinking and problem-solving; programming questions are available in Java and Python |
+| IA computational solution | 35 hours / 30% | An individual computational solution to a real-world problem of your own choosing |
 
 Useful assessment pages:
 
@@ -58,11 +79,19 @@ Useful assessment pages:
 
 ## Recommended way to use this website
 
+This website uses one recommended learning path:
+
+```text
+B1 -> B2 -> B3 -> A3 -> A1 -> A2 -> A4
+```
+
+This is a learning recommendation, not an IB-prescribed topic sequence. It starts with computational thinking and programming, then connects those skills to databases, systems, networks, and machine learning.
+
 1. Read Course Overview first.
-2. Follow the [Roadmap](../roadmap).
-3. Study topic pages by Theme A and Theme B.
-4. Use [Exam Practice](../exam-practice/) for written exam preparation and scenario-based answers.
-5. Use [IA Support](../ia-support/) when starting the computational solution.
+2. Follow the [Roadmap](../roadmap) for the full recommended learning path.
+3. Use [Exam Practice](../exam-practice/) throughout the course rather than waiting until the end.
+4. Start [IA Support](../ia-support/) when your school begins the computational solution.
+5. Complete the collaborative sciences project according to your school's timetable and instructions.
 
 ## Topic landing pages
 

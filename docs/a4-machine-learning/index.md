@@ -14,7 +14,6 @@ Theme A: Concepts of computer science. A4 Machine learning helps you understand 
 ## Assessment connection
 
 - Paper 1: tests ML concepts, data, model evaluation, overfitting, bias, ethics, privacy, and scenario judgement.
-- Paper 2: may support applied option questions where data-driven systems or model limitations are relevant.
 - IA: helps you discuss data quality, evaluation, bias, privacy, and whether ML is suitable for a proposed solution.
 
 ## 1. Module Overview
@@ -1086,4 +1085,3 @@ Before moving to the next module, students should be able to:
 | Privacy | Responsible use of personal data |
 | Human oversight | Human review of important outputs |
 | Limitation | ML can be wrong, biased, costly, hard to explain, or privacy-risky |
-

@@ -1,5 +1,14 @@
 ﻿# ML Applications and Limitations
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -117,6 +126,31 @@ spam detection
 ```
 
 Useful extra examples later in this page include transport, security, media, games, business, and scientific research. Use them to practise the same scenario answer pattern, not as a list to memorize.
+
+---
+
+## Special ML methods preview
+
+These methods may appear in application scenarios. Learn their purpose at a basic level rather than their internal mathematics.
+
+| Method | SL-level idea | Suitable example | Important limitation |
+|---|---|---|---|
+| Convolutional neural network (CNN) | A neural-network approach often used to detect visual features and patterns | Classifying objects in photographs or supporting analysis of medical images | Needs suitable training images and can inherit bias or fail on unfamiliar cases |
+| Reinforcement learning | An agent learns actions through rewards or penalties from interaction with an environment | Learning a game strategy or controlling a simulated robot | A poorly designed reward may produce unsafe or unintended behaviour |
+
+CNN output in a high-impact setting should still be evaluated on representative data and reviewed by a qualified human. Reinforcement learning should be tested in a safe environment before real-world use.
+
+---
+
+## Common mistakes
+
+| Mistake | Better understanding |
+|---|---|
+| Naming an application without explaining its data or output | State the inputs/features and what the system predicts, classifies, or recommends |
+| Treating a prediction as guaranteed | ML outputs can be wrong and should be evaluated in context |
+| Giving a generic risk unrelated to the scenario | Link the limitation to the people, data, and decision in the question |
+| Saying human review removes all risk | Human review is one safeguard and can also contain bias or error |
+| Assuming more data is always better | Data must be relevant, accurate, representative, and legally/ethically usable |
 
 ---
 
@@ -1816,4 +1850,3 @@ Before moving on, students should be able to answer these:
 8. Why can explainability matter?
 9. Why can ML create privacy risks?
 10. Why is human oversight important in high-stakes systems?
-

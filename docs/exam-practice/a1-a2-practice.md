@@ -1,5 +1,14 @@
 ﻿# A1 and A2 Practice
 
+## Page map
+
+- [Page purpose](#1-page-purpose)
+- [Practice targets](#2-a1-and-a2-practice-targets)
+- [Quick revision map](#4-quick-revision-map)
+- [Exam technique](#5-exam-technique-for-a1-and-a2)
+
+---
+
 ## 1. Page Purpose
 
 This page provides exam-style practice for **A1 Computer Fundamentals** and **A2 Networks**.
@@ -1454,4 +1463,3 @@ Before an A1/A2 test, students should be able to:
 | VPN | encrypted tunnel |
 | NAT | private IP to public IP mapping |
 | Best exam habit | name device/control, explain how it works, link to scenario |
-

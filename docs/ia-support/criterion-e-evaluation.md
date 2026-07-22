@@ -13,6 +13,10 @@ Criterion E should:
 - identify limitations
 - justify specific improvements
 
+::: tip Worked evidence chain
+See the [PantryTrack Criterion E example](./worked-evidence-example#criterion-e-evaluation-evidence) for criterion-by-criterion judgements that distinguish fully met, partly met, corrected, and still-untested behaviour.
+:::
+
 ## 2. What Criterion E Should Include
 
 | Part | What to include | Why it matters |

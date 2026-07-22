@@ -110,7 +110,7 @@ When you meet a debugging or trace question, use this order:
 
 ---
 
-## Common exam traps
+## Common mistakes and exam traps
 
 - describing testing and debugging as the same thing
 - giving only normal test data
@@ -1209,4 +1209,3 @@ Before finishing this topic, students should be able to answer these:
 8. How can a trace table help find a bug?
 9. Why is `i < array.length` safer than `i <= array.length`?
 10. Why should a program test invalid input?
-

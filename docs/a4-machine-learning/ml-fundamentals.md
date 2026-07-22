@@ -1,5 +1,14 @@
 ﻿# Machine Learning Fundamentals
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -50,6 +59,19 @@ machine learning = data + training process -> model -> prediction
 ```
 
 中文提示：Machine learning 不是 computer 像人一样思考，而是 model 从 data 中学习 pattern，然后对 new data 做 prediction。
+
+---
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- explain how machine learning differs from writing every rule explicitly
+- distinguish dataset, feature, label, model, training, and prediction
+- describe the basic data-to-prediction workflow in order
+- distinguish classification, regression, supervised learning, and unsupervised learning at a basic level
+- explain why separate testing data is needed
+- identify how poor data, bias, or overfitting can make predictions unreliable
 
 ---
 
@@ -1784,4 +1806,3 @@ Before moving on, students should be able to answer these:
 8. What is supervised learning?
 9. What is unsupervised learning?
 10. Why can poor training data cause poor model results?
-

@@ -8,18 +8,26 @@ This checklist does not replace teacher or school instructions. Always follow th
 
 The checklist is organised around the official IA criteria and main submission components.
 
+::: warning Confirm detailed submission instructions
+The public 2027 subject brief confirms that the SL computational solution is allocated 35 hours and worth 30%, but it does not publish every packaging detail. Before final submission, confirm the Criteria A-E instructions, 2000-word maximum, 5-minute video maximum, appendix contents, permitted tools, and upload format against the latest official guidance available through your school. This source boundary was reviewed on **22 July 2026**.
+:::
+
+::: tip Evidence rehearsal
+Before using this checklist, compare your own evidence chain with the [PantryTrack worked original example](./worked-evidence-example), especially its traceability matrix, failed-then-fixed test, video storyboard, and source log. Do not copy its project evidence.
+:::
+
 ## 2. Main Submission Components
 
 | Component | What to check |
 |---|---|
-| Documentation / report | Covers Criteria A-E and stays within the required word limit |
+| Documentation / report | Covers Criteria A-E and stays within the current 2000-word maximum guidance |
 | Product | Working computational solution |
-| Video | Shows product functionality and examples of testing strategy; does not exceed the required time limit |
-| Appendix | Includes full source code and required supporting material |
+| Video | Shows product functionality and examples of testing strategy; stays within the current 5-minute maximum guidance |
+| Appendix | Includes full source code and supporting material required by the current school guidance |
 | Sources / acknowledgements | External sources, libraries, tutorials, data, images, and AI use acknowledged where required |
 | Final authenticity | Work represents the student's own understanding, design, and development |
 
-Students must follow the final submission format required by their teacher and school.
+Students must follow the final submission format required by their teacher and school. If the current official school guidance differs from this checklist, the school guidance takes priority.
 
 ## 3. Criteria A-E Completion Check
 

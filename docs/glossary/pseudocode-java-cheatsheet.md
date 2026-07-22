@@ -1,5 +1,14 @@
 ﻿# Pseudocode and Java Cheatsheet
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [How to use this cheatsheet](#2-how-to-use-this-cheatsheet)
+- [Bilingual explanation](#3-bilingual-explanation)
+- [Quick mapping table](#4-quick-mapping-table)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this page, students should be able to:
@@ -1920,4 +1929,3 @@ Answer:
 | string compare | `name = "Anna"` | `name.equals("Anna")` |
 | best habit | trace step by step | test with normal/boundary/invalid data |
 | best phrase | Pseudocode expresses algorithm logic, while Java implements the same logic with strict programming syntax. |
-

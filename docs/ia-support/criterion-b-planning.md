@@ -14,6 +14,10 @@ Criterion B should connect to Criterion A and prepare for Criteria C, D, and E:
 - Criterion D shows development evidence.
 - Criterion E evaluates the finished product against the success criteria.
 
+::: tip Worked evidence chain
+See the [PantryTrack Criterion B example](./worked-evidence-example#criterion-b-planning-evidence) for task dependencies, success-criterion links, resources, time estimates, risks, and a recorded plan change caused by test evidence.
+:::
+
 ## 2. What Criterion B Should Include
 
 | Planning element | What to include | Why it matters |

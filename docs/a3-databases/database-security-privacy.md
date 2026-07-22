@@ -1,5 +1,14 @@
 ﻿# Database Security and Privacy
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -99,6 +108,18 @@ This is both a security and privacy issue because medical records are sensitive 
 Doctors need access for treatment, but reception staff should not see full medical notes.
 Role-based access control and audit logs are suitable because they limit access by job role and record who viewed or changed patient records.
 ```
+
+---
+
+## Common mistakes
+
+| Mistake | Better understanding |
+|---|---|
+| Treating security and privacy as identical | Security protects data and systems; privacy concerns appropriate collection, use, sharing, access, and retention |
+| Saying a password alone secures the database | Use layered controls such as authentication, authorization, least privilege, encryption, backups, and audit logs |
+| Saying encryption prevents deletion or corruption | Encryption protects confidentiality; backups and recovery address loss or damage |
+| Giving every user administrator access | Permissions should match job responsibilities and follow least privilege |
+| Naming a control without linking it to the scenario | Explain what threat it reduces and which records or users it protects |
 
 ---
 
@@ -1832,4 +1853,3 @@ Before moving on, students should be able to answer these:
 8. Why are backups important?
 9. What is data minimization?
 10. Why should old personal data not be kept forever?
-

@@ -14,6 +14,10 @@ By the end of Criterion A, the reader should understand:
 - what the solution needs to do
 - how the final product can be judged
 
+::: tip Worked evidence chain
+See the [PantryTrack Criterion A example](./worked-evidence-example#criterion-a-problem-specification-evidence) for a weak/strong problem statement and six measurable success criteria that remain traceable through Criteria B-E.
+:::
+
 ## 2. What Criterion A Should Include
 
 | Part | What to include | Why it matters |

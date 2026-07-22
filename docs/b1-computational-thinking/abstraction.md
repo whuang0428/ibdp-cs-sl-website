@@ -296,6 +296,15 @@ Decomposition breaks the online shop into smaller sub-problems, such as login, p
 
 ---
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1725,4 +1734,3 @@ Before moving on, students should be able to answer these:
 8. Why is a map an example of abstraction?
 9. What can go wrong if too much detail is removed?
 10. How does abstraction help algorithm design?
-

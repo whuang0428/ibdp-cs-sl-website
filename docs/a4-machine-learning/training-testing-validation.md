@@ -1,5 +1,14 @@
 ﻿# Training, Testing and Validation
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1495,4 +1504,3 @@ Before moving on, students should be able to answer these:
 8. What is data leakage?
 9. Why should validation data be used for tuning instead of test data?
 10. Why might a model need monitoring after deployment?
-

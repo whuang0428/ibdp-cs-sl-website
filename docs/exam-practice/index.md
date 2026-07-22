@@ -18,11 +18,12 @@ The goal is not only to do more questions. The goal is to learn how to read the 
 ## Start here
 
 1. Read [Paper 1 Overview](./paper-1-overview) to understand the main exam structure and answer strategy.
-2. Read [Paper 2 Theme B Skills](./paper-2-theme-b-skills) to understand applied computational thinking and programming preparation.
-3. Review [Command Terms](./command-terms) so you know what each question is asking you to do.
-4. Practise [Mark Scheme Skills](./mark-scheme-skills) to write clearer points, expansions, and scenario links.
-5. Use B1, B2, and B3 practice for Paper 2-style computational thinking and programming revision.
-6. Return to topic pages when a concept is weak, then come back to exam practice.
+2. Use [Paper 1 Case Study Answering Skills](./case-study-answering-skills) to practise annotation, evidence grids, scenario links, and balanced evaluation.
+3. Read [Paper 2 Theme B Skills](./paper-2-theme-b-skills) to understand applied computational thinking and programming preparation.
+4. Complete [Paper 2 Integrated Practice](./paper-2-integrated-practice) to combine tracing, algorithms, Java/Python logic, OOP, and testing in one scenario.
+5. Review [Command Terms](./command-terms) so you know what each question is asking you to do.
+6. Practise [Mark Scheme Skills](./mark-scheme-skills) to write clearer points, expansions, and scenario links.
+7. Return to topic pages when a concept is weak, then come back to exam practice.
 
 ::: tip Study routine
 For each practice answer, check the command term, mark value, technical vocabulary, and scenario link before looking at the suggested answer.
@@ -33,7 +34,9 @@ For each practice answer, check the command term, mark value, technical vocabula
 | Area | Use this for | Link |
 |---|---|---|
 | Paper 1 Overview | Paper 1 structure, timing, question types, and strategy | [Open](./paper-1-overview) |
+| Paper 1 Case Study Skills | case-study annotation, evidence selection, scenario answers, and evaluation | [Open](./case-study-answering-skills) |
 | Paper 2 Theme B Skills | applied computational thinking, tracing, programming, OOP, and scenario problem-solving | [Open](./paper-2-theme-b-skills) |
+| Paper 2 Integrated Practice | one connected scenario covering trace, algorithm design, Java/Python equivalence, OOP, and testing | [Open](./paper-2-integrated-practice) |
 | Command Terms | answer depth for state, outline, describe, explain, discuss, evaluate, and other terms | [Open](./command-terms) |
 | Mark Scheme Skills | point + expansion, scenario links, self-marking, and answer improvement | [Open](./mark-scheme-skills) |
 | B1 Practice | Paper 2-style computational thinking, algorithms, flowcharts, and trace tables | [Open](./b1-practice) |
@@ -92,8 +95,10 @@ Exam practice is divided into separate pages so students can focus on one skill 
 By the end of this Exam Practice section, students should be able to:
 
 - explain the structure and purpose of Paper 1
+- build a case-study evidence grid and apply evidence in Paper 1 answers
 - connect Paper 1 preparation to Theme A topic knowledge
 - connect Paper 2 preparation to Theme B computational thinking and problem-solving
+- solve an integrated Theme B scenario using tracing, algorithm design, programming, OOP, and testing
 - identify common command terms
 - understand how mark schemes award marks
 - distinguish short-answer, explain, compare, discuss, and algorithm-style questions
@@ -117,7 +122,9 @@ Recommended order:
 ```text
 Overview
 → Paper 1 Overview
+→ Paper 1 Case Study Answering Skills
 → Paper 2 Theme B Skills
+→ Paper 2 Integrated Practice
 → Command Terms
 → Mark Scheme Skills
 → B1 Practice
@@ -142,14 +149,16 @@ Finally, they attempt mini mock exams to combine multiple skills.
 |---:|---|---|---|
 | 1 | Overview | exam practice roadmap and answer strategy | [Open](./) |
 | 2 | Paper 1 Overview | Paper 1 structure, question types, timing, strategy | [Open](./paper-1-overview) |
-| 3 | Paper 2 Theme B Skills | computational thinking, tracing, programming, OOP, scenario problem-solving | [Open](./paper-2-theme-b-skills) |
-| 4 | Command Terms | state, identify, outline, describe, explain, discuss, compare, evaluate | [Open](./command-terms) |
-| 5 | Mark Scheme Skills | how marks are awarded and how to write mark-worthy answers | [Open](./mark-scheme-skills) |
-| 6 | B1 Practice | computational thinking, algorithms, flowcharts, trace tables | [Open](./b1-practice) |
-| 7 | B2 and B3 Practice | programming, arrays, searching/sorting, testing, file processing, OOP | [Open](./b2-b3-practice) |
-| 8 | A1 and A2 Practice | hardware, CPU, memory, storage, data representation, networks, security | [Open](./a1-a2-practice) |
-| 9 | A3 and A4 Practice | databases, SQL, normalization, ML concepts, evaluation, ethics | [Open](./a3-a4-practice) |
-| 10 | Mini Mock Exam Bank | mixed-topic timed practice sets | [Open](./mini-mock-exam-bank) |
+| 3 | Paper 1 Case Study Skills | annotation, evidence grids, scenario application, and evaluation | [Open](./case-study-answering-skills) |
+| 4 | Paper 2 Theme B Skills | computational thinking, tracing, programming, OOP, scenario problem-solving | [Open](./paper-2-theme-b-skills) |
+| 5 | Paper 2 Integrated Practice | connected trace, algorithm, language, OOP, and testing practice | [Open](./paper-2-integrated-practice) |
+| 6 | Command Terms | state, identify, outline, describe, explain, discuss, compare, evaluate | [Open](./command-terms) |
+| 7 | Mark Scheme Skills | how marks are awarded and how to write mark-worthy answers | [Open](./mark-scheme-skills) |
+| 8 | B1 Practice | computational thinking, algorithms, flowcharts, trace tables | [Open](./b1-practice) |
+| 9 | B2 and B3 Practice | programming, arrays, searching/sorting, testing, file processing, OOP | [Open](./b2-b3-practice) |
+| 10 | A1 and A2 Practice | hardware, CPU, memory, storage, data representation, networks, security | [Open](./a1-a2-practice) |
+| 11 | A3 and A4 Practice | databases, SQL, normalization, ML concepts, evaluation, ethics | [Open](./a3-a4-practice) |
+| 12 | Mini Mock Exam Bank | mixed-topic timed practice sets | [Open](./mini-mock-exam-bank) |
 
 ## 5. Exam Practice Concept Map
 
@@ -157,6 +166,8 @@ Finally, they attempt mini mock exams to combine multiple skills.
 Exam Practice
 ├── Exam Understanding
 │   ├── Paper 1 overview
+│   ├── Paper 1 case-study evidence and application
+│   ├── Paper 2 integrated Theme B practice
 │   ├── question types
 │   ├── timing
 │   ├── marks available

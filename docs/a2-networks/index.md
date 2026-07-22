@@ -14,7 +14,6 @@ Theme A: Concepts of computer science. A2 Networks helps you understand how devi
 ## Assessment connection
 
 - Paper 1: tests networking concepts, protocols, transmission, security, and scenario-based explanations.
-- Paper 2: may support option questions where network design, web access, or security affects a system.
 - IA: helps you justify network, security, access, and deployment choices in a computational solution.
 
 ## 1. Module Overview
@@ -902,4 +901,3 @@ Before moving to the next module, students should be able to:
 | Encryption | Protects data content |
 | VPN | Creates encrypted tunnel |
 | NAT | Translates private/public IP addresses |
-

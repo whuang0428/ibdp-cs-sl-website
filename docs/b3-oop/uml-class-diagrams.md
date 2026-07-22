@@ -34,6 +34,28 @@ UML class diagrams help students see the structure of a class before writing cod
 
 ---
 
+## Start here: read the three compartments
+
+A basic UML class diagram shows the **class name**, **attributes**, and **methods**. Read each member's visibility, name, type, parameters, and return type before translating it into code.
+
+```text
+- attributeName : Type
++ methodName(parameter : Type) : ReturnType
+```
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- identify the three main compartments of a UML class diagram
+- interpret public and private visibility symbols
+- read attribute types, parameters, and method return types
+- identify a constructor, accessor, and mutator
+- translate a simple Java class to UML and UML to Java
+- explain how UML supports planning before implementation
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -1133,4 +1155,3 @@ Before moving on, students should be able to answer these:
 8. How do you convert `+ getName() : String` into Java?
 9. Why do constructors usually not show a return type?
 10. How does UML show encapsulation?
-

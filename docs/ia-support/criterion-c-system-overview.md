@@ -13,6 +13,10 @@ Criterion C should connect to:
 - the development plan from Criterion B
 - the development evidence that will appear in Criterion D
 
+::: tip Worked evidence chain
+See the [PantryTrack Criterion C example](./worked-evidence-example#criterion-c-system-overview-evidence) for a component model, data relationships, earliest-expiry allocation pseudocode, and a testing strategy linked to SC1-SC6.
+:::
+
 ## 2. What Criterion C Should Include
 
 | Part | What to include | Why it matters |

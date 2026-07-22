@@ -1,5 +1,14 @@
 ﻿# Unsupervised Learning
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -34,6 +43,36 @@ By the end of this lesson, students should be able to:
 ::: tip Learning Focus
 Unsupervised learning uses unlabelled data. The model is not given the correct answer. Instead, it tries to find patterns, groups, structures, or unusual examples in the data.
 :::
+
+---
+
+## Start here: find patterns without given labels
+
+Unsupervised learning uses **unlabelled data**. It may group similar records, find unusual cases, or reveal structure, but it is not given a correct output for each training example.
+
+Do not confuse clustering with classification: classification predicts a known label, while clustering discovers groups that still need interpretation.
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- distinguish labelled and unlabelled data
+- distinguish supervised from unsupervised learning
+- explain clustering and anomaly detection at a basic level
+- distinguish clustering from classification
+- explain why human judgement is needed to interpret discovered groups
+- identify data-quality, bias, and privacy risks in a scenario
+
+---
+
+## Common mistakes
+
+| Mistake | Better understanding |
+|---|---|
+| Saying unsupervised learning has no input data | It has input features, but no given target label for each example |
+| Treating a cluster as an objectively correct class | A cluster is a discovered grouping that needs interpretation |
+| Confusing clustering with classification | Clustering discovers groups; classification predicts known classes |
+| Assuming unusual means harmful | An anomaly is unusual and must be investigated in context |
 
 ---
 
@@ -1437,4 +1476,3 @@ Before moving on, students should be able to answer these:
 8. Why does feature selection matter?
 9. Why can anomaly detection create false alarms?
 10. Why can unlabelled data still have privacy risk?
-

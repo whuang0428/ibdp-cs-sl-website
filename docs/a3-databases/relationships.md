@@ -36,6 +36,24 @@ A relationship connects records in different tables. In a relational database, r
 
 ---
 
+## Start here: identify the entities before the relationship
+
+First identify the real-world entities, then decide how many records on each side may be connected. Use a **primary key** to identify a record and a **foreign key** to store the reference in the related table.
+
+A many-to-many relationship normally needs a linking table so that each connection is stored as its own record.
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- distinguish one-to-one, one-to-many, and many-to-many relationships
+- identify the parent table, child table, primary key, and foreign key
+- resolve a many-to-many relationship with a linking table
+- explain how referential integrity prevents invalid references
+- design simple related tables for a stated scenario
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -1476,4 +1494,3 @@ Before moving on, students should be able to answer these:
 8. How do relationships reduce redundancy?
 9. Give one example of a many-to-many relationship.
 10. Why is `Course1`, `Course2`, `Course3` poor design?
-

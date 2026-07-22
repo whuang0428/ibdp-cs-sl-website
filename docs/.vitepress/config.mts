@@ -255,7 +255,9 @@ export default defineConfig({
         items: [
           { text: 'Overview', link: '/exam-practice/' },
           { text: 'Paper 1 Overview', link: '/exam-practice/paper-1-overview' },
+          { text: 'Paper 1 Case Study Skills', link: '/exam-practice/case-study-answering-skills' },
           { text: 'Paper 2 Theme B Skills', link: '/exam-practice/paper-2-theme-b-skills' },
+          { text: 'Paper 2 Integrated Practice', link: '/exam-practice/paper-2-integrated-practice' },
           { text: 'Command Terms', link: '/exam-practice/command-terms' },
           { text: 'Mark Scheme Skills', link: '/exam-practice/mark-scheme-skills' },
           { text: 'B1 Practice', link: '/exam-practice/b1-practice' },
@@ -278,6 +280,7 @@ export default defineConfig({
           { text: 'Criterion C: System Overview', link: '/ia-support/criterion-c-system-overview' },
           { text: 'Criterion D: Development', link: '/ia-support/criterion-d-development' },
           { text: 'Criterion E: Evaluation', link: '/ia-support/criterion-e-evaluation' },
+          { text: 'Worked Evidence Example', link: '/ia-support/worked-evidence-example' },
           { text: 'Ethics and Academic Integrity', link: '/ia-support/ethics-and-academic-integrity' },
           { text: 'Submission Checklist', link: '/ia-support/submission-checklist' }
         ]

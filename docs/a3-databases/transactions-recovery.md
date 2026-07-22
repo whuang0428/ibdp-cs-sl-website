@@ -36,6 +36,25 @@ A transaction is a group of database operations treated as one unit. Either all 
 
 ---
 
+## Start here: complete every step or save none
+
+A **transaction** groups related database operations into one logical unit. If every required operation succeeds, the system **commits** the transaction. If an important operation fails, it **rolls back** the changes so the database does not keep a half-completed update.
+
+Recovery uses backups, transaction logs, and checkpoints to return the database to a valid state after a failure.
+
+## Core checklist
+
+After studying this page, you should be able to:
+
+- define transaction, commit, rollback, and recovery
+- explain atomicity using a multi-step update such as a bank transfer
+- explain how transactions protect consistency and integrity
+- describe the basic purposes of backups, transaction logs, and checkpoints
+- explain how locking can reduce conflicts such as double booking or lost updates
+- choose a suitable recovery action for a stated failure
+
+---
+
 ## 3. Key Terms
 
 | English Term | 中文解释 | Exam-style meaning |
@@ -1243,4 +1262,3 @@ Before moving on, students should be able to answer these:
 8. What does restore mean?
 9. How can recovery handle incomplete transactions?
 10. Why can locking be useful?
-

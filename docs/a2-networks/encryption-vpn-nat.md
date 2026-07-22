@@ -1,5 +1,14 @@
 ﻿# Encryption, VPN and NAT
 
+## Page map
+
+- [Lesson goals](#1-lesson-goals)
+- [Syllabus mapping](#2-syllabus-mapping)
+- [Core checklist](#core-checklist)
+- [Key terms and detailed lesson](#3-key-terms)
+
+---
+
 ## 1. Lesson Goals
 
 By the end of this lesson, students should be able to:
@@ -1576,4 +1585,3 @@ Before moving on, students should be able to answer these:
 8. Give one VPN advantage and one limitation.
 9. What is NAT?
 10. Why do home networks commonly use NAT?
-
