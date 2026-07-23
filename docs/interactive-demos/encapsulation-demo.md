@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import EncapsulationDemo from '../.vitepress/components/demos/EncapsulationDemo.vue'
 </script>
 

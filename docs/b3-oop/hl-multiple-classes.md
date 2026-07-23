@@ -987,61 +987,7 @@ Explain why calling a method on `null` can cause a runtime error.
 
 ---
 
-## 23. Practice task
-### Activity 1: Class Responsibility Sorting
-
-Give students method cards such as:
-
-```text
-getMark()
-calculateAverage()
-addStudent()
-displayInfo()
-findStudent()
-```
-
-Students decide whether each belongs in `Student`, `Course`, or `TestCourse`.
-
----
-
-### Activity 2: Object Collaboration Role-play
-
-One student acts as a Course object. Other students act as Student objects.
-
-The Course student asks each Student:
-
-```text
-What is your mark?
-Please display your information.
-```
-
-This models method calls between objects.
-
----
-
-### Activity 3: Build a Mini System
-
-Groups design a two-class system:
-
-```text
-Library + Book
-Team + Player
-Playlist + Song
-Classroom + Student
-```
-
-They must show:
-
-```text
-attributes
-methods
-object relationship
-one test scenario
-```
-
----
-
-## 24. Independent practice
+## 23. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain how objects from different classes can work together.
@@ -1095,7 +1041,7 @@ array contents
 
 ---
 
-## 25. One-page Revision Summary
+## 24. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1114,7 +1060,7 @@ array contents
 
 ---
 
-## 26. Quick Self-test
+## 25. Quick Self-test
 
 Before finishing this topic, students should be able to answer these:
 

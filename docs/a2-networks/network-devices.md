@@ -1261,58 +1261,7 @@ A switch can connect wired classroom computers and printers within the LAN. Wire
 
 ---
 
-## 34. Practice task
-### Activity 1: Device Matching
-
-Students match devices to roles:
-
-```text
-NIC
-switch
-router
-wireless access point
-modem
-firewall
-hub
-repeater
-```
-
----
-
-### Activity 2: Build a School Network
-
-Groups design a school network with:
-
-```text
-computer lab
-staff office
-library Wi-Fi
-server room
-internet connection
-printers
-```
-
-They must label each network device and explain its role.
-
----
-
-### Activity 3: Troubleshooting Scenario
-
-Give students problems:
-
-```text
-one computer cannot connect
-whole lab cannot connect
-Wi-Fi weak in one corridor
-LAN works but internet does not
-website blocked
-```
-
-Students identify possible device-related causes.
-
----
-
-## 35. Independent practice
+## 34. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between switch, router, modem, and wireless access point.
@@ -1365,7 +1314,7 @@ Explain why a firewall is useful but is not enough by itself to fully secure a n
 
 ---
 
-## 36. One-page Revision Summary
+## 35. One-page Revision Summary
 
 | Device | Main Role |
 |---|---|
@@ -1389,7 +1338,7 @@ Explain why a firewall is useful but is not enough by itself to fully secure a n
 
 ---
 
-## 37. Quick Self-test
+## 36. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

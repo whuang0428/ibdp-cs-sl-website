@@ -1293,58 +1293,7 @@ Give three scenarios where a dynamic list is more suitable than an array.
 
 ---
 
-## 36. Practice task
-### Activity 1: Human Dynamic List
-
-Students stand in a row as list elements.
-
-Use these list operations:
-
-```text
-add at end
-add at index 1
-remove index 2
-get index 0
-set index 1
-```
-
-Students physically shift positions to model dynamic list behaviour.
-
----
-
-### Activity 2: Shopping Cart Simulation
-
-Students design operations for:
-
-```text
-add item
-remove item
-display cart
-search item
-calculate total price
-```
-
-Then choose whether an array or ArrayList is better.
-
----
-
-### Activity 3: Debug the Loop
-
-Give students faulty code:
-
-```text
-FOR index ← 0 TO size(list) - 1
-    IF list[index] = "delete" THEN
-        REMOVE list[index]
-    ENDIF
-ENDFOR
-```
-
-Students explain why items may be skipped and rewrite using a backwards loop.
-
----
-
-## 37. Independent practice
+## 36. Independent practice
 ### Independent practice part A
 
 Explain dynamic lists and ArrayLists in 8-10 sentences using one real scenario.
@@ -1388,7 +1337,7 @@ ArrayLists are always better than arrays.
 
 ---
 
-## 38. One-page Revision Summary
+## 37. One-page Revision Summary
 
 | Point | Summary |
 |---|---|

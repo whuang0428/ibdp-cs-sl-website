@@ -1080,46 +1080,7 @@ mark = 88
 
 ---
 
-## 24. Practice task
-### Activity 1: Getter and Setter Cards
-
-Students receive private attribute cards:
-
-```text
-private int mark
-private String name
-private double balance
-private boolean active
-```
-
-They write suitable getter and setter method headers.
-
----
-
-### Activity 2: Should This Have a Setter?
-
-Students discuss whether each attribute should have a setter:
-
-```text
-studentId
-name
-mark
-password
-dateOfBirth
-balance
-```
-
-They must justify their decisions.
-
----
-
-### Activity 3: State Trace with Validation
-
-Give students a class with a setter and a list of method calls. They trace which values are accepted and which are rejected.
-
----
-
-## 25. Independent practice
+## 24. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain why getters and setters are used instead of public attributes.
@@ -1180,7 +1141,7 @@ Assume score cannot be negative and health must be 0-100.
 
 ---
 
-## 26. One-page Revision Summary
+## 25. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1200,7 +1161,7 @@ Assume score cannot be negative and health must be 0-100.
 
 ---
 
-## 27. Quick Self-test
+## 26. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

@@ -1047,63 +1047,7 @@ Encapsulation is the process where each layer adds its own control information, 
 
 ---
 
-## 31. Practice task
-### Activity 1: Layer Card Sort
-
-Students sort these into TCP/IP layers:
-
-```text
-HTTP
-HTTPS
-DNS
-TCP
-UDP
-IP
-Ethernet
-Wi-Fi
-port number
-IP address
-MAC address
-```
-
----
-
-### Activity 2: Human Encapsulation
-
-Students act as layers.
-
-Each layer adds a paper header:
-
-```text
-Application data
-TCP header
-IP header
-Frame header
-```
-
-Then the receiving side removes them in reverse order.
-
----
-
-### Activity 3: Website Access Story
-
-Students explain opening a website using:
-
-```text
-browser
-DNS
-HTTPS
-TCP
-IP
-Ethernet/Wi-Fi
-router
-server
-response
-```
-
----
-
-## 32. Independent practice
+## 31. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain why the TCP/IP model uses layers.
@@ -1153,7 +1097,7 @@ IP guarantees that all packets arrive in order.
 
 ---
 
-## 33. One-page Revision Summary
+## 32. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1174,7 +1118,7 @@ IP guarantees that all packets arrive in order.
 
 ---
 
-## 34. Quick Self-test
+## 33. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

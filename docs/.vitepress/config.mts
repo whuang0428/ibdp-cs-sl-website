@@ -1,6 +1,7 @@
 ﻿import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: 'IBDP CS SL',
   description: 'Static learning portal for IBDP Computer Science SL',
 
@@ -10,6 +11,14 @@ export default defineConfig({
 
   cleanUrls: true,
   lastUpdated: true,
+
+  mermaid: {
+    securityLevel: 'strict'
+  },
+
+  mermaidPlugin: {
+    class: 'mermaid ibdp-mermaid'
+  },
 
   themeConfig: {
     siteTitle: 'IBDP CS SL',
@@ -314,11 +323,11 @@ export default defineConfig({
 
     footer: {
       message: 'IBDP Computer Science SL Course Website',
-      copyright: 'Created for classroom teaching and student revision'
+      copyright: 'Created for IBDP Computer Science SL study and revision'
     }
   },
 
   markdown: {
     lineNumbers: true
   }
-})
+}))

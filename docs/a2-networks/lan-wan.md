@@ -1452,62 +1452,7 @@ A VPN can allow the teacher to access private school network resources over the 
 
 ---
 
-## 33. Practice task
-### Activity 1: LAN or WAN Sorting
-
-Students classify scenarios:
-
-```text
-home Wi-Fi
-school computer lab
-company offices in different countries
-internet
-printer shared in classroom
-bank ATMs across a country
-cloud storage access
-```
-
----
-
-### Activity 2: School Network Map
-
-Students draw a school network and label:
-
-```text
-LAN components
-WAN/internet connection
-router
-switch
-printer
-server
-wireless access point
-```
-
----
-
-### Activity 3: Scenario Debate
-
-Prompt:
-
-```text
-Should a school keep files on a local LAN server or use cloud services over WAN?
-```
-
-Students discuss:
-
-```text
-speed
-control
-security
-remote access
-cost
-reliability
-maintenance
-```
-
----
-
-## 34. Independent practice
+## 33. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between LAN and WAN using a school example.
@@ -1559,7 +1504,7 @@ A LAN is always secure.
 
 ---
 
-## 35. One-page Revision Summary
+## 34. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1582,7 +1527,7 @@ A LAN is always secure.
 
 ---
 
-## 36. Quick Self-test
+## 35. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

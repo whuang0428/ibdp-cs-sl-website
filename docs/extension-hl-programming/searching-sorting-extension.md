@@ -1255,54 +1255,7 @@ Explain one common boundary error in binary search.
 
 ---
 
-## 34. Practice task
-### Activity 1: Human Linear Search
-
-Students hold number cards in random order.  
-One student is the target.  
-The class checks cards one by one until found.
-
-Discussion:
-
-```text
-How many checks were needed?
-What if target was last?
-What if target was missing?
-```
-
----
-
-### Activity 2: Human Binary Search
-
-Students stand in sorted order holding number cards.
-
-The class:
-
-```text
-checks middle student
-chooses lower or upper half
-repeats until found
-```
-
-Discussion:
-
-```text
-Why must students be sorted?
-How many checks were needed?
-```
-
----
-
-### Activity 3: Bubble Sort Line
-
-Students stand in a line with number cards.
-
-They compare adjacent pairs and swap positions if out of order.  
-After each pass, students identify which value is in its final place.
-
----
-
-## 35. Independent practice
+## 34. Independent practice
 ### Independent practice part A
 
 Explain linear search and binary search in 8-10 sentences, including one scenario for each.
@@ -1353,7 +1306,7 @@ Sorting is only useful for numbers.
 
 ---
 
-## 36. One-page Revision Summary
+## 35. One-page Revision Summary
 
 | Point | Summary |
 |---|---|

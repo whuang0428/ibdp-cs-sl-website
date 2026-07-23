@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import SQLJoinVisualizer from '../.vitepress/components/demos/SQLJoinVisualizer.vue'
 </script>
 

@@ -1112,61 +1112,7 @@ Clock speed affects how many cycles a CPU can perform per second, but performanc
 
 ---
 
-## 30. Practice task
-### Activity 1: CPU Role Cards
-
-Students receive cards:
-
-```text
-Control Unit
-ALU
-PC
-MAR
-MDR
-CIR
-RAM
-Cache
-```
-
-They match each card to its role.
-
----
-
-### Activity 2: Human CPU Simulation
-
-Students act as:
-
-```text
-PC
-MAR
-MDR
-CIR
-Control Unit
-ALU
-RAM
-```
-
-They simulate fetching and executing a simple instruction.
-
----
-
-### Activity 3: Performance Discussion
-
-Groups compare two computer specifications and decide which might be better for:
-
-```text
-gaming
-programming
-video editing
-basic school work
-server use
-```
-
-They must justify using CPU, RAM, cache, and storage ideas.
-
----
-
-## 31. Independent practice
+## 30. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the role of the CPU and name its main components.
@@ -1214,7 +1160,7 @@ Explain why CPU performance depends on more than clock speed.
 
 ---
 
-## 32. One-page Revision Summary
+## 31. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1235,7 +1181,7 @@ Explain why CPU performance depends on more than clock speed.
 
 ---
 
-## 33. Quick Self-test
+## 32. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

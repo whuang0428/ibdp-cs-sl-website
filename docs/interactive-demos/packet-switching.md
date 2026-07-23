@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import PacketSwitchingDemo from '../.vitepress/components/demos/PacketSwitchingDemo.vue'
 </script>
 

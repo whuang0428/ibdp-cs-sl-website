@@ -1067,49 +1067,7 @@ A trace table records the values of variables step by step as a program or algor
 
 ---
 
-## 20. Practice task
-### Activity 1: Error Sorting
-
-Students receive code cards. They classify each error as:
-
-```text
-syntax error
-runtime error
-logic error
-```
-
-Then they explain their choice.
-
----
-
-### Activity 2: Boundary Test Challenge
-
-Groups receive validation rules such as:
-
-```text
-age 0-120
-mark 0-100
-quantity 1-50
-menu choice 1-4
-```
-
-For each rule, they create normal, boundary, invalid, and extreme test data.
-
----
-
-### Activity 3: Debugging Race
-
-Groups receive short Java programs with hidden errors. They must:
-
-1. predict expected output
-2. run or trace actual output
-3. identify the bug
-4. correct the code
-5. explain the error type
-
----
-
-## 21. Independent practice
+## 20. Independent practice
 ### Independent practice part A: Test Table
 
 Create a test table for a program that accepts a password length from 8 to 20 characters inclusive.
@@ -1174,7 +1132,7 @@ i, total before, total after
 
 ---
 
-## 22. One-page Revision Summary
+## 21. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1195,7 +1153,7 @@ i, total before, total after
 
 ---
 
-## 23. Quick Self-test
+## 22. Quick Self-test
 
 Before finishing this topic, students should be able to answer these:
 

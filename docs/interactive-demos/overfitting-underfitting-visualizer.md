@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import OverfittingUnderfittingVisualizer from '../.vitepress/components/demos/OverfittingUnderfittingVisualizer.vue'
 </script>
 

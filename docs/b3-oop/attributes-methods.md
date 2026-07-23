@@ -1132,66 +1132,7 @@ Attributes are useful because they store the data or state of an object. Each ob
 
 ---
 
-## 24. Practice task
-### Activity 1: Object State Cards
-
-Students receive object cards with attributes.
-
-Example:
-
-```text
-Student s1
-name = Alice
-mark = 70
-```
-
-The teacher calls method actions:
-
-```text
-increaseMark(5)
-increaseMark(10)
-```
-
-Students update the object state card.
-
----
-
-### Activity 2: Attribute or Method Sort
-
-Students sort cards into two groups:
-
-```text
-attributes
-methods
-```
-
-Example cards:
-
-```text
-health
-score
-attack()
-move()
-displayInfo()
-name
-```
-
----
-
-### Activity 3: Method Call Trace
-
-Groups receive a short class and main method. They must trace:
-
-```text
-method calls
-arguments
-return values
-object state changes
-```
-
----
-
-## 25. Independent practice
+## 24. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between attributes and methods using one example class.
@@ -1248,7 +1189,7 @@ p1.hasWon()
 
 ---
 
-## 26. One-page Revision Summary
+## 25. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1268,7 +1209,7 @@ p1.hasWon()
 
 ---
 
-## 27. Quick Self-test
+## 26. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

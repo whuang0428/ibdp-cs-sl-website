@@ -1337,61 +1337,7 @@ Unsupervised anomaly detection identifies transactions that are unusual compared
 
 ---
 
-## 39. Practice task
-### Activity 1: Supervised or Unsupervised Sort
-
-Students classify scenarios:
-
-```text
-predict house price using known sale prices
-group customers without customer type labels
-detect unusual network traffic
-classify emails using spam labels
-group students by learning behaviour
-predict delivery time using past delivery data
-```
-
----
-
-### Activity 2: Cluster Interpretation
-
-Give students a small table of customer data.
-
-Students create possible clusters manually and name them.
-
-They discuss:
-
-```text
-what features they used
-whether the clusters are meaningful
-what risks exist if the company uses these groups
-```
-
----
-
-### Activity 3: Anomaly Review
-
-Give students examples of unusual events:
-
-```text
-large bank transaction
-late-night login
-very high game score
-unusual medical test result
-large product return
-```
-
-Students decide:
-
-```text
-possible harmless explanation
-possible risky explanation
-what extra information is needed
-```
-
----
-
-## 40. Independent practice
+## 39. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what unsupervised learning is and how it differs from supervised learning.
@@ -1439,7 +1385,7 @@ Clusters are always meaningful and correct.
 
 ---
 
-## 41. One-page Revision Summary
+## 40. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1462,7 +1408,7 @@ Clusters are always meaningful and correct.
 
 ---
 
-## 42. Quick Self-test
+## 41. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

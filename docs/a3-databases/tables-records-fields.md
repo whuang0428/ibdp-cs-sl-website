@@ -1031,68 +1031,7 @@ Book(
 
 ---
 
-## 24. Practice task
-### Activity 1: Human Table
-
-Students stand in rows to represent records.
-
-Each student holds field cards:
-
-```text
-studentId
-name
-yearGroup
-```
-
-The class identifies:
-
-```text
-table
-record
-field
-value
-```
-
----
-
-### Activity 2: Table Design Sort
-
-Give students mixed fields:
-
-```text
-studentName
-courseName
-teacherEmail
-bookTitle
-borrowDate
-productPrice
-```
-
-Students group them into suitable table names:
-
-```text
-Student
-Course
-Teacher
-Book
-Loan
-Product
-```
-
----
-
-### Activity 3: Bad Table Repair
-
-Give students a table with repeated data. Groups must:
-
-1. identify repeated data
-2. identify entities
-3. suggest separate tables
-4. explain why the design is better
-
----
-
-## 25. Independent practice
+## 24. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain table, record, field, and value using your own example.
@@ -1145,7 +1084,7 @@ Explain why this table design may cause problems:
 
 ---
 
-## 26. One-page Revision Summary
+## 25. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1166,7 +1105,7 @@ Explain why this table design may cause problems:
 
 ---
 
-## 27. Quick Self-test
+## 26. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

@@ -1334,62 +1334,7 @@ A student ID is an identifier rather than a number used for calculation. If it i
 
 ---
 
-## 25. Practice task
-### Activity 1: Data Type Sorting Cards
-
-Students receive cards with values such as:
-
-```text
-16
-12.5
-true
-'A'
-"Alice"
-"00123"
-```
-
-They sort the cards into:
-
-```text
-int
-double
-boolean
-char
-String
-```
-
----
-
-### Activity 2: Type Mismatch Detective
-
-Give students incorrect declarations:
-
-```java
-int name = "Alice";
-boolean passed = "true";
-char grade = "A";
-double count = "5";
-```
-
-Students identify the type mismatch and correct each line.
-
----
-
-### Activity 3: Integer Division Experiment
-
-Students predict outputs before running:
-
-```java
-System.out.println(5 / 2);
-System.out.println(5 / 2.0);
-System.out.println((double) 5 / 2);
-```
-
-Then they explain why the results are different.
-
----
-
-## 26. Independent practice
+## 25. Independent practice
 ### Independent practice part A: Choose Types
 
 For each data item, choose a Java type and explain why:
@@ -1435,7 +1380,7 @@ In 4-5 sentences, explain why `5 / 2` and `5 / 2.0` produce different results in
 
 ---
 
-## 27. One-page Revision Summary
+## 26. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1456,7 +1401,7 @@ In 4-5 sentences, explain why `5 / 2` and `5 / 2.0` produce different results in
 
 ---
 
-## 28. Quick Self-test
+## 27. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

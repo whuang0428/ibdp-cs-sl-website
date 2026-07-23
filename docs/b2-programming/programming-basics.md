@@ -1407,55 +1407,7 @@ This is a logic error because the program runs but does not produce the expected
 
 ---
 
-## 24. Practice task
-### Activity 1: Human Program
-
-Students act as program statements. Each student holds one instruction. The class executes the instructions in order and records the output.
-
-Example cards:
-
-```text
-Set score to 0
-Add 10 to score
-Add 5 to score
-Output score
-```
-
----
-
-### Activity 2: Code Block Puzzle
-
-Cut a simple Java program into pieces:
-
-```text
-class header
-main method
-variable declarations
-process statement
-output statement
-closing braces
-```
-
-Students put the pieces in the correct order.
-
----
-
-### Activity 3: Error Detective
-
-Give students short code snippets. They identify whether each has:
-
-```text
-syntax error
-runtime error
-logic error
-no error
-```
-
-Then they explain their choice.
-
----
-
-## 25. Independent practice
+## 24. Independent practice
 ### Independent practice part A: Write a Simple Program
 
 Write a Java program that:
@@ -1509,7 +1461,7 @@ In 4-5 sentences, explain why beginners should write and test small pieces of co
 
 ---
 
-## 26. One-page Revision Summary
+## 25. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1534,7 +1486,7 @@ In 4-5 sentences, explain why beginners should write and test small pieces of co
 
 ---
 
-## 27. Quick Self-test
+## 26. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

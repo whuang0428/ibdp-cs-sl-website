@@ -1655,66 +1655,7 @@ The features are the input variables used by the model, such as attendance, miss
 
 ---
 
-## 40. Practice task
-### Activity 1: Is It ML?
-
-Students classify examples as traditional programming or machine learning:
-
-```text
-if score >= 50 then pass
-spam filter trained on emails
-calculator adding two numbers
-recommendation system using watch history
-traffic light timer using fixed schedule
-image classifier trained on labelled images
-```
-
----
-
-### Activity 2: Feature and Label Cards
-
-Give students scenario cards:
-
-```text
-house price prediction
-email spam detection
-student pass/fail prediction
-movie recommendation
-fraud detection
-game matchmaking
-```
-
-Students identify:
-
-```text
-possible features
-possible label
-prediction output
-classification or regression
-```
-
----
-
-### Activity 3: Data Quality Discussion
-
-Give students a poor dataset scenario:
-
-```text
-A face recognition model is trained mostly on one age group and one skin tone group.
-```
-
-Students discuss:
-
-```text
-what may go wrong
-who may be harmed
-how to improve the data or testing
-why human oversight matters
-```
-
----
-
-## 41. Independent practice
+## 40. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what machine learning is and how it differs from traditional programming.
@@ -1766,7 +1707,7 @@ Classification predicts a number.
 
 ---
 
-## 42. One-page Revision Summary
+## 41. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1792,7 +1733,7 @@ Classification predicts a number.
 
 ---
 
-## 43. Quick Self-test
+## 42. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

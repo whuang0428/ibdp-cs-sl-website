@@ -1499,66 +1499,7 @@ Identify two foreign keys and explain their purpose.
 
 ---
 
-## 36. Practice task
-### Activity 1: Key Labeling
-
-Give students several table schemas and ask them to label:
-
-```text
-PK
-FK
-parent table
-child table
-```
-
-Example:
-
-```text
-Author(AuthorID, AuthorName)
-Book(BookID, Title, AuthorID)
-```
-
----
-
-### Activity 2: Broken Integrity
-
-Give students a parent table and child table with invalid foreign keys.
-
-Students find:
-
-```text
-which records are invalid
-why they are invalid
-how to fix them
-```
-
----
-
-### Activity 3: Design Keys
-
-Groups design keys for one system:
-
-```text
-school enrollment
-library loans
-online shop orders
-hospital appointments
-game matches
-```
-
-They must identify:
-
-```text
-tables
-primary keys
-foreign keys
-relationships
-possible integrity problems
-```
-
----
-
-## 37. Independent practice
+## 36. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain the difference between primary keys and foreign keys using a school database example.
@@ -1613,7 +1554,7 @@ Foreign keys are not needed if tables have similar names.
 
 ---
 
-## 38. One-page Revision Summary
+## 37. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1635,7 +1576,7 @@ Foreign keys are not needed if tables have similar names.
 
 ---
 
-## 39. Quick Self-test
+## 38. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

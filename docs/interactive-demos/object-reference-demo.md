@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import ObjectReferenceDemo from '../.vitepress/components/demos/ObjectReferenceDemo.vue'
 </script>
 

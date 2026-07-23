@@ -1286,50 +1286,7 @@ mark = 75
 
 ---
 
-## 22. Practice task
-### Activity 1: Safe Box Analogy
-
-Students imagine object attributes inside a locked box.
-
-Outside code cannot open the box directly. It must use public methods such as:
-
-```text
-getMark()
-setMark()
-deposit()
-withdraw()
-```
-
-Students explain what validation should happen before the box is changed.
-
----
-
-### Activity 2: Poor vs Improved Design
-
-Give groups poor class designs with public attributes. They must redesign them using:
-
-```text
-private attributes
-constructor
-public methods
-validation
-```
-
----
-
-### Activity 3: Encapsulation Debate
-
-Prompt:
-
-```text
-Should every attribute have a setter?
-```
-
-Students discuss why some attributes should be read-only or controlled carefully.
-
----
-
-## 23. Independent practice
+## 22. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain encapsulation using a bank account or student mark example.
@@ -1390,7 +1347,7 @@ Assume invalid withdrawals are rejected.
 
 ---
 
-## 24. One-page Revision Summary
+## 23. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1411,7 +1368,7 @@ Assume invalid withdrawals are rejected.
 
 ---
 
-## 25. Quick Self-test
+## 24. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

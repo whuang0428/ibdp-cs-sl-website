@@ -813,7 +813,7 @@ A WHILE loop checks the condition before the loop body.
 ```mermaid
 flowchart TD
     A([Start]) --> B[/Input password/]
-    B --> C{password = "secret"?}
+    B --> C{"password = 'secret'?"}
     C -- No --> D[/Output "Try again"/]
     D --> B
     C -- Yes --> E[/Output "Access granted"/]
@@ -835,7 +835,7 @@ A REPEAT UNTIL loop runs at least once.
 ```mermaid
 flowchart TD
     A([Start]) --> B[/Input password/]
-    B --> C{password = "secret"?}
+    B --> C{"password = 'secret'?"}
     C -- No --> B
     C -- Yes --> D[/Output "Access granted"/]
     D --> E([End])
@@ -1174,7 +1174,7 @@ flowchart TD
     C --> D{attempts < 3 AND loggedIn = false?}
     D -- Yes --> E[/Input password/]
     E --> F[attempts ← attempts + 1]
-    F --> G{password = "secret"?}
+    F --> G{"password = 'secret'?"}
     G -- Yes --> H[loggedIn ← true]
     G -- No --> I[/Output "Incorrect"/]
     H --> D
@@ -1208,7 +1208,7 @@ flowchart TD
     A([Start]) --> B[found ← false]
     B --> C[index ← 1]
     C --> D{index <= length AND found = false?}
-    D -- Yes --> E{list[index] = target?}
+    D -- Yes --> E{"list[index] = target?"}
     E -- Yes --> F[found ← true]
     E -- No --> G[index ← index + 1]
     F --> G

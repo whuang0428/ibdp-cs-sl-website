@@ -1042,64 +1042,7 @@ This is incorrect because a program contains many instructions. The CPU uses the
 
 ---
 
-## 27. Practice task
-### Activity 1: Human Fetch-Decode-Execute
-
-Students act as:
-
-```text
-PC
-MAR
-MDR
-CIR
-Control Unit
-ALU
-RAM
-```
-
-The class simulates fetching an instruction from memory and executing it.
-
----
-
-### Activity 2: Register Matching
-
-Match each register to its role:
-
-```text
-PC
-MAR
-MDR
-CIR
-```
-
-Students must also explain why common wrong answers are wrong.
-
----
-
-### Activity 3: Instruction Trace
-
-Give groups a small memory table:
-
-| Address | Instruction |
-|---:|---|
-| 100 | LOAD A |
-| 101 | ADD B |
-| 102 | STORE C |
-
-Students trace:
-
-```text
-PC
-MAR
-MDR
-CIR
-```
-
-for each instruction fetch.
-
----
-
-## 28. Independent practice
+## 27. Independent practice
 ### Independent practice part A: Process Explanation
 
 In 6-8 sentences, explain the fetch-decode-execute cycle.
@@ -1154,7 +1097,7 @@ Describe what happens during the fetch stage.
 
 ---
 
-## 29. One-page Revision Summary
+## 28. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1175,7 +1118,7 @@ Describe what happens during the fetch stage.
 
 ---
 
-## 30. Quick Self-test
+## 29. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

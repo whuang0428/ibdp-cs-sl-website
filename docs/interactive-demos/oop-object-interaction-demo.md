@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import OOPObjectInteractionDemo from '../.vitepress/components/demos/OOPObjectInteractionDemo.vue'
 </script>
 

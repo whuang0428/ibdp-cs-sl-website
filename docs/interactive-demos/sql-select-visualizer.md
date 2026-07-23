@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import SQLSelectVisualizer from '../.vitepress/components/demos/SQLSelectVisualizer.vue'
 </script>
 

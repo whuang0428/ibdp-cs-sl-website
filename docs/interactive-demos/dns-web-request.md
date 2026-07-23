@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import DNSWebRequestDemo from '../.vitepress/components/demos/DNSWebRequestDemo.vue'
 </script>
 

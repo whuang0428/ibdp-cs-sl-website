@@ -1365,42 +1365,7 @@ The variable `total` is acting as an accumulator. It starts at 0 and is updated 
 
 ---
 
-## 22. Practice task
-### Activity 1: Variable Boxes
-
-Students use paper boxes or cards.
-
-Each card has:
-
-```text
-variable name
-current value
-data type
-```
-
-The teacher reads assignment statements, and students update the cards.
-
-Example:
-
-```text
-score = score + 10
-```
-
----
-
-### Activity 2: Trace Relay
-
-Groups trace the same code, one line per student. Each student updates one variable value and passes the trace table to the next student.
-
----
-
-### Activity 3: Swap Demonstration
-
-Two students hold number cards. A third student acts as the `temp` variable. The class physically demonstrates why `temp` is needed.
-
----
-
-## 23. Independent practice
+## 22. Independent practice
 ### Independent practice part A: Trace
 
 Trace this code:
@@ -1448,7 +1413,7 @@ In 4-5 sentences, explain why variables are important in programming.
 
 ---
 
-## 24. One-page Revision Summary
+## 23. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1469,7 +1434,7 @@ In 4-5 sentences, explain why variables are important in programming.
 
 ---
 
-## 25. Quick Self-test
+## 24. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

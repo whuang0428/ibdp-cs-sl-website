@@ -1608,54 +1608,7 @@ The algorithm has a logic error because it divides the total by 9 even though th
 
 ---
 
-## 41. Practice task
-### Activity 1: Structure Sort
-
-Students classify each example as sequence, selection, or iteration.
-
-Examples:
-
-```text
-input length, input width, calculate area
-if score >= 50 then pass
-repeat until password is correct
-for each item in cart
-output total
-```
-
----
-
-### Activity 2: Algorithm Repair
-
-Give students faulty algorithms:
-
-```text
-average divided by wrong number
-counter not updated
-output inside loop by mistake
-wrong comparison operator
-variable not initialized
-```
-
-Students identify and fix the logic error.
-
----
-
-### Activity 3: Algorithm to Flowchart
-
-Students convert simple algorithms into flowchart descriptions:
-
-```text
-pass/fail
-discount calculator
-password attempts
-average score
-largest number
-```
-
----
-
-## 42. Independent practice
+## 41. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what an algorithm is and why sequence, selection, and iteration are important.
@@ -1706,7 +1659,7 @@ A logic error is the same as a syntax error.
 
 ---
 
-## 43. One-page Revision Summary
+## 42. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1733,7 +1686,7 @@ A logic error is the same as a syntax error.
 
 ---
 
-## 44. Quick Self-test
+## 43. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

@@ -1305,70 +1305,7 @@ The operating system receives the print request from the application software an
 
 ---
 
-## 29. Practice task
-### Activity 1: OS Function Matching
-
-Match tasks to OS functions:
-
-```text
-saving a file
-opening a program
-allocating RAM
-printing a document
-logging in with password
-switching between apps
-connecting to Wi-Fi
-```
-
-Functions:
-
-```text
-file management
-process management
-memory management
-device management
-security management
-network management
-user interface
-```
-
----
-
-### Activity 2: GUI vs CLI Debate
-
-Students compare GUI and CLI for:
-
-```text
-beginner student
-programmer
-system administrator
-school office worker
-server maintenance
-```
-
----
-
-### Activity 3: Human Operating System
-
-Students act as:
-
-```text
-user
-application
-operating system
-CPU
-RAM
-storage
-printer
-keyboard
-screen
-```
-
-They role-play opening, editing, saving, and printing a document.
-
----
-
-## 30. Independent practice
+## 29. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what an operating system is and why it is needed.
@@ -1419,7 +1356,7 @@ Every user should have administrator permissions.
 
 ---
 
-## 31. One-page Revision Summary
+## 30. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1440,7 +1377,7 @@ Every user should have administrator permissions.
 
 ---
 
-## 32. Quick Self-test
+## 31. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

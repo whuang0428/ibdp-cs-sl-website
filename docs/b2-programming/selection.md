@@ -1172,51 +1172,7 @@ Selection can be used to compare the input username and password with the stored
 
 ---
 
-## 23. Practice task
-### Activity 1: Condition Cards
-
-Give students cards with conditions such as:
-
-```text
-mark >= 50
-age < 18
-score == 100
-day.equals("Sunday")
-mark >= 0 && mark <= 100
-```
-
-Give them input values. Students must stand on the TRUE or FALSE side of the room.
-
----
-
-### Activity 2: Branch Trace
-
-Students receive a flowchart or IF ELSE code. They trace which branch runs for different inputs.
-
-Example inputs:
-
-```text
-mark = 45
-mark = 50
-mark = 79
-mark = 80
-```
-
----
-
-### Activity 3: Debug the Logic
-
-Give students incorrect selection code. They must identify:
-
-1. syntax error
-2. logic error
-3. wrong Boolean operator
-4. wrong condition order
-5. missing ELSE case
-
----
-
-## 24. Independent practice
+## 23. Independent practice
 ### Independent practice part A: Trace
 
 Trace this code:
@@ -1269,7 +1225,7 @@ In 4-5 sentences, explain why the order of conditions matters in an `ELSE IF` ch
 
 ---
 
-## 25. One-page Revision Summary
+## 24. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1290,7 +1246,7 @@ In 4-5 sentences, explain why the order of conditions matters in an `ELSE IF` ch
 
 ---
 
-## 26. Quick Self-test
+## 25. Quick Self-test
 
 Before moving to Searching, students should be able to answer these:
 

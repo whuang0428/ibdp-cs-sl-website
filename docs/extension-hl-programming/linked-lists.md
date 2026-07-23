@@ -1213,72 +1213,7 @@ Compare linked lists and arrays.
 
 ---
 
-## 36. Practice task
-### Activity 1: Human Linked List
-
-Students each hold:
-
-```text
-data card
-next reference card
-```
-
-The first student is `head`.  
-Students point to the next student to model references.
-
-Operations:
-
-```text
-insert at head
-insert in middle
-delete a node
-traverse the list
-```
-
----
-
-### Activity 2: Broken Links
-
-Give students faulty diagrams:
-
-```text
-node skipped
-head lost
-last node not null
-cycle accidentally created
-```
-
-Students identify the error and repair the links.
-
----
-
-### Activity 3: Structure Choice Debate
-
-Students choose between:
-
-```text
-array
-ArrayList
-linked list
-stack
-queue
-```
-
-for scenarios:
-
-```text
-playlist
-monthly sales
-shopping cart
-printer jobs
-undo history
-```
-
-They must justify the choice using mark scheme language.
-
----
-
-## 37. Independent practice
+## 36. Independent practice
 ### Independent practice part A
 
 Explain linked lists in 8-10 sentences using a playlist as an example.
@@ -1321,7 +1256,7 @@ Linked lists always use less memory than arrays.
 
 ---
 
-## 38. One-page Revision Summary
+## 37. One-page Revision Summary
 
 | Point | Summary |
 |---|---|

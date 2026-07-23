@@ -1668,70 +1668,7 @@ One threat is unauthorized access, where a student or attacker may try to view o
 
 ---
 
-## 42. Practice task
-### Activity 1: Threat and Control Matching
-
-Students match threats to controls:
-
-```text
-phishing
-ransomware
-weak password
-DDoS
-public Wi-Fi interception
-lost laptop
-```
-
-Controls:
-
-```text
-MFA
-user education
-backup
-encryption
-firewall
-DDoS protection
-strong password policy
-```
-
----
-
-### Activity 2: School Network Security Plan
-
-Groups design a security plan for a school network.
-
-They must include:
-
-```text
-user accounts
-permissions
-Wi-Fi security
-firewall
-anti-malware
-backup
-updates
-student/staff training
-incident response
-```
-
----
-
-### Activity 3: Phishing Spotting
-
-Students review sample email descriptions and identify warning signs:
-
-```text
-urgent tone
-unknown sender
-suspicious link
-unexpected attachment
-request for password
-fake login page
-```
-
----
-
-## 43. Independent practice
+## 42. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain why network security is important for a school.
@@ -1783,7 +1720,7 @@ Network security is only the IT department's job.
 
 ---
 
-## 44. One-page Revision Summary
+## 43. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1811,7 +1748,7 @@ Network security is only the IT department's job.
 
 ---
 
-## 45. Quick Self-test
+## 44. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

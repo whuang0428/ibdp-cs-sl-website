@@ -1043,43 +1043,7 @@ Bubble sort and linear search are different algorithms. Linear search looks thro
 
 ---
 
-## 20. Practice task
-### Activity 1: Human Bubble Sort
-
-Students stand in a line holding number cards.
-
-Process:
-
-1. Compare the first two students.
-2. If the left number is larger, they swap places.
-3. Move one position to the right.
-4. Continue until the end of the line.
-5. Repeat passes until sorted.
-
-Students should write the array after each comparison.
-
----
-
-### Activity 2: Swap Debugging
-
-Give students incorrect swap code:
-
-```java
-values[i] = values[i + 1];
-values[i + 1] = values[i];
-```
-
-Students use actual numbers to prove why the swap fails.
-
----
-
-### Activity 3: Sorting Race Without Computers
-
-Groups sort card arrays using bubble sort rules only. They must record each pass in a trace table.
-
----
-
-## 21. Independent practice
+## 20. Independent practice
 ### Independent practice part A: Trace
 
 Trace full bubble sort for:
@@ -1116,7 +1080,7 @@ In 4-5 sentences, explain why nested loops are often used in sorting algorithms.
 
 ---
 
-## 22. One-page Revision Summary
+## 21. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1135,7 +1099,7 @@ In 4-5 sentences, explain why nested loops are often used in sorting algorithms.
 
 ---
 
-## 23. Quick Self-test
+## 22. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

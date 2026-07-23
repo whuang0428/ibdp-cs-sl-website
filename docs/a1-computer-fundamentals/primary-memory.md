@@ -962,58 +962,7 @@ More RAM can improve performance when the system does not have enough memory for
 
 ---
 
-## 27. Practice task
-### Activity 1: Memory Hierarchy Cards
-
-Students arrange cards from fastest/smallest to slowest/largest:
-
-```text
-registers
-cache
-RAM
-SSD/HDD
-```
-
-They explain why the order matters.
-
----
-
-### Activity 2: Volatile or Non-volatile Sort
-
-Students classify:
-
-```text
-RAM
-ROM
-cache
-registers
-SSD
-HDD
-USB drive
-```
-
-as volatile or non-volatile.
-
----
-
-### Activity 3: Opening an App Role-play
-
-Students act as:
-
-```text
-SSD
-RAM
-cache
-CPU
-screen
-operating system
-```
-
-They simulate opening and running an application.
-
----
-
-## 28. Independent practice
+## 27. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between RAM, ROM, and cache.
@@ -1072,7 +1021,7 @@ Storage and memory mean exactly the same thing.
 
 ---
 
-## 29. One-page Revision Summary
+## 28. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1091,7 +1040,7 @@ Storage and memory mean exactly the same thing.
 
 ---
 
-## 30. Quick Self-test
+## 29. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

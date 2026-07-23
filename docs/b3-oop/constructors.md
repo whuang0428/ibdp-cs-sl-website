@@ -1018,66 +1018,7 @@ Assume the constructor sets invalid marks to 0 if the mark is not between 0 and 
 
 ---
 
-## 20. Practice task
-### Activity 1: Constructor Role-play
-
-Students act as objects being created.
-
-Each student receives a constructor call card:
-
-```text
-new Student("Alice", 85)
-new Student("Ben", 42)
-new Student("Clara", 90)
-```
-
-They fill in their object state card:
-
-```text
-name:
-mark:
-```
-
----
-
-### Activity 2: Constructor or Method Sort
-
-Students sort code snippets into:
-
-```text
-constructor
-normal method
-not valid
-```
-
-They must justify their choices using:
-
-```text
-same name as class
-no return type
-parameter list
-```
-
----
-
-### Activity 3: `this` Demonstration
-
-Use two labels:
-
-```text
-attribute: this.name
-parameter: name
-```
-
-Students physically move the parameter value into the attribute box to show:
-
-```java
-this.name = name;
-```
-
----
-
-## 21. Independent practice
+## 20. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what a constructor is and how it is different from a normal method.
@@ -1130,7 +1071,7 @@ Assume the constructor limits health to 0-100.
 
 ---
 
-## 22. One-page Revision Summary
+## 21. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1149,7 +1090,7 @@ Assume the constructor limits health to 0-100.
 
 ---
 
-## 23. Quick Self-test
+## 22. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

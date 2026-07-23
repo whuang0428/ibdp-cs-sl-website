@@ -1354,63 +1354,7 @@ This is incorrect because Wi-Fi is a wireless technology used to connect a devic
 
 ---
 
-## 35. Practice task
-### Activity 1: Transmission Choice Sort
-
-Students choose the best transmission method for:
-
-```text
-school desktop lab
-student laptops
-data centre servers
-wireless headphones
-rural internet
-building-to-building connection
-online gaming PC
-```
-
-They must justify each choice.
-
----
-
-### Activity 2: Wired vs Wireless Debate
-
-Prompt:
-
-```text
-Should a school prioritize wired or wireless networking?
-```
-
-Students discuss:
-
-```text
-cost
-mobility
-speed
-security
-installation
-maintenance
-device types
-```
-
----
-
-### Activity 3: Wi-Fi Problem Diagnosis
-
-Give symptoms:
-
-```text
-slow Wi-Fi in one classroom
-frequent disconnects
-good signal but slow speed
-fast wired network but poor wireless
-```
-
-Students identify possible causes such as interference, distance, too many users, access point placement, or bandwidth limits.
-
----
-
-## 36. Independent practice
+## 35. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between wired and wireless transmission.
@@ -1472,7 +1416,7 @@ Wireless networks do not need security if they have a password.
 
 ---
 
-## 37. One-page Revision Summary
+## 36. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1496,7 +1440,7 @@ Wireless networks do not need security if they have a password.
 
 ---
 
-## 38. Quick Self-test
+## 37. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

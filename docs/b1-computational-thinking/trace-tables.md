@@ -1717,73 +1717,7 @@ If `count` is never updated inside the loop, its value may remain the same each 
 
 ---
 
-## 41. Practice task
-### Activity 1: Human Trace Table
-
-Students act as variables.
-
-One student is `total`, one is `count`, one is `score`.
-
-The class follows:
-
-```text
-total ← 0
-FOR count ← 1 TO 3
-    INPUT score
-    total ← total + score
-ENDFOR
-OUTPUT total
-```
-
-Inputs:
-
-```text
-5, 8, 4
-```
-
-Students physically update values after each step.
-
----
-
-### Activity 2: Output Inside or Outside Loop
-
-Compare two algorithms:
-
-```text
-FOR i ← 1 TO 3
-    OUTPUT i
-ENDFOR
-```
-
-and:
-
-```text
-FOR i ← 1 TO 3
-ENDFOR
-OUTPUT i
-```
-
-Students discuss how output placement changes results.
-
----
-
-### Activity 3: Find the Logic Error
-
-Students trace faulty algorithms with:
-
-```text
-wrong divisor
-missing counter update
-wrong comparison operator
-wrong initial value
-output inside loop accidentally
-```
-
-They explain the error and fix it.
-
----
-
-## 42. Independent practice
+## 41. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what a trace table is and how it helps test algorithms.
@@ -1832,7 +1766,7 @@ A WHILE loop cannot be infinite.
 
 ---
 
-## 43. One-page Revision Summary
+## 42. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1856,7 +1790,7 @@ A WHILE loop cannot be infinite.
 
 ---
 
-## 44. Quick Self-test
+## 43. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

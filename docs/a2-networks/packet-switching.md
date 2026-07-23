@@ -1158,71 +1158,7 @@ This is incorrect because packet switching allows packets to be routed independe
 
 ---
 
-## 32. Practice task
-### Activity 1: Human Packet Switching
-
-Students act as:
-
-```text
-sender
-packets
-routers
-destination
-```
-
-Each packet carries:
-
-```text
-source
-destination
-sequence number
-payload
-```
-
-Routers choose different paths, and the destination reorders packets.
-
----
-
-### Activity 2: Packet Header Design
-
-Students design a simple packet for sending the message:
-
-```text
-HELLO
-```
-
-They decide what should go in:
-
-```text
-header
-payload
-error check
-```
-
----
-
-### Activity 3: Packet Switching Debate
-
-Prompt:
-
-```text
-Why does the internet use packet switching instead of sending each file as one giant block?
-```
-
-Students discuss:
-
-```text
-efficiency
-sharing
-error recovery
-routing
-congestion
-reassembly
-```
-
----
-
-## 33. Independent practice
+## 32. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain packet switching using the example of sending a photo.
@@ -1273,7 +1209,7 @@ Packet switching reserves one fixed path for the whole session.
 
 ---
 
-## 34. One-page Revision Summary
+## 33. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1296,7 +1232,7 @@ Packet switching reserves one fixed path for the whole session.
 
 ---
 
-## 35. Quick Self-test
+## 34. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

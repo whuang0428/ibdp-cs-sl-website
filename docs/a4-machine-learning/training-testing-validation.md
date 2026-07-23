@@ -1361,52 +1361,7 @@ The test data may not be representative of current real-world conditions, for ex
 
 ---
 
-## 39. Practice task
-### Activity 1: Human Data Split
-
-Give students 30 labelled example cards.
-
-They split the cards into:
-
-```text
-training
-validation
-testing
-```
-
-Then explain what each set is used for.
-
----
-
-### Activity 2: Diagnose the Model
-
-Give students result pairs:
-
-```text
-training 95%, testing 93%
-training 99%, testing 60%
-training 55%, testing 52%
-training 70%, testing 90%
-```
-
-Students decide whether the model seems good, overfitting, underfitting, or suspicious.
-
----
-
-### Activity 3: Leakage Detective
-
-Students identify data leakage in scenarios:
-
-```text
-predict final grade using final exam score
-predict disease risk using treatment outcome after diagnosis
-predict delivery time using actual delivery time
-predict fraud using investigation result available only later
-```
-
----
-
-## 40. Independent practice
+## 39. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain why training, validation, and testing data are separated.
@@ -1466,7 +1421,7 @@ Data leakage improves the trustworthiness of evaluation.
 
 ---
 
-## 41. One-page Revision Summary
+## 40. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1490,7 +1445,7 @@ Data leakage improves the trustworthiness of evaluation.
 
 ---
 
-## 42. Quick Self-test
+## 41. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

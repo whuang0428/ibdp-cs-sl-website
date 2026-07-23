@@ -1028,60 +1028,7 @@ One possible error is that the file cannot be found because the filename or fold
 
 ---
 
-## 24. Practice task
-### Activity 1: Human File Reader
-
-Students represent lines in a file. One student is the program reader.
-
-Process:
-
-1. Reader reads the first line.
-2. Class processes the line.
-3. Reader moves to next line.
-4. Repeat until no lines remain.
-
-This demonstrates line-by-line processing.
-
----
-
-### Activity 2: CSV Split Cards
-
-Give students lines like:
-
-```text
-Alice,85
-Ben,72
-Clara,90
-```
-
-Students physically split each line into:
-
-```text
-name
-mark
-```
-
-Then decide which data type each part should become.
-
----
-
-### Activity 3: File Error Detective
-
-Students receive scenarios:
-
-```text
-wrong filename
-empty file
-missing comma
-mark is written as "eighty"
-write mode overwrites file
-```
-
-They identify the problem and suggest a defensive fix.
-
----
-
-## 25. Independent practice
+## 24. Independent practice
 ### Independent practice part A: Pseudocode
 
 Write IB pseudocode to:
@@ -1121,7 +1068,7 @@ In 4-5 sentences, explain why file processing often needs loops.
 
 ---
 
-## 26. One-page Revision Summary
+## 25. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1142,7 +1089,7 @@ In 4-5 sentences, explain why file processing often needs loops.
 
 ---
 
-## 27. Quick Self-test
+## 26. Quick Self-test
 
 Before finishing this topic, students should be able to answer these:
 

@@ -199,6 +199,24 @@
   font-weight: 600;
 }
 
+/* Render diagrams as compact, centred figures instead of full-width code blocks. */
+.VPDoc .ibdp-mermaid {
+  width: fit-content;
+  max-width: 100%;
+  margin: 24px auto;
+  padding: 12px 16px;
+  overflow-x: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--ibdp-radius-md);
+  background: var(--vp-c-bg-soft);
+}
+
+.VPDoc .ibdp-mermaid svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* -------------------------------------------------------
    7. Details / hidden answers
 ------------------------------------------------------- */
@@ -283,5 +301,10 @@
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+  }
+
+  .VPDoc .ibdp-mermaid {
+    width: 100%;
+    padding: 10px;
   }
 }

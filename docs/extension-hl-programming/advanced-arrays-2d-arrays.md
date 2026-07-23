@@ -1166,58 +1166,7 @@ Compare arrays and dynamic lists.
 
 ---
 
-## 30. Practice task
-### Activity 1: Human Array
-
-Students stand in a line holding values.
-
-The teacher asks:
-
-```text
-What is index 0?
-What is index 3?
-Find the maximum value.
-Calculate the total.
-Search for value 50.
-```
-
-Students physically model array traversal.
-
----
-
-### Activity 2: Seating Plan 2D Array
-
-Draw a seating grid and label rows/columns.
-
-Students write:
-
-```text
-seats[0][0]
-seats[2][3]
-seats[row][col]
-```
-
-Then count available seats using nested loops.
-
----
-
-### Activity 3: Debug the Index
-
-Give students faulty loops:
-
-```text
-FOR index ← 0 TO length(scores)
-```
-
-Students explain why it is wrong and correct it to:
-
-```text
-FOR index ← 0 TO length(scores) - 1
-```
-
----
-
-## 31. Independent practice
+## 30. Independent practice
 ### Independent practice part A
 
 Explain arrays and 2D arrays in 8-10 sentences using your own example.
@@ -1264,7 +1213,7 @@ Starting maximum at 0 always works.
 
 ---
 
-## 32. One-page Revision Summary
+## 31. One-page Revision Summary
 
 | Point | Summary |
 |---|---|

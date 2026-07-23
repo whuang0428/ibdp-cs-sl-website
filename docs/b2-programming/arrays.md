@@ -1263,62 +1263,7 @@ An array can store many related values under one name, so the program does not n
 
 ---
 
-## 22. Practice task
-### Activity 1: Human Array
-
-Students stand in a line. Each student holds a value card.
-
-The teacher asks:
-
-```text
-Who is at index 0?
-Who is at index 3?
-What is the last valid index?
-What happens if I ask for index length?
-```
-
-This helps students understand zero-based indexing.
-
----
-
-### Activity 2: Array Traversal Race
-
-Groups receive an array:
-
-```text
-[12, 5, 8, 20, 3]
-```
-
-They must create trace tables for:
-
-1. total
-2. count values greater than 10
-3. maximum value
-4. minimum value
-
----
-
-### Activity 3: Debug the Array
-
-Give students broken code examples:
-
-```java
-for (int i = 1; i < data.length; i++)
-```
-
-```java
-for (int i = 0; i <= data.length; i++)
-```
-
-```java
-int max = 0;
-```
-
-Students identify the bug, explain it, and fix it.
-
----
-
-## 23. Independent practice
+## 22. Independent practice
 ### Independent practice part A: Trace
 
 Trace this code:
@@ -1368,7 +1313,7 @@ In 4-5 sentences, explain why `i < array.length` is usually used when traversing
 
 ---
 
-## 24. One-page Revision Summary
+## 23. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1388,7 +1333,7 @@ In 4-5 sentences, explain why `i < array.length` is usually used when traversing
 
 ---
 
-## 25. Quick Self-test
+## 24. Quick Self-test
 
 Before moving to searching, students should be able to answer these:
 

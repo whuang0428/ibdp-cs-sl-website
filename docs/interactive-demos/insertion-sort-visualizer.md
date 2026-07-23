@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import InsertionSortVisualizer from '../.vitepress/components/demos/InsertionSortVisualizer.vue'
 </script>
 

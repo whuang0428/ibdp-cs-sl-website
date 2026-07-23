@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import LinearSearchVisualizer from '../.vitepress/components/demos/LinearSearchVisualizer.vue'
 </script>
 

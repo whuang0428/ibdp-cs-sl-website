@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import InheritanceDemo from '../.vitepress/components/demos/InheritanceDemo.vue'
 </script>
 

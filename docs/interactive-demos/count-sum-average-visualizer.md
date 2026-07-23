@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import CountSumAverageVisualizer from '../.vitepress/components/demos/CountSumAverageVisualizer.vue'
 </script>
 

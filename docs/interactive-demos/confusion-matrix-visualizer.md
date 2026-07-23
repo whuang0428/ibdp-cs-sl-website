@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import ConfusionMatrixVisualizer from '../.vitepress/components/demos/ConfusionMatrixVisualizer.vue'
 </script>
 

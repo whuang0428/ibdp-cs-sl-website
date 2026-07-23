@@ -1453,60 +1453,7 @@ Encryption protects the content of data by converting plaintext into ciphertext 
 
 ---
 
-## 43. Practice task
-### Activity 1: Concept Sort
-
-Students classify each statement as encryption, VPN, or NAT:
-
-```text
-translates private IP to public IP
-creates encrypted tunnel
-turns plaintext into ciphertext
-used by HTTPS
-helps home devices share public IP
-protects traffic on public Wi-Fi
-```
-
----
-
-### Activity 2: NAT Role-play
-
-Students act as:
-
-```text
-laptop
-phone
-router/NAT table
-web server
-```
-
-The router records which internal device made each request and forwards replies correctly.
-
----
-
-### Activity 3: Security Scenario Debate
-
-Prompt:
-
-```text
-A student uses public Wi-Fi to log into school email.
-```
-
-Students discuss:
-
-```text
-HTTPS
-VPN
-phishing
-passwords
-MFA
-public Wi-Fi risks
-device updates
-```
-
----
-
-## 44. Independent practice
+## 43. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain the difference between encryption, VPN and NAT.
@@ -1547,7 +1494,7 @@ Explain why using a VPN on public Wi-Fi is helpful, but does not make the user c
 
 ---
 
-## 45. One-page Revision Summary
+## 44. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1571,7 +1518,7 @@ Explain why using a VPN on public Wi-Fi is helpful, but does not make the user c
 
 ---
 
-## 46. Quick Self-test
+## 45. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

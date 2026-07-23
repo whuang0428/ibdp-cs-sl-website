@@ -1369,60 +1369,7 @@ Give two examples of problems where recursion is suitable.
 
 ---
 
-## 32. Practice task
-### Activity 1: Human Call Stack
-
-Students hold cards:
-
-```text
-factorial(4)
-factorial(3)
-factorial(2)
-factorial(1)
-```
-
-They stand in stack order.  
-Then they return values in reverse order.
-
----
-
-### Activity 2: Recursion Trace Tree
-
-Students draw call traces for:
-
-```text
-factorial(4)
-sumTo(4)
-show(3)
-```
-
-They mark:
-
-```text
-base case
-recursive case
-return values
-output order
-```
-
----
-
-### Activity 3: Fix Infinite Recursion
-
-Give students faulty algorithms:
-
-```text
-missing base case
-base case impossible to reach
-recursive call uses same input
-recursive call moves away from base case
-```
-
-Students identify the problem and correct it.
-
----
-
-## 33. Independent practice
+## 32. Independent practice
 ### Independent practice part A
 
 Explain recursion in 8-10 sentences using factorial or countdown as the example.
@@ -1463,7 +1410,7 @@ Recursion always uses less memory than iteration.
 
 ---
 
-## 34. One-page Revision Summary
+## 33. One-page Revision Summary
 
 | Point | Summary |
 |---|---|

@@ -998,74 +998,7 @@ A temperature sensor is input hardware because it detects the room temperature. 
 
 ---
 
-## 26. Practice task
-### Activity 1: Hardware Sorting Cards
-
-Give students cards:
-
-```text
-CPU
-RAM
-SSD
-keyboard
-mouse
-monitor
-printer
-router
-microphone
-camera
-speaker
-sensor
-actuator
-```
-
-Students sort them into:
-
-```text
-input
-output
-processing
-memory
-storage
-communication
-```
-
----
-
-### Activity 2: Build a Computer System
-
-Groups design hardware for one scenario:
-
-```text
-gaming PC
-school laptop
-office computer
-video editing workstation
-smart home device
-ATM
-```
-
-They must justify each component.
-
----
-
-### Activity 3: Hardware Misconception Debate
-
-Students respond to statements:
-
-```text
-RAM is storage.
-A monitor is the computer.
-A touchscreen is only output.
-A printer driver is hardware.
-More storage always means faster computer.
-```
-
-They correct each statement.
-
----
-
-## 27. Independent practice
+## 26. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what hardware is and why a computer system needs different hardware categories.
@@ -1111,7 +1044,7 @@ Explain why hardware alone is not enough for a useful computer system.
 
 ---
 
-## 28. One-page Revision Summary
+## 27. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1134,7 +1067,7 @@ Explain why hardware alone is not enough for a useful computer system.
 
 ---
 
-## 29. Quick Self-test
+## 28. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

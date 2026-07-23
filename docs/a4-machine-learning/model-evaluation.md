@@ -1488,62 +1488,7 @@ A regression model predicts numerical values, so its performance is evaluated by
 
 ---
 
-## 40. Practice task
-### Activity 1: Confusion Matrix Cards
-
-Students receive prediction cards for a spam filter.
-
-Each card has:
-
-```text
-actual class
-predicted class
-```
-
-Students sort cards into:
-
-```text
-true positive
-false positive
-true negative
-false negative
-```
-
----
-
-### Activity 2: Accuracy Trap
-
-Give students this scenario:
-
-```text
-1000 transactions
-990 are not fraud
-10 are fraud
-model predicts all transactions as not fraud
-```
-
-Students calculate accuracy and discuss why the model is still poor.
-
----
-
-### Activity 3: Choose the Metric
-
-Groups choose suitable evaluation ideas for:
-
-```text
-spam filter
-fraud detection
-medical screening
-house price prediction
-delivery time prediction
-student risk model
-```
-
-They explain why some mistakes are more serious than others.
-
----
-
-## 41. Independent practice
+## 40. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain why model evaluation is needed and why unseen testing data matters.
@@ -1591,7 +1536,7 @@ Then calculate the mean absolute error.
 
 ---
 
-## 42. One-page Revision Summary
+## 41. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1617,7 +1562,7 @@ Then calculate the mean absolute error.
 
 ---
 
-## 43. Quick Self-test
+## 42. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

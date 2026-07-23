@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import BinarySearchVisualizer from '../.vitepress/components/demos/BinarySearchVisualizer.vue'
 </script>
 

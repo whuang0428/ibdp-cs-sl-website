@@ -1543,65 +1543,7 @@ One limitation is that supervised learning requires labelled data, which may be 
 
 ---
 
-## 45. Practice task
-### Activity 1: Scenario Sorting
-
-Students classify scenarios as classification or regression:
-
-```text
-predict house price
-detect spam email
-predict exam score
-classify image as cat/dog
-predict delivery time
-detect fraud
-predict whether a student will pass
-predict electricity usage
-```
-
----
-
-### Activity 2: Feature and Label Design
-
-Groups choose one scenario:
-
-```text
-spam detection
-student risk prediction
-online shop recommendation
-house price prediction
-game matchmaking
-medical risk classification
-```
-
-They identify:
-
-```text
-features
-label
-task type
-possible data quality issue
-possible ethical/privacy issue
-```
-
----
-
-### Activity 3: Bad Label Discussion
-
-Give students a dataset with incorrect labels.
-
-Students discuss:
-
-```text
-how wrong labels affect training
-how to detect possible wrong labels
-who should review labels
-how this affects real users
-```
-
----
-
-## 46. Independent practice
+## 45. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain how supervised learning works and why labelled data is important.
@@ -1650,7 +1592,7 @@ Incorrect labels do not affect model training.
 
 ---
 
-## 47. One-page Revision Summary
+## 46. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1675,7 +1617,7 @@ Incorrect labels do not affect model training.
 
 ---
 
-## 48. Quick Self-test
+## 47. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

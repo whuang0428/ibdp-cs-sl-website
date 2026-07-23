@@ -1297,62 +1297,7 @@ A 404 error means that the server was reached but the requested resource or path
 
 ---
 
-## 34. Practice task
-### Activity 1: Web Access Role-play
-
-Students act as:
-
-```text
-browser
-DNS resolver
-web server
-router
-packets
-user
-```
-
-They perform the process of opening a website.
-
----
-
-### Activity 2: URL Dissection
-
-Students break down URLs into:
-
-```text
-protocol
-domain name
-path
-resource
-```
-
-Examples:
-
-```text
-https://school.edu/login
-https://example.com/images/logo.png
-http://test.local/index.html
-```
-
----
-
-### Activity 3: Error Diagnosis
-
-Give students scenarios:
-
-```text
-DNS error
-404 Not Found
-slow webpage
-certificate warning
-wrong website opened
-```
-
-Students identify likely causes.
-
----
-
-## 35. Independent practice
+## 34. Independent practice
 ### Independent practice part A: Process Explanation
 
 In 8-10 sentences, explain what happens when a browser opens an HTTPS website.
@@ -1403,7 +1348,7 @@ Explain why HTTPS is important when logging into an online learning platform.
 
 ---
 
-## 36. One-page Revision Summary
+## 35. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1425,7 +1370,7 @@ Explain why HTTPS is important when logging into an online learning platform.
 
 ---
 
-## 37. Quick Self-test
+## 36. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

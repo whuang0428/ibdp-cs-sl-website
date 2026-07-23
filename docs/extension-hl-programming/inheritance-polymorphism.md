@@ -1403,79 +1403,7 @@ Write a Java-style example with a superclass and one subclass.
 
 ---
 
-## 34. Practice task
-### Activity 1: Is-a or Has-a?
-
-Students sort cards into:
-
-```text
-inheritance
-composition
-not enough information
-```
-
-Cards:
-
-```text
-Dog / Animal
-Car / Engine
-Student / Person
-Library / Book
-Circle / Shape
-Computer / Keyboard
-Teacher / Employee
-Order / Product
-```
-
----
-
-### Activity 2: Class Hierarchy Design
-
-Students design class hierarchies for:
-
-```text
-school people
-vehicles
-game characters
-bank accounts
-shapes
-```
-
-They identify:
-
-```text
-superclass
-subclasses
-shared attributes
-shared methods
-overridden methods
-```
-
----
-
-### Activity 3: Polymorphism Role-play
-
-Students act as objects:
-
-```text
-Dog
-Cat
-Bird
-```
-
-Use this method call:
-
-```text
-makeSound()
-```
-
-Each student responds differently.
-
-Explain why this is polymorphism.
-
----
-
-## 35. Independent practice
+## 34. Independent practice
 ### Independent practice part A
 
 Explain inheritance and polymorphism in 8-10 sentences using your own example.
@@ -1529,7 +1457,7 @@ Car is an Engine is a good inheritance relationship.
 
 ---
 
-## 36. One-page Revision Summary
+## 35. One-page Revision Summary
 
 | Point | Summary |
 |---|---|

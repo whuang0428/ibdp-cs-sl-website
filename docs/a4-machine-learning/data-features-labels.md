@@ -1546,57 +1546,7 @@ One concern is collecting more personal data than necessary, which violates data
 
 ---
 
-## 40. Practice task
-### Activity 1: Feature or Label Sort
-
-Students sort cards into features and labels for scenarios:
-
-```text
-spam detection
-house price prediction
-student pass/fail prediction
-fraud detection
-game matchmaking
-```
-
----
-
-### Activity 2: Data Quality Detective
-
-Give students a dataset with:
-
-```text
-missing values
-duplicate rows
-incorrect labels
-outliers
-unbalanced classes
-```
-
-Students identify each problem and suggest a fix.
-
----
-
-### Activity 3: Privacy Review
-
-Scenario:
-
-```text
-A school ML system predicts student exam risk using attendance, grades, home address, nationality, parent income, and browsing history.
-```
-
-Students discuss:
-
-```text
-which features may be useful
-which features are sensitive or risky
-which features may be unfair
-what privacy controls are needed
-```
-
----
-
-## 41. Independent practice
+## 40. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what features and labels are and why they matter in supervised learning.
@@ -1647,7 +1597,7 @@ A model can safely collect any data if it improves accuracy.
 
 ---
 
-## 42. One-page Revision Summary
+## 41. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1675,7 +1625,7 @@ A model can safely collect any data if it improves accuracy.
 
 ---
 
-## 43. Quick Self-test
+## 42. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

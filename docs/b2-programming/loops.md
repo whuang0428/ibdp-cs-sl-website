@@ -1029,43 +1029,7 @@ A `FOR` loop is usually used when the number of repetitions is known in advance.
 
 ---
 
-## 18. Practice task
-### Activity 1: Human Loop Trace
-
-Students act as loop variables.
-
-Example loop:
-
-```java
-for (int i = 1; i <= 5; i++) {
-    System.out.println(i);
-}
-```
-
-Class process:
-
-1. One student holds the value of `i`.
-2. Another student checks the condition.
-3. Another student outputs the value.
-4. Another student updates `i`.
-5. Class repeats until the condition is false.
-
-### Activity 2: Infinite Loop Debugging
-
-Give students broken loop cards. Each card has one loop error. Students must:
-
-1. identify whether it is infinite loop, off-by-one error, or wrong condition
-2. explain the bug
-3. fix the code
-4. trace the corrected loop
-
-### Activity 3: Predict Before Running
-
-Students must predict output before using the computer. This builds tracing skill instead of guessing by running code.
-
----
-
-## 19. Independent practice
+## 18. Independent practice
 ### Independent practice part A: Trace
 
 Trace this code:
@@ -1115,7 +1079,7 @@ In 4-5 sentences, explain why tracing loops is important when debugging programs
 
 ---
 
-## 20. One-page Revision Summary
+## 19. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1133,7 +1097,7 @@ In 4-5 sentences, explain why tracing loops is important when debugging programs
 
 ---
 
-## 21. Quick Self-test
+## 20. Quick Self-test
 
 Before moving to arrays, students should be able to answer these:
 

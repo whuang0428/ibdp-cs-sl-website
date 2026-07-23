@@ -1004,51 +1004,7 @@ A UML class diagram can show encapsulation using visibility symbols. Private att
 
 ---
 
-## 21. Practice task
-### Activity 1: UML Card Sorting
-
-Give students cards containing:
-
-```text
-- mark : int
-+ getMark() : int
-+ setMark(mark : int) : void
-Student
-```
-
-Students place each card into the correct UML compartment:
-
-```text
-class name
-attributes
-methods
-```
-
----
-
-### Activity 2: Java to UML Race
-
-Groups receive a short Java class. They must produce a correct UML class diagram as quickly and accurately as possible.
-
-Check for:
-
-```text
-visibility
-attribute notation
-method return types
-parameter types
-constructor notation
-```
-
----
-
-### Activity 3: UML to Java Skeleton
-
-Groups receive a UML class diagram. They write the Java class skeleton with attributes, constructor, and method headers.
-
----
-
-## 22. Independent practice
+## 21. Independent practice
 ### Independent practice part A: UML Design
 
 Create a UML class diagram for a `Laptop` class.
@@ -1118,7 +1074,7 @@ In 4-5 sentences, explain how UML helps programmers plan before writing code.
 
 ---
 
-## 23. One-page Revision Summary
+## 22. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1141,7 +1097,7 @@ In 4-5 sentences, explain how UML helps programmers plan before writing code.
 
 ---
 
-## 24. Quick Self-test
+## 23. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

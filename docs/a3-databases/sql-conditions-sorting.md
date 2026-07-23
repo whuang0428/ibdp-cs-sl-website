@@ -1657,66 +1657,7 @@ ORDER BY Price DESC;
 
 ---
 
-## 46. Practice task
-### Activity 1: Human WHERE Filter
-
-Give students record cards from a Student table.
-
-The teacher gives conditions such as:
-
-```text
-GradeLevel = 10
-Score >= 90
-GradeLevel = 10 AND Score >= 90
-```
-
-Students stand if their record matches the condition.
-
----
-
-### Activity 2: Sorting Race
-
-Students receive Product cards with prices.
-
-They sort cards by:
-
-```text
-Price ASC
-Price DESC
-ProductName ASC
-StockQuantity DESC
-```
-
-Then connect this to `ORDER BY`.
-
----
-
-### Activity 3: Fix Broken SQL
-
-Students fix:
-
-```sql
-SELECT FirstName, LastName
-FROM Student
-ORDER BY LastName
-WHERE GradeLevel = 10;
-```
-
-```sql
-SELECT ProductName Price
-FROM Product
-WHERE Category = Accessory;
-```
-
-```sql
-SELECT Title
-WHERE Available = true
-FROM Book;
-```
-
----
-
-## 47. Independent practice
+## 46. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain how `SELECT`, `FROM`, `WHERE`, and `ORDER BY` work together.
@@ -1782,7 +1723,7 @@ DESC sorts from low to high.
 
 ---
 
-## 48. One-page Revision Summary
+## 47. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1807,7 +1748,7 @@ DESC sorts from low to high.
 
 ---
 
-## 49. Quick Self-test
+## 48. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

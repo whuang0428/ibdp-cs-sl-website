@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import FindMaxMinVisualizer from '../.vitepress/components/demos/FindMaxMinVisualizer.vue'
 </script>
 

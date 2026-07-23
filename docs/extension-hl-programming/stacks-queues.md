@@ -1415,69 +1415,7 @@ function call tracking
 
 ---
 
-## 38. Practice task
-### Activity 1: Human Stack
-
-Students hold cards and stand as a stack.
-
-Use these stack operations:
-
-```text
-push A
-push B
-push C
-pop
-peek
-```
-
-Students physically add/remove from the top.
-
----
-
-### Activity 2: Human Queue
-
-Students stand in a line.
-
-Use these queue operations:
-
-```text
-enqueue A
-enqueue B
-enqueue C
-dequeue
-front
-```
-
-Students enter at the back and leave from the front.
-
----
-
-### Activity 3: Scenario Sorting
-
-Give students scenario cards:
-
-```text
-undo
-printer jobs
-call stack
-customer queue
-browser back
-help desk tickets
-```
-
-Students sort them into:
-
-```text
-stack
-queue
-priority queue
-```
-
-Then explain why.
-
----
-
-## 39. Independent practice
+## 38. Independent practice
 ### Independent practice part A
 
 Explain stacks and queues in 8-10 sentences using your own examples.
@@ -1537,7 +1475,7 @@ Underflow means adding too many items.
 
 ---
 
-## 40. One-page Revision Summary
+## 39. One-page Revision Summary
 
 | Point | Summary |
 |---|---|

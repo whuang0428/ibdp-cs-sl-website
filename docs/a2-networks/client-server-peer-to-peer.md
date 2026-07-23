@@ -1187,65 +1187,7 @@ Peer-to-peer could be suitable because the network is small and files can be sha
 
 ---
 
-## 30. Practice task
-### Activity 1: Role Cards
-
-Students receive role cards:
-
-```text
-client
-server
-peer
-request
-response
-file server
-web server
-game server
-```
-
-They act out website access, school file access, and P2P sharing.
-
----
-
-### Activity 2: Scenario Sorting
-
-Students classify scenarios as client-server, peer-to-peer, or hybrid:
-
-```text
-opening a website
-school file server
-two laptops sharing files directly
-online banking
-P2P file distribution
-cloud document editing
-small home folder sharing
-online game server
-```
-
----
-
-### Activity 3: Network Model Debate
-
-Prompt:
-
-```text
-Should a small school use peer-to-peer file sharing or a central file server?
-```
-
-Students must discuss:
-
-```text
-cost
-security
-backup
-management
-availability
-performance
-```
-
----
-
-## 31. Independent practice
+## 30. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between client-server and peer-to-peer networks.
@@ -1289,7 +1231,7 @@ Explain why peer-to-peer can be cheaper for a small network but harder to manage
 
 ---
 
-## 32. One-page Revision Summary
+## 31. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1310,7 +1252,7 @@ Explain why peer-to-peer can be cheaper for a small network but harder to manage
 
 ---
 
-## 33. Quick Self-test
+## 32. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

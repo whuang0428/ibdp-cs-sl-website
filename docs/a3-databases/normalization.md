@@ -1458,54 +1458,7 @@ The table should be split into related tables such as `Customer(CustomerID, Cust
 
 ---
 
-## 37. Practice task
-### Activity 1: Find the Redundancy
-
-Give students a large messy table.  
-Students highlight repeated data and identify:
-
-```text
-entities mixed together
-repeating groups
-possible update anomalies
-possible insertion anomalies
-possible deletion anomalies
-```
-
----
-
-### Activity 2: Normalize Step by Step
-
-Students convert this poor table:
-
-```text
-StudentID, StudentName, Course1, Course2, TeacherName, TeacherEmail
-```
-
-into:
-
-```text
-Student
-Course
-Teacher
-Enrollment
-```
-
-They must explain each split.
-
----
-
-### Activity 3: Anomaly Role-play
-
-Students act as a database table.
-
-One student updates teacher email in only some rows.  
-Another deletes the last row for a course.  
-Class identifies the anomaly.
-
----
-
-## 38. Independent practice
+## 37. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what normalization is and why it is useful.
@@ -1550,7 +1503,7 @@ Deleting one row can never remove unrelated information.
 
 ---
 
-## 39. One-page Revision Summary
+## 38. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1575,7 +1528,7 @@ Deleting one row can never remove unrelated information.
 
 ---
 
-## 40. Quick Self-test
+## 39. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

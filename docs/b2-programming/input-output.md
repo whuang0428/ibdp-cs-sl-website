@@ -1562,49 +1562,7 @@ Possible marks:
 
 ---
 
-## 27. Practice task
-### Activity 1: Input-Process-Output Cards
-
-Students receive cards labeled:
-
-```text
-input
-process
-output
-```
-
-They sort program statements into the correct category.
-
-Example:
-
-```java
-int age = input.nextInt();
-int nextAge = age + 1;
-System.out.println(nextAge);
-```
-
----
-
-### Activity 2: Scanner Method Match
-
-Students match data requirements to Scanner methods:
-
-```text
-whole number → nextInt()
-decimal → nextDouble()
-one word → next()
-full sentence → nextLine()
-```
-
----
-
-### Activity 3: Debug the Scanner
-
-Students receive code where `nextLine()` is skipped after `nextInt()`. They explain the problem and fix it using an extra `input.nextLine();`.
-
----
-
-## 28. Independent practice
+## 27. Independent practice
 ### Independent practice part A: Write Code
 
 Write a Java program that:
@@ -1659,7 +1617,7 @@ In 4-5 sentences, explain why clear prompts are important in programs that use u
 
 ---
 
-## 29. One-page Revision Summary
+## 28. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1680,7 +1638,7 @@ In 4-5 sentences, explain why clear prompts are important in programs that use u
 
 ---
 
-## 30. Quick Self-test
+## 29. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import TraceTableSimulator from '../.vitepress/components/demos/TraceTableSimulator.vue'
 </script>
 

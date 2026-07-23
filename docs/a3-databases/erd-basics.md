@@ -1559,56 +1559,7 @@ This design uses repeating attributes `Course1`, `Course2`, and `Course3`, which
 
 ---
 
-## 35. Practice task
-### Activity 1: Entity Hunt
-
-Give students a scenario paragraph.  
-They highlight:
-
-```text
-nouns = possible entities
-descriptive details = possible attributes
-verbs = possible relationships
-```
-
----
-
-### Activity 2: ERD Card Sort
-
-Cards:
-
-```text
-Student
-Course
-Enrollment
-StudentID
-CourseID
-EnrollDate
-takes
-one-to-many
-many-to-many
-foreign key
-```
-
-Students arrange them into a basic ERD.
-
----
-
-### Activity 3: Fix the ERD
-
-Students improve poor ERDs such as:
-
-```text
-Student(StudentID, Name, Course1, Course2, Course3)
-Order(OrderID, Product1, Product2, Product3)
-Patient(PatientID, Doctor1, Doctor2, Doctor3)
-```
-
-They must add linking tables and explain why.
-
----
-
-## 36. Independent practice
+## 35. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what an ERD is and how it helps database design.
@@ -1665,7 +1616,7 @@ Course1, Course2, Course3 is a flexible way to store student courses.
 
 ---
 
-## 37. One-page Revision Summary
+## 36. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1689,7 +1640,7 @@ Course1, Course2, Course3 is a flexible way to store student courses.
 
 ---
 
-## 38. Quick Self-test
+## 37. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

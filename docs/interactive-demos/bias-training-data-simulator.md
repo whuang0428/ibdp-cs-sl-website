@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import BiasTrainingDataSimulator from '../.vitepress/components/demos/BiasTrainingDataSimulator.vue'
 </script>
 

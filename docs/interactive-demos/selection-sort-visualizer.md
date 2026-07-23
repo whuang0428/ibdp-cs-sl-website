@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import SelectionSortVisualizer from '../.vitepress/components/demos/SelectionSortVisualizer.vue'
 </script>
 

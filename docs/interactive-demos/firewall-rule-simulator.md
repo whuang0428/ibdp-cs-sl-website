@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import FirewallRuleSimulator from '../.vitepress/components/demos/FirewallRuleSimulator.vue'
 </script>
 

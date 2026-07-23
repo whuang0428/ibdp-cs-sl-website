@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import KNNClassifierDemo from '../.vitepress/components/demos/KNNClassifierDemo.vue'
 </script>
 

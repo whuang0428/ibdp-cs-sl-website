@@ -1085,54 +1085,7 @@ A full traversal linear search checks every element in the array even if the tar
 
 ---
 
-## 19. Practice task
-### Activity 1: Human Linear Search
-
-Students stand in a line holding value cards.
-
-The class searches for a target value:
-
-1. Start at index 0.
-2. Compare current card with target.
-3. Say `"match"` or `"no match"`.
-4. Move to next index.
-5. Stop when found or after last card.
-
-Students record the trace table.
-
----
-
-### Activity 2: Found Flag Simulation
-
-One student holds a `found` card that starts as:
-
-```text
-false
-```
-
-When the target is found, the card changes to:
-
-```text
-true
-```
-
-The class discusses why it should not change back to false later.
-
----
-
-### Activity 3: Debug Bad Search Code
-
-Give students broken search programs. They identify:
-
-- wrong loop condition
-- String comparison with `==`
-- `found` reset inside loop
-- printing `"Not found"` too early
-- using position 0 as not found value
-
----
-
-## 20. Independent practice
+## 19. Independent practice
 ### Independent practice part A: Trace
 
 Trace this code:
@@ -1189,7 +1142,7 @@ In 4-5 sentences, explain why printing `"Not found"` inside the loop is usually 
 
 ---
 
-## 21. One-page Revision Summary
+## 20. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1208,7 +1161,7 @@ In 4-5 sentences, explain why printing `"Not found"` inside the loop is usually 
 
 ---
 
-## 22. Quick Self-test
+## 21. Quick Self-test
 
 Before moving to sorting, students should be able to answer these:
 

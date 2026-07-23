@@ -1620,64 +1620,7 @@ FROM Student;
 
 ---
 
-## 42. Practice task
-### Activity 1: Query Matching
-
-Students match prompts to SQL queries.
-
-Prompts:
-
-```text
-show all students
-show student names
-show product names and prices
-show all courses
-show course ID and course name
-```
-
-Queries:
-
-```sql
-SELECT * FROM Student;
-SELECT FirstName, LastName FROM Student;
-SELECT ProductName, Price FROM Product;
-SELECT * FROM Course;
-SELECT CourseID, CourseName FROM Course;
-```
-
----
-
-### Activity 2: Result Prediction
-
-Give students a small table and a SELECT query.  
-Students predict the result set.
-
-Focus on:
-
-```text
-which fields appear
-what order fields appear
-whether all records appear
-whether aliases change headings
-```
-
----
-
-### Activity 3: Fix Broken Queries
-
-Students fix common errors:
-
-```sql
-SELECT FirstName LastName FROM Student;
-SELECT ProductName, Price;
-SELECT * Student;
-SELECT CourseID, CourseName FROM Courses;
-SELECT Student.Email FROM Product;
-```
-
----
-
-## 43. Independent practice
+## 42. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain what SQL SELECT is and how `SELECT` and `FROM` work together.
@@ -1739,7 +1682,7 @@ Aliases permanently rename database fields.
 
 ---
 
-## 44. One-page Revision Summary
+## 43. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1762,7 +1705,7 @@ Aliases permanently rename database fields.
 
 ---
 
-## 45. Quick Self-test
+## 44. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

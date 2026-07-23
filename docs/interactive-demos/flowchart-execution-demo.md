@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import FlowchartExecutionDemo from '../.vitepress/components/demos/FlowchartExecutionDemo.vue'
 </script>
 

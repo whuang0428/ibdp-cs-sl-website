@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import BubbleSortVisualizer from '../.vitepress/components/demos/BubbleSortVisualizer.vue'
 </script>
 

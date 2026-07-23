@@ -1692,76 +1692,7 @@ Data minimization should be considered, meaning the shop should only collect dat
 
 ---
 
-## 44. Practice task
-### Activity 1: Threat and Control Match
-
-Match threats to controls:
-
-```text
-SQL injection
-lost backup drive
-student accessing grade table
-ransomware
-staff viewing records without reason
-cloud database public by mistake
-```
-
-Controls:
-
-```text
-parameterized queries
-encrypted backups
-role-based access control
-offline backups
-audit logs
-secure configuration review
-```
-
----
-
-### Activity 2: Privacy Debate
-
-Scenario:
-
-```text
-A school app wants to collect student name, grade, location, passport number, parent income, and lunch choice.
-```
-
-Students decide:
-
-```text
-which data is necessary
-which data is excessive
-what purpose each item serves
-what privacy risks exist
-```
-
----
-
-### Activity 3: Access Control Design
-
-Groups design roles and permissions for:
-
-```text
-school database
-hospital database
-online shop database
-library database
-```
-
-They must include:
-
-```text
-role
-allowed data
-allowed actions
-blocked actions
-reason
-```
-
----
-
-## 45. Independent practice
+## 44. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain why database security and privacy are important.
@@ -1813,7 +1744,7 @@ A company can keep personal data forever if storage is cheap.
 
 ---
 
-## 46. One-page Revision Summary
+## 45. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1839,7 +1770,7 @@ A company can keep personal data forever if storage is cheap.
 
 ---
 
-## 47. Quick Self-test
+## 46. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

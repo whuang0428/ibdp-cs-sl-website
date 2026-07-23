@@ -1,4 +1,8 @@
-﻿<script setup>
+﻿---
+aside: false
+---
+
+<script setup>
 import NormalizationDemo from '../.vitepress/components/demos/NormalizationDemo.vue'
 </script>
 

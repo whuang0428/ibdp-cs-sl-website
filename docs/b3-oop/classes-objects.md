@@ -963,70 +963,7 @@ This is incorrect because a class is a blueprint or template, not a specific obj
 
 ---
 
-## 20. Practice task
-### Activity 1: Blueprint vs Object Cards
-
-Give students cards such as:
-
-```text
-Car
-my blue car
-Student
-Alice
-BankAccount
-my savings account
-```
-
-Students sort them into:
-
-```text
-Class
-Object
-```
-
-Then they explain their choices.
-
----
-
-### Activity 2: Object State Table
-
-Give students code that creates two or three objects. Students fill in the final object state table.
-
-Example columns:
-
-```text
-object reference
-attribute 1
-attribute 2
-attribute 3
-```
-
----
-
-### Activity 3: Design a Class
-
-Groups design a class for one of these:
-
-```text
-GameCharacter
-Book
-Laptop
-Course
-BankAccount
-```
-
-They must list:
-
-```text
-class name
-three attributes
-three methods
-two example objects
-```
-
----
-
-## 21. Independent practice
+## 20. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 5-6 sentences, explain the difference between a class and an object using your own example.
@@ -1083,7 +1020,7 @@ Create the final object state table.
 
 ---
 
-## 22. One-page Revision Summary
+## 21. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1103,7 +1040,7 @@ Create the final object state table.
 
 ---
 
-## 23. Quick Self-test
+## 22. Quick Self-test
 
 Before moving on, students should be able to answer these:
 

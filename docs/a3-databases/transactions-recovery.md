@@ -1139,57 +1139,7 @@ Regular backups can be used to restore the database to a previous saved version.
 
 ---
 
-## 36. Practice task
-### Activity 1: Transaction Role-play
-
-Students act as:
-
-```text
-Account A
-Account B
-Database
-Transaction log
-Power failure
-DBMS recovery
-```
-
-They simulate a successful commit and a failed transfer that needs rollback.
-
----
-
-### Activity 2: Commit or Rollback Sort
-
-Students classify scenarios:
-
-```text
-payment succeeds and order created
-stock update fails after payment
-seat booking cancelled by user
-grade update saved and audit log saved
-server crash before commit
-```
-
-They decide whether the database should commit or rollback.
-
----
-
-### Activity 3: Recovery Plan Design
-
-Groups design a recovery plan for:
-
-```text
-school database
-hospital database
-online shop database
-game account database
-library database
-```
-
-They include backup frequency, backup location, who can restore, how restore is tested, and how logs are used.
-
----
-
-## 37. Independent practice
+## 36. Independent practice
 ### Independent practice part A: Concept Explanation
 
 In 6-8 sentences, explain what a transaction is and why commit and rollback are needed.
@@ -1226,7 +1176,7 @@ A backup does not need to be tested.
 
 ---
 
-## 38. One-page Revision Summary
+## 37. One-page Revision Summary
 
 | Point | Summary |
 |---|---|
@@ -1248,7 +1198,7 @@ A backup does not need to be tested.
 
 ---
 
-## 39. Quick Self-test
+## 38. Quick Self-test
 
 Before moving on, students should be able to answer these:
 
